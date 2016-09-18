@@ -1,0 +1,103 @@
+.TH "src/Base58/Base58.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Base58/Base58.h \- 
+.PP
+Functions for encoding and decoding in base 58. Avoids 0olI whch may look alike. This is for readability concerns.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib.h>\fP
+.br
+\fC#include '../BigInt/BigInt.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBigInt\fP \fBDecodeBase58\fP (char *str)"
+.br
+.RI "\fIDecodes base 58 string into byte data as a \fBBigInt\fP. \fP"
+.ti -1c
+.RI "\fBBigInt\fP \fBDecodeBase58Checked\fP (char *str, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIDecodes base 58 string into byte data as a \fBBigInt\fP and checks a 4 byte checksum. \fP"
+.ti -1c
+.RI "char * \fBEncodeBase58\fP (uint8_t *bytes, uint8_t len)"
+.br
+.RI "\fIEncodes byte data into base 58. \fP"
+.ti -1c
+.RI "uint8_t * \fBGetCheckSum\fP (uint8_t *data)"
+.br
+.ti -1c
+.RI "uint8_t * \fBVerifyAndRemoveCheckSum\fP (uint8_t *data)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions for encoding and decoding in base 58. Avoids 0olI whch may look alike. This is for readability concerns. 
+
+
+.PP
+Definition in file \fBBase58.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "\fBBigInt\fP DecodeBase58 (char *str)"
+.PP
+Decodes base 58 string into byte data as a \fBBigInt\fP. \fBParameters:\fP
+.RS 4
+\fIstr\fP Base 58 string to decode. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Pointer to the byte data as a \fBBigInt\fP. The byte data will be created in this function. Remember to free the data. On error the big int will have a NULL data pointer. 
+.RE
+.PP
+
+.PP
+Definition at line 14 of file Base58.c.
+.SS "\fBBigInt\fP DecodeBase58Checked (char *str, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Decodes base 58 string into byte data as a \fBBigInt\fP and checks a 4 byte checksum. \fBParameters:\fP
+.RS 4
+\fIstr\fP Base 58 string to decode. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Byte data as a \fBBigInt\fP. Is zero on failure. Checksum is included in returned data. On error the big int will have a NULL data pointer. 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file Base58.c.
+.SS "char* EncodeBase58 (uint8_t *bytes, uint8_tlen)"
+.PP
+Encodes byte data into base 58. \fBParameters:\fP
+.RS 4
+\fIbytes\fP Pointer to byte data to encode. Will almost certainly be modified. Copy data beforehand if needed. 
+.br
+\fIlen\fP Length of bytes to encode. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Newly allocated string with encoded data or NULL on error. 
+.RE
+.PP
+
+.PP
+Definition at line 208 of file Base58.c.
+.SS "uint8_t* GetCheckSum (uint8_t *data)"
+.PP
+Definition at line 282 of file Base58.c.
+.SS "uint8_t* VerifyAndRemoveCheckSum (uint8_t *data)"
+.PP
+Definition at line 113 of file Base58.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

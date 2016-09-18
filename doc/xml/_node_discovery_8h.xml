@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_node_discovery_8h" kind="file">
+    <compoundname>NodeDiscovery.h</compoundname>
+    <includes local="yes">../Object.h</includes>
+    <includes local="yes">../../Constants.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">netdb.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/socket.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">errno.h</includes>
+    <includedby refid="_node_discovery_8c" local="yes">src/Object/NodeDiscovery/NodeDiscovery.c</includedby>
+    <incdepgraph>
+      <node id="1068">
+        <label>errno.h</label>
+      </node>
+      <node id="1062">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="1064">
+        <label>netdb.h</label>
+      </node>
+      <node id="1065">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1067">
+        <label>string.h</label>
+      </node>
+      <node id="1060">
+        <label>src/Object/NodeDiscovery/NodeDiscovery.h</label>
+        <link refid="NodeDiscovery.h"/>
+        <childnode refid="1061" relation="include">
+        </childnode>
+        <childnode refid="1062" relation="include">
+        </childnode>
+        <childnode refid="1063" relation="include">
+        </childnode>
+        <childnode refid="1064" relation="include">
+        </childnode>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1066" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1068" relation="include">
+        </childnode>
+      </node>
+      <node id="1061">
+        <label>../Object.h</label>
+      </node>
+      <node id="1066">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="1063">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1070">
+        <label>src/Object/NodeDiscovery/NodeDiscovery.c</label>
+        <link refid="_node_discovery_8c"/>
+      </node>
+      <node id="1069">
+        <label>src/Object/NodeDiscovery/NodeDiscovery.h</label>
+        <link refid="NodeDiscovery.h"/>
+        <childnode refid="1070" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_node_discovery" prot="public">NodeDiscovery</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int errno</definition>
+        <argsstring></argsstring>
+        <name>errno</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="27"/>
+        <referencedby refid="_node_discovery_8h_1ab8aea7bfb539afe7fc2db54f6bcdb75a" compoundref="_node_discovery_8c" startline="97" endline="187">getExtIP</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_node_discovery_8h_1a0d3868959e24cccf18d7a01bbcf1f7e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> *</type>
+        <definition>NodeDiscovery* newNodeDiscovery</definition>
+        <argsstring>(void)</argsstring>
+        <name>newNodeDiscovery</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="40" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="22" bodyend="31"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_node_discovery_8c_1a14a7b09a75288bfdb74b3f0d4a3c35d0" compoundref="_node_discovery_8c" startline="57" endline="59">destroyNodeDiscovery</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_node_discovery_8c_1ab5fc81f8a9fbcb534433f52da9baadf7" compoundref="_node_discovery_8c" startline="45" endline="51">initNodeDiscovery</references>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8h_1ab5fc81f8a9fbcb534433f52da9baadf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initNodeDiscovery</definition>
+        <argsstring>(NodeDiscovery *self)</argsstring>
+        <name>initNodeDiscovery</name>
+        <param>
+          <type><ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object to initialize </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE on success, FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="47" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="45" bodyend="51"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="struct_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_object_8h" startline="30">Object::referenceCount</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_node_discovery_8h_1a0d3868959e24cccf18d7a01bbcf1f7e0" compoundref="_node_discovery_8c" startline="22" endline="31">newNodeDiscovery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8h_1ae50e18710081cce6cb6f476081948887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> *</type>
+        <definition>NodeDiscovery* getNodeDiscovery</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getNodeDiscovery</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> from an object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="54" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8h_1a14a7b09a75288bfdb74b3f0d4a3c35d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyNodeDiscovery</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyNodeDiscovery</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Destroys an <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="60" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="57" bodyend="59"/>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <referencedby refid="_node_discovery_8h_1a0d3868959e24cccf18d7a01bbcf1f7e0" compoundref="_node_discovery_8c" startline="22" endline="31">newNodeDiscovery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8h_1aa1fc2b21480147be72e6975f296246ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* getExtIPFromSites</definition>
+        <argsstring>()</argsstring>
+        <name>getExtIPFromSites</name>
+        <briefdescription>
+<para>connects to specified sites and extracts from the response the IP of the local machine. It uses the <ref refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" kindref="member">extractIp(char* httpresp)</ref> function to parse the response and <ref refid="_node_discovery_8h_1ab8aea7bfb539afe7fc2db54f6bcdb75a" kindref="member">getExtIP(char*)</ref> to connect to multiple sites. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8h_1ab8aea7bfb539afe7fc2db54f6bcdb75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* getExtIP</definition>
+        <argsstring>(char *dest)</argsstring>
+        <name>getExtIP</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Connects to a specified host. IPv4 compatible only!!! </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Attila-Peter Toth </para></simplesect>
+<simplesect kind="return"><para>the IP address in a structure or NULL if any error is encountered.</para></simplesect>
+find flags here <ulink url="http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html">http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="73" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="97" bodyend="187"/>
+        <references refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf">errno</references>
+        <references refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" compoundref="_node_discovery_8c" startline="65" endline="90">extractIp</references>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8h_1acc5aa97401bb59bebad14322b3e7e5e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* extractIP</definition>
+        <argsstring>(char *dest)</argsstring>
+        <name>extractIP</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Extracts a valid IPv4 or IPv6 address from a char*. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Hayk Baluyan </para></simplesect>
+<simplesect kind="return"><para>char* for the valid IP address </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the node discovery functionality described in the Bitcoin protocol - apart from the fact that the methods which involve IRC procedures are not included, since they are deprecated. Inherits <ref refid="struct_object" kindref="compound">Object</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/>NodeDiscovery.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>20/10/2012.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Created<sp/>by:<sp/>Attila<sp/>Peter<sp/>Toth.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/>Modified<sp/>by:<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#ifndef<sp/>NODEDISCOVERY_H_</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NODEDISCOVERY_H_</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Object.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netdb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" kindref="member">errno</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="struct_node_discovery" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33" refid="struct_node_discovery_1a23cf4ef56ba22bed625eab08d6361fa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_object" kindref="compound" tooltip="Base class.">Object</ref><sp/><ref refid="struct_node_discovery_1a23cf4ef56ba22bed625eab08d6361fa7" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}<sp/><ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/><ref refid="_node_discovery_8c_1a5c17f995b0ad439d793a2a2798122e3a" kindref="member" tooltip="Creates a new NodeDiscovery object.">newNodeDiscovery</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_node_discovery_8c_1ab5fc81f8a9fbcb534433f52da9baadf7" kindref="member" tooltip="Initializes a NodeDiscovery object.">initNodeDiscovery</ref>(<ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/><ref refid="_node_discovery_8c_1ae50e18710081cce6cb6f476081948887" kindref="member" tooltip="Gets a NodeDiscovery from an object. Use this to avoid casts.">getNodeDiscovery</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_node_discovery_8c_1a14a7b09a75288bfdb74b3f0d4a3c35d0" kindref="member" tooltip="Destroys an NodeDiscovery object.">destroyNodeDiscovery</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_node_discovery_8h_1aa1fc2b21480147be72e6975f296246ae" kindref="member" tooltip="connects to specified sites and extracts from the response the IP of the local machine. It uses the extractIp(char* httpresp) function to parse the response and getExtIP(char*) to connect to multiple sites.">getExtIPFromSites</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_node_discovery_8c_1ab8aea7bfb539afe7fc2db54f6bcdb75a" kindref="member" tooltip="Connects to a specified host. IPv4 compatible only!!!">getExtIP</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>dest);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_node_discovery_8h_1acc5aa97401bb59bebad14322b3e7e5e9" kindref="member" tooltip="Extracts a valid IPv4 or IPv6 address from a char*.">extractIP</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>dest);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>NODEDISCOVERY_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_block_spck" kind="struct" prot="public">
+    <compoundname>BlockSpck</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_block_spck_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="128" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_block_spck_1a8063bd9a895b61caa30d0ca876a6e300" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int startCount</definition>
+        <argsstring></argsstring>
+        <name>startCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="129" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_block_spck_1a95789ecf55183a47b1668d549ba4a927" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char blockLocatorHashes[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>blockLocatorHashes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="130" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_block_spck_1aa16ea670ce42c626f461fc49f74ddcd3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hashStop[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hashStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="131" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="127" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="127" bodyend="133"/>
+    <listofallmembers>
+      <member refid="struct_block_spck_1a95789ecf55183a47b1668d549ba4a927" prot="public" virt="non-virtual"><scope>BlockSpck</scope><name>blockLocatorHashes</name></member>
+      <member refid="struct_block_spck_1aa16ea670ce42c626f461fc49f74ddcd3" prot="public" virt="non-virtual"><scope>BlockSpck</scope><name>hashStop</name></member>
+      <member refid="struct_block_spck_1a8063bd9a895b61caa30d0ca876a6e300" prot="public" virt="non-virtual"><scope>BlockSpck</scope><name>startCount</name></member>
+      <member refid="struct_block_spck_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" virt="non-virtual"><scope>BlockSpck</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

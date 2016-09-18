@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_byte_array_8c.html#ab0ba2a57716ecf23d43924647b4175bb" title="Destroys a ByteArray object." alt="" coords="333,59,472,88"/>
+<area shape="rect" id="node7" href="$_m_i_object_8c.html#a0f72e3416dc7f6c52cfb1bf49baac3f2" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="636,112,729,141"/>
+<area shape="rect" id="node12" href="$_m_i_byte_array_8c.html#af36c0013b2be340fb2c017c8bd0d808f" title="Creates a new ByteArray using data." alt="" coords="304,163,501,192"/>
+<area shape="rect" id="node5" href="$_m_i_object_8c.html#a71704ab4fbecb7d85276d32649b5349a" title="destructor" alt="" coords="624,5,741,35"/>
+<area shape="rect" id="node9" href="$_m_i_byte_array_8c.html#a34dc195b61536b69d608bc90fc123194" title="Releases a reference to shared byte data and frees the data if necessary." alt="" coords="549,59,816,88"/>
+</map>

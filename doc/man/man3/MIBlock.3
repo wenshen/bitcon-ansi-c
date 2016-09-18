@@ -1,0 +1,92 @@
+.TH "Block" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Block \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Block.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBhash\fP [32]"
+.br
+.ti -1c
+.RI "uint32_t \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBByteArray\fP * \fBpreviousBlockHash\fP"
+.br
+.ti -1c
+.RI "\fBByteArray\fP * \fBmerkleTreeRootHash\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBtime\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBtarget\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnonce\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnumOfTransactions\fP"
+.br
+.ti -1c
+.RI "\fBTransaction\fP ** \fBtransactions\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+file defines a bitcoin block.  contain transaction information and use a proof of work system to show that they are legitimate. @ The definition for \fBBlock\fP objects. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBBlock.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file Block.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBMessage\fP \fBbase\fP"
+.PP
+Definition at line 24 of file Block.h.
+.SS "uint8_t \fBhash\fP[32]"
+.PP
+Definition at line 25 of file Block.h.
+.SS "\fBByteArray\fP* \fBmerkleTreeRootHash\fP"
+.PP
+Definition at line 28 of file Block.h.
+.SS "uint32_t \fBnonce\fP"
+.PP
+Definition at line 31 of file Block.h.
+.SS "uint32_t \fBnumOfTransactions\fP"
+.PP
+Definition at line 32 of file Block.h.
+.SS "\fBByteArray\fP* \fBpreviousBlockHash\fP"
+.PP
+Definition at line 27 of file Block.h.
+.SS "uint32_t \fBtarget\fP"
+.PP
+Definition at line 30 of file Block.h.
+.SS "uint32_t \fBtime\fP"
+.PP
+Definition at line 29 of file Block.h.
+.SS "\fBTransaction\fP** \fBtransactions\fP"
+.PP
+Definition at line 33 of file Block.h.
+.SS "uint32_t \fBversion\fP"
+.PP
+Definition at line 26 of file Block.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

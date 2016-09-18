@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_peer_8h.html" title="Contains data for managing peer connections. Inherits NetworkAddress." alt="" coords="331,83,507,112"/>
+<area shape="rect" id="node16" href="$_version_8c.html" title="src/Object/Network/Version.c" alt="" coords="531,83,725,112"/>
+<area shape="rect" id="node5" href="$_address_manager_8h.html" title="Stores addresses both unconnected and connected. It also proves serialisation and deserialisation so ..." alt="" coords="133,160,381,189"/>
+<area shape="rect" id="node9" href="$_network_communicator_8h.html" title="Used for communicating to other peers. The network communicator can send and receive bitcoin messages..." alt="" coords="277,237,560,267"/>
+<area shape="rect" id="node14" href="$_peer_8c.html" title="src/Object/Network/Peer.c" alt="" coords="456,160,632,189"/>
+<area shape="rect" id="node7" href="$_address_manager_8c.html" title="src/Object/Network/AddressManager.c" alt="" coords="5,237,253,267"/>
+<area shape="rect" id="node11" href="$_network_communicator_8c.html" title="src/Object/Network/NetworkCommunicator.c" alt="" coords="277,315,560,344"/>
+</map>

@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_version_checksum_bytes_8h" kind="file">
+    <compoundname>VersionChecksumBytes.h</compoundname>
+    <includes local="yes">../../Base58/Base58.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">../ByteArray.h</includes>
+    <includedby refid="_address_8h" local="yes">src/Object/VersionChecksumBytes/Address/Address.h</includedby>
+    <includedby refid="_version_checksum_bytes_8c" local="yes">src/Object/VersionChecksumBytes/VersionChecksumBytes.c</includedby>
+    <incdepgraph>
+      <node id="1148">
+        <label>stdint.h</label>
+      </node>
+      <node id="1147">
+        <label>../../Base58/Base58.h</label>
+      </node>
+      <node id="1149">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="1146">
+        <label>src/Object/VersionChecksumBytes/VersionChecksumBytes.h</label>
+        <link refid="VersionChecksumBytes.h"/>
+        <childnode refid="1147" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+        <childnode refid="1149" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1152">
+        <label>src/Object/VersionChecksumBytes/Address/Address.c</label>
+        <link refid="_address_8c"/>
+      </node>
+      <node id="1151">
+        <label>src/Object/VersionChecksumBytes/Address/Address.h</label>
+        <link refid="_address_8h"/>
+        <childnode refid="1152" relation="include">
+        </childnode>
+      </node>
+      <node id="1153">
+        <label>src/Object/VersionChecksumBytes/VersionChecksumBytes.c</label>
+        <link refid="_version_checksum_bytes_8c"/>
+      </node>
+      <node id="1150">
+        <label>src/Object/VersionChecksumBytes/VersionChecksumBytes.h</label>
+        <link refid="VersionChecksumBytes.h"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_version_checksum_bytes" prot="public">VersionChecksumBytes</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1a8615977163a6d5bcfa019ed533d5620d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+        <definition>VersionChecksumBytes* NewVersionChecksumBytesFromString</definition>
+        <argsstring>(ByteArray *string, int cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>NewVersionChecksumBytesFromString</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object from a base-58 encoded string. The base-58 string will be validated by it&apos;s checksum. This returns NULL if the string is invalid. The _ERROR_BASE58_DECODE_CHECK_TOO_SHORT error is given if the decoded data is less than 4 bytes. _ERROR_BASE58_DECODE_CHECK_INVALID is given if the checksum does not match. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A base-58 encoded String to make a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object with a termination character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object or NULL on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="38" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.c" bodystart="17" bodyend="28"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_version_checksum_bytes_8c_1a7cae99fdf267cb22d4693c908cc896db" compoundref="_version_checksum_bytes_8c" startline="86" endline="90">FreeVersionChecksumBytes</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_version_checksum_bytes_8c_1aea4c90e8f46d385322b8d3d5215634e2" compoundref="_version_checksum_bytes_8c" startline="31" endline="50">InitVersionChecksumBytesFromString</references>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1a924c7d299ee5fc045c204f13e2ce1284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+        <definition>VersionChecksumBytes* NewVersionChecksumBytesFromBytes</definition>
+        <argsstring>(uint8_t *bytes, uint32_t size, int cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>NewVersionChecksumBytesFromBytes</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object from bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bytes for the <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the byte data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1ad9aefe5aeda2ebccd370e7b89ed8cd0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+        <definition>VersionChecksumBytes* GetVersionChecksumBytes</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>GetVersionChecksumBytes</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="54" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.c" bodystart="68" bodyend="70"/>
+        <referencedby refid="_address_8h_1a2660a066065cdc76c93d847026721cf8" compoundref="_address_8c" startline="76" endline="78">FreeAddress</referencedby>
+        <referencedby refid="_address_8h_1a9eb1202db1cb15c5f431b96e3951308c" compoundref="_address_8c" startline="47" endline="68">InitAddressFromRIPEMD160Hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1aea4c90e8f46d385322b8d3d5215634e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int InitVersionChecksumBytesFromString</definition>
+        <argsstring>(VersionChecksumBytes *self, ByteArray *string, int cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>InitVersionChecksumBytesFromString</name>
+        <param>
+          <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object from a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object to initialise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A String to make a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object with a termination character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="64" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.c" bodystart="31" bodyend="50"/>
+        <references refid="_big_int_8c_1a5742814e569802287b7157f5ee150daa" compoundref="_big_int_8c" startline="12" endline="16">BigIntAlloc</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_byte_array_8c_1a3c6396093509698d1346474653f63421" compoundref="_byte_array_8c" startline="61" endline="66">getByteArray</references>
+        <references refid="_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_object_8c" startline="81" endline="92">incrementReferenceCount</references>
+        <references refid="_byte_array_8c_1aeaa5d627e335dd6464668588ad9b0e21" compoundref="_byte_array_8c" startline="554" endline="573">initNewByteArrayFromData</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <references refid="_byte_array_8c_1a77965afc28ae0c5d447a5cc60f487f37" compoundref="_byte_array_8c" startline="576" endline="583">reverseBytes</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_version_checksum_bytes_8h_1a8615977163a6d5bcfa019ed533d5620d" compoundref="_version_checksum_bytes_8c" startline="17" endline="28">NewVersionChecksumBytesFromString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1a04d489c466631d1e64fcfbeffc892830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int InitVersionChecksumBytesFromBytes</definition>
+        <argsstring>(VersionChecksumBytes *self, uint8_t *bytes, uint32_t size, int cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>InitVersionChecksumBytesFromBytes</name>
+        <param>
+          <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a new <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object from bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object to initialise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bytes for the <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the byte data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="74" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.c" bodystart="74" bodyend="82"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_byte_array_8c_1a3c6396093509698d1346474653f63421" compoundref="_byte_array_8c" startline="61" endline="66">getByteArray</references>
+        <references refid="_byte_array_8c_1aeaa5d627e335dd6464668588ad9b0e21" compoundref="_byte_array_8c" startline="554" endline="573">initNewByteArrayFromData</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_address_8h_1a9eb1202db1cb15c5f431b96e3951308c" compoundref="_address_8c" startline="47" endline="68">InitAddressFromRIPEMD160Hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1a405a628eda9b41f28fdfb6266780d768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeVersionChecksumBytes</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>FreeVersionChecksumBytes</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="80" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.c" bodystart="86" bodyend="90"/>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_byte_array_8c_1a38e852a1c627acf4baa1159e1086927e" compoundref="_byte_array_8c" startline="175" endline="181">destroyByteArray</references>
+        <references refid="_byte_array_8c_1a3c6396093509698d1346474653f63421" compoundref="_byte_array_8c" startline="61" endline="66">getByteArray</references>
+        <referencedby refid="_address_8h_1a2660a066065cdc76c93d847026721cf8" compoundref="_address_8c" startline="76" endline="78">FreeAddress</referencedby>
+        <referencedby refid="_version_checksum_bytes_8h_1a8615977163a6d5bcfa019ed533d5620d" compoundref="_version_checksum_bytes_8c" startline="17" endline="28">NewVersionChecksumBytesFromString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1a3cd3efddc0687f80b4ceacc3a67d83d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t VersionChecksumBytesGetVersion</definition>
+        <argsstring>(VersionChecksumBytes *self)</argsstring>
+        <name>VersionChecksumBytesGetVersion</name>
+        <param>
+          <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets the version for a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The version code. The Macros _PRODUCTION_NETWORK and _TEST_NETWORK should correspond to this. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="89" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.c" bodystart="94" bodyend="96"/>
+        <references refid="_byte_array_8c_1a3c6396093509698d1346474653f63421" compoundref="_byte_array_8c" startline="61" endline="66">getByteArray</references>
+        <references refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" compoundref="_byte_array_8c" startline="89" endline="95">getByteFromByteArray</references>
+      </memberdef>
+      <memberdef kind="function" id="_version_checksum_bytes_8h_1ac5662bd7f49d0a8d43b8e7d0bfac827f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* VersionChecksumBytesGetString</definition>
+        <argsstring>(VersionChecksumBytes *self)</argsstring>
+        <name>VersionChecksumBytesGetString</name>
+        <param>
+          <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets the string representation for a <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object as a base-58 encoded String. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The object represented as a base-58 encoded String. Do not modify this. Copy if modification is required. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h" line="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a key, begining with a version byte and ending with a checksum. Inherits <ref refid="struct_byte_array" kindref="compound">ByteArray</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>VersionChecksumBytes.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>03/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Hayk<sp/>Baluyan</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#ifndef<sp/>VERSIONCHECKSUMBYTESH</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>VERSIONCHECKSUMBYTESH</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Base58/Base58.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ByteArray.h&quot;</highlight></codeline>
+<codeline lineno="25" refid="struct_version_checksum_bytes" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="struct_version_checksum_bytes_1a403d3e7fd73c70aa24590627ed54844e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/><ref refid="struct_version_checksum_bytes_1a403d3e7fd73c70aa24590627ed54844e" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="27" refid="struct_version_checksum_bytes_1a440754891ba48c34d0ec933efc36e050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_version_checksum_bytes_1a440754891ba48c34d0ec933efc36e050" kindref="member">cacheString</ref>;<sp/></highlight></codeline>
+<codeline lineno="28" refid="struct_version_checksum_bytes_1a25e4ea0f9f3ce1cce55f374afbba99c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="struct_version_checksum_bytes_1a25e4ea0f9f3ce1cce55f374afbba99c6" kindref="member">cachedString</ref>;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/><ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/><ref refid="_version_checksum_bytes_8c_1a8615977163a6d5bcfa019ed533d5620d" kindref="member" tooltip="Creates a new VersionChecksumBytes object from a base-58 encoded string. The base-58 string will be v...">NewVersionChecksumBytesFromString</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/><ref refid="_version_checksum_bytes_8h_1a924c7d299ee5fc045c204f13e2ce1284" kindref="member" tooltip="Creates a new VersionChecksumBytes object from bytes.">NewVersionChecksumBytesFromBytes</ref>(uint8_t<sp/>*<sp/>bytes,uint32_t<sp/>size,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/><ref refid="_version_checksum_bytes_8c_1ad9aefe5aeda2ebccd370e7b89ed8cd0b" kindref="member" tooltip="Gets a VersionChecksumBytes from another object. Use this to avoid casts.">GetVersionChecksumBytes</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_version_checksum_bytes_8c_1aea4c90e8f46d385322b8d3d5215634e2" kindref="member" tooltip="Initialises a VersionChecksumBytes object from a string.">InitVersionChecksumBytesFromString</ref>(<ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_version_checksum_bytes_8c_1a04d489c466631d1e64fcfbeffc892830" kindref="member" tooltip="Initialises a new VersionChecksumBytes object from bytes.">InitVersionChecksumBytesFromBytes</ref>(<ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,uint8_t<sp/>*<sp/>bytes,uint32_t<sp/>size,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_version_checksum_bytes_8c_1a7cae99fdf267cb22d4693c908cc896db" kindref="member" tooltip="Frees a VersionChecksumBytes object.">FreeVersionChecksumBytes</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">uint8_t<sp/><ref refid="_version_checksum_bytes_8c_1a3cd3efddc0687f80b4ceacc3a67d83d1" kindref="member" tooltip="Gets the version for a VersionChecksumBytes object.">VersionChecksumBytesGetVersion</ref>(<ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_version_checksum_bytes_8h_1ac5662bd7f49d0a8d43b8e7d0bfac827f" kindref="member" tooltip="Gets the string representation for a VersionChecksumBytes object as a base-58 encoded String...">VersionChecksumBytesGetString</ref>(<ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Functions*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/VersionChecksumBytes.h"/>
+  </compounddef>
+</doxygen>

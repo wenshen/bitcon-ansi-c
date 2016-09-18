@@ -1,0 +1,131 @@
+.TH "src/Object/Object.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Object.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Object.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObject\fP * \fBcreateNewObject\fP (void)"
+.br
+.RI "\fICreates a new \fBObject\fP. \fP"
+.ti -1c
+.RI "\fBObject\fP * \fBgetObject\fP (void *self)"
+.br
+.RI "\fICasts the pointer to the \fBObject\fP; use this to avoid explicitly casting. \fP"
+.ti -1c
+.RI "int \fBsetObjectRefCountToOne\fP (\fBObject\fP *self)"
+.br
+.RI "\fIresets the reference counts to an object to one \fP"
+.ti -1c
+.RI "void \fBdestroyObject\fP (void *self)"
+.br
+.RI "\fIdestructor \fP"
+.ti -1c
+.RI "void \fBdecrementReferenceCount\fP (void *self)"
+.br
+.RI "\fIDecrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 - the object will be destroyed (assigned to NULL) \fP"
+.ti -1c
+.RI "void \fBincrementReferenceCount\fP (void *self)"
+.br
+.RI "\fIIncrease the number in the reference counter. (It keeps track of how many objects have been created). \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBObject\fP createNewObject (void)"
+.PP
+Creates a new \fBObject\fP. \fBReturns:\fP
+.RS 4
+\fBObject\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Object.c.
+.SS "void decrementReferenceCount (void *self)"
+.PP
+Decrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 - the object will be destroyed (assigned to NULL) \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file Object.c.
+.SS "void destroyObject (void *self)"
+.PP
+destructor \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file Object.c.
+.SS "\fBObject\fP * getObject (void *self)"
+.PP
+Casts the pointer to the \fBObject\fP; use this to avoid explicitly casting. \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBObject\fP 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file Object.c.
+.SS "void incrementReferenceCount (void *self)"
+.PP
+Increase the number in the reference counter. (It keeps track of how many objects have been created). \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file Object.c.
+.SS "int setObjectRefCountToOne (\fBObject\fP *self)"
+.PP
+resets the reference counts to an object to one \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBObject\fP to reset its referenceCount 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+This should always returns TRUE. 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file Object.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

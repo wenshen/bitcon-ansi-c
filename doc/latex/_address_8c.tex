@@ -1,0 +1,200 @@
+\hypertarget{_address_8c}{
+\section{src/Object/VersionChecksumBytes/Address/Address.c File Reference}
+\label{_address_8c}\index{src/Object/VersionChecksumBytes/Address/Address.c@{src/Object/VersionChecksumBytes/Address/Address.c}}
+}
+{\ttfamily \#include \char`\"{}Address.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../VersionChecksumBytes.h\char`\"{}}\par
+Include dependency graph for Address.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{_address_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_address}{Address} $\ast$ \hyperlink{_address_8c_a6ef4823a0762b48c6329403baac9f6b1}{NewAddressFromRIPEMD160Hash} (uint8\_\-t $\ast$hash, uint8\_\-t networkCode, bool cacheString, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_address}{Address} object from a RIPEMD-\/160 hash. \end{DoxyCompactList}\item 
+\hyperlink{struct_address}{Address} $\ast$ \hyperlink{_address_8c_a7cd1fc67cf33566c5b0fb7a1bdfb5bae}{GetAddress} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_address}{Address} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+bool \hyperlink{_address_8c_a9eb1202db1cb15c5f431b96e3951308c}{InitAddressFromRIPEMD160Hash} (\hyperlink{struct_address}{Address} $\ast$self, uint8\_\-t networkCode, uint8\_\-t $\ast$hash, bool cacheString, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_address}{Address} object from a RIPEMD-\/160 hash. \end{DoxyCompactList}\item 
+void \hyperlink{_address_8c_a2660a066065cdc76c93d847026721cf8}{FreeAddress} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_address}{Address} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_address_8c_a2660a066065cdc76c93d847026721cf8}{
+\index{Address.c@{Address.c}!FreeAddress@{FreeAddress}}
+\index{FreeAddress@{FreeAddress}!Address.c@{Address.c}}
+\subsubsection[{FreeAddress}]{\setlength{\rightskip}{0pt plus 5cm}void FreeAddress (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_address_8c_a2660a066065cdc76c93d847026721cf8}
+
+
+Frees a \hyperlink{struct_address}{Address} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_address}{Address} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file Address.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_address_8c_a2660a066065cdc76c93d847026721cf8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=362pt]{_address_8c_a2660a066065cdc76c93d847026721cf8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_address_8c_a7cd1fc67cf33566c5b0fb7a1bdfb5bae}{
+\index{Address.c@{Address.c}!GetAddress@{GetAddress}}
+\index{GetAddress@{GetAddress}!Address.c@{Address.c}}
+\subsubsection[{GetAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Address}$\ast$ GetAddress (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_address_8c_a7cd1fc67cf33566c5b0fb7a1bdfb5bae}
+
+
+Gets a \hyperlink{struct_address}{Address} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_address}{Address} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_address}{Address} object. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Address.c.
+
+\hypertarget{_address_8c_a9eb1202db1cb15c5f431b96e3951308c}{
+\index{Address.c@{Address.c}!InitAddressFromRIPEMD160Hash@{InitAddressFromRIPEMD160Hash}}
+\index{InitAddressFromRIPEMD160Hash@{InitAddressFromRIPEMD160Hash}!Address.c@{Address.c}}
+\subsubsection[{InitAddressFromRIPEMD160Hash}]{\setlength{\rightskip}{0pt plus 5cm}bool InitAddressFromRIPEMD160Hash (
+\begin{DoxyParamCaption}
+\item[{{\bf Address} $\ast$}]{self, }
+\item[{uint8\_\-t}]{networkCode, }
+\item[{uint8\_\-t $\ast$}]{hash, }
+\item[{bool}]{cacheString, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_address_8c_a9eb1202db1cb15c5f431b96e3951308c}
+
+
+Initialises a \hyperlink{struct_address}{Address} object from a RIPEMD-\/160 hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_address}{Address} object to initialise. \\
+\hline
+{\em network} & A NetworkParameters object with the network information. \\
+\hline
+{\em hash} & The RIPEMD-\/160 hash. Must be 20 bytes. \\
+\hline
+{\em cacheString} & If true, the bitcoin string for this object will be cached in memory. \\
+\hline
+{\em onErrorReceived} & Events for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Address.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_address_8c_a9eb1202db1cb15c5f431b96e3951308c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_address_8c_a9eb1202db1cb15c5f431b96e3951308c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_address_8c_a6ef4823a0762b48c6329403baac9f6b1}{
+\index{Address.c@{Address.c}!NewAddressFromRIPEMD160Hash@{NewAddressFromRIPEMD160Hash}}
+\index{NewAddressFromRIPEMD160Hash@{NewAddressFromRIPEMD160Hash}!Address.c@{Address.c}}
+\subsubsection[{NewAddressFromRIPEMD160Hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Address}$\ast$ NewAddressFromRIPEMD160Hash (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{hash, }
+\item[{uint8\_\-t}]{networkCode, }
+\item[{bool}]{cacheString, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_address_8c_a6ef4823a0762b48c6329403baac9f6b1}
+
+
+Creates a new \hyperlink{struct_address}{Address} object from a RIPEMD-\/160 hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em network} & A NetworkParameters object with the network information. \\
+\hline
+{\em hash} & The RIPEMD-\/160 hash. Must be 20 bytes. \\
+\hline
+{\em cacheString} & If true, the bitcoin string for this object will be cached in memory. \\
+\hline
+{\em onErrorReceived} & Callback for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_address}{Address} object. 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file Address.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_address_8c_a6ef4823a0762b48c6329403baac9f6b1_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,166 @@
+.TH "src/Object/Message/TransactionOutput.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/TransactionOutput.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Message.h'\fP
+.br
+\fC#include '../Script.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTransactionOutput\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransactionOutput\fP * \fBcreateNewTransactionOutput\fP (uint64_t value, \fBScript\fP *script, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransactionOutput\fP object. \fP"
+.ti -1c
+.RI "\fBTransactionOutput\fP * \fBcreateNewTransactionOutputFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransactionOutput\fP object from byte data. Should be serialised for object data. \fP"
+.ti -1c
+.RI "int \fBinitializeTransactionOutput\fP (\fBTransactionOutput\fP *self, uint64_t value, \fBScript\fP *script, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBTransactionOutput\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializeTransactionOutputFromData\fP (\fBTransactionOutput\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBTransactionOutput\fP object. \fP"
+.ti -1c
+.RI "\fBTransactionOutput\fP * \fBgetTransactionOutput\fP (void *self)"
+.br
+.RI "\fIGets a \fBTransactionOutput\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "void \fBdestroyTransactionOutput\fP (void *self)"
+.br
+.RI "\fIFrees a \fBTransactionOutput\fP object. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeTransactionOutput\fP (\fBTransactionOutput\fP *self)"
+.br
+.RI "\fISerialises a \fBTransactionOutput\fP to byte data. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeTransactionOutput\fP (\fBTransactionOutput\fP *self)"
+.br
+.RI "\fIDeserialises a \fBTransactionOutput\fP so that it can be used as an object. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBTransactionOutput\fP* createNewTransactionOutput (uint64_tvalue, \fBScript\fP *script, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransactionOutput\fP object. \fBReturns:\fP
+.RS 4
+A new \fBTransactionOutput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file TransactionOutput.c.
+.SS "\fBTransactionOutput\fP* createNewTransactionOutputFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransactionOutput\fP object from byte data. Should be serialised for object data. \fBReturns:\fP
+.RS 4
+A new \fBTransactionOutput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file TransactionOutput.c.
+.SS "uint32_t deserializeTransactionOutput (\fBTransactionOutput\fP *self)"
+.PP
+Deserialises a \fBTransactionOutput\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionOutput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file TransactionOutput.c.
+.SS "void destroyTransactionOutput (void *self)"
+.PP
+Frees a \fBTransactionOutput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionOutput\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file TransactionOutput.c.
+.SS "\fBTransactionOutput\fP* getTransactionOutput (void *self)"
+.PP
+Gets a \fBTransactionOutput\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBTransactionOutput\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBTransactionOutput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file TransactionOutput.c.
+.SS "int initializeTransactionOutput (\fBTransactionOutput\fP *self, uint64_tvalue, \fBScript\fP *script, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBTransactionOutput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionOutput\fP object to initialise. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file TransactionOutput.c.
+.SS "int initializeTransactionOutputFromData (\fBTransactionOutput\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBTransactionOutput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionOutput\fP object to initialise. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file TransactionOutput.c.
+.SS "uint32_t serializeTransactionOutput (\fBTransactionOutput\fP *self)"
+.PP
+Serialises a \fBTransactionOutput\fP to byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionOutput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file TransactionOutput.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

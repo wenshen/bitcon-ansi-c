@@ -1,0 +1,48 @@
+.TH "MerkleNode" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MerkleNode \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MerkleNode.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBhash\fP [32]"
+.br
+.ti -1c
+.RI "\fBMerkleNode\fP * \fBleft\fP"
+.br
+.ti -1c
+.RI "\fBMerkleNode\fP * \fBright\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSee also:\fP
+.RS 4
+\fBMerkleNode.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file MerkleNode.h.
+.SH "Field Documentation"
+.PP 
+.SS "uint8_t \fBhash\fP[32]"The hash for this node. 
+.PP
+Definition at line 26 of file MerkleNode.h.
+.SS "\fBMerkleNode\fP* \fBleft\fP"The left child. NULL if leaf. 
+.PP
+Definition at line 27 of file MerkleNode.h.
+.SS "\fBMerkleNode\fP* \fBright\fP"The right child. NULL if leaf. 
+.PP
+Definition at line 28 of file MerkleNode.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

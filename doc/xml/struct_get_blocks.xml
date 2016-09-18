@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_get_blocks" kind="struct" prot="public">
+    <compoundname>GetBlocks</compoundname>
+    <includes refid="_get_blocks_8h" local="no">GetBlocks.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_get_blocks_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" line="23" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_get_blocks_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Protocol version for this message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" line="24" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_get_blocks_1a97f23aa5b4445b5d12da1efc7af9dd88" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_chain_descriptor" kindref="compound">ChainDescriptor</ref> *</type>
+        <definition>ChainDescriptor* chainDescriptor</definition>
+        <argsstring></argsstring>
+        <name>chainDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_chain_descriptor" kindref="compound">ChainDescriptor</ref> for determining what blocks are needed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" line="25" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_get_blocks_1a86c946e52ed46a9ef9f6292c0ec68143" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* stopAtHash</definition>
+        <argsstring></argsstring>
+        <name>stopAtHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The block hash to stop at when retreiving an inventory. Else up to 500 block hashes can be given. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_get_blocks" kindref="compound">GetBlocks</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_get_blocks_8h" kindref="compound">GetBlocks.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="311">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="308">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="309" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="310" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="309">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="307">
+        <label>ChainDescriptor</label>
+        <link refid="struct_chain_descriptor"/>
+        <childnode refid="308" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="310" relation="usage">
+          <edgelabel>hashes</edgelabel>
+        </childnode>
+      </node>
+      <node id="310">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="311" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="309" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="306">
+        <label>GetBlocks</label>
+        <link refid="struct_get_blocks"/>
+        <childnode refid="307" relation="usage">
+          <edgelabel>chainDescriptor</edgelabel>
+        </childnode>
+        <childnode refid="308" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="310" relation="usage">
+          <edgelabel>stopAtHash</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" line="22" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/GetBlocks.h" bodystart="22" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_get_blocks_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>GetBlocks</scope><name>base</name></member>
+      <member refid="struct_get_blocks_1a97f23aa5b4445b5d12da1efc7af9dd88" prot="public" virt="non-virtual"><scope>GetBlocks</scope><name>chainDescriptor</name></member>
+      <member refid="struct_get_blocks_1a86c946e52ed46a9ef9f6292c0ec68143" prot="public" virt="non-virtual"><scope>GetBlocks</scope><name>stopAtHash</name></member>
+      <member refid="struct_get_blocks_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" virt="non-virtual"><scope>GetBlocks</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

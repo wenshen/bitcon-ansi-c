@@ -1,0 +1,376 @@
+.TH "src/Object/Message/Transaction.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/Transaction.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Transaction.h'\fP
+.br
+\fC#include '../../Constants.h'\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include '../../Utils/VariableLengthInteger/VarLenInt.h'\fP
+.br
+\fC#include '../ByteArray.h'\fP
+.br
+\fC#include 'TransactionInput.h'\fP
+.br
+\fC#include 'Message.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransaction\fP * \fBcreateNewTransaction\fP (uint32_t lockTime, uint32_t version, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransaction\fP object with no inputs or outputs. \fP"
+.ti -1c
+.RI "\fBTransaction\fP * \fBcreateNewTransactionFromByteArray\fP (\fBByteArray\fP *bytes, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransaction\fP object from byte data. Should be serialised for object data. \fP"
+.ti -1c
+.RI "int \fBsetUpTransactionData\fP (\fBTransaction\fP *self, uint32_t lockTime, uint32_t version, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fISets up the fields of a \fBTransaction\fP object. \fP"
+.ti -1c
+.RI "int \fBsetUpTransactionDataUsingByteArray\fP (\fBTransaction\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fISets up the fields of a \fBTransaction\fP object using a byteArray object that was passed in. \fP"
+.ti -1c
+.RI "void \fBdestroyTransaction\fP (void *transaction)"
+.br
+.RI "\fIDestructor; destroys a \fBTransaction\fP object. \fP"
+.ti -1c
+.RI "\fBTransaction\fP * \fBgetTransaction\fP (void *self)"
+.br
+.RI "\fIGets a \fBTransaction\fP from another object. Use this to avoid explicit casts. \fP"
+.ti -1c
+.RI "int \fBaddTransactionInput\fP (\fBTransaction\fP *self, \fBTransactionInput\fP *input)"
+.br
+.RI "\fIAdds a \fBTransactionInput\fP to a \fBTransaction\fP \fBObject\fP. \fP"
+.ti -1c
+.RI "int \fBaddTransactionOutput\fP (\fBTransaction\fP *self, \fBTransactionOutput\fP *output)"
+.br
+.RI "\fIAdds an \fBTransactionOutput\fP to the \fBTransaction\fP. \fP"
+.ti -1c
+.RI "void \fBcalculateTransactionHash\fP (\fBTransaction\fP *self)"
+.br
+.ti -1c
+.RI "uint8_t * \fBgetTransactionHash\fP (\fBTransaction\fP *self)"
+.br
+.RI "\fIRetrieves or calculates the hash for a transaction. Hashes taken from this function are cached. \fP"
+.ti -1c
+.RI "uint32_t \fBcalculateTransactionLength\fP (\fBTransaction\fP *self)"
+.br
+.RI "\fICalculates the length of an \fBTransaction\fP; this is needed to serialise the object. \fP"
+.ti -1c
+.RI "int \fBisCoinBase\fP (\fBTransaction\fP *self)"
+.br
+.RI "\fIDetermines if a transaction is a coinbase transaction or not. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeTransaction\fP (\fBTransaction\fP *self)"
+.br
+.RI "\fISerialises a \fBTransaction\fP to byte data. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeTransaction\fP (\fBTransaction\fP *self)"
+.br
+.RI "\fIDeserialises a \fBTransaction\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "\fBTransactionHashStatus\fP \fBgetTransactionInputHashForVerification\fP (void *txIn, \fBByteArray\fP *prevOutSubScript, uint32_t input, \fBSignatureType\fP signType, uint8_t *hash)"
+.br
+.RI "\fIGets the hash for signing or signature checking for a transaction input. The transaction input needs to contain the outPointerHash, outPointerIndex and sequence. If these are modifed afterwards then the signiture is invalid. \fP"
+.ti -1c
+.RI "int \fBtakeTransactionInput\fP (\fBTransaction\fP *self, \fBTransactionInput\fP *input)"
+.br
+.RI "\fIAdds an \fBTransactionInput\fP to the \fBTransaction\fP without retaining it. \fP"
+.ti -1c
+.RI "int \fBtakeTransactionOutput\fP (\fBTransaction\fP *self, \fBTransactionOutput\fP *output)"
+.br
+.RI "\fIAdds an \fBTransactionInput\fP to the CBTransaction without retaining it. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int addTransactionInput (\fBTransaction\fP *self, \fBTransactionInput\fP *input)"
+.PP
+Adds a \fBTransactionInput\fP to a \fBTransaction\fP \fBObject\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.br
+\fIinput\fP The \fBTransactionInput\fP object to add to the self \fBTransaction\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if the transaction input was added successfully and 0 on error. 
+.RE
+.PP
+
+.PP
+Definition at line 151 of file Transaction.c.
+.SS "int addTransactionOutput (\fBTransaction\fP *self, \fBTransactionOutput\fP *output)"
+.PP
+Adds an \fBTransactionOutput\fP to the \fBTransaction\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.br
+\fIoutput\fP The \fBTransactionOutput\fP object to add to the self \fBTransaction\fP. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if the transaction output was added successfully and 0 on error. 
+.RE
+.PP
+
+.PP
+Definition at line 171 of file Transaction.c.
+.SS "void calculateTransactionHash (\fBTransaction\fP *self)"
+.PP
+Definition at line 191 of file Transaction.c.
+.SS "uint8_t calculateTransactionLength (\fBTransaction\fP *self)"
+.PP
+Calculates the length of an \fBTransaction\fP; this is needed to serialise the object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length of the \fBTransaction\fP on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 213 of file Transaction.c.
+.SS "\fBTransaction\fP createNewTransaction (uint32_tlockTime, uint32_tversion, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransaction\fP object with no inputs or outputs. \fBParameters:\fP
+.RS 4
+\fIlockTime\fP The timestamp which determines if this transaction is locked. 0 means the transaction is always locked; values < 500000000 indicate the block number at which this transaction is locked while values >= 500000000 indicate the UNIX timestamp at which this transaction is locked 
+.br
+\fIversion\fP \fBTransaction\fP data format version 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBTransaction\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file Transaction.c.
+.SS "\fBTransaction\fP createNewTransactionFromByteArray (\fBByteArray\fP *bytes, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransaction\fP object from byte data. Should be serialised for object data. \fBParameters:\fP
+.RS 4
+\fIbytes\fP Array of bytes to be used for creation of transaction 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBTransaction\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file Transaction.c.
+.SS "uint32_t deserializeTransaction (\fBTransaction\fP *self)"
+.PP
+Deserialises a \fBTransaction\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 384 of file Transaction.c.
+.SS "void destroyTransaction (void *self)"
+.PP
+Destructor; destroys a \fBTransaction\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object to free. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file Transaction.c.
+.SS "\fBTransaction\fP getTransaction (void *self)"
+.PP
+Gets a \fBTransaction\fP from another object. Use this to avoid explicit casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBTransaction\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A \fBTransaction\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 143 of file Transaction.c.
+.SS "uint8_t getTransactionHash (\fBTransaction\fP *self)"
+.PP
+Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. This should be serialised. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The hash for the transaction. This is a 32 byte long, double SHA-256 hash and is a pointer to the hash field in the transaction. 
+.RE
+.PP
+
+.PP
+Definition at line 202 of file Transaction.c.
+.SS "\fBTransactionHashStatus\fP getTransactionInputHashForVerification (void *vself, \fBByteArray\fP *prevOutSubScript, uint32_tinput, \fBSignatureType\fPsignType, uint8_t *hash)"
+.PP
+Gets the hash for signing or signature checking for a transaction input. The transaction input needs to contain the outPointerHash, outPointerIndex and sequence. If these are modifed afterwards then the signiture is invalid. TRANSACTION SIGNING
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvself\fP The \fBTransaction\fP object. 
+.br
+\fIprevOutSubScript\fP The sub script from the output. Must be the correct one or the signiture will be invalid. 
+.br
+\fIinput\fP The index of the input to sign. 
+.br
+\fIsignType\fP The type of signature to get the data for. 
+.br
+\fIhash\fP The 32 byte data hash for signing or checking signatures. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+_TX_HASH_OK if the hash has been retreived with no problems. _TX_HASH_BAD is returned if the hash is invalid and _TX_HASH_ERR is returned upon an error. 
+.RE
+.PP
+
+.PP
+Definition at line 536 of file Transaction.c.
+.SS "int isCoinBase (\fBTransaction\fP *self)"
+.PP
+Determines if a transaction is a coinbase transaction or not. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if the transaction is a coin-base transaction or 0 if not. 
+.RE
+.PP
+
+.PP
+Definition at line 248 of file Transaction.c.
+.SS "uint32_t serializeTransaction (\fBTransaction\fP *self)"
+.PP
+Serialises a \fBTransaction\fP to byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 259 of file Transaction.c.
+.SS "int setUpTransactionData (\fBTransaction\fP *self, uint32_tlockTime, uint32_tversion, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Sets up the fields of a \fBTransaction\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object whose fields are to be set 
+.br
+\fIlockTime\fP The timestamp which determines if this transaction is locked. 0 means the transaction is always locked; values < 500000000 indicate the block number at which this transaction is locked while values >= 500000000 indicate the UNIX timestamp at which this transaction is locked 
+.br
+\fIversion\fP \fBTransaction\fP data format version 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file Transaction.c.
+.SS "int setUpTransactionDataUsingByteArray (\fBTransaction\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Sets up the fields of a \fBTransaction\fP object using a byteArray object that was passed in. \fBParameters:\fP
+.RS 4
+\fIbytes\fP Array of bytes to be used for creation of transaction 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file Transaction.c.
+.SS "int takeTransactionInput (\fBTransaction\fP *self, \fBTransactionInput\fP *input)"
+.PP
+Adds an \fBTransactionInput\fP to the \fBTransaction\fP without retaining it. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.br
+\fIinput\fP The \fBTransactionInput\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the transaction input was taken successfully and false on error. 
+.RE
+.PP
+
+.PP
+Definition at line 682 of file Transaction.c.
+.SS "int takeTransactionOutput (\fBTransaction\fP *self, \fBTransactionOutput\fP *output)"
+.PP
+Adds an \fBTransactionInput\fP to the CBTransaction without retaining it. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransaction\fP object. 
+.br
+\fIinput\fP The \fBTransactionOutput\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the transaction output was taken successfully and false on error. 
+.RE
+.PP
+
+.PP
+Definition at line 692 of file Transaction.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

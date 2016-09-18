@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_block" kind="struct" prot="public">
+    <compoundname>Block</compoundname>
+    <includes refid="_m_i_block_8h" local="no">Block.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_block_1a487e4843cf1cf7397eb2e1bcf91cbf3b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="24" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1a7ff9da008bf055da1f1ba994c562057d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hash[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="25" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="26" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1a942caf6700f7eee4a96b41503337886c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* previousBlockHash</definition>
+        <argsstring></argsstring>
+        <name>previousBlockHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="27" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1a04cf19a780652ad8d0123ed9fa18b408" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* merkleTreeRootHash</definition>
+        <argsstring></argsstring>
+        <name>merkleTreeRootHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="28" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1ae73654f333e4363463ad8c594eca1905" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="29" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1a695e5800ad1fd403c0e72d918eaec97c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="30" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1aa2f9785a9d9116cc4592db06375cb887" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nonce</definition>
+        <argsstring></argsstring>
+        <name>nonce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="31" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1ac9749ca92207f8d50ecc2b0f904e2424" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t numOfTransactions</definition>
+        <argsstring></argsstring>
+        <name>numOfTransactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="32" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_block_1a722f3f2bbe4a11072741a214e2750a42" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_transaction" kindref="compound">Transaction</ref> **</type>
+        <definition>Transaction** transactions</definition>
+        <argsstring></argsstring>
+        <name>transactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="33" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>file defines a bitcoin block.  contain transaction information and use a proof of work system to show that they are legitimate. @ The definition for <ref refid="struct_m_i_block" kindref="compound">Block</ref> objects. <simplesect kind="see"><para><ref refid="_m_i_block_8h" kindref="compound">Block.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="69">
+        <label>PreviousOutput</label>
+        <link refid="struct_m_i_previous_output"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="65">
+        <label>SharedData</label>
+        <link refid="struct_m_i_shared_data"/>
+      </node>
+      <node id="66">
+        <label>Message</label>
+        <link refid="struct_m_i_message"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Object</label>
+        <link refid="struct_m_i_object"/>
+      </node>
+      <node id="70">
+        <label>TransactionOutput</label>
+        <link refid="struct_m_i_transaction_output"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="62">
+        <label>Block</label>
+        <link refid="struct_m_i_block"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>merkleTreeRootHash</edgelabel>
+          <edgelabel>previousBlockHash</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>transactions</edgelabel>
+        </childnode>
+      </node>
+      <node id="67">
+        <label>Transaction</label>
+        <link refid="struct_m_i_transaction"/>
+        <childnode refid="68" relation="usage">
+          <edgelabel>inputs</edgelabel>
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>outputs</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="63">
+        <label>ByteArray</label>
+        <link refid="struct_m_i_byte_array"/>
+        <childnode refid="64" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+      </node>
+      <node id="68">
+        <label>TransactionInput</label>
+        <link refid="struct_m_i_transaction_input"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>prevOutput</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" line="23" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Block.h" bodystart="23" bodyend="34"/>
+    <listofallmembers>
+      <member refid="struct_m_i_block_1a487e4843cf1cf7397eb2e1bcf91cbf3b" prot="public" virt="non-virtual"><scope>Block</scope><name>base</name></member>
+      <member refid="struct_m_i_block_1a7ff9da008bf055da1f1ba994c562057d" prot="public" virt="non-virtual"><scope>Block</scope><name>hash</name></member>
+      <member refid="struct_m_i_block_1a04cf19a780652ad8d0123ed9fa18b408" prot="public" virt="non-virtual"><scope>Block</scope><name>merkleTreeRootHash</name></member>
+      <member refid="struct_m_i_block_1aa2f9785a9d9116cc4592db06375cb887" prot="public" virt="non-virtual"><scope>Block</scope><name>nonce</name></member>
+      <member refid="struct_m_i_block_1ac9749ca92207f8d50ecc2b0f904e2424" prot="public" virt="non-virtual"><scope>Block</scope><name>numOfTransactions</name></member>
+      <member refid="struct_m_i_block_1a942caf6700f7eee4a96b41503337886c" prot="public" virt="non-virtual"><scope>Block</scope><name>previousBlockHash</name></member>
+      <member refid="struct_m_i_block_1a695e5800ad1fd403c0e72d918eaec97c" prot="public" virt="non-virtual"><scope>Block</scope><name>target</name></member>
+      <member refid="struct_m_i_block_1ae73654f333e4363463ad8c594eca1905" prot="public" virt="non-virtual"><scope>Block</scope><name>time</name></member>
+      <member refid="struct_m_i_block_1a722f3f2bbe4a11072741a214e2750a42" prot="public" virt="non-virtual"><scope>Block</scope><name>transactions</name></member>
+      <member refid="struct_m_i_block_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" virt="non-virtual"><scope>Block</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,156 @@
+\hypertarget{_m_i_crypt_8h}{
+\section{src/Utils/Cryptography/MICrypt.h File Reference}
+\label{_m_i_crypt_8h}\index{src/Utils/Cryptography/MICrypt.h@{src/Utils/Cryptography/MICrypt.h}}
+}
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+{\ttfamily \#include \char`\"{}../../MIConstants.h\char`\"{}}\par
+Include dependency graph for MICrypt.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_m_i_crypt_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{_m_i_crypt_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m_i_crypt_8h_a403b2cfdc3a8dbf7fc32a9565003feb9}{MISha256} (uint8\_\-t $\ast$data, uint16\_\-t length, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em SHA-\/256 cryptographic hash function. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_crypt_8h_aa2b596dad97fa3d4de7590d5b1b1509a}{MIRipemd160} (uint8\_\-t $\ast$data, uint16\_\-t length, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em RIPEMD-\/160 cryptographic hash function. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_crypt_8h_a919ca4891c68f1cc32d100fe4bec103e}{MISha160} (uint8\_\-t $\ast$data, uint16\_\-t length, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em SHA-\/1 cryptographic hash function. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_crypt_8h_a1daf3c15d36f5663956cff4d3ce1e1d4}{MIECDSAVerify} (uint8\_\-t $\ast$signature, uint8\_\-t signatureLen, uint8\_\-t $\ast$hash, const uint8\_\-t $\ast$pubKey, uint8\_\-t keyLen)
+\begin{DoxyCompactList}\small\item\em Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_crypt_8h_a1daf3c15d36f5663956cff4d3ce1e1d4}{
+\index{MICrypt.h@{MICrypt.h}!MIECDSAVerify@{MIECDSAVerify}}
+\index{MIECDSAVerify@{MIECDSAVerify}!MICrypt.h@{MICrypt.h}}
+\subsubsection[{MIECDSAVerify}]{\setlength{\rightskip}{0pt plus 5cm}int MIECDSAVerify (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{signature, }
+\item[{uint8\_\-t}]{signatureLen, }
+\item[{uint8\_\-t $\ast$}]{hash, }
+\item[{const uint8\_\-t $\ast$}]{pubKey, }
+\item[{uint8\_\-t}]{keyLen}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_crypt_8h_a1daf3c15d36f5663956cff4d3ce1e1d4}
+
+
+Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signature} & BER encoded signature bytes. \\
+\hline
+{\em signatureLen} & The length of the signature bytes. \\
+\hline
+{\em hash} & A 32 byte hash for checking the signature against. \\
+\hline
+{\em pubKey} & Public key bytes to check this signature with. \\
+\hline
+{\em keyLen} & The length of the public key bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid and false if invalid. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file MICrypt.c.
+
+\hypertarget{_m_i_crypt_8h_aa2b596dad97fa3d4de7590d5b1b1509a}{
+\index{MICrypt.h@{MICrypt.h}!MIRipemd160@{MIRipemd160}}
+\index{MIRipemd160@{MIRipemd160}!MICrypt.h@{MICrypt.h}}
+\subsubsection[{MIRipemd160}]{\setlength{\rightskip}{0pt plus 5cm}void MIRipemd160 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_crypt_8h_aa2b596dad97fa3d4de7590d5b1b1509a}
+
+
+RIPEMD-\/160 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 20-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file MICrypt.c.
+
+\hypertarget{_m_i_crypt_8h_a919ca4891c68f1cc32d100fe4bec103e}{
+\index{MICrypt.h@{MICrypt.h}!MISha160@{MISha160}}
+\index{MISha160@{MISha160}!MICrypt.h@{MICrypt.h}}
+\subsubsection[{MISha160}]{\setlength{\rightskip}{0pt plus 5cm}void MISha160 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_crypt_8h_a919ca4891c68f1cc32d100fe4bec103e}
+
+
+SHA-\/1 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 10-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file MICrypt.c.
+
+\hypertarget{_m_i_crypt_8h_a403b2cfdc3a8dbf7fc32a9565003feb9}{
+\index{MICrypt.h@{MICrypt.h}!MISha256@{MISha256}}
+\index{MISha256@{MISha256}!MICrypt.h@{MICrypt.h}}
+\subsubsection[{MISha256}]{\setlength{\rightskip}{0pt plus 5cm}void MISha256 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_crypt_8h_a403b2cfdc3a8dbf7fc32a9565003feb9}
+
+
+SHA-\/256 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 32-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file MICrypt.c.
+

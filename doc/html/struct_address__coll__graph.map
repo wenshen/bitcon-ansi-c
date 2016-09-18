@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_version_checksum_bytes.html" title="Structure for VersionChecksumBytes objects." alt="" coords="59,429,221,549"/>
+<area shape="rect" id="node4" href="$struct_byte_array.html" title="Structure for ByteArray objects." alt="" coords="75,192,205,347"/>
+<area shape="rect" id="node6" href="$struct_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="5,14,128,117"/>
+<area shape="rect" id="node8" href="$struct_object.html" title="Base class." alt="" coords="152,5,275,125"/>
+</map>

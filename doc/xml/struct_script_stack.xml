@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_script_stack" kind="struct" prot="public">
+    <compoundname>ScriptStack</compoundname>
+    <includes refid="_script_8h" local="no">Script.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> *</type>
+        <definition>struct ScriptByteVector* elements</definition>
+        <argsstring></argsstring>
+        <name>elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Elements in the stack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="34" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="_script_8h_1aa2df10dc8c05ec7340c2f22381dde313" compoundref="_script_8c" startline="44" endline="69">copyByteVectorFromScriptStack</referencedby>
+        <referencedby refid="_script_8h_1ae3aacd3817e39425e8441c23b453aae3" compoundref="_script_8c" startline="25" endline="32">createEmptyScriptStack</referencedby>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+        <referencedby refid="_script_8h_1a230165cbcd191bbb3830aebaa18a2719" compoundref="_script_8c" startline="120" endline="128">popElementFromStack</referencedby>
+        <referencedby refid="_script_8h_1aaf6cf483fc47c20762e777a581c2510a" compoundref="_script_8c" startline="71" endline="84">pushScriptByteVectorOntoScriptStack</referencedby>
+        <referencedby refid="_script_8h_1a2192430534274747a5b711b19261e4fe" compoundref="_script_8c" startline="112" endline="118">removeElementFromStack</referencedby>
+        <referencedby refid="_script_8h_1a2c8040a862763eac525a2907846aa70d" compoundref="_script_8c" startline="86" endline="110">topElementEvaluatesToTrue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of the stack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="35" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="_script_8h_1aa2df10dc8c05ec7340c2f22381dde313" compoundref="_script_8c" startline="44" endline="69">copyByteVectorFromScriptStack</referencedby>
+        <referencedby refid="_script_8h_1ae3aacd3817e39425e8441c23b453aae3" compoundref="_script_8c" startline="25" endline="32">createEmptyScriptStack</referencedby>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+        <referencedby refid="_script_8h_1a230165cbcd191bbb3830aebaa18a2719" compoundref="_script_8c" startline="120" endline="128">popElementFromStack</referencedby>
+        <referencedby refid="_script_8h_1aaf6cf483fc47c20762e777a581c2510a" compoundref="_script_8c" startline="71" endline="84">pushScriptByteVectorOntoScriptStack</referencedby>
+        <referencedby refid="_script_8h_1a2192430534274747a5b711b19261e4fe" compoundref="_script_8c" startline="112" endline="118">removeElementFromStack</referencedby>
+        <referencedby refid="_script_8h_1a2c8040a862763eac525a2907846aa70d" compoundref="_script_8c" startline="86" endline="110">topElementEvaluatesToTrue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure that holds byte vector data in a stack. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="368">
+        <label>ScriptStack</label>
+        <link refid="struct_script_stack"/>
+        <childnode refid="369" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="369">
+        <label>ScriptByteVector</label>
+        <link refid="struct_script_byte_vector"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="33" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" bodystart="33" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" prot="public" virt="non-virtual"><scope>ScriptStack</scope><name>elements</name></member>
+      <member refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" prot="public" virt="non-virtual"><scope>ScriptStack</scope><name>length</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

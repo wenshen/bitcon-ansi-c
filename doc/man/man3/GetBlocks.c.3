@@ -1,0 +1,185 @@
+.TH "src/Object/Message/GetBlocks.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/GetBlocks.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'GetBlocks.h'\fP
+.br
+\fC#include 'assert.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGetBlocks\fP * \fBnewGetBlocks\fP (uint32_t version, \fBChainDescriptor\fP *chainDescriptor, \fBByteArray\fP *stopAtHash, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBGetBlocks\fP object. \fP"
+.ti -1c
+.RI "\fBGetBlocks\fP * \fBnewGetBlocksFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBGetBlocks\fP object from serialized data. \fP"
+.ti -1c
+.RI "\fBGetBlocks\fP * \fBgetGetBlocks\fP (void *self)"
+.br
+.RI "\fIGets a \fBGetBlocks\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitGetBlocks\fP (\fBGetBlocks\fP *self, uint32_t version, \fBChainDescriptor\fP *chainDescriptor, \fBByteArray\fP *stopAtHash, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBGetBlocks\fP object. \fP"
+.ti -1c
+.RI "int \fBinitGetBlocksFromData\fP (\fBGetBlocks\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBGetBlocks\fP object from serialised data. \fP"
+.ti -1c
+.RI "void \fBfreeGetBlocks\fP (void *vself)"
+.br
+.RI "\fIFrees a \fBGetBlocks\fP object. \fP"
+.ti -1c
+.RI "uint32_t \fBcalculateGetBlocksLength\fP (\fBGetBlocks\fP *self)"
+.br
+.RI "\fICalculates the length needed to serialise the object. \fP"
+.ti -1c
+.RI "uint16_t \fBdeserializeGetBlocks\fP (\fBGetBlocks\fP *self)"
+.br
+.RI "\fIDeserializes a \fBGetBlocks\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "uint16_t \fBserializeGetBlocks\fP (\fBGetBlocks\fP *self)"
+.br
+.RI "\fISerializes a \fBGetBlocks\fP to the byte data. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "uint32_t calculateGetBlocksLength (\fBGetBlocks\fP *self)"
+.PP
+Calculates the length needed to serialise the object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBGetBlocks\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file GetBlocks.c.
+.SS "uint16_t deserializeGetBlocks (\fBGetBlocks\fP *self)"
+.PP
+Deserializes a \fBGetBlocks\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBGetBlocks\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file GetBlocks.c.
+.SS "void freeGetBlocks (void *self)"
+.PP
+Frees a \fBGetBlocks\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBGetBlocks\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file GetBlocks.c.
+.SS "\fBGetBlocks\fP* getGetBlocks (void *self)"
+.PP
+Gets a \fBGetBlocks\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBGetBlocks\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBGetBlocks\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file GetBlocks.c.
+.SS "int initGetBlocks (\fBGetBlocks\fP *self, uint32_tversion, \fBChainDescriptor\fP *chainDescriptor, \fBByteArray\fP *stopAtHash, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBGetBlocks\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBGetBlocks\fP object to initialise 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file GetBlocks.c.
+.SS "int initGetBlocksFromData (\fBGetBlocks\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBGetBlocks\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBGetBlocks\fP object to initialise 
+.br
+\fIdata\fP The serialised data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file GetBlocks.c.
+.SS "\fBGetBlocks\fP* newGetBlocks (uint32_tversion, \fBChainDescriptor\fP *chainDescriptor, \fBByteArray\fP *stopAtHash, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBGetBlocks\fP object. \fBReturns:\fP
+.RS 4
+A new \fBGetBlocks\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file GetBlocks.c.
+.SS "\fBGetBlocks\fP* newGetBlocksFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBGetBlocks\fP object from serialized data. \fBParameters:\fP
+.RS 4
+\fIdata\fP Serialized \fBGetBlocks\fP data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBGetBlocks\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file GetBlocks.c.
+.SS "uint16_t serializeGetBlocks (\fBGetBlocks\fP *self)"
+.PP
+Serializes a \fBGetBlocks\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBGetBlocks\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file GetBlocks.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

@@ -1,0 +1,193 @@
+.TH "src/Object/Message/PingPongMessage.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/PingPongMessage.h \- 
+.PP
+This message contains the nonce ID used in ping and pong messages for protocol versions over 60000. When the protocol version as negotiated in the 'ver' message is greater than 60000, the 'ping' message must contain a uint64 field called 'nonce'. A peer sending 'ping' should set the nonce to a random value, and it is then echoed back by the recipient in a new 'pong' message that also contains a single uint64 field. see https://en.bitcoin.it/wiki/BIP_0031 A NetworkCommunicator will accept this message for compatible protocol numbers and use an empty message for pings otherwise. Inherits \fBMessage\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Message.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPingPongMessage\fP"
+.br
+.RI "\fIStructure for \fBPingPongMessage\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPingPongMessage\fP * \fBcreateNewPingPongMessage\fP (uint64_t ID, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBPingPongMessage\fP object. \fP"
+.ti -1c
+.RI "\fBPingPongMessage\fP * \fBcreateNewPingPongMessageFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBPingPongMessage\fP object from serialised data. \fP"
+.ti -1c
+.RI "\fBPingPongMessage\fP * \fBgetPingPongMessage\fP (void *self)"
+.br
+.RI "\fIGets a \fBPingPongMessage\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitializePingPongMessage\fP (\fBPingPongMessage\fP *self, uint64_t ID, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBPingPongMessage\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializePingPongMessageFromData\fP (\fBPingPongMessage\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBPingPongMessage\fP object from serialised data. \fP"
+.ti -1c
+.RI "void \fBdestroyPingPongMessage\fP (void *self)"
+.br
+.RI "\fIFrees a \fBPingPongMessage\fP object. \fP"
+.ti -1c
+.RI "uint8_t \fBdeserializePingPongMessage\fP (\fBPingPongMessage\fP *self)"
+.br
+.RI "\fIDeserialises a \fBPingPongMessage\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "uint8_t \fBserializePingPongMessage\fP (\fBPingPongMessage\fP *self)"
+.br
+.RI "\fISerialises a \fBPingPongMessage\fP to the byte data. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This message contains the nonce ID used in ping and pong messages for protocol versions over 60000. When the protocol version as negotiated in the 'ver' message is greater than 60000, the 'ping' message must contain a uint64 field called 'nonce'. A peer sending 'ping' should set the nonce to a random value, and it is then echoed back by the recipient in a new 'pong' message that also contains a single uint64 field. see https://en.bitcoin.it/wiki/BIP_0031 A NetworkCommunicator will accept this message for compatible protocol numbers and use an empty message for pings otherwise. Inherits \fBMessage\fP. 
+
+
+.PP
+Definition in file \fBPingPongMessage.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "\fBPingPongMessage\fP* createNewPingPongMessage (uint64_tID, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBPingPongMessage\fP object. \fBParameters:\fP
+.RS 4
+\fIID\fP The identifier used in a ping/pong communication. Set to zero if you don't want to overlap ping messages 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBPingPongMessage\fP object. 
+.RE
+.PP
+
+.PP
+<assign destructor function to object 
+.PP
+Definition at line 13 of file PingPongMessage.c.
+.SS "\fBPingPongMessage\fP* createNewPingPongMessageFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBPingPongMessage\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIdata\fP Serialised \fBPingPongMessage\fP data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBPingPongMessage\fP object. 
+.RE
+.PP
+
+.PP
+<assign destructor function to object 
+.PP
+Definition at line 33 of file PingPongMessage.c.
+.SS "uint8_t deserializePingPongMessage (\fBPingPongMessage\fP *self)"
+.PP
+Deserialises a \fBPingPongMessage\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBPingPongMessage\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Length read if successful, zero otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file PingPongMessage.c.
+.SS "void destroyPingPongMessage (void *self)"
+.PP
+Frees a \fBPingPongMessage\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBPingPongMessage\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file PingPongMessage.c.
+.SS "\fBPingPongMessage\fP* getPingPongMessage (void *self)"
+.PP
+Gets a \fBPingPongMessage\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBPingPongMessage\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBPingPongMessage\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file PingPongMessage.c.
+.SS "int initializePingPongMessage (\fBPingPongMessage\fP *self, uint64_tID, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBPingPongMessage\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBPingPongMessage\fP object to initialise 
+.br
+\fIID\fP The identifier used in a ping/pong communcation. Set to zero if you don't want to overlap ping messages 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+One on success, Zero on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file PingPongMessage.c.
+.SS "int initializePingPongMessageFromData (\fBPingPongMessage\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBPingPongMessage\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBPingPongMessage\fP object to initialise 
+.br
+\fIdata\fP The serialised data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+One on success, Zero on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file PingPongMessage.c.
+.SS "uint8_t serializePingPongMessage (\fBPingPongMessage\fP *self)"
+.PP
+Serialises a \fBPingPongMessage\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBPingPongMessage\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Length written if successful, zero otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file PingPongMessage.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

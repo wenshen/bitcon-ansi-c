@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_bitcoin_8c" kind="file">
+    <compoundname>Bitcoin.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="632">
+        <label>src/Bitcoin.c</label>
+        <link refid="Bitcoin.c"/>
+        <childnode refid="633" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_bitcoin_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@ brief main function in testBlock <simplesect kind="return"><para>int </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Bitcoin.c" line="21" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Bitcoin.c" bodystart="21" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A test case for <ref refid="struct_block" kindref="compound">Block</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Test the <ref refid="struct_block" kindref="compound">Block</ref> class </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>testBlock.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>21/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>apopoola<sp/>&amp;<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_bitcoin_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_bitcoin_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>(){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Compiling<sp/>succeeded!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Bitcoin.c"/>
+  </compounddef>
+</doxygen>

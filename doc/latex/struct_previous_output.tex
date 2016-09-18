@@ -1,0 +1,64 @@
+\hypertarget{struct_previous_output}{
+\section{PreviousOutput Struct Reference}
+\label{struct_previous_output}\index{PreviousOutput@{PreviousOutput}}
+}
+
+
+contains hash of the transaction and the number of outputs. Example of the structure: \{ hash: \char`\"{}0000000000000000000000000000000000000000000000000000000000000000\char`\"{}, n: 4294967295 \}  
+
+
+
+
+{\ttfamily \#include $<$TransactionInput.h$>$}
+
+
+
+Collaboration diagram for PreviousOutput:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{struct_previous_output__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$ \hyperlink{struct_previous_output_a5695540112ce950745e15ab422b3f067}{hash}
+\item 
+uint32\_\-t \hyperlink{struct_previous_output_aafd95f8c7a99b9189ede7cdf0871ebe8}{index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains hash of the transaction and the number of outputs. Example of the structure: \{ hash: \char`\"{}0000000000000000000000000000000000000000000000000000000000000000\char`\"{}, n: 4294967295 \} 
+
+to help with prev\_\-out 
+
+Definition at line 33 of file TransactionInput.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_previous_output_a5695540112ce950745e15ab422b3f067}{
+\index{PreviousOutput@{PreviousOutput}!hash@{hash}}
+\index{hash@{hash}!PreviousOutput@{PreviousOutput}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf hash}}}
+\label{struct_previous_output_a5695540112ce950745e15ab422b3f067}
+Hash of the transaction that includes the output for this input 
+
+Definition at line 34 of file TransactionInput.h.
+
+\hypertarget{struct_previous_output_aafd95f8c7a99b9189ede7cdf0871ebe8}{
+\index{PreviousOutput@{PreviousOutput}!index@{index}}
+\index{index@{index}!PreviousOutput@{PreviousOutput}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf index}}}
+\label{struct_previous_output_aafd95f8c7a99b9189ede7cdf0871ebe8}
+The index of the output for this input 
+
+Definition at line 35 of file TransactionInput.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_transaction_input_8h}{TransactionInput.h}\end{DoxyCompactItemize}

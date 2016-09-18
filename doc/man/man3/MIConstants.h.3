@@ -1,0 +1,287 @@
+.TH "Constants.h" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Constants.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRETURN_SUCCESS\fP   1;"
+.br
+.ti -1c
+.RI "#define \fBRETURN_FAILURE\fP   0;"
+.br
+.ti -1c
+.RI "#define \fBFALSE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTRUE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBBYTE_LENGTH_32\fP   32;"
+.br
+.ti -1c
+.RI "#define \fB_OUTPUT_VALUE_NUS_ONE\fP   0xFFFFFFFFFFFFFFFF"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMessageType\fP { \fB_MESSAGE_TYPE_VERSION\fP =  1, \fB_MESSAGE_TYPE_VERACK\fP =  2, \fB_MESSAGE_TYPE_ADDR\fP =  4, \fB_MESSAGE_TYPE_INV\fP =  8, \fB_MESSAGE_TYPE_GETDATA\fP =  16, \fB_MESSAGE_TYPE_GETBLOCKS\fP =  32, \fB_MESSAGE_TYPE_GETHEADERS\fP =  64, \fB_MESSAGE_TYPE_TX\fP =  128, \fB_MESSAGE_TYPE_BLOCK\fP =  256, \fB_MESSAGE_TYPE_HEADERS\fP =  512, \fB_MESSAGE_TYPE_GETADDR\fP =  1024, \fB_MESSAGE_TYPE_PING\fP =  2048, \fB_MESSAGE_TYPE_PONG\fP =  4096, \fB_MESSAGE_TYPE_ALERT\fP =  8192, \fB_MESSAGE_TYPE_ALT\fP =  16384, \fB_MESSAGE_TYPE_ADDRMAN\fP =  32768, \fB_MESSAGE_TYPE_CHAINDESC\fP =  65536 }"
+.br
+.ti -1c
+.RI "enum \fBError\fP { \fB_ERROR_MESSAGE_CHECKSUM_BAD_SIZE\fP, \fB_ERROR_MESSAGE_NO_SERIALISATION_IMPLEMENTATION\fP, \fB_ERROR_MESSAGE_NO_DESERIALISATION_IMPLEMENTATION\fP, \fB_ERROR_MESSAGE_DESERIALISATION_BAD_BYTES\fP, \fB_ERROR_MESSAGE_DESERIALISATION_NULL_BYTES\fP, \fB_ERROR_MESSAGE_SERIALISATION_BAD_BYTES\fP, \fB_ERROR_MESSAGE_SERIALISATION_NULL_BYTES\fP, \fB_ERROR_MESSAGE_SERIALISATION_BAD_DATA\fP, \fB_ERROR_SHA_256_HASH_BAD_BYTE_ARRAY_LENGTH\fP, \fB_ERROR_BASE58_DECODE_CHECK_TOO_SHORT\fP, \fB_ERROR_BASE58_DECODE_CHECK_INVALID\fP, \fB_ERROR_TRANSACTION_FEW_INPUTS\fP, \fB_ERROR_TRANSACTION_FEW_OUTPUTS\fP, \fB_ERROR_NETWORK_COMMUNICATOR_LOOP_FAIL\fP, \fB_ERROR_NETWORK_COMMUNICATOR_LOOP_CREATE_FAIL\fP, \fB_ERROR_NETWORK_COMMUNICATOR_CONNECT_FAILURE\fP, \fB_ERROR_OUT_OF_MEMORY\fP, \fB_ERROR_INIT_FAIL\fP }"
+.br
+.ti -1c
+.RI "enum \fBCompare\fP { \fB_COMPARE_MORE_THAN\fP =  1, \fB_COMPARE_EQUAL\fP =  0, \fB_COMPARE_LESS_THAN\fP =  -1 }"
+.br
+.ti -1c
+.RI "enum \fBTransactionHashStatus\fP { \fBTX_HASH_GOOD\fP, \fBTX_HASH_BAD\fP, \fBTX_HASH_FAIL\fP }"
+.br
+.ti -1c
+.RI "enum \fBSignatureType\fP { \fB_SIGHASH_ALL\fP =  0x00000001, \fB_SIGHASH_NONE\fP =  0x00000002, \fB_SIGHASH_SINGLE\fP =  0x00000003, \fB_SIGHASH_ANYONECANPAY\fP =  0x00000080 }"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define BYTE_LENGTH_32   32;"
+.PP
+Definition at line 68 of file Constants.h.
+.SS "#define FALSE   0"
+.PP
+Definition at line 65 of file Constants.h.
+.SS "#define _OUTPUT_VALUE_NUS_ONE   0xFFFFFFFFFFFFFFFF"
+.PP
+Definition at line 69 of file Constants.h.
+.SS "#define RETURN_FAILURE   0;"
+.PP
+Definition at line 64 of file Constants.h.
+.SS "#define RETURN_SUCCESS   1;"
+.PP
+Definition at line 63 of file Constants.h.
+.SS "#define TRUE   1"
+.PP
+Definition at line 66 of file Constants.h.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBCompare\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fI_COMPARE_MORE_THAN \fP\fP
+.TP
+\fB\fI_COMPARE_EQUAL \fP\fP
+.TP
+\fB\fI_COMPARE_LESS_THAN \fP\fP
+
+.PP
+Definition at line 56 of file Constants.h.
+.SS "enum \fBError\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fI_ERROR_MESSAGE_CHECKSUM_BAD_SIZE \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_NO_SERIALISATION_IMPLEMENTATION \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_NO_DESERIALISATION_IMPLEMENTATION \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_DESERIALISATION_BAD_BYTES \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_DESERIALISATION_NULL_BYTES \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_SERIALISATION_BAD_BYTES \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_SERIALISATION_NULL_BYTES \fP\fP
+.TP
+\fB\fI_ERROR_MESSAGE_SERIALISATION_BAD_DATA \fP\fP
+.TP
+\fB\fI_ERROR_SHA_256_HASH_BAD_BYTE_ARRAY_LENGTH \fP\fP
+.TP
+\fB\fI_ERROR_BASE58_DECODE_CHECK_TOO_SHORT \fP\fP
+.TP
+\fB\fI_ERROR_BASE58_DECODE_CHECK_INVALID \fP\fP
+.TP
+\fB\fI_ERROR_TRANSACTION_FEW_INPUTS \fP\fP
+.TP
+\fB\fI_ERROR_TRANSACTION_FEW_OUTPUTS \fP\fP
+.TP
+\fB\fI_ERROR_NETWORK_COMMUNICATOR_LOOP_FAIL \fP\fP
+.TP
+\fB\fI_ERROR_NETWORK_COMMUNICATOR_LOOP_CREATE_FAIL \fP\fP
+.TP
+\fB\fI_ERROR_NETWORK_COMMUNICATOR_CONNECT_FAILURE \fP\fP
+.TP
+\fB\fI_ERROR_OUT_OF_MEMORY \fP\fP
+.TP
+\fB\fI_ERROR_INIT_FAIL \fP\fP
+
+.PP
+Definition at line 35 of file Constants.h.
+.SS "enum \fBMessageType\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fI_MESSAGE_TYPE_VERSION \fP\fP
+\fBSee also:\fP
+.RS 4
+Version.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_VERACK \fP\fP
+Acknowledgement and acceptance of a peer's version and connection. 
+.TP
+\fB\fI_MESSAGE_TYPE_ADDR \fP\fP
+\fBSee also:\fP
+.RS 4
+AddressBroadcast.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_INV \fP\fP
+\fBSee also:\fP
+.RS 4
+InventoryBroadcast.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_GETDATA \fP\fP
+\fBSee also:\fP
+.RS 4
+InventoryBroadcast.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_GETBLOCKS \fP\fP
+\fBSee also:\fP
+.RS 4
+GetBlocks.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_GETHEADERS \fP\fP
+\fBSee also:\fP
+.RS 4
+GetBlocks.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_TX \fP\fP
+\fBSee also:\fP
+.RS 4
+\fBTransaction.h\fP 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_BLOCK \fP\fP
+\fBSee also:\fP
+.RS 4
+\fBBlock.h\fP 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_HEADERS \fP\fP
+\fBSee also:\fP
+.RS 4
+BlockHeaders.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_GETADDR \fP\fP
+Request for 'active peers'. bitcoin-qt consiers active peers to be those that have sent messages in the last 30 minutes. 
+.TP
+\fB\fI_MESSAGE_TYPE_PING \fP\fP
+\fBSee also:\fP
+.RS 4
+PingPong.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_PONG \fP\fP
+\fBSee also:\fP
+.RS 4
+PingPong.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_ALERT \fP\fP
+\fBSee also:\fP
+.RS 4
+Alert.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_ALT \fP\fP
+The message was defined by 'alternativeMessages' in a NetworkCommunicator 
+.TP
+\fB\fI_MESSAGE_TYPE_ADDRMAN \fP\fP
+\fBSee also:\fP
+.RS 4
+AddressManager.h 
+.RE
+.PP
+
+.TP
+\fB\fI_MESSAGE_TYPE_CHAINDESC \fP\fP
+\fBSee also:\fP
+.RS 4
+ChainDescriptor.h 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file Constants.h.
+.SS "enum \fBSignatureType\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fI_SIGHASH_ALL \fP\fP
+.TP
+\fB\fI_SIGHASH_NONE \fP\fP
+.TP
+\fB\fI_SIGHASH_SINGLE \fP\fP
+.TP
+\fB\fI_SIGHASH_ANYONECANPAY \fP\fP
+
+.PP
+Definition at line 81 of file Constants.h.
+.SS "enum \fBTransactionHashStatus\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fITX_HASH_GOOD \fP\fP
+Transaction hash was made OK 
+.TP
+\fB\fITX_HASH_BAD \fP\fP
+The transaction is invalid and a hash cannot be made. 
+.TP
+\fB\fITX_HASH_FAIL \fP\fP
+An error occured while making the hash. 
+.PP
+Definition at line 74 of file Constants.h.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

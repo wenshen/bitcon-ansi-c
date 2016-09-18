@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_manager_8h.html#ada91032d0ead836543c56d33b1192b0e" title="Serialises a AddressManager to the byte data." alt="" coords="227,5,395,35"/>
+<area shape="rect" id="node5" href="$_address_broadcast_8h.html#ac5fc8eb7325d5135ad7574f383cf38b5" title="Serialises a AddressBroadcast to the byte data." alt="" coords="223,59,399,88"/>
+<area shape="rect" id="node7" href="$_version_8h.html#ac54678e73e3934192a9063f7a8b6a214" title="Serializes a Version to the byte data." alt="" coords="253,112,368,141"/>
+</map>

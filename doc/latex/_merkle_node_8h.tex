@@ -1,0 +1,185 @@
+\hypertarget{_merkle_node_8h}{
+\section{src/MerkleNode/MerkleNode.h File Reference}
+\label{_merkle_node_8h}\index{src/MerkleNode/MerkleNode.h@{src/MerkleNode/MerkleNode.h}}
+}
+
+
+A structure for a node in a merkle tree.  
+
+
+{\ttfamily \#include \char`\"{}../Object/ByteArray.h\char`\"{}}\par
+Include dependency graph for MerkleNode.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_merkle_node_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_merkle_node_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_merkle_node}{MerkleNode}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_merkle_node}{MerkleNode} \hyperlink{_merkle_node_8h_af002199439db0a28afeb08c00d11260f}{MerkleNode}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_merkle_node}{MerkleNode} $\ast$ \hyperlink{_merkle_node_8h_a211a27939356415dc6fb21842966706e}{BuildMerkleTree} (\hyperlink{struct_byte_array}{ByteArray} $\ast$$\ast$hashes, uint32\_\-t numHashes)
+\begin{DoxyCompactList}\small\item\em Builds a Merkle tree from a list of hashes. In cases of duplication, \char`\"{}left\char`\"{} and \char`\"{}right\char`\"{} may refer to the same node. \end{DoxyCompactList}\item 
+void \hyperlink{_merkle_node_8h_adafaa29e779569ee1b9bb32a334ed6de}{FreeMerkleTree} (\hyperlink{struct_merkle_node}{MerkleNode} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Frees a merkle tree from a given root. \end{DoxyCompactList}\item 
+\hyperlink{struct_merkle_node}{MerkleNode} $\ast$ \hyperlink{_merkle_node_8h_a9624499a6e6439c15f81653328e5d05a}{MerkleTreeGetLevel} (\hyperlink{struct_merkle_node}{MerkleNode} $\ast$root, uint8\_\-t level)
+\begin{DoxyCompactList}\small\item\em Gets a list of hashes for a level in a merkle tree. If the merkle tree's deepest level is smaller than specified by \char`\"{}level\char`\"{}, the lowest level in the tree is returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A structure for a node in a merkle tree. 
+
+Definition in file \hyperlink{_merkle_node_8h_source}{MerkleNode.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_merkle_node_8h_af002199439db0a28afeb08c00d11260f}{
+\index{MerkleNode.h@{MerkleNode.h}!MerkleNode@{MerkleNode}}
+\index{MerkleNode@{MerkleNode}!MerkleNode.h@{MerkleNode.h}}
+\subsubsection[{MerkleNode}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf MerkleNode} {\bf MerkleNode}}}
+\label{_merkle_node_8h_af002199439db0a28afeb08c00d11260f}
+
+
+Definition at line 20 of file MerkleNode.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_merkle_node_8h_a211a27939356415dc6fb21842966706e}{
+\index{MerkleNode.h@{MerkleNode.h}!BuildMerkleTree@{BuildMerkleTree}}
+\index{BuildMerkleTree@{BuildMerkleTree}!MerkleNode.h@{MerkleNode.h}}
+\subsubsection[{BuildMerkleTree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MerkleNode}$\ast$ BuildMerkleTree (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$$\ast$}]{hashes, }
+\item[{uint32\_\-t}]{numHashes}
+\end{DoxyParamCaption}
+)}}
+\label{_merkle_node_8h_a211a27939356415dc6fb21842966706e}
+
+
+Builds a Merkle tree from a list of hashes. In cases of duplication, \char`\"{}left\char`\"{} and \char`\"{}right\char`\"{} may refer to the same node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hashes} & A list of hashes as ByteArrays to build the tree from. \\
+\hline
+{\em numHashes} & The number of hashes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root \hyperlink{struct_merkle_node}{MerkleNode} for the tree. 
+\end{DoxyReturn}
+
+
+$<$ Nodes on a level of the tree for processing.
+
+$<$ Create nodes from the \hyperlink{struct_byte_array}{ByteArray} hashes
+
+$<$ Double SHA256
+
+$<$ Finished level
+
+$<$ The number of hashes was odd. Increment to even
+
+$<$ Move to next level
+
+$<$ Done, got the single root hash 
+
+
+
+Definition at line 15 of file MerkleNode.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{_merkle_node_8h_a211a27939356415dc6fb21842966706e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_merkle_node_8h_adafaa29e779569ee1b9bb32a334ed6de}{
+\index{MerkleNode.h@{MerkleNode.h}!FreeMerkleTree@{FreeMerkleTree}}
+\index{FreeMerkleTree@{FreeMerkleTree}!MerkleNode.h@{MerkleNode.h}}
+\subsubsection[{FreeMerkleTree}]{\setlength{\rightskip}{0pt plus 5cm}void FreeMerkleTree (
+\begin{DoxyParamCaption}
+\item[{{\bf MerkleNode} $\ast$}]{root}
+\end{DoxyParamCaption}
+)}}
+\label{_merkle_node_8h_adafaa29e779569ee1b9bb32a334ed6de}
+
+
+Frees a merkle tree from a given root. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The merkle tree root node. \\
+\hline
+\end{DoxyParams}
+
+
+$<$ Free all levels along the far left 
+
+
+
+Definition at line 75 of file MerkleNode.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{_merkle_node_8h_adafaa29e779569ee1b9bb32a334ed6de_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_merkle_node_8h_a9624499a6e6439c15f81653328e5d05a}{
+\index{MerkleNode.h@{MerkleNode.h}!MerkleTreeGetLevel@{MerkleTreeGetLevel}}
+\index{MerkleTreeGetLevel@{MerkleTreeGetLevel}!MerkleNode.h@{MerkleNode.h}}
+\subsubsection[{MerkleTreeGetLevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MerkleNode}$\ast$ MerkleTreeGetLevel (
+\begin{DoxyParamCaption}
+\item[{{\bf MerkleNode} $\ast$}]{root, }
+\item[{uint8\_\-t}]{level}
+\end{DoxyParamCaption}
+)}}
+\label{_merkle_node_8h_a9624499a6e6439c15f81653328e5d05a}
+
+
+Gets a list of hashes for a level in a merkle tree. If the merkle tree's deepest level is smaller than specified by \char`\"{}level\char`\"{}, the lowest level in the tree is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The merkle tree root node. \\
+\hline
+{\em level} & The level to retrieve. Pass in a high number (use 255) to get the deepest level. Level 0 corresponds to the root which was passed in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+With nodes left to right, the memory block for this level of the merkle tree. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file MerkleNode.c.
+

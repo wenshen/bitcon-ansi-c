@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_peer.html" title="Structure for Peer objects." alt="" coords="121,1371,271,2011"/>
+<area shape="rect" id="node4" href="$struct_network_address.html" title="Structure for NetworkAddress objects." alt="" coords="237,688,355,912"/>
+<area shape="rect" id="node16" href="$struct_version.html" title="Structure for Version objects." alt="" coords="145,995,247,1219"/>
+<area shape="rect" id="node22" href="$struct_bucket.html" title="Structure for placing IP addresses such that is is difficult to obtain IPs that fall into many bucket..." alt="" coords="343,1243,436,1346"/>
+<area shape="rect" id="node6" href="$struct_message.html" title="Structure for Message objects." alt="" coords="36,414,167,621"/>
+<area shape="rect" id="node8" href="$struct_object.html" title="Base class." alt="" coords="36,5,159,125"/>
+<area shape="rect" id="node10" href="$struct_byte_array.html" title="Structure for ByteArray objects." alt="" coords="151,192,281,347"/>
+<area shape="rect" id="node12" href="$struct_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="183,14,305,117"/>
+</map>

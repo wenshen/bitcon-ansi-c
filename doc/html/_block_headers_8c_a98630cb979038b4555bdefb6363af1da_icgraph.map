@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_network_communicator_8c.html#a1e7aeba124b81e6ab5e0661c521a8e78" title="NetworkCommunicatorOnMessageReceived" alt="" coords="183,24,463,53"/>
+<area shape="rect" id="node19" href="$_block_headers_8h.html#a51c1cdd585a18d75265a21f37defac7a" title="Creates a new BlockHeaders object." alt="" coords="259,77,387,107"/>
+<area shape="rect" id="node21" href="$_block_headers_8h.html#a410e43950e869b2178f0e904336bdac7" title="Creates a new BlockHeaders object from serialized data." alt="" coords="229,131,416,160"/>
+<area shape="rect" id="node5" href="$_network_communicator_8c.html#a46f71a041685b462e8c1b738e7ed6915" title="NetworkCommunicatorOnCanReceive" alt="" coords="832,24,1077,53"/>
+<area shape="rect" id="node16" href="$_network_communicator_8c.html#a3c2373b9fdccdb79d21f4bdb0421db2a" title="NetworkCommunicatorOnHeaderRecieved" alt="" coords="513,24,783,53"/>
+<area shape="rect" id="node7" href="$_network_communicator_8c.html#a01b2fbdac7b86ad9f640ab3f02d0845b" title="NetworkCommunicatorDidConnect" alt="" coords="1127,24,1351,53"/>
+<area shape="rect" id="node9" href="$_network_communicator_8c.html#af58f7467f49c22bab01296912d93c41c" title="NetworkCommunicatorConnect" alt="" coords="1400,24,1605,53"/>
+<area shape="rect" id="node11" href="$_network_communicator_8c.html#a1885c0cdbcfda108d13cf52a71bad42d" title="NetworkCommunicatorTryConnections" alt="" coords="1653,24,1901,53"/>
+<area shape="rect" id="node13" href="$_network_communicator_8c.html#ac2d57ca1c8882c561500536901bd2ddd" title="NetworkCommunicatorProcessMessageAutoDiscovery" alt="" coords="1951,51,2292,80"/>
+</map>

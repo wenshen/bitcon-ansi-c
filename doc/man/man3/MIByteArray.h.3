@@ -1,0 +1,674 @@
+.TH "Object/ByteArray.h" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object/ByteArray.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Object.h'\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include '../Constants.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSharedData\fP"
+.br
+.RI "\fIStores byte data that can be shared amongst many ByteArrays. \fP"
+.ti -1c
+.RI "struct \fBByteArray\fP"
+.br
+.RI "\fIStructure for \fBByteArray\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBByteArray\fP * \fBcreateNewByteArrayFromString\fP (char *string, int terminator, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a \fBByteArray\fP object from a C string. The termination character is not included in the new \fBByteArray\fP. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBcreateNewByteArrayOfSize\fP (uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates an empty \fBByteArray\fP object. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBcreateNewByteArrayFromData\fP (uint8_t *data, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBByteArray\fP using data. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBcreateNewByteArrayUsingDataCopy\fP (uint8_t *data, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBByteArray\fP using data which is copied. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBgetByteArray\fP (void *self)"
+.br
+.RI "\fIGets a \fBByteArray\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitByteArrayFromString\fP (\fBByteArray\fP *self, char *string, int terminator, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBByteArray\fP object from a C string. The termination character is not included in the new \fBByteArray\fP. \fP"
+.ti -1c
+.RI "int \fBinitByteArrayOfSize\fP (\fBByteArray\fP *self, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises an empty \fBByteArray\fP object. \fP"
+.ti -1c
+.RI "int \fBinitNewByteArrayFromData\fP (\fBByteArray\fP *self, uint8_t *data, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBByteArray\fP using data. \fP"
+.ti -1c
+.RI "int \fBinitNewByteArrayUsingDataCopy\fP (\fBByteArray\fP *self, uint8_t *data, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBByteArray\fP using data which is copied. \fP"
+.ti -1c
+.RI "int \fBinitializeByteArraySubsectionReference\fP (\fBByteArray\fP *self, \fBByteArray\fP *refByteArray, uint32_t offset, uint32_t length)"
+.br
+.RI "\fIInitialises a reference \fBByteArray\fP to a subsection of an \fBByteArray\fP. \fP"
+.ti -1c
+.RI "void \fBdestroyByteArray\fP (void *self)"
+.br
+.RI "\fIDestroys a \fBByteArray\fP object. \fP"
+.ti -1c
+.RI "void \fBreleaseByteArraySharedDataReference\fP (\fBByteArray\fP *self)"
+.br
+.RI "\fIReleases a reference to shared byte data and frees the data if necessary. \fP"
+.ti -1c
+.RI "uint16_t \fBreadInt16AsLittleEndianFromByteArray\fP (\fBByteArray\fP *self, uint32_t offset)"
+.br
+.RI "\fIReads a 16 bit integer from a \fBByteArray\fP as little-endian. \fP"
+.ti -1c
+.RI "uint32_t \fBreadInt32AsLittleEndianFromByteArray\fP (\fBByteArray\fP *self, uint32_t offset)"
+.br
+.RI "\fIReads a 32 bit integer from a \fBByteArray\fP as little-endian. \fP"
+.ti -1c
+.RI "uint64_t \fBreadInt64AsLittleEndianFromByteArray\fP (\fBByteArray\fP *self, uint32_t offset)"
+.br
+.RI "\fIReads a 64 bit integer from the \fBByteArray\fP as little-endian. \fP"
+.ti -1c
+.RI "\fBCompare\fP \fBcompareByteArrays\fP (\fBByteArray\fP *self, \fBByteArray\fP *second)"
+.br
+.RI "\fICompares a \fBByteArray\fP to another \fBByteArray\fP and returns with a Compare value. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBcopyByteArray\fP (\fBByteArray\fP *self)"
+.br
+.RI "\fICopies a \fBByteArray\fP. \fP"
+.ti -1c
+.RI "void \fBcopyByteArrayToByteArray\fP (\fBByteArray\fP *self, uint32_t writeOffset, \fBByteArray\fP *source)"
+.br
+.RI "\fICopies another byte array to this byte array. \fP"
+.ti -1c
+.RI "void \fBcopySubsectionOfByteArrayToByteArray\fP (\fBByteArray\fP *self, uint32_t writeOffset, \fBByteArray\fP *source, uint32_t readOffset, uint32_t length)"
+.br
+.RI "\fICopies a section of another byte array to this byte array. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBcreateNewByteArrayFromSubsection\fP (\fBByteArray\fP *self, uint32_t offset, uint32_t length)"
+.br
+.RI "\fICopies a subsection of a \fBByteArray\fP. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBgetByteArraySubsectionReference\fP (\fBByteArray\fP *self, uint32_t offset, uint32_t length)"
+.br
+.RI "\fIReferences a subsection of a \fBByteArray\fP. \fP"
+.ti -1c
+.RI "uint8_t \fBgetByteFromByteArray\fP (\fBByteArray\fP *self, uint32_t index)"
+.br
+.RI "\fIGet a byte from the \fBByteArray\fP object. A byte will be returned from self->offset+index in the underlying data. \fP"
+.ti -1c
+.RI "uint8_t * \fBgetDataFromByteArray\fP (\fBByteArray\fP *self)"
+.br
+.RI "\fIGet a pointer to the underlying data starting at self->offset. \fP"
+.ti -1c
+.RI "uint8_t \fBgetLastByteFromByteArray\fP (\fBByteArray\fP *self)"
+.br
+.RI "\fIGet the last byte from the \fBByteArray\fP object. A byte will be returned from self->offset+self->length in the underlying data. \fP"
+.ti -1c
+.RI "int \fBisNullByteArray\fP (\fBByteArray\fP *self)"
+.br
+.RI "\fIDetermines if a \fBByteArray\fP is null. \fP"
+.ti -1c
+.RI "void \fBsetByteInByteArray\fP (\fBByteArray\fP *self, uint32_t index, uint8_t byte)"
+.br
+.RI "\fISet a byte into the array. This will be set at self->offset+index in the underlying data. \fP"
+.ti -1c
+.RI "void \fBsetBytesInByteArray\fP (\fBByteArray\fP *self, uint32_t index, uint8_t *bytes, uint32_t length)"
+.br
+.RI "\fICopies a length of bytes into the array. This will be set at self->offset+index in the underlying data. \fP"
+.ti -1c
+.RI "void \fBwriteInt16AsLittleEndianIntoByteArray\fP (\fBByteArray\fP *self, uint32_t offset, uint16_t integer)"
+.br
+.RI "\fIWrites a 16 bit integer to a \fBByteArray\fP as little-endian. \fP"
+.ti -1c
+.RI "void \fBwriteInt32AsLittleEndianIntoByteArray\fP (\fBByteArray\fP *self, uint32_t offset, uint32_t integer)"
+.br
+.RI "\fIWrites a 32 bit integer to a \fBByteArray\fP as little-endian. \fP"
+.ti -1c
+.RI "void \fBwriteInt64AsLittleEndianIntoByteArray\fP (\fBByteArray\fP *self, uint32_t offset, uint64_t integer)"
+.br
+.RI "\fIWrites a 64 bit integer to a \fBByteArray\fP as little-endian. \fP"
+.ti -1c
+.RI "void \fBreverseBytes\fP (\fBByteArray\fP *self)"
+.br
+.RI "\fIReverses the bytes. \fP"
+.ti -1c
+.RI "void \fBchangeByteArrayDataReference\fP (\fBByteArray\fP *self, \fBByteArray\fP *ref, uint32_t offset)"
+.br
+.RI "\fIChanges the reference of this \fBByteArray\fP object to reference the underlying data of another \fBByteArray\fP. Useful for moving byte data into single underlying data by copying the data into a larger \fBByteArray\fP and then changing the reference to this new larger \fBByteArray\fP. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void changeByteArrayDataReference (\fBByteArray\fP *self, \fBByteArray\fP *ref, uint32_toffset)"
+.PP
+Changes the reference of this \fBByteArray\fP object to reference the underlying data of another \fBByteArray\fP. Useful for moving byte data into single underlying data by copying the data into a larger \fBByteArray\fP and then changing the reference to this new larger \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to change the reference for. 
+.br
+\fIref\fP The \fBByteArray\fP object to get the reference from. 
+.br
+\fIoffset\fP The offset to start the reference. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new \fBByteArray\fP. 
+.RE
+.PP
+
+.PP
+Definition at line 235 of file ByteArray.c.
+.SS "\fBCompare\fP compareByteArrays (\fBByteArray\fP *self, \fBByteArray\fP *second)"
+.PP
+Compares a \fBByteArray\fP to another \fBByteArray\fP and returns with a Compare value. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to compare 
+.br
+\fIsecond\fP Another \fBByteArray\fP object to compare with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+If the lengths are different, _COMPARE_MORE_THAN if 'self' if longer, else _COMPARE_LESS_THAN. If the bytes are equal _COMPARE_EQUAL, else _COMPARE_MORE_THAN if the first different byte if higher in 'self', otherwise _COMPARE_LESS_THAN. The return value can be treated like the return value to memcmp. 
+.RE
+.PP
+
+.SS "\fBByteArray\fP* copyByteArray (\fBByteArray\fP *self)"
+.PP
+Copies a \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to copy 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new \fBByteArray\fP. 
+.RE
+.PP
+
+.SS "void copyByteArrayToByteArray (\fBByteArray\fP *self, uint32_twriteOffset, \fBByteArray\fP *source)"
+.PP
+Copies another byte array to this byte array. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to copy to. 
+.br
+\fIwriteOffset\fP The offset to begin writing to in self. 
+.br
+\fIsource\fP The \fBByteArray\fP to copy from. 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file ByteArray.c.
+.SS "void copySubsectionOfByteArrayToByteArray (\fBByteArray\fP *self, uint32_twriteOffset, \fBByteArray\fP *source, uint32_treadOffset, uint32_tlength)"
+.PP
+Copies a section of another byte array to this byte array. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.br
+\fIwriteOffset\fP The offset to begin writing 
+.br
+\fIsource\fP The \fBByteArray\fP to copy from. 
+.br
+\fIreadOffset\fP The offset of the source array to begin reading. 
+.br
+\fIlength\fP The length to copy. 
+.RE
+.PP
+
+.SS "\fBByteArray\fP* createNewByteArrayFromData (uint8_t *data, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBByteArray\fP using data. \fBParameters:\fP
+.RS 4
+\fIdata\fP The data. This should be dynamically allocated. The new \fBByteArray\fP object will take care of it's memory management so do not free this data once passed into this constructor. 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new \fBByteArray\fP object. 
+.RE
+.PP
+
+.SS "\fBByteArray\fP* createNewByteArrayFromString (char *string, intterminator, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a \fBByteArray\fP object from a C string. The termination character is not included in the new \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIstring\fP The string to put into a \fBByteArray\fP. 
+.br
+\fIterminator\fP If true, include the termination character. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBByteArray\fP object. 
+.RE
+.PP
+
+.SS "\fBByteArray\fP* createNewByteArrayFromSubsection (\fBByteArray\fP *self, uint32_toffset, uint32_tlength)"
+.PP
+Copies a subsection of a \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to copy from. 
+.br
+\fIoffset\fP The offset to the start of the copy. 
+.br
+\fIlength\fP The length of the copy. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new \fBByteArray\fP. 
+.RE
+.PP
+
+.SS "\fBByteArray\fP* createNewByteArrayOfSize (uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates an empty \fBByteArray\fP object. \fBParameters:\fP
+.RS 4
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An empty \fBByteArray\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 243 of file ByteArray.c.
+.SS "\fBByteArray\fP* createNewByteArrayUsingDataCopy (uint8_t *data, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBByteArray\fP using data which is copied. \fBParameters:\fP
+.RS 4
+\fIdata\fP The data. This data is copied. 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new \fBByteArray\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 275 of file ByteArray.c.
+.SS "void destroyByteArray (void *self)"
+.PP
+Destroys a \fBByteArray\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to destroy. 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file ByteArray.c.
+.SS "uint8_t getByteFromByteArray (\fBByteArray\fP *self, uint32_tindex)"
+.PP
+Get a byte from the \fBByteArray\fP object. A byte will be returned from self->offset+index in the underlying data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.br
+\fIindex\fP The index in the array to get the byte from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The byte 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file ByteArray.c.
+.SS "uint8_t* getDataFromByteArray (\fBByteArray\fP *self)"
+.PP
+Get a pointer to the underlying data starting at self->offset. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The pointer 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file ByteArray.c.
+.SS "uint8_t getLastByteFromByteArray (\fBByteArray\fP *self)"
+.PP
+Get the last byte from the \fBByteArray\fP object. A byte will be returned from self->offset+self->length in the underlying data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The last byte 
+.RE
+.PP
+
+.SS "\fBByteArray\fP* getByteArray (void *self)"
+.PP
+Gets a \fBByteArray\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBByteArray\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBByteArray\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file ByteArray.c.
+.SS "\fBByteArray\fP* getByteArraySubsectionReference (\fBByteArray\fP *self, uint32_toffset, uint32_tlength)"
+.PP
+References a subsection of a \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to reference. 
+.br
+\fIoffset\fP The offset to the start of the reference. 
+.br
+\fIlength\fP The length of the reference. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new \fBByteArray\fP. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file ByteArray.c.
+.SS "int initializeByteArraySubsectionReference (\fBByteArray\fP *self, \fBByteArray\fP *refByteArray, uint32_toffset, uint32_tlength)"
+.PP
+Initialises a reference \fBByteArray\fP to a subsection of an \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to initialise. 
+.br
+\fIref\fP The \fBByteArray\fP object to reference. 
+.br
+\fIoffset\fP The offset to the start of the reference. 
+.br
+\fIlength\fP The length of the reference. If 0 the length is set to be the same as the reference \fBByteArray\fP. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 89 of file ByteArray.c.
+.SS "int initByteArrayFromString (\fBByteArray\fP *self, char *string, intterminator, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBByteArray\fP object from a C string. The termination character is not included in the new \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to initialise 
+.br
+\fIstring\fP The string to put into a \fBByteArray\fP. 
+.br
+\fIterminator\fP If tru, include the termination character. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "int initByteArrayOfSize (\fBByteArray\fP *self, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises an empty \fBByteArray\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to initialise 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 256 of file ByteArray.c.
+.SS "int initNewByteArrayFromData (\fBByteArray\fP *self, uint8_t *data, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBByteArray\fP using data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to initialise 
+.br
+\fIdata\fP The data. This should be dynamically allocated. The new \fBByteArray\fP object will take care of it's memory management so do not free this data once passed into this constructor. 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 288 of file ByteArray.c.
+.SS "int initNewByteArrayUsingDataCopy (\fBByteArray\fP *self, uint8_t *data, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBByteArray\fP using data which is copied. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to initialise 
+.br
+\fIdata\fP The data. This data is copied. 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "int isNullByteArray (\fBByteArray\fP *self)"
+.PP
+Determines if a \fBByteArray\fP is null. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if all bytes are zero, else false. 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file ByteArray.c.
+.SS "uint16_t readInt16AsLittleEndianFromByteArray (\fBByteArray\fP *self, uint32_toffset)"
+.PP
+Reads a 16 bit integer from a \fBByteArray\fP as little-endian. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object 
+.br
+\fIoffset\fP Offset to where to start the read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A 16 bit integer. This can be cast to a signed integer if reading integer as a signed value. 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file ByteArray.c.
+.SS "uint32_t readInt32AsLittleEndianFromByteArray (\fBByteArray\fP *self, uint32_toffset)"
+.PP
+Reads a 32 bit integer from a \fBByteArray\fP as little-endian. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object 
+.br
+\fIoffset\fP Offset to where to start the read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A 32 bit integer. This can be cast to a signed integer if reading integer as a signed value 
+.RE
+.PP
+
+.PP
+Definition at line 144 of file ByteArray.c.
+.SS "uint64_t readInt64AsLittleEndianFromByteArray (\fBByteArray\fP *self, uint32_toffset)"
+.PP
+Reads a 64 bit integer from the \fBByteArray\fP as little-endian. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object 
+.br
+\fIoffset\fP Offset to where to start the read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A 64 bit integer. This can be cast to a signed integer if reading integer as a signed value 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file ByteArray.c.
+.SS "void releaseByteArraySharedDataReference (\fBByteArray\fP *self)"
+.PP
+Releases a reference to shared byte data and frees the data if necessary. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object with the \fBSharedData\fP 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file ByteArray.c.
+.SS "void reverseBytes (\fBByteArray\fP *self)"
+.PP
+Reverses the bytes. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object to reverse 
+.RE
+.PP
+
+.SS "void setByteInByteArray (\fBByteArray\fP *self, uint32_tindex, uint8_tbyte)"
+.PP
+Set a byte into the array. This will be set at self->offset+index in the underlying data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.br
+\fIindex\fP The index in the array to set the byte 
+.br
+\fIbyte\fP The byte to be set. 
+.RE
+.PP
+
+.PP
+Definition at line 177 of file ByteArray.c.
+.SS "void setBytesInByteArray (\fBByteArray\fP *self, uint32_tindex, uint8_t *bytes, uint32_tlength)"
+.PP
+Copies a length of bytes into the array. This will be set at self->offset+index in the underlying data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object. 
+.br
+\fIindex\fP The index in the array to start writing. 
+.br
+\fIbytes\fP The pointer to the bytes to be copied. 
+.br
+\fIlength\fP The number of bytes to copy. 
+.RE
+.PP
+
+.PP
+Definition at line 186 of file ByteArray.c.
+.SS "void writeInt16AsLittleEndianIntoByteArray (\fBByteArray\fP *self, uint32_toffset, uint16_tinteger)"
+.PP
+Writes a 16 bit integer to a \fBByteArray\fP as little-endian. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object 
+.br
+\fIoffset\fP Offset to where to start the write 
+.br
+\fIinteger\fP The 16 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. 
+.RE
+.PP
+
+.PP
+Definition at line 196 of file ByteArray.c.
+.SS "void writeInt32AsLittleEndianIntoByteArray (\fBByteArray\fP *self, uint32_toffset, uint32_tinteger)"
+.PP
+Writes a 32 bit integer to a \fBByteArray\fP as little-endian. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object 
+.br
+\fIoffset\fP Offset to where to start the write 
+.br
+\fIinteger\fP The 32 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file ByteArray.c.
+.SS "void writeInt64AsLittleEndianIntoByteArray (\fBByteArray\fP *self, uint32_toffset, uint64_tinteger)"
+.PP
+Writes a 64 bit integer to a \fBByteArray\fP as little-endian. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBByteArray\fP object 
+.br
+\fIoffset\fP Offset to where to start the write 
+.br
+\fIinteger\fP The 64 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. 
+.RE
+.PP
+
+.PP
+Definition at line 218 of file ByteArray.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

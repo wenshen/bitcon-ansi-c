@@ -1,0 +1,77 @@
+.TH "Message" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Message \- 
+.PP
+Structure for \fBMessage\fP objects.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Message.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBObject\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBMessageType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBaltText\fP"
+.br
+.ti -1c
+.RI "\fBByteArray\fP * \fBbytes\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBchecksum\fP [4]"
+.br
+.ti -1c
+.RI "void(* \fBonErrorReceived\fP )(\fBError\fP error, char *,...)"
+.br
+.ti -1c
+.RI "\fBMessageType\fP \fBexpectResponse\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for \fBMessage\fP objects. 
+
+\fBSee also:\fP
+.RS 4
+\fBMessage.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Message.h.
+.SH "Field Documentation"
+.PP 
+.SS "uint8_t* \fBaltText\fP"For an alternative message: This is the type text. 
+.PP
+Definition at line 25 of file Message.h.
+.SS "\fBObject\fP \fBbase\fP"\fBObject\fP base structure 
+.PP
+Definition at line 23 of file Message.h.
+.SS "\fBByteArray\fP* \fBbytes\fP"Raw message data minus the message header. When serialising this should be assigned to a \fBByteArray\fP large enough to hold the serialised data. 
+.PP
+Definition at line 26 of file Message.h.
+.SS "uint8_t \fBchecksum\fP[4]"The message checksum. When sending messages using a NetworkCommunicator, this is calculated for you. 
+.PP
+Definition at line 27 of file Message.h.
+.SS "\fBMessageType\fP \fBexpectResponse\fP"Set to zero if no message expected or the type of message expected as a response. 
+.PP
+Definition at line 29 of file Message.h.
+.SS "void(* \fBonErrorReceived\fP)(\fBError\fP error, char *,...)"Pointer to error callback 
+.PP
+Definition at line 28 of file Message.h.
+.SS "\fBMessageType\fP \fBtype\fP"The type of the message 
+.PP
+Definition at line 24 of file Message.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

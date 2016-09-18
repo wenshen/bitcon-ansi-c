@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_tranx_in" kind="struct" prot="public">
+    <compoundname>TranxIn</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_tranx_in_1a694240f5463d28f9cb6cb2f8de4a5a45" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_outpoint" kindref="compound">Outpoint</ref> *</type>
+        <definition>struct Outpoint* previous_out</definition>
+        <argsstring></argsstring>
+        <name>previous_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="36" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1a756d651ccdd4c06f59685e337cf2e840" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scriptLength</definition>
+        <argsstring></argsstring>
+        <name>scriptLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="37" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1acd5b457285f7e816fbb23777406a701a" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char signature_script[]</definition>
+        <argsstring>[]</argsstring>
+        <name>signature_script</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="38" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1a0ab03ef2cc38198d3666a992a245fddf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sequence</definition>
+        <argsstring></argsstring>
+        <name>sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="39" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1a2889e84785c9df5cba88abaaa03eb206" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_outpoint" kindref="compound">Outpoint</ref></type>
+        <definition>struct Outpoint previousOut</definition>
+        <argsstring></argsstring>
+        <name>previousOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="154" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1a00601157399e1c73bddee66c716926f4" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int scriptLength</definition>
+        <argsstring></argsstring>
+        <name>scriptLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="155" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1a3d518a810ef5d47feb63829a61ced9e1" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* signatureScript</definition>
+        <argsstring></argsstring>
+        <name>signatureScript</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="156" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_in_1a18ec6560d3738f9c1bc8ed50f2e570c1" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sequence</definition>
+        <argsstring></argsstring>
+        <name>sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="157" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="396">
+        <label>Outpoint</label>
+        <link refid="struct_outpoint"/>
+      </node>
+      <node id="395">
+        <label>TranxIn</label>
+        <link refid="struct_tranx_in"/>
+        <childnode refid="396" relation="usage">
+          <edgelabel>previous_out</edgelabel>
+          <edgelabel>previousOut</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="35" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="35" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_tranx_in_1a694240f5463d28f9cb6cb2f8de4a5a45" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>previous_out</name></member>
+      <member refid="struct_tranx_in_1a2889e84785c9df5cba88abaaa03eb206" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>previousOut</name></member>
+      <member refid="struct_tranx_in_1a756d651ccdd4c06f59685e337cf2e840" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>scriptLength</name></member>
+      <member refid="struct_tranx_in_1a00601157399e1c73bddee66c716926f4" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>scriptLength</name></member>
+      <member refid="struct_tranx_in_1a0ab03ef2cc38198d3666a992a245fddf" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>sequence</name></member>
+      <member refid="struct_tranx_in_1a18ec6560d3738f9c1bc8ed50f2e570c1" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>sequence</name></member>
+      <member refid="struct_tranx_in_1acd5b457285f7e816fbb23777406a701a" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>signature_script</name></member>
+      <member refid="struct_tranx_in_1a3d518a810ef5d47feb63829a61ced9e1" prot="public" virt="non-virtual"><scope>TranxIn</scope><name>signatureScript</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

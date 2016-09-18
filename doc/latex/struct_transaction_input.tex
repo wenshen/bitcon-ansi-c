@@ -1,0 +1,86 @@
+\hypertarget{struct_transaction_input}{
+\section{TransactionInput Struct Reference}
+\label{struct_transaction_input}\index{TransactionInput@{TransactionInput}}
+}
+
+
+contains \hyperlink{struct_previous_output}{PreviousOutput} structure and Example of the structure: \{ prev\_\-out: \{ hash: \char`\"{}0000000000000000000000000000000000000000000000000000000000000000\char`\"{}, n: 4294967295 \}, coinbase: \char`\"{}044c86041b0152\char`\"{} \}  
+
+
+
+
+{\ttfamily \#include $<$TransactionInput.h$>$}
+
+
+
+Collaboration diagram for TransactionInput:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_transaction_input__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_message}{Message} \hyperlink{struct_transaction_input_a8987f797adf70c3e174fd64cc68bc933}{base}
+\item 
+uint32\_\-t \hyperlink{struct_transaction_input_a0ab03ef2cc38198d3666a992a245fddf}{sequence}
+\item 
+\hyperlink{struct_byte_array}{Script} $\ast$ \hyperlink{struct_transaction_input_ac420de2766b1358b5e325cfc21a76aa3}{scriptObject}
+\item 
+\hyperlink{struct_previous_output}{PreviousOutput} \hyperlink{struct_transaction_input_a20cfe78368fb9825302ce5cdb076f8b1}{prevOutput}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains \hyperlink{struct_previous_output}{PreviousOutput} structure and Example of the structure: \{ prev\_\-out: \{ hash: \char`\"{}0000000000000000000000000000000000000000000000000000000000000000\char`\"{}, n: 4294967295 \}, coinbase: \char`\"{}044c86041b0152\char`\"{} \} 
+
+that handles input in transactions 
+
+Definition at line 51 of file TransactionInput.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_transaction_input_a8987f797adf70c3e174fd64cc68bc933}{
+\index{TransactionInput@{TransactionInput}!base@{base}}
+\index{base@{base}!TransactionInput@{TransactionInput}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_transaction_input_a8987f797adf70c3e174fd64cc68bc933}
+\hyperlink{struct_message}{Message} base structure 
+
+Definition at line 52 of file TransactionInput.h.
+
+\hypertarget{struct_transaction_input_a20cfe78368fb9825302ce5cdb076f8b1}{
+\index{TransactionInput@{TransactionInput}!prevOutput@{prevOutput}}
+\index{prevOutput@{prevOutput}!TransactionInput@{TransactionInput}}
+\subsubsection[{prevOutput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PreviousOutput} {\bf prevOutput}}}
+\label{struct_transaction_input_a20cfe78368fb9825302ce5cdb076f8b1}
+A locator for a previous output being spent. 
+
+Definition at line 55 of file TransactionInput.h.
+
+\hypertarget{struct_transaction_input_ac420de2766b1358b5e325cfc21a76aa3}{
+\index{TransactionInput@{TransactionInput}!scriptObject@{scriptObject}}
+\index{scriptObject@{scriptObject}!TransactionInput@{TransactionInput}}
+\subsubsection[{scriptObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Script}$\ast$ {\bf scriptObject}}}
+\label{struct_transaction_input_ac420de2766b1358b5e325cfc21a76aa3}
+Contains script information as a Script. 
+
+Definition at line 54 of file TransactionInput.h.
+
+\hypertarget{struct_transaction_input_a0ab03ef2cc38198d3666a992a245fddf}{
+\index{TransactionInput@{TransactionInput}!sequence@{sequence}}
+\index{sequence@{sequence}!TransactionInput@{TransactionInput}}
+\subsubsection[{sequence}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf sequence}}}
+\label{struct_transaction_input_a0ab03ef2cc38198d3666a992a245fddf}
+The version of this transaction input. Not used in protocol v0.3.18.00. Set to 0 for transactions that may someday be open to change after broadcast, set to \_\-TRANSACTION\_\-INPUT\_\-FINAL if this input never needs to be changed after broadcast. 
+
+Definition at line 53 of file TransactionInput.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_transaction_input_8h}{TransactionInput.h}\end{DoxyCompactItemize}

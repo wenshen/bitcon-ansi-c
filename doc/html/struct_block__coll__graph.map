@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_transaction.html" title="{Transaction\n|+ base\l+ hash\l+ version\l+ numOfTransactionInput\l+ inputs\l+ numOfTransactionOutput\l+ outputs\l+ lockTime\l|}" alt="" coords="272,894,451,1101"/>
+<area shape="rect" id="node4" href="$struct_transaction_output.html" title="{TransactionOutput\n|+ base\l+ value\l+ scriptObject\l|}" alt="" coords="298,697,426,817"/>
+<area shape="rect" id="node6" href="$struct_message.html" title="Structure for Message objects." alt="" coords="416,414,547,621"/>
+<area shape="rect" id="node16" href="$struct_transaction_input.html" title="contains PreviousOutput structure and Example of the structure: { prev_out: { hash: &quot;0000000000000000..." alt="" coords="156,689,274,826"/>
+<area shape="rect" id="node8" href="$struct_object.html" title="Base class." alt="" coords="358,5,480,125"/>
+<area shape="rect" id="node10" href="$struct_byte_array.html" title="Structure for ByteArray objects." alt="" coords="172,192,303,347"/>
+<area shape="rect" id="node18" href="$struct_previous_output.html" title="contains hash of the transaction and the number of outputs. Example of the structure: { hash: &quot;000000..." alt="" coords="43,466,155,569"/>
+<area shape="rect" id="node12" href="$struct_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="176,14,299,117"/>
+</map>

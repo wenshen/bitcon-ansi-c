@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_message" kind="struct" prot="public">
+    <compoundname>Message</compoundname>
+    <includes refid="_m_i_message_8h" local="no">Message.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_message_1ad0814be49cef65d1662b278c4c591509" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_object" kindref="compound">Object</ref></type>
+        <definition>Object base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_m_i_object" kindref="compound">Object</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="23" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_message_1a98cad3c21d5a8a679befe2557a5246be" prot="public" static="no" mutable="no">
+        <type><ref refid="_m_i_constants_8h_1aa6ba957da4da60695d0c8ae85975212a" kindref="member">MessageType</ref></type>
+        <definition>MessageType type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="24" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_message_1ad4a1b71852a8721ee4be4f6aaacd8566" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* altText</definition>
+        <argsstring></argsstring>
+        <name>altText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For an alternative message: This is the type text. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="25" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_message_1a8fb493ee3c32dd3a9fb29bc71c852f86" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* bytes</definition>
+        <argsstring></argsstring>
+        <name>bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Raw message data minus the message header. When serialising this should be assigned to a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> large enough to hold the serialised data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="26" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="_m_i_block_8h_1a3fa07e825a149c98d148b215a5d5a78a" compoundref="_m_i_block_8c" startline="416" endline="449">dealWithSerializationTran</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3dab3fff46c9b386501414a6b13f5192" compoundref="_m_i_block_8c" startline="368" endline="396">serializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_message_1a02d93e565ee31bda6e0211dca9b42be5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t checksum[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>checksum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The message checksum. When sending messages using a NetworkCommunicator, this is calculated for you. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="27" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_message_1aeb0776cff292839518da5f5a48884fd9" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* onErrorReceived)(Error error, char *,...)</definition>
+        <argsstring>)(Error error, char *,...)</argsstring>
+        <name>onErrorReceived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to error callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="28" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="_m_i_block_8h_1a3fa07e825a149c98d148b215a5d5a78a" compoundref="_m_i_block_8c" startline="416" endline="449">dealWithSerializationTran</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a292775bd99c32b5b2f51b8d71d10812e" compoundref="_m_i_block_8c" startline="326" endline="353">deserializeWithOnlyHeaders</referencedby>
+        <referencedby refid="_m_i_block_8h_1a04d2d2defba76492762c0eb4b7ccd206" compoundref="_m_i_block_8c" startline="261" endline="324">deserializeWithTransactions</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3dab3fff46c9b386501414a6b13f5192" compoundref="_m_i_block_8c" startline="368" endline="396">serializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_message_1ac9d8ec2cdfb3a4cc93366b3f5742f527" prot="public" static="no" mutable="no">
+        <type><ref refid="_m_i_constants_8h_1aa6ba957da4da60695d0c8ae85975212a" kindref="member">MessageType</ref></type>
+        <definition>MessageType expectResponse</definition>
+        <argsstring></argsstring>
+        <name>expectResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set to zero if no message expected or the type of message expected as a response. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="29" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_m_i_message" kindref="compound">Message</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_m_i_message_8h" kindref="compound">Message.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="79">
+        <label>SharedData</label>
+        <link refid="struct_m_i_shared_data"/>
+      </node>
+      <node id="76">
+        <label>Message</label>
+        <link refid="struct_m_i_message"/>
+        <childnode refid="77" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+        <childnode refid="78" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="78">
+        <label>Object</label>
+        <link refid="struct_m_i_object"/>
+      </node>
+      <node id="77">
+        <label>ByteArray</label>
+        <link refid="struct_m_i_byte_array"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="22" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" bodystart="22" bodyend="30"/>
+    <listofallmembers>
+      <member refid="struct_m_i_message_1ad4a1b71852a8721ee4be4f6aaacd8566" prot="public" virt="non-virtual"><scope>Message</scope><name>altText</name></member>
+      <member refid="struct_m_i_message_1ad0814be49cef65d1662b278c4c591509" prot="public" virt="non-virtual"><scope>Message</scope><name>base</name></member>
+      <member refid="struct_m_i_message_1a8fb493ee3c32dd3a9fb29bc71c852f86" prot="public" virt="non-virtual"><scope>Message</scope><name>bytes</name></member>
+      <member refid="struct_m_i_message_1a02d93e565ee31bda6e0211dca9b42be5" prot="public" virt="non-virtual"><scope>Message</scope><name>checksum</name></member>
+      <member refid="struct_m_i_message_1ac9d8ec2cdfb3a4cc93366b3f5742f527" prot="public" virt="non-virtual"><scope>Message</scope><name>expectResponse</name></member>
+      <member refid="struct_m_i_message_1aeb0776cff292839518da5f5a48884fd9" prot="public" virt="non-virtual"><scope>Message</scope><name>onErrorReceived</name></member>
+      <member refid="struct_m_i_message_1a98cad3c21d5a8a679befe2557a5246be" prot="public" virt="non-virtual"><scope>Message</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

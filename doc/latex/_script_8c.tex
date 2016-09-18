@@ -1,0 +1,623 @@
+\hypertarget{_script_8c}{
+\section{src/Object/Script.c File Reference}
+\label{_script_8c}\index{src/Object/Script.c@{src/Object/Script.c}}
+}
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include \char`\"{}Script.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../Utils/Cryptography/Crypt.h\char`\"{}}\par
+Include dependency graph for Script.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_script_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_byte_array}{Script} $\ast$ \hyperlink{_script_8c_a31a3d8cdecb826da19038679922570d6}{createNewScriptFromReference} (\hyperlink{struct_byte_array}{ByteArray} $\ast$program, uint32\_\-t offset, uint32\_\-t len)
+\begin{DoxyCompactList}\small\item\em Creates a new Script object. \end{DoxyCompactList}\item 
+\hyperlink{struct_script_stack}{ScriptStack} \hyperlink{_script_8c_ad6a383832d77f52a4910c2b7d737d326}{createEmptyScriptStack} ()
+\begin{DoxyCompactList}\small\item\em Returns a new empty scriptstack. \end{DoxyCompactList}\item 
+int \hyperlink{_script_8c_ae63afad4294e52303b66f910fda58525}{isP2SHScript} (\hyperlink{struct_byte_array}{Script} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Determines if a script object matches the P2SH template; i.e. BIP 0016 see \href{https://en.bitcoin.it/wiki/BIP_0016.}{\tt https://en.bitcoin.it/wiki/BIP\_\-0016.} \end{DoxyCompactList}\item 
+\hyperlink{struct_script_byte_vector}{ScriptByteVector} \hyperlink{_script_8c_aa2df10dc8c05ec7340c2f22381dde313}{copyByteVectorFromScriptStack} (\hyperlink{struct_script_stack}{ScriptStack} $\ast$stack, uint8\_\-t fromTop)
+\begin{DoxyCompactList}\small\item\em Returns a copy of a stack item, \char`\"{}fromTop\char`\"{} from the top. \end{DoxyCompactList}\item 
+int \hyperlink{_script_8c_a42109fe30e56a4ca86d2bf70a3d08ee1}{pushScriptByteVectorOntoScriptStack} (\hyperlink{struct_script_stack}{ScriptStack} $\ast$stack, \hyperlink{struct_script_byte_vector}{ScriptByteVector} byteVector)
+\begin{DoxyCompactList}\small\item\em Push a \hyperlink{struct_script_byte_vector}{ScriptByteVector} item onto the stack which is freed by the stack. \end{DoxyCompactList}\item 
+int \hyperlink{_script_8c_a2c8040a862763eac525a2907846aa70d}{topElementEvaluatesToTrue} (\hyperlink{struct_script_stack}{ScriptStack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Evaluates the top \hyperlink{struct_script_byte_vector}{ScriptByteVector} on a \hyperlink{struct_script_stack}{ScriptStack} as a boolean. False if 0 or -\/0. \end{DoxyCompactList}\item 
+void \hyperlink{_script_8c_a2192430534274747a5b711b19261e4fe}{removeElementFromStack} (\hyperlink{struct_script_stack}{ScriptStack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Removes top \hyperlink{struct_script_byte_vector}{ScriptByteVector} from the stack. \end{DoxyCompactList}\item 
+\hyperlink{struct_script_byte_vector}{ScriptByteVector} \hyperlink{_script_8c_a230165cbcd191bbb3830aebaa18a2719}{popElementFromStack} (\hyperlink{struct_script_stack}{ScriptStack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Pops the top \hyperlink{struct_script_byte_vector}{ScriptByteVector} off the \hyperlink{struct_script_stack}{ScriptStack}. \end{DoxyCompactList}\item 
+\hyperlink{struct_script_byte_vector}{ScriptByteVector} \hyperlink{_script_8c_ad73ed8795ecc28c1967ef9a3a618b3c1}{convertInt64ToScriptByteVector} (\hyperlink{struct_script_byte_vector}{ScriptByteVector} byteVector, int64\_\-t int64)
+\begin{DoxyCompactList}\small\item\em Converts a int64\_\-t into a \hyperlink{struct_script_byte_vector}{ScriptByteVector}. \end{DoxyCompactList}\item 
+int64\_\-t \hyperlink{_script_8c_a05e400cb6322e101e8e6a3ebafed022d}{convertScriptByteVectorToInt64} (\hyperlink{struct_script_byte_vector}{ScriptByteVector} byteVector)
+\begin{DoxyCompactList}\small\item\em Converts a \hyperlink{struct_script_byte_vector}{ScriptByteVector} to a 64 bit signed integer. \end{DoxyCompactList}\item 
+void \hyperlink{_script_8c_a8d0dbc84be887aa4d67eb2bfafbf458b}{removeSignatureFromStackScript} (uint8\_\-t $\ast$subScript, uint32\_\-t $\ast$subScriptLen, \hyperlink{struct_script_byte_vector}{ScriptByteVector} signature)
+\begin{DoxyCompactList}\small\item\em Removes occurrences of a signature from script data. \end{DoxyCompactList}\item 
+\hyperlink{struct_byte_array}{Script} $\ast$ \hyperlink{_script_8c_acb39fe4d41a3f92781bb5adcbae79033}{createNewScriptStackFromData} (uint8\_\-t $\ast$data, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new Script using data. \end{DoxyCompactList}\item 
+\hyperlink{struct_byte_array}{Script} $\ast$ \hyperlink{_script_8c_a7da0d327f61176d21e35c3c88462a48b}{createNewScriptStackUsingCopyOfData} (uint8\_\-t $\ast$data, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new Script using a copy of data. \end{DoxyCompactList}\item 
+\hyperlink{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620}{ScriptExecutionStatus} \hyperlink{_script_8c_aec9ea0bb8f3fca33afcbda7630d723b2}{executeScript} (\hyperlink{struct_byte_array}{Script} $\ast$script, \hyperlink{struct_script_stack}{ScriptStack} $\ast$stack, \hyperlink{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826}{TransactionHashStatus}($\ast$getTransactionInputHashForVerification)(void $\ast$, \hyperlink{struct_byte_array}{ByteArray} $\ast$, uint32\_\-t, \hyperlink{_constants_8h_a7456a1be27da2089f984a0ede62c6c50}{SignatureType}, uint8\_\-t $\ast$), void $\ast$transaction, uint32\_\-t inputIndex, int p2sh)
+\begin{DoxyCompactList}\small\item\em Executes a bitcoin script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_script_8c_ad73ed8795ecc28c1967ef9a3a618b3c1}{
+\index{Script.c@{Script.c}!convertInt64ToScriptByteVector@{convertInt64ToScriptByteVector}}
+\index{convertInt64ToScriptByteVector@{convertInt64ToScriptByteVector}!Script.c@{Script.c}}
+\subsubsection[{convertInt64ToScriptByteVector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScriptByteVector} convertInt64ToScriptByteVector (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptByteVector}}]{byteVector, }
+\item[{int64\_\-t}]{int64}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_ad73ed8795ecc28c1967ef9a3a618b3c1}
+
+
+Converts a int64\_\-t into a \hyperlink{struct_script_byte_vector}{ScriptByteVector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em byteVector} & Pass in a \hyperlink{struct_script_byte_vector}{ScriptByteVector} for reallocating data. \\
+\hline
+{\em int64} & The 64 bit signed integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_script_byte_vector}{ScriptByteVector}. 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_script_8c_ad73ed8795ecc28c1967ef9a3a618b3c1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a05e400cb6322e101e8e6a3ebafed022d}{
+\index{Script.c@{Script.c}!convertScriptByteVectorToInt64@{convertScriptByteVectorToInt64}}
+\index{convertScriptByteVectorToInt64@{convertScriptByteVectorToInt64}!Script.c@{Script.c}}
+\subsubsection[{convertScriptByteVectorToInt64}]{\setlength{\rightskip}{0pt plus 5cm}int64\_\-t convertScriptByteVectorToInt64 (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptByteVector}}]{byteVector}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a05e400cb6322e101e8e6a3ebafed022d}
+
+
+Converts a \hyperlink{struct_script_byte_vector}{ScriptByteVector} to a 64 bit signed integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The \hyperlink{struct_script_byte_vector}{ScriptByteVector} to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 64 bit signed integer. 
+\end{DoxyReturn}
+
+
+Definition at line 191 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_script_8c_a05e400cb6322e101e8e6a3ebafed022d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_aa2df10dc8c05ec7340c2f22381dde313}{
+\index{Script.c@{Script.c}!copyByteVectorFromScriptStack@{copyByteVectorFromScriptStack}}
+\index{copyByteVectorFromScriptStack@{copyByteVectorFromScriptStack}!Script.c@{Script.c}}
+\subsubsection[{copyByteVectorFromScriptStack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScriptByteVector} copyByteVectorFromScriptStack (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptStack} $\ast$}]{stack, }
+\item[{uint8\_\-t}]{fromTop}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_aa2df10dc8c05ec7340c2f22381dde313}
+
+
+Returns a copy of a stack item, \char`\"{}fromTop\char`\"{} from the top. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & A pointer to the stack. \\
+\hline
+{\em fromTop} & Number of items from the top to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the stack item which should be freed. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=354pt]{_script_8c_aa2df10dc8c05ec7340c2f22381dde313_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_ad6a383832d77f52a4910c2b7d737d326}{
+\index{Script.c@{Script.c}!createEmptyScriptStack@{createEmptyScriptStack}}
+\index{createEmptyScriptStack@{createEmptyScriptStack}!Script.c@{Script.c}}
+\subsubsection[{createEmptyScriptStack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScriptStack} createEmptyScriptStack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_ad6a383832d77f52a4910c2b7d737d326}
+
+
+Returns a new empty scriptstack. 
+
+A script is a array of bytes \begin{DoxyReturn}{Returns}
+The new empty stack. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_script_8c_ad6a383832d77f52a4910c2b7d737d326_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a31a3d8cdecb826da19038679922570d6}{
+\index{Script.c@{Script.c}!createNewScriptFromReference@{createNewScriptFromReference}}
+\index{createNewScriptFromReference@{createNewScriptFromReference}!Script.c@{Script.c}}
+\subsubsection[{createNewScriptFromReference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Script}$\ast$ createNewScriptFromReference (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{program, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint32\_\-t}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a31a3d8cdecb826da19038679922570d6}
+
+
+Creates a new Script object. 
+
+Constructor 
+
+Definition at line 16 of file Script.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_script_8c_a31a3d8cdecb826da19038679922570d6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_script_8c_a31a3d8cdecb826da19038679922570d6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_acb39fe4d41a3f92781bb5adcbae79033}{
+\index{Script.c@{Script.c}!createNewScriptStackFromData@{createNewScriptStackFromData}}
+\index{createNewScriptStackFromData@{createNewScriptStackFromData}!Script.c@{Script.c}}
+\subsubsection[{createNewScriptStackFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Script}$\ast$ createNewScriptStackFromData (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_acb39fe4d41a3f92781bb5adcbae79033}
+
+
+Creates a new Script using data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data. This should be dynamically allocated. The new \hyperlink{struct_byte_array}{ByteArray} object will take care of it's memory management so do not free this data once passed into this constructor. \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Struct for handling errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new Script object. 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file Script.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_script_8c_acb39fe4d41a3f92781bb5adcbae79033_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=352pt]{_script_8c_acb39fe4d41a3f92781bb5adcbae79033_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a7da0d327f61176d21e35c3c88462a48b}{
+\index{Script.c@{Script.c}!createNewScriptStackUsingCopyOfData@{createNewScriptStackUsingCopyOfData}}
+\index{createNewScriptStackUsingCopyOfData@{createNewScriptStackUsingCopyOfData}!Script.c@{Script.c}}
+\subsubsection[{createNewScriptStackUsingCopyOfData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Script}$\ast$ createNewScriptStackUsingCopyOfData (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a7da0d327f61176d21e35c3c88462a48b}
+
+
+Creates a new Script using a copy of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data is copied \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Struct for handling errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new Script object. 
+\end{DoxyReturn}
+
+
+Definition at line 269 of file Script.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_script_8c_a7da0d327f61176d21e35c3c88462a48b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_aec9ea0bb8f3fca33afcbda7630d723b2}{
+\index{Script.c@{Script.c}!executeScript@{executeScript}}
+\index{executeScript@{executeScript}!Script.c@{Script.c}}
+\subsubsection[{executeScript}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScriptExecutionStatus} executeScript (
+\begin{DoxyParamCaption}
+\item[{{\bf Script} $\ast$}]{self, }
+\item[{{\bf ScriptStack} $\ast$}]{stack, }
+\item[{{\bf TransactionHashStatus}($\ast$)(void $\ast$, {\bf ByteArray} $\ast$, uint32\_\-t, {\bf SignatureType}, uint8\_\-t $\ast$)}]{getHashForSignature, }
+\item[{void $\ast$}]{transaction, }
+\item[{uint32\_\-t}]{inputIndex, }
+\item[{int}]{p2sh}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_aec9ea0bb8f3fca33afcbda7630d723b2}
+
+
+Executes a bitcoin script. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The Script object with the program \\
+\hline
+{\em stack} & A pointer to the input stack for the program. \\
+\hline
+{\em getHashForSig} & A pointer to the function to get the hash for checking the signature. Should take a \hyperlink{struct_transaction}{Transaction} object, input index and the SignatureType and the Dependencies object. \\
+\hline
+{\em transaction} & \hyperlink{struct_transaction}{Transaction} for checking the signatures. \\
+\hline
+{\em inputIndex} & The index of the input for the signature. \\
+\hline
+{\em p2sh} & If FALSE, do not allow any P2SH matches. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GOOD\_\-SCRIPT if the program ended with true, BAD\_\-SCRIPT on script failure or SCRIPT\_\-ERR if an error occurred with the interpreter such as running of of memory. 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file Script.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_script_8c_aec9ea0bb8f3fca33afcbda7630d723b2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_script_8c_aec9ea0bb8f3fca33afcbda7630d723b2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_ae63afad4294e52303b66f910fda58525}{
+\index{Script.c@{Script.c}!isP2SHScript@{isP2SHScript}}
+\index{isP2SHScript@{isP2SHScript}!Script.c@{Script.c}}
+\subsubsection[{isP2SHScript}]{\setlength{\rightskip}{0pt plus 5cm}int isP2SHScript (
+\begin{DoxyParamCaption}
+\item[{{\bf Script} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_ae63afad4294e52303b66f910fda58525}
+
+
+Determines if a script object matches the P2SH template; i.e. BIP 0016 see \href{https://en.bitcoin.it/wiki/BIP_0016.}{\tt https://en.bitcoin.it/wiki/BIP\_\-0016.} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The Script object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+one if the script matches the P2SH template, zero otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Script.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{_script_8c_ae63afad4294e52303b66f910fda58525_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{_script_8c_ae63afad4294e52303b66f910fda58525_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a230165cbcd191bbb3830aebaa18a2719}{
+\index{Script.c@{Script.c}!popElementFromStack@{popElementFromStack}}
+\index{popElementFromStack@{popElementFromStack}!Script.c@{Script.c}}
+\subsubsection[{popElementFromStack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScriptByteVector} popElementFromStack (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptStack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a230165cbcd191bbb3830aebaa18a2719}
+
+
+Pops the top \hyperlink{struct_script_byte_vector}{ScriptByteVector} off the \hyperlink{struct_script_stack}{ScriptStack}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & A pointer to the stack to remove the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_script_byte_vector}{ScriptByteVector} the top \hyperlink{struct_script_byte_vector}{ScriptByteVector} on the stack 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_script_8c_a230165cbcd191bbb3830aebaa18a2719_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a42109fe30e56a4ca86d2bf70a3d08ee1}{
+\index{Script.c@{Script.c}!pushScriptByteVectorOntoScriptStack@{pushScriptByteVectorOntoScriptStack}}
+\index{pushScriptByteVectorOntoScriptStack@{pushScriptByteVectorOntoScriptStack}!Script.c@{Script.c}}
+\subsubsection[{pushScriptByteVectorOntoScriptStack}]{\setlength{\rightskip}{0pt plus 5cm}int pushScriptByteVectorOntoScriptStack (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptStack} $\ast$}]{stack, }
+\item[{{\bf ScriptByteVector}}]{item}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a42109fe30e56a4ca86d2bf70a3d08ee1}
+
+
+Push a \hyperlink{struct_script_byte_vector}{ScriptByteVector} item onto the stack which is freed by the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & A pointer to the \hyperlink{struct_script_stack}{ScriptStack} to push data onto. \\
+\hline
+{\em data} & The item to push on the stack. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=378pt]{_script_8c_a42109fe30e56a4ca86d2bf70a3d08ee1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a2192430534274747a5b711b19261e4fe}{
+\index{Script.c@{Script.c}!removeElementFromStack@{removeElementFromStack}}
+\index{removeElementFromStack@{removeElementFromStack}!Script.c@{Script.c}}
+\subsubsection[{removeElementFromStack}]{\setlength{\rightskip}{0pt plus 5cm}void removeElementFromStack (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptStack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a2192430534274747a5b711b19261e4fe}
+
+
+Removes top \hyperlink{struct_script_byte_vector}{ScriptByteVector} from the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & A pointer to the stack to remove the data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{_script_8c_a2192430534274747a5b711b19261e4fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a8d0dbc84be887aa4d67eb2bfafbf458b}{
+\index{Script.c@{Script.c}!removeSignatureFromStackScript@{removeSignatureFromStackScript}}
+\index{removeSignatureFromStackScript@{removeSignatureFromStackScript}!Script.c@{Script.c}}
+\subsubsection[{removeSignatureFromStackScript}]{\setlength{\rightskip}{0pt plus 5cm}void removeSignatureFromStackScript (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{subScript, }
+\item[{uint32\_\-t $\ast$}]{subScriptLen, }
+\item[{{\bf ScriptByteVector}}]{signature}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a8d0dbc84be887aa4d67eb2bfafbf458b}
+
+
+Removes occurrences of a signature from script data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subScript} & The sub script to remove signatures from. \\
+\hline
+{\em subScriptLen} & A pointer to the length of the sub script. The length will be modified to the new length. \\
+\hline
+{\em signature} & The signature to be found and removed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 211 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=358pt]{_script_8c_a8d0dbc84be887aa4d67eb2bfafbf458b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_script_8c_a2c8040a862763eac525a2907846aa70d}{
+\index{Script.c@{Script.c}!topElementEvaluatesToTrue@{topElementEvaluatesToTrue}}
+\index{topElementEvaluatesToTrue@{topElementEvaluatesToTrue}!Script.c@{Script.c}}
+\subsubsection[{topElementEvaluatesToTrue}]{\setlength{\rightskip}{0pt plus 5cm}int topElementEvaluatesToTrue (
+\begin{DoxyParamCaption}
+\item[{{\bf ScriptStack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}}
+\label{_script_8c_a2c8040a862763eac525a2907846aa70d}
+
+
+Evaluates the top \hyperlink{struct_script_byte_vector}{ScriptByteVector} on a \hyperlink{struct_script_stack}{ScriptStack} as a boolean. False if 0 or -\/0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The \hyperlink{struct_script_stack}{ScriptStack}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean result. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Script.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_script_8c_a2c8040a862763eac525a2907846aa70d_icgraph}
+\end{center}
+\end{figure}
+
+

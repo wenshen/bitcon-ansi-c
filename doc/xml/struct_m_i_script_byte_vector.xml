@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_script_byte_vector" kind="struct" prot="public">
+    <compoundname>ScriptByteVector</compoundname>
+    <includes refid="_m_i_script_8h" local="no">Script.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data for this byte vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.h" line="26" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of this byte vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.h" line="27" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers with the most significant bit determining the sign of the integer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.h" line="25" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.h" bodystart="25" bodyend="28"/>
+    <listofallmembers>
+      <member refid="struct_m_i_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" prot="public" virt="non-virtual"><scope>ScriptByteVector</scope><name>data</name></member>
+      <member refid="struct_m_i_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" prot="public" virt="non-virtual"><scope>ScriptByteVector</scope><name>length</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

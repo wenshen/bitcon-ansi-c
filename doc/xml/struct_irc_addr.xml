@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_irc_addr" kind="struct" prot="public">
+    <compoundname>IrcAddr</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_irc_addr_1addd335afdb9230f431842ebb6cbbce62" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="22" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_irc_addr_1aee6a7f5f7c1e964cbd84deec9c53ba15" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="23" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="21" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="20" bodyend="24"/>
+    <listofallmembers>
+      <member refid="struct_irc_addr_1addd335afdb9230f431842ebb6cbbce62" prot="public" virt="non-virtual"><scope>IrcAddr</scope><name>ip</name></member>
+      <member refid="struct_irc_addr_1aee6a7f5f7c1e964cbd84deec9c53ba15" prot="public" virt="non-virtual"><scope>IrcAddr</scope><name>port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

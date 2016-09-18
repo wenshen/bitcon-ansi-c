@@ -1,0 +1,42 @@
+.TH "PreviousOutput" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PreviousOutput \- 
+.PP
+contains hash of the transaction and the number of outputs. Example of the structure: { hash: '0000000000000000000000000000000000000000000000000000000000000000', n: 4294967295 }  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TransactionInput.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBByteArray\fP * \fBhash\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBindex\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains hash of the transaction and the number of outputs. Example of the structure: { hash: '0000000000000000000000000000000000000000000000000000000000000000', n: 4294967295 } 
+
+to help with prev_out 
+.PP
+Definition at line 33 of file TransactionInput.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBByteArray\fP* \fBhash\fP"Hash of the transaction that includes the output for this input 
+.PP
+Definition at line 34 of file TransactionInput.h.
+.SS "uint32_t \fBindex\fP"The index of the output for this input 
+.PP
+Definition at line 35 of file TransactionInput.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

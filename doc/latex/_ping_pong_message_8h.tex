@@ -1,0 +1,395 @@
+\hypertarget{_ping_pong_message_8h}{
+\section{src/Object/Message/PingPongMessage.h File Reference}
+\label{_ping_pong_message_8h}\index{src/Object/Message/PingPongMessage.h@{src/Object/Message/PingPongMessage.h}}
+}
+
+
+This message contains the nonce ID used in ping and pong messages for protocol versions over 60000. When the protocol version as negotiated in the \char`\"{}ver\char`\"{} message is greater than 60000, the \char`\"{}ping\char`\"{} message must contain a uint64 field called \char`\"{}nonce\char`\"{}. A peer sending \char`\"{}ping\char`\"{} should set the nonce to a random value, and it is then echoed back by the recipient in a new \char`\"{}pong\char`\"{} message that also contains a single uint64 field. see \href{https://en.bitcoin.it/wiki/BIP_0031}{\tt https://en.bitcoin.it/wiki/BIP\_\-0031} A NetworkCommunicator will accept this message for compatible protocol numbers and use an empty message for pings otherwise. Inherits \hyperlink{struct_message}{Message}.  
+
+
+{\ttfamily \#include \char`\"{}Message.h\char`\"{}}\par
+Include dependency graph for PingPongMessage.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{_ping_pong_message_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_ping_pong_message}{PingPongMessage}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_ping_pong_message}{PingPongMessage} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$ \hyperlink{_ping_pong_message_8h_a70a788fe7df90ccf08a17f3ce98c086f}{createNewPingPongMessage} (uint64\_\-t ID, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_ping_pong_message}{PingPongMessage} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$ \hyperlink{_ping_pong_message_8h_a355536404a1edea909c66e64c338b723}{createNewPingPongMessageFromData} (\hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_ping_pong_message}{PingPongMessage} object from serialised data. \end{DoxyCompactList}\item 
+\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$ \hyperlink{_ping_pong_message_8h_a05be54312a74799ff7996459f8f6add9}{getPingPongMessage} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_ping_pong_message}{PingPongMessage} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_ping_pong_message_8h_a7643cf5597d751e59d594aab5e4450af}{initializePingPongMessage} (\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$self, uint64\_\-t ID, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} object. \end{DoxyCompactList}\item 
+int \hyperlink{_ping_pong_message_8h_aa8297d681b90e5975b9d7e88171d06a7}{initializePingPongMessageFromData} (\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} object from serialised data. \end{DoxyCompactList}\item 
+void \hyperlink{_ping_pong_message_8h_af528a86083fc33cb25f40d3390b1ee6d}{destroyPingPongMessage} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_ping_pong_message}{PingPongMessage} object. \end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{_ping_pong_message_8h_a198cd940373651273997143eab0bcde3}{deserializePingPongMessage} (\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Deserialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} so that it can be used as an object. \end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{_ping_pong_message_8h_ab1c318a0853f3a7e93e38d47d9dabd30}{serializePingPongMessage} (\hyperlink{struct_ping_pong_message}{PingPongMessage} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Serialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} to the byte data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This message contains the nonce ID used in ping and pong messages for protocol versions over 60000. When the protocol version as negotiated in the \char`\"{}ver\char`\"{} message is greater than 60000, the \char`\"{}ping\char`\"{} message must contain a uint64 field called \char`\"{}nonce\char`\"{}. A peer sending \char`\"{}ping\char`\"{} should set the nonce to a random value, and it is then echoed back by the recipient in a new \char`\"{}pong\char`\"{} message that also contains a single uint64 field. see \href{https://en.bitcoin.it/wiki/BIP_0031}{\tt https://en.bitcoin.it/wiki/BIP\_\-0031} A NetworkCommunicator will accept this message for compatible protocol numbers and use an empty message for pings otherwise. Inherits \hyperlink{struct_message}{Message}. 
+
+Definition in file \hyperlink{_ping_pong_message_8h_source}{PingPongMessage.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_ping_pong_message_8h_a70a788fe7df90ccf08a17f3ce98c086f}{
+\index{PingPongMessage.h@{PingPongMessage.h}!createNewPingPongMessage@{createNewPingPongMessage}}
+\index{createNewPingPongMessage@{createNewPingPongMessage}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{createNewPingPongMessage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PingPongMessage}$\ast$ createNewPingPongMessage (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{ID, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_a70a788fe7df90ccf08a17f3ce98c086f}
+
+
+Creates a new \hyperlink{struct_ping_pong_message}{PingPongMessage} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The identifier used in a ping/pong communication. Set to zero if you don't want to overlap ping messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_ping_pong_message}{PingPongMessage} object. 
+\end{DoxyReturn}
+
+
+$<$assign destructor function to object 
+
+
+
+Definition at line 13 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_a70a788fe7df90ccf08a17f3ce98c086f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_ping_pong_message_8h_a355536404a1edea909c66e64c338b723}{
+\index{PingPongMessage.h@{PingPongMessage.h}!createNewPingPongMessageFromData@{createNewPingPongMessageFromData}}
+\index{createNewPingPongMessageFromData@{createNewPingPongMessageFromData}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{createNewPingPongMessageFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PingPongMessage}$\ast$ createNewPingPongMessageFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_a355536404a1edea909c66e64c338b723}
+
+
+Creates a new \hyperlink{struct_ping_pong_message}{PingPongMessage} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialised \hyperlink{struct_ping_pong_message}{PingPongMessage} data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_ping_pong_message}{PingPongMessage} object. 
+\end{DoxyReturn}
+
+
+$<$assign destructor function to object 
+
+
+
+Definition at line 33 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_a355536404a1edea909c66e64c338b723_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_ping_pong_message_8h_a198cd940373651273997143eab0bcde3}{
+\index{PingPongMessage.h@{PingPongMessage.h}!deserializePingPongMessage@{deserializePingPongMessage}}
+\index{deserializePingPongMessage@{deserializePingPongMessage}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{deserializePingPongMessage}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t deserializePingPongMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf PingPongMessage} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_a198cd940373651273997143eab0bcde3}
+
+
+Deserialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} so that it can be used as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_ping_pong_message}{PingPongMessage} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length read if successful, zero otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_a198cd940373651273997143eab0bcde3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_ping_pong_message_8h_af528a86083fc33cb25f40d3390b1ee6d}{
+\index{PingPongMessage.h@{PingPongMessage.h}!destroyPingPongMessage@{destroyPingPongMessage}}
+\index{destroyPingPongMessage@{destroyPingPongMessage}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{destroyPingPongMessage}]{\setlength{\rightskip}{0pt plus 5cm}void destroyPingPongMessage (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_af528a86083fc33cb25f40d3390b1ee6d}
+
+
+Frees a \hyperlink{struct_ping_pong_message}{PingPongMessage} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_ping_pong_message}{PingPongMessage} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_af528a86083fc33cb25f40d3390b1ee6d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_af528a86083fc33cb25f40d3390b1ee6d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_ping_pong_message_8h_a05be54312a74799ff7996459f8f6add9}{
+\index{PingPongMessage.h@{PingPongMessage.h}!getPingPongMessage@{getPingPongMessage}}
+\index{getPingPongMessage@{getPingPongMessage}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{getPingPongMessage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PingPongMessage}$\ast$ getPingPongMessage (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_a05be54312a74799ff7996459f8f6add9}
+
+
+Gets a \hyperlink{struct_ping_pong_message}{PingPongMessage} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_ping_pong_message}{PingPongMessage} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_ping_pong_message}{PingPongMessage} object. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file PingPongMessage.c.
+
+\hypertarget{_ping_pong_message_8h_a7643cf5597d751e59d594aab5e4450af}{
+\index{PingPongMessage.h@{PingPongMessage.h}!initializePingPongMessage@{initializePingPongMessage}}
+\index{initializePingPongMessage@{initializePingPongMessage}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{initializePingPongMessage}]{\setlength{\rightskip}{0pt plus 5cm}int initializePingPongMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf PingPongMessage} $\ast$}]{self, }
+\item[{uint64\_\-t}]{ID, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_a7643cf5597d751e59d594aab5e4450af}
+
+
+Initialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_ping_pong_message}{PingPongMessage} object to initialise \\
+\hline
+{\em ID} & The identifier used in a ping/pong communcation. Set to zero if you don't want to overlap ping messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+One on success, Zero on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_a7643cf5597d751e59d594aab5e4450af_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=396pt]{_ping_pong_message_8h_a7643cf5597d751e59d594aab5e4450af_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_ping_pong_message_8h_aa8297d681b90e5975b9d7e88171d06a7}{
+\index{PingPongMessage.h@{PingPongMessage.h}!initializePingPongMessageFromData@{initializePingPongMessageFromData}}
+\index{initializePingPongMessageFromData@{initializePingPongMessageFromData}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{initializePingPongMessageFromData}]{\setlength{\rightskip}{0pt plus 5cm}int initializePingPongMessageFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf PingPongMessage} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_aa8297d681b90e5975b9d7e88171d06a7}
+
+
+Initialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_ping_pong_message}{PingPongMessage} object to initialise \\
+\hline
+{\em data} & The serialised data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+One on success, Zero on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_aa8297d681b90e5975b9d7e88171d06a7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_aa8297d681b90e5975b9d7e88171d06a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_ping_pong_message_8h_ab1c318a0853f3a7e93e38d47d9dabd30}{
+\index{PingPongMessage.h@{PingPongMessage.h}!serializePingPongMessage@{serializePingPongMessage}}
+\index{serializePingPongMessage@{serializePingPongMessage}!PingPongMessage.h@{PingPongMessage.h}}
+\subsubsection[{serializePingPongMessage}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t serializePingPongMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf PingPongMessage} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_ping_pong_message_8h_ab1c318a0853f3a7e93e38d47d9dabd30}
+
+
+Serialises a \hyperlink{struct_ping_pong_message}{PingPongMessage} to the byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_ping_pong_message}{PingPongMessage} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length written if successful, zero otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file PingPongMessage.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_ping_pong_message_8h_ab1c318a0853f3a7e93e38d47d9dabd30_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_inventory_8h.html" title="Allows a node to advertise its knowledge of one or more objects. It can be received unsolicited..." alt="" coords="264,83,349,112"/>
+<area shape="rect" id="node5" href="$_message_8h.html" title="Header file for the Message object." alt="" coords="264,237,349,267"/>
+<area shape="rect" id="node19" href="$_inventory_vector_8h.html" title="Inventory vectors are used for notifying other nodes about objects they have or data which is being r..." alt="" coords="295,160,420,189"/>
+</map>

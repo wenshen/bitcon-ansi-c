@@ -1,0 +1,40 @@
+.TH "PreviousOutput" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PreviousOutput \- 
+.PP
+Structure for previous outputs that are being spent by an input.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TransactionInput.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBByteArray\fP * \fBhash\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBindex\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for previous outputs that are being spent by an input. 
+.PP
+Definition at line 22 of file TransactionInput.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBByteArray\fP* \fBhash\fP"Hash of the transaction that includes the output for this input 
+.PP
+Definition at line 23 of file TransactionInput.h.
+.SS "uint32_t \fBindex\fP"The index of the output for this input 
+.PP
+Definition at line 24 of file TransactionInput.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

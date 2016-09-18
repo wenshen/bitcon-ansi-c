@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_transaction_8h.html#a61a0f76473a17de64dcecc04a3ce3b5f" title="Serialises a Transaction to byte data." alt="" coords="357,5,496,35"/>
+<area shape="rect" id="node5" href="$_block_8h.html#aeb72d715416153dbd72e8f876fb19981" title="dealWithSerializationTran" alt="" coords="544,5,715,35"/>
+<area shape="rect" id="node7" href="$_block_8h.html#ab0d1c25a8612a3644626e5030ffbe456" title="Serializes a Block to the byte data." alt="" coords="764,5,865,35"/>
+</map>

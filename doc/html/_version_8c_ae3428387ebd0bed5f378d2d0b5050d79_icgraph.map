@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_network_communicator_8c.html#a1e7aeba124b81e6ab5e0661c521a8e78" title="NetworkCommunicatorOnMessageReceived" alt="" coords="831,41,1111,71"/>
+<area shape="rect" id="node19" href="$_network_communicator_8c.html#a775489ea672f9fc6b191d84a3a937f03" title="NetworkCommunicatorProcessMessageAutoHandshake" alt="" coords="431,40,780,69"/>
+<area shape="rect" id="node22" href="$_network_communicator_8c.html#a67b0329d1c08b164bc3b255bd412e355" title="NetworkCommunicatorSendMessage" alt="" coords="143,120,380,149"/>
+<area shape="rect" id="node5" href="$_network_communicator_8c.html#a46f71a041685b462e8c1b738e7ed6915" title="NetworkCommunicatorOnCanReceive" alt="" coords="1480,95,1725,124"/>
+<area shape="rect" id="node16" href="$_network_communicator_8c.html#a3c2373b9fdccdb79d21f4bdb0421db2a" title="NetworkCommunicatorOnHeaderRecieved" alt="" coords="1161,43,1431,72"/>
+<area shape="rect" id="node7" href="$_network_communicator_8c.html#a01b2fbdac7b86ad9f640ab3f02d0845b" title="NetworkCommunicatorDidConnect" alt="" coords="1775,147,1999,176"/>
+<area shape="rect" id="node9" href="$_network_communicator_8c.html#af58f7467f49c22bab01296912d93c41c" title="NetworkCommunicatorConnect" alt="" coords="2048,147,2253,176"/>
+<area shape="rect" id="node11" href="$_network_communicator_8c.html#a1885c0cdbcfda108d13cf52a71bad42d" title="NetworkCommunicatorTryConnections" alt="" coords="2301,147,2549,176"/>
+<area shape="rect" id="node13" href="$_network_communicator_8c.html#ac2d57ca1c8882c561500536901bd2ddd" title="NetworkCommunicatorProcessMessageAutoDiscovery" alt="" coords="2599,147,2940,176"/>
+<area shape="rect" id="node27" href="$_network_communicator_8c.html#a70b80eaf88abbdbd1fe270e254092275" title="NetworkCommunicatorProcessMessageAutoPingPong" alt="" coords="436,93,775,123"/>
+<area shape="rect" id="node30" href="$_network_communicator_8c.html#a0287c6ad4ffa61f24b7ea76596f7648e" title="NetworkCommunicatorSendPings" alt="" coords="496,147,715,176"/>
+<area shape="rect" id="node32" href="$_network_communicator_8c.html#ac474e8dd4fb72e26eaf3cb0b0d716e21" title="NetworkCommunicatorStartPings" alt="" coords="1188,147,1404,176"/>
+</map>

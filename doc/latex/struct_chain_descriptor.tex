@@ -1,0 +1,79 @@
+\hypertarget{struct_chain_descriptor}{
+\section{ChainDescriptor Struct Reference}
+\label{struct_chain_descriptor}\index{ChainDescriptor@{ChainDescriptor}}
+}
+
+
+Structure for \hyperlink{struct_chain_descriptor}{ChainDescriptor} objects.  
+
+
+
+
+{\ttfamily \#include $<$ChainDescriptor.h$>$}
+
+
+
+Collaboration diagram for ChainDescriptor:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_chain_descriptor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_message}{Message} \hyperlink{struct_chain_descriptor_a8987f797adf70c3e174fd64cc68bc933}{base}
+\item 
+uint16\_\-t \hyperlink{struct_chain_descriptor_a2a73cb6d678dd0457074398eb7c27584}{numOfHash}
+\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$$\ast$ \hyperlink{struct_chain_descriptor_accd2c3f99c875e8657d976fc264c7fc6}{hashes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure for \hyperlink{struct_chain_descriptor}{ChainDescriptor} objects. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_chain_descriptor_8h}{ChainDescriptor.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 22 of file ChainDescriptor.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_chain_descriptor_a8987f797adf70c3e174fd64cc68bc933}{
+\index{ChainDescriptor@{ChainDescriptor}!base@{base}}
+\index{base@{base}!ChainDescriptor@{ChainDescriptor}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_chain_descriptor_a8987f797adf70c3e174fd64cc68bc933}
+\hyperlink{struct_message}{Message} base structure 
+
+Definition at line 23 of file ChainDescriptor.h.
+
+\hypertarget{struct_chain_descriptor_accd2c3f99c875e8657d976fc264c7fc6}{
+\index{ChainDescriptor@{ChainDescriptor}!hashes@{hashes}}
+\index{hashes@{hashes}!ChainDescriptor@{ChainDescriptor}}
+\subsubsection[{hashes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$$\ast$ {\bf hashes}}}
+\label{struct_chain_descriptor_accd2c3f99c875e8657d976fc264c7fc6}
+Hashes used to describe the block chain. This should contain hashes in the blockchain but not all of them. The maximum allowed is 500. The usual behaviour is to have the 10 last block hashes and then each hash below those going down to the genesis block has a gap that doubles (See \href{https://en.bitcoin.it/wiki/Protocol_specification#getblocks}{\tt https://en.bitcoin.it/wiki/Protocol\_\-specification\#getblocks} ). The newest block hashes should come first. This should be NULL if empty. The \hyperlink{struct_get_blocks}{GetBlocks} object will release each \hyperlink{struct_byte_array}{ByteArray} and free the array when the object is freed. 
+
+Definition at line 25 of file ChainDescriptor.h.
+
+\hypertarget{struct_chain_descriptor_a2a73cb6d678dd0457074398eb7c27584}{
+\index{ChainDescriptor@{ChainDescriptor}!numOfHash@{numOfHash}}
+\index{numOfHash@{numOfHash}!ChainDescriptor@{ChainDescriptor}}
+\subsubsection[{numOfHash}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf numOfHash}}}
+\label{struct_chain_descriptor_a2a73cb6d678dd0457074398eb7c27584}
+Number of block hashes to describe the block chain. Up to 500. 
+
+Definition at line 24 of file ChainDescriptor.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_chain_descriptor_8h}{ChainDescriptor.h}\end{DoxyCompactItemize}

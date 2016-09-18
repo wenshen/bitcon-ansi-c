@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_submit_order" kind="struct" prot="public">
+    <compoundname>CmdSubmitOrder</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="176" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="176" bodyend="178"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

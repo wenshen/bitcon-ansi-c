@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_byte_array_8c.html#a38e852a1c627acf4baa1159e1086927e" title="destorys byte array" alt="" coords="281,59,404,88"/>
+<area shape="rect" id="node7" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="559,112,636,141"/>
+<area shape="rect" id="node12" href="$_byte_array_8c.html#a7a602e5e5f2d01b166f01b8263ef870c" title="Initialises a ByteArray object from a C string. The termination character is not included in the new ..." alt="" coords="263,163,423,192"/>
+<area shape="rect" id="node5" href="$_object_8c.html#a9773962d80072e39e235802b57907208" title="destructor" alt="" coords="547,5,648,35"/>
+<area shape="rect" id="node9" href="$_byte_array_8c.html#a3be6046f319ef59baf73dc0dfadd321d" title="release Byte Array SharedData Reference" alt="" coords="472,59,723,88"/>
+</map>

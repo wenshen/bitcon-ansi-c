@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_message_8h.html" title="Object/Message/Message.h" alt="" coords="473,83,703,112"/>
+<area shape="rect" id="node29" href="$_m_i_var_len_int_8c.html" title="Utils/VariableLengthInteger/VarLenInt.c" alt="" coords="727,83,1007,112"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_8h.html" title="Object/Message/Transaction.h" alt="" coords="59,315,304,344"/>
+<area shape="rect" id="node9" href="$_m_i_block_8c.html" title="Object/Message/Block.c" alt="" coords="148,469,359,499"/>
+<area shape="rect" id="node14" href="$_m_i_transaction_input_8h.html" title="Object/Message/TransactionInput.h" alt="" coords="451,237,725,267"/>
+<area shape="rect" id="node20" href="$_m_i_transaction_output_8h.html" title="Object/Message/TransactionOutput.h" alt="" coords="207,160,489,189"/>
+<area shape="rect" id="node27" href="$_m_i_message_8c.html" title="Object/Message/Message.c" alt="" coords="800,160,1029,189"/>
+<area shape="rect" id="node7" href="$_m_i_block_8h.html" title="Object/Message/Block.h" alt="" coords="5,392,216,421"/>
+<area shape="rect" id="node12" href="$_m_i_transaction_8c.html" title="Object/Message/Transaction.c" alt="" coords="291,392,536,421"/>
+<area shape="rect" id="node18" href="$_m_i_transaction_input_8c.html" title="Object/Message/TransactionInput.c" alt="" coords="451,315,725,344"/>
+<area shape="rect" id="node24" href="$_m_i_transaction_output_8c.html" title="Object/Message/TransactionOutput.c" alt="" coords="144,237,427,267"/>
+</map>

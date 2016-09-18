@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_transaction_8h.html#afc8f7c9bb8194bba913dd2dd59963cef" title="Creates a new Transaction object from byte data. Should be serialised for object data." alt="" coords="281,5,521,35"/>
+<area shape="rect" id="node5" href="$_block_8h.html#a219df1f8f05a691f09e283731eb86129" title="deserializeWithTransactions" alt="" coords="571,5,757,35"/>
+<area shape="rect" id="node7" href="$_block_8h.html#a9dcdbbf01ad57512119aa46013c7f92e" title="Deserializes a Block so that it can be used as an object." alt="" coords="805,5,923,35"/>
+<area shape="rect" id="node9" href="$_block_8h.html#ae50e2e938910d73e027bd2818d27a18b" title="Initializes a Block object with the original block for the bitcoin block chain. This will have serial..." alt="" coords="971,5,1147,35"/>
+<area shape="rect" id="node11" href="$_block_8c.html#a076f9fffd97db10420d3067236cc8af4" title="createNewBlockFromOriginalBlock" alt="" coords="1196,5,1420,35"/>
+</map>

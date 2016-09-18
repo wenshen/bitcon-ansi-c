@@ -1,0 +1,1303 @@
+\hypertarget{_m_i_byte_array_8h}{
+\section{Object/ByteArray.h File Reference}
+\label{_m_i_byte_array_8h}\index{Object/ByteArray.h@{Object/ByteArray.h}}
+}
+{\ttfamily \#include \char`\"{}Object.h\char`\"{}}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}../Constants.h\char`\"{}}\par
+Include dependency graph for ByteArray.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{_m_i_byte_array_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_i_shared_data}{SharedData}
+\begin{DoxyCompactList}\small\item\em Stores byte data that can be shared amongst many ByteArrays. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_m_i_byte_array}{ByteArray}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_m_i_byte_array}{ByteArray} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a531926752e64e4d76489d611b593df63}{createNewByteArrayFromString} (char $\ast$string, int terminator, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{struct_m_i_byte_array}{ByteArray} object from a C string. The termination character is not included in the new \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a2db5c01eeb9fbe1d8350ab99392be437}{createNewByteArrayOfSize} (uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{struct_m_i_byte_array}{ByteArray} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a3187b5ac91a1acef918bbc074d27dd15}{createNewByteArrayFromData} (uint8\_\-t $\ast$data, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a9d079ea9294ff1dfc57d978c0d0402cf}{createNewByteArrayUsingDataCopy} (uint8\_\-t $\ast$data, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data which is copied. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a673fc907bf90724f9fbfad124d3ed9e2}{getByteArray} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_m_i_byte_array}{ByteArray} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_byte_array_8h_ae48b5b2d080727eda43a519e18f2f509}{initByteArrayFromString} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, char $\ast$string, int terminator, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_m_i_byte_array}{ByteArray} object from a C string. The termination character is not included in the new \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_byte_array_8h_a04dd144d29de492350468e12c2808319}{initByteArrayOfSize} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises an empty \hyperlink{struct_m_i_byte_array}{ByteArray} object. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_byte_array_8h_af36c0013b2be340fb2c017c8bd0d808f}{initNewByteArrayFromData} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint8\_\-t $\ast$data, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_byte_array_8h_a6e6639e693523dd0cfba52ae63cf0542}{initNewByteArrayUsingDataCopy} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint8\_\-t $\ast$data, uint32\_\-t size, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data which is copied. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_byte_array_8h_a0639a384c5603ad22f8440fcbb831f9a}{initializeByteArraySubsectionReference} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$refByteArray, uint32\_\-t offset, uint32\_\-t length)
+\begin{DoxyCompactList}\small\item\em Initialises a reference \hyperlink{struct_m_i_byte_array}{ByteArray} to a subsection of an \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_ab0ba2a57716ecf23d43924647b4175bb}{destroyByteArray} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Destroys a \hyperlink{struct_m_i_byte_array}{ByteArray} object. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_a34dc195b61536b69d608bc90fc123194}{releaseByteArraySharedDataReference} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Releases a reference to shared byte data and frees the data if necessary. \end{DoxyCompactList}\item 
+uint16\_\-t \hyperlink{_m_i_byte_array_8h_aa74c92f75755b2c258938fb3819d94ab}{readInt16AsLittleEndianFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset)
+\begin{DoxyCompactList}\small\item\em Reads a 16 bit integer from a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_byte_array_8h_aab10685017fe16769d5b22c826ada9f8}{readInt32AsLittleEndianFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset)
+\begin{DoxyCompactList}\small\item\em Reads a 32 bit integer from a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. \end{DoxyCompactList}\item 
+uint64\_\-t \hyperlink{_m_i_byte_array_8h_a59271d773239202481b815d6825c2587}{readInt64AsLittleEndianFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset)
+\begin{DoxyCompactList}\small\item\em Reads a 64 bit integer from the \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. \end{DoxyCompactList}\item 
+\hyperlink{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8}{Compare} \hyperlink{_m_i_byte_array_8h_a56867469dc655667364a48de5c2a2e05}{compareByteArrays} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$second)
+\begin{DoxyCompactList}\small\item\em Compares a \hyperlink{struct_m_i_byte_array}{ByteArray} to another \hyperlink{struct_m_i_byte_array}{ByteArray} and returns with a Compare value. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a013fc912915268f2358abf3582fb09c4}{copyByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Copies a \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_a949c73acfab0c6c4d83ad8c07d999364}{copyByteArrayToByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t writeOffset, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Copies another byte array to this byte array. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_adc65210bbb2b92c34d9157dbb321da96}{copySubsectionOfByteArrayToByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t writeOffset, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$source, uint32\_\-t readOffset, uint32\_\-t length)
+\begin{DoxyCompactList}\small\item\em Copies a section of another byte array to this byte array. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a3d861ce4c4d1c2d63c88594130524be1}{createNewByteArrayFromSubsection} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset, uint32\_\-t length)
+\begin{DoxyCompactList}\small\item\em Copies a subsection of a \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{_m_i_byte_array_8h_a3350bfefcab7bfb6e48c9865b342bec0}{getByteArraySubsectionReference} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset, uint32\_\-t length)
+\begin{DoxyCompactList}\small\item\em References a subsection of a \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{_m_i_byte_array_8h_af0eafd008dc71865431262ed1e29b4f2}{getByteFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t index)
+\begin{DoxyCompactList}\small\item\em Get a byte from the \hyperlink{struct_m_i_byte_array}{ByteArray} object. A byte will be returned from self-\/$>$offset+index in the underlying data. \end{DoxyCompactList}\item 
+uint8\_\-t $\ast$ \hyperlink{_m_i_byte_array_8h_a29dc51ffba948226c028baf425096408}{getDataFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying data starting at self-\/$>$offset. \end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{_m_i_byte_array_8h_a448f6cf170b53d4c61e7d15c405fcb4b}{getLastByteFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Get the last byte from the \hyperlink{struct_m_i_byte_array}{ByteArray} object. A byte will be returned from self-\/$>$offset+self-\/$>$length in the underlying data. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_byte_array_8h_aff8e512253db16092e10359b31e732b9}{isNullByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Determines if a \hyperlink{struct_m_i_byte_array}{ByteArray} is null. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_a4e0892416e1efc8384687e86966ed3a1}{setByteInByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t index, uint8\_\-t byte)
+\begin{DoxyCompactList}\small\item\em Set a byte into the array. This will be set at self-\/$>$offset+index in the underlying data. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_aab402fbc101bb69e06fd8f00f4e65fd4}{setBytesInByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t index, uint8\_\-t $\ast$bytes, uint32\_\-t length)
+\begin{DoxyCompactList}\small\item\em Copies a length of bytes into the array. This will be set at self-\/$>$offset+index in the underlying data. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_a6e28c10bc73d105e1df7f1868c92a7de}{writeInt16AsLittleEndianIntoByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset, uint16\_\-t integer)
+\begin{DoxyCompactList}\small\item\em Writes a 16 bit integer to a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_aa4d465553a3c7f80c1700316f2410b40}{writeInt32AsLittleEndianIntoByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset, uint32\_\-t integer)
+\begin{DoxyCompactList}\small\item\em Writes a 32 bit integer to a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_ac10e90995fc8a98db44d71607ef0ede7}{writeInt64AsLittleEndianIntoByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, uint32\_\-t offset, uint64\_\-t integer)
+\begin{DoxyCompactList}\small\item\em Writes a 64 bit integer to a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_aa52a35126b82631d506e65e87a4cff13}{reverseBytes} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Reverses the bytes. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_byte_array_8h_a13f783bb0fcd091b7bfb25cfd7f9d1c0}{changeByteArrayDataReference} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ref, uint32\_\-t offset)
+\begin{DoxyCompactList}\small\item\em Changes the reference of this \hyperlink{struct_m_i_byte_array}{ByteArray} object to reference the underlying data of another \hyperlink{struct_m_i_byte_array}{ByteArray}. Useful for moving byte data into single underlying data by copying the data into a larger \hyperlink{struct_m_i_byte_array}{ByteArray} and then changing the reference to this new larger \hyperlink{struct_m_i_byte_array}{ByteArray}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_byte_array_8h_a13f783bb0fcd091b7bfb25cfd7f9d1c0}{
+\index{ByteArray.h@{ByteArray.h}!changeByteArrayDataReference@{changeByteArrayDataReference}}
+\index{changeByteArrayDataReference@{changeByteArrayDataReference}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{changeByteArrayDataReference}]{\setlength{\rightskip}{0pt plus 5cm}void changeByteArrayDataReference (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{ref, }
+\item[{uint32\_\-t}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a13f783bb0fcd091b7bfb25cfd7f9d1c0}
+
+
+Changes the reference of this \hyperlink{struct_m_i_byte_array}{ByteArray} object to reference the underlying data of another \hyperlink{struct_m_i_byte_array}{ByteArray}. Useful for moving byte data into single underlying data by copying the data into a larger \hyperlink{struct_m_i_byte_array}{ByteArray} and then changing the reference to this new larger \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to change the reference for. \\
+\hline
+{\em ref} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to get the reference from. \\
+\hline
+{\em offset} & The offset to start the reference. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a13f783bb0fcd091b7bfb25cfd7f9d1c0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a13f783bb0fcd091b7bfb25cfd7f9d1c0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a56867469dc655667364a48de5c2a2e05}{
+\index{ByteArray.h@{ByteArray.h}!compareByteArrays@{compareByteArrays}}
+\index{compareByteArrays@{compareByteArrays}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{compareByteArrays}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Compare} compareByteArrays (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{second}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a56867469dc655667364a48de5c2a2e05}
+
+
+Compares a \hyperlink{struct_m_i_byte_array}{ByteArray} to another \hyperlink{struct_m_i_byte_array}{ByteArray} and returns with a Compare value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to compare \\
+\hline
+{\em second} & Another \hyperlink{struct_m_i_byte_array}{ByteArray} object to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the lengths are different, \_\-COMPARE\_\-MORE\_\-THAN if \char`\"{}self\char`\"{} if longer, else \_\-COMPARE\_\-LESS\_\-THAN. If the bytes are equal \_\-COMPARE\_\-EQUAL, else \_\-COMPARE\_\-MORE\_\-THAN if the first different byte if higher in \char`\"{}self\char`\"{}, otherwise \_\-COMPARE\_\-LESS\_\-THAN. The return value can be treated like the return value to memcmp. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a013fc912915268f2358abf3582fb09c4}{
+\index{ByteArray.h@{ByteArray.h}!copyByteArray@{copyByteArray}}
+\index{copyByteArray@{copyByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{copyByteArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ copyByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a013fc912915268f2358abf3582fb09c4}
+
+
+Copies a \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a949c73acfab0c6c4d83ad8c07d999364}{
+\index{ByteArray.h@{ByteArray.h}!copyByteArrayToByteArray@{copyByteArrayToByteArray}}
+\index{copyByteArrayToByteArray@{copyByteArrayToByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{copyByteArrayToByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void copyByteArrayToByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{writeOffset, }
+\item[{{\bf ByteArray} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a949c73acfab0c6c4d83ad8c07d999364}
+
+
+Copies another byte array to this byte array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to copy to. \\
+\hline
+{\em writeOffset} & The offset to begin writing to in self. \\
+\hline
+{\em source} & The \hyperlink{struct_m_i_byte_array}{ByteArray} to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a949c73acfab0c6c4d83ad8c07d999364_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_adc65210bbb2b92c34d9157dbb321da96}{
+\index{ByteArray.h@{ByteArray.h}!copySubsectionOfByteArrayToByteArray@{copySubsectionOfByteArrayToByteArray}}
+\index{copySubsectionOfByteArrayToByteArray@{copySubsectionOfByteArrayToByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{copySubsectionOfByteArrayToByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void copySubsectionOfByteArrayToByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{writeOffset, }
+\item[{{\bf ByteArray} $\ast$}]{source, }
+\item[{uint32\_\-t}]{readOffset, }
+\item[{uint32\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_adc65210bbb2b92c34d9157dbb321da96}
+
+
+Copies a section of another byte array to this byte array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+{\em writeOffset} & The offset to begin writing \\
+\hline
+{\em source} & The \hyperlink{struct_m_i_byte_array}{ByteArray} to copy from. \\
+\hline
+{\em readOffset} & The offset of the source array to begin reading. \\
+\hline
+{\em length} & The length to copy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_i_byte_array_8h_a3187b5ac91a1acef918bbc074d27dd15}{
+\index{ByteArray.h@{ByteArray.h}!createNewByteArrayFromData@{createNewByteArrayFromData}}
+\index{createNewByteArrayFromData@{createNewByteArrayFromData}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{createNewByteArrayFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ createNewByteArrayFromData (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a3187b5ac91a1acef918bbc074d27dd15}
+
+
+Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data. This should be dynamically allocated. The new \hyperlink{struct_m_i_byte_array}{ByteArray} object will take care of it's memory management so do not free this data once passed into this constructor. \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a531926752e64e4d76489d611b593df63}{
+\index{ByteArray.h@{ByteArray.h}!createNewByteArrayFromString@{createNewByteArrayFromString}}
+\index{createNewByteArrayFromString@{createNewByteArrayFromString}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{createNewByteArrayFromString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ createNewByteArrayFromString (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{int}]{terminator, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a531926752e64e4d76489d611b593df63}
+
+
+Creates a \hyperlink{struct_m_i_byte_array}{ByteArray} object from a C string. The termination character is not included in the new \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to put into a \hyperlink{struct_m_i_byte_array}{ByteArray}. \\
+\hline
+{\em terminator} & If true, include the termination character. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a3d861ce4c4d1c2d63c88594130524be1}{
+\index{ByteArray.h@{ByteArray.h}!createNewByteArrayFromSubsection@{createNewByteArrayFromSubsection}}
+\index{createNewByteArrayFromSubsection@{createNewByteArrayFromSubsection}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{createNewByteArrayFromSubsection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ createNewByteArrayFromSubsection (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint32\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a3d861ce4c4d1c2d63c88594130524be1}
+
+
+Copies a subsection of a \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to copy from. \\
+\hline
+{\em offset} & The offset to the start of the copy. \\
+\hline
+{\em length} & The length of the copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a2db5c01eeb9fbe1d8350ab99392be437}{
+\index{ByteArray.h@{ByteArray.h}!createNewByteArrayOfSize@{createNewByteArrayOfSize}}
+\index{createNewByteArrayOfSize@{createNewByteArrayOfSize}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{createNewByteArrayOfSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ createNewByteArrayOfSize (
+\begin{DoxyParamCaption}
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a2db5c01eeb9fbe1d8350ab99392be437}
+
+
+Creates an empty \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An empty \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a2db5c01eeb9fbe1d8350ab99392be437_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a2db5c01eeb9fbe1d8350ab99392be437_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a9d079ea9294ff1dfc57d978c0d0402cf}{
+\index{ByteArray.h@{ByteArray.h}!createNewByteArrayUsingDataCopy@{createNewByteArrayUsingDataCopy}}
+\index{createNewByteArrayUsingDataCopy@{createNewByteArrayUsingDataCopy}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{createNewByteArrayUsingDataCopy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ createNewByteArrayUsingDataCopy (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a9d079ea9294ff1dfc57d978c0d0402cf}
+
+
+Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data which is copied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data. This data is copied. \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+\end{DoxyReturn}
+
+
+Definition at line 275 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a9d079ea9294ff1dfc57d978c0d0402cf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a9d079ea9294ff1dfc57d978c0d0402cf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_ab0ba2a57716ecf23d43924647b4175bb}{
+\index{ByteArray.h@{ByteArray.h}!destroyByteArray@{destroyByteArray}}
+\index{destroyByteArray@{destroyByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{destroyByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void destroyByteArray (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_ab0ba2a57716ecf23d43924647b4175bb}
+
+
+Destroys a \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to destroy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_ab0ba2a57716ecf23d43924647b4175bb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_ab0ba2a57716ecf23d43924647b4175bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_af0eafd008dc71865431262ed1e29b4f2}{
+\index{ByteArray.h@{ByteArray.h}!getByteFromByteArray@{getByteFromByteArray}}
+\index{getByteFromByteArray@{getByteFromByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{getByteFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t getByteFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{index}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_af0eafd008dc71865431262ed1e29b4f2}
+
+
+Get a byte from the \hyperlink{struct_m_i_byte_array}{ByteArray} object. A byte will be returned from self-\/$>$offset+index in the underlying data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+{\em index} & The index in the array to get the byte from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The byte 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_af0eafd008dc71865431262ed1e29b4f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a29dc51ffba948226c028baf425096408}{
+\index{ByteArray.h@{ByteArray.h}!getDataFromByteArray@{getDataFromByteArray}}
+\index{getDataFromByteArray@{getDataFromByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{getDataFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ getDataFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a29dc51ffba948226c028baf425096408}
+
+
+Get a pointer to the underlying data starting at self-\/$>$offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a29dc51ffba948226c028baf425096408_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a448f6cf170b53d4c61e7d15c405fcb4b}{
+\index{ByteArray.h@{ByteArray.h}!getLastByteFromByteArray@{getLastByteFromByteArray}}
+\index{getLastByteFromByteArray@{getLastByteFromByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{getLastByteFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t getLastByteFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a448f6cf170b53d4c61e7d15c405fcb4b}
+
+
+Get the last byte from the \hyperlink{struct_m_i_byte_array}{ByteArray} object. A byte will be returned from self-\/$>$offset+self-\/$>$length in the underlying data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The last byte 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a673fc907bf90724f9fbfad124d3ed9e2}{
+\index{ByteArray.h@{ByteArray.h}!getByteArray@{getByteArray}}
+\index{getByteArray@{getByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{getByteArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ getByteArray (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a673fc907bf90724f9fbfad124d3ed9e2}
+
+
+Gets a \hyperlink{struct_m_i_byte_array}{ByteArray} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_m_i_byte_array}{ByteArray} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a673fc907bf90724f9fbfad124d3ed9e2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a3350bfefcab7bfb6e48c9865b342bec0}{
+\index{ByteArray.h@{ByteArray.h}!getByteArraySubsectionReference@{getByteArraySubsectionReference}}
+\index{getByteArraySubsectionReference@{getByteArraySubsectionReference}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{getByteArraySubsectionReference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ getByteArraySubsectionReference (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint32\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a3350bfefcab7bfb6e48c9865b342bec0}
+
+
+References a subsection of a \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to reference. \\
+\hline
+{\em offset} & The offset to the start of the reference. \\
+\hline
+{\em length} & The length of the reference. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a3350bfefcab7bfb6e48c9865b342bec0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a3350bfefcab7bfb6e48c9865b342bec0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a0639a384c5603ad22f8440fcbb831f9a}{
+\index{ByteArray.h@{ByteArray.h}!initializeByteArraySubsectionReference@{initializeByteArraySubsectionReference}}
+\index{initializeByteArraySubsectionReference@{initializeByteArraySubsectionReference}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{initializeByteArraySubsectionReference}]{\setlength{\rightskip}{0pt plus 5cm}int initializeByteArraySubsectionReference (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{refByteArray, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint32\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a0639a384c5603ad22f8440fcbb831f9a}
+
+
+Initialises a reference \hyperlink{struct_m_i_byte_array}{ByteArray} to a subsection of an \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to initialise. \\
+\hline
+{\em ref} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to reference. \\
+\hline
+{\em offset} & The offset to the start of the reference. \\
+\hline
+{\em length} & The length of the reference. If 0 the length is set to be the same as the reference \hyperlink{struct_m_i_byte_array}{ByteArray}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=386pt]{_m_i_byte_array_8h_a0639a384c5603ad22f8440fcbb831f9a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a0639a384c5603ad22f8440fcbb831f9a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_ae48b5b2d080727eda43a519e18f2f509}{
+\index{ByteArray.h@{ByteArray.h}!initByteArrayFromString@{initByteArrayFromString}}
+\index{initByteArrayFromString@{initByteArrayFromString}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{initByteArrayFromString}]{\setlength{\rightskip}{0pt plus 5cm}int initByteArrayFromString (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{terminator, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_ae48b5b2d080727eda43a519e18f2f509}
+
+
+Initialises a \hyperlink{struct_m_i_byte_array}{ByteArray} object from a C string. The termination character is not included in the new \hyperlink{struct_m_i_byte_array}{ByteArray}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to initialise \\
+\hline
+{\em string} & The string to put into a \hyperlink{struct_m_i_byte_array}{ByteArray}. \\
+\hline
+{\em terminator} & If tru, include the termination character. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_a04dd144d29de492350468e12c2808319}{
+\index{ByteArray.h@{ByteArray.h}!initByteArrayOfSize@{initByteArrayOfSize}}
+\index{initByteArrayOfSize@{initByteArrayOfSize}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{initByteArrayOfSize}]{\setlength{\rightskip}{0pt plus 5cm}int initByteArrayOfSize (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a04dd144d29de492350468e12c2808319}
+
+
+Initialises an empty \hyperlink{struct_m_i_byte_array}{ByteArray} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to initialise \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{_m_i_byte_array_8h_a04dd144d29de492350468e12c2808319_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a04dd144d29de492350468e12c2808319_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_af36c0013b2be340fb2c017c8bd0d808f}{
+\index{ByteArray.h@{ByteArray.h}!initNewByteArrayFromData@{initNewByteArrayFromData}}
+\index{initNewByteArrayFromData@{initNewByteArrayFromData}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{initNewByteArrayFromData}]{\setlength{\rightskip}{0pt plus 5cm}int initNewByteArrayFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_af36c0013b2be340fb2c017c8bd0d808f}
+
+
+Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to initialise \\
+\hline
+{\em data} & The data. This should be dynamically allocated. The new \hyperlink{struct_m_i_byte_array}{ByteArray} object will take care of it's memory management so do not free this data once passed into this constructor. \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 288 of file ByteArray.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_m_i_byte_array_8h_af36c0013b2be340fb2c017c8bd0d808f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_af36c0013b2be340fb2c017c8bd0d808f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a6e6639e693523dd0cfba52ae63cf0542}{
+\index{ByteArray.h@{ByteArray.h}!initNewByteArrayUsingDataCopy@{initNewByteArrayUsingDataCopy}}
+\index{initNewByteArrayUsingDataCopy@{initNewByteArrayUsingDataCopy}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{initNewByteArrayUsingDataCopy}]{\setlength{\rightskip}{0pt plus 5cm}int initNewByteArrayUsingDataCopy (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{size, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a6e6639e693523dd0cfba52ae63cf0542}
+
+
+Creates a new \hyperlink{struct_m_i_byte_array}{ByteArray} using data which is copied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to initialise \\
+\hline
+{\em data} & The data. This data is copied. \\
+\hline
+{\em size} & Size in bytes for the new array. \\
+\hline
+{\em onErrorReceived} & Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_m_i_byte_array_8h_aff8e512253db16092e10359b31e732b9}{
+\index{ByteArray.h@{ByteArray.h}!isNullByteArray@{isNullByteArray}}
+\index{isNullByteArray@{isNullByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{isNullByteArray}]{\setlength{\rightskip}{0pt plus 5cm}int isNullByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_aff8e512253db16092e10359b31e732b9}
+
+
+Determines if a \hyperlink{struct_m_i_byte_array}{ByteArray} is null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all bytes are zero, else false. 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{_m_i_byte_array_8h_aff8e512253db16092e10359b31e732b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_aa74c92f75755b2c258938fb3819d94ab}{
+\index{ByteArray.h@{ByteArray.h}!readInt16AsLittleEndianFromByteArray@{readInt16AsLittleEndianFromByteArray}}
+\index{readInt16AsLittleEndianFromByteArray@{readInt16AsLittleEndianFromByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{readInt16AsLittleEndianFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t readInt16AsLittleEndianFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_aa74c92f75755b2c258938fb3819d94ab}
+
+
+Reads a 16 bit integer from a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object \\
+\hline
+{\em offset} & Offset to where to start the read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16 bit integer. This can be cast to a signed integer if reading integer as a signed value. 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_aa74c92f75755b2c258938fb3819d94ab_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_aab10685017fe16769d5b22c826ada9f8}{
+\index{ByteArray.h@{ByteArray.h}!readInt32AsLittleEndianFromByteArray@{readInt32AsLittleEndianFromByteArray}}
+\index{readInt32AsLittleEndianFromByteArray@{readInt32AsLittleEndianFromByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{readInt32AsLittleEndianFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t readInt32AsLittleEndianFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_aab10685017fe16769d5b22c826ada9f8}
+
+
+Reads a 32 bit integer from a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object \\
+\hline
+{\em offset} & Offset to where to start the read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 32 bit integer. This can be cast to a signed integer if reading integer as a signed value 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_aab10685017fe16769d5b22c826ada9f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a59271d773239202481b815d6825c2587}{
+\index{ByteArray.h@{ByteArray.h}!readInt64AsLittleEndianFromByteArray@{readInt64AsLittleEndianFromByteArray}}
+\index{readInt64AsLittleEndianFromByteArray@{readInt64AsLittleEndianFromByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{readInt64AsLittleEndianFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}uint64\_\-t readInt64AsLittleEndianFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a59271d773239202481b815d6825c2587}
+
+
+Reads a 64 bit integer from the \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object \\
+\hline
+{\em offset} & Offset to where to start the read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 64 bit integer. This can be cast to a signed integer if reading integer as a signed value 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a59271d773239202481b815d6825c2587_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_a34dc195b61536b69d608bc90fc123194}{
+\index{ByteArray.h@{ByteArray.h}!releaseByteArraySharedDataReference@{releaseByteArraySharedDataReference}}
+\index{releaseByteArraySharedDataReference@{releaseByteArraySharedDataReference}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{releaseByteArraySharedDataReference}]{\setlength{\rightskip}{0pt plus 5cm}void releaseByteArraySharedDataReference (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a34dc195b61536b69d608bc90fc123194}
+
+
+Releases a reference to shared byte data and frees the data if necessary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object with the \hyperlink{struct_m_i_shared_data}{SharedData} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 118 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a34dc195b61536b69d608bc90fc123194_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_aa52a35126b82631d506e65e87a4cff13}{
+\index{ByteArray.h@{ByteArray.h}!reverseBytes@{reverseBytes}}
+\index{reverseBytes@{reverseBytes}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{reverseBytes}]{\setlength{\rightskip}{0pt plus 5cm}void reverseBytes (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_aa52a35126b82631d506e65e87a4cff13}
+
+
+Reverses the bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object to reverse \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m_i_byte_array_8h_a4e0892416e1efc8384687e86966ed3a1}{
+\index{ByteArray.h@{ByteArray.h}!setByteInByteArray@{setByteInByteArray}}
+\index{setByteInByteArray@{setByteInByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{setByteInByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void setByteInByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{index, }
+\item[{uint8\_\-t}]{byte}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a4e0892416e1efc8384687e86966ed3a1}
+
+
+Set a byte into the array. This will be set at self-\/$>$offset+index in the underlying data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+{\em index} & The index in the array to set the byte \\
+\hline
+{\em byte} & The byte to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 177 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a4e0892416e1efc8384687e86966ed3a1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_aab402fbc101bb69e06fd8f00f4e65fd4}{
+\index{ByteArray.h@{ByteArray.h}!setBytesInByteArray@{setBytesInByteArray}}
+\index{setBytesInByteArray@{setBytesInByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{setBytesInByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void setBytesInByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{index, }
+\item[{uint8\_\-t $\ast$}]{bytes, }
+\item[{uint32\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_aab402fbc101bb69e06fd8f00f4e65fd4}
+
+
+Copies a length of bytes into the array. This will be set at self-\/$>$offset+index in the underlying data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object. \\
+\hline
+{\em index} & The index in the array to start writing. \\
+\hline
+{\em bytes} & The pointer to the bytes to be copied. \\
+\hline
+{\em length} & The number of bytes to copy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 186 of file ByteArray.c.
+
+\hypertarget{_m_i_byte_array_8h_a6e28c10bc73d105e1df7f1868c92a7de}{
+\index{ByteArray.h@{ByteArray.h}!writeInt16AsLittleEndianIntoByteArray@{writeInt16AsLittleEndianIntoByteArray}}
+\index{writeInt16AsLittleEndianIntoByteArray@{writeInt16AsLittleEndianIntoByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{writeInt16AsLittleEndianIntoByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void writeInt16AsLittleEndianIntoByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint16\_\-t}]{integer}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_a6e28c10bc73d105e1df7f1868c92a7de}
+
+
+Writes a 16 bit integer to a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object \\
+\hline
+{\em offset} & Offset to where to start the write \\
+\hline
+{\em integer} & The 16 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 196 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_a6e28c10bc73d105e1df7f1868c92a7de_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_aa4d465553a3c7f80c1700316f2410b40}{
+\index{ByteArray.h@{ByteArray.h}!writeInt32AsLittleEndianIntoByteArray@{writeInt32AsLittleEndianIntoByteArray}}
+\index{writeInt32AsLittleEndianIntoByteArray@{writeInt32AsLittleEndianIntoByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{writeInt32AsLittleEndianIntoByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void writeInt32AsLittleEndianIntoByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint32\_\-t}]{integer}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_aa4d465553a3c7f80c1700316f2410b40}
+
+
+Writes a 32 bit integer to a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object \\
+\hline
+{\em offset} & Offset to where to start the write \\
+\hline
+{\em integer} & The 32 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 207 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_aa4d465553a3c7f80c1700316f2410b40_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_byte_array_8h_ac10e90995fc8a98db44d71607ef0ede7}{
+\index{ByteArray.h@{ByteArray.h}!writeInt64AsLittleEndianIntoByteArray@{writeInt64AsLittleEndianIntoByteArray}}
+\index{writeInt64AsLittleEndianIntoByteArray@{writeInt64AsLittleEndianIntoByteArray}!ByteArray.h@{ByteArray.h}}
+\subsubsection[{writeInt64AsLittleEndianIntoByteArray}]{\setlength{\rightskip}{0pt plus 5cm}void writeInt64AsLittleEndianIntoByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{self, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint64\_\-t}]{integer}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_byte_array_8h_ac10e90995fc8a98db44d71607ef0ede7}
+
+
+Writes a 64 bit integer to a \hyperlink{struct_m_i_byte_array}{ByteArray} as little-\/endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_byte_array}{ByteArray} object \\
+\hline
+{\em offset} & Offset to where to start the write \\
+\hline
+{\em integer} & The 64 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 218 of file ByteArray.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_byte_array_8h_ac10e90995fc8a98db44d71607ef0ede7_icgraph}
+\end{center}
+\end{figure}
+
+

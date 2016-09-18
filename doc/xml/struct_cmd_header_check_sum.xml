@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_header_check_sum" kind="struct" prot="public">
+    <compoundname>CmdHeaderCheckSum</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_header_check_sum_1a7154179fe070a40c828f7c03f454d4d6" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="51" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_header_check_sum_1a5b9e40150e73a908b8815ab282e5a4d3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char command[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="52" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_header_check_sum_1ac8d42bcd4a44e078047ccd7291059238" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="53" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="_protocol_8c_1a2c0467cf9fa2fae995e257b082e10d3c" compoundref="_protocol_8c" startline="25" endline="28">getPayloadLength</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="50" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="50" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_cmd_header_check_sum_1a5b9e40150e73a908b8815ab282e5a4d3" prot="public" virt="non-virtual"><scope>CmdHeaderCheckSum</scope><name>command</name></member>
+      <member refid="struct_cmd_header_check_sum_1ac8d42bcd4a44e078047ccd7291059238" prot="public" virt="non-virtual"><scope>CmdHeaderCheckSum</scope><name>length</name></member>
+      <member refid="struct_cmd_header_check_sum_1a7154179fe070a40c828f7c03f454d4d6" prot="public" virt="non-virtual"><scope>CmdHeaderCheckSum</scope><name>magic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

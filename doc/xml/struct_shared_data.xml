@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_shared_data" kind="struct" prot="public">
+    <compoundname>SharedData</compoundname>
+    <includes refid="_byte_array_8h" local="no">ByteArray.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_shared_data_1abe222f6d3581e7920dcad5306cc906a8" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to byte data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/ByteArray.h" line="22" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/ByteArray.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="_byte_array_8h_1a7c9e6ea6d3022a2e858e91e207be9ec2" compoundref="_byte_array_8c" startline="28" endline="35">copyByteArrayToByteArray</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_shared_data_1ad83c3d5d3f46e6278a77cb80eb2a0705" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t referenceCount</definition>
+        <argsstring></argsstring>
+        <name>referenceCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>References to this data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/ByteArray.h" line="23" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/ByteArray.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="_byte_array_8h_1ad155de39b7e47d41778c0ec219aff1e6" compoundref="_byte_array_8c" startline="381" endline="390">changeByteArrayDataReference</referencedby>
+        <referencedby refid="_byte_array_8h_1a2811955249437e6f4f47a4fe3b706b2e" compoundref="_byte_array_8c" startline="143" endline="168">initializeByteArraySubsectionReference</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores byte data that can be shared amongst many ByteArrays. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/ByteArray.h" line="21" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/ByteArray.h" bodystart="21" bodyend="24"/>
+    <listofallmembers>
+      <member refid="struct_shared_data_1abe222f6d3581e7920dcad5306cc906a8" prot="public" virt="non-virtual"><scope>SharedData</scope><name>data</name></member>
+      <member refid="struct_shared_data_1ad83c3d5d3f46e6278a77cb80eb2a0705" prot="public" virt="non-virtual"><scope>SharedData</scope><name>referenceCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

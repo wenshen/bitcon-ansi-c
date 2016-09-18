@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_manager_8h.html#ac8e8a21c6419853b4972eb99b79a6a85" title="Setups the AddressMenager for both InitAddressManager and InitAddressManagerFromData." alt="" coords="195,32,347,61"/>
+<area shape="rect" id="node5" href="$_address_manager_8h.html#a6b665f0a3333cda9ae0d9c7b3e329288" title="Initialises a AddressManager object." alt="" coords="424,5,560,35"/>
+<area shape="rect" id="node9" href="$_address_manager_8h.html#a4258eb176b48557bec37845898214c90" title="Initialises a AddressManager object from serialised data." alt="" coords="395,59,589,88"/>
+<area shape="rect" id="node7" href="$_address_manager_8h.html#a2afc06138f83c90dc4e1968d0c3ab2c9" title="Creates a new AddressManager object." alt="" coords="667,5,811,35"/>
+<area shape="rect" id="node11" href="$_address_manager_8h.html#a2cd10970a7ae52d48b9b06e080d4ceee" title="Creates a new AddressManager object from serialised data." alt="" coords="637,59,840,88"/>
+</map>

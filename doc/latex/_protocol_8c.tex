@@ -1,0 +1,53 @@
+\hypertarget{_protocol_8c}{
+\section{src/Object/NetworkProtocol/Protocol.c File Reference}
+\label{_protocol_8c}\index{src/Object/NetworkProtocol/Protocol.c@{src/Object/NetworkProtocol/Protocol.c}}
+}
+{\ttfamily \#include \char`\"{}Protocol.h\char`\"{}}\par
+{\ttfamily \#include $<$memory.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+Include dependency graph for Protocol.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_protocol_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{_protocol_8c_a2c0467cf9fa2fae995e257b082e10d3c}{getPayloadLength} (struct \hyperlink{struct_cmd_header_check_sum}{CmdHeaderCheckSum} header)
+\item 
+struct \hyperlink{struct_cmd_version}{CmdVersion} \hyperlink{_protocol_8c_a1106fb2a6f73df3fca89bff4c3432c40}{parseVersion} (const char $\ast$payload)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_protocol_8c_a2c0467cf9fa2fae995e257b082e10d3c}{
+\index{Protocol.c@{Protocol.c}!getPayloadLength@{getPayloadLength}}
+\index{getPayloadLength@{getPayloadLength}!Protocol.c@{Protocol.c}}
+\subsubsection[{getPayloadLength}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int getPayloadLength (
+\begin{DoxyParamCaption}
+\item[{struct {\bf CmdHeaderCheckSum}}]{header}
+\end{DoxyParamCaption}
+)}}
+\label{_protocol_8c_a2c0467cf9fa2fae995e257b082e10d3c}
+
+
+Definition at line 25 of file Protocol.c.
+
+\hypertarget{_protocol_8c_a1106fb2a6f73df3fca89bff4c3432c40}{
+\index{Protocol.c@{Protocol.c}!parseVersion@{parseVersion}}
+\index{parseVersion@{parseVersion}!Protocol.c@{Protocol.c}}
+\subsubsection[{parseVersion}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf CmdVersion} parseVersion (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{payload}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}
+\label{_protocol_8c_a1106fb2a6f73df3fca89bff4c3432c40}
+
+
+Definition at line 30 of file Protocol.c.
+

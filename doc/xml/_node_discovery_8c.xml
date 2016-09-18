@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_node_discovery_8c" kind="file">
+    <compoundname>NodeDiscovery.c</compoundname>
+    <includes refid="_node_discovery_8h" local="yes">NodeDiscovery.h</includes>
+    <includes local="yes">assert.h</includes>
+    <incdepgraph>
+      <node id="1058">
+        <label>assert.h</label>
+      </node>
+      <node id="1057">
+        <label>errno.h</label>
+      </node>
+      <node id="1051">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="1053">
+        <label>netdb.h</label>
+      </node>
+      <node id="1054">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1056">
+        <label>string.h</label>
+      </node>
+      <node id="1048">
+        <label>src/Object/NodeDiscovery/NodeDiscovery.c</label>
+        <link refid="NodeDiscovery.c"/>
+        <childnode refid="1049" relation="include">
+        </childnode>
+        <childnode refid="1058" relation="include">
+        </childnode>
+      </node>
+      <node id="1049">
+        <label>NodeDiscovery.h</label>
+        <link refid="_node_discovery_8h"/>
+        <childnode refid="1050" relation="include">
+        </childnode>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1053" relation="include">
+        </childnode>
+        <childnode refid="1054" relation="include">
+        </childnode>
+        <childnode refid="1055" relation="include">
+        </childnode>
+        <childnode refid="1056" relation="include">
+        </childnode>
+        <childnode refid="1057" relation="include">
+        </childnode>
+      </node>
+      <node id="1050">
+        <label>../Object.h</label>
+      </node>
+      <node id="1055">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="1052">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_node_discovery_8c_1a5c17f995b0ad439d793a2a2798122e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> *</type>
+        <definition>NodeDiscovery* newNodeDiscovery</definition>
+        <argsstring>()</argsstring>
+        <name>newNodeDiscovery</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" line="22" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="22" bodyend="31"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_node_discovery_8c_1a14a7b09a75288bfdb74b3f0d4a3c35d0" compoundref="_node_discovery_8c" startline="57" endline="59">destroyNodeDiscovery</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_node_discovery_8c_1ab5fc81f8a9fbcb534433f52da9baadf7" compoundref="_node_discovery_8c" startline="45" endline="51">initNodeDiscovery</references>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8c_1ae50e18710081cce6cb6f476081948887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> *</type>
+        <definition>NodeDiscovery* getNodeDiscovery</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getNodeDiscovery</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> from an object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" line="37" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8c_1ab5fc81f8a9fbcb534433f52da9baadf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initNodeDiscovery</definition>
+        <argsstring>(NodeDiscovery *self)</argsstring>
+        <name>initNodeDiscovery</name>
+        <param>
+          <type><ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object to initialize </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE on success, FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" line="45" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="45" bodyend="51"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="struct_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_object_8h" startline="30">Object::referenceCount</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_node_discovery_8h_1a0d3868959e24cccf18d7a01bbcf1f7e0" compoundref="_node_discovery_8c" startline="22" endline="31">newNodeDiscovery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8c_1a14a7b09a75288bfdb74b3f0d4a3c35d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyNodeDiscovery</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyNodeDiscovery</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Destroys an <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" line="57" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="57" bodyend="59"/>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <referencedby refid="_node_discovery_8h_1a0d3868959e24cccf18d7a01bbcf1f7e0" compoundref="_node_discovery_8c" startline="22" endline="31">newNodeDiscovery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* extractIp</definition>
+        <argsstring>(char *str1)</argsstring>
+        <name>extractIp</name>
+        <param>
+          <type>char *</type>
+          <declname>str1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" line="66" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="65" bodyend="90"/>
+        <referencedby refid="_node_discovery_8h_1ab8aea7bfb539afe7fc2db54f6bcdb75a" compoundref="_node_discovery_8c" startline="97" endline="187">getExtIP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_node_discovery_8c_1ab8aea7bfb539afe7fc2db54f6bcdb75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* getExtIP</definition>
+        <argsstring>(char *dest)</argsstring>
+        <name>getExtIP</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Connects to a specified host. IPv4 compatible only!!! </para>        </briefdescription>
+        <detaileddescription>
+<para>find flags here <ulink url="http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html">http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" line="98" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c" bodystart="97" bodyend="187"/>
+        <references refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf">errno</references>
+        <references refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" compoundref="_node_discovery_8c" startline="65" endline="90">extractIp</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/>NodeDiscovery.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>20/10/2012.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Created<sp/>by:<sp/>Attila<sp/>Peter<sp/>Toth.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/>Modified<sp/>by:<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/><sp/>SEE<sp/>HEADER<sp/>FILE<sp/>FOR<sp/>DOCUMENTATION</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_node_discovery_8h" kindref="compound" tooltip="This class is responsible for the node discovery functionality described in the Bitcoin protocol - ap...">NodeDiscovery.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;assert.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>Constructor</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_node_discovery_8h_1a0d3868959e24cccf18d7a01bbcf1f7e0" refkind="member"><highlight class="normal"><ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/><ref refid="_node_discovery_8c_1a5c17f995b0ad439d793a2a2798122e3a" kindref="member" tooltip="Creates a new NodeDiscovery object.">newNodeDiscovery</ref>(){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*</highlight><highlight class="keyword">self</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NULL<sp/>==<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a8460165be167be3b0816d84f498e3733" kindref="member" tooltip="Casts the pointer to the Object; use this to avoid explicitly casting.">getObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_object_1aa353725933e843001d4feb03f8268121" kindref="member">destroy</ref><sp/>=<sp/><ref refid="_node_discovery_8c_1a14a7b09a75288bfdb74b3f0d4a3c35d0" kindref="member" tooltip="Destroys an NodeDiscovery object.">destroyNodeDiscovery</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_node_discovery_8c_1ab5fc81f8a9fbcb534433f52da9baadf7" kindref="member" tooltip="Initializes a NodeDiscovery object.">initNodeDiscovery</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/>Object<sp/>Getter</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_node_discovery_8h_1ae50e18710081cce6cb6f476081948887" refkind="member"><highlight class="normal"><ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/><ref refid="_node_discovery_8c_1ae50e18710081cce6cb6f476081948887" kindref="member" tooltip="Gets a NodeDiscovery from an object. Use this to avoid casts.">getNodeDiscovery</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*<sp/><sp/>Initialiser</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_node_discovery_8h_1ab5fc81f8a9fbcb534433f52da9baadf7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_node_discovery_8c_1ab5fc81f8a9fbcb534433f52da9baadf7" kindref="member" tooltip="Initializes a NodeDiscovery object.">initNodeDiscovery</ref>(<ref refid="struct_node_discovery" kindref="compound" tooltip="Structure for NodeDiscovery objects.">NodeDiscovery</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_object_8c_1a8460165be167be3b0816d84f498e3733" kindref="member" tooltip="Casts the pointer to the Object; use this to avoid explicitly casting.">getObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a8460165be167be3b0816d84f498e3733" kindref="member" tooltip="Casts the pointer to the Object; use this to avoid explicitly casting.">getObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" kindref="member">referenceCount</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/><sp/>Destructor</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_node_discovery_8h_1a14a7b09a75288bfdb74b3f0d4a3c35d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_node_discovery_8c_1a14a7b09a75288bfdb74b3f0d4a3c35d0" kindref="member" tooltip="Destroys an NodeDiscovery object.">destroyNodeDiscovery</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a9773962d80072e39e235802b57907208" kindref="member" tooltip="destructor">destroyObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*<sp/>Functions</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" kindref="member">extractIp</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str1)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>returnIP;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>sa;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>delims[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&lt;<sp/>&gt;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*result<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str=<sp/>malloc(strlen(str1)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(str,<sp/>str1);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>strtok(<sp/>str,<sp/>delims<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>result<sp/>!=<sp/>NULL<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inet_pton(AF_INET6,<sp/>result,<sp/>&amp;(sa.sin_addr))!=0<sp/>||<sp/>inet_pton(AF_INET,<sp/>result,<sp/>&amp;(sa.sin_addr))!=0)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnIP<sp/>=<sp/>malloc(strlen(result)+1);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(returnIP,result);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(str);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>returnIP;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>strtok(<sp/>NULL,<sp/>delims<sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(str);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="_node_discovery_8h_1ab8aea7bfb539afe7fc2db54f6bcdb75a" refkind="member"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_node_discovery_8c_1ab8aea7bfb539afe7fc2db54f6bcdb75a" kindref="member" tooltip="Connects to a specified host. IPv4 compatible only!!!">getExtIP</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dest)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sockfd,conn,recieved;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,bytes_sent,max_rec_len;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>serv_addr;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">hostent<sp/>*serv_detail;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">in_addr<sp/>**addr_list;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buff,*ret;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg=</highlight><highlight class="stringliteral">&quot;GET<sp/>/<sp/>HTTP/1.1\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Host:<sp/>checkip.dyndns.org\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;User-Agent:<sp/>Mozilla/4.0<sp/>(compatible;<sp/>MSIE<sp/>7.0;<sp/>Windows<sp/>NT<sp/>5.1)\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Connection:<sp/>close\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dest<sp/>!=NULL);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_rec_len<sp/>=<sp/>1500;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;serv_addr,0,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(serv_addr));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>serv_detail<sp/>=<sp/>gethostbyname(dest);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(serv_detail<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(<ref refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" kindref="member">errno</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(serv_detail<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>serv_addr.sin_family<sp/>=<sp/>serv_detail-&gt;h_addrtype;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>serv_addr.sin_port<sp/>=<sp/>htons(80);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*extracts<sp/>the<sp/>IP<sp/>address<sp/>from<sp/>the<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_list<sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">in_addr<sp/>**)serv_detail-&gt;h_addr_list;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;serv_addr.sin_addr,addr_list[0]<sp/>,<sp/>serv_detail-&gt;h_length);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*create<sp/>a<sp/>socket<sp/>file<sp/>descriptor.<sp/>It<sp/>is<sp/>not<sp/>created<sp/>from<sp/>serv_addr.sin_family</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>because<sp/>it<sp/>caused<sp/>an<sp/>error<sp/>---<sp/>strange*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sockfd<sp/>=<sp/>socket(AF_INET,SOCK_STREAM,0);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sockfd==-1)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(<ref refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" kindref="member">errno</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(sockfd<sp/>!=<sp/>-1);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((conn<sp/>=<sp/>connect<sp/>(sockfd,(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sock_addr*)&amp;serv_addr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(serv_addr)))<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(<ref refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" kindref="member">errno</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(conn&gt;=0);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>strlen(msg);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytes_sent<sp/>=<sp/>send(sockfd,msg,len,0);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buff<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*max_rec_len);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes_sent==-1)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(<ref refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" kindref="member">errno</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(bytes_sent!=-1);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((recieved<sp/>=<sp/>recv(sockfd,buff,max_rec_len,0))==0)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perror(</highlight><highlight class="stringliteral">&quot;Connection<sp/>lost<sp/>for<sp/>IP<sp/>gathering.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(recieved==-1)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(<ref refid="_node_discovery_8h_1ad65a8842cc674e3ddf69355898c0ecbf" kindref="member">errno</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" kindref="member">extractIp</ref>(buff);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Received:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="_node_discovery_8c_1a61782d204f214b12fbcfda3c346bbd0e" kindref="member">extractIp</ref>(buff));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(buff);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(sockfd);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.c"/>
+  </compounddef>
+</doxygen>

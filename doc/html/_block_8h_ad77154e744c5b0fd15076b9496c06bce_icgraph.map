@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_block_8h.html#a1d7eae467690179b1fb461de80262408" title="Creates a new Block." alt="" coords="199,5,316,35"/>
+<area shape="rect" id="node5" href="$_block_8h.html#a79e97e9e8e757fc1ace966b8b7700416" title="Create a new Block from a given ByteArray data." alt="" coords="155,59,360,88"/>
+<area shape="rect" id="node9" href="$_block_8c.html#a9f12323a1c19b0686bc1b64868a97dc9" title="Create a new Block from a default Block." alt="" coords="145,112,369,141"/>
+<area shape="rect" id="node7" href="$_block_headers_8h.html#ace10b6ab479717f0540e5a5528ca3952" title="Deserializes a BlockHeaders so that it can be used as an object." alt="" coords="420,59,585,88"/>
+</map>

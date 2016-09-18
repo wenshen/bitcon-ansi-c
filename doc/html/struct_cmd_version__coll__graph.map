@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_network_address.html" title="Structure for NetworkAddress objects." alt="" coords="97,688,215,912"/>
+<area shape="rect" id="node4" href="$struct_message.html" title="Structure for Message objects." alt="" coords="7,414,137,621"/>
+<area shape="rect" id="node6" href="$struct_object.html" title="Base class." alt="" coords="5,5,128,125"/>
+<area shape="rect" id="node8" href="$struct_byte_array.html" title="Structure for ByteArray objects." alt="" coords="120,192,251,347"/>
+<area shape="rect" id="node10" href="$struct_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="152,14,275,117"/>
+<area shape="rect" id="node14" href="$struct_net_addr.html" title="{NetAddr\n|+ time\l+ services\l+ ip\l+ port\l|}" alt="" coords="239,731,321,869"/>
+</map>

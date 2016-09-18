@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_transaction_8c.html#a51cc2a726480d71b2b08a871bc4aa8f2" title="Destructor; destroys a Transaction object." alt="" coords="224,59,371,88"/>
+<area shape="rect" id="node12" href="$_m_i_object_8c.html#a0f72e3416dc7f6c52cfb1bf49baac3f2" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="441,111,535,140"/>
+<area shape="rect" id="node15" href="$_m_i_transaction_8c.html#a8b299a1ed7ad62d46f4d2547463b95fe" title="Initialises a Transaction object." alt="" coords="221,163,373,192"/>
+<area shape="rect" id="node5" href="$_m_i_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="603,5,781,35"/>
+<area shape="rect" id="node7" href="$_m_i_message_8c.html#a17557bbd8e2e7b7d0736c88df25a389e" title="destroys the memory allocated to a Message object." alt="" coords="421,57,555,87"/>
+<area shape="rect" id="node10" href="$_m_i_object_8c.html#a71704ab4fbecb7d85276d32649b5349a" title="destructor" alt="" coords="633,59,751,88"/>
+<area shape="rect" id="node17" href="$_m_i_message_8c.html#a5b1bc10a9354d0ad365fc55123dba947" title="Gets a Message from another object. Use this to avoid casts." alt="" coords="435,164,541,193"/>
+</map>

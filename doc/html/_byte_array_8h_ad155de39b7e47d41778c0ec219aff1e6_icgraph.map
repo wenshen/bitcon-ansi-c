@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_manager_8h.html#ada91032d0ead836543c56d33b1192b0e" title="Serialises a AddressManager to the byte data." alt="" coords="496,159,664,188"/>
+<area shape="rect" id="node5" href="$_alert_8h.html#ab7514c5965aefae02316361909803989" title="Serialises the payload of a Alert and returns a ByteArray to the specifc payload bytes to aid in crea..." alt="" coords="281,55,425,84"/>
+<area shape="rect" id="node7" href="$_alert_8h.html#af2c393edd043776e4e9438c40f3ff2f9" title="Serialises the signature of a Alert." alt="" coords="277,108,429,138"/>
+<area shape="rect" id="node9" href="$_block_8h.html#a4648ce410198b41749394a5c377ce73b" title="To deal with the header issue for serializeBlock." alt="" coords="717,108,904,138"/>
+<area shape="rect" id="node15" href="$_network_address_8h.html#a74183387deed59a925716004da64918e" title="Serialises a NetworkAddress to the byte data." alt="" coords="271,212,436,242"/>
+<area shape="rect" id="node20" href="$_version_8h.html#ac54678e73e3934192a9063f7a8b6a214" title="Serializes a Version to the byte data." alt="" coords="523,266,637,295"/>
+<area shape="rect" id="node22" href="$_chain_descriptor_8h.html#a4873951a3acf7e90e799c64a9d09455d" title="Serializes a ChainDescriptor to the byte data." alt="" coords="272,367,435,396"/>
+<area shape="rect" id="node24" href="$_get_blocks_8h.html#ae09f58674ed59b6d5f320cc588afdd14" title="Serializes a GetBlocks to the byte data." alt="" coords="515,343,645,372"/>
+<area shape="rect" id="node27" href="$_inventory_vector_8h.html#a340bff34fb8ee996b53e0a61ebdd3e8a" title="Serialises a InventoryVector to the byte data." alt="" coords="272,420,435,450"/>
+<area shape="rect" id="node31" href="$_transaction_input_8h.html#a9b0f805aed38d097be8bec7dd8701e50" title="Serializes a TransactionInput to byte data." alt="" coords="271,527,436,556"/>
+<area shape="rect" id="node38" href="$_transaction_output_8h.html#ae0ec9ca1d590685385987b26fbded266" title="Serialises a TransactionOutput to byte data." alt="" coords="265,474,441,503"/>
+<area shape="rect" id="node11" href="$_block_8h.html#ab0d1c25a8612a3644626e5030ffbe456" title="Serializes a Block to the byte data." alt="" coords="953,187,1055,216"/>
+<area shape="rect" id="node13" href="$_block_headers_8h.html#a06fe7338aa2dc8d104e7f8148674b202" title="Serializes a BlockHeaders to the byte data." alt="" coords="1104,187,1256,216"/>
+<area shape="rect" id="node18" href="$_address_broadcast_8h.html#ac5fc8eb7325d5135ad7574f383cf38b5" title="Serialises a AddressBroadcast to the byte data." alt="" coords="492,212,668,242"/>
+<area shape="rect" id="node29" href="$_inventory_8h.html#a67383f9aba234b390c4b5be54019c3f4" title="Serialises a Inventory to the byte data." alt="" coords="519,420,641,450"/>
+<area shape="rect" id="node33" href="$_transaction_8h.html#a61a0f76473a17de64dcecc04a3ce3b5f" title="Serialises a Transaction to byte data." alt="" coords="511,474,649,503"/>
+<area shape="rect" id="node35" href="$_block_8h.html#aeb72d715416153dbd72e8f876fb19981" title="dealWithSerializationTran" alt="" coords="725,266,896,295"/>
+</map>

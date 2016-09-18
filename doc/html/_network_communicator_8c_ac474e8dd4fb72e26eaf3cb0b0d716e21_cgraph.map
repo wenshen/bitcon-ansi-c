@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_network_communicator_8c.html#a0287c6ad4ffa61f24b7ea76596f7648e" title="NetworkCommunicatorSendPings" alt="" coords="272,59,491,88"/>
+<area shape="rect" id="node5" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="569,5,748,35"/>
+<area shape="rect" id="node7" href="$_message_8c.html#a9ab128ae9cafefd9b05e2e0bfa719770" title="getter" alt="" coords="612,59,705,88"/>
+<area shape="rect" id="node9" href="$_network_communicator_8c.html#a67b0329d1c08b164bc3b255bd412e355" title="NetworkCommunicatorSendMessage" alt="" coords="540,112,777,141"/>
+<area shape="rect" id="node11" href="$_ping_pong_message_8c.html#a05be54312a74799ff7996459f8f6add9" title="Gets a PingPongMessage from another object. Use this to avoid casts." alt="" coords="827,59,976,88"/>
+<area shape="rect" id="node13" href="$_version_8c.html#ae3428387ebd0bed5f378d2d0b5050d79" title="GetVersion" alt="" coords="859,112,944,141"/>
+<area shape="rect" id="node15" href="$_crypt_8c.html#a31002de62901cbe9c88a0fd0f5f57770" title="SHA&#45;256 cryptographic hash function." alt="" coords="868,165,935,195"/>
+</map>

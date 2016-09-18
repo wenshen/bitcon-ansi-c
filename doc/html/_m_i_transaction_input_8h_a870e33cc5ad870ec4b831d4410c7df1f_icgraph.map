@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_transaction_input_8h.html#a66149340bfb777acf294dba5d06a9776" title="Creates a new TransactionInput object." alt="" coords="261,5,459,35"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_input_8h.html#a6ce74856deb61a054db563a0382b0ff2" title="Creates a new TransactionInput object from byte data." alt="" coords="233,59,487,88"/>
+<area shape="rect" id="node7" href="$_m_i_transaction_8h.html#a8777f695fbbb547e32b9c0347b6b2026" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="537,59,703,88"/>
+<area shape="rect" id="node9" href="$_m_i_block_8h.html#a04d2d2defba76492762c0eb4b7ccd206" title="deserializeWithTransactions" alt="" coords="752,59,939,88"/>
+<area shape="rect" id="node11" href="$_m_i_block_8h.html#a9b85a6f60672aea0471f7b6a7e9930ba" title="Deserializes a Block so that it can be used as an object." alt="" coords="988,59,1119,88"/>
+<area shape="rect" id="node13" href="$_m_i_block_8h.html#ab4caa099f720462b32d9e74406309b1d" title="Initializes a Block object with the original block for the bitcoin block chain. This will have seri..." alt="" coords="1169,59,1359,88"/>
+<area shape="rect" id="node15" href="$_m_i_block_8c.html#a9eb01377cf0d49ddc3dd988d221ddd76" title="createNewBlockFromOriginalBlock" alt="" coords="1408,59,1648,88"/>
+</map>

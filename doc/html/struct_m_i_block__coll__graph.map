@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_m_i_byte_array.html" title="Structure for ByteArray objects." alt="" coords="159,176,289,331"/>
+<area shape="rect" id="node8" href="$struct_m_i_message.html" title="Structure for Message objects." alt="" coords="311,397,441,587"/>
+<area shape="rect" id="node14" href="$struct_m_i_transaction_input.html" title="Structure for TransactionInput objects." alt="" coords="171,654,304,791"/>
+<area shape="rect" id="node17" href="$struct_m_i_previous_output.html" title="Structure for previous outputs that are being spent by an input." alt="" coords="161,441,287,543"/>
+<area shape="rect" id="node21" href="$struct_m_i_transaction_output.html" title="{TransactionOutput\n|+ base\l+ value\l+ scriptObject\l|}" alt="" coords="411,663,555,783"/>
+<area shape="rect" id="node4" href="$struct_m_i_object.html" title="Base class." alt="" coords="312,6,435,109"/>
+<area shape="rect" id="node6" href="$struct_m_i_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="163,6,285,109"/>
+<area shape="rect" id="node12" href="$struct_m_i_transaction.html" title="Structure for Transaction objects." alt="" coords="260,859,455,1066"/>
+</map>

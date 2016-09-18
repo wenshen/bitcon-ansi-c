@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_ping_pong_message" kind="struct" prot="public">
+    <compoundname>PingPongMessage</compoundname>
+    <includes refid="_ping_pong_message_8h" local="no">PingPongMessage.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_ping_pong_message_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/PingPongMessage.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/PingPongMessage.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ping_pong_message_1a8a30b0f39810620d125df55c023c996e" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t nonceID</definition>
+        <argsstring></argsstring>
+        <name>nonceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to identify a ping/pong. Set ping to zero if no identification is needed. Set pongs to the same as the request ping. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/PingPongMessage.h" line="30" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/PingPongMessage.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_ping_pong_message" kindref="compound">PingPongMessage</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_ping_pong_message_8h" kindref="compound">PingPongMessage.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="359">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="356">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="357" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="358" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="357">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="358">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="359" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="357" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="355">
+        <label>PingPongMessage</label>
+        <link refid="struct_ping_pong_message"/>
+        <childnode refid="356" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/PingPongMessage.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/PingPongMessage.h" bodystart="28" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_ping_pong_message_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>PingPongMessage</scope><name>base</name></member>
+      <member refid="struct_ping_pong_message_1a8a30b0f39810620d125df55c023c996e" prot="public" virt="non-virtual"><scope>PingPongMessage</scope><name>nonceID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

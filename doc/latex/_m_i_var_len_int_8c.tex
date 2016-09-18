@@ -1,0 +1,210 @@
+\hypertarget{_m_i_var_len_int_8c}{
+\section{Utils/VariableLengthInteger/VarLenInt.c File Reference}
+\label{_m_i_var_len_int_8c}\index{Utils/VariableLengthInteger/VarLenInt.c@{Utils/VariableLengthInteger/VarLenInt.c}}
+}
+{\ttfamily \#include \char`\"{}VarLenInt.h\char`\"{}}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+Include dependency graph for VarLenInt.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=364pt]{_m_i_var_len_int_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_var_len_int}{VarLenInt} \hyperlink{_m_i_var_len_int_8c_a0492e373e2d12e41b1764b580f287af9}{decodeVarLenInt} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes, uint32\_\-t offset)
+\begin{DoxyCompactList}\small\item\em Decodes variable size integer from bytes into a \hyperlink{struct_m_i_var_len_int}{VarLenInt} structure. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_var_len_int_8c_a332f03b156163565574788bc3cedd522}{encodeVarLenInt} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes, uint32\_\-t offset, \hyperlink{struct_m_i_var_len_int}{VarLenInt} varInt)
+\begin{DoxyCompactList}\small\item\em Encodes variable size integer into bytes. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_var_len_int}{VarLenInt} \hyperlink{_m_i_var_len_int_8c_ab415150158b7af4b63eb360b384b5ec0}{createVarLenIntFromUInt64} (uint64\_\-t integer)
+\begin{DoxyCompactList}\small\item\em Returns a variable integer from an unsigned 64 bit integer. \end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{_m_i_var_len_int_8c_a960ae6b1a5365789aec7b7055a36dbd7}{getSizeOfVarLenInt} (uint64\_\-t value)
+\begin{DoxyCompactList}\small\item\em Returns the variable integer byte size of a 64 bit integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_var_len_int_8c_ab415150158b7af4b63eb360b384b5ec0}{
+\index{VarLenInt.c@{VarLenInt.c}!createVarLenIntFromUInt64@{createVarLenIntFromUInt64}}
+\index{createVarLenIntFromUInt64@{createVarLenIntFromUInt64}!VarLenInt.c@{VarLenInt.c}}
+\subsubsection[{createVarLenIntFromUInt64}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VarLenInt} createVarLenIntFromUInt64 (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{integer}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_var_len_int_8c_ab415150158b7af4b63eb360b384b5ec0}
+
+
+Returns a variable integer from an unsigned 64 bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em integer} & The 64 bit integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_m_i_var_len_int}{VarLenInt}. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file VarLenInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=380pt]{_m_i_var_len_int_8c_ab415150158b7af4b63eb360b384b5ec0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_var_len_int_8c_ab415150158b7af4b63eb360b384b5ec0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_var_len_int_8c_a0492e373e2d12e41b1764b580f287af9}{
+\index{VarLenInt.c@{VarLenInt.c}!decodeVarLenInt@{decodeVarLenInt}}
+\index{decodeVarLenInt@{decodeVarLenInt}!VarLenInt.c@{VarLenInt.c}}
+\subsubsection[{decodeVarLenInt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VarLenInt} decodeVarLenInt (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{bytes, }
+\item[{uint32\_\-t}]{offset}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_var_len_int_8c_a0492e373e2d12e41b1764b580f287af9}
+
+
+Decodes variable size integer from bytes into a \hyperlink{struct_m_i_var_len_int}{VarLenInt} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The byte array to decode a variable size integer from. \\
+\hline
+{\em offset} & Offset to start decoding from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_m_i_var_len_int}{VarLenInt} information 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file VarLenInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_var_len_int_8c_a0492e373e2d12e41b1764b580f287af9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_var_len_int_8c_a0492e373e2d12e41b1764b580f287af9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_var_len_int_8c_a332f03b156163565574788bc3cedd522}{
+\index{VarLenInt.c@{VarLenInt.c}!encodeVarLenInt@{encodeVarLenInt}}
+\index{encodeVarLenInt@{encodeVarLenInt}!VarLenInt.c@{VarLenInt.c}}
+\subsubsection[{encodeVarLenInt}]{\setlength{\rightskip}{0pt plus 5cm}void encodeVarLenInt (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{bytes, }
+\item[{uint32\_\-t}]{offset, }
+\item[{{\bf VarLenInt}}]{varInt}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_var_len_int_8c_a332f03b156163565574788bc3cedd522}
+
+
+Encodes variable size integer into bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The byte array to encode a variable size integer into. \\
+\hline
+{\em offset} & Offset to start decoding from. \\
+\hline
+{\em varInt} & Variable integer structure to encode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file VarLenInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_var_len_int_8c_a332f03b156163565574788bc3cedd522_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_var_len_int_8c_a332f03b156163565574788bc3cedd522_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_var_len_int_8c_a960ae6b1a5365789aec7b7055a36dbd7}{
+\index{VarLenInt.c@{VarLenInt.c}!getSizeOfVarLenInt@{getSizeOfVarLenInt}}
+\index{getSizeOfVarLenInt@{getSizeOfVarLenInt}!VarLenInt.c@{VarLenInt.c}}
+\subsubsection[{getSizeOfVarLenInt}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t getSizeOfVarLenInt (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_var_len_int_8c_a960ae6b1a5365789aec7b7055a36dbd7}
+
+
+Returns the variable integer byte size of a 64 bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 64 bit integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size of a variable length integer for this integer. 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file VarLenInt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_var_len_int_8c_a960ae6b1a5365789aec7b7055a36dbd7_icgraph}
+\end{center}
+\end{figure}
+
+

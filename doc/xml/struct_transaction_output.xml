@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_transaction_output" kind="struct" prot="public">
+    <compoundname>TransactionOutput</compoundname>
+    <includes refid="_transaction_output_8h" local="no">TransactionOutput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_transaction_output_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" line="18" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_output_1a4e630859cc0e2a22bd6acf39a6a8e218" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The transaction value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" line="19" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_output_1ac420de2766b1358b5e325cfc21a76aa3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+        <definition>Script* scriptObject</definition>
+        <argsstring></argsstring>
+        <name>scriptObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The output script object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" line="20" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="393">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="390">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="391" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="392" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="391">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="389">
+        <label>TransactionOutput</label>
+        <link refid="struct_transaction_output"/>
+        <childnode refid="390" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="392" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="392">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="393" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="391" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" line="17" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionOutput.h" bodystart="17" bodyend="21"/>
+    <listofallmembers>
+      <member refid="struct_transaction_output_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>TransactionOutput</scope><name>base</name></member>
+      <member refid="struct_transaction_output_1ac420de2766b1358b5e325cfc21a76aa3" prot="public" virt="non-virtual"><scope>TransactionOutput</scope><name>scriptObject</name></member>
+      <member refid="struct_transaction_output_1a4e630859cc0e2a22bd6acf39a6a8e218" prot="public" virt="non-virtual"><scope>TransactionOutput</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

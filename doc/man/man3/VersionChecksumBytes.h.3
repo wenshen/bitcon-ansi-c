@@ -1,0 +1,209 @@
+.TH "src/Object/VersionChecksumBytes/VersionChecksumBytes.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/VersionChecksumBytes/VersionChecksumBytes.h \- 
+.PP
+Represents a key, begining with a version byte and ending with a checksum. Inherits \fBByteArray\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '../../Base58/Base58.h'\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include '../ByteArray.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBVersionChecksumBytes\fP"
+.br
+.RI "\fIStructure for \fBVersionChecksumBytes\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVersionChecksumBytes\fP * \fBNewVersionChecksumBytesFromString\fP (\fBByteArray\fP *string, int cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBVersionChecksumBytes\fP object from a base-58 encoded string. The base-58 string will be validated by it's checksum. This returns NULL if the string is invalid. The _ERROR_BASE58_DECODE_CHECK_TOO_SHORT error is given if the decoded data is less than 4 bytes. _ERROR_BASE58_DECODE_CHECK_INVALID is given if the checksum does not match. \fP"
+.ti -1c
+.RI "\fBVersionChecksumBytes\fP * \fBNewVersionChecksumBytesFromBytes\fP (uint8_t *bytes, uint32_t size, int cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBVersionChecksumBytes\fP object from bytes. \fP"
+.ti -1c
+.RI "\fBVersionChecksumBytes\fP * \fBGetVersionChecksumBytes\fP (void *self)"
+.br
+.RI "\fIGets a \fBVersionChecksumBytes\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBInitVersionChecksumBytesFromString\fP (\fBVersionChecksumBytes\fP *self, \fBByteArray\fP *string, int cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBVersionChecksumBytes\fP object from a string. \fP"
+.ti -1c
+.RI "int \fBInitVersionChecksumBytesFromBytes\fP (\fBVersionChecksumBytes\fP *self, uint8_t *bytes, uint32_t size, int cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a new \fBVersionChecksumBytes\fP object from bytes. \fP"
+.ti -1c
+.RI "void \fBFreeVersionChecksumBytes\fP (void *self)"
+.br
+.RI "\fIFrees a \fBVersionChecksumBytes\fP object. \fP"
+.ti -1c
+.RI "uint8_t \fBVersionChecksumBytesGetVersion\fP (\fBVersionChecksumBytes\fP *self)"
+.br
+.RI "\fIGets the version for a \fBVersionChecksumBytes\fP object. \fP"
+.ti -1c
+.RI "\fBByteArray\fP * \fBVersionChecksumBytesGetString\fP (\fBVersionChecksumBytes\fP *self)"
+.br
+.RI "\fIGets the string representation for a \fBVersionChecksumBytes\fP object as a base-58 encoded String. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a key, begining with a version byte and ending with a checksum. Inherits \fBByteArray\fP. 
+
+
+.PP
+Definition in file \fBVersionChecksumBytes.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void FreeVersionChecksumBytes (void *self)"
+.PP
+Frees a \fBVersionChecksumBytes\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBVersionChecksumBytes\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file VersionChecksumBytes.c.
+.SS "\fBVersionChecksumBytes\fP* GetVersionChecksumBytes (void *self)"
+.PP
+Gets a \fBVersionChecksumBytes\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBVersionChecksumBytes\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBVersionChecksumBytes\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file VersionChecksumBytes.c.
+.SS "int InitVersionChecksumBytesFromBytes (\fBVersionChecksumBytes\fP *self, uint8_t *bytes, uint32_tsize, intcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a new \fBVersionChecksumBytes\fP object from bytes. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBVersionChecksumBytes\fP object to initialise. 
+.br
+\fIbytes\fP The bytes for the \fBVersionChecksumBytes\fP object. 
+.br
+\fIsize\fP The size of the byte data. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP A Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file VersionChecksumBytes.c.
+.SS "int InitVersionChecksumBytesFromString (\fBVersionChecksumBytes\fP *self, \fBByteArray\fP *string, intcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBVersionChecksumBytes\fP object from a string. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBVersionChecksumBytes\fP object to initialise. 
+.br
+\fIstring\fP A String to make a \fBVersionChecksumBytes\fP object with a termination character. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP A Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file VersionChecksumBytes.c.
+.SS "\fBVersionChecksumBytes\fP* NewVersionChecksumBytesFromBytes (uint8_t *bytes, uint32_tsize, intcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBVersionChecksumBytes\fP object from bytes. \fBParameters:\fP
+.RS 4
+\fIbytes\fP The bytes for the \fBVersionChecksumBytes\fP object. 
+.br
+\fIsize\fP The size of the byte data. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP A Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBVersionChecksumBytes\fP object. 
+.RE
+.PP
+
+.SS "\fBVersionChecksumBytes\fP* NewVersionChecksumBytesFromString (\fBByteArray\fP *string, intcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBVersionChecksumBytes\fP object from a base-58 encoded string. The base-58 string will be validated by it's checksum. This returns NULL if the string is invalid. The _ERROR_BASE58_DECODE_CHECK_TOO_SHORT error is given if the decoded data is less than 4 bytes. _ERROR_BASE58_DECODE_CHECK_INVALID is given if the checksum does not match. \fBParameters:\fP
+.RS 4
+\fIstring\fP A base-58 encoded String to make a \fBVersionChecksumBytes\fP object with a termination character. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP A Engine for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBVersionChecksumBytes\fP object or NULL on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file VersionChecksumBytes.c.
+.SS "\fBByteArray\fP* VersionChecksumBytesGetString (\fBVersionChecksumBytes\fP *self)"
+.PP
+Gets the string representation for a \fBVersionChecksumBytes\fP object as a base-58 encoded String. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBVersionChecksumBytes\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The object represented as a base-58 encoded String. Do not modify this. Copy if modification is required. 
+.RE
+.PP
+
+.SS "uint8_t VersionChecksumBytesGetVersion (\fBVersionChecksumBytes\fP *self)"
+.PP
+Gets the version for a \fBVersionChecksumBytes\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBVersionChecksumBytes\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The version code. The Macros _PRODUCTION_NETWORK and _TEST_NETWORK should correspond to this. 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file VersionChecksumBytes.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

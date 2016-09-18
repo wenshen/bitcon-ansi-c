@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_version" kind="struct" prot="public">
+    <compoundname>CmdVersion</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_version_1a67fae7dd1de9edce3656ed214d20377f" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="59" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a8361260b2ca75771b8da0333191db456" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="62" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a8a591d341723df9496cda98e225b25b4" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="65" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a1c343f8763f536140c776a99d43ecde3" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_network_address" kindref="compound">NetworkAddress</ref></type>
+        <definition>struct NetworkAddress addrRecv</definition>
+        <argsstring></argsstring>
+        <name>addrRecv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="68" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a459e4f223be92dc8d26e577d85ba4334" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_network_address" kindref="compound">NetworkAddress</ref></type>
+        <definition>struct NetworkAddress addrFrom</definition>
+        <argsstring></argsstring>
+        <name>addrFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="73" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1af602af589d5bc1af695356386bcb32a9" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t nonce</definition>
+        <argsstring></argsstring>
+        <name>nonce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="79" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1abe98c3c041a6acda8de5e4052aff3ccd" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* subVersionNum</definition>
+        <argsstring></argsstring>
+        <name>subVersionNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="82" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a75434fa1cfbff59d821bd10ba0cb6df1" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t startHeight</definition>
+        <argsstring></argsstring>
+        <name>startHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="87" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="70" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a7c2c2697560cb0d08fdca3bd4d10d07e" prot="public" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="71" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1ac402a8520447a72d85baad30fb7d66af" prot="public" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="72" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1a252b04dc9767f81b38eccddcd72e74ff" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_net_addr" kindref="compound">NetAddr</ref></type>
+        <definition>struct NetAddr addrRecv</definition>
+        <argsstring></argsstring>
+        <name>addrRecv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="73" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1acbbb94e30bbe4e7c99be8e4c61f1e79c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_net_addr" kindref="compound">NetAddr</ref></type>
+        <definition>struct NetAddr addrFrom</definition>
+        <argsstring></argsstring>
+        <name>addrFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="76" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_version_1ab0c4e6e9b4c0db0818ba6121afe137a9" prot="public" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int nonce</definition>
+        <argsstring></argsstring>
+        <name>nonce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="77" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="303">
+        <label>NetworkAddress</label>
+        <link refid="struct_network_address"/>
+      </node>
+      <node id="302">
+        <label>CmdVersion</label>
+        <link refid="struct_cmd_version"/>
+        <childnode refid="303" relation="usage">
+          <edgelabel>addrFrom</edgelabel>
+          <edgelabel>addrRecv</edgelabel>
+        </childnode>
+        <childnode refid="304" relation="usage">
+          <edgelabel>addrFrom</edgelabel>
+          <edgelabel>addrRecv</edgelabel>
+        </childnode>
+      </node>
+      <node id="304">
+        <label>NetAddr</label>
+        <link refid="struct_net_addr"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="55" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="55" bodyend="88"/>
+    <listofallmembers>
+      <member refid="struct_cmd_version_1a459e4f223be92dc8d26e577d85ba4334" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>addrFrom</name></member>
+      <member refid="struct_cmd_version_1acbbb94e30bbe4e7c99be8e4c61f1e79c" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>addrFrom</name></member>
+      <member refid="struct_cmd_version_1a1c343f8763f536140c776a99d43ecde3" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>addrRecv</name></member>
+      <member refid="struct_cmd_version_1a252b04dc9767f81b38eccddcd72e74ff" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>addrRecv</name></member>
+      <member refid="struct_cmd_version_1af602af589d5bc1af695356386bcb32a9" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>nonce</name></member>
+      <member refid="struct_cmd_version_1ab0c4e6e9b4c0db0818ba6121afe137a9" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>nonce</name></member>
+      <member refid="struct_cmd_version_1a8361260b2ca75771b8da0333191db456" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>services</name></member>
+      <member refid="struct_cmd_version_1a7c2c2697560cb0d08fdca3bd4d10d07e" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>services</name></member>
+      <member refid="struct_cmd_version_1a75434fa1cfbff59d821bd10ba0cb6df1" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>startHeight</name></member>
+      <member refid="struct_cmd_version_1abe98c3c041a6acda8de5e4052aff3ccd" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>subVersionNum</name></member>
+      <member refid="struct_cmd_version_1a8a591d341723df9496cda98e225b25b4" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>timestamp</name></member>
+      <member refid="struct_cmd_version_1ac402a8520447a72d85baad30fb7d66af" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>timestamp</name></member>
+      <member refid="struct_cmd_version_1a67fae7dd1de9edce3656ed214d20377f" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>version</name></member>
+      <member refid="struct_cmd_version_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" virt="non-virtual"><scope>CmdVersion</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

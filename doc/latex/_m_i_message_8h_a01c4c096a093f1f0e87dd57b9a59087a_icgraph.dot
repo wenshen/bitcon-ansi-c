@@ -1,0 +1,36 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="initializeMessageFromByteArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="initializeTransactionFromByteArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_8h.html#addbf01b7d3012da33c2124db978f3424",tooltip="Creates a new Transaction object from byte data. Should be serialised for object data..."];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="createNewTransactionFromByteArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_8h.html#ac64b350eebd0ac111556c9323025a5bc",tooltip="Creates a new Transaction object from byte data. Should be serialised for object data..."];
+  Node3 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="deserializeWithTransactions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_block_8h.html#a04d2d2defba76492762c0eb4b7ccd206"];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="deserializeBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_block_8h.html#a9b85a6f60672aea0471f7b6a7e9930ba",tooltip="Deserializes a Block so that it can be used as an object."];
+  Node5 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="initBlockWithOriginalBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_block_8h.html#ab4caa099f720462b32d9e74406309b1d",tooltip="Initializes a Block object with the original block for the bitcoin block chain. This will have seri..."];
+  Node6 -> Node7 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="createNewBlockFromOriginalBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_block_8c.html#a9eb01377cf0d49ddc3dd988d221ddd76"];
+  Node1 -> Node8 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="initializeTransactionInputFromData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_input_8h.html#a23b5f752e968e3bff9c427e224c48366",tooltip="Initialises a new TransactionInput object from the byte data."];
+  Node8 -> Node9 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="createNewTransactionInputFromData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_input_8h.html#a6ce74856deb61a054db563a0382b0ff2",tooltip="Creates a new TransactionInput object from byte data."];
+  Node9 -> Node10 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="deserializeTransaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_8h.html#a8777f695fbbb547e32b9c0347b6b2026",tooltip="Deserialises a Transaction so that it can be used as an object."];
+  Node10 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node11 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="initializeTransactionOutputFromData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_output_8h.html#acdff85fe7595abae3fad7331e5411254",tooltip="Initialises a TransactionOutput object."];
+  Node11 -> Node12 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="createNewTransactionOutputFromData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_transaction_output_8h.html#ad147138cc70f16d81e3b66a00ae700af",tooltip="Creates a new TransactionOutput object from byte data. Should be serialised for object data..."];
+  Node12 -> Node10 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node13 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="initBlockFromByteArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_block_8h.html#adb55432064c1fb591abf43542ed6261e",tooltip="Initializes a Block object from serialized data."];
+  Node13 -> Node14 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="createNewBlockFromByteArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_block_8h.html#aaddeaac51a35b3b98ade3340b6d46bac",tooltip="Creates a new Block object from serialized block data."];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+}

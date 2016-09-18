@@ -1,0 +1,290 @@
+.TH "src/Object/Script.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Script.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <assert.h>\fP
+.br
+\fC#include 'Script.h'\fP
+.br
+\fC#include '../Utils/Cryptography/Crypt.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScript\fP * \fBcreateNewScriptFromReference\fP (\fBByteArray\fP *program, uint32_t offset, uint32_t len)"
+.br
+.RI "\fICreates a new Script object. \fP"
+.ti -1c
+.RI "\fBScriptStack\fP \fBcreateEmptyScriptStack\fP ()"
+.br
+.RI "\fIReturns a new empty scriptstack. \fP"
+.ti -1c
+.RI "int \fBisP2SHScript\fP (\fBScript\fP *self)"
+.br
+.RI "\fIDetermines if a script object matches the P2SH template; i.e. BIP 0016 see https://en.bitcoin.it/wiki/BIP_0016. \fP"
+.ti -1c
+.RI "\fBScriptByteVector\fP \fBcopyByteVectorFromScriptStack\fP (\fBScriptStack\fP *stack, uint8_t fromTop)"
+.br
+.RI "\fIReturns a copy of a stack item, 'fromTop' from the top. \fP"
+.ti -1c
+.RI "int \fBpushScriptByteVectorOntoScriptStack\fP (\fBScriptStack\fP *stack, \fBScriptByteVector\fP byteVector)"
+.br
+.RI "\fIPush a \fBScriptByteVector\fP item onto the stack which is freed by the stack. \fP"
+.ti -1c
+.RI "int \fBtopElementEvaluatesToTrue\fP (\fBScriptStack\fP *stack)"
+.br
+.RI "\fIEvaluates the top \fBScriptByteVector\fP on a \fBScriptStack\fP as a boolean. False if 0 or -0. \fP"
+.ti -1c
+.RI "void \fBremoveElementFromStack\fP (\fBScriptStack\fP *stack)"
+.br
+.RI "\fIRemoves top \fBScriptByteVector\fP from the stack. \fP"
+.ti -1c
+.RI "\fBScriptByteVector\fP \fBpopElementFromStack\fP (\fBScriptStack\fP *stack)"
+.br
+.RI "\fIPops the top \fBScriptByteVector\fP off the \fBScriptStack\fP. \fP"
+.ti -1c
+.RI "\fBScriptByteVector\fP \fBconvertInt64ToScriptByteVector\fP (\fBScriptByteVector\fP byteVector, int64_t int64)"
+.br
+.RI "\fIConverts a int64_t into a \fBScriptByteVector\fP. \fP"
+.ti -1c
+.RI "int64_t \fBconvertScriptByteVectorToInt64\fP (\fBScriptByteVector\fP byteVector)"
+.br
+.RI "\fIConverts a \fBScriptByteVector\fP to a 64 bit signed integer. \fP"
+.ti -1c
+.RI "void \fBremoveSignatureFromStackScript\fP (uint8_t *subScript, uint32_t *subScriptLen, \fBScriptByteVector\fP signature)"
+.br
+.RI "\fIRemoves occurrences of a signature from script data. \fP"
+.ti -1c
+.RI "\fBScript\fP * \fBcreateNewScriptStackFromData\fP (uint8_t *data, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new Script using data. \fP"
+.ti -1c
+.RI "\fBScript\fP * \fBcreateNewScriptStackUsingCopyOfData\fP (uint8_t *data, uint32_t size, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new Script using a copy of data. \fP"
+.ti -1c
+.RI "\fBScriptExecutionStatus\fP \fBexecuteScript\fP (\fBScript\fP *script, \fBScriptStack\fP *stack, \fBTransactionHashStatus\fP(*getTransactionInputHashForVerification)(void *, \fBByteArray\fP *, uint32_t, \fBSignatureType\fP, uint8_t *), void *transaction, uint32_t inputIndex, int p2sh)"
+.br
+.RI "\fIExecutes a bitcoin script. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBScriptByteVector\fP convertInt64ToScriptByteVector (\fBScriptByteVector\fPbyteVector, int64_tint64)"
+.PP
+Converts a int64_t into a \fBScriptByteVector\fP. \fBParameters:\fP
+.RS 4
+\fIbyteVector\fP Pass in a \fBScriptByteVector\fP for reallocating data. 
+.br
+\fIint64\fP The 64 bit signed integer. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A \fBScriptByteVector\fP. 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file Script.c.
+.SS "int64_t convertScriptByteVectorToInt64 (\fBScriptByteVector\fPbyteVector)"
+.PP
+Converts a \fBScriptByteVector\fP to a 64 bit signed integer. \fBParameters:\fP
+.RS 4
+\fIitem\fP The \fBScriptByteVector\fP to convert 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A 64 bit signed integer. 
+.RE
+.PP
+
+.PP
+Definition at line 191 of file Script.c.
+.SS "\fBScriptByteVector\fP copyByteVectorFromScriptStack (\fBScriptStack\fP *stack, uint8_tfromTop)"
+.PP
+Returns a copy of a stack item, 'fromTop' from the top. \fBParameters:\fP
+.RS 4
+\fIstack\fP A pointer to the stack. 
+.br
+\fIfromTop\fP Number of items from the top to copy. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A copy of the stack item which should be freed. 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file Script.c.
+.SS "\fBScriptStack\fP createEmptyScriptStack (void)"
+.PP
+Returns a new empty scriptstack. A script is a array of bytes 
+.PP
+\fBReturns:\fP
+.RS 4
+The new empty stack. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Script.c.
+.SS "\fBScript\fP* createNewScriptFromReference (\fBByteArray\fP *program, uint32_toffset, uint32_tlen)"
+.PP
+Creates a new Script object. Constructor 
+.PP
+Definition at line 16 of file Script.c.
+.SS "\fBScript\fP* createNewScriptStackFromData (uint8_t *data, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new Script using data. \fBParameters:\fP
+.RS 4
+\fIdata\fP The data. This should be dynamically allocated. The new \fBByteArray\fP object will take care of it's memory management so do not free this data once passed into this constructor. 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Struct for handling errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new Script object. 
+.RE
+.PP
+
+.PP
+Definition at line 264 of file Script.c.
+.SS "\fBScript\fP* createNewScriptStackUsingCopyOfData (uint8_t *data, uint32_tsize, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new Script using a copy of data. \fBParameters:\fP
+.RS 4
+\fIdata\fP The data is copied 
+.br
+\fIsize\fP Size in bytes for the new array. 
+.br
+\fIonErrorReceived\fP Struct for handling errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The new Script object. 
+.RE
+.PP
+
+.PP
+Definition at line 269 of file Script.c.
+.SS "\fBScriptExecutionStatus\fP executeScript (\fBScript\fP *self, \fBScriptStack\fP *stack, \fBTransactionHashStatus\fP(*)(void *, \fBByteArray\fP *, uint32_t, \fBSignatureType\fP, uint8_t *)getHashForSignature, void *transaction, uint32_tinputIndex, intp2sh)"
+.PP
+Executes a bitcoin script. \fBParameters:\fP
+.RS 4
+\fIself\fP The Script object with the program 
+.br
+\fIstack\fP A pointer to the input stack for the program. 
+.br
+\fIgetHashForSig\fP A pointer to the function to get the hash for checking the signature. Should take a \fBTransaction\fP object, input index and the SignatureType and the Dependencies object. 
+.br
+\fItransaction\fP \fBTransaction\fP for checking the signatures. 
+.br
+\fIinputIndex\fP The index of the input for the signature. 
+.br
+\fIp2sh\fP If FALSE, do not allow any P2SH matches. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+GOOD_SCRIPT if the program ended with true, BAD_SCRIPT on script failure or SCRIPT_ERR if an error occurred with the interpreter such as running of of memory. 
+.RE
+.PP
+
+.PP
+Definition at line 274 of file Script.c.
+.SS "int isP2SHScript (\fBScript\fP *self)"
+.PP
+Determines if a script object matches the P2SH template; i.e. BIP 0016 see https://en.bitcoin.it/wiki/BIP_0016. \fBParameters:\fP
+.RS 4
+\fIself\fP The Script object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+one if the script matches the P2SH template, zero otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file Script.c.
+.SS "\fBScriptByteVector\fP popElementFromStack (\fBScriptStack\fP *stack)"
+.PP
+Pops the top \fBScriptByteVector\fP off the \fBScriptStack\fP. \fBParameters:\fP
+.RS 4
+\fIstack\fP A pointer to the stack to remove the data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBScriptByteVector\fP the top \fBScriptByteVector\fP on the stack 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file Script.c.
+.SS "int pushScriptByteVectorOntoScriptStack (\fBScriptStack\fP *stack, \fBScriptByteVector\fPitem)"
+.PP
+Push a \fBScriptByteVector\fP item onto the stack which is freed by the stack. \fBParameters:\fP
+.RS 4
+\fIstack\fP A pointer to the \fBScriptStack\fP to push data onto. 
+.br
+\fIdata\fP The item to push on the stack. 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file Script.c.
+.SS "void removeElementFromStack (\fBScriptStack\fP *stack)"
+.PP
+Removes top \fBScriptByteVector\fP from the stack. \fBParameters:\fP
+.RS 4
+\fIstack\fP A pointer to the stack to remove the data. 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file Script.c.
+.SS "void removeSignatureFromStackScript (uint8_t *subScript, uint32_t *subScriptLen, \fBScriptByteVector\fPsignature)"
+.PP
+Removes occurrences of a signature from script data. \fBParameters:\fP
+.RS 4
+\fIsubScript\fP The sub script to remove signatures from. 
+.br
+\fIsubScriptLen\fP A pointer to the length of the sub script. The length will be modified to the new length. 
+.br
+\fIsignature\fP The signature to be found and removed. 
+.RE
+.PP
+
+.PP
+Definition at line 211 of file Script.c.
+.SS "int topElementEvaluatesToTrue (\fBScriptStack\fP *stack)"
+.PP
+Evaluates the top \fBScriptByteVector\fP on a \fBScriptStack\fP as a boolean. False if 0 or -0. \fBParameters:\fP
+.RS 4
+\fIstack\fP The \fBScriptStack\fP. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The boolean result. 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file Script.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

@@ -1,0 +1,122 @@
+\hypertarget{struct_message}{
+\section{Message Struct Reference}
+\label{struct_message}\index{Message@{Message}}
+}
+
+
+Structure for \hyperlink{struct_message}{Message} objects.  
+
+
+
+
+{\ttfamily \#include $<$Message.h$>$}
+
+
+
+Collaboration diagram for Message:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{struct_message__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_object}{Object} \hyperlink{struct_message_a23cf4ef56ba22bed625eab08d6361fa7}{base}
+\item 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013}{MessageType} \hyperlink{struct_message_a8a2053c7fb1adf60da2f26c06059539e}{type}
+\item 
+uint8\_\-t $\ast$ \hyperlink{struct_message_ad4a1b71852a8721ee4be4f6aaacd8566}{altText}
+\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$ \hyperlink{struct_message_affc357b616afe9b58c190ae4b21caa77}{bytes}
+\item 
+uint8\_\-t \hyperlink{struct_message_a02d93e565ee31bda6e0211dca9b42be5}{checksum} \mbox{[}4\mbox{]}
+\item 
+void($\ast$ \hyperlink{struct_message_a3c8af4f580f3041d046b7581f89a9695}{onErrorReceived} )(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...)
+\item 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013}{MessageType} \hyperlink{struct_message_accc3616411ea4a5035a7eaf42132d370}{expectResponse}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure for \hyperlink{struct_message}{Message} objects. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_message_8h}{Message.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 29 of file Message.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_message_ad4a1b71852a8721ee4be4f6aaacd8566}{
+\index{Message@{Message}!altText@{altText}}
+\index{altText@{altText}!Message@{Message}}
+\subsubsection[{altText}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ {\bf altText}}}
+\label{struct_message_ad4a1b71852a8721ee4be4f6aaacd8566}
+For an alternative message: This is the type text. 
+
+Definition at line 32 of file Message.h.
+
+\hypertarget{struct_message_a23cf4ef56ba22bed625eab08d6361fa7}{
+\index{Message@{Message}!base@{base}}
+\index{base@{base}!Message@{Message}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} {\bf base}}}
+\label{struct_message_a23cf4ef56ba22bed625eab08d6361fa7}
+\hyperlink{struct_object}{Object} base structure 
+
+Definition at line 30 of file Message.h.
+
+\hypertarget{struct_message_affc357b616afe9b58c190ae4b21caa77}{
+\index{Message@{Message}!bytes@{bytes}}
+\index{bytes@{bytes}!Message@{Message}}
+\subsubsection[{bytes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf bytes}}}
+\label{struct_message_affc357b616afe9b58c190ae4b21caa77}
+Raw message data minus the message header. When serialising this should be assigned to a \hyperlink{struct_byte_array}{ByteArray} large enough to hold the serialised data. 
+
+Definition at line 33 of file Message.h.
+
+\hypertarget{struct_message_a02d93e565ee31bda6e0211dca9b42be5}{
+\index{Message@{Message}!checksum@{checksum}}
+\index{checksum@{checksum}!Message@{Message}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf checksum}\mbox{[}4\mbox{]}}}
+\label{struct_message_a02d93e565ee31bda6e0211dca9b42be5}
+The message checksum. When sending messages using a NetworkCommunicator, this is calculated for you. 
+
+Definition at line 34 of file Message.h.
+
+\hypertarget{struct_message_accc3616411ea4a5035a7eaf42132d370}{
+\index{Message@{Message}!expectResponse@{expectResponse}}
+\index{expectResponse@{expectResponse}!Message@{Message}}
+\subsubsection[{expectResponse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MessageType} {\bf expectResponse}}}
+\label{struct_message_accc3616411ea4a5035a7eaf42132d370}
+Set to zero if no message expected or the type of message expected as a response. 
+
+Definition at line 36 of file Message.h.
+
+\hypertarget{struct_message_a3c8af4f580f3041d046b7581f89a9695}{
+\index{Message@{Message}!onErrorReceived@{onErrorReceived}}
+\index{onErrorReceived@{onErrorReceived}!Message@{Message}}
+\subsubsection[{onErrorReceived}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf onErrorReceived})({\bf Error} error, char $\ast$,...)}}
+\label{struct_message_a3c8af4f580f3041d046b7581f89a9695}
+Pointer to error callback 
+
+Definition at line 35 of file Message.h.
+
+\hypertarget{struct_message_a8a2053c7fb1adf60da2f26c06059539e}{
+\index{Message@{Message}!type@{type}}
+\index{type@{type}!Message@{Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MessageType} {\bf type}}}
+\label{struct_message_a8a2053c7fb1adf60da2f26c06059539e}
+The type of the message 
+
+Definition at line 31 of file Message.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_message_8h}{Message.h}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_chain_descriptor" kind="struct" prot="public">
+    <compoundname>ChainDescriptor</compoundname>
+    <includes refid="_chain_descriptor_8h" local="no">ChainDescriptor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_chain_descriptor_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" line="23" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_chain_descriptor_1a2a73cb6d678dd0457074398eb7c27584" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t numOfHash</definition>
+        <argsstring></argsstring>
+        <name>numOfHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of block hashes to describe the block chain. Up to 500. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" line="24" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_chain_descriptor_1accd2c3f99c875e8657d976fc264c7fc6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> **</type>
+        <definition>ByteArray** hashes</definition>
+        <argsstring></argsstring>
+        <name>hashes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hashes used to describe the block chain. This should contain hashes in the blockchain but not all of them. The maximum allowed is 500. The usual behaviour is to have the 10 last block hashes and then each hash below those going down to the genesis block has a gap that doubles (See <ulink url="https://en.bitcoin.it/wiki/Protocol_specification#getblocks">https://en.bitcoin.it/wiki/Protocol_specification#getblocks</ulink> ). The newest block hashes should come first. This should be NULL if empty. The <ref refid="struct_get_blocks" kindref="compound">GetBlocks</ref> object will release each <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> and free the array when the object is freed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" line="25" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_chain_descriptor" kindref="compound">ChainDescriptor</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_chain_descriptor_8h" kindref="compound">ChainDescriptor.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="245">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="242">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="243" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="244" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="243">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="241">
+        <label>ChainDescriptor</label>
+        <link refid="struct_chain_descriptor"/>
+        <childnode refid="242" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="244" relation="usage">
+          <edgelabel>hashes</edgelabel>
+        </childnode>
+      </node>
+      <node id="244">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="245" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="243" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" line="22" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/ChainDescriptor.h" bodystart="22" bodyend="26"/>
+    <listofallmembers>
+      <member refid="struct_chain_descriptor_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>ChainDescriptor</scope><name>base</name></member>
+      <member refid="struct_chain_descriptor_1accd2c3f99c875e8657d976fc264c7fc6" prot="public" virt="non-virtual"><scope>ChainDescriptor</scope><name>hashes</name></member>
+      <member refid="struct_chain_descriptor_1a2a73cb6d678dd0457074398eb7c27584" prot="public" virt="non-virtual"><scope>ChainDescriptor</scope><name>numOfHash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

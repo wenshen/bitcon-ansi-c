@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_transaction" kind="struct" prot="public">
+    <compoundname>Transaction</compoundname>
+    <includes refid="_transaction_8h" local="no">Transaction.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_transaction_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1a7ff9da008bf055da1f1ba994c562057d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hash[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash for this transaction. Null by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="30" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of the transaction data format. 1 by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="31" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1ab67f7dee599d2ca5988caa53883a44ed" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t numOfTransactionInput</definition>
+        <argsstring></argsstring>
+        <name>numOfTransactionInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of TransactionInputs. How many inputs are already added to the transaction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="32" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1a00cc03d624a6aef1bfeadcbe9dcde0fe" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> **</type>
+        <definition>TransactionInput** inputs</definition>
+        <argsstring></argsstring>
+        <name>inputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="33" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1aeeae027bddb846b239fd05e203c0c62a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t numOfTransactionOutput</definition>
+        <argsstring></argsstring>
+        <name>numOfTransactionOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of TransactionOutputs. How many outputs are already added to the transaction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="34" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1a0f4d7ecc12680c61da7267851e819cf0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> **</type>
+        <definition>TransactionOutput** outputs</definition>
+        <argsstring></argsstring>
+        <name>outputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="35" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_transaction_1aea4d95211b00c311b2d84c6177429162" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lockTime</definition>
+        <argsstring></argsstring>
+        <name>lockTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The block number or timestamp at which this transaction is locked; A non-locked transaction must not be included in blocks. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="36" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="378">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="375">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="376" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="377" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="376">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="374">
+        <label>TransactionOutput</label>
+        <link refid="struct_transaction_output"/>
+        <childnode refid="375" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="377" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="373">
+        <label>Transaction</label>
+        <link refid="struct_transaction"/>
+        <childnode refid="374" relation="usage">
+          <edgelabel>outputs</edgelabel>
+        </childnode>
+        <childnode refid="379" relation="usage">
+          <edgelabel>inputs</edgelabel>
+        </childnode>
+        <childnode refid="375" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="377">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="378" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="376" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="380">
+        <label>PreviousOutput</label>
+        <link refid="struct_previous_output"/>
+        <childnode refid="377" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="379">
+        <label>TransactionInput</label>
+        <link refid="struct_transaction_input"/>
+        <childnode refid="380" relation="usage">
+          <edgelabel>prevOutput</edgelabel>
+        </childnode>
+        <childnode refid="375" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="377" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" bodystart="28" bodyend="37"/>
+    <listofallmembers>
+      <member refid="struct_transaction_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>Transaction</scope><name>base</name></member>
+      <member refid="struct_transaction_1a7ff9da008bf055da1f1ba994c562057d" prot="public" virt="non-virtual"><scope>Transaction</scope><name>hash</name></member>
+      <member refid="struct_transaction_1a00cc03d624a6aef1bfeadcbe9dcde0fe" prot="public" virt="non-virtual"><scope>Transaction</scope><name>inputs</name></member>
+      <member refid="struct_transaction_1aea4d95211b00c311b2d84c6177429162" prot="public" virt="non-virtual"><scope>Transaction</scope><name>lockTime</name></member>
+      <member refid="struct_transaction_1ab67f7dee599d2ca5988caa53883a44ed" prot="public" virt="non-virtual"><scope>Transaction</scope><name>numOfTransactionInput</name></member>
+      <member refid="struct_transaction_1aeeae027bddb846b239fd05e203c0c62a" prot="public" virt="non-virtual"><scope>Transaction</scope><name>numOfTransactionOutput</name></member>
+      <member refid="struct_transaction_1a0f4d7ecc12680c61da7267851e819cf0" prot="public" virt="non-virtual"><scope>Transaction</scope><name>outputs</name></member>
+      <member refid="struct_transaction_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" virt="non-virtual"><scope>Transaction</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

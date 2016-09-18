@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_manager_8h.html#af25a0f04ea998d7434b5101bcd2de421" title="Adds a Peer an places it into the AddressManager with a retain." alt="" coords="253,5,443,35"/>
+<area shape="rect" id="node5" href="$_address_manager_8h.html#ab1d87a09ae5aad1c89d8ba13549dc035" title="Remove a Peer from the peers list." alt="" coords="249,59,447,88"/>
+</map>

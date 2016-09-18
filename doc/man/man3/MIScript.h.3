@@ -1,0 +1,62 @@
+.TH "Object/Script.h" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object/Script.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ByteArray.h'\fP
+.br
+\fC#include <stdbool.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBScriptByteVector\fP"
+.br
+.RI "\fIStructure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers with the most significant bit determining the sign of the integer. \fP"
+.ti -1c
+.RI "struct \fBScriptStack\fP"
+.br
+.RI "\fIStructure that holds byte vector data in a stack. \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBByteArray\fP \fBScript\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScript\fP * \fBcreateNewScriptFromReference\fP (\fBScript\fP *program, uint32_t offset, uint32_t len)"
+.br
+.RI "\fICreates a new Script object. \fP"
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBByteArray\fP \fBScript\fP"
+.PP
+Definition at line 39 of file Script.h.
+.SH "Function Documentation"
+.PP 
+.SS "\fBScript\fP* createNewScriptFromReference (\fBByteArray\fP *program, uint32_toffset, uint32_tlen)"
+.PP
+Creates a new Script object. A script is a array of bytes 
+.PP
+\fBReturns:\fP
+.RS 4
+A new Script object.
+.RE
+.PP
+Constructor 
+.PP
+Definition at line 15 of file Script.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

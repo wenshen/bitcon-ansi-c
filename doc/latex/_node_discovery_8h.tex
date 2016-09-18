@@ -1,0 +1,289 @@
+\hypertarget{_node_discovery_8h}{
+\section{src/Object/NodeDiscovery/NodeDiscovery.h File Reference}
+\label{_node_discovery_8h}\index{src/Object/NodeDiscovery/NodeDiscovery.h@{src/Object/NodeDiscovery/NodeDiscovery.h}}
+}
+
+
+This class is responsible for the node discovery functionality described in the Bitcoin protocol -\/ apart from the fact that the methods which involve IRC procedures are not included, since they are deprecated. Inherits \hyperlink{struct_object}{Object}.  
+
+
+{\ttfamily \#include \char`\"{}../Object.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../../Constants.h\char`\"{}}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$netdb.h$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+Include dependency graph for NodeDiscovery.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_node_discovery_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{_node_discovery_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_node_discovery}{NodeDiscovery}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_node_discovery}{NodeDiscovery} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_node_discovery}{NodeDiscovery} $\ast$ \hyperlink{_node_discovery_8h_a0d3868959e24cccf18d7a01bbcf1f7e0}{newNodeDiscovery} (void)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_node_discovery}{NodeDiscovery} object. \end{DoxyCompactList}\item 
+int \hyperlink{_node_discovery_8h_ab5fc81f8a9fbcb534433f52da9baadf7}{initNodeDiscovery} (\hyperlink{struct_node_discovery}{NodeDiscovery} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Initializes a \hyperlink{struct_node_discovery}{NodeDiscovery} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_node_discovery}{NodeDiscovery} $\ast$ \hyperlink{_node_discovery_8h_ae50e18710081cce6cb6f476081948887}{getNodeDiscovery} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_node_discovery}{NodeDiscovery} from an object. Use this to avoid casts. \end{DoxyCompactList}\item 
+void \hyperlink{_node_discovery_8h_a14a7b09a75288bfdb74b3f0d4a3c35d0}{destroyNodeDiscovery} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Destroys an \hyperlink{struct_node_discovery}{NodeDiscovery} object. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_node_discovery_8h_aa1fc2b21480147be72e6975f296246ae}{getExtIPFromSites} ()
+\begin{DoxyCompactList}\small\item\em connects to specified sites and extracts from the response the IP of the local machine. It uses the \hyperlink{_node_discovery_8c_a61782d204f214b12fbcfda3c346bbd0e}{extractIp(char$\ast$ httpresp)} function to parse the response and \hyperlink{_node_discovery_8h_ab8aea7bfb539afe7fc2db54f6bcdb75a}{getExtIP(char$\ast$)} to connect to multiple sites. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_node_discovery_8h_ab8aea7bfb539afe7fc2db54f6bcdb75a}{getExtIP} (char $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Connects to a specified host. IPv4 compatible only!!! \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_node_discovery_8h_acc5aa97401bb59bebad14322b3e7e5e9}{extractIP} (char $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Extracts a valid IPv4 or IPv6 address from a char$\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_node_discovery_8h_ad65a8842cc674e3ddf69355898c0ecbf}{errno}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is responsible for the node discovery functionality described in the Bitcoin protocol -\/ apart from the fact that the methods which involve IRC procedures are not included, since they are deprecated. Inherits \hyperlink{struct_object}{Object}. 
+
+Definition in file \hyperlink{_node_discovery_8h_source}{NodeDiscovery.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_node_discovery_8h_a14a7b09a75288bfdb74b3f0d4a3c35d0}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!destroyNodeDiscovery@{destroyNodeDiscovery}}
+\index{destroyNodeDiscovery@{destroyNodeDiscovery}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{destroyNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}void destroyNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_a14a7b09a75288bfdb74b3f0d4a3c35d0}
+
+
+Destroys an \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_node_discovery}{NodeDiscovery} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_node_discovery_8h_a14a7b09a75288bfdb74b3f0d4a3c35d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_node_discovery_8h_a14a7b09a75288bfdb74b3f0d4a3c35d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8h_acc5aa97401bb59bebad14322b3e7e5e9}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!extractIP@{extractIP}}
+\index{extractIP@{extractIP}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{extractIP}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ extractIP (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_acc5aa97401bb59bebad14322b3e7e5e9}
+
+
+Extracts a valid IPv4 or IPv6 address from a char$\ast$. 
+
+\begin{DoxyAuthor}{Author}
+Hayk Baluyan 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+char$\ast$ for the valid IP address 
+\end{DoxyReturn}
+\hypertarget{_node_discovery_8h_ab8aea7bfb539afe7fc2db54f6bcdb75a}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!getExtIP@{getExtIP}}
+\index{getExtIP@{getExtIP}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{getExtIP}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ getExtIP (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_ab8aea7bfb539afe7fc2db54f6bcdb75a}
+
+
+Connects to a specified host. IPv4 compatible only!!! 
+
+\begin{DoxyAuthor}{Author}
+Attila-\/Peter Toth 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the IP address in a structure or NULL if any error is encountered.
+\end{DoxyReturn}
+find flags here \href{http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html}{\tt http://cboard.cprogramming.com/cplusplus-\/programming/128326-\/undefined-\/symbol-\/when-\/compiling-\/socket-\/program.html} 
+
+Definition at line 97 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_node_discovery_8h_ab8aea7bfb539afe7fc2db54f6bcdb75a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8h_aa1fc2b21480147be72e6975f296246ae}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!getExtIPFromSites@{getExtIPFromSites}}
+\index{getExtIPFromSites@{getExtIPFromSites}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{getExtIPFromSites}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ getExtIPFromSites (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_aa1fc2b21480147be72e6975f296246ae}
+
+
+connects to specified sites and extracts from the response the IP of the local machine. It uses the \hyperlink{_node_discovery_8c_a61782d204f214b12fbcfda3c346bbd0e}{extractIp(char$\ast$ httpresp)} function to parse the response and \hyperlink{_node_discovery_8h_ab8aea7bfb539afe7fc2db54f6bcdb75a}{getExtIP(char$\ast$)} to connect to multiple sites. 
+
+\hypertarget{_node_discovery_8h_ae50e18710081cce6cb6f476081948887}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!getNodeDiscovery@{getNodeDiscovery}}
+\index{getNodeDiscovery@{getNodeDiscovery}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{getNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeDiscovery}$\ast$ getNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_ae50e18710081cce6cb6f476081948887}
+
+
+Gets a \hyperlink{struct_node_discovery}{NodeDiscovery} from an object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_node_discovery}{NodeDiscovery} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file NodeDiscovery.c.
+
+\hypertarget{_node_discovery_8h_ab5fc81f8a9fbcb534433f52da9baadf7}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!initNodeDiscovery@{initNodeDiscovery}}
+\index{initNodeDiscovery@{initNodeDiscovery}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{initNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}int initNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{{\bf NodeDiscovery} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_ab5fc81f8a9fbcb534433f52da9baadf7}
+
+
+Initializes a \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_node_discovery}{NodeDiscovery} object to initialize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{_node_discovery_8h_ab5fc81f8a9fbcb534433f52da9baadf7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{_node_discovery_8h_ab5fc81f8a9fbcb534433f52da9baadf7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8h_a0d3868959e24cccf18d7a01bbcf1f7e0}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!newNodeDiscovery@{newNodeDiscovery}}
+\index{newNodeDiscovery@{newNodeDiscovery}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{newNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeDiscovery}$\ast$ newNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8h_a0d3868959e24cccf18d7a01bbcf1f7e0}
+
+
+Creates a new \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_node_discovery_8h_a0d3868959e24cccf18d7a01bbcf1f7e0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_node_discovery_8h_ad65a8842cc674e3ddf69355898c0ecbf}{
+\index{NodeDiscovery.h@{NodeDiscovery.h}!errno@{errno}}
+\index{errno@{errno}!NodeDiscovery.h@{NodeDiscovery.h}}
+\subsubsection[{errno}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf errno}}}
+\label{_node_discovery_8h_ad65a8842cc674e3ddf69355898c0ecbf}

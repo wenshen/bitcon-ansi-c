@@ -1,0 +1,150 @@
+\hypertarget{struct_block}{
+\section{Block Struct Reference}
+\label{struct_block}\index{Block@{Block}}
+}
+
+
+Base class.  
+
+
+
+
+{\ttfamily \#include $<$Block.h$>$}
+
+
+
+Collaboration diagram for Block:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_block__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_message}{Message} \hyperlink{struct_block_a8987f797adf70c3e174fd64cc68bc933}{base}
+\item 
+uint8\_\-t \hyperlink{struct_block_a7ff9da008bf055da1f1ba994c562057d}{hash} \mbox{[}32\mbox{]}
+\item 
+uint32\_\-t \hyperlink{struct_block_acd99bb05ca015e7d74448acb1deba7ca}{version}
+\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$ \hyperlink{struct_block_ac5cb79d8f66809a5f75592e22db9be2c}{previousBlockHash}
+\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$ \hyperlink{struct_block_a51d24d9b04212dc52192636948a05a4c}{merkleTreeRootHash}
+\item 
+uint32\_\-t \hyperlink{struct_block_ae73654f333e4363463ad8c594eca1905}{time}
+\item 
+uint32\_\-t \hyperlink{struct_block_a695e5800ad1fd403c0e72d918eaec97c}{target}
+\item 
+uint32\_\-t \hyperlink{struct_block_aa2f9785a9d9116cc4592db06375cb887}{nonce}
+\item 
+uint32\_\-t \hyperlink{struct_block_ac9749ca92207f8d50ecc2b0f904e2424}{numOfTransactions}
+\item 
+\hyperlink{struct_transaction}{Transaction} $\ast$$\ast$ \hyperlink{struct_block_acf585c1809511c4f5b5366bb2bc2e855}{transactions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class. 
+
+Definition at line 26 of file Block.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_block_a8987f797adf70c3e174fd64cc68bc933}{
+\index{Block@{Block}!base@{base}}
+\index{base@{base}!Block@{Block}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_block_a8987f797adf70c3e174fd64cc68bc933}
+\hyperlink{struct_message}{Message} base structure 
+
+Definition at line 27 of file Block.h.
+
+\hypertarget{struct_block_a7ff9da008bf055da1f1ba994c562057d}{
+\index{Block@{Block}!hash@{hash}}
+\index{hash@{hash}!Block@{Block}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf hash}\mbox{[}32\mbox{]}}}
+\label{struct_block_a7ff9da008bf055da1f1ba994c562057d}
+The hash for this block. NULL if it needs to be calculated or set. 
+
+Definition at line 28 of file Block.h.
+
+\hypertarget{struct_block_a51d24d9b04212dc52192636948a05a4c}{
+\index{Block@{Block}!merkleTreeRootHash@{merkleTreeRootHash}}
+\index{merkleTreeRootHash@{merkleTreeRootHash}!Block@{Block}}
+\subsubsection[{merkleTreeRootHash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf merkleTreeRootHash}}}
+\label{struct_block_a51d24d9b04212dc52192636948a05a4c}
+The merkle tree root hash. To limit the amount of data transferred when synchronizing 
+
+Definition at line 31 of file Block.h.
+
+\hypertarget{struct_block_aa2f9785a9d9116cc4592db06375cb887}{
+\index{Block@{Block}!nonce@{nonce}}
+\index{nonce@{nonce}!Block@{Block}}
+\subsubsection[{nonce}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf nonce}}}
+\label{struct_block_aa2f9785a9d9116cc4592db06375cb887}
+A 32-\/bit (4-\/byte) field whose value is set so that the hash of the block will contain a run of zeros in generating blocks 
+
+Definition at line 34 of file Block.h.
+
+\hypertarget{struct_block_ac9749ca92207f8d50ecc2b0f904e2424}{
+\index{Block@{Block}!numOfTransactions@{numOfTransactions}}
+\index{numOfTransactions@{numOfTransactions}!Block@{Block}}
+\subsubsection[{numOfTransactions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf numOfTransactions}}}
+\label{struct_block_ac9749ca92207f8d50ecc2b0f904e2424}
+Number of transactions in the block. 
+
+Definition at line 35 of file Block.h.
+
+\hypertarget{struct_block_ac5cb79d8f66809a5f75592e22db9be2c}{
+\index{Block@{Block}!previousBlockHash@{previousBlockHash}}
+\index{previousBlockHash@{previousBlockHash}!Block@{Block}}
+\subsubsection[{previousBlockHash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf previousBlockHash}}}
+\label{struct_block_ac5cb79d8f66809a5f75592e22db9be2c}
+The previous block hash. 
+
+Definition at line 30 of file Block.h.
+
+\hypertarget{struct_block_a695e5800ad1fd403c0e72d918eaec97c}{
+\index{Block@{Block}!target@{target}}
+\index{target@{target}!Block@{Block}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf target}}}
+\label{struct_block_a695e5800ad1fd403c0e72d918eaec97c}
+The compact target representation. 
+
+Definition at line 33 of file Block.h.
+
+\hypertarget{struct_block_ae73654f333e4363463ad8c594eca1905}{
+\index{Block@{Block}!time@{time}}
+\index{time@{time}!Block@{Block}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf time}}}
+\label{struct_block_ae73654f333e4363463ad8c594eca1905}
+Timestamp for the block. The network uses 32 bits. The protocol can be future proofed by detecting overflows when going through the blocks. So if a block's time overflows such that the time is less than the median of the last 10 blocks, the block can be seen by adding the first 32 bits of the network time and finally the timestamp can be tested against the network time. The overflow problem can therefore be fixed by a workaround but it is a shame Satoshi did not use 64 bits. 
+
+Definition at line 32 of file Block.h.
+
+\hypertarget{struct_block_acf585c1809511c4f5b5366bb2bc2e855}{
+\index{Block@{Block}!transactions@{transactions}}
+\index{transactions@{transactions}!Block@{Block}}
+\subsubsection[{transactions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transaction}$\ast$$\ast$ {\bf transactions}}}
+\label{struct_block_acf585c1809511c4f5b5366bb2bc2e855}
+The transactions included in this block. NULL if only the header has been received. 
+
+Definition at line 36 of file Block.h.
+
+\hypertarget{struct_block_acd99bb05ca015e7d74448acb1deba7ca}{
+\index{Block@{Block}!version@{version}}
+\index{version@{version}!Block@{Block}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf version}}}
+\label{struct_block_acd99bb05ca015e7d74448acb1deba7ca}
+block version 
+
+Definition at line 29 of file Block.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_block_8h}{Block.h}\end{DoxyCompactItemize}

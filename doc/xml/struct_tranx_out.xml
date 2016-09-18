@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_tranx_out" kind="struct" prot="public">
+    <compoundname>TranxOut</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_tranx_out_1a4e630859cc0e2a22bd6acf39a6a8e218" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="49" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_out_1a895859eb7d18cd9b6cb38c25ced2418e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pkScriptLength</definition>
+        <argsstring></argsstring>
+        <name>pkScriptLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="50" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_out_1a57661961e62f14ddb90c75c2c130b041" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char pkScript[]</definition>
+        <argsstring>[]</argsstring>
+        <name>pkScript</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="51" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_out_1a2a5a27690c40c531d0a8385dc4f66a95" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="164" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_out_1a12d43c2eb75d61a2698e5c78f2f6122c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int pkScriptLength</definition>
+        <argsstring></argsstring>
+        <name>pkScriptLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="165" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tranx_out_1a1065be8e3e985afe6b60c410ca157d61" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* pkScript</definition>
+        <argsstring></argsstring>
+        <name>pkScript</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="166" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="48" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="48" bodyend="53"/>
+    <listofallmembers>
+      <member refid="struct_tranx_out_1a57661961e62f14ddb90c75c2c130b041" prot="public" virt="non-virtual"><scope>TranxOut</scope><name>pkScript</name></member>
+      <member refid="struct_tranx_out_1a1065be8e3e985afe6b60c410ca157d61" prot="public" virt="non-virtual"><scope>TranxOut</scope><name>pkScript</name></member>
+      <member refid="struct_tranx_out_1a895859eb7d18cd9b6cb38c25ced2418e" prot="public" virt="non-virtual"><scope>TranxOut</scope><name>pkScriptLength</name></member>
+      <member refid="struct_tranx_out_1a12d43c2eb75d61a2698e5c78f2f6122c" prot="public" virt="non-virtual"><scope>TranxOut</scope><name>pkScriptLength</name></member>
+      <member refid="struct_tranx_out_1a4e630859cc0e2a22bd6acf39a6a8e218" prot="public" virt="non-virtual"><scope>TranxOut</scope><name>value</name></member>
+      <member refid="struct_tranx_out_1a2a5a27690c40c531d0a8385dc4f66a95" prot="public" virt="non-virtual"><scope>TranxOut</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

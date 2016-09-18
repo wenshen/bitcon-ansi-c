@@ -1,0 +1,124 @@
+.TH "Object/Message/Message.h" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object/Message/Message.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib.h>\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include '../../Constants.h'\fP
+.br
+\fC#include '../ByteArray.h'\fP
+.br
+\fC#include '../Object.h'\fP
+.br
+\fC#include '../../Utils/VariableLengthInteger/VarLenInt.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMessage\fP"
+.br
+.RI "\fIStructure for \fBMessage\fP objects. \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBMessage\fP \fBMessage\fP"
+.br
+.RI "\fIStructure for \fBMessage\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP * \fBcreateNewMessage\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBMessage\fP object. This message will be created with object data and not with byte data. The message can be serialised for the byte data used over the network. \fP"
+.ti -1c
+.RI "\fBMessage\fP * \fBgetMessage\fP (void *self)"
+.br
+.RI "\fIGets a \fBMessage\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "\fBMessage\fP * \fBcreateMessageFromByteArray\fP (\fBMessage\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBMessage\fP object from byte data. \fP"
+.ti -1c
+.RI "void \fBdestroyMessage\fP (void *self)"
+.br
+.RI "\fIdestroys the memory allocated to a \fBMessage\fP object. \fP"
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBMessage\fP  \fBMessage\fP"
+.PP
+Structure for \fBMessage\fP objects. \fBSee also:\fP
+.RS 4
+\fBMessage.h\fP 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBMessage\fP* createMessageFromByteArray (\fBMessage\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBMessage\fP object from byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBMessage\fP object to initialise 
+.br
+\fIdata\fP The byte data for the object. The data will not be copied but retained by this object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMessage\fP 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file Message.c.
+.SS "\fBMessage\fP* createNewMessage (void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBMessage\fP object. This message will be created with object data and not with byte data. The message can be serialised for the byte data used over the network. \fBParameters:\fP
+.RS 4
+\fI@returns\fP A new \fBMessage\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file Message.c.
+.SS "void destroyMessage (void *self)"
+.PP
+destroys the memory allocated to a \fBMessage\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBMessage\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file Message.c.
+.SS "\fBMessage\fP* getMessage (void *self)"
+.PP
+Gets a \fBMessage\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBMessage\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBMessage\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file Message.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

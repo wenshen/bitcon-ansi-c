@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_chain_descriptor_8c.html" title="src/Object/Message/ChainDescriptor.c" alt="" coords="5,83,253,112"/>
+<area shape="rect" id="node5" href="$_get_blocks_8h.html" title="A message to ask for an inventory of blocks or the block headers (getheaders message) up to the &quot;stop..." alt="" coords="277,83,491,112"/>
+<area shape="rect" id="node7" href="$_get_blocks_8c.html" title="src/Object/Message/GetBlocks.c" alt="" coords="277,160,491,189"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_network_functions_8c.html#a21369f59726afc3447ce0bb6c7ab5dd8" title="Determines if an IP address is an GarliCat I2P hidden service representation." alt="" coords="140,5,191,35"/>
+<area shape="rect" id="node5" href="$_network_functions_8c.html#a5af1a2b042aa1d6bf30683592bfcc480" title="Determines if an IP address is an IPv4 address." alt="" coords="136,59,195,88"/>
+<area shape="rect" id="node7" href="$_network_functions_8c.html#a0e6ec565867a85ceef55d0b83bb047a1" title="Determines if an IP address is an OnionCat Tor hidden service representation." alt="" coords="140,112,191,141"/>
+</map>

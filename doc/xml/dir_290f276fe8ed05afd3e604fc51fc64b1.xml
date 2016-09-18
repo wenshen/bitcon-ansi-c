@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_290f276fe8ed05afd3e604fc51fc64b1" kind="dir">
+    <compoundname>src/Utils/</compoundname>
+    <innerdir refid="dir_bc786e3f1a0fab7d5b09efd8acad1e63">src/Utils/Cryptography/</innerdir>
+    <innerdir refid="dir_0e271188cf82d163fb0915a074b28cc2">src/Utils/VariableLengthInteger/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/"/>
+  </compounddef>
+</doxygen>

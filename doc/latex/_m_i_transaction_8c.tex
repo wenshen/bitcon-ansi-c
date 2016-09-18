@@ -1,0 +1,757 @@
+\hypertarget{_m_i_transaction_8c}{
+\section{Object/Message/Transaction.c File Reference}
+\label{_m_i_transaction_8c}\index{Object/Message/Transaction.c@{Object/Message/Transaction.c}}
+}
+{\ttfamily \#include \char`\"{}Transaction.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../../Constants.h\char`\"{}}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include \char`\"{}../../Utils/VariableLengthInteger/VarLenInt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../ByteArray.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TransactionInput.h\char`\"{}}\par
+Include dependency graph for Transaction.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_transaction}{Transaction} $\ast$ \hyperlink{_m_i_transaction_8c_ad9c9cac2e7fd054ceff9c4a0053ec494}{createNewTransaction} (uint32\_\-t lockTime, uint32\_\-t version, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_transaction}{Transaction} object with no inputs or outputs. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_transaction}{Transaction} $\ast$ \hyperlink{_m_i_transaction_8c_ac64b350eebd0ac111556c9323025a5bc}{createNewTransactionFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_transaction}{Transaction} object from byte data. Should be serialised for object data. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_a8b299a1ed7ad62d46f4d2547463b95fe}{initializeTransaction} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, uint32\_\-t lockTime, uint32\_\-t version, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_m_i_transaction}{Transaction} object. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_addbf01b7d3012da33c2124db978f3424}{initializeTransactionFromByteArray} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_transaction}{Transaction} object from byte data. Should be serialised for object data. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_transaction_8c_a51cc2a726480d71b2b08a871bc4aa8f2}{destroyTransaction} (void $\ast$transaction)
+\begin{DoxyCompactList}\small\item\em Destructor; destroys a \hyperlink{struct_m_i_transaction}{Transaction} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_transaction}{Transaction} $\ast$ \hyperlink{_m_i_transaction_8c_a52cbd0dba13db4b7356b3b35621dd007}{getTransaction} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_m_i_transaction}{Transaction} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_aadb6dd710e8c2832fb88ba7b5b0cf409}{addTransactionInput} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, \hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$input)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{struct_m_i_transaction_input}{TransactionInput} to the \hyperlink{struct_m_i_transaction}{Transaction}. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_a322dff87e5fb717f9f21c482ce2fef10}{addTransactionOutput} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, \hyperlink{struct_m_i_transaction_output}{TransactionOutput} $\ast$output)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{struct_m_i_transaction_input}{TransactionInput} to the \hyperlink{struct_m_i_transaction}{Transaction}. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_a864921a54d52bf4d9223327b1ae4ba15}{addTransactionInputWithoutReference} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, \hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$input)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{struct_m_i_transaction_input}{TransactionInput} to the \hyperlink{struct_m_i_transaction}{Transaction} without retaining it. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_a9d6b054174739ac0b68a197477e662e6}{addTransactionOutputWithoutReference} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, \hyperlink{struct_m_i_transaction_output}{TransactionOutput} $\ast$output)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{struct_m_i_transaction_output}{TransactionOutput} to the \hyperlink{struct_m_i_transaction}{Transaction} without retaining it. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_transaction_8c_a6d56a2cbd0b4d755eb1ea24da1f204d1}{calculateTransactionHash} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self, uint8\_\-t $\ast$hash)
+\begin{DoxyCompactList}\small\item\em Calculates the hash for a transaction. \end{DoxyCompactList}\item 
+uint8\_\-t $\ast$ \hyperlink{_m_i_transaction_8c_ae77b886a61562d010b212219acbeed9c}{getTransactionHash} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_transaction_8c_a399ecdc9998cfe26c0f2a1928572b54b}{calculateTransactionLength} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Calculates the length of an \hyperlink{struct_m_i_transaction}{Transaction}; this is needed to serialise the object. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_8c_a61c55efd86e87797526fc63273ad61d5}{isCoinBase} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Determines if a transaction is a coinbase transaction or not. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_transaction_8c_a1abc45d369c2884698692d79091f5b2c}{serializeTransaction} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Serialises a \hyperlink{struct_m_i_transaction}{Transaction} to byte data. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_transaction_8c_a8777f695fbbb547e32b9c0347b6b2026}{deserializeTransaction} (\hyperlink{struct_m_i_transaction}{Transaction} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Deserialises a \hyperlink{struct_m_i_transaction}{Transaction} so that it can be used as an object. \end{DoxyCompactList}\item 
+\hyperlink{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0}{TransactionHashStatus} \hyperlink{_m_i_transaction_8c_a66ab860229cbd11f1206df9bb9196728}{getTransactionInputHashForVerification} (void $\ast$txIn, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$prevOutSubScript, uint32\_\-t input, \hyperlink{_m_i_constants_8h_a4fd54932b907311989c5752c6942742a}{SignatureType} signType, uint8\_\-t $\ast$hash)
+\begin{DoxyCompactList}\small\item\em Gets the hash for signing or signature checking for a transaction input. The transaction input needs to contain the outPointerHash, outPointerIndex and sequence. If these are modifed afterwards then the signiture is invalid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_transaction_8c_aadb6dd710e8c2832fb88ba7b5b0cf409}{
+\index{Transaction.c@{Transaction.c}!addTransactionInput@{addTransactionInput}}
+\index{addTransactionInput@{addTransactionInput}!Transaction.c@{Transaction.c}}
+\subsubsection[{addTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}int addTransactionInput (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{{\bf TransactionInput} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_aadb6dd710e8c2832fb88ba7b5b0cf409}
+
+
+Adds an \hyperlink{struct_m_i_transaction_input}{TransactionInput} to the \hyperlink{struct_m_i_transaction}{Transaction}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+{\em input} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction input was added successfully and false on error. 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_aadb6dd710e8c2832fb88ba7b5b0cf409_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a864921a54d52bf4d9223327b1ae4ba15}{
+\index{Transaction.c@{Transaction.c}!addTransactionInputWithoutReference@{addTransactionInputWithoutReference}}
+\index{addTransactionInputWithoutReference@{addTransactionInputWithoutReference}!Transaction.c@{Transaction.c}}
+\subsubsection[{addTransactionInputWithoutReference}]{\setlength{\rightskip}{0pt plus 5cm}int addTransactionInputWithoutReference (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{{\bf TransactionInput} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a864921a54d52bf4d9223327b1ae4ba15}
+
+
+Adds an \hyperlink{struct_m_i_transaction_input}{TransactionInput} to the \hyperlink{struct_m_i_transaction}{Transaction} without retaining it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+{\em input} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction input was taken successfully and false on error. 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file Transaction.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a864921a54d52bf4d9223327b1ae4ba15_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a322dff87e5fb717f9f21c482ce2fef10}{
+\index{Transaction.c@{Transaction.c}!addTransactionOutput@{addTransactionOutput}}
+\index{addTransactionOutput@{addTransactionOutput}!Transaction.c@{Transaction.c}}
+\subsubsection[{addTransactionOutput}]{\setlength{\rightskip}{0pt plus 5cm}int addTransactionOutput (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{{\bf TransactionOutput} $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a322dff87e5fb717f9f21c482ce2fef10}
+
+
+Adds an \hyperlink{struct_m_i_transaction_input}{TransactionInput} to the \hyperlink{struct_m_i_transaction}{Transaction}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+{\em input} & The \hyperlink{struct_m_i_transaction_output}{TransactionOutput} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction output was added successfully and false on error. 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a322dff87e5fb717f9f21c482ce2fef10_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a9d6b054174739ac0b68a197477e662e6}{
+\index{Transaction.c@{Transaction.c}!addTransactionOutputWithoutReference@{addTransactionOutputWithoutReference}}
+\index{addTransactionOutputWithoutReference@{addTransactionOutputWithoutReference}!Transaction.c@{Transaction.c}}
+\subsubsection[{addTransactionOutputWithoutReference}]{\setlength{\rightskip}{0pt plus 5cm}int addTransactionOutputWithoutReference (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{{\bf TransactionOutput} $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a9d6b054174739ac0b68a197477e662e6}
+
+
+Adds an \hyperlink{struct_m_i_transaction_output}{TransactionOutput} to the \hyperlink{struct_m_i_transaction}{Transaction} without retaining it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+{\em input} & The \hyperlink{struct_m_i_transaction_output}{TransactionOutput} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction output was taken successfully and false on error. 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file Transaction.c.
+
+\hypertarget{_m_i_transaction_8c_a6d56a2cbd0b4d755eb1ea24da1f204d1}{
+\index{Transaction.c@{Transaction.c}!calculateTransactionHash@{calculateTransactionHash}}
+\index{calculateTransactionHash@{calculateTransactionHash}!Transaction.c@{Transaction.c}}
+\subsubsection[{calculateTransactionHash}]{\setlength{\rightskip}{0pt plus 5cm}void calculateTransactionHash (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{uint8\_\-t $\ast$}]{hash}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a6d56a2cbd0b4d755eb1ea24da1f204d1}
+
+
+Calculates the hash for a transaction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. This should be serialised. \\
+\hline
+{\em The} & hash for the transaction to be set. This should be 32 bytes long. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 178 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=386pt]{_m_i_transaction_8c_a6d56a2cbd0b4d755eb1ea24da1f204d1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=374pt]{_m_i_transaction_8c_a6d56a2cbd0b4d755eb1ea24da1f204d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a399ecdc9998cfe26c0f2a1928572b54b}{
+\index{Transaction.c@{Transaction.c}!calculateTransactionLength@{calculateTransactionLength}}
+\index{calculateTransactionLength@{calculateTransactionLength}!Transaction.c@{Transaction.c}}
+\subsubsection[{calculateTransactionLength}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t calculateTransactionLength (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a399ecdc9998cfe26c0f2a1928572b54b}
+
+
+Calculates the length of an \hyperlink{struct_m_i_transaction}{Transaction}; this is needed to serialise the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the \hyperlink{struct_m_i_transaction}{Transaction} on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=378pt]{_m_i_transaction_8c_a399ecdc9998cfe26c0f2a1928572b54b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=386pt]{_m_i_transaction_8c_a399ecdc9998cfe26c0f2a1928572b54b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_ad9c9cac2e7fd054ceff9c4a0053ec494}{
+\index{Transaction.c@{Transaction.c}!createNewTransaction@{createNewTransaction}}
+\index{createNewTransaction@{createNewTransaction}!Transaction.c@{Transaction.c}}
+\subsubsection[{createNewTransaction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transaction}$\ast$ createNewTransaction (
+\begin{DoxyParamCaption}
+\item[{uint32\_\-t}]{lockTime, }
+\item[{uint32\_\-t}]{version, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_ad9c9cac2e7fd054ceff9c4a0053ec494}
+
+
+Creates a new \hyperlink{struct_m_i_transaction}{Transaction} object with no inputs or outputs. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_transaction}{Transaction} object. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_ad9c9cac2e7fd054ceff9c4a0053ec494_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_ac64b350eebd0ac111556c9323025a5bc}{
+\index{Transaction.c@{Transaction.c}!createNewTransactionFromByteArray@{createNewTransactionFromByteArray}}
+\index{createNewTransactionFromByteArray@{createNewTransactionFromByteArray}!Transaction.c@{Transaction.c}}
+\subsubsection[{createNewTransactionFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transaction}$\ast$ createNewTransactionFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{bytes, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_ac64b350eebd0ac111556c9323025a5bc}
+
+
+Creates a new \hyperlink{struct_m_i_transaction}{Transaction} object from byte data. Should be serialised for object data. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_transaction}{Transaction} object. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_ac64b350eebd0ac111556c9323025a5bc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_ac64b350eebd0ac111556c9323025a5bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a8777f695fbbb547e32b9c0347b6b2026}{
+\index{Transaction.c@{Transaction.c}!deserializeTransaction@{deserializeTransaction}}
+\index{deserializeTransaction@{deserializeTransaction}!Transaction.c@{Transaction.c}}
+\subsubsection[{deserializeTransaction}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeTransaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a8777f695fbbb547e32b9c0347b6b2026}
+
+
+Deserialises a \hyperlink{struct_m_i_transaction}{Transaction} so that it can be used as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 368 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a8777f695fbbb547e32b9c0347b6b2026_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a8777f695fbbb547e32b9c0347b6b2026_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a51cc2a726480d71b2b08a871bc4aa8f2}{
+\index{Transaction.c@{Transaction.c}!destroyTransaction@{destroyTransaction}}
+\index{destroyTransaction@{destroyTransaction}!Transaction.c@{Transaction.c}}
+\subsubsection[{destroyTransaction}]{\setlength{\rightskip}{0pt plus 5cm}void destroyTransaction (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a51cc2a726480d71b2b08a871bc4aa8f2}
+
+
+Destructor; destroys a \hyperlink{struct_m_i_transaction}{Transaction} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a51cc2a726480d71b2b08a871bc4aa8f2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=354pt]{_m_i_transaction_8c_a51cc2a726480d71b2b08a871bc4aa8f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a52cbd0dba13db4b7356b3b35621dd007}{
+\index{Transaction.c@{Transaction.c}!getTransaction@{getTransaction}}
+\index{getTransaction@{getTransaction}!Transaction.c@{Transaction.c}}
+\subsubsection[{getTransaction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transaction}$\ast$ getTransaction (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a52cbd0dba13db4b7356b3b35621dd007}
+
+
+Gets a \hyperlink{struct_m_i_transaction}{Transaction} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_m_i_transaction}{Transaction} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_m_i_transaction}{Transaction} object. 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Transaction.c.
+
+\hypertarget{_m_i_transaction_8c_ae77b886a61562d010b212219acbeed9c}{
+\index{Transaction.c@{Transaction.c}!getTransactionHash@{getTransactionHash}}
+\index{getTransactionHash@{getTransactionHash}!Transaction.c@{Transaction.c}}
+\subsubsection[{getTransactionHash}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ getTransactionHash (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_ae77b886a61562d010b212219acbeed9c}
+
+
+Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. This should be serialised. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The hash for the transaction. This is a 32 byte long, double SHA-\/256 hash and is a pointer to the hash field in the transaction. 
+\end{DoxyReturn}
+
+
+Definition at line 190 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_ae77b886a61562d010b212219acbeed9c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a66ab860229cbd11f1206df9bb9196728}{
+\index{Transaction.c@{Transaction.c}!getTransactionInputHashForVerification@{getTransactionInputHashForVerification}}
+\index{getTransactionInputHashForVerification@{getTransactionInputHashForVerification}!Transaction.c@{Transaction.c}}
+\subsubsection[{getTransactionInputHashForVerification}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TransactionHashStatus} getTransactionInputHashForVerification (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{vself, }
+\item[{{\bf ByteArray} $\ast$}]{prevOutSubScript, }
+\item[{uint32\_\-t}]{input, }
+\item[{{\bf SignatureType}}]{signType, }
+\item[{uint8\_\-t $\ast$}]{hash}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a66ab860229cbd11f1206df9bb9196728}
+
+
+Gets the hash for signing or signature checking for a transaction input. The transaction input needs to contain the outPointerHash, outPointerIndex and sequence. If these are modifed afterwards then the signiture is invalid. 
+
+TRANSACTION SIGNING 
+\begin{DoxyParams}{Parameters}
+{\em vself} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+{\em prevOutSubScript} & The sub script from the output. Must be the correct one or the signiture will be invalid. \\
+\hline
+{\em input} & The index of the input to sign. \\
+\hline
+{\em signType} & The type of signature to get the data for. \\
+\hline
+{\em hash} & The 32 byte data hash for signing or checking signatures. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\_\-TX\_\-HASH\_\-OK if the hash has been retreived with no problems. \_\-TX\_\-HASH\_\-BAD is returned if the hash is invalid and \_\-TX\_\-HASH\_\-ERR is returned upon an error. 
+\end{DoxyReturn}
+
+
+Definition at line 520 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a66ab860229cbd11f1206df9bb9196728_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a8b299a1ed7ad62d46f4d2547463b95fe}{
+\index{Transaction.c@{Transaction.c}!initializeTransaction@{initializeTransaction}}
+\index{initializeTransaction@{initializeTransaction}!Transaction.c@{Transaction.c}}
+\subsubsection[{initializeTransaction}]{\setlength{\rightskip}{0pt plus 5cm}int initializeTransaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{uint32\_\-t}]{lockTime, }
+\item[{uint32\_\-t}]{version, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a8b299a1ed7ad62d46f4d2547463b95fe}
+
+
+Initialises a \hyperlink{struct_m_i_transaction}{Transaction} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{_m_i_transaction_8c_a8b299a1ed7ad62d46f4d2547463b95fe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{_m_i_transaction_8c_a8b299a1ed7ad62d46f4d2547463b95fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_addbf01b7d3012da33c2124db978f3424}{
+\index{Transaction.c@{Transaction.c}!initializeTransactionFromByteArray@{initializeTransactionFromByteArray}}
+\index{initializeTransactionFromByteArray@{initializeTransactionFromByteArray}!Transaction.c@{Transaction.c}}
+\subsubsection[{initializeTransactionFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}int initializeTransactionFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_addbf01b7d3012da33c2124db978f3424}
+
+
+Creates a new \hyperlink{struct_m_i_transaction}{Transaction} object from byte data. Should be serialised for object data. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_transaction}{Transaction} object. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=390pt]{_m_i_transaction_8c_addbf01b7d3012da33c2124db978f3424_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_addbf01b7d3012da33c2124db978f3424_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a61c55efd86e87797526fc63273ad61d5}{
+\index{Transaction.c@{Transaction.c}!isCoinBase@{isCoinBase}}
+\index{isCoinBase@{isCoinBase}!Transaction.c@{Transaction.c}}
+\subsubsection[{isCoinBase}]{\setlength{\rightskip}{0pt plus 5cm}int isCoinBase (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a61c55efd86e87797526fc63273ad61d5}
+
+
+Determines if a transaction is a coinbase transaction or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction is a coin-\/base transaction or false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Transaction.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{_m_i_transaction_8c_a61c55efd86e87797526fc63273ad61d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_8c_a1abc45d369c2884698692d79091f5b2c}{
+\index{Transaction.c@{Transaction.c}!serializeTransaction@{serializeTransaction}}
+\index{serializeTransaction@{serializeTransaction}!Transaction.c@{Transaction.c}}
+\subsubsection[{serializeTransaction}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t serializeTransaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Transaction} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_8c_a1abc45d369c2884698692d79091f5b2c}
+
+
+Serialises a \hyperlink{struct_m_i_transaction}{Transaction} to byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction}{Transaction} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file Transaction.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a1abc45d369c2884698692d79091f5b2c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_8c_a1abc45d369c2884698692d79091f5b2c_icgraph}
+\end{center}
+\end{figure}
+
+

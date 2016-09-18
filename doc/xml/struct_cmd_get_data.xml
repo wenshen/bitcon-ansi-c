@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_get_data" kind="struct" prot="public">
+    <compoundname>CmdGetData</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_get_data_1afcc68e9eec57ce069fcdc37815837d6d" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="121" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_get_data_1aa0131206f52d276b9c712b34aaff1592" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+        <definition>struct InventoryVector* InvVect</definition>
+        <argsstring></argsstring>
+        <name>InvVect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="124" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="272">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="267">
+        <label>CmdGetData</label>
+        <link refid="struct_cmd_get_data"/>
+        <childnode refid="268" relation="usage">
+          <edgelabel>InvVect</edgelabel>
+        </childnode>
+      </node>
+      <node id="269">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="270" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="271" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="270">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="268">
+        <label>InventoryVector</label>
+        <link refid="struct_inventory_vector"/>
+        <childnode refid="269" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="271" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="271">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="272" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="270" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="119" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="119" bodyend="125"/>
+    <listofallmembers>
+      <member refid="struct_cmd_get_data_1afcc68e9eec57ce069fcdc37815837d6d" prot="public" virt="non-virtual"><scope>CmdGetData</scope><name>count</name></member>
+      <member refid="struct_cmd_get_data_1aa0131206f52d276b9c712b34aaff1592" prot="public" virt="non-virtual"><scope>CmdGetData</scope><name>InvVect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

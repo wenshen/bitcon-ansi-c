@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_header" kind="struct" prot="public">
+    <compoundname>Header</compoundname>
+    <briefdescription>
+<para>Structure for <ref refid="struct_transaction" kindref="compound">Transaction</ref> objects; contains all the fields defined in the bitcoin protocol. </para>    </briefdescription>
+    <detaileddescription>
+<para>the <ref refid="struct_transaction" kindref="compound">Transaction</ref> <ref refid="struct_object" kindref="compound">Object</ref>; contains the <ref refid="struct_transaction" kindref="compound">Transaction</ref> base structure. <simplesect kind="see"><para><ref refid="_transaction_8h" kindref="compound">Transaction.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="24"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

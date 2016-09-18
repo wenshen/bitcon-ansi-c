@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_message_8h" kind="file">
+    <compoundname>Message.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">../../Constants.h</includes>
+    <includes local="yes">../ByteArray.h</includes>
+    <includes local="yes">../Object.h</includes>
+    <includes local="yes">../../Utils/VariableLengthInteger/VarLenInt.h</includes>
+    <includedby refid="_m_i_transaction_8h" local="yes">Object/Message/Transaction.h</includedby>
+    <includedby refid="_m_i_transaction_input_8h" local="yes">Object/Message/TransactionInput.h</includedby>
+    <includedby refid="_m_i_transaction_output_8h" local="yes">Object/Message/TransactionOutput.h</includedby>
+    <includedby refid="_m_i_block_8c" local="yes">Object/Message/Block.c</includedby>
+    <includedby refid="_m_i_message_8c" local="yes">Object/Message/Message.c</includedby>
+    <incdepgraph>
+      <node id="379">
+        <label>../../Utils/VariableLengthInteger/VarLenInt.h</label>
+      </node>
+      <node id="378">
+        <label>../Object.h</label>
+      </node>
+      <node id="375">
+        <label>stdint.h</label>
+      </node>
+      <node id="374">
+        <label>stdlib.h</label>
+      </node>
+      <node id="376">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="377">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="373">
+        <label>Object/Message/Message.h</label>
+        <link refid="Message.h"/>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="383">
+        <label>Object/Message/Block.c</label>
+        <link refid="_m_i_block_8c"/>
+      </node>
+      <node id="382">
+        <label>Object/Message/Block.h</label>
+        <link refid="_m_i_block_8h"/>
+        <childnode refid="383" relation="include">
+        </childnode>
+      </node>
+      <node id="388">
+        <label>Object/Message/TransactionOutput.c</label>
+        <link refid="_m_i_transaction_output_8c"/>
+      </node>
+      <node id="387">
+        <label>Object/Message/TransactionOutput.h</label>
+        <link refid="_m_i_transaction_output_8h"/>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>Object/Message/Transaction.c</label>
+        <link refid="_m_i_transaction_8c"/>
+      </node>
+      <node id="381">
+        <label>Object/Message/Transaction.h</label>
+        <link refid="_m_i_transaction_8h"/>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+      </node>
+      <node id="386">
+        <label>Object/Message/TransactionInput.c</label>
+        <link refid="_m_i_transaction_input_8c"/>
+      </node>
+      <node id="385">
+        <label>Object/Message/TransactionInput.h</label>
+        <link refid="_m_i_transaction_input_8h"/>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+      </node>
+      <node id="389">
+        <label>Object/Message/Message.c</label>
+        <link refid="_m_i_message_8c"/>
+      </node>
+      <node id="380">
+        <label>Object/Message/Message.h</label>
+        <link refid="Message.h"/>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_m_i_message" prot="public">Message</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_m_i_message_8h_1a376f8e2a3b489c100f4dd6fb16ad15d7" prot="public" static="no">
+        <type>struct <ref refid="struct_m_i_message" kindref="compound">Message</ref></type>
+        <definition>typedef struct Message  Message</definition>
+        <argsstring></argsstring>
+        <name>Message</name>
+        <briefdescription>
+<para>Structure for <ref refid="struct_m_i_message" kindref="compound">Message</ref> objects. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_m_i_message_8h" kindref="compound">Message.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_i_message_8h_1a243ba896755b085ea0415d93bd3c6255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_message" kindref="compound">Message</ref> *</type>
+        <definition>Message* createNewMessage</definition>
+        <argsstring>(void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewMessage</name>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_message" kindref="compound">Message</ref> object. This message will be created with object data and not with byte data. The message can be serialised for the byte data used over the network. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>@returns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new <ref refid="struct_m_i_message" kindref="compound">Message</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="37" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.c" bodystart="19" bodyend="47"/>
+        <references refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" compoundref="_m_i_object_8h" startline="29">Object::destroy</references>
+        <references refid="_m_i_message_8c_1a17557bbd8e2e7b7d0736c88df25a389e" compoundref="_m_i_message_8c" startline="90" endline="99">destroyMessage</references>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <references refid="struct_m_i_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_m_i_object_8h" startline="30">Object::referenceCount</references>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_message_8h_1a5b1bc10a9354d0ad365fc55123dba947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_message" kindref="compound">Message</ref> *</type>
+        <definition>Message* getMessage</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getMessage</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_m_i_message" kindref="compound">Message</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_m_i_message" kindref="compound">Message</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_m_i_message" kindref="compound">Message</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="44" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.c" bodystart="78" bodyend="82"/>
+        <referencedby refid="_m_i_block_8h_1a3913a1a3d961d7cc2c479de327337bae" compoundref="_m_i_block_8c" startline="191" endline="197">calculateBlockHash</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6d56a2cbd0b4d755eb1ea24da1f204d1" compoundref="_m_i_transaction_8c" startline="178" endline="188">calculateTransactionHash</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3fa07e825a149c98d148b215a5d5a78a" compoundref="_m_i_block_8c" startline="416" endline="449">dealWithSerializationTran</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a292775bd99c32b5b2f51b8d71d10812e" compoundref="_m_i_block_8c" startline="326" endline="353">deserializeWithOnlyHeaders</referencedby>
+        <referencedby refid="_m_i_block_8h_1a04d2d2defba76492762c0eb4b7ccd206" compoundref="_m_i_block_8c" startline="261" endline="324">deserializeWithTransactions</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8b299a1ed7ad62d46f4d2547463b95fe" compoundref="_m_i_transaction_8c" startline="60" endline="78">initializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1addbf01b7d3012da33c2124db978f3424" compoundref="_m_i_transaction_8c" startline="80" endline="95">initializeTransactionFromByteArray</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ab948c7629606c3e71f6b502f65df5cb5" compoundref="_m_i_transaction_input_8c" startline="64" endline="86">initializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a23b5f752e968e3bff9c427e224c48366" compoundref="_m_i_transaction_input_8c" startline="88" endline="100">initializeTransactionInputFromData</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1ac0e4fa3f0072f09f8852b49636929dad" compoundref="_m_i_transaction_output_8c" startline="64" endline="85">initializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1acdff85fe7595abae3fad7331e5411254" compoundref="_m_i_transaction_output_8c" startline="87" endline="99">initializeTransactionOutputFromData</referencedby>
+        <referencedby refid="_m_i_block_8h_1aff02edfeca99bc15719c64dbc47eb7ba" compoundref="_m_i_block_8c" startline="97" endline="112">initBlock</referencedby>
+        <referencedby refid="_m_i_block_8h_1adb55432064c1fb591abf43542ed6261e" compoundref="_m_i_block_8c" startline="117" endline="132">initBlockFromByteArray</referencedby>
+        <referencedby refid="_m_i_block_8h_1ab4caa099f720462b32d9e74406309b1d" compoundref="_m_i_block_8c" startline="133" endline="153">initBlockWithOriginalBlock</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3dab3fff46c9b386501414a6b13f5192" compoundref="_m_i_block_8c" startline="368" endline="396">serializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_message_8h_1aca53c5c90c67a7b1c77c93438aa484d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_message" kindref="compound">Message</ref> *</type>
+        <definition>Message* createMessageFromByteArray</definition>
+        <argsstring>(Message *self, ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createMessageFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_message" kindref="compound">Message</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_m_i_message" kindref="compound">Message</ref> object from byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_message" kindref="compound">Message</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte data for the object. The data will not be copied but retained by this object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_m_i_message" kindref="compound">Message</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="53" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.c" bodystart="51" bodyend="75"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_m_i_object_8c" startline="73" endline="84">incrementReferenceCount</references>
+        <references refid="struct_m_i_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_m_i_object_8h" startline="30">Object::referenceCount</references>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_message_8h_1ac2327e1b79760ff1a69fe106fbe20d23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyMessage</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyMessage</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>destroys the memory allocated to a <ref refid="struct_m_i_message" kindref="compound">Message</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_message" kindref="compound">Message</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h" line="59" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.c" bodystart="90" bodyend="99"/>
+        <references refid="_m_i_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_m_i_object_8c" startline="57" endline="71">decrementReferenceCount</references>
+        <references refid="_m_i_object_8c_1a71704ab4fbecb7d85276d32649b5349a" compoundref="_m_i_object_8c" startline="51" endline="55">destroyObject</references>
+        <referencedby refid="_m_i_message_8h_1a243ba896755b085ea0415d93bd3c6255" compoundref="_m_i_message_8c" startline="19" endline="47">createNewMessage</referencedby>
+        <referencedby refid="_m_i_block_8h_1a4dd7a61ea64a2b7cde840038ec14d2db" compoundref="_m_i_block_8c" startline="159" endline="185">deleteBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1aa5860a9ff5209146c9b028103977bb5b" compoundref="_m_i_transaction_8c" startline="98" endline="113">destroyTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a870e33cc5ad870ec4b831d4410c7df1f" compoundref="_m_i_transaction_input_8c" startline="110" endline="125">destroyTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aee9404d5122916f7ef6262344835377a" compoundref="_m_i_transaction_output_8c" startline="111" endline="122">destroyTransactionOutput</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Message.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>03/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen<sp/>&amp;<sp/>Dmytro<sp/>Krasnoshtan</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MESSAGE_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MESSAGE_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ByteArray.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Object.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Utils/VariableLengthInteger/VarLenInt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="struct_m_i_message" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_m_i_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref>{</highlight></codeline>
+<codeline lineno="23" refid="struct_m_i_message_1ad0814be49cef65d1662b278c4c591509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_object" kindref="compound" tooltip="Base class.">Object</ref><sp/><ref refid="struct_m_i_message_1ad0814be49cef65d1662b278c4c591509" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="24" refid="struct_m_i_message_1a98cad3c21d5a8a679befe2557a5246be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_i_constants_8h_1aa6ba957da4da60695d0c8ae85975212a" kindref="member">MessageType</ref><sp/><ref refid="struct_m_i_message_1a98cad3c21d5a8a679befe2557a5246be" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="25" refid="struct_m_i_message_1ad4a1b71852a8721ee4be4f6aaacd8566" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_m_i_message_1ad4a1b71852a8721ee4be4f6aaacd8566" kindref="member">altText</ref>;<sp/></highlight></codeline>
+<codeline lineno="26" refid="struct_m_i_message_1a8fb493ee3c32dd3a9fb29bc71c852f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="struct_m_i_message_1a8fb493ee3c32dd3a9fb29bc71c852f86" kindref="member">bytes</ref>;<sp/></highlight></codeline>
+<codeline lineno="27" refid="struct_m_i_message_1a02d93e565ee31bda6e0211dca9b42be5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_m_i_message_1a02d93e565ee31bda6e0211dca9b42be5" kindref="member">checksum</ref>[4];<sp/></highlight></codeline>
+<codeline lineno="28" refid="struct_m_i_message_1aeb0776cff292839518da5f5a48884fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct_m_i_message_1aeb0776cff292839518da5f5a48884fd9" kindref="member">onErrorReceived</ref>)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...);<sp/></highlight></codeline>
+<codeline lineno="29" refid="struct_m_i_message_1ac9d8ec2cdfb3a4cc93366b3f5742f527" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_i_constants_8h_1aa6ba957da4da60695d0c8ae85975212a" kindref="member">MessageType</ref><sp/><ref refid="struct_m_i_message_1ac9d8ec2cdfb3a4cc93366b3f5742f527" kindref="member">expectResponse</ref>;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="_m_i_message_8h_1a376f8e2a3b489c100f4dd6fb16ad15d7" kindref="member" tooltip="Structure for Message objects.">Message</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="struct_m_i_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/>*<sp/><ref refid="_m_i_message_8c_1a243ba896755b085ea0415d93bd3c6255" kindref="member" tooltip="Creates a new Message object. This message will be created with object data and not with byte data...">createNewMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct_m_i_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/>*<sp/><ref refid="_m_i_message_8c_1a5b1bc10a9354d0ad365fc55123dba947" kindref="member" tooltip="Gets a Message from another object. Use this to avoid casts.">getMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="struct_m_i_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/>*<sp/><ref refid="_m_i_message_8c_1aca53c5c90c67a7b1c77c93438aa484d9" kindref="member" tooltip="Initialises a Message object from byte data.">createMessageFromByteArray</ref>(<ref refid="struct_m_i_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_message_8c_1a17557bbd8e2e7b7d0736c88df25a389e" kindref="member" tooltip="destroys the memory allocated to a Message object.">destroyMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>FUNCTIONS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MESSAGE_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/Message.h"/>
+  </compounddef>
+</doxygen>

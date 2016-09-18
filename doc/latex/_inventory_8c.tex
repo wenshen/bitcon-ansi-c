@@ -1,0 +1,381 @@
+\hypertarget{_inventory_8c}{
+\section{src/Object/Message/Inventory.c File Reference}
+\label{_inventory_8c}\index{src/Object/Message/Inventory.c@{src/Object/Message/Inventory.c}}
+}
+{\ttfamily \#include \char`\"{}Inventory.h\char`\"{}}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+Include dependency graph for Inventory.c:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_inventory}{Inventory} $\ast$ \hyperlink{_inventory_8c_aa27f1b034d0b3f347729ad2b7d272025}{createNewInventory} (void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_inventory}{Inventory} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_inventory}{Inventory} $\ast$ \hyperlink{_inventory_8c_a47eb1a6a1aa703d8c11ba66a4e13aa18}{createNewInventoryFromData} (\hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_inventory}{Inventory} object from serialised data. \end{DoxyCompactList}\item 
+\hyperlink{struct_inventory}{Inventory} $\ast$ \hyperlink{_inventory_8c_a220bb86f5cc099cc801ddefbbfb7fd32}{getInventory} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_inventory}{Inventory} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_inventory_8c_a1337956e58cd2da10ad5e73eb3287b45}{initializeInventory} (\hyperlink{struct_inventory}{Inventory} $\ast$self, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises an \hyperlink{struct_inventory}{Inventory} object. \end{DoxyCompactList}\item 
+int \hyperlink{_inventory_8c_ae81b1611b0771bb43f45b3c331119db0}{initializeInventoryFromData} (\hyperlink{struct_inventory}{Inventory} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises an \hyperlink{struct_inventory}{Inventory} object from serialised data. \end{DoxyCompactList}\item 
+void \hyperlink{_inventory_8c_a647bf13c10936d1e2f9034517b3b1344}{destroyInventory} (void $\ast$selfIn)
+\begin{DoxyCompactList}\small\item\em destroys an \hyperlink{struct_inventory}{Inventory} object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_inventory_8c_af7dd1d117a24fc256bc4257c6d6b1e11}{calculateInventoryLength} (\hyperlink{struct_inventory}{Inventory} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Calculates the length needed to serialise the object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_inventory_8c_a62e028868025b8a7e77dc71490b135ea}{deserializeInventory} (\hyperlink{struct_inventory}{Inventory} $\ast$self)
+\item 
+uint32\_\-t \hyperlink{_inventory_8c_a67383f9aba234b390c4b5be54019c3f4}{serialiseInventory} (\hyperlink{struct_inventory}{Inventory} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Serialises a \hyperlink{struct_inventory}{Inventory} to the byte data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_inventory_8c_af7dd1d117a24fc256bc4257c6d6b1e11}{
+\index{Inventory.c@{Inventory.c}!calculateInventoryLength@{calculateInventoryLength}}
+\index{calculateInventoryLength@{calculateInventoryLength}!Inventory.c@{Inventory.c}}
+\subsubsection[{calculateInventoryLength}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t calculateInventoryLength (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_af7dd1d117a24fc256bc4257c6d6b1e11}
+
+
+Calculates the length needed to serialise the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory}{Inventory} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{_inventory_8c_af7dd1d117a24fc256bc4257c6d6b1e11_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_aa27f1b034d0b3f347729ad2b7d272025}{
+\index{Inventory.c@{Inventory.c}!createNewInventory@{createNewInventory}}
+\index{createNewInventory@{createNewInventory}!Inventory.c@{Inventory.c}}
+\subsubsection[{createNewInventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ createNewInventory (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_aa27f1b034d0b3f347729ad2b7d272025}
+
+
+Creates a new \hyperlink{struct_inventory}{Inventory} object. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_inventory}{Inventory} object. 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_aa27f1b034d0b3f347729ad2b7d272025_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_a47eb1a6a1aa703d8c11ba66a4e13aa18}{
+\index{Inventory.c@{Inventory.c}!createNewInventoryFromData@{createNewInventoryFromData}}
+\index{createNewInventoryFromData@{createNewInventoryFromData}!Inventory.c@{Inventory.c}}
+\subsubsection[{createNewInventoryFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ createNewInventoryFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_a47eb1a6a1aa703d8c11ba66a4e13aa18}
+
+
+Creates a new \hyperlink{struct_inventory}{Inventory} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & serialised \hyperlink{struct_inventory}{Inventory} data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_inventory}{Inventory} object. 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_a47eb1a6a1aa703d8c11ba66a4e13aa18_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_a62e028868025b8a7e77dc71490b135ea}{
+\index{Inventory.c@{Inventory.c}!deserializeInventory@{deserializeInventory}}
+\index{deserializeInventory@{deserializeInventory}!Inventory.c@{Inventory.c}}
+\subsubsection[{deserializeInventory}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeInventory (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_a62e028868025b8a7e77dc71490b135ea}
+
+
+Definition at line 107 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_a62e028868025b8a7e77dc71490b135ea_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_a647bf13c10936d1e2f9034517b3b1344}{
+\index{Inventory.c@{Inventory.c}!destroyInventory@{destroyInventory}}
+\index{destroyInventory@{destroyInventory}!Inventory.c@{Inventory.c}}
+\subsubsection[{destroyInventory}]{\setlength{\rightskip}{0pt plus 5cm}void destroyInventory (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_a647bf13c10936d1e2f9034517b3b1344}
+
+
+destroys an \hyperlink{struct_inventory}{Inventory} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory}{Inventory} object to destroy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_a647bf13c10936d1e2f9034517b3b1344_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=354pt]{_inventory_8c_a647bf13c10936d1e2f9034517b3b1344_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_a220bb86f5cc099cc801ddefbbfb7fd32}{
+\index{Inventory.c@{Inventory.c}!getInventory@{getInventory}}
+\index{getInventory@{getInventory}!Inventory.c@{Inventory.c}}
+\subsubsection[{getInventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ getInventory (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_a220bb86f5cc099cc801ddefbbfb7fd32}
+
+
+Gets a \hyperlink{struct_inventory}{Inventory} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_inventory}{Inventory} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_inventory}{Inventory} object. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Inventory.c.
+
+\hypertarget{_inventory_8c_a1337956e58cd2da10ad5e73eb3287b45}{
+\index{Inventory.c@{Inventory.c}!initializeInventory@{initializeInventory}}
+\index{initializeInventory@{initializeInventory}!Inventory.c@{Inventory.c}}
+\subsubsection[{initializeInventory}]{\setlength{\rightskip}{0pt plus 5cm}int initializeInventory (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{self, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_a1337956e58cd2da10ad5e73eb3287b45}
+
+
+Initialises an \hyperlink{struct_inventory}{Inventory} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory}{Inventory} object to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+one on success, zero on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_a1337956e58cd2da10ad5e73eb3287b45_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{_inventory_8c_a1337956e58cd2da10ad5e73eb3287b45_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_ae81b1611b0771bb43f45b3c331119db0}{
+\index{Inventory.c@{Inventory.c}!initializeInventoryFromData@{initializeInventoryFromData}}
+\index{initializeInventoryFromData@{initializeInventoryFromData}!Inventory.c@{Inventory.c}}
+\subsubsection[{initializeInventoryFromData}]{\setlength{\rightskip}{0pt plus 5cm}int initializeInventoryFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_ae81b1611b0771bb43f45b3c331119db0}
+
+
+Initialises an \hyperlink{struct_inventory}{Inventory} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory}{Inventory} object to initialise \\
+\hline
+{\em data} & The serialised data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+one on success, zero on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_ae81b1611b0771bb43f45b3c331119db0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_ae81b1611b0771bb43f45b3c331119db0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_8c_a67383f9aba234b390c4b5be54019c3f4}{
+\index{Inventory.c@{Inventory.c}!serialiseInventory@{serialiseInventory}}
+\index{serialiseInventory@{serialiseInventory}!Inventory.c@{Inventory.c}}
+\subsubsection[{serialiseInventory}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t serialiseInventory (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_8c_a67383f9aba234b390c4b5be54019c3f4}
+
+
+Serialises a \hyperlink{struct_inventory}{Inventory} to the byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory}{Inventory} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length written on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file Inventory.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_8c_a67383f9aba234b390c4b5be54019c3f4_cgraph}
+\end{center}
+\end{figure}
+
+

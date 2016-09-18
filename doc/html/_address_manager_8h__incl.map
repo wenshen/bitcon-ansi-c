@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$_peer_8h.html" title="Contains data for managing peer connections. Inherits NetworkAddress." alt="" coords="179,83,237,112"/>
+<area shape="rect" id="node13" href="$_network_functions_8h.html" title="NetworkFunctions.h" alt="" coords="327,315,465,344"/>
+<area shape="rect" id="node30" href="$_address_broadcast_8h.html" title="Message for broadcasting NetworkAddresses over the network. This is used to share socket information ..." alt="" coords="328,160,467,189"/>
+<area shape="rect" id="node9" href="$_network_address_8h.html" title="Contains IP, time, port and services information for a peer as well as data and code for managing ind..." alt="" coords="156,237,287,267"/>
+<area shape="rect" id="node23" href="$_version_8h.html" title="Contains infromation relating to the version of a peer, the timestamp, features, IPs, user agent and last block recieved. Inherits Message." alt="" coords="93,160,171,189"/>
+</map>

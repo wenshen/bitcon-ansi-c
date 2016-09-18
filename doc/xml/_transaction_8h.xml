@@ -1,0 +1,909 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_transaction_8h" kind="file">
+    <compoundname>Transaction.h</compoundname>
+    <includes refid="_message_8h" local="yes">Message.h</includes>
+    <includes refid="_transaction_input_8h" local="yes">TransactionInput.h</includes>
+    <includes refid="_transaction_output_8h" local="yes">TransactionOutput.h</includes>
+    <includes local="yes">../../Utils/Cryptography/Crypt.h</includes>
+    <includedby refid="_block_8h" local="yes">src/Object/Message/Block.h</includedby>
+    <includedby refid="_block_8c" local="yes">src/Object/Message/Block.c</includedby>
+    <includedby refid="_transaction_8c" local="yes">src/Object/Message/Transaction.c</includedby>
+    <incdepgraph>
+      <node id="940">
+        <label>stdint.h</label>
+      </node>
+      <node id="939">
+        <label>stdlib.h</label>
+      </node>
+      <node id="941">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="948">
+        <label>../../Utils/Cryptography/Crypt.h</label>
+      </node>
+      <node id="938">
+        <label>Message.h</label>
+        <link refid="_message_8h"/>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+      </node>
+      <node id="946">
+        <label>../Script.h</label>
+      </node>
+      <node id="947">
+        <label>TransactionOutput.h</label>
+        <link refid="_transaction_output_8h"/>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+      </node>
+      <node id="945">
+        <label>TransactionInput.h</label>
+        <link refid="_transaction_input_8h"/>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+      </node>
+      <node id="942">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="943">
+        <label>../Object.h</label>
+      </node>
+      <node id="944">
+        <label>../../Utils/VariableLengthInteger/VarLenInt.h</label>
+      </node>
+      <node id="937">
+        <label>src/Object/Message/Transaction.h</label>
+        <link refid="Transaction.h"/>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="951">
+        <label>src/Object/Message/Block.c</label>
+        <link refid="_block_8c"/>
+      </node>
+      <node id="950">
+        <label>src/Object/Message/Block.h</label>
+        <link refid="_block_8h"/>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+      </node>
+      <node id="953">
+        <label>src/Object/Message/BlockHeaders.c</label>
+        <link refid="_block_headers_8c"/>
+      </node>
+      <node id="954">
+        <label>src/Object/Message/Transaction.c</label>
+        <link refid="_transaction_8c"/>
+      </node>
+      <node id="952">
+        <label>src/Object/Message/BlockHeaders.h</label>
+        <link refid="_block_headers_8h"/>
+        <childnode refid="953" relation="include">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>src/Object/Message/Transaction.h</label>
+        <link refid="Transaction.h"/>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_transaction" prot="public">Transaction</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_transaction_8h_1aba0a0fb2c7e640e21f08789d32e9e00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+        <definition>Transaction* createNewTransaction</definition>
+        <argsstring>(uint32_t lockTime, uint32_t version, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewTransaction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>lockTime</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_transaction" kindref="compound">Transaction</ref> object with no inputs or outputs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lockTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestamp which determines if this transaction is locked. 0 means the transaction is always locked; values &lt; 500000000 indicate the block number at which this transaction is locked while values &gt;= 500000000 indicate the UNIX timestamp at which this transaction is locked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_transaction" kindref="compound">Transaction</ref> data format version </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="47" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="18" bodyend="40"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_transaction_8c_1a91aa96a9a93b93454bb80d1ffe1cf6a3" compoundref="_transaction_8c" startline="124" endline="140">destroyTransaction</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_transaction_8c_1a8b4afb98a5293ab312e547381ea0cf31" compoundref="_transaction_8c" startline="61" endline="91">setUpTransactionData</references>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1afc8f7c9bb8194bba913dd2dd59963cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+        <definition>Transaction* createNewTransactionFromByteArray</definition>
+        <argsstring>(ByteArray *bytes, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewTransactionFromByteArray</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_transaction" kindref="compound">Transaction</ref> object from byte data. Should be serialised for object data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of bytes to be used for creation of transaction </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="56" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="42" bodyend="58"/>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_transaction_8c_1ab6777f2e913778848e00c770ef6f4e8f" compoundref="_transaction_8c" startline="93" endline="121">setUpTransactionDataUsingByteArray</references>
+        <referencedby refid="_block_8h_1a219df1f8f05a691f09e283731eb86129" compoundref="_block_8c" startline="321" endline="384">deserializeWithTransactions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a8b4afb98a5293ab312e547381ea0cf31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setUpTransactionData</definition>
+        <argsstring>(Transaction *self, uint32_t lockTime, uint32_t version, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>setUpTransactionData</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>lockTime</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Sets up the fields of a <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object whose fields are to be set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lockTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestamp which determines if this transaction is locked. 0 means the transaction is always locked; values &lt; 500000000 indicate the block number at which this transaction is locked while values &gt;= 500000000 indicate the UNIX timestamp at which this transaction is locked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_transaction" kindref="compound">Transaction</ref> data format version </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="67" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="61" bodyend="91"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="struct_message_1accc3616411ea4a5035a7eaf42132d370" compoundref="_message_8h" startline="36">Message::expectResponse</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="struct_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_object_8h" startline="30">Object::referenceCount</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_transaction_8h_1aba0a0fb2c7e640e21f08789d32e9e00d" compoundref="_transaction_8c" startline="18" endline="40">createNewTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1ab6777f2e913778848e00c770ef6f4e8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setUpTransactionDataUsingByteArray</definition>
+        <argsstring>(Transaction *self, ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>setUpTransactionDataUsingByteArray</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Sets up the fields of a <ref refid="struct_transaction" kindref="compound">Transaction</ref> object using a byteArray object that was passed in. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of bytes to be used for creation of transaction </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="76" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="93" bodyend="121"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="struct_message_1accc3616411ea4a5035a7eaf42132d370" compoundref="_message_8h" startline="36">Message::expectResponse</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_object_8c" startline="81" endline="92">incrementReferenceCount</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="struct_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_object_8h" startline="30">Object::referenceCount</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_transaction_8h_1afc8f7c9bb8194bba913dd2dd59963cef" compoundref="_transaction_8c" startline="42" endline="58">createNewTransactionFromByteArray</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1aecc3b8b92bc3a7b8e123a6c844ba686b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyTransaction</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyTransaction</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+          <defname>transaction</defname>
+        </param>
+        <briefdescription>
+<para>Destructor; destroys a <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="84" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="124" bodyend="140"/>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_message_8c_1ac2c2a78178aac5f9f228b51d01bf5fe3" compoundref="_message_8c" startline="145" endline="154">destroyMessage</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <referencedby refid="_transaction_8h_1aba0a0fb2c7e640e21f08789d32e9e00d" compoundref="_transaction_8c" startline="18" endline="40">createNewTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a22357a0c104f0df0ad3782b8ac315988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+        <definition>Transaction* getTransaction</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getTransaction</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_transaction" kindref="compound">Transaction</ref> from another object. Use this to avoid explicit casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_transaction" kindref="compound">Transaction</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="92" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a9f5182216a9c58f852312bd344f63403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int addTransactionInput</definition>
+        <argsstring>(Transaction *self, TransactionInput *input)</argsstring>
+        <name>addTransactionInput</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Adds a <ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> to a <ref refid="struct_transaction" kindref="compound">Transaction</ref> <ref refid="struct_object" kindref="compound">Object</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> object to add to the self <ref refid="struct_transaction" kindref="compound">Transaction</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the transaction input was added successfully and 0 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="101" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="151" bodyend="169"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_object_8c" startline="81" endline="92">incrementReferenceCount</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a2866b6a572ebe0f9ee0bbb4da87dfc67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int addTransactionOutput</definition>
+        <argsstring>(Transaction *self, TransactionOutput *output)</argsstring>
+        <name>addTransactionOutput</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Adds an <ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> to the <ref refid="struct_transaction" kindref="compound">Transaction</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> object to add to the self <ref refid="struct_transaction" kindref="compound">Transaction</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the transaction output was added successfully and 0 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="109" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="171" bodyend="189"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_object_8c" startline="81" endline="92">incrementReferenceCount</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1ae53ed930910256b4620da39ebdcccdb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calculateTransactionHash</definition>
+        <argsstring>(Transaction *self)</argsstring>
+        <name>calculateTransactionHash</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="116" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="191" bodyend="200"/>
+        <references refid="_byte_array_8c_1aceedce9c30c691b211185ee9b454aae4" compoundref="_byte_array_8c" startline="74" endline="78">getByteArrayData</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" compoundref="_crypt_8c" startline="42" endline="49">Sha256</references>
+        <referencedby refid="_transaction_8h_1af8e635c7261eba22e033c06b72034b1b" compoundref="_transaction_8c" startline="202" endline="211">getTransactionHash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1af8e635c7261eba22e033c06b72034b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* getTransactionHash</definition>
+        <argsstring>(Transaction *self)</argsstring>
+        <name>getTransactionHash</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. This should be serialised. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The hash for the transaction. This is a 32 byte long, double SHA-256 hash and is a pointer to the hash field in the transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="124" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="202" bodyend="211"/>
+        <references refid="_transaction_8c_1ae53ed930910256b4620da39ebdcccdb5" compoundref="_transaction_8c" startline="191" endline="200">calculateTransactionHash</references>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1aff3a066c4c34af38546b99604e65afcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t calculateTransactionLength</definition>
+        <argsstring>(Transaction *self)</argsstring>
+        <name>calculateTransactionLength</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the length of an <ref refid="struct_transaction" kindref="compound">Transaction</ref>; this is needed to serialise the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length of the <ref refid="struct_transaction" kindref="compound">Transaction</ref> on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="132" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="213" bodyend="246"/>
+        <references refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" compoundref="_var_len_int_8c" startline="82" endline="94">getSizeOfVarLenInt</references>
+        <references refid="_constants_8h_1a06a84fe331713101601f06ed6250f154ae42718094e3f4915b4c9d88ccfe1ee69" compoundref="_constants_8h" startline="110">TX_INPUT_FIELD_SIZE_EXCLUDING_SCRIPT</references>
+        <references refid="_constants_8h_1a06a84fe331713101601f06ed6250f154a2082e1c13c6f471f2e0b6d96e8f5cb22" compoundref="_constants_8h" startline="109">TX_LOCKTIME_FIELD_SIZE</references>
+        <references refid="_constants_8h_1a06a84fe331713101601f06ed6250f154a68f731175d82cdb20ce0dd76ca7dac04" compoundref="_constants_8h" startline="111">TX_OUTPUT_FIELD_SIZE_EXCLUDING_SCRIPT</references>
+        <references refid="_constants_8h_1a06a84fe331713101601f06ed6250f154a9716b199cb6dd754756e54de765767ef" compoundref="_constants_8h" startline="108">TX_VERSION_FIELD_SIZE</references>
+        <referencedby refid="_block_8h_1a396c1436f34175841933aa2b7cc102e8" compoundref="_block_8c" startline="248" endline="263">calculateBlockLength</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1ad8a53667fdc74c2b586f973123e15cf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isCoinBase</definition>
+        <argsstring>(Transaction *self)</argsstring>
+        <name>isCoinBase</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Determines if a transaction is a coinbase transaction or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the transaction is a coin-base transaction or 0 if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="140" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="248" bodyend="257"/>
+        <references refid="_byte_array_8c_1a67c61be339ec259b4629e4b65d7ae510" compoundref="_byte_array_8c" startline="43" endline="52">isNullByteArray</references>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a61a0f76473a17de64dcecc04a3ce3b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t serializeTransaction</definition>
+        <argsstring>(Transaction *self)</argsstring>
+        <name>serializeTransaction</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Serialises a <ref refid="struct_transaction" kindref="compound">Transaction</ref> to byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="147" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="259" bodyend="382"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" compoundref="_var_len_int_8c" startline="71" endline="80">createVarLenIntFromUInt64</references>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <references refid="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" compoundref="_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d" compoundref="_constants_8h" startline="41">ERROR_MESSAGE_SERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e" compoundref="_constants_8h" startline="42">ERROR_MESSAGE_SERIALISATION_NULL_BYTES</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_transaction_input_8c_1addbcc4dbb795f83dc6354fb1cd090858" compoundref="_transaction_input_8c" startline="134" endline="175">serializeTransactionInput</references>
+        <references refid="_transaction_output_8c_1ae0ec9ca1d590685385987b26fbded266" compoundref="_transaction_output_8c" startline="127" endline="165">serializeTransactionOutput</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="_byte_array_8c_1ab7e0f883b2d3ff4d4b253f4257f6916a" compoundref="_byte_array_8c" startline="337" endline="347">writeInt32AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_block_8h_1aeb72d715416153dbd72e8f876fb19981" compoundref="_block_8c" startline="499" endline="532">dealWithSerializationTran</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1ada5d9c85c4dc1ff7384ee49d6fd97ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeTransaction</definition>
+        <argsstring>(Transaction *self)</argsstring>
+        <name>deserializeTransaction</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Deserialises a <ref refid="struct_transaction" kindref="compound">Transaction</ref> so that it can be used as an object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="156" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="384" bodyend="534"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_transaction_input_8c_1a0a0421045b605a3baf534d5f32fc60f5" compoundref="_transaction_input_8c" startline="43" endline="61">createNewTransactionInputFromData</references>
+        <references refid="_transaction_output_8c_1a6ca6fea2d59ae206ba291cc0e9f2302c" compoundref="_transaction_output_8c" startline="40" endline="60">createNewTransactionOutputFromData</references>
+        <references refid="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" compoundref="_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</references>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_transaction_input_8c_1a99fd2ba56d0e215ad42975d7091abbe7" compoundref="_transaction_input_8c" startline="177" endline="225">deserializeTransactionInput</references>
+        <references refid="_transaction_output_8c_1a484844cadde17ce53f58dcf0fceb52b2" compoundref="_transaction_output_8c" startline="167" endline="235">deserializeTransactionOutput</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26" compoundref="_constants_8h" startline="40">ERROR_MESSAGE_DESERIALISATION_NULL_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_byte_array_8c_1a6fe303a6a14235d60ef9024a1463d630" compoundref="_byte_array_8c" startline="231" endline="243">readInt32AsLittleEndianFromByteArray</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_block_8h_1a219df1f8f05a691f09e283731eb86129" compoundref="_block_8c" startline="321" endline="384">deserializeWithTransactions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1afe08b91a59f175e55d9ca049e46749c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826" kindref="member">TransactionHashStatus</ref></type>
+        <definition>TransactionHashStatus getTransactionInputHashForVerification</definition>
+        <argsstring>(void *vself, ByteArray *prevOutSubScript, uint32_t input, SignatureType signType, uint8_t *hash)</argsstring>
+        <name>getTransactionInputHashForVerification</name>
+        <param>
+          <type>void *</type>
+          <declname>vself</declname>
+          <defname>txIn</defname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>prevOutSubScript</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50" kindref="member">SignatureType</ref></type>
+          <declname>signType</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+<para>Gets the hash for signing or signature checking for a transaction input. The transaction input needs to contain the outPointerHash, outPointerIndex and sequence. If these are modifed afterwards then the signiture is invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>TRANSACTION SIGNING</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vself</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prevOutSubScript</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sub script from the output. Must be the correct one or the signiture will be invalid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the input to sign. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of signature to get the data for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 32 byte data hash for signing or checking signatures. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>_TX_HASH_OK if the hash has been retreived with no problems. _TX_HASH_BAD is returned if the hash is invalid and _TX_HASH_ERR is returned upon an error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="169" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="536" bodyend="680"/>
+        <references refid="_byte_array_8c_1a7c9e6ea6d3022a2e858e91e207be9ec2" compoundref="_byte_array_8c" startline="28" endline="35">copyByteArrayToByteArray</references>
+        <references refid="_byte_array_8c_1ae7051cc025f26ae1c8ddf6e4f7fef597" compoundref="_byte_array_8c" startline="400" endline="412">createNewByteArrayOfSize</references>
+        <references refid="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" compoundref="_var_len_int_8c" startline="71" endline="80">createVarLenIntFromUInt64</references>
+        <references refid="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" compoundref="_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5aa0f84dd7d9cade49146fdd0404c4db1b" compoundref="_constants_8h" startline="47">ERROR_TRANSACTION_FEW_INPUTS</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a226e62209c94457dbd3935a604bb56ce" compoundref="_constants_8h" startline="48">ERROR_TRANSACTION_FEW_OUTPUTS</references>
+        <references refid="_byte_array_8c_1a3c6396093509698d1346474653f63421" compoundref="_byte_array_8c" startline="61" endline="66">getByteArray</references>
+        <references refid="_byte_array_8c_1aceedce9c30c691b211185ee9b454aae4" compoundref="_byte_array_8c" startline="74" endline="78">getByteArrayData</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" compoundref="_var_len_int_8c" startline="82" endline="94">getSizeOfVarLenInt</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" compoundref="_crypt_8c" startline="42" endline="49">Sha256</references>
+        <references refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50a9412c721b741fe9be1e3247dc390a4d2" compoundref="_constants_8h" startline="101">SIGHASH_ANYONECANPAY</references>
+        <references refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50acaba9b1f029a1628196345fce5667f6f" compoundref="_constants_8h" startline="99">SIGHASH_NONE</references>
+        <references refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50ad9bb96e76cf9f1b6ebbf50373f4f9ca5" compoundref="_constants_8h" startline="100">SIGHASH_SINGLE</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826ab8cb7847f95d8209bd64c5bd4cdce830" compoundref="_constants_8h" startline="83">TX_HASH_BAD</references>
+        <references refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826ae372182e92ec6fd8774695846b3d8845" compoundref="_constants_8h" startline="84">TX_HASH_FAIL</references>
+        <references refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826a9f46366755423a053481edc37bd853d0" compoundref="_constants_8h" startline="82">TX_HASH_GOOD</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <references refid="_byte_array_8c_1ab7e0f883b2d3ff4d4b253f4257f6916a" compoundref="_byte_array_8c" startline="337" endline="347">writeInt32AsLittleEndianIntoByteArray</references>
+        <references refid="_byte_array_8c_1a7bed1ea7fa0945a98bc4548d72236446" compoundref="_byte_array_8c" startline="357" endline="371">writeInt64AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a3d1e0083f13a4dda3379c8d3ee09f681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int takeTransactionInput</definition>
+        <argsstring>(Transaction *self, TransactionInput *input)</argsstring>
+        <name>takeTransactionInput</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Adds an <ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> to the <ref refid="struct_transaction" kindref="compound">Transaction</ref> without retaining it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the transaction input was taken successfully and false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="176" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="682" bodyend="690"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="_transaction_8h_1a8fa466341405fd04bf4c1b65dab6c1d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int takeTransactionOutput</definition>
+        <argsstring>(Transaction *self, TransactionOutput *output)</argsstring>
+        <name>takeTransactionOutput</name>
+        <param>
+          <type><ref refid="struct_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Adds an <ref refid="struct_transaction_input" kindref="compound">TransactionInput</ref> to the CBTransaction without retaining it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the transaction output was taken successfully and false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h" line="183" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.c" bodystart="692" bodyend="700"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="struct_transaction" kindref="compound">Transaction</ref> object. </para>    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="struct_transaction" kindref="compound">Transaction</ref> object handles all details of transactions such as hashing, serialization and deserialization, transaction inputs and transaction outputs. It also handles locking, versioning and calculating the length of transactions. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Transcation.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>03/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor">#ifndef<sp/>TRANSACTION_H_</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANSACTION_H_</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_message_8h" kindref="compound" tooltip="Header file for the Message object.">Message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_transaction_input_8h" kindref="compound" tooltip="TransactionInput object.">TransactionInput.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_transaction_output_8h" kindref="compound">TransactionOutput.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Utils/Cryptography/Crypt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="struct_transaction" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="struct_transaction_1a8987f797adf70c3e174fd64cc68bc933" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/><ref refid="struct_transaction_1a8987f797adf70c3e174fd64cc68bc933" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="30" refid="struct_transaction_1a7ff9da008bf055da1f1ba994c562057d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>hash[32];<sp/></highlight></codeline>
+<codeline lineno="31" refid="struct_transaction_1acd99bb05ca015e7d74448acb1deba7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_transaction_1acd99bb05ca015e7d74448acb1deba7ca" kindref="member">version</ref>;<sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_transaction_1ab67f7dee599d2ca5988caa53883a44ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_transaction_1ab67f7dee599d2ca5988caa53883a44ed" kindref="member">numOfTransactionInput</ref>;<sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_transaction_1a00cc03d624a6aef1bfeadcbe9dcde0fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_transaction_input" kindref="compound" tooltip="contains PreviousOutput structure and Example of the structure: { prev_out: { hash: &amp;quot;0000000000000000...">TransactionInput</ref><sp/>**<sp/><ref refid="struct_transaction_1a00cc03d624a6aef1bfeadcbe9dcde0fe" kindref="member">inputs</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="struct_transaction_1aeeae027bddb846b239fd05e203c0c62a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_transaction_1aeeae027bddb846b239fd05e203c0c62a" kindref="member">numOfTransactionOutput</ref>;<sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_transaction_1a0f4d7ecc12680c61da7267851e819cf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref><sp/>**<sp/><ref refid="struct_transaction_1a0f4d7ecc12680c61da7267851e819cf0" kindref="member">outputs</ref>;<sp/></highlight></codeline>
+<codeline lineno="36" refid="struct_transaction_1aea4d95211b00c311b2d84c6177429162" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_transaction_1aea4d95211b00c311b2d84c6177429162" kindref="member">lockTime</ref>;<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/><ref refid="struct_transaction" kindref="compound">Transaction</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/><ref refid="_transaction_8c_1a94308d85e276cb9ab43e0e9999bf1c8f" kindref="member" tooltip="Creates a new Transaction object with no inputs or outputs.">createNewTransaction</ref>(uint32_t<sp/>lockTime,<sp/>uint32_t<sp/>version,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/><ref refid="_transaction_8c_1ab0db123c7d162c729b348cfb2333fd81" kindref="member" tooltip="Creates a new Transaction object from byte data. Should be serialised for object data.">createNewTransactionFromByteArray</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1a8b4afb98a5293ab312e547381ea0cf31" kindref="member" tooltip="Sets up the fields of a Transaction object.">setUpTransactionData</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint32_t<sp/>lockTime,<sp/>uint32_t<sp/>version,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1ab6777f2e913778848e00c770ef6f4e8f" kindref="member" tooltip="Sets up the fields of a Transaction object using a byteArray object that was passed in...">setUpTransactionDataUsingByteArray</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1a91aa96a9a93b93454bb80d1ffe1cf6a3" kindref="member" tooltip="Destructor; destroys a Transaction object.">destroyTransaction</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/><ref refid="_transaction_8c_1a80f9bfc2764ef95e994f17f226c71f4e" kindref="member" tooltip="Gets a Transaction from another object. Use this to avoid explicit casts.">getTransaction</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1a9f5182216a9c58f852312bd344f63403" kindref="member" tooltip="Adds a TransactionInput to a Transaction Object.">addTransactionInput</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_transaction_input" kindref="compound" tooltip="contains PreviousOutput structure and Example of the structure: { prev_out: { hash: &amp;quot;0000000000000000...">TransactionInput</ref><sp/>*<sp/>input);</highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1a2866b6a572ebe0f9ee0bbb4da87dfc67" kindref="member" tooltip="Adds an TransactionOutput to the Transaction.">addTransactionOutput</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref><sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1ae53ed930910256b4620da39ebdcccdb5" kindref="member">calculateTransactionHash</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">uint8_t<sp/>*<sp/><ref refid="_transaction_8c_1afbe2459a4ad9dc2a82257b21c9d215bf" kindref="member" tooltip="Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached...">getTransactionHash</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">uint32_t<sp/><ref refid="_transaction_8c_1aceb60074b6ebe66ad03d563c53c1b210" kindref="member" tooltip="Calculates the length of an Transaction; this is needed to serialise the object.">calculateTransactionLength</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1ad8a53667fdc74c2b586f973123e15cf3" kindref="member" tooltip="Determines if a transaction is a coinbase transaction or not.">isCoinBase</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">uint32_t<sp/><ref refid="_transaction_8c_1a61a0f76473a17de64dcecc04a3ce3b5f" kindref="member" tooltip="Serialises a Transaction to byte data.">serializeTransaction</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">uint32_t<sp/><ref refid="_transaction_8c_1ada5d9c85c4dc1ff7384ee49d6fd97ff8" kindref="member" tooltip="Deserialises a Transaction so that it can be used as an object.">deserializeTransaction</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826" kindref="member">TransactionHashStatus</ref><sp/><ref refid="_transaction_8c_1a5bc3cb0f58d027cc53fb21f90cc69588" kindref="member" tooltip="Gets the hash for signing or signature checking for a transaction input. The transaction input needs ...">getTransactionInputHashForVerification</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>vself,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>prevOutSubScript,<sp/>uint32_t<sp/>input,<sp/><ref refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50" kindref="member">SignatureType</ref><sp/>signType,<sp/>uint8_t<sp/>*<sp/>hash);</highlight></codeline>
+<codeline lineno="176"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1a3d1e0083f13a4dda3379c8d3ee09f681" kindref="member" tooltip="Adds an TransactionInput to the Transaction without retaining it.">takeTransactionInput</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_transaction_input" kindref="compound" tooltip="contains PreviousOutput structure and Example of the structure: { prev_out: { hash: &amp;quot;0000000000000000...">TransactionInput</ref><sp/>*<sp/>input);</highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_transaction_8c_1a8fa466341405fd04bf4c1b65dab6c1d6" kindref="member" tooltip="Adds an TransactionInput to the CBTransaction without retaining it.">takeTransactionOutput</ref>(<ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_transaction_output" kindref="compound">TransactionOutput</ref><sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Transaction.h"/>
+  </compounddef>
+</doxygen>

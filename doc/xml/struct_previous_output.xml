@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_previous_output" kind="struct" prot="public">
+    <compoundname>PreviousOutput</compoundname>
+    <includes refid="_transaction_input_8h" local="no">TransactionInput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_previous_output_1a5695540112ce950745e15ab422b3f067" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hash of the transaction that includes the output for this input </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionInput.h" line="34" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_previous_output_1aafd95f8c7a99b9189ede7cdf0871ebe8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The index of the output for this input </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionInput.h" line="35" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>contains hash of the transaction and the number of outputs. Example of the structure: { hash: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;, n: 4294967295 } </para>    </briefdescription>
+    <detaileddescription>
+<para>to help with prev_out </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="363">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="364">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="362">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="363" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="364" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="361">
+        <label>PreviousOutput</label>
+        <link refid="struct_previous_output"/>
+        <childnode refid="362" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionInput.h" line="33" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="33" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_previous_output_1a5695540112ce950745e15ab422b3f067" prot="public" virt="non-virtual"><scope>PreviousOutput</scope><name>hash</name></member>
+      <member refid="struct_previous_output_1aafd95f8c7a99b9189ede7cdf0871ebe8" prot="public" virt="non-virtual"><scope>PreviousOutput</scope><name>index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

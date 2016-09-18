@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_d92552deecf1230ee403cdca293d1cbe" kind="dir">
+    <compoundname>Object/Message/</compoundname>
+    <innerfile refid="_m_i_block_8c">Block.c</innerfile>
+    <innerfile refid="_m_i_block_8h">Block.h</innerfile>
+    <innerfile refid="_m_i_message_8c">Message.c</innerfile>
+    <innerfile refid="_m_i_message_8h">Message.h</innerfile>
+    <innerfile refid="_m_i_transaction_8c">Transaction.c</innerfile>
+    <innerfile refid="_m_i_transaction_8h">Transaction.h</innerfile>
+    <innerfile refid="_m_i_transaction_input_8c">TransactionInput.c</innerfile>
+    <innerfile refid="_m_i_transaction_input_8h">TransactionInput.h</innerfile>
+    <innerfile refid="_m_i_transaction_output_8c">TransactionOutput.c</innerfile>
+    <innerfile refid="_m_i_transaction_output_8h">TransactionOutput.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/"/>
+  </compounddef>
+</doxygen>

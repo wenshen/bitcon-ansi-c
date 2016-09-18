@@ -1,0 +1,59 @@
+.TH "GetBlocks" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GetBlocks \- 
+.PP
+Structure for \fBGetBlocks\fP objects.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GetBlocks.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBChainDescriptor\fP * \fBchainDescriptor\fP"
+.br
+.ti -1c
+.RI "\fBByteArray\fP * \fBstopAtHash\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for \fBGetBlocks\fP objects. 
+
+\fBSee also:\fP
+.RS 4
+\fBGetBlocks.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file GetBlocks.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBMessage\fP \fBbase\fP"\fBMessage\fP base structure 
+.PP
+Definition at line 23 of file GetBlocks.h.
+.SS "\fBChainDescriptor\fP* \fBchainDescriptor\fP"\fBChainDescriptor\fP for determining what blocks are needed. 
+.PP
+Definition at line 25 of file GetBlocks.h.
+.SS "\fBByteArray\fP* \fBstopAtHash\fP"The block hash to stop at when retreiving an inventory. Else up to 500 block hashes can be given. 
+.PP
+Definition at line 26 of file GetBlocks.h.
+.SS "uint32_t \fBversion\fP"Protocol version for this message 
+.PP
+Definition at line 24 of file GetBlocks.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

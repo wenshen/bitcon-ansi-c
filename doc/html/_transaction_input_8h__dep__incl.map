@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_transaction_8h.html" title="Transaction object." alt="" coords="139,83,360,112"/>
+<area shape="rect" id="node14" href="$_transaction_8c.html" title="src/Object/Message/Transaction.c" alt="" coords="347,160,568,189"/>
+<area shape="rect" id="node17" href="$_transaction_input_8c.html" title="src/Object/Message/TransactionInput.c" alt="" coords="475,83,725,112"/>
+<area shape="rect" id="node5" href="$_block_8h.html" title="This file defines a bitcoin block." alt="" coords="136,160,323,189"/>
+<area shape="rect" id="node7" href="$_block_8c.html" title="This file defines a bitcoin block." alt="" coords="5,237,192,267"/>
+<area shape="rect" id="node9" href="$_block_headers_8h.html" title="A message used to send and receive block headers. Inherits Message." alt="" coords="216,237,451,267"/>
+<area shape="rect" id="node11" href="$_block_headers_8c.html" title="src/Object/Message/BlockHeaders.c" alt="" coords="216,315,451,344"/>
+</map>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_header_spck" kind="struct" prot="public">
+    <compoundname>HeaderSpck</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_header_spck_1a9d86e57aaa1003de664fdbe3fe6bc35a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int startCount</definition>
+        <argsstring></argsstring>
+        <name>startCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="138" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_header_spck_1afb278e99e58307608e33751cd490c97b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hashStart[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hashStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="139" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_header_spck_1aa16ea670ce42c626f461fc49f74ddcd3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hashStop[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hashStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="140" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="137" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="137" bodyend="142"/>
+    <listofallmembers>
+      <member refid="struct_header_spck_1afb278e99e58307608e33751cd490c97b" prot="public" virt="non-virtual"><scope>HeaderSpck</scope><name>hashStart</name></member>
+      <member refid="struct_header_spck_1aa16ea670ce42c626f461fc49f74ddcd3" prot="public" virt="non-virtual"><scope>HeaderSpck</scope><name>hashStop</name></member>
+      <member refid="struct_header_spck_1a9d86e57aaa1003de664fdbe3fe6bc35a" prot="public" virt="non-virtual"><scope>HeaderSpck</scope><name>startCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

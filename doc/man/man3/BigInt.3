@@ -1,0 +1,40 @@
+.TH "BigInt" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BigInt \- 
+.PP
+Contains byte data with the length of this data to represent a large integer. The byte data is in little-endian which stores the smallest byte first. On an error data is set to NULL and length is 0.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BigInt.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t * \fBdata\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBlength\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains byte data with the length of this data to represent a large integer. The byte data is in little-endian which stores the smallest byte first. On an error data is set to NULL and length is 0. 
+.PP
+Definition at line 19 of file BigInt.h.
+.SH "Field Documentation"
+.PP 
+.SS "uint8_t* \fBdata\fP"The byte data. Should be little-endian 
+.PP
+Definition at line 20 of file BigInt.h.
+.SS "uint8_t \fBlength\fP"The length of this data in bytes 
+.PP
+Definition at line 21 of file BigInt.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

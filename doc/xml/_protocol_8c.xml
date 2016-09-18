@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_protocol_8c" kind="file">
+    <compoundname>Protocol.c</compoundname>
+    <includes refid="_protocol_8h" local="yes">Protocol.h</includes>
+    <includes local="no">memory.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdint.h</includes>
+    <incdepgraph>
+      <node id="1043">
+        <label>stdint.h</label>
+      </node>
+      <node id="1040">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1039">
+        <label>memory.h</label>
+      </node>
+      <node id="1042">
+        <label>string.h</label>
+      </node>
+      <node id="1037">
+        <label>src/Object/NetworkProtocol/Protocol.c</label>
+        <link refid="Protocol.c"/>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+        <childnode refid="1043" relation="include">
+        </childnode>
+      </node>
+      <node id="1038">
+        <label>Protocol.h</label>
+        <link refid="_protocol_8h"/>
+      </node>
+      <node id="1041">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_protocol_8c_1a2c0467cf9fa2fae995e257b082e10d3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getPayloadLength</definition>
+        <argsstring>(struct CmdHeaderCheckSum header)</argsstring>
+        <name>getPayloadLength</name>
+        <param>
+          <type>struct <ref refid="struct_cmd_header_check_sum" kindref="compound">CmdHeaderCheckSum</ref></type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.c" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.c" bodystart="25" bodyend="28"/>
+        <references refid="struct_cmd_header_check_sum_1ac8d42bcd4a44e078047ccd7291059238" compoundref="_protocol_8h" startline="53">CmdHeaderCheckSum::length</references>
+      </memberdef>
+      <memberdef kind="function" id="_protocol_8c_1a1106fb2a6f73df3fca89bff4c3432c40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="struct_cmd_version" kindref="compound">CmdVersion</ref></type>
+        <definition>struct CmdVersion parseVersion</definition>
+        <argsstring>(const char *payload)</argsstring>
+        <name>parseVersion</name>
+        <param>
+          <type>const char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.c" line="31" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.c" bodystart="30" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/>Protocol.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>25/10/2012.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Created<sp/>by:<sp/>Prajowal<sp/>Manandhar</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/>Modified<sp/>by:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/><sp/>SEE<sp/>HEADER<sp/>FILE<sp/>FOR<sp/>DOCUMENTATION</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_protocol_8h" kindref="compound" tooltip="This class is responsible for the Protocol functionality described in the Bitcoin.">Protocol.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>Constructor</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_protocol_8c_1a2c0467cf9fa2fae995e257b082e10d3c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_protocol_8c_1a2c0467cf9fa2fae995e257b082e10d3c" kindref="member">getPayloadLength</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_header_check_sum" kindref="compound">CmdHeaderCheckSum</ref><sp/>header)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>header.<ref refid="struct_cmd_header_check_sum_1ac8d42bcd4a44e078047ccd7291059238" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_protocol_8c_1a1106fb2a6f73df3fca89bff4c3432c40" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_version" kindref="compound">CmdVersion</ref><sp/><ref refid="_protocol_8c_1a1106fb2a6f73df3fca89bff4c3432c40" kindref="member">parseVersion</ref>(const<sp/>char<sp/>*payload)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_version" kindref="compound">CmdVersion</ref><sp/>ver;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;ver,<sp/>payload,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ver));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ver;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.c"/>
+  </compounddef>
+</doxygen>

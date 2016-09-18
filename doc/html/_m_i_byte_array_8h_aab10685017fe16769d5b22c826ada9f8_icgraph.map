@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_var_len_int_8h.html#a0492e373e2d12e41b1764b580f287af9" title="Decodes variable size integer from bytes into a VarLenInt structure." alt="" coords="319,100,452,130"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_8h.html#a8777f695fbbb547e32b9c0347b6b2026" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="768,100,933,130"/>
+<area shape="rect" id="node9" href="$_m_i_block_8h.html#a9b85a6f60672aea0471f7b6a7e9930ba" title="Deserializes a Block so that it can be used as an object." alt="" coords="1228,94,1359,123"/>
+<area shape="rect" id="node15" href="$_m_i_transaction_input_8h.html#ad375fb1ac6adc4cfeafc59b89ab811b9" title="Deserialises a TransactionInput so that it can be used as an object." alt="" coords="508,152,703,182"/>
+<area shape="rect" id="node7" href="$_m_i_block_8h.html#a04d2d2defba76492762c0eb4b7ccd206" title="deserializeWithTransactions" alt="" coords="992,94,1179,123"/>
+<area shape="rect" id="node18" href="$_m_i_transaction_output_8h.html#aec03af57e070260915cbf2491802df55" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="503,48,708,78"/>
+<area shape="rect" id="node21" href="$_m_i_block_8h.html#a292775bd99c32b5b2f51b8d71d10812e" title="deserializeWithOnlyHeaders" alt="" coords="757,22,944,51"/>
+<area shape="rect" id="node11" href="$_m_i_block_8h.html#ab4caa099f720462b32d9e74406309b1d" title="Initializes a Block object with the original block for the bitcoin block chain. This will have seri..." alt="" coords="1409,94,1599,123"/>
+<area shape="rect" id="node13" href="$_m_i_block_8c.html#a9eb01377cf0d49ddc3dd988d221ddd76" title="createNewBlockFromOriginalBlock" alt="" coords="1648,94,1888,123"/>
+</map>

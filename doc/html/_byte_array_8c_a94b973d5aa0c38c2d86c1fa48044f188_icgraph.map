@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_var_len_int_8h.html#a4dd8c16aa70756e7ab6c0845a09358af" title="Decodes variable size integer from bytes into a VarLenInt structure." alt="" coords="301,135,421,164"/>
+<area shape="rect" id="node18" href="$_transaction_output_8h.html#a484844cadde17ce53f58dcf0fceb52b2" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="471,213,660,243"/>
+<area shape="rect" id="node5" href="$_transaction_8h.html#ada5d9c85c4dc1ff7384ee49d6fd97ff8" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="727,135,879,164"/>
+<area shape="rect" id="node7" href="$_block_8h.html#a219df1f8f05a691f09e283731eb86129" title="Deserialize With Transaction." alt="" coords="944,57,1131,87"/>
+<area shape="rect" id="node15" href="$_transaction_input_8h.html#a8eb115030448e943f94d8ecff0fa21a9" title="deserializes a TransactionInput so that it can be used as an object" alt="" coords="475,160,656,189"/>
+<area shape="rect" id="node21" href="$_block_8h.html#a2590af8eb87d088e41c0dfff66d41454" title="Deserialize With Transaction." alt="" coords="709,5,896,35"/>
+<area shape="rect" id="node9" href="$_block_8h.html#a9dcdbbf01ad57512119aa46013c7f92e" title="Deserialize the Block." alt="" coords="1179,32,1296,61"/>
+<area shape="rect" id="node11" href="$_block_8h.html#ae50e2e938910d73e027bd2818d27a18b" title="Initialize the Block from ByteArray." alt="" coords="1344,32,1520,61"/>
+<area shape="rect" id="node13" href="$_block_8c.html#a9f12323a1c19b0686bc1b64868a97dc9" title="Create a new Block from a default Block." alt="" coords="1569,32,1793,61"/>
+</map>

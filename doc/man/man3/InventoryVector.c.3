@@ -1,0 +1,172 @@
+.TH "src/Object/Message/InventoryVector.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/InventoryVector.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'InventoryVector.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInventoryVector\fP * \fBcreateNewInventoryVector\fP (\fBInventoryVectorType\fP type, \fBByteArray\fP *hash, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBInventoryVector\fP object. \fP"
+.ti -1c
+.RI "\fBInventoryVector\fP * \fBcreateNewInventoryVectorFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBInventoryVector\fP object from serialised data. \fP"
+.ti -1c
+.RI "\fBInventoryVector\fP * \fBgetInventoryVector\fP (void *self)"
+.br
+.RI "\fIGets a \fBInventoryVector\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitializeInventoryVector\fP (\fBInventoryVector\fP *self, \fBInventoryVectorType\fP type, \fBByteArray\fP *hash, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBInventoryVector\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializeInventoryVectorFromData\fP (\fBInventoryVector\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBInventoryVector\fP object from serialised data. \fP"
+.ti -1c
+.RI "void \fBdestroyInventoryVector\fP (void *selfIn)"
+.br
+.RI "\fIFrees a \fBInventoryVector\fP object. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeInventoryVector\fP (\fBInventoryVector\fP *self)"
+.br
+.RI "\fIDeserialises a \fBInventoryVector\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeInventoryVector\fP (\fBInventoryVector\fP *self)"
+.br
+.RI "\fISerialises a \fBInventoryVector\fP to the byte data. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBInventoryVector\fP* createNewInventoryVector (\fBInventoryVectorType\fPtype, \fBByteArray\fP *hash, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBInventoryVector\fP object. \fBReturns:\fP
+.RS 4
+A new \fBInventoryVector\fP object. 
+.RE
+.PP
+
+.PP
+<assign destructor function to object 
+.PP
+Definition at line 13 of file InventoryVector.c.
+.SS "\fBInventoryVector\fP* createNewInventoryVectorFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBInventoryVector\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIdata\fP Serialised \fBInventoryVector\fP data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBInventoryVector\fP object. 
+.RE
+.PP
+
+.PP
+<assign destructor function to object 
+.PP
+Definition at line 36 of file InventoryVector.c.
+.SS "uint32_t deserializeInventoryVector (\fBInventoryVector\fP *self)"
+.PP
+Deserialises a \fBInventoryVector\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventoryVector\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file InventoryVector.c.
+.SS "void destroyInventoryVector (void *self)"
+.PP
+Frees a \fBInventoryVector\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventoryVector\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 96 of file InventoryVector.c.
+.SS "\fBInventoryVector\fP* getInventoryVector (void *self)"
+.PP
+Gets a \fBInventoryVector\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBInventoryVector\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBInventoryVector\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file InventoryVector.c.
+.SS "int initializeInventoryVector (\fBInventoryVector\fP *self, \fBInventoryVectorType\fPtype, \fBByteArray\fP *hash, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBInventoryVector\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventoryVector\fP object to initialise 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file InventoryVector.c.
+.SS "int initializeInventoryVectorFromData (\fBInventoryVector\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBInventoryVector\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventoryVector\fP object to initialise 
+.br
+\fIdata\fP The serialised data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file InventoryVector.c.
+.SS "uint32_t serializeInventoryVector (\fBInventoryVector\fP *self)"
+.PP
+Serialises a \fBInventoryVector\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventoryVector\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file InventoryVector.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

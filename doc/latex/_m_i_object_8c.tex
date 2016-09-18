@@ -1,0 +1,206 @@
+\hypertarget{_m_i_object_8c}{
+\section{Object/Object.c File Reference}
+\label{_m_i_object_8c}\index{Object/Object.c@{Object/Object.c}}
+}
+{\ttfamily \#include \char`\"{}Object.h\char`\"{}}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+Include dependency graph for Object.c:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{_m_i_object_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_object}{Object} $\ast$ \hyperlink{_m_i_object_8c_ab48d868c7588e3f77c3a57a81497e8b6}{createNewObject} (void)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_object}{Object}. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_object}{Object} $\ast$ \hyperlink{_m_i_object_8c_a0f72e3416dc7f6c52cfb1bf49baac3f2}{getObject} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Casts the pointer to the \hyperlink{struct_m_i_object}{Object}; use this to avoid explicitly casting. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_object_8c_a71704ab4fbecb7d85276d32649b5349a}{destroyObject} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_object_8c_a0407d34294cdc667982ffa9bd6f18cc9}{decrementReferenceCount} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Decrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 -\/ the object will be destroyed (assigned to NULL) \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_object_8c_a5f22211b2f99a33c1b4b7ad544ce108a}{incrementReferenceCount} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Increase the number in the reference counter. (It keeps track of how many objects have been created). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_object_8c_ab48d868c7588e3f77c3a57a81497e8b6}{
+\index{Object.c@{Object.c}!createNewObject@{createNewObject}}
+\index{createNewObject@{createNewObject}!Object.c@{Object.c}}
+\subsubsection[{createNewObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} createNewObject (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8c_ab48d868c7588e3f77c3a57a81497e8b6}
+
+
+Creates a new \hyperlink{struct_m_i_object}{Object}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_m_i_object}{Object} 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Object.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_m_i_object_8c_ab48d868c7588e3f77c3a57a81497e8b6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8c_a0407d34294cdc667982ffa9bd6f18cc9}{
+\index{Object.c@{Object.c}!decrementReferenceCount@{decrementReferenceCount}}
+\index{decrementReferenceCount@{decrementReferenceCount}!Object.c@{Object.c}}
+\subsubsection[{decrementReferenceCount}]{\setlength{\rightskip}{0pt plus 5cm}void decrementReferenceCount (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8c_a0407d34294cdc667982ffa9bd6f18cc9}
+
+
+Decrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 -\/ the object will be destroyed (assigned to NULL) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8c_a0407d34294cdc667982ffa9bd6f18cc9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8c_a71704ab4fbecb7d85276d32649b5349a}{
+\index{Object.c@{Object.c}!destroyObject@{destroyObject}}
+\index{destroyObject@{destroyObject}!Object.c@{Object.c}}
+\subsubsection[{destroyObject}]{\setlength{\rightskip}{0pt plus 5cm}void destroyObject (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8c_a71704ab4fbecb7d85276d32649b5349a}
+
+
+destructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8c_a71704ab4fbecb7d85276d32649b5349a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8c_a0f72e3416dc7f6c52cfb1bf49baac3f2}{
+\index{Object.c@{Object.c}!getObject@{getObject}}
+\index{getObject@{getObject}!Object.c@{Object.c}}
+\subsubsection[{getObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ getObject (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8c_a0f72e3416dc7f6c52cfb1bf49baac3f2}
+
+
+Casts the pointer to the \hyperlink{struct_m_i_object}{Object}; use this to avoid explicitly casting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_m_i_object}{Object} 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8c_a0f72e3416dc7f6c52cfb1bf49baac3f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8c_a5f22211b2f99a33c1b4b7ad544ce108a}{
+\index{Object.c@{Object.c}!incrementReferenceCount@{incrementReferenceCount}}
+\index{incrementReferenceCount@{incrementReferenceCount}!Object.c@{Object.c}}
+\subsubsection[{incrementReferenceCount}]{\setlength{\rightskip}{0pt plus 5cm}void incrementReferenceCount (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8c_a5f22211b2f99a33c1b4b7ad544ce108a}
+
+
+Increase the number in the reference counter. (It keeps track of how many objects have been created). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8c_a5f22211b2f99a33c1b4b7ad544ce108a_icgraph}
+\end{center}
+\end{figure}
+
+

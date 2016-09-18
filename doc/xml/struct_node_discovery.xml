@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_node_discovery" kind="struct" prot="public">
+    <compoundname>NodeDiscovery</compoundname>
+    <includes refid="_node_discovery_8h" local="no">NodeDiscovery.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_node_discovery_1a23cf4ef56ba22bed625eab08d6361fa7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_object" kindref="compound">Object</ref></type>
+        <definition>Object base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_object" kindref="compound">Object</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="33" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_node_discovery" kindref="compound">NodeDiscovery</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_node_discovery_8h" kindref="compound">NodeDiscovery.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="348">
+        <label>NodeDiscovery</label>
+        <link refid="struct_node_discovery"/>
+        <childnode refid="349" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="349">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" line="32" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/NodeDiscovery.h" bodystart="32" bodyend="34"/>
+    <listofallmembers>
+      <member refid="struct_node_discovery_1a23cf4ef56ba22bed625eab08d6361fa7" prot="public" virt="non-virtual"><scope>NodeDiscovery</scope><name>base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

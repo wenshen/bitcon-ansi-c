@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_transaction_input" kind="struct" prot="public">
+    <compoundname>TransactionInput</compoundname>
+    <includes refid="_m_i_transaction_input_8h" local="no">TransactionInput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_transaction_input_1a487e4843cf1cf7397eb2e1bcf91cbf3b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_m_i_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="31" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_transaction_input_1a0ab03ef2cc38198d3666a992a245fddf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sequence</definition>
+        <argsstring></argsstring>
+        <name>sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The version of this transaction input. Not used in protocol v0.3.18.00. Set to 0 for transactions that may somday be open to change after broadcast, set to _TRANSACTION_INPUT_FINAL if this input never needs to be changed after broadcast. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="32" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_transaction_input_1ad2f125749a4bf410b647bc258de817d6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">Script</ref> *</type>
+        <definition>Script* scriptObject</definition>
+        <argsstring></argsstring>
+        <name>scriptObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contains script information as a Script. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="33" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_transaction_input_1aa2926a5b65b7a9cda9abd6783df43f6f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_previous_output" kindref="compound">PreviousOutput</ref></type>
+        <definition>PreviousOutput prevOutput</definition>
+        <argsstring></argsstring>
+        <name>prevOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A locator for a previous output being spent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="34" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_m_i_transaction_input_8h" kindref="compound">TransactionInput.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="108">
+        <label>PreviousOutput</label>
+        <link refid="struct_m_i_previous_output"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="107">
+        <label>SharedData</label>
+        <link refid="struct_m_i_shared_data"/>
+      </node>
+      <node id="109">
+        <label>Message</label>
+        <link refid="struct_m_i_message"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>Object</label>
+        <link refid="struct_m_i_object"/>
+      </node>
+      <node id="105">
+        <label>ByteArray</label>
+        <link refid="struct_m_i_byte_array"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+      </node>
+      <node id="104">
+        <label>TransactionInput</label>
+        <link refid="struct_m_i_transaction_input"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>prevOutput</edgelabel>
+        </childnode>
+        <childnode refid="109" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="30" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" bodystart="30" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_m_i_transaction_input_1a487e4843cf1cf7397eb2e1bcf91cbf3b" prot="public" virt="non-virtual"><scope>TransactionInput</scope><name>base</name></member>
+      <member refid="struct_m_i_transaction_input_1aa2926a5b65b7a9cda9abd6783df43f6f" prot="public" virt="non-virtual"><scope>TransactionInput</scope><name>prevOutput</name></member>
+      <member refid="struct_m_i_transaction_input_1ad2f125749a4bf410b647bc258de817d6" prot="public" virt="non-virtual"><scope>TransactionInput</scope><name>scriptObject</name></member>
+      <member refid="struct_m_i_transaction_input_1a0ab03ef2cc38198d3666a992a245fddf" prot="public" virt="non-virtual"><scope>TransactionInput</scope><name>sequence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

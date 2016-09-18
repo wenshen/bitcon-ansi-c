@@ -1,0 +1,170 @@
+\hypertarget{_network_functions_8c}{
+\section{src/NetworkFunctions.c File Reference}
+\label{_network_functions_8c}\index{src/NetworkFunctions.c@{src/NetworkFunctions.c}}
+}
+{\ttfamily \#include \char`\"{}NetworkFunctions.h\char`\"{}}\par
+Include dependency graph for NetworkFunctions.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{_network_functions_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45}{IPType} \hyperlink{_network_functions_8c_a24b7947d9b095772e90dd5ced5d383f8}{getIPType} (uint8\_\-t $\ast$IP)
+\begin{DoxyCompactList}\small\item\em Determines the type of IP, including validity. \end{DoxyCompactList}\item 
+int \hyperlink{_network_functions_8c_a21369f59726afc3447ce0bb6c7ab5dd8}{isI2P} (uint8\_\-t $\ast$IP)
+\begin{DoxyCompactList}\small\item\em Determines if an IP address is an GarliCat I2P hidden service representation. \end{DoxyCompactList}\item 
+int \hyperlink{_network_functions_8c_a5af1a2b042aa1d6bf30683592bfcc480}{isIPv4} (uint8\_\-t $\ast$IP)
+\begin{DoxyCompactList}\small\item\em Determines if an IP address is an IPv4 address. \end{DoxyCompactList}\item 
+int \hyperlink{_network_functions_8c_a0e6ec565867a85ceef55d0b83bb047a1}{isTor} (uint8\_\-t $\ast$IP)
+\begin{DoxyCompactList}\small\item\em Determines if an IP address is an OnionCat Tor hidden service representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_network_functions_8c_a24b7947d9b095772e90dd5ced5d383f8}{
+\index{NetworkFunctions.c@{NetworkFunctions.c}!getIPType@{getIPType}}
+\index{getIPType@{getIPType}!NetworkFunctions.c@{NetworkFunctions.c}}
+\subsubsection[{getIPType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IPType} getIPType (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{IP}
+\end{DoxyParamCaption}
+)}}
+\label{_network_functions_8c_a24b7947d9b095772e90dd5ced5d383f8}
+
+
+Determines the type of IP, including validity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em IP} & The IP address to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The IP type. 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file NetworkFunctions.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_network_functions_8c_a24b7947d9b095772e90dd5ced5d383f8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_network_functions_8c_a21369f59726afc3447ce0bb6c7ab5dd8}{
+\index{NetworkFunctions.c@{NetworkFunctions.c}!isI2P@{isI2P}}
+\index{isI2P@{isI2P}!NetworkFunctions.c@{NetworkFunctions.c}}
+\subsubsection[{isI2P}]{\setlength{\rightskip}{0pt plus 5cm}int isI2P (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{IP}
+\end{DoxyParamCaption}
+)}}
+\label{_network_functions_8c_a21369f59726afc3447ce0bb6c7ab5dd8}
+
+
+Determines if an IP address is an GarliCat I2P hidden service representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em IP} & The IP address to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the IP address is an I2P address, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file NetworkFunctions.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{_network_functions_8c_a21369f59726afc3447ce0bb6c7ab5dd8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_network_functions_8c_a5af1a2b042aa1d6bf30683592bfcc480}{
+\index{NetworkFunctions.c@{NetworkFunctions.c}!isIPv4@{isIPv4}}
+\index{isIPv4@{isIPv4}!NetworkFunctions.c@{NetworkFunctions.c}}
+\subsubsection[{isIPv4}]{\setlength{\rightskip}{0pt plus 5cm}int isIPv4 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{IP}
+\end{DoxyParamCaption}
+)}}
+\label{_network_functions_8c_a5af1a2b042aa1d6bf30683592bfcc480}
+
+
+Determines if an IP address is an IPv4 address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em IP} & The IP address to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the IP address is IPv4, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file NetworkFunctions.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_network_functions_8c_a5af1a2b042aa1d6bf30683592bfcc480_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_network_functions_8c_a0e6ec565867a85ceef55d0b83bb047a1}{
+\index{NetworkFunctions.c@{NetworkFunctions.c}!isTor@{isTor}}
+\index{isTor@{isTor}!NetworkFunctions.c@{NetworkFunctions.c}}
+\subsubsection[{isTor}]{\setlength{\rightskip}{0pt plus 5cm}int isTor (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{IP}
+\end{DoxyParamCaption}
+)}}
+\label{_network_functions_8c_a0e6ec565867a85ceef55d0b83bb047a1}
+
+
+Determines if an IP address is an OnionCat Tor hidden service representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em IP} & The IP address to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the IP address is a Tor address, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file NetworkFunctions.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{_network_functions_8c_a0e6ec565867a85ceef55d0b83bb047a1_icgraph}
+\end{center}
+\end{figure}
+
+

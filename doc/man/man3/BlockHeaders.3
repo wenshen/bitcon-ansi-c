@@ -1,0 +1,53 @@
+.TH "BlockHeaders" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BlockHeaders \- 
+.PP
+Structure for \fBBlockHeaders\fP objects.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BlockHeaders.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBnumOfHeaders\fP"
+.br
+.ti -1c
+.RI "\fBBlock\fP ** \fBblockHeaders\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for \fBBlockHeaders\fP objects. 
+
+\fBSee also:\fP
+.RS 4
+\fBBlockHeaders.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file BlockHeaders.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBMessage\fP \fBbase\fP"\fBMessage\fP base structure 
+.PP
+Definition at line 24 of file BlockHeaders.h.
+.SS "\fBBlock\fP** \fBblockHeaders\fP"The block headers as \fBBlock\fP objects with no transactions. The number of transactions is given however. 
+.PP
+Definition at line 26 of file BlockHeaders.h.
+.SS "uint16_t \fBnumOfHeaders\fP"The number of headers. 
+.PP
+Definition at line 25 of file BlockHeaders.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

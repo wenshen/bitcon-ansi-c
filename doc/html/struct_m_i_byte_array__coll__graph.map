@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_m_i_object.html" title="Base class." alt="" coords="5,6,128,109"/>
+<area shape="rect" id="node4" href="$struct_m_i_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="152,6,275,109"/>
+</map>

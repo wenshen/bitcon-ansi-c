@@ -1,0 +1,526 @@
+.TH "src/Dependencies.h" 3 "Wed Oct 17 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Dependencies.h \- 
+.PP
+File for weak linked functions for dependency injection. All these functions are unimplemented. The functions include the crytography functions which are key for the functioning of bitcoin. Sockets must be non-blocking and use an asynchronous onErrorReceived-type system. The use of the sockets is designed to be compatible with libevent. The random number functions should be cryptographically secure. See the dependecies folder for implementations.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint.h>\fP
+.br
+\fC#include 'Constants.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSha256\fP (uint8_t *data, uint16_t length, uint8_t *output)"
+.br
+.RI "\fISHA-256 cryptographic hash function. \fP"
+.ti -1c
+.RI "void \fBRipemd160\fP (uint8_t *data, uint16_t length, uint8_t *output)"
+.br
+.RI "\fIRIPEMD-160 cryptographic hash function. \fP"
+.ti -1c
+.RI "void \fBSha160\fP (uint8_t *data, uint16_t length, uint8_t *output)"
+.br
+.RI "\fISHA-1 cryptographic hash function. \fP"
+.ti -1c
+.RI "int \fBEcdsaVerify\fP (uint8_t *signature, uint8_t sigLen, uint8_t *hash, const uint8_t *pubKey, uint8_t keyLen)"
+.br
+.RI "\fIVerifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \fP"
+.ti -1c
+.RI "SocketReturn \fBNewSocket\fP (uint64_t *socketID, int IPv6)"
+.br
+.RI "\fICreates a new TCP/IP socket. The socket should use a non-blocking mode. \fP"
+.ti -1c
+.RI "int \fBSocketBind\fP (uint64_t *socketID, int IPv6, uint16_t port)"
+.br
+.ti -1c
+.RI "int \fBSocketConnect\fP (uint64_t socketID, uint8_t *IP, int IPv6, uint16_t port)"
+.br
+.RI "\fIBegin connecting to an external host with a socket. This should be non-blocking. \fP"
+.ti -1c
+.RI "int \fBSocketListen\fP (uint64_t socketID, uint16_t maxConnections)"
+.br
+.RI "\fIBegin listening for incomming connections on a bound socket. This should be non-blocking. \fP"
+.ti -1c
+.RI "int \fBSocketAccept\fP (uint64_t socketID, uint64_t *connectionSocketID)"
+.br
+.RI "\fIAccepts an incomming IPv4 connection on a bound socket. This should be non-blocking. \fP"
+.ti -1c
+.RI "int \fBNewEventLoop\fP (uint64_t *loopID, void(*onError)(void *), void(*onDidTimeout)(void *, void *, TimeOutType), void *communicator)"
+.br
+.RI "\fIStarts a event loop for socket onErrorReceived on a seperate thread. Access to the loop id should be thread safe. \fP"
+.ti -1c
+.RI "int \fBSocketCanAcceptEvent\fP (uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onCanAccept)(void *, uint64_t))"
+.br
+.RI "\fICreates an event where a listening socket is available for accepting a connection. The event should be persistent and not issue timeouts. \fP"
+.ti -1c
+.RI "int \fBSocketDidConnectEvent\fP (uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onDidConnect)(void *, void *), void *peer)"
+.br
+.RI "\fISets a function pointer for the event where a socket has connected. The event only needs to fire once on the successful connection or timeout. \fP"
+.ti -1c
+.RI "int \fBSocketCanSendEvent\fP (uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onCanSend)(void *, void *), void *peer)"
+.br
+.RI "\fISets a function pointer for the event where a socket is available for sending data. This should be persistent. \fP"
+.ti -1c
+.RI "int \fBSocketCanReceiveEvent\fP (uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onCanReceive)(void *, void *), void *peer)"
+.br
+.RI "\fISets a function pointer for the event where a socket is available for receiving data. This should be persistent. \fP"
+.ti -1c
+.RI "int \fBSocketAddEvent\fP (uint64_t eventID, uint32_t timeout)"
+.br
+.RI "\fIAdds an event to be pending. \fP"
+.ti -1c
+.RI "int \fBSocketRemoveEvent\fP (uint64_t eventID)"
+.br
+.RI "\fIRemoves an event so no more onErrorReceived are made. \fP"
+.ti -1c
+.RI "void \fBSocketFreeEvent\fP (uint64_t eventID)"
+.br
+.RI "\fIMakes an event non-pending and frees it. \fP"
+.ti -1c
+.RI "int32_t \fBSocketSend\fP (uint64_t socketID, uint8_t *data, uint32_t len)"
+.br
+.RI "\fISends data to a socket. This should be non-blocking. \fP"
+.ti -1c
+.RI "int32_t \fBSocketReceive\fP (uint64_t socketID, uint8_t *data, uint32_t len)"
+.br
+.RI "\fIReceives data from a socket. This should be non-blocking. \fP"
+.ti -1c
+.RI "int \fBStartTimer\fP (uint64_t loopID, uint64_t *timer, uint16_t time, void(*callback)(void *), void *arg)"
+.br
+.RI "\fICalls a callback every 'time' seconds, until the timer is ended. \fP"
+.ti -1c
+.RI "void \fBEndTimer\fP (uint64_t timer)"
+.br
+.RI "\fIEnds a timer. \fP"
+.ti -1c
+.RI "void \fBCloseSocket\fP (uint64_t socketID)"
+.br
+.RI "\fICloses a socket. The id should be freed, as well as any other data relating to this socket. \fP"
+.ti -1c
+.RI "void \fBExitEventLoop\fP (uint64_t loopID)"
+.br
+.RI "\fIExits an event loop and frees all data relating to it. \fP"
+.ti -1c
+.RI "int \fBNewSecureRandomGenerator\fP (uint64_t *gen)"
+.br
+.RI "\fIReturns an instance of a cryptographically secure random number generator. \fP"
+.ti -1c
+.RI "void \fBSecureRandomSeed\fP (uint64_t gen)"
+.br
+.RI "\fISeeds the random number generator securely. \fP"
+.ti -1c
+.RI "void \fBRandomSeed\fP (uint64_t gen, uint64_t seed)"
+.br
+.RI "\fISeeds the generator from a 64-bit integer. \fP"
+.ti -1c
+.RI "uint64_t \fBSecureRandomInteger\fP (uint64_t gen)"
+.br
+.RI "\fIGenerates a 64 bit integer. \fP"
+.ti -1c
+.RI "void \fBFreeSecureRandomGenerator\fP (uint64_t gen)"
+.br
+.RI "\fIFrees the random number generator. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+File for weak linked functions for dependency injection. All these functions are unimplemented. The functions include the crytography functions which are key for the functioning of bitcoin. Sockets must be non-blocking and use an asynchronous onErrorReceived-type system. The use of the sockets is designed to be compatible with libevent. The random number functions should be cryptographically secure. See the dependecies folder for implementations. 
+
+
+.PP
+Definition in file \fBDependencies.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void CloseSocket (uint64_tsocketID)"
+.PP
+Closes a socket. The id should be freed, as well as any other data relating to this socket. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP The socket id to be closed. 
+.RE
+.PP
+
+.SS "int EcdsaVerify (uint8_t *signature, uint8_tsigLen, uint8_t *hash, const uint8_t *pubKey, uint8_tkeyLen)"
+.PP
+Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \fBParameters:\fP
+.RS 4
+\fIsignature\fP BER encoded signature bytes. 
+.br
+\fIsigLen\fP The length of the signature bytes. 
+.br
+\fIhash\fP A 32 byte hash for checking the signature against. 
+.br
+\fIpubKey\fP Public key bytes to check this signature with. 
+.br
+\fIkeyLen\fP The length of the public key bytes. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the signature is valid and false if invalid. 
+.RE
+.PP
+
+.SS "void EndTimer (uint64_ttimer)"
+.PP
+Ends a timer. \fBParameters:\fP
+.RS 4
+\fItimer\fP The timer sent by reference to be set. 
+.RE
+.PP
+
+.SS "void ExitEventLoop (uint64_tloopID)"
+.PP
+Exits an event loop and frees all data relating to it. \fBParameters:\fP
+.RS 4
+\fIloopID\fP The loop ID. If zero, do nothing. 
+.RE
+.PP
+
+.SS "void FreeSecureRandomGenerator (uint64_tgen)"
+.PP
+Frees the random number generator. \fBParameters:\fP
+.RS 4
+\fIgen\fP The generator. 
+.RE
+.PP
+
+.SS "int NewEventLoop (uint64_t *loopID, void(*)(void *)onError, void(*)(void *, void *, TimeOutType)onDidTimeout, void *communicator)"
+.PP
+Starts a event loop for socket onErrorReceived on a seperate thread. Access to the loop id should be thread safe. \fBParameters:\fP
+.RS 4
+\fIloopID\fP A uint64_t storing an integer or pointer representation of the new event loop. 
+.br
+\fIonError\fP If the event loop fails during execution of the thread, this function should be called. 
+.br
+\fIonDidTimeout\fP The function to call for timeout onErrorReceived. The second argument is for the peer given by onErrorReceived. The third is for the timeout type. For receiving data, the timeout should be _TIMEOUT_RECEIVE. The NetworkCommunicator will determine if it should be changed to _TIMEOUT_RESPONSE. 
+.br
+\fIcommunicator\fP A NetworkCommunicator to pass to all event functions (first parameter), including 'onError' and 'onDidTimeout' 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "int NewSecureRandomGenerator (uint64_t *gen)"
+.PP
+Returns an instance of a cryptographically secure random number generator. \fBParameters:\fP
+.RS 4
+\fIThe\fP generator as a pointer or integer. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "SocketReturn NewSocket (uint64_t *socketID, intIPv6)"
+.PP
+Creates a new TCP/IP socket. The socket should use a non-blocking mode. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP Pointer to uint64_t. Can be pointer value. 
+.br
+\fIIPv6\fP true if the socket is used to connect to the IPv6 network. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+_SOCKET_OK if the socket was successfully created, _SOCKET_NO_SUPPORT and _SOCKET_BAD if the socket could not be created for any other reason. 
+.RE
+.PP
+
+.SS "void RandomSeed (uint64_tgen, uint64_tseed)"
+.PP
+Seeds the generator from a 64-bit integer. \fBParameters:\fP
+.RS 4
+\fIgen\fP The generator. 
+.br
+\fIseed\fP The 64-bit integer. 
+.RE
+.PP
+
+.SS "void Ripemd160 (uint8_t *data, uint16_tlength, uint8_t *output)"
+.PP
+RIPEMD-160 cryptographic hash function. \fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to the byte data to hash. 
+.br
+\fIlength\fP The length of the data to hash. 
+.br
+\fIoutput\fP A pointer to hold a 20-byte hash. 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file Crypt.c.
+.SS "uint64_t SecureRandomInteger (uint64_tgen)"
+.PP
+Generates a 64 bit integer. \fBParameters:\fP
+.RS 4
+\fIgen\fP The generator. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The random 64-bit integer integer. 
+.RE
+.PP
+
+.SS "void SecureRandomSeed (uint64_tgen)"
+.PP
+Seeds the random number generator securely. \fBParameters:\fP
+.RS 4
+\fIgen\fP The generator. 
+.RE
+.PP
+
+.SS "void Sha160 (uint8_t *data, uint16_tlength, uint8_t *output)"
+.PP
+SHA-1 cryptographic hash function. \fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to the byte data to hash. 
+.br
+\fIlength\fP The length of the data to hash. 
+.br
+\fIoutput\fP A pointer to hold a 10-byte hash. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file Crypt.c.
+.SS "void Sha256 (uint8_t *data, uint16_tlength, uint8_t *output)"
+.PP
+SHA-256 cryptographic hash function. \fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to the byte data to hash. 
+.br
+\fIlength\fP The length of the data to hash. 
+.br
+\fIoutput\fP A pointer to hold a 32-byte hash. 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file Crypt.c.
+.SS "int SocketAccept (uint64_tsocketID, uint64_t *connectionSocketID)"
+.PP
+Accepts an incomming IPv4 connection on a bound socket. This should be non-blocking. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP The socket id 
+.br
+\fIconnectionSocketID\fP A socket id for a new socket for the connection. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if function was sucessful and false otherwise. 
+.RE
+.PP
+
+.SS "int SocketAddEvent (uint64_teventID, uint32_ttimeout)"
+.PP
+Adds an event to be pending. \fBParameters:\fP
+.RS 4
+\fIeventID\fP The event ID to add. 
+.br
+\fItimeout\fP The time in milliseconds to issue a timeout for the event. 0 for no timeout. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if sucessful, false otherwise. 
+.RE
+.PP
+
+.SS "int SocketBind (uint64_t *socketID, intIPv6, uint16_tport)"
+.SS "int SocketCanAcceptEvent (uint64_t *eventID, uint64_tloopID, uint64_tsocketID, void(*)(void *, uint64_t)onCanAccept)"
+.PP
+Creates an event where a listening socket is available for accepting a connection. The event should be persistent and not issue timeouts. \fBParameters:\fP
+.RS 4
+\fIloopID\fP The loop id for socket onErrorReceived. 
+.br
+\fIsocketID\fP The socket id 
+.br
+\fIonCanAccept\fP The function to call for the event. Accepts 'onEventArg' and the socket ID. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "int SocketCanReceiveEvent (uint64_t *eventID, uint64_tloopID, uint64_tsocketID, void(*)(void *, void *)onCanReceive, void *peer)"
+.PP
+Sets a function pointer for the event where a socket is available for receiving data. This should be persistent. \fBParameters:\fP
+.RS 4
+\fIloopID\fP The loop id for socket onErrorReceived. 
+.br
+\fIsocketID\fP The socket id 
+.br
+\fIonCanReceive\fP The function to call for the event. 
+.br
+\fIpeer\fP The peer to send to the 'onCanReceive' or 'onDidTimeout' function. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "int SocketCanSendEvent (uint64_t *eventID, uint64_tloopID, uint64_tsocketID, void(*)(void *, void *)onCanSend, void *peer)"
+.PP
+Sets a function pointer for the event where a socket is available for sending data. This should be persistent. \fBParameters:\fP
+.RS 4
+\fIloopID\fP The loop id for socket onErrorReceived. 
+.br
+\fIsocketID\fP The socket id 
+.br
+\fIonCanSend\fP The function to call for the event. 
+.br
+\fIpeer\fP The peer to send to the 'onCanSend' or 'onDidTimeout' function. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "int SocketConnect (uint64_tsocketID, uint8_t *IP, intIPv6, uint16_tport)"
+.PP
+Begin connecting to an external host with a socket. This should be non-blocking. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP The socket id 
+.br
+\fIIP\fP 16 bytes for an IPv6 address to connect to. 
+.br
+\fIIPv6\fP True if IP address is for the IPv6 network. A IPv6 address can represent addresses for IPv4 too. To avoid the need to detect this, a intean can be used. 
+.br
+\fIport\fP Port to connect to. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the function was sucessful and false otherwise. 
+.RE
+.PP
+
+.SS "int SocketDidConnectEvent (uint64_t *eventID, uint64_tloopID, uint64_tsocketID, void(*)(void *, void *)onDidConnect, void *peer)"
+.PP
+Sets a function pointer for the event where a socket has connected. The event only needs to fire once on the successful connection or timeout. \fBParameters:\fP
+.RS 4
+\fIloopID\fP The loop id for socket onErrorReceived. 
+.br
+\fIsocketID\fP The socket id 
+.br
+\fIonDidConnect\fP The function to call for the event. 
+.br
+\fIpeer\fP The peer to send to the 'onDidConnect' or 'onDidTimeout' function. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "void SocketFreeEvent (uint64_teventID)"
+.PP
+Makes an event non-pending and frees it. \fBParameters:\fP
+.RS 4
+\fIeventID\fP The event to free. 
+.RE
+.PP
+
+.SS "int SocketListen (uint64_tsocketID, uint16_tmaxConnections)"
+.PP
+Begin listening for incomming connections on a bound socket. This should be non-blocking. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP The socket id 
+.br
+\fImaxConnections\fP The maximum incomming connections to allow. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if function was sucessful and false otherwise. 
+.RE
+.PP
+
+.SS "int32_t SocketReceive (uint64_tsocketID, uint8_t *data, uint32_tlen)"
+.PP
+Receives data from a socket. This should be non-blocking. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP The socket id to receive data from. 
+.br
+\fIdata\fP The data bytes to write the data to. 
+.br
+\fIlen\fP The length of the data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The number of bytes actually written into 'data', _SOCKET_CONNECTION_CLOSE on connection closure, 0 on no bytes received, and _SOCKET_FAILURE on failure. 
+.RE
+.PP
+
+.SS "int SocketRemoveEvent (uint64_teventID)"
+.PP
+Removes an event so no more onErrorReceived are made. \fBParameters:\fP
+.RS 4
+\fIeventID\fP The event ID to remove 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if sucessful, false otherwise. 
+.RE
+.PP
+
+.SS "int32_t SocketSend (uint64_tsocketID, uint8_t *data, uint32_tlen)"
+.PP
+Sends data to a socket. This should be non-blocking. \fBParameters:\fP
+.RS 4
+\fIsocketID\fP The socket id to send to. 
+.br
+\fIdata\fP The data bytes to send. 
+.br
+\fIlen\fP The length of the data to send. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The number of bytes actually sent, and _SOCKET_FAILURE on failure that suggests further data cannot be sent. 
+.RE
+.PP
+
+.SS "int StartTimer (uint64_tloopID, uint64_t *timer, uint16_ttime, void(*)(void *)callback, void *arg)"
+.PP
+Calls a callback every 'time' seconds, until the timer is ended. \fBParameters:\fP
+.RS 4
+\fIloopID\fP The loop id for onErrorReceived. 
+.br
+\fItimer\fP The timer sent by reference to be set. 
+.br
+\fItime\fP The number of milliseconds between each call of the callback. 
+.br
+\fIcallback\fP The callback function. 
+.br
+\fIarg\fP The callback argument. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

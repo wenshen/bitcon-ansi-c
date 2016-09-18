@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="723,5,901,35"/>
+<area shape="rect" id="node5" href="$_message_8c.html#a9ab128ae9cafefd9b05e2e0bfa719770" title="getter" alt="" coords="479,165,572,195"/>
+<area shape="rect" id="node7" href="$_network_address_8c.html#a119da10386575374455c45ee98dd5e33" title="Gets a NetworkAddress from another object. Use this to avoid casts." alt="" coords="744,59,880,88"/>
+<area shape="rect" id="node9" href="$_version_8c.html#ae3428387ebd0bed5f378d2d0b5050d79" title="GetVersion" alt="" coords="769,219,855,248"/>
+<area shape="rect" id="node11" href="$_network_communicator_8c.html#a9f4abe6a585a711635ab6cf2aad1081e" title="NetworkCommunicatorDisconnect" alt="" coords="415,112,636,141"/>
+<area shape="rect" id="node19" href="$_network_communicator_8c.html#ade16d475138752b748b0e6568c1c2cf6" title="NetworkCommunicatorGetVersion" alt="" coords="415,323,636,352"/>
+<area shape="rect" id="node21" href="$_network_communicator_8c.html#a67b0329d1c08b164bc3b255bd412e355" title="NetworkCommunicatorSendMessage" alt="" coords="407,269,644,299"/>
+<area shape="rect" id="node15" href="$_network_communicator_8c.html#ae0151ae192e007cb81d3ad7beaf1f5f8" title="NetworkCommunicatorStartListening" alt="" coords="695,165,929,195"/>
+<area shape="rect" id="node17" href="$_network_communicator_8c.html#ae1cb0933af1eb4fd1f53284066eff467" title="NetworkCommunicatorStopPings" alt="" coords="704,112,920,141"/>
+<area shape="rect" id="node23" href="$_ping_pong_message_8c.html#a05be54312a74799ff7996459f8f6add9" title="Gets a PingPongMessage from another object. Use this to avoid casts." alt="" coords="737,325,887,355"/>
+<area shape="rect" id="node26" href="$_crypt_8c.html#a31002de62901cbe9c88a0fd0f5f57770" title="SHA&#45;256 cryptographic hash function." alt="" coords="779,272,845,301"/>
+</map>

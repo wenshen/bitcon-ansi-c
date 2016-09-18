@@ -1,0 +1,180 @@
+.TH "Object/Message/TransactionInput.h" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object/Message/TransactionInput.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Message.h'\fP
+.br
+\fC#include '../Script.h'\fP
+.br
+\fC#include 'TransactionOutput.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPreviousOutput\fP"
+.br
+.RI "\fIStructure for previous outputs that are being spent by an input. \fP"
+.ti -1c
+.RI "struct \fBTransactionInput\fP"
+.br
+.RI "\fIStructure for \fBTransactionInput\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransactionInput\fP * \fBcreateNewTransactionInput\fP (\fBScript\fP *script, uint32_t sequence, \fBByteArray\fP *prevOutputHash, uint32_t prevOutputIndex, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransactionInput\fP object. \fP"
+.ti -1c
+.RI "\fBTransactionInput\fP * \fBcreateNewTransactionInputFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransactionInput\fP object from byte data. \fP"
+.ti -1c
+.RI "int \fBinitializeTransactionInput\fP (\fBTransactionInput\fP *self, \fBScript\fP *script, uint32_t sequence, \fBByteArray\fP *prevOutHash, uint32_t prevOutIndex, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBTransactionInput\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializeTransactionInputFromData\fP (\fBTransactionInput\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a new \fBTransactionInput\fP object from the byte data. \fP"
+.ti -1c
+.RI "\fBTransactionInput\fP * \fBgetTransactionInput\fP (void *self)"
+.br
+.RI "\fIGets a \fBTransactionInput\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "void \fBdestroyTransactionInput\fP (void *self)"
+.br
+.RI "\fIFrees a \fBTransactionInput\fP object. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeTransactionInput\fP (\fBTransactionInput\fP *self)"
+.br
+.RI "\fISerialises a \fBTransactionInput\fP to byte data. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeTransactionInput\fP (\fBTransactionInput\fP *self)"
+.br
+.RI "\fIDeserialises a \fBTransactionInput\fP so that it can be used as an object. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBTransactionInput\fP* createNewTransactionInput (\fBScript\fP *script, uint32_tsequence, \fBByteArray\fP *prevOutputHash, uint32_tprevOutputIndex, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransactionInput\fP object. \fBReturns:\fP
+.RS 4
+A new \fBTransactionInput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file TransactionInput.c.
+.SS "\fBTransactionInput\fP* createNewTransactionInputFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransactionInput\fP object from byte data. \fBParameters:\fP
+.RS 4
+\fIdata\fP The byte data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBTransactionInput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file TransactionInput.c.
+.SS "uint32_t deserializeTransactionInput (\fBTransactionInput\fP *self)"
+.PP
+Deserialises a \fBTransactionInput\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 179 of file TransactionInput.c.
+.SS "void destroyTransactionInput (void *self)"
+.PP
+Frees a \fBTransactionInput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file TransactionInput.c.
+.SS "\fBTransactionInput\fP* getTransactionInput (void *self)"
+.PP
+Gets a \fBTransactionInput\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBTransactionInput\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBTransactionInput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file TransactionInput.c.
+.SS "int initializeTransactionInput (\fBTransactionInput\fP *self, \fBScript\fP *script, uint32_tsequence, \fBByteArray\fP *prevOutHash, uint32_tprevOutIndex, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBTransactionInput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object to initialise 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file TransactionInput.c.
+.SS "int initializeTransactionInputFromData (\fBTransactionInput\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a new \fBTransactionInput\fP object from the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object to initialise 
+.br
+\fIdata\fP The byte data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file TransactionInput.c.
+.SS "uint32_t serializeTransactionInput (\fBTransactionInput\fP *self)"
+.PP
+Serialises a \fBTransactionInput\fP to byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file TransactionInput.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

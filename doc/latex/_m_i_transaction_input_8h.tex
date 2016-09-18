@@ -1,0 +1,404 @@
+\hypertarget{_m_i_transaction_input_8h}{
+\section{Object/Message/TransactionInput.h File Reference}
+\label{_m_i_transaction_input_8h}\index{Object/Message/TransactionInput.h@{Object/Message/TransactionInput.h}}
+}
+{\ttfamily \#include \char`\"{}Message.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../Script.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TransactionOutput.h\char`\"{}}\par
+Include dependency graph for TransactionInput.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_i_previous_output}{PreviousOutput}
+\begin{DoxyCompactList}\small\item\em Structure for previous outputs that are being spent by an input. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_m_i_transaction_input}{TransactionInput}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_m_i_transaction_input}{TransactionInput} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$ \hyperlink{_m_i_transaction_input_8h_a66149340bfb777acf294dba5d06a9776}{createNewTransactionInput} (\hyperlink{struct_m_i_byte_array}{Script} $\ast$script, uint32\_\-t sequence, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$prevOutputHash, uint32\_\-t prevOutputIndex, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$ \hyperlink{_m_i_transaction_input_8h_a6ce74856deb61a054db563a0382b0ff2}{createNewTransactionInputFromData} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object from byte data. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_input_8h_ab948c7629606c3e71f6b502f65df5cb5}{initializeTransactionInput} (\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$self, \hyperlink{struct_m_i_byte_array}{Script} $\ast$script, uint32\_\-t sequence, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$prevOutHash, uint32\_\-t prevOutIndex, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_transaction_input_8h_a23b5f752e968e3bff9c427e224c48366}{initializeTransactionInputFromData} (\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object from the byte data. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$ \hyperlink{_m_i_transaction_input_8h_af269fa2bb4a69491af8a12964734dc70}{getTransactionInput} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_m_i_transaction_input}{TransactionInput} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_transaction_input_8h_a870e33cc5ad870ec4b831d4410c7df1f}{destroyTransactionInput} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_transaction_input_8h_a1dc5b6d2e7b70e918572bedd9ee6abf9}{serializeTransactionInput} (\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Serialises a \hyperlink{struct_m_i_transaction_input}{TransactionInput} to byte data. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_transaction_input_8h_ad375fb1ac6adc4cfeafc59b89ab811b9}{deserializeTransactionInput} (\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Deserialises a \hyperlink{struct_m_i_transaction_input}{TransactionInput} so that it can be used as an object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_transaction_input_8h_a66149340bfb777acf294dba5d06a9776}{
+\index{TransactionInput.h@{TransactionInput.h}!createNewTransactionInput@{createNewTransactionInput}}
+\index{createNewTransactionInput@{createNewTransactionInput}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{createNewTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TransactionInput}$\ast$ createNewTransactionInput (
+\begin{DoxyParamCaption}
+\item[{{\bf Script} $\ast$}]{script, }
+\item[{uint32\_\-t}]{sequence, }
+\item[{{\bf ByteArray} $\ast$}]{prevOutputHash, }
+\item[{uint32\_\-t}]{prevOutputIndex, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_a66149340bfb777acf294dba5d06a9776}
+
+
+Creates a new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a66149340bfb777acf294dba5d06a9776_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_input_8h_a6ce74856deb61a054db563a0382b0ff2}{
+\index{TransactionInput.h@{TransactionInput.h}!createNewTransactionInputFromData@{createNewTransactionInputFromData}}
+\index{createNewTransactionInputFromData@{createNewTransactionInputFromData}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{createNewTransactionInputFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TransactionInput}$\ast$ createNewTransactionInputFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_a6ce74856deb61a054db563a0382b0ff2}
+
+
+Creates a new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object from byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The byte data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a6ce74856deb61a054db563a0382b0ff2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a6ce74856deb61a054db563a0382b0ff2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_input_8h_ad375fb1ac6adc4cfeafc59b89ab811b9}{
+\index{TransactionInput.h@{TransactionInput.h}!deserializeTransactionInput@{deserializeTransactionInput}}
+\index{deserializeTransactionInput@{deserializeTransactionInput}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{deserializeTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeTransactionInput (
+\begin{DoxyParamCaption}
+\item[{{\bf TransactionInput} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_ad375fb1ac6adc4cfeafc59b89ab811b9}
+
+
+Deserialises a \hyperlink{struct_m_i_transaction_input}{TransactionInput} so that it can be used as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_ad375fb1ac6adc4cfeafc59b89ab811b9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_ad375fb1ac6adc4cfeafc59b89ab811b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_input_8h_a870e33cc5ad870ec4b831d4410c7df1f}{
+\index{TransactionInput.h@{TransactionInput.h}!destroyTransactionInput@{destroyTransactionInput}}
+\index{destroyTransactionInput@{destroyTransactionInput}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{destroyTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}void destroyTransactionInput (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_a870e33cc5ad870ec4b831d4410c7df1f}
+
+
+Frees a \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a870e33cc5ad870ec4b831d4410c7df1f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a870e33cc5ad870ec4b831d4410c7df1f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_input_8h_af269fa2bb4a69491af8a12964734dc70}{
+\index{TransactionInput.h@{TransactionInput.h}!getTransactionInput@{getTransactionInput}}
+\index{getTransactionInput@{getTransactionInput}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{getTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TransactionInput}$\ast$ getTransactionInput (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_af269fa2bb4a69491af8a12964734dc70}
+
+
+Gets a \hyperlink{struct_m_i_transaction_input}{TransactionInput} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_m_i_transaction_input}{TransactionInput} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file TransactionInput.c.
+
+\hypertarget{_m_i_transaction_input_8h_ab948c7629606c3e71f6b502f65df5cb5}{
+\index{TransactionInput.h@{TransactionInput.h}!initializeTransactionInput@{initializeTransactionInput}}
+\index{initializeTransactionInput@{initializeTransactionInput}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{initializeTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}int initializeTransactionInput (
+\begin{DoxyParamCaption}
+\item[{{\bf TransactionInput} $\ast$}]{self, }
+\item[{{\bf Script} $\ast$}]{script, }
+\item[{uint32\_\-t}]{sequence, }
+\item[{{\bf ByteArray} $\ast$}]{prevOutHash, }
+\item[{uint32\_\-t}]{prevOutIndex, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_ab948c7629606c3e71f6b502f65df5cb5}
+
+
+Initialises a \hyperlink{struct_m_i_transaction_input}{TransactionInput} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=384pt]{_m_i_transaction_input_8h_ab948c7629606c3e71f6b502f65df5cb5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_ab948c7629606c3e71f6b502f65df5cb5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_input_8h_a23b5f752e968e3bff9c427e224c48366}{
+\index{TransactionInput.h@{TransactionInput.h}!initializeTransactionInputFromData@{initializeTransactionInputFromData}}
+\index{initializeTransactionInputFromData@{initializeTransactionInputFromData}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{initializeTransactionInputFromData}]{\setlength{\rightskip}{0pt plus 5cm}int initializeTransactionInputFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf TransactionInput} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_a23b5f752e968e3bff9c427e224c48366}
+
+
+Initialises a new \hyperlink{struct_m_i_transaction_input}{TransactionInput} object from the byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object to initialise \\
+\hline
+{\em data} & The byte data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=378pt]{_m_i_transaction_input_8h_a23b5f752e968e3bff9c427e224c48366_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a23b5f752e968e3bff9c427e224c48366_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_transaction_input_8h_a1dc5b6d2e7b70e918572bedd9ee6abf9}{
+\index{TransactionInput.h@{TransactionInput.h}!serializeTransactionInput@{serializeTransactionInput}}
+\index{serializeTransactionInput@{serializeTransactionInput}!TransactionInput.h@{TransactionInput.h}}
+\subsubsection[{serializeTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t serializeTransactionInput (
+\begin{DoxyParamCaption}
+\item[{{\bf TransactionInput} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_transaction_input_8h_a1dc5b6d2e7b70e918572bedd9ee6abf9}
+
+
+Serialises a \hyperlink{struct_m_i_transaction_input}{TransactionInput} to byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_transaction_input}{TransactionInput} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length written on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file TransactionInput.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a1dc5b6d2e7b70e918572bedd9ee6abf9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_transaction_input_8h_a1dc5b6d2e7b70e918572bedd9ee6abf9_icgraph}
+\end{center}
+\end{figure}
+
+

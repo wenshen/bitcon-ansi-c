@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_transaction_8c.html#aceb60074b6ebe66ad03d563c53c1b210" title="Calculates the length of an Transaction; this is needed to serialise the object." alt="" coords="200,5,381,35"/>
+<area shape="rect" id="node5" href="$_var_len_int_8c.html#a9a5568c05dc89004c60b0a1679b38ba6" title="Returns the variable integer byte size of a 64 bit integer." alt="" coords="429,32,565,61"/>
+</map>

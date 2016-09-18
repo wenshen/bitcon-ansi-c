@@ -1,0 +1,25 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_message_8h.html" title="Header file for the Message object." alt="" coords="748,83,953,112"/>
+<area shape="rect" id="node55" href="$_var_len_int_8c.html" title="src/Utils/VariableLengthInteger/VarLenInt.c" alt="" coords="977,83,1249,112"/>
+<area shape="rect" id="node5" href="$_alert_8h.html" title="A message containing an alert, Inherits Message." alt="" coords="5,160,187,189"/>
+<area shape="rect" id="node9" href="$_transaction_8h.html" title="Transaction object." alt="" coords="637,315,859,344"/>
+<area shape="rect" id="node13" href="$_block_8c.html" title="This file defines a bitcoin block." alt="" coords="448,469,635,499"/>
+<area shape="rect" id="node20" href="$_transaction_8c.html" title="src/Object/Message/Transaction.c" alt="" coords="261,392,483,421"/>
+<area shape="rect" id="node22" href="$_transaction_input_8h.html" title="TransactionInput object." alt="" coords="312,237,563,267"/>
+<area shape="rect" id="node28" href="$_transaction_output_8h.html" title="src/Object/Message/TransactionOutput.h" alt="" coords="596,160,857,189"/>
+<area shape="rect" id="node35" href="$_chain_descriptor_8h.html" title="Stores up to 500 block hashes for a block chain to describe a block chain for a peer so that a peer c..." alt="" coords="973,160,1221,189"/>
+<area shape="rect" id="node43" href="$_inventory_8h.html" title="Allows a node to advertise its knowledge of one or more objects. It can be received unsolicited..." alt="" coords="1483,237,1691,267"/>
+<area shape="rect" id="node47" href="$_inventory_vector_8h.html" title="Inventory vectors are used for notifying other nodes about objects they have or data which is being r..." alt="" coords="1421,160,1667,189"/>
+<area shape="rect" id="node52" href="$_message_8c.html" title="This file is Message.c." alt="" coords="1691,160,1896,189"/>
+<area shape="rect" id="node7" href="$_alert_8c.html" title="src/Object/Message/Alert.c" alt="" coords="5,237,187,267"/>
+<area shape="rect" id="node11" href="$_block_8h.html" title="This file defines a bitcoin block." alt="" coords="655,392,841,421"/>
+<area shape="rect" id="node15" href="$_block_headers_8h.html" title="A message used to send and receive block headers. Inherits Message." alt="" coords="659,469,893,499"/>
+<area shape="rect" id="node17" href="$_block_headers_8c.html" title="src/Object/Message/BlockHeaders.c" alt="" coords="659,547,893,576"/>
+<area shape="rect" id="node26" href="$_transaction_input_8c.html" title="src/Object/Message/TransactionInput.c" alt="" coords="363,315,613,344"/>
+<area shape="rect" id="node32" href="$_transaction_output_8c.html" title="src/Object/Message/TransactionOutput.c" alt="" coords="637,237,899,267"/>
+<area shape="rect" id="node37" href="$_chain_descriptor_8c.html" title="src/Object/Message/ChainDescriptor.c" alt="" coords="1211,237,1459,267"/>
+<area shape="rect" id="node39" href="$_get_blocks_8h.html" title="A message to ask for an inventory of blocks or the block headers (getheaders message) up to the &quot;stop..." alt="" coords="973,237,1187,267"/>
+<area shape="rect" id="node41" href="$_get_blocks_8c.html" title="src/Object/Message/GetBlocks.c" alt="" coords="973,315,1187,344"/>
+<area shape="rect" id="node45" href="$_inventory_8c.html" title="src/Object/Message/Inventory.c" alt="" coords="1483,315,1691,344"/>
+<area shape="rect" id="node50" href="$_inventory_vector_8c.html" title="src/Object/Message/InventoryVector.c" alt="" coords="1715,237,1960,267"/>
+</map>

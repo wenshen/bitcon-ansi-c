@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_script_8c" kind="file">
+    <compoundname>Script.c</compoundname>
+    <includes refid="_m_i_script_8h" local="yes">Script.h</includes>
+    <includes local="yes">assert.h</includes>
+    <incdepgraph>
+      <node id="510">
+        <label>stdbool.h</label>
+      </node>
+      <node id="511">
+        <label>assert.h</label>
+      </node>
+      <node id="506">
+        <label>stdint.h</label>
+      </node>
+      <node id="507">
+        <label>stdlib.h</label>
+      </node>
+      <node id="508">
+        <label>../Constants.h</label>
+      </node>
+      <node id="509">
+        <label>string.h</label>
+      </node>
+      <node id="502">
+        <label>Object/Script.c</label>
+        <link refid="Script.c"/>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+      </node>
+      <node id="503">
+        <label>Script.h</label>
+        <link refid="_m_i_script_8h"/>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+      </node>
+      <node id="504">
+        <label>ByteArray.h</label>
+        <link refid="_m_i_byte_array_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+      </node>
+      <node id="505">
+        <label>Object.h</label>
+        <link refid="_m_i_object_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_i_script_8c_1a68cdb4a9f0a39933b1af58a86666db77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">Script</ref> *</type>
+        <definition>Script* createNewScriptFromReference</definition>
+        <argsstring>(ByteArray *program, uint32_t offset, uint32_t len)</argsstring>
+        <name>createNewScriptFromReference</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new Script object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.c" line="16" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.c" bodystart="15" bodyend="22"/>
+        <references refid="_m_i_byte_array_8c_1a22681d5a43566996273c64d34d669806" compoundref="_m_i_byte_array_8c" startline="61" endline="86">getByteArraySubsectionReference</references>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Script.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>08/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_i_script_8h" kindref="compound">Script.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;assert.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_m_i_script_8h_1aa0a40e0353c30a695a1f335b4425934b" refkind="member"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/><ref refid="_m_i_script_8c_1a68cdb4a9f0a39933b1af58a86666db77" kindref="member" tooltip="Creates a new Script object.">createNewScriptFromReference</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>program,<sp/>uint32_t<sp/>offset,<sp/>uint32_t<sp/>len)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(program<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(offset<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(len<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a22681d5a43566996273c64d34d669806" kindref="member" tooltip="References a subsection of a ByteArray.">getByteArraySubsectionReference</ref>(program,<sp/>offset,<sp/>len);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Script.c"/>
+  </compounddef>
+</doxygen>

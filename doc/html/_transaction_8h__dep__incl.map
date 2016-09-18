@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_block_8h.html" title="This file defines a bitcoin block." alt="" coords="136,83,323,112"/>
+<area shape="rect" id="node5" href="$_block_8c.html" title="This file defines a bitcoin block." alt="" coords="5,160,192,189"/>
+<area shape="rect" id="node12" href="$_transaction_8c.html" title="src/Object/Message/Transaction.c" alt="" coords="347,83,568,112"/>
+<area shape="rect" id="node7" href="$_block_headers_8h.html" title="A message used to send and receive block headers. Inherits Message." alt="" coords="216,160,451,189"/>
+<area shape="rect" id="node9" href="$_block_headers_8c.html" title="src/Object/Message/BlockHeaders.c" alt="" coords="216,237,451,267"/>
+</map>

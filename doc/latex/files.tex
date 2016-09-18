@@ -1,0 +1,59 @@
+\section{File List}
+Here is a list of all files with brief descriptions:\begin{DoxyCompactList}
+\item\contentsline{section}{src/\hyperlink{_bitcoin_8c}{Bitcoin.c} (A test case for \hyperlink{struct_block}{Block} )}{\pageref{_bitcoin_8c}}{}
+\item\contentsline{section}{src/\hyperlink{_constants_8h}{Constants.h} }{\pageref{_constants_8h}}{}
+\item\contentsline{section}{src/\hyperlink{_ib_test_8c}{IbTest.c} }{\pageref{_ib_test_8c}}{}
+\item\contentsline{section}{src/\hyperlink{_network_functions_8c}{NetworkFunctions.c} }{\pageref{_network_functions_8c}}{}
+\item\contentsline{section}{src/\hyperlink{_network_functions_8h}{NetworkFunctions.h} }{\pageref{_network_functions_8h}}{}
+\item\contentsline{section}{src/Base58/\hyperlink{_base58_8c}{Base58.c} }{\pageref{_base58_8c}}{}
+\item\contentsline{section}{src/Base58/\hyperlink{_base58_8h}{Base58.h} (Functions for encoding and decoding in base 58. Avoids 0olI whch may look alike. This is for readability concerns )}{\pageref{_base58_8h}}{}
+\item\contentsline{section}{src/BigInt/\hyperlink{_big_int_8c}{BigInt.c} }{\pageref{_big_int_8c}}{}
+\item\contentsline{section}{src/BigInt/\hyperlink{_big_int_8h}{BigInt.h} }{\pageref{_big_int_8h}}{}
+\item\contentsline{section}{src/MerkleNode/\hyperlink{_merkle_node_8c}{MerkleNode.c} }{\pageref{_merkle_node_8c}}{}
+\item\contentsline{section}{src/MerkleNode/\hyperlink{_merkle_node_8h}{MerkleNode.h} (A structure for a node in a merkle tree )}{\pageref{_merkle_node_8h}}{}
+\item\contentsline{section}{src/Object/\hyperlink{_byte_array_8c}{ByteArray.c} }{\pageref{_byte_array_8c}}{}
+\item\contentsline{section}{src/Object/\hyperlink{_byte_array_8h}{ByteArray.h} }{\pageref{_byte_array_8h}}{}
+\item\contentsline{section}{src/Object/\hyperlink{_object_8c}{Object.c} }{\pageref{_object_8c}}{}
+\item\contentsline{section}{src/Object/\hyperlink{_object_8h}{Object.h} (Basic object which serves as a basic block for all other objects in the system )}{\pageref{_object_8h}}{}
+\item\contentsline{section}{src/Object/\hyperlink{_script_8c}{Script.c} }{\pageref{_script_8c}}{}
+\item\contentsline{section}{src/Object/\hyperlink{_script_8h}{Script.h} }{\pageref{_script_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_block_8c}{Block.c} (This file defines a bitcoin block )}{\pageref{_block_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_block_8h}{Block.h} (This file defines a bitcoin block )}{\pageref{_block_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_block_headers_8c}{BlockHeaders.c} }{\pageref{_block_headers_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_block_headers_8h}{BlockHeaders.h} (A message used to send and receive block headers. Inherits \hyperlink{struct_message}{Message} )}{\pageref{_block_headers_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_chain_descriptor_8c}{ChainDescriptor.c} }{\pageref{_chain_descriptor_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_chain_descriptor_8h}{ChainDescriptor.h} (Stores up to 500 block hashes for a block chain to describe a block chain for a peer so that a peer can send relevent block data. Inherits from \hyperlink{struct_message}{Message} )}{\pageref{_chain_descriptor_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_get_blocks_8c}{GetBlocks.c} }{\pageref{_get_blocks_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_get_blocks_8h}{GetBlocks.h} (A message to ask for an inventory of blocks or the block headers (getheaders message) up to the \char`\"{}stopAtHash\char`\"{}, the last known block or 500 blocks, whichever comes first. The message comes with a block chain descriptor so the recipient can discover how the blockchain is different so they can send the necessary blocks (starting from a point of agreement). Inherits \hyperlink{struct_message}{Message} )}{\pageref{_get_blocks_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_inventory_8c}{Inventory.c} }{\pageref{_inventory_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_inventory_8h}{Inventory.h} (Allows a node to advertise its knowledge of one or more objects. It can be received unsolicited, or in reply to getblocks. see \href{https://en.bitcoin.it/wiki/Protocol_Specification#inv}{\tt https://en.bitcoin.it/wiki/Protocol\_\-Specification\#inv} maximum payload length: 1.8 Megabytes or 50000 entries )}{\pageref{_inventory_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_inventory_vector_8c}{InventoryVector.c} }{\pageref{_inventory_vector_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_inventory_vector_8h}{InventoryVector.h} (\hyperlink{struct_inventory}{Inventory} vectors are used for notifying other nodes about objects they have or data which is being requested. see \href{https://en.bitcoin.it/wiki/Protocol_specification#Inventory_Vectors}{\tt https://en.bitcoin.it/wiki/Protocol\_\-specification\#Inventory\_\-Vectors} \hyperlink{struct_inventory}{Inventory} vector could be transaction messages, block messages or errors )}{\pageref{_inventory_vector_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_message_8c}{Message.c} (This file is \hyperlink{_message_8c}{Message.c} )}{\pageref{_message_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_message_8h}{Message.h} (\hyperlink{struct_header}{Header} file for the \hyperlink{struct_message}{Message} object )}{\pageref{_message_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_ping_pong_message_8c}{PingPongMessage.c} }{\pageref{_ping_pong_message_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_ping_pong_message_8h}{PingPongMessage.h} (This message contains the nonce ID used in ping and pong messages for protocol versions over 60000. When the protocol version as negotiated in the \char`\"{}ver\char`\"{} message is greater than 60000, the \char`\"{}ping\char`\"{} message must contain a uint64 field called \char`\"{}nonce\char`\"{}. A peer sending \char`\"{}ping\char`\"{} should set the nonce to a random value, and it is then echoed back by the recipient in a new \char`\"{}pong\char`\"{} message that also contains a single uint64 field. see \href{https://en.bitcoin.it/wiki/BIP_0031}{\tt https://en.bitcoin.it/wiki/BIP\_\-0031} A NetworkCommunicator will accept this message for compatible protocol numbers and use an empty message for pings otherwise. Inherits \hyperlink{struct_message}{Message} )}{\pageref{_ping_pong_message_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_transaction_8c}{Transaction.c} }{\pageref{_transaction_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_transaction_8h}{Transaction.h} (\hyperlink{struct_transaction}{Transaction} object )}{\pageref{_transaction_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_transaction_input_8c}{TransactionInput.c} }{\pageref{_transaction_input_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_transaction_input_8h}{TransactionInput.h} (\hyperlink{struct_transaction_input}{TransactionInput} object )}{\pageref{_transaction_input_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_transaction_output_8c}{TransactionOutput.c} }{\pageref{_transaction_output_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_transaction_output_8h}{TransactionOutput.h} }{\pageref{_transaction_output_8h}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_version_8c}{Version.c} }{\pageref{_version_8c}}{}
+\item\contentsline{section}{src/Object/Message/\hyperlink{_version_8h}{Version.h} }{\pageref{_version_8h}}{}
+\item\contentsline{section}{src/Object/NetworkProtocol/\hyperlink{_commands_8h}{Commands.h} }{\pageref{_commands_8h}}{}
+\item\contentsline{section}{src/Object/NetworkProtocol/\hyperlink{_i_r_c_8c}{IRC.c} }{\pageref{_i_r_c_8c}}{}
+\item\contentsline{section}{src/Object/NetworkProtocol/\hyperlink{_i_r_c_8h}{IRC.h} }{\pageref{_i_r_c_8h}}{}
+\item\contentsline{section}{src/Object/NetworkProtocol/\hyperlink{_protocol_8c}{Protocol.c} }{\pageref{_protocol_8c}}{}
+\item\contentsline{section}{src/Object/NetworkProtocol/\hyperlink{_protocol_8h}{Protocol.h} (This class is responsible for the Protocol functionality described in the Bitcoin )}{\pageref{_protocol_8h}}{}
+\item\contentsline{section}{src/Object/NodeDiscovery/\hyperlink{_node_discovery_8c}{NodeDiscovery.c} }{\pageref{_node_discovery_8c}}{}
+\item\contentsline{section}{src/Object/NodeDiscovery/\hyperlink{_node_discovery_8h}{NodeDiscovery.h} (This class is responsible for the node discovery functionality described in the Bitcoin protocol -\/ apart from the fact that the methods which involve IRC procedures are not included, since they are deprecated. Inherits \hyperlink{struct_object}{Object} )}{\pageref{_node_discovery_8h}}{}
+\item\contentsline{section}{src/Object/VersionChecksumBytes/\hyperlink{_version_checksum_bytes_8c}{VersionChecksumBytes.c} }{\pageref{_version_checksum_bytes_8c}}{}
+\item\contentsline{section}{src/Object/VersionChecksumBytes/\hyperlink{_version_checksum_bytes_8h}{VersionChecksumBytes.h} (Represents a key, begining with a version byte and ending with a checksum. Inherits \hyperlink{struct_byte_array}{ByteArray} )}{\pageref{_version_checksum_bytes_8h}}{}
+\item\contentsline{section}{src/Object/VersionChecksumBytes/Address/\hyperlink{_address_8c}{Address.c} }{\pageref{_address_8c}}{}
+\item\contentsline{section}{src/Object/VersionChecksumBytes/Address/\hyperlink{_address_8h}{Address.h} (Based upon an ECDSA public key and a network version code. Used for receiving bitcoins. Inherits \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} )}{\pageref{_address_8h}}{}
+\item\contentsline{section}{src/Utils/Cryptography/\hyperlink{_crypt_8c}{Crypt.c} }{\pageref{_crypt_8c}}{}
+\item\contentsline{section}{src/Utils/Cryptography/\hyperlink{_crypt_8h}{Crypt.h} }{\pageref{_crypt_8h}}{}
+\item\contentsline{section}{src/Utils/VariableLengthInteger/\hyperlink{_var_len_int_8c}{VarLenInt.c} }{\pageref{_var_len_int_8c}}{}
+\item\contentsline{section}{src/Utils/VariableLengthInteger/\hyperlink{_var_len_int_8h}{VarLenInt.h} }{\pageref{_var_len_int_8h}}{}
+\end{DoxyCompactList}

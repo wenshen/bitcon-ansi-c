@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="384,5,563,35"/>
+<area shape="rect" id="node5" href="$_m_i_message_8c.html#a17557bbd8e2e7b7d0736c88df25a389e" title="destroys the memory allocated to a Message object." alt="" coords="203,57,336,87"/>
+<area shape="rect" id="node10" href="$_m_i_object_8c.html#a0f72e3416dc7f6c52cfb1bf49baac3f2" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="223,111,316,140"/>
+<area shape="rect" id="node8" href="$_m_i_object_8c.html#a71704ab4fbecb7d85276d32649b5349a" title="destructor" alt="" coords="415,59,532,88"/>
+</map>

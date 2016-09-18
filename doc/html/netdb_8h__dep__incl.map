@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_libev_sockets_8h.html" title="This is an implementation of the networking dependencies for cbitcoin. It can be included as as a sou..." alt="" coords="5,83,264,112"/>
+<area shape="rect" id="node5" href="$_i_r_c_8c.html" title="src/Object/Network/IRC.c" alt="" coords="288,83,461,112"/>
+<area shape="rect" id="node7" href="$_node_discovery_8h.html" title="This class is responsible for the node discovery functionality described in the Bitcoin protocol &#45; ap..." alt="" coords="485,83,725,112"/>
+<area shape="rect" id="node9" href="$_node_discovery_8c.html" title="src/Object/Network/NodeDiscovery.c" alt="" coords="485,160,725,189"/>
+</map>

@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_network_functions_8h" kind="file">
+    <compoundname>NetworkFunctions.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="_constants_8h" local="yes">Constants.h</includes>
+    <includedby refid="_network_functions_8c" local="yes">src/NetworkFunctions.c</includedby>
+    <incdepgraph>
+      <node id="665">
+        <label>stdbool.h</label>
+      </node>
+      <node id="663">
+        <label>src/NetworkFunctions.h</label>
+        <link refid="NetworkFunctions.h"/>
+        <childnode refid="664" relation="include">
+        </childnode>
+        <childnode refid="665" relation="include">
+        </childnode>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="664">
+        <label>stdint.h</label>
+      </node>
+      <node id="666">
+        <label>string.h</label>
+      </node>
+      <node id="667">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="669">
+        <label>src/NetworkFunctions.c</label>
+        <link refid="_network_functions_8c"/>
+      </node>
+      <node id="668">
+        <label>src/NetworkFunctions.h</label>
+        <link refid="NetworkFunctions.h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_network_functions_8h_1ad9c2d981fcf2d163c387cbced670d7cc" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t IPv4Start[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>IPv4Start</name>
+        <initializer> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0xFF, 0xFF}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_network_functions_8h_1afcf7a4d4284f810c287aeee5a9645f84" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t SITTStart[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>SITTStart</name>
+        <initializer> {0, 0, 0, 0, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_network_functions_8h_1a5345df14a2017a086a8cde90635e6182" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t RFC6052Start[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>RFC6052Start</name>
+        <initializer> {0, 0x64, 0xFF, 0x9B, 0, 0, 0, 0, 0, 0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="30" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_network_functions_8h_1a24b7947d9b095772e90dd5ced5d383f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45" kindref="member">IPType</ref></type>
+        <definition>IPType getIPType</definition>
+        <argsstring>(uint8_t *IP)</argsstring>
+        <name>getIPType</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>IP</declname>
+        </param>
+        <briefdescription>
+<para>Determines the type of IP, including validity. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>IP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP address to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The IP type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="37" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.c" bodystart="12" bodyend="92"/>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a6eebf14d3c0b3b29a2a60fc9e396ff13" compoundref="_constants_8h" startline="127">IP_6TO4</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a2884e83ef767045323bbbb6d85e9d197" compoundref="_constants_8h" startline="129">IP_HENET</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a46713e44b63cd4bdaa55b8fb8916941c" compoundref="_constants_8h" startline="124">IP_I2P</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a78ad3023e388cdb0edb26a99c1ed5b71" compoundref="_constants_8h" startline="119">IP_INVALID</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45ada1efeae8e474dedf665973081167ec3" compoundref="_constants_8h" startline="120">IP_IPv4</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a5c7c7aafd5c7ea542e80fa0367abe957" compoundref="_constants_8h" startline="121">IP_IPv6</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a843ba99ebefa69343b980604fbe93a31" compoundref="_constants_8h" startline="122">IP_LOCAL</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45aba7032d7b5b6bef01a37f2ee958ec440" compoundref="_constants_8h" startline="126">IP_RFC6052</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45aefffaa7d148c40f14207d1b970c3238b" compoundref="_constants_8h" startline="125">IP_SITT</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a1921e2c3d423fc7ae63ce0b1dc415ae6" compoundref="_constants_8h" startline="128">IP_TEREDO</references>
+        <references refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45a8a0b70d40b198adbc9e6c4c8216ed03f" compoundref="_constants_8h" startline="123">IP_TOR</references>
+        <references refid="_network_functions_8c_1a21369f59726afc3447ce0bb6c7ab5dd8" compoundref="_network_functions_8c" startline="94" endline="97">isI2P</references>
+        <references refid="_network_functions_8c_1a5af1a2b042aa1d6bf30683592bfcc480" compoundref="_network_functions_8c" startline="100" endline="102">isIPv4</references>
+        <references refid="_network_functions_8c_1a0e6ec565867a85ceef55d0b83bb047a1" compoundref="_network_functions_8c" startline="103" endline="106">isTor</references>
+      </memberdef>
+      <memberdef kind="function" id="_network_functions_8h_1a21369f59726afc3447ce0bb6c7ab5dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isI2P</definition>
+        <argsstring>(uint8_t *IP)</argsstring>
+        <name>isI2P</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>IP</declname>
+        </param>
+        <briefdescription>
+<para>Determines if an IP address is an GarliCat I2P hidden service representation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>IP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP address to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the IP address is an I2P address, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="43" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.c" bodystart="94" bodyend="97"/>
+        <referencedby refid="_network_functions_8h_1a24b7947d9b095772e90dd5ced5d383f8" compoundref="_network_functions_8c" startline="12" endline="92">getIPType</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_network_functions_8h_1a5af1a2b042aa1d6bf30683592bfcc480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isIPv4</definition>
+        <argsstring>(uint8_t *IP)</argsstring>
+        <name>isIPv4</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>IP</declname>
+        </param>
+        <briefdescription>
+<para>Determines if an IP address is an IPv4 address. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>IP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP address to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the IP address is IPv4, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="49" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.c" bodystart="100" bodyend="102"/>
+        <referencedby refid="_network_functions_8h_1a24b7947d9b095772e90dd5ced5d383f8" compoundref="_network_functions_8c" startline="12" endline="92">getIPType</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_network_functions_8h_1a0e6ec565867a85ceef55d0b83bb047a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isTor</definition>
+        <argsstring>(uint8_t *IP)</argsstring>
+        <name>isTor</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>IP</declname>
+        </param>
+        <briefdescription>
+<para>Determines if an IP address is an OnionCat Tor hidden service representation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>IP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP address to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the IP address is a Tor address, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h" line="55" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.c" bodystart="103" bodyend="106"/>
+        <referencedby refid="_network_functions_8h_1a24b7947d9b095772e90dd5ced5d383f8" compoundref="_network_functions_8c" startline="12" endline="92">getIPType</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Constants.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>26/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Created<sp/>by:<sp/>Attila<sp/>-<sp/>Peter<sp/>Toth</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/>Modified<sp/>by:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>@file</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Currently<sp/>we<sp/>are<sp/>focusing<sp/>only<sp/>on<sp/>IPv4<sp/>and<sp/>IPv6<sp/>addresses,<sp/>the<sp/>hidden<sp/>services</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>are<sp/>on<sp/>the<sp/>waiting<sp/>list.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NETWORKFUNCTIONS_H_</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NETWORKFUNCTIONS_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8h" kindref="compound">Constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>brief<sp/>Everything<sp/>is<sp/>in<sp/>network<sp/>byte<sp/>order.<sp/>IPv4<sp/>addresses<sp/>are<sp/>represented<sp/>in<sp/>IPv4<sp/>mapped<sp/>IPv6<sp/>format.<sp/>The<sp/>IPv4Start</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>is<sp/>part<sp/>of<sp/>the<sp/>mapping.<sp/>Uses<sp/>arrays<sp/>of<sp/>unsigned<sp/>integer<sp/>of<sp/>length<sp/>of<sp/>8<sp/>bits.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>IPv4Start[12]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0xFF,<sp/>0xFF};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>SITTStart[12]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0xFF,<sp/>0xFF,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>RFC6052Start[12]<sp/>=<sp/>{0,<sp/>0x64,<sp/>0xFF,<sp/>0x9B,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="_constants_8h_1aadb1cfb5fcd8adc562a07248be433d45" kindref="member">IPType</ref><sp/><ref refid="_network_functions_8c_1a24b7947d9b095772e90dd5ced5d383f8" kindref="member" tooltip="Determines the type of IP, including validity.">getIPType</ref>(uint8_t<sp/>*<sp/>IP);</highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_network_functions_8c_1a21369f59726afc3447ce0bb6c7ab5dd8" kindref="member" tooltip="Determines if an IP address is an GarliCat I2P hidden service representation.">isI2P</ref>(uint8_t<sp/>*<sp/>IP);</highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_network_functions_8c_1a5af1a2b042aa1d6bf30683592bfcc480" kindref="member" tooltip="Determines if an IP address is an IPv4 address.">isIPv4</ref>(uint8_t<sp/>*<sp/>IP);</highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_network_functions_8c_1a0e6ec565867a85ceef55d0b83bb047a1" kindref="member" tooltip="Determines if an IP address is an OnionCat Tor hidden service representation.">isTor</ref>(uint8_t<sp/>*<sp/>IP);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/NetworkFunctions.h"/>
+  </compounddef>
+</doxygen>

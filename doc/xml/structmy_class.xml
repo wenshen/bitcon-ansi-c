@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="structmy_class" kind="struct" prot="public">
+    <compoundname>myClass</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" line="7" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" bodystart="7" bodyend="-1"/>
+        <referencedby refid="_ib_test_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_ib_test_8c" startline="11" endline="38">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structmy_class_1a5ac083a645d964373f022d03df4849c8" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" line="8" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" bodystart="8" bodyend="-1"/>
+        <referencedby refid="_ib_test_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="_ib_test_8c" startline="11" endline="38">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" line="6" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" prot="public" virt="non-virtual"><scope>myClass</scope><name>id</name></member>
+      <member refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" prot="public" virt="non-virtual"><scope>myClass</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

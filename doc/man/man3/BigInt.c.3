@@ -1,0 +1,84 @@
+.TH "src/BigInt/BigInt.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/BigInt/BigInt.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'BigInt.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include <stdbool.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBBigIntAlloc\fP (\fBBigInt\fP *bi, uint8_t length)"
+.br
+.ti -1c
+.RI "int \fBBigIntRealloc\fP (\fBBigInt\fP *bi, uint8_t length)"
+.br
+.ti -1c
+.RI "\fBCompare\fP \fBBigIntCompareTo58\fP (\fBBigInt\fP *a)"
+.br
+.ti -1c
+.RI "int \fBBigIntEqualsAdditionByBigInt\fP (\fBBigInt\fP *a, \fBBigInt\fP *b)"
+.br
+.ti -1c
+.RI "void \fBBigIntEqualsDivisionBy58\fP (\fBBigInt\fP *a, uint8_t *ans)"
+.br
+.ti -1c
+.RI "int \fBBigIntEqualsMultiplicationByUInt8\fP (\fBBigInt\fP *a, uint8_t b, uint8_t *ans)"
+.br
+.ti -1c
+.RI "void \fBBigIntEqualsSubtractionByUInt8\fP (\fBBigInt\fP *a, uint8_t b)"
+.br
+.ti -1c
+.RI "int \fBBigIntFromPowUInt8\fP (\fBBigInt\fP *bi, uint8_t a, uint8_t b)"
+.br
+.ti -1c
+.RI "uint8_t \fBBigIntModuloWith58\fP (\fBBigInt\fP *a)"
+.br
+.ti -1c
+.RI "void \fBBigIntNormalise\fP (\fBBigInt\fP *a)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int BigIntAlloc (\fBBigInt\fP *bi, uint8_tlength)"
+.PP
+Definition at line 12 of file BigInt.c.
+.SS "\fBCompare\fP BigIntCompareTo58 (\fBBigInt\fP *a)"
+.PP
+Definition at line 29 of file BigInt.c.
+.SS "int BigIntEqualsAdditionByBigInt (\fBBigInt\fP *a, \fBBigInt\fP *b)"
+.PP
+Definition at line 55 of file BigInt.c.
+.SS "void BigIntEqualsDivisionBy58 (\fBBigInt\fP *a, uint8_t *ans)"
+.PP
+Definition at line 84 of file BigInt.c.
+.SS "int BigIntEqualsMultiplicationByUInt8 (\fBBigInt\fP *a, uint8_tb, uint8_t *ans)"
+.PP
+Definition at line 102 of file BigInt.c.
+.SS "void BigIntEqualsSubtractionByUInt8 (\fBBigInt\fP *a, uint8_tb)"
+.PP
+Definition at line 144 of file BigInt.c.
+.SS "int BigIntFromPowUInt8 (\fBBigInt\fP *bi, uint8_ta, uint8_tb)"
+.PP
+Definition at line 160 of file BigInt.c.
+.SS "uint8_t BigIntModuloWith58 (\fBBigInt\fP *a)"
+.PP
+Definition at line 180 of file BigInt.c.
+.SS "void BigIntNormalise (\fBBigInt\fP *a)"
+.PP
+Definition at line 193 of file BigInt.c.
+.SS "int BigIntRealloc (\fBBigInt\fP *bi, uint8_tlength)"
+.PP
+Definition at line 18 of file BigInt.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

@@ -1,0 +1,292 @@
+\hypertarget{_big_int_8h}{
+\section{src/BigInt/BigInt.h File Reference}
+\label{_big_int_8h}\index{src/BigInt/BigInt.h@{src/BigInt/BigInt.h}}
+}
+{\ttfamily \#include \char`\"{}../Constants.h\char`\"{}}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+Include dependency graph for BigInt.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{_big_int_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{_big_int_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_big_int}{BigInt}
+\begin{DoxyCompactList}\small\item\em Contains byte data with the length of this data to represent a large integer. The byte data is in little-\/endian which stores the smallest byte first. On an error data is set to NULL and length is 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_big_int_8h_a7544af9d148635904d1809eef62c11ae}{BigIntFromPowUInt8} (\hyperlink{struct_big_int}{BigInt} $\ast$bi, uint8\_\-t a, uint8\_\-t b)
+\item 
+int \hyperlink{_big_int_8h_abadebe4d6bc13cecd5434dcd4607c0e8}{BigIntEqualsMultiplicationByUInt8} (\hyperlink{struct_big_int}{BigInt} $\ast$a, uint8\_\-t b, uint8\_\-t $\ast$ans)
+\item 
+int \hyperlink{_big_int_8h_aceb9c4c6e4716127e4fc6d964b135527}{BigIntEqualsAdditionByBigInt} (\hyperlink{struct_big_int}{BigInt} $\ast$a, \hyperlink{struct_big_int}{BigInt} $\ast$b)
+\item 
+void \hyperlink{_big_int_8h_a980d453cb2c16efd376b928800c189ab}{BigIntNormalise} (\hyperlink{struct_big_int}{BigInt} $\ast$a)
+\item 
+uint8\_\-t \hyperlink{_big_int_8h_aa4544c75bd8e7106208d9b120d2bb533}{BigIntModuloWith58} (\hyperlink{struct_big_int}{BigInt} $\ast$a)
+\item 
+void \hyperlink{_big_int_8h_a9d2029aadab4a8ae5f376d3059786394}{BigIntEqualsSubtractionByUInt8} (\hyperlink{struct_big_int}{BigInt} $\ast$a, uint8\_\-t b)
+\item 
+void \hyperlink{_big_int_8h_ac1d1b61df392b26380337c98e859a295}{BigIntEqualsDivisionBy58} (\hyperlink{struct_big_int}{BigInt} $\ast$a, uint8\_\-t $\ast$ans)
+\item 
+\hyperlink{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare} \hyperlink{_big_int_8h_a766564219de39ebab49e86b84365155d}{BigIntCompareTo58} (\hyperlink{struct_big_int}{BigInt} $\ast$a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_big_int_8h_a766564219de39ebab49e86b84365155d}{
+\index{BigInt.h@{BigInt.h}!BigIntCompareTo58@{BigIntCompareTo58}}
+\index{BigIntCompareTo58@{BigIntCompareTo58}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntCompareTo58}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Compare} BigIntCompareTo58 (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_a766564219de39ebab49e86b84365155d}
+
+
+Definition at line 29 of file BigInt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{_big_int_8h_a766564219de39ebab49e86b84365155d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_aceb9c4c6e4716127e4fc6d964b135527}{
+\index{BigInt.h@{BigInt.h}!BigIntEqualsAdditionByBigInt@{BigIntEqualsAdditionByBigInt}}
+\index{BigIntEqualsAdditionByBigInt@{BigIntEqualsAdditionByBigInt}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntEqualsAdditionByBigInt}]{\setlength{\rightskip}{0pt plus 5cm}int BigIntEqualsAdditionByBigInt (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a, }
+\item[{{\bf BigInt} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_aceb9c4c6e4716127e4fc6d964b135527}
+
+
+Definition at line 55 of file BigInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{_big_int_8h_aceb9c4c6e4716127e4fc6d964b135527_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_big_int_8h_aceb9c4c6e4716127e4fc6d964b135527_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_ac1d1b61df392b26380337c98e859a295}{
+\index{BigInt.h@{BigInt.h}!BigIntEqualsDivisionBy58@{BigIntEqualsDivisionBy58}}
+\index{BigIntEqualsDivisionBy58@{BigIntEqualsDivisionBy58}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntEqualsDivisionBy58}]{\setlength{\rightskip}{0pt plus 5cm}void BigIntEqualsDivisionBy58 (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a, }
+\item[{uint8\_\-t $\ast$}]{ans}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_ac1d1b61df392b26380337c98e859a295}
+
+
+Definition at line 84 of file BigInt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_big_int_8h_ac1d1b61df392b26380337c98e859a295_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_abadebe4d6bc13cecd5434dcd4607c0e8}{
+\index{BigInt.h@{BigInt.h}!BigIntEqualsMultiplicationByUInt8@{BigIntEqualsMultiplicationByUInt8}}
+\index{BigIntEqualsMultiplicationByUInt8@{BigIntEqualsMultiplicationByUInt8}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntEqualsMultiplicationByUInt8}]{\setlength{\rightskip}{0pt plus 5cm}int BigIntEqualsMultiplicationByUInt8 (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a, }
+\item[{uint8\_\-t}]{b, }
+\item[{uint8\_\-t $\ast$}]{ans}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_abadebe4d6bc13cecd5434dcd4607c0e8}
+
+
+Definition at line 102 of file BigInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=358pt]{_big_int_8h_abadebe4d6bc13cecd5434dcd4607c0e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_big_int_8h_abadebe4d6bc13cecd5434dcd4607c0e8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_a9d2029aadab4a8ae5f376d3059786394}{
+\index{BigInt.h@{BigInt.h}!BigIntEqualsSubtractionByUInt8@{BigIntEqualsSubtractionByUInt8}}
+\index{BigIntEqualsSubtractionByUInt8@{BigIntEqualsSubtractionByUInt8}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntEqualsSubtractionByUInt8}]{\setlength{\rightskip}{0pt plus 5cm}void BigIntEqualsSubtractionByUInt8 (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a, }
+\item[{uint8\_\-t}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_a9d2029aadab4a8ae5f376d3059786394}
+
+
+Definition at line 144 of file BigInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=360pt]{_big_int_8h_a9d2029aadab4a8ae5f376d3059786394_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=358pt]{_big_int_8h_a9d2029aadab4a8ae5f376d3059786394_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_a7544af9d148635904d1809eef62c11ae}{
+\index{BigInt.h@{BigInt.h}!BigIntFromPowUInt8@{BigIntFromPowUInt8}}
+\index{BigIntFromPowUInt8@{BigIntFromPowUInt8}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntFromPowUInt8}]{\setlength{\rightskip}{0pt plus 5cm}int BigIntFromPowUInt8 (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{bi, }
+\item[{uint8\_\-t}]{a, }
+\item[{uint8\_\-t}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_a7544af9d148635904d1809eef62c11ae}
+
+
+Definition at line 160 of file BigInt.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_big_int_8h_a7544af9d148635904d1809eef62c11ae_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_big_int_8h_a7544af9d148635904d1809eef62c11ae_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_aa4544c75bd8e7106208d9b120d2bb533}{
+\index{BigInt.h@{BigInt.h}!BigIntModuloWith58@{BigIntModuloWith58}}
+\index{BigIntModuloWith58@{BigIntModuloWith58}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntModuloWith58}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t BigIntModuloWith58 (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_aa4544c75bd8e7106208d9b120d2bb533}
+
+
+Definition at line 180 of file BigInt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{_big_int_8h_aa4544c75bd8e7106208d9b120d2bb533_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_big_int_8h_a980d453cb2c16efd376b928800c189ab}{
+\index{BigInt.h@{BigInt.h}!BigIntNormalise@{BigIntNormalise}}
+\index{BigIntNormalise@{BigIntNormalise}!BigInt.h@{BigInt.h}}
+\subsubsection[{BigIntNormalise}]{\setlength{\rightskip}{0pt plus 5cm}void BigIntNormalise (
+\begin{DoxyParamCaption}
+\item[{{\bf BigInt} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}
+\label{_big_int_8h_a980d453cb2c16efd376b928800c189ab}
+
+
+Definition at line 193 of file BigInt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_big_int_8h_a980d453cb2c16efd376b928800c189ab_icgraph}
+\end{center}
+\end{figure}
+
+

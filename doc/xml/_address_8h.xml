@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_address_8h" kind="file">
+    <compoundname>Address.h</compoundname>
+    <includes local="yes">../VersionChecksumBytes.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="_address_8c" local="yes">src/Object/VersionChecksumBytes/Address/Address.c</includedby>
+    <incdepgraph>
+      <node id="1135">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1133">
+        <label>src/Object/VersionChecksumBytes/Address/Address.h</label>
+        <link refid="Address.h"/>
+        <childnode refid="1134" relation="include">
+        </childnode>
+        <childnode refid="1135" relation="include">
+        </childnode>
+      </node>
+      <node id="1134">
+        <label>../VersionChecksumBytes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1137">
+        <label>src/Object/VersionChecksumBytes/Address/Address.c</label>
+        <link refid="_address_8c"/>
+      </node>
+      <node id="1136">
+        <label>src/Object/VersionChecksumBytes/Address/Address.h</label>
+        <link refid="Address.h"/>
+        <childnode refid="1137" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_address" prot="public">Address</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_address_8h_1a6ef4823a0762b48c6329403baac9f6b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_address" kindref="compound">Address</ref> *</type>
+        <definition>Address* NewAddressFromRIPEMD160Hash</definition>
+        <argsstring>(uint8_t *hash, uint8_t networkCode, bool cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>NewAddressFromRIPEMD160Hash</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>networkCode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_address" kindref="compound">Address</ref> object from a RIPEMD-160 hash. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>network</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A NetworkParameters object with the network information. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RIPEMD-160 hash. Must be 20 bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_address" kindref="compound">Address</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="40" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.c" bodystart="13" bodyend="24"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_address_8c_1a2660a066065cdc76c93d847026721cf8" compoundref="_address_8c" startline="76" endline="78">FreeAddress</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_address_8c_1a9eb1202db1cb15c5f431b96e3951308c" compoundref="_address_8c" startline="47" endline="68">InitAddressFromRIPEMD160Hash</references>
+      </memberdef>
+      <memberdef kind="function" id="_address_8h_1a2b199b4215d7a2e41b1ab362be576225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_address" kindref="compound">Address</ref> *</type>
+        <definition>Address* NewAddressFromString</definition>
+        <argsstring>(ByteArray *string, bool cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>NewAddressFromString</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_address" kindref="compound">Address</ref> object from a base-58 encoded string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_address" kindref="compound">Address</ref> object to initialise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base-58 encoded String with a termination character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_address" kindref="compound">Address</ref> object. Returns NULL on failure such as an invalid bitcoin address. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="_address_8h_1a7cd1fc67cf33566c5b0fb7a1bdfb5bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_address" kindref="compound">Address</ref> *</type>
+        <definition>Address* GetAddress</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>GetAddress</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_address" kindref="compound">Address</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_address" kindref="compound">Address</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_address" kindref="compound">Address</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="56" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.c" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="_address_8h_1a9eb1202db1cb15c5f431b96e3951308c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InitAddressFromRIPEMD160Hash</definition>
+        <argsstring>(Address *self, uint8_t networkCode, uint8_t *hash, bool cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>InitAddressFromRIPEMD160Hash</name>
+        <param>
+          <type><ref refid="struct_address" kindref="compound">Address</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>networkCode</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_address" kindref="compound">Address</ref> object from a RIPEMD-160 hash. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_address" kindref="compound">Address</ref> object to initialise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>network</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A NetworkParameters object with the network information. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RIPEMD-160 hash. Must be 20 bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Events for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="67" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.c" bodystart="47" bodyend="68"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_version_checksum_bytes_8c_1ad9aefe5aeda2ebccd370e7b89ed8cd0b" compoundref="_version_checksum_bytes_8c" startline="68" endline="70">GetVersionChecksumBytes</references>
+        <references refid="_version_checksum_bytes_8c_1a04d489c466631d1e64fcfbeffc892830" compoundref="_version_checksum_bytes_8c" startline="74" endline="82">InitVersionChecksumBytesFromBytes</references>
+        <references refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" compoundref="_crypt_8c" startline="42" endline="49">Sha256</references>
+        <referencedby refid="_address_8h_1a6ef4823a0762b48c6329403baac9f6b1" compoundref="_address_8c" startline="13" endline="24">NewAddressFromRIPEMD160Hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_address_8h_1ae40224ecc9f935659f9e026ae06fdb51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InitAddressFromString</definition>
+        <argsstring>(Address *self, ByteArray *string, bool cacheString, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>InitAddressFromString</name>
+        <param>
+          <type><ref refid="struct_address" kindref="compound">Address</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cacheString</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_address" kindref="compound">Address</ref> object from a base-58 encoded string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_address" kindref="compound">Address</ref> object to initialise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base-58 encoded String with a termination character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the bitcoin string for this object will be cached in memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Events for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="_address_8h_1a2660a066065cdc76c93d847026721cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeAddress</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>FreeAddress</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="struct_address" kindref="compound">Address</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_address" kindref="compound">Address</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="82" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.c" bodystart="76" bodyend="78"/>
+        <references refid="_version_checksum_bytes_8c_1a7cae99fdf267cb22d4693c908cc896db" compoundref="_version_checksum_bytes_8c" startline="86" endline="90">FreeVersionChecksumBytes</references>
+        <references refid="_version_checksum_bytes_8c_1ad9aefe5aeda2ebccd370e7b89ed8cd0b" compoundref="_version_checksum_bytes_8c" startline="68" endline="70">GetVersionChecksumBytes</references>
+        <referencedby refid="_address_8h_1a6ef4823a0762b48c6329403baac9f6b1" compoundref="_address_8c" startline="13" endline="24">NewAddressFromRIPEMD160Hash</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Based upon an ECDSA public key and a network version code. Used for receiving bitcoins. Inherits <ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Here is a diagram of how a bitcoin address is structured created by Alan Reiner, developer of Bitcoin Armory (<ulink url="http://bitcoinarmory.com/">http://bitcoinarmory.com/</ulink>): <image type="html" name="Address.png"></image>
+ </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Address.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>03/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Hayk<sp/>Baluyan</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#include<sp/>&quot;../VersionChecksumBytes.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADDRESSH</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ADDRESSH</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Includes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight></codeline>
+<codeline lineno="28" refid="struct_address" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="struct_address_1acad0c178a202fbaaa57486e58e9cdce2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_version_checksum_bytes" kindref="compound" tooltip="Structure for VersionChecksumBytes objects.">VersionChecksumBytes</ref><sp/><ref refid="struct_address_1acad0c178a202fbaaa57486e58e9cdce2" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="struct_address" kindref="compound" tooltip="Structure for Address objects.">Address</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="struct_address" kindref="compound" tooltip="Structure for Address objects.">Address</ref><sp/>*<sp/><ref refid="_address_8c_1a6ef4823a0762b48c6329403baac9f6b1" kindref="member" tooltip="Creates a new Address object from a RIPEMD-160 hash.">NewAddressFromRIPEMD160Hash</ref>(uint8_t<sp/>*<sp/>hash,uint8_t<sp/>networkCode,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="struct_address" kindref="compound" tooltip="Structure for Address objects.">Address</ref><sp/>*<sp/><ref refid="_address_8h_1a2b199b4215d7a2e41b1ab362be576225" kindref="member" tooltip="Creates a new Address object from a base-58 encoded string.">NewAddressFromString</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="struct_address" kindref="compound" tooltip="Structure for Address objects.">Address</ref><sp/>*<sp/><ref refid="_address_8c_1a7cd1fc67cf33566c5b0fb7a1bdfb5bae" kindref="member" tooltip="Gets a Address from another object. Use this to avoid casts.">GetAddress</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_address_8c_1a9eb1202db1cb15c5f431b96e3951308c" kindref="member" tooltip="Initialises a Address object from a RIPEMD-160 hash.">InitAddressFromRIPEMD160Hash</ref>(<ref refid="struct_address" kindref="compound" tooltip="Structure for Address objects.">Address</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,uint8_t<sp/>networkCode,uint8_t<sp/>*<sp/>hash,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_address_8h_1ae40224ecc9f935659f9e026ae06fdb51" kindref="member" tooltip="Initialises a Address object from a base-58 encoded string.">InitAddressFromString</ref>(<ref refid="struct_address" kindref="compound" tooltip="Structure for Address objects.">Address</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cacheString,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_address_8c_1a2660a066065cdc76c93d847026721cf8" kindref="member" tooltip="Frees a Address object.">FreeAddress</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h"/>
+  </compounddef>
+</doxygen>

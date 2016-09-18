@@ -1,0 +1,897 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_script_8h" kind="file">
+    <compoundname>Script.h</compoundname>
+    <includes refid="_byte_array_8h" local="yes">ByteArray.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="_transaction_input_8h" local="yes">src/Object/Message/TransactionInput.h</includedby>
+    <includedby refid="_script_8c" local="yes">src/Object/Script.c</includedby>
+    <incdepgraph>
+      <node id="1117">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1113">
+        <label>stdint.h</label>
+      </node>
+      <node id="1114">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1112">
+        <label>Object.h</label>
+        <link refid="_object_8h"/>
+        <childnode refid="1113" relation="include">
+        </childnode>
+        <childnode refid="1114" relation="include">
+        </childnode>
+        <childnode refid="1115" relation="include">
+        </childnode>
+      </node>
+      <node id="1110">
+        <label>src/Object/Script.h</label>
+        <link refid="Script.h"/>
+        <childnode refid="1111" relation="include">
+        </childnode>
+        <childnode refid="1113" relation="include">
+        </childnode>
+        <childnode refid="1117" relation="include">
+        </childnode>
+      </node>
+      <node id="1116">
+        <label>string.h</label>
+      </node>
+      <node id="1111">
+        <label>ByteArray.h</label>
+        <link refid="_byte_array_8h"/>
+        <childnode refid="1112" relation="include">
+        </childnode>
+        <childnode refid="1113" relation="include">
+        </childnode>
+        <childnode refid="1116" relation="include">
+        </childnode>
+        <childnode refid="1115" relation="include">
+        </childnode>
+      </node>
+      <node id="1115">
+        <label>../Constants.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1122">
+        <label>src/Object/Message/Block.c</label>
+        <link refid="_block_8c"/>
+      </node>
+      <node id="1121">
+        <label>src/Object/Message/Block.h</label>
+        <link refid="_block_8h"/>
+        <childnode refid="1122" relation="include">
+        </childnode>
+        <childnode refid="1123" relation="include">
+        </childnode>
+      </node>
+      <node id="1127">
+        <label>src/Object/Script.c</label>
+        <link refid="_script_8c"/>
+      </node>
+      <node id="1118">
+        <label>src/Object/Script.h</label>
+        <link refid="Script.h"/>
+        <childnode refid="1119" relation="include">
+        </childnode>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1126">
+        <label>src/Object/Message/TransactionInput.c</label>
+        <link refid="_transaction_input_8c"/>
+      </node>
+      <node id="1119">
+        <label>src/Object/Message/TransactionInput.h</label>
+        <link refid="_transaction_input_8h"/>
+        <childnode refid="1120" relation="include">
+        </childnode>
+        <childnode refid="1125" relation="include">
+        </childnode>
+        <childnode refid="1126" relation="include">
+        </childnode>
+      </node>
+      <node id="1124">
+        <label>src/Object/Message/BlockHeaders.c</label>
+        <link refid="_block_headers_8c"/>
+      </node>
+      <node id="1125">
+        <label>src/Object/Message/Transaction.c</label>
+        <link refid="_transaction_8c"/>
+      </node>
+      <node id="1123">
+        <label>src/Object/Message/BlockHeaders.h</label>
+        <link refid="_block_headers_8h"/>
+        <childnode refid="1124" relation="include">
+        </childnode>
+      </node>
+      <node id="1120">
+        <label>src/Object/Message/Transaction.h</label>
+        <link refid="_transaction_8h"/>
+        <childnode refid="1121" relation="include">
+        </childnode>
+        <childnode refid="1122" relation="include">
+        </childnode>
+        <childnode refid="1125" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_script_byte_vector" prot="public">ScriptByteVector</innerclass>
+    <innerclass refid="struct_script_stack" prot="public">ScriptStack</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_script_8h_1a07c7146c310e9bdc13fe8c32d7e42ee0" prot="public" static="no">
+        <type>struct <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+        <definition>typedef struct ScriptByteVector  ScriptByteVector</definition>
+        <argsstring></argsstring>
+        <name>ScriptByteVector</name>
+        <briefdescription>
+<para>Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers with the most significant bit determining the sign of the integer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="28"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_script_8h_1a0fd00d44b777e46b5aa78b5aa1206685" prot="public" static="no">
+        <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref></type>
+        <definition>typedef ByteArray Script</definition>
+        <argsstring></argsstring>
+        <name>Script</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="38" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_script_8h_1ae3aacd3817e39425e8441c23b453aae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref></type>
+        <definition>ScriptStack createEmptyScriptStack</definition>
+        <argsstring>(void)</argsstring>
+        <name>createEmptyScriptStack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a new empty scriptstack. </para>        </briefdescription>
+        <detaileddescription>
+<para>A script is a array of bytes <simplesect kind="return"><para>The new empty stack. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="44" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="25" bodyend="32"/>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1ae6cbd0324ea790261d8c56b9aeda0f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+        <definition>Script* createNewScriptFromReference</definition>
+        <argsstring>(Script *program, uint32_t offset, uint32_t len)</argsstring>
+        <name>createNewScriptFromReference</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new Script object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new Script object.</para></simplesect>
+Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="50" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="16" bodyend="23"/>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <referencedby refid="_transaction_input_8h_1a8eb115030448e943f94d8ecff0fa21a9" compoundref="_transaction_input_8c" startline="177" endline="225">deserializeTransactionInput</referencedby>
+        <referencedby refid="_transaction_output_8h_1a484844cadde17ce53f58dcf0fceb52b2" compoundref="_transaction_output_8c" startline="167" endline="235">deserializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1acd97590583a26ab99944ec9e2217d879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_constants_8h_1a5bdbd094ca1cda7631026bcf5b883620" kindref="member">ScriptExecutionStatus</ref></type>
+        <definition>ScriptExecutionStatus executeScript</definition>
+        <argsstring>(Script *self, ScriptStack *stack, TransactionHashStatus(*getHashForSignature)(void *, ByteArray *, uint32_t, SignatureType, uint8_t *), void *transaction, uint32_t inputIndex, int p2sh)</argsstring>
+        <name>executeScript</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type><ref refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826" kindref="member">TransactionHashStatus</ref>(*)(void *, <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *, uint32_t, <ref refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50" kindref="member">SignatureType</ref>, uint8_t *)</type>
+          <declname>getHashForSignature</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>transaction</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>inputIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p2sh</declname>
+        </param>
+        <briefdescription>
+<para>Executes a bitcoin script. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Script object with the program </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the input stack for the program. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getHashForSig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the function to get the hash for checking the signature. Should take a <ref refid="struct_transaction" kindref="compound">Transaction</ref> object, input index and the SignatureType and the Dependencies object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_transaction" kindref="compound">Transaction</ref> for checking the signatures. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the input for the signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2sh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If FALSE, do not allow any P2SH matches. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GOOD_SCRIPT if the program ended with true, BAD_SCRIPT on script failure or SCRIPT_ERR if an error occurred with the interpreter such as running of of memory. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="61" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="274" bodyend="1300"/>
+        <references refid="_constants_8h_1a5bdbd094ca1cda7631026bcf5b883620a37c39cc1fade92fcaa3d733180e474f0" compoundref="_constants_8h" startline="73">BAD_SCRIPT</references>
+        <references refid="_script_8c_1ad73ed8795ecc28c1967ef9a3a618b3c1" compoundref="_script_8c" startline="130" endline="189">convertInt64ToScriptByteVector</references>
+        <references refid="_script_8c_1a05e400cb6322e101e8e6a3ebafed022d" compoundref="_script_8c" startline="191" endline="209">convertScriptByteVectorToInt64</references>
+        <references refid="_script_8c_1aa2df10dc8c05ec7340c2f22381dde313" compoundref="_script_8c" startline="44" endline="69">copyByteVectorFromScriptStack</references>
+        <references refid="_script_8c_1ad6a383832d77f52a4910c2b7d737d326" compoundref="_script_8c" startline="25" endline="32">createEmptyScriptStack</references>
+        <references refid="_byte_array_8c_1a106c7d7657b7f9758d5c1a2caa329ce4" compoundref="_byte_array_8c" startline="474" endline="487">createNewByteArrayFromData</references>
+        <references refid="_script_8c_1acb39fe4d41a3f92781bb5adcbae79033" compoundref="_script_8c" startline="264" endline="267">createNewScriptStackFromData</references>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <references refid="_crypt_8c_1ad2f883546aec1d35706944513146c05a" compoundref="_crypt_8c" startline="60" endline="73">ECDSAVerify</references>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_script_8c_1aec9ea0bb8f3fca33afcbda7630d723b2" compoundref="_script_8c" startline="274" endline="1300">executeScript</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_byte_array_8c_1aceedce9c30c691b211185ee9b454aae4" compoundref="_byte_array_8c" startline="74" endline="78">getByteArrayData</references>
+        <references refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" compoundref="_byte_array_8c" startline="89" endline="95">getByteFromByteArray</references>
+        <references refid="_transaction_8c_1a5bc3cb0f58d027cc53fb21f90cc69588" compoundref="_transaction_8c" startline="536" endline="680">getTransactionInputHashForVerification</references>
+        <references refid="_constants_8h_1a5bdbd094ca1cda7631026bcf5b883620a4b8548e1cadda6245839d071b0c1b5a4" compoundref="_constants_8h" startline="72">GOOD_SCRIPT</references>
+        <references refid="_script_8c_1ae63afad4294e52303b66f910fda58525" compoundref="_script_8c" startline="34" endline="42">isP2SHScript</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <references refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="27">ScriptByteVector::length</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_byte_array_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_byte_array_8h" startline="34">ByteArray::onErrorReceived</references>
+        <references refid="_script_8c_1a230165cbcd191bbb3830aebaa18a2719" compoundref="_script_8c" startline="120" endline="128">popElementFromStack</references>
+        <references refid="_script_8c_1a42109fe30e56a4ca86d2bf70a3d08ee1" compoundref="_script_8c" startline="71" endline="84">pushScriptByteVectorOntoScriptStack</references>
+        <references refid="_byte_array_8c_1a49e0dcce3198b633d8f78dd56aa96597" compoundref="_byte_array_8c" startline="210" endline="222">readInt16AsLittleEndianFromByteArray</references>
+        <references refid="_byte_array_8c_1a6fe303a6a14235d60ef9024a1463d630" compoundref="_byte_array_8c" startline="231" endline="243">readInt32AsLittleEndianFromByteArray</references>
+        <references refid="_script_8c_1a2192430534274747a5b711b19261e4fe" compoundref="_script_8c" startline="112" endline="118">removeElementFromStack</references>
+        <references refid="_script_8c_1a8d0dbc84be887aa4d67eb2bfafbf458b" compoundref="_script_8c" startline="211" endline="262">removeSignatureFromStackScript</references>
+        <references refid="_crypt_8c_1a11ffcd5481255317891e36827279bd42" compoundref="_crypt_8c" startline="51" endline="58">Ripemd160</references>
+        <references refid="_constants_8h_1a5bdbd094ca1cda7631026bcf5b883620a7ecace0cb3ae6b278566121da07969ae" compoundref="_constants_8h" startline="74">SCRIPT_ERR</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261abf4f43e59384e6e7eaf27f2cb2465867" compoundref="_constants_8h" startline="206">SCRIPT_OPCODE_0NOTEQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aeffe244b05b243e0fcb4fcec008e0df7" compoundref="_constants_8h" startline="140">SCRIPT_OPCODE_1</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a28e844412480cc7cfcd08894badaaede" compoundref="_constants_8h" startline="156">SCRIPT_OPCODE_16</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a4ed1ff82e06aed6cd92d046041961e1f" compoundref="_constants_8h" startline="199">SCRIPT_OPCODE_1ADD</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a117df15a10da6eeca43daf30af649587" compoundref="_constants_8h" startline="138">SCRIPT_OPCODE_1NEGATE</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ac68419697241139db3fd1e310da6cc38" compoundref="_constants_8h" startline="200">SCRIPT_OPCODE_1SUB</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ab5372b8d1a8e21a04f37a62fee5a6293" compoundref="_constants_8h" startline="202">SCRIPT_OPCODE_2DIV</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a185254cc7efaf84fc14b87e7ab693ea0" compoundref="_constants_8h" startline="169">SCRIPT_OPCODE_2DROP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a0c5cf42b688db632a1e58b9cf853d3bf" compoundref="_constants_8h" startline="170">SCRIPT_OPCODE_2DUP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ac99f89b58557bff517ddb15f5bcfa8d5" compoundref="_constants_8h" startline="201">SCRIPT_OPCODE_2MUL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261adafd4c38a106f95dddc1665712a64d41" compoundref="_constants_8h" startline="172">SCRIPT_OPCODE_2OVER</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ad6f8f4fe9c7652c98de752b3d97adf64" compoundref="_constants_8h" startline="173">SCRIPT_OPCODE_2ROT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a8d8bf67462c8a18f3504b43972aa442d" compoundref="_constants_8h" startline="174">SCRIPT_OPCODE_2SWAP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a8a045dccae056a8dd1529b2a1e2cdb61" compoundref="_constants_8h" startline="171">SCRIPT_OPCODE_3DUP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a9f3d06903919874871e31811ff9214c7" compoundref="_constants_8h" startline="204">SCRIPT_OPCODE_ABS</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aca41a1a10951a5c3235763e757cd3275" compoundref="_constants_8h" startline="207">SCRIPT_OPCODE_ADD</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ad0b6577572d7a1d4d1219b3fcacbf8df" compoundref="_constants_8h" startline="192">SCRIPT_OPCODE_AND</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a43779fcad35757fe7f4b4da17060dde3" compoundref="_constants_8h" startline="214">SCRIPT_OPCODE_BOOLAND</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a2a73c807bff6f33d3d83a280ff3d10ef" compoundref="_constants_8h" startline="215">SCRIPT_OPCODE_BOOLOR</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a9d90702b37b4c90d4ca430ecce55e022" compoundref="_constants_8h" startline="186">SCRIPT_OPCODE_CAT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aa7521bbacda374d67e274d95c1762415" compoundref="_constants_8h" startline="234">SCRIPT_OPCODE_CHECKMULTISIG</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ac1f1ae0068ab02815d725fd4712e7901" compoundref="_constants_8h" startline="235">SCRIPT_OPCODE_CHECKMULTISIGVERIFY</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261acb41eacae824fd9f5911b5647ebe8099" compoundref="_constants_8h" startline="232">SCRIPT_OPCODE_CHECKSIG</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261af019c5897bec7acfe10039c497efd8d2" compoundref="_constants_8h" startline="233">SCRIPT_OPCODE_CHECKSIGVERIFY</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a4433a9e18f616b931355c0b7a8fdbbb1" compoundref="_constants_8h" startline="231">SCRIPT_OPCODE_CODESEPARATOR</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a5d352b9fd7ba283eeb00f90c5a271f51" compoundref="_constants_8h" startline="176">SCRIPT_OPCODE_DEPTH</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a4db60e00ba7e6f4ddd3a761da044ee16" compoundref="_constants_8h" startline="210">SCRIPT_OPCODE_DIV</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a47ec08fd060faea901455610fe02c804" compoundref="_constants_8h" startline="177">SCRIPT_OPCODE_DROP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a06368ea5ea2e47d2674f8de0f4bdca16" compoundref="_constants_8h" startline="178">SCRIPT_OPCODE_DUP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a6151499a8bb5cf0405defe70e278081f" compoundref="_constants_8h" startline="163">SCRIPT_OPCODE_ELSE</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aec9a201a74a58c5b9e3e19ee8292f268" compoundref="_constants_8h" startline="164">SCRIPT_OPCODE_ENDIF</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a87ac289f1822dde70b15945ef47d322b" compoundref="_constants_8h" startline="195">SCRIPT_OPCODE_EQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261afea118a8436877a32baac68e5a338828" compoundref="_constants_8h" startline="196">SCRIPT_OPCODE_EQUALVERIFY</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a0d7c0b8ead7e9b8bfb0858f99b2c58bf" compoundref="_constants_8h" startline="168">SCRIPT_OPCODE_FROMALTSTACK</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aeb4b0c1f69a7796d9fabbfff3b073844" compoundref="_constants_8h" startline="220">SCRIPT_OPCODE_GREATERTHAN</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a9c414e78d1701ca04bcf261a4b5cc94a" compoundref="_constants_8h" startline="222">SCRIPT_OPCODE_GREATERTHANOREQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a5417954764ccb7de080cbec9c9338447" compoundref="_constants_8h" startline="229">SCRIPT_OPCODE_HASH160</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a850a52d6fb761c3927f209bd247fded9" compoundref="_constants_8h" startline="230">SCRIPT_OPCODE_HASH256</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a5d7c8ce9d9d6a8a54be9b0cf47cc23ff" compoundref="_constants_8h" startline="159">SCRIPT_OPCODE_IF</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aa3df2c8b9a95a426e471c920d46c8595" compoundref="_constants_8h" startline="175">SCRIPT_OPCODE_IFDUP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a13ee63bdc69c0c79ea2753d56ce1e465" compoundref="_constants_8h" startline="250">SCRIPT_OPCODE_INVALID</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ad105e3049457c87011cbd636d3f798c8" compoundref="_constants_8h" startline="191">SCRIPT_OPCODE_INVERT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261af33a4d4b674132610fee2611579d505b" compoundref="_constants_8h" startline="188">SCRIPT_OPCODE_LEFT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ada5bd8b046c9967e9f48ad341783af19" compoundref="_constants_8h" startline="219">SCRIPT_OPCODE_LESSTHAN</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a27854897520ffd63a053474451f41f69" compoundref="_constants_8h" startline="221">SCRIPT_OPCODE_LESSTHANOREQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a0cb0a5e48ea2179489fbd64fd4795f90" compoundref="_constants_8h" startline="212">SCRIPT_OPCODE_LSHIFT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a191a0c354403934b05e00fb67730676b" compoundref="_constants_8h" startline="224">SCRIPT_OPCODE_MAX</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ac8caef14165c0e208a99c08dd0b941a9" compoundref="_constants_8h" startline="223">SCRIPT_OPCODE_MIN</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a58db8e82676607d08544fb85b8ce3b57" compoundref="_constants_8h" startline="211">SCRIPT_OPCODE_MOD</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ad6b6722ae146128fe97a699c4e1f3687" compoundref="_constants_8h" startline="209">SCRIPT_OPCODE_MUL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261af3f13ceaa5d2d9fde35a44e6ed727675" compoundref="_constants_8h" startline="203">SCRIPT_OPCODE_NEGATE</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a667ce4e23e49f09e0807a1de16fe6e77" compoundref="_constants_8h" startline="179">SCRIPT_OPCODE_NIP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261acb04dc1e659f0cae9a9d68d13013ec63" compoundref="_constants_8h" startline="157">SCRIPT_OPCODE_NOP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261af57ebd62fbaac2168aa9c055d100bd12" compoundref="_constants_8h" startline="205">SCRIPT_OPCODE_NOT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a96974645c1fc09a0b82dc87e7ba6b5e5" compoundref="_constants_8h" startline="160">SCRIPT_OPCODE_NOTIF</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aa34ff41ebaa170bb02787f9ae5e89a18" compoundref="_constants_8h" startline="216">SCRIPT_OPCODE_NUMEQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a7dd2bf1bb9abd218e85f9e420360ff67" compoundref="_constants_8h" startline="217">SCRIPT_OPCODE_NUMEQUALVERIFY</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ae8c96d1bc91a1332ba2c4ca23ba3b121" compoundref="_constants_8h" startline="218">SCRIPT_OPCODE_NUMNOTEQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a82897bb598a7ae17968de5f003c9930b" compoundref="_constants_8h" startline="193">SCRIPT_OPCODE_OR</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a2c6b5ddc35216afdfbdce7a94273761f" compoundref="_constants_8h" startline="180">SCRIPT_OPCODE_OVER</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261af6b7da3dfeea89131a083f35a1b13157" compoundref="_constants_8h" startline="181">SCRIPT_OPCODE_PICK</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a552b171c345d6b1ae161de015717596a" compoundref="_constants_8h" startline="135">SCRIPT_OPCODE_PUSHDATA1</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261abb5230268661595413fc9cd5990afbe9" compoundref="_constants_8h" startline="136">SCRIPT_OPCODE_PUSHDATA2</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261af17db0b753970e02b54ac07189a248ee" compoundref="_constants_8h" startline="139">SCRIPT_OPCODE_RESERVED</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a72cad21a6b3ca1e2ece6327bbe6f321f" compoundref="_constants_8h" startline="166">SCRIPT_OPCODE_RETURN</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a36c42371982fa533e0d22069290a3787" compoundref="_constants_8h" startline="189">SCRIPT_OPCODE_RIGHT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ae6c02597d9ec4b20250c17e8c2c6d6be" compoundref="_constants_8h" startline="226">SCRIPT_OPCODE_RIPEMD160</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a0cfc1b104b3f7b773cc4a87c9f83e84a" compoundref="_constants_8h" startline="182">SCRIPT_OPCODE_ROLL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261ade170c8dd3e87cefd01e2dd715749497" compoundref="_constants_8h" startline="183">SCRIPT_OPCODE_ROT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aa35c33bd08493266e7eb9a4bd052e203" compoundref="_constants_8h" startline="213">SCRIPT_OPCODE_RSHIFT</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a938ad3706b301863a9acdb69f68eb31c" compoundref="_constants_8h" startline="227">SCRIPT_OPCODE_SHA1</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a83704dc9b91397b86a6b51b36939e45e" compoundref="_constants_8h" startline="228">SCRIPT_OPCODE_SHA256</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a6cc682573a7a43b2e914d1a1fadbe8df" compoundref="_constants_8h" startline="190">SCRIPT_OPCODE_SIZE</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a704875ffeec99cfd1126b3d847455205" compoundref="_constants_8h" startline="208">SCRIPT_OPCODE_SUB</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261aa40c5cb1ff49d029230d834d4dca5f16" compoundref="_constants_8h" startline="187">SCRIPT_OPCODE_SUBSTR</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a226bbd02b346591769fafcf22ae641b3" compoundref="_constants_8h" startline="184">SCRIPT_OPCODE_SWAP</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a9d63127ee227927ec124c139b1f7a00f" compoundref="_constants_8h" startline="167">SCRIPT_OPCODE_TOALTSTACK</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a85d9017630c090f6e2115b20a9e98857" compoundref="_constants_8h" startline="185">SCRIPT_OPCODE_TUCK</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a96234eb61fd4b144dc954638e9c1d5cd" compoundref="_constants_8h" startline="161">SCRIPT_OPCODE_VERIF</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261abc49c951abb66cf64b5d7df7ce94cf67" compoundref="_constants_8h" startline="165">SCRIPT_OPCODE_VERIFY</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a8714c3230da76823c4d36993ed748441" compoundref="_constants_8h" startline="162">SCRIPT_OPCODE_VERNOTIF</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a6bd178ad0d24a80bc3b1fda3fca12ce4" compoundref="_constants_8h" startline="225">SCRIPT_OPCODE_WITHIN</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a56b2b3f4b448cbf01ffa02293027da58" compoundref="_constants_8h" startline="194">SCRIPT_OPCODE_XOR</references>
+        <references refid="_crypt_8c_1a65ada373e8917a80136b5756d3e55932" compoundref="_crypt_8c" startline="34" endline="41">Sha160</references>
+        <references refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" compoundref="_crypt_8c" startline="42" endline="49">Sha256</references>
+        <references refid="_script_8c_1a2c8040a862763eac525a2907846aa70d" compoundref="_script_8c" startline="86" endline="110">topElementEvaluatesToTrue</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <references refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826ae372182e92ec6fd8774695846b3d8845" compoundref="_constants_8h" startline="84">TX_HASH_FAIL</references>
+        <references refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826a9f46366755423a053481edc37bd853d0" compoundref="_constants_8h" startline="82">TX_HASH_GOOD</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1ae63afad4294e52303b66f910fda58525" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isP2SHScript</definition>
+        <argsstring>(Script *self)</argsstring>
+        <name>isP2SHScript</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Determines if a script object matches the P2SH template; i.e. BIP 0016 see <ulink url="https://en.bitcoin.it/wiki/BIP_0016.">https://en.bitcoin.it/wiki/BIP_0016.</ulink> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Script object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>one if the script matches the P2SH template, zero otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="68" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="34" bodyend="42"/>
+        <references refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" compoundref="_byte_array_8c" startline="89" endline="95">getByteFromByteArray</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a87ac289f1822dde70b15945ef47d322b" compoundref="_constants_8h" startline="195">SCRIPT_OPCODE_EQUAL</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a5417954764ccb7de080cbec9c9338447" compoundref="_constants_8h" startline="229">SCRIPT_OPCODE_HASH160</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1aa2df10dc8c05ec7340c2f22381dde313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+        <definition>ScriptByteVector copyByteVectorFromScriptStack</definition>
+        <argsstring>(ScriptStack *stack, uint8_t fromTop)</argsstring>
+        <name>copyByteVectorFromScriptStack</name>
+        <param>
+          <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>fromTop</declname>
+        </param>
+        <briefdescription>
+<para>Returns a copy of a stack item, &quot;fromTop&quot; from the top. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the stack. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fromTop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items from the top to copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A copy of the stack item which should be freed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="76" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="44" bodyend="69"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="27">ScriptByteVector::length</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1aaf6cf483fc47c20762e777a581c2510a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pushScriptByteVectorOntoScriptStack</definition>
+        <argsstring>(ScriptStack *stack, ScriptByteVector item)</argsstring>
+        <name>pushScriptByteVectorOntoScriptStack</name>
+        <param>
+          <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Push a <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> item onto the stack which is freed by the stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> to push data onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item to push on the stack. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="83" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="71" bodyend="84"/>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1a2c8040a862763eac525a2907846aa70d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int topElementEvaluatesToTrue</definition>
+        <argsstring>(ScriptStack *stack)</argsstring>
+        <name>topElementEvaluatesToTrue</name>
+        <param>
+          <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Evaluates the top <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> on a <ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> as a boolean. False if 0 or -0. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_script_stack" kindref="compound">ScriptStack</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The boolean result. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="90" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="86" bodyend="110"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="27">ScriptByteVector::length</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1a2192430534274747a5b711b19261e4fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void removeElementFromStack</definition>
+        <argsstring>(ScriptStack *stack)</argsstring>
+        <name>removeElementFromStack</name>
+        <param>
+          <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Removes top <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> from the stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the stack to remove the data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="96" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="112" bodyend="118"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1a230165cbcd191bbb3830aebaa18a2719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+        <definition>ScriptByteVector popElementFromStack</definition>
+        <argsstring>(ScriptStack *stack)</argsstring>
+        <name>popElementFromStack</name>
+        <param>
+          <type><ref refid="struct_script_stack" kindref="compound">ScriptStack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Pops the top <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> off the <ref refid="struct_script_stack" kindref="compound">ScriptStack</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the stack to remove the data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> the top <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> on the stack </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="103" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="120" bodyend="128"/>
+        <references refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" compoundref="_script_8h" startline="34">ScriptStack::elements</references>
+        <references refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="35">ScriptStack::length</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1ad73ed8795ecc28c1967ef9a3a618b3c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+        <definition>ScriptByteVector convertInt64ToScriptByteVector</definition>
+        <argsstring>(ScriptByteVector byteVector, int64_t int64)</argsstring>
+        <name>convertInt64ToScriptByteVector</name>
+        <param>
+          <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+          <declname>byteVector</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>int64</declname>
+        </param>
+        <briefdescription>
+<para>Converts a int64_t into a <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>byteVector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pass in a <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> for reallocating data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64 bit signed integer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="111" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="130" bodyend="189"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="27">ScriptByteVector::length</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1a05e400cb6322e101e8e6a3ebafed022d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t convertScriptByteVectorToInt64</definition>
+        <argsstring>(ScriptByteVector byteVector)</argsstring>
+        <name>convertScriptByteVectorToInt64</name>
+        <param>
+          <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+          <declname>byteVector</declname>
+        </param>
+        <briefdescription>
+<para>Converts a <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> to a 64 bit signed integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref> to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 64 bit signed integer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="118" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="191" bodyend="209"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="27">ScriptByteVector::length</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1a8d0dbc84be887aa4d67eb2bfafbf458b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void removeSignatureFromStackScript</definition>
+        <argsstring>(uint8_t *subScript, uint32_t *subScriptLen, ScriptByteVector signature)</argsstring>
+        <name>removeSignatureFromStackScript</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>subScript</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>subScriptLen</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_script_byte_vector" kindref="compound">ScriptByteVector</ref></type>
+          <declname>signature</declname>
+        </param>
+        <briefdescription>
+<para>Removes occurrences of a signature from script data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subScript</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sub script to remove signatures from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subScriptLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the length of the sub script. The length will be modified to the new length. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signature to be found and removed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="126" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="211" bodyend="262"/>
+        <references refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_script_8h" startline="26">ScriptByteVector::data</references>
+        <references refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" compoundref="_script_8h" startline="27">ScriptByteVector::length</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261a552b171c345d6b1ae161de015717596a" compoundref="_constants_8h" startline="135">SCRIPT_OPCODE_PUSHDATA1</references>
+        <references refid="_constants_8h_1abb1eab93e44604a3a4a3861f63c8e261abb5230268661595413fc9cd5990afbe9" compoundref="_constants_8h" startline="136">SCRIPT_OPCODE_PUSHDATA2</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1acb39fe4d41a3f92781bb5adcbae79033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+        <definition>Script* createNewScriptStackFromData</definition>
+        <argsstring>(uint8_t *data, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewScriptStackFromData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new Script using data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. This should be dynamically allocated. The new <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> object will take care of it&apos;s memory management so do not free this data once passed into this constructor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Struct for handling errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new Script object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="135" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="264" bodyend="267"/>
+        <references refid="_byte_array_8c_1a106c7d7657b7f9758d5c1a2caa329ce4" compoundref="_byte_array_8c" startline="474" endline="487">createNewByteArrayFromData</references>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_script_8h_1a7da0d327f61176d21e35c3c88462a48b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_byte_array" kindref="compound">Script</ref> *</type>
+        <definition>Script* createNewScriptStackUsingCopyOfData</definition>
+        <argsstring>(uint8_t *data, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewScriptStackUsingCopyOfData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new Script using a copy of data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data is copied </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Struct for handling errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new Script object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h" line="144" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.c" bodystart="269" bodyend="272"/>
+        <references refid="_byte_array_8c_1a3affebc3c5fab0302f7d3163445c12da" compoundref="_byte_array_8c" startline="497" endline="509">createNewByteArrayUsingDataCopy</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Script.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>08/10/2012</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCRIPT_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SCRIPT_H_</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Includes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_byte_array_8h" kindref="compound">ByteArray.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="struct_script_byte_vector" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref>{</highlight></codeline>
+<codeline lineno="26" refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>;<sp/></highlight></codeline>
+<codeline lineno="27" refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/><ref refid="_script_8h_1a07c7146c310e9bdc13fe8c32d7e42ee0" kindref="member" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct_script_stack" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34" refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/>*<sp/><ref refid="struct_script_stack_1a39919a8f614861eedc5579d2bf18209a" kindref="member">elements</ref>;<sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_script_stack_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>;<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}<sp/><ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_script_8h_1a0fd00d44b777e46b5aa78b5aa1206685" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/><ref refid="_script_8h_1a0fd00d44b777e46b5aa78b5aa1206685" kindref="member">Script</ref>;<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/><ref refid="_script_8c_1ad6a383832d77f52a4910c2b7d737d326" kindref="member" tooltip="Returns a new empty scriptstack.">createEmptyScriptStack</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/><ref refid="_script_8c_1a31a3d8cdecb826da19038679922570d6" kindref="member" tooltip="Creates a new Script object.">createNewScriptFromReference</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/>program,<sp/>uint32_t<sp/>offset,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="_constants_8h_1a5bdbd094ca1cda7631026bcf5b883620" kindref="member">ScriptExecutionStatus</ref><sp/><ref refid="_script_8c_1aec9ea0bb8f3fca33afcbda7630d723b2" kindref="member" tooltip="Executes a bitcoin script.">executeScript</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/>*<sp/>stack,<sp/><ref refid="_constants_8h_1afe32e161e878b8e5ddb8ed32907ad826" kindref="member">TransactionHashStatus</ref><sp/>(*getHashForSignature)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*,<sp/>uint32_t,<sp/><ref refid="_constants_8h_1a7456a1be27da2089f984a0ede62c6c50" kindref="member">SignatureType</ref>,<sp/>uint8_t<sp/>*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>transaction,<sp/>uint32_t<sp/>inputIndex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p2sh);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_script_8c_1ae63afad4294e52303b66f910fda58525" kindref="member" tooltip="Determines if a script object matches the P2SH template; i.e. BIP 0016 see https://en.bitcoin.it/wiki/BIP_0016.">isP2SHScript</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/><ref refid="_script_8c_1aa2df10dc8c05ec7340c2f22381dde313" kindref="member" tooltip="Returns a copy of a stack item, &amp;quot;fromTop&amp;quot; from the top.">copyByteVectorFromScriptStack</ref>(<ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/>*<sp/>stack,<sp/>uint8_t<sp/>fromTop);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_script_8c_1a42109fe30e56a4ca86d2bf70a3d08ee1" kindref="member" tooltip="Push a ScriptByteVector item onto the stack which is freed by the stack.">pushScriptByteVectorOntoScriptStack</ref>(<ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/>*<sp/>stack,<sp/><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/>item);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_script_8c_1a2c8040a862763eac525a2907846aa70d" kindref="member" tooltip="Evaluates the top ScriptByteVector on a ScriptStack as a boolean. False if 0 or -0.">topElementEvaluatesToTrue</ref>(<ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/>*<sp/>stack);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_script_8c_1a2192430534274747a5b711b19261e4fe" kindref="member" tooltip="Removes top ScriptByteVector from the stack.">removeElementFromStack</ref>(<ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/>*<sp/>stack);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/><ref refid="_script_8c_1a230165cbcd191bbb3830aebaa18a2719" kindref="member" tooltip="Pops the top ScriptByteVector off the ScriptStack.">popElementFromStack</ref>(<ref refid="struct_script_stack" kindref="compound" tooltip="Structure that holds byte vector data in a stack.">ScriptStack</ref><sp/>*<sp/>stack);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/><ref refid="_script_8c_1ad73ed8795ecc28c1967ef9a3a618b3c1" kindref="member" tooltip="Converts a int64_t into a ScriptByteVector.">convertInt64ToScriptByteVector</ref>(<ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/>byteVector,<sp/>int64_t<sp/>int64);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">int64_t<sp/><ref refid="_script_8c_1a05e400cb6322e101e8e6a3ebafed022d" kindref="member" tooltip="Converts a ScriptByteVector to a 64 bit signed integer.">convertScriptByteVectorToInt64</ref>(<ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/>byteVector);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_script_8c_1a8d0dbc84be887aa4d67eb2bfafbf458b" kindref="member" tooltip="Removes occurrences of a signature from script data.">removeSignatureFromStackScript</ref>(uint8_t<sp/>*<sp/>subScript,<sp/>uint32_t<sp/>*<sp/>subScriptLen,<sp/><ref refid="struct_script_byte_vector" kindref="compound" tooltip="Structure for a byte vector; Byte vectors are interpreted as little-endian variable-length integers w...">ScriptByteVector</ref><sp/>signature);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/><ref refid="_script_8c_1acb39fe4d41a3f92781bb5adcbae79033" kindref="member" tooltip="Creates a new Script using data.">createNewScriptStackFromData</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,<sp/>uint32_t<sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/><ref refid="_script_8c_1a7da0d327f61176d21e35c3c88462a48b" kindref="member" tooltip="Creates a new Script using a copy of data.">createNewScriptStackUsingCopyOfData</ref>(uint8_t<sp/>*<sp/>data,<sp/>uint32_t<sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SCRIPT_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Script.h"/>
+  </compounddef>
+</doxygen>

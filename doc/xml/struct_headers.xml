@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_headers" kind="struct" prot="public">
+    <compoundname>Headers</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_headers_1aabbb2f7768ed83b49f05e7911e3a693a" prot="public" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="196" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_headers_1a0b894950328debae0613f43ca1f0dc64" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_block_header" kindref="compound">BlockHeader</ref> *</type>
+        <definition>struct BlockHeader* headers</definition>
+        <argsstring></argsstring>
+        <name>headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="197" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="316">
+        <label>BlockHeader</label>
+        <link refid="struct_block_header"/>
+      </node>
+      <node id="315">
+        <label>Headers</label>
+        <link refid="struct_headers"/>
+        <childnode refid="316" relation="usage">
+          <edgelabel>headers</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="195" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="195" bodyend="198"/>
+    <listofallmembers>
+      <member refid="struct_headers_1aabbb2f7768ed83b49f05e7911e3a693a" prot="public" virt="non-virtual"><scope>Headers</scope><name>count</name></member>
+      <member refid="struct_headers_1a0b894950328debae0613f43ca1f0dc64" prot="public" virt="non-virtual"><scope>Headers</scope><name>headers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

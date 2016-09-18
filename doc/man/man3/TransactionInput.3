@@ -1,0 +1,54 @@
+.TH "TransactionInput" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TransactionInput \- 
+.PP
+contains \fBPreviousOutput\fP structure and Example of the structure: { prev_out: { hash: '0000000000000000000000000000000000000000000000000000000000000000', n: 4294967295 }, coinbase: '044c86041b0152' }  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TransactionInput.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBsequence\fP"
+.br
+.ti -1c
+.RI "\fBScript\fP * \fBscriptObject\fP"
+.br
+.ti -1c
+.RI "\fBPreviousOutput\fP \fBprevOutput\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains \fBPreviousOutput\fP structure and Example of the structure: { prev_out: { hash: '0000000000000000000000000000000000000000000000000000000000000000', n: 4294967295 }, coinbase: '044c86041b0152' } 
+
+that handles input in transactions 
+.PP
+Definition at line 51 of file TransactionInput.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBMessage\fP \fBbase\fP"\fBMessage\fP base structure 
+.PP
+Definition at line 52 of file TransactionInput.h.
+.SS "\fBPreviousOutput\fP \fBprevOutput\fP"A locator for a previous output being spent. 
+.PP
+Definition at line 55 of file TransactionInput.h.
+.SS "\fBScript\fP* \fBscriptObject\fP"Contains script information as a Script. 
+.PP
+Definition at line 54 of file TransactionInput.h.
+.SS "uint32_t \fBsequence\fP"The version of this transaction input. Not used in protocol v0.3.18.00. Set to 0 for transactions that may someday be open to change after broadcast, set to _TRANSACTION_INPUT_FINAL if this input never needs to be changed after broadcast. 
+.PP
+Definition at line 53 of file TransactionInput.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_header" kind="struct" prot="public">
+    <compoundname>CmdHeader</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_header_1a7154179fe070a40c828f7c03f454d4d6" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="42" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_header_1a5b9e40150e73a908b8815ab282e5a4d3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char command[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="43" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_header_1ac8d42bcd4a44e078047ccd7291059238" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="44" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_header_1ac1222a6e99fed2d4b20d0713ebf83f34" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char CheckSum[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>CheckSum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="45" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="41" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="41" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct_cmd_header_1ac1222a6e99fed2d4b20d0713ebf83f34" prot="public" virt="non-virtual"><scope>CmdHeader</scope><name>CheckSum</name></member>
+      <member refid="struct_cmd_header_1a5b9e40150e73a908b8815ab282e5a4d3" prot="public" virt="non-virtual"><scope>CmdHeader</scope><name>command</name></member>
+      <member refid="struct_cmd_header_1ac8d42bcd4a44e078047ccd7291059238" prot="public" virt="non-virtual"><scope>CmdHeader</scope><name>length</name></member>
+      <member refid="struct_cmd_header_1a7154179fe070a40c828f7c03f454d4d6" prot="public" virt="non-virtual"><scope>CmdHeader</scope><name>magic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

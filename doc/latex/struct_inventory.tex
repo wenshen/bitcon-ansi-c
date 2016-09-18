@@ -1,0 +1,79 @@
+\hypertarget{struct_inventory}{
+\section{Inventory Struct Reference}
+\label{struct_inventory}\index{Inventory@{Inventory}}
+}
+
+
+Structure for \hyperlink{struct_inventory}{Inventory} objects.  
+
+
+
+
+{\ttfamily \#include $<$Inventory.h$>$}
+
+
+
+Collaboration diagram for Inventory:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_inventory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_message}{Message} \hyperlink{struct_inventory_a8987f797adf70c3e174fd64cc68bc933}{base}
+\item 
+uint16\_\-t \hyperlink{struct_inventory_af6a39bfc7e1dc3b6f9c997c1c43fa996}{count}
+\item 
+\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$$\ast$ \hyperlink{struct_inventory_a5434993362e4e5b940a640f34b3c417d}{inventory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure for \hyperlink{struct_inventory}{Inventory} objects. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_inventory_8h}{Inventory.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 26 of file Inventory.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_inventory_a8987f797adf70c3e174fd64cc68bc933}{
+\index{Inventory@{Inventory}!base@{base}}
+\index{base@{base}!Inventory@{Inventory}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_inventory_a8987f797adf70c3e174fd64cc68bc933}
+\hyperlink{struct_message}{Message} base structure 
+
+Definition at line 27 of file Inventory.h.
+
+\hypertarget{struct_inventory_af6a39bfc7e1dc3b6f9c997c1c43fa996}{
+\index{Inventory@{Inventory}!count@{count}}
+\index{count@{count}!Inventory@{Inventory}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf count}}}
+\label{struct_inventory_af6a39bfc7e1dc3b6f9c997c1c43fa996}
+Number of inventory entries. 
+
+Definition at line 28 of file Inventory.h.
+
+\hypertarget{struct_inventory_a5434993362e4e5b940a640f34b3c417d}{
+\index{Inventory@{Inventory}!inventory@{inventory}}
+\index{inventory@{inventory}!Inventory@{Inventory}}
+\subsubsection[{inventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf InventoryVector}$\ast$$\ast$ {\bf inventory}}}
+\label{struct_inventory_a5434993362e4e5b940a640f34b3c417d}
+The \hyperlink{struct_inventory}{Inventory} vectors. This should be a memory block of pointers to InventoryVectors. It will be freed when the \hyperlink{struct_inventory}{Inventory} is freed. When adding an item it should be retained. When removing an item it should be released. Leave or set as NULL if empty. 
+
+Definition at line 29 of file Inventory.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_inventory_8h}{Inventory.h}\end{DoxyCompactItemize}

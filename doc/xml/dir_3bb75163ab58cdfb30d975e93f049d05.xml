@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_3bb75163ab58cdfb30d975e93f049d05" kind="dir">
+    <compoundname>src/Object/</compoundname>
+    <innerdir refid="dir_9830e69bd02ec10f1c9e9a9691bcaf15">src/Object/Message/</innerdir>
+    <innerdir refid="dir_884f4031e3b9b12efe0ef8f0f4086cb2">src/Object/NetworkProtocol/</innerdir>
+    <innerdir refid="dir_b2d732b138afb292b3dd5ef231615bbc">src/Object/NodeDiscovery/</innerdir>
+    <innerdir refid="dir_ce44c597bf5d498f61416cf65f7e5080">src/Object/VersionChecksumBytes/</innerdir>
+    <innerfile refid="_byte_array_8c">ByteArray.c</innerfile>
+    <innerfile refid="_byte_array_8h">ByteArray.h</innerfile>
+    <innerfile refid="_object_8c">Object.c</innerfile>
+    <innerfile refid="_object_8h">Object.h</innerfile>
+    <innerfile refid="_script_8c">Script.c</innerfile>
+    <innerfile refid="_script_8h">Script.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/"/>
+  </compounddef>
+</doxygen>

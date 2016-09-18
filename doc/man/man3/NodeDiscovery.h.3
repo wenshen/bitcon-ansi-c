@@ -1,0 +1,171 @@
+.TH "src/Object/NodeDiscovery/NodeDiscovery.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/NodeDiscovery/NodeDiscovery.h \- 
+.PP
+This class is responsible for the node discovery functionality described in the Bitcoin protocol - apart from the fact that the methods which involve IRC procedures are not included, since they are deprecated. Inherits \fBObject\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '../Object.h'\fP
+.br
+\fC#include '../../Constants.h'\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <netdb.h>\fP
+.br
+\fC#include <sys/types.h>\fP
+.br
+\fC#include <sys/socket.h>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include <errno.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBNodeDiscovery\fP"
+.br
+.RI "\fIStructure for \fBNodeDiscovery\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNodeDiscovery\fP * \fBnewNodeDiscovery\fP (void)"
+.br
+.RI "\fICreates a new \fBNodeDiscovery\fP object. \fP"
+.ti -1c
+.RI "int \fBinitNodeDiscovery\fP (\fBNodeDiscovery\fP *self)"
+.br
+.RI "\fIInitializes a \fBNodeDiscovery\fP object. \fP"
+.ti -1c
+.RI "\fBNodeDiscovery\fP * \fBgetNodeDiscovery\fP (void *self)"
+.br
+.RI "\fIGets a \fBNodeDiscovery\fP from an object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "void \fBdestroyNodeDiscovery\fP (void *self)"
+.br
+.RI "\fIDestroys an \fBNodeDiscovery\fP object. \fP"
+.ti -1c
+.RI "char * \fBgetExtIPFromSites\fP ()"
+.br
+.RI "\fIconnects to specified sites and extracts from the response the IP of the local machine. It uses the \fBextractIp(char* httpresp)\fP function to parse the response and \fBgetExtIP(char*)\fP to connect to multiple sites. \fP"
+.ti -1c
+.RI "char * \fBgetExtIP\fP (char *dest)"
+.br
+.RI "\fIConnects to a specified host. IPv4 compatible only!!! \fP"
+.ti -1c
+.RI "char * \fBextractIP\fP (char *dest)"
+.br
+.RI "\fIExtracts a valid IPv4 or IPv6 address from a char*. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBerrno\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is responsible for the node discovery functionality described in the Bitcoin protocol - apart from the fact that the methods which involve IRC procedures are not included, since they are deprecated. Inherits \fBObject\fP. 
+
+
+.PP
+Definition in file \fBNodeDiscovery.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void destroyNodeDiscovery (void *self)"
+.PP
+Destroys an \fBNodeDiscovery\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBNodeDiscovery\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file NodeDiscovery.c.
+.SS "char* extractIP (char *dest)"
+.PP
+Extracts a valid IPv4 or IPv6 address from a char*. \fBAuthor:\fP
+.RS 4
+Hayk Baluyan 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+char* for the valid IP address 
+.RE
+.PP
+
+.SS "char* getExtIP (char *dest)"
+.PP
+Connects to a specified host. IPv4 compatible only!!! \fBAuthor:\fP
+.RS 4
+Attila-Peter Toth 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the IP address in a structure or NULL if any error is encountered.
+.RE
+.PP
+find flags here http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html 
+.PP
+Definition at line 97 of file NodeDiscovery.c.
+.SS "char* getExtIPFromSites ()"
+.PP
+connects to specified sites and extracts from the response the IP of the local machine. It uses the \fBextractIp(char* httpresp)\fP function to parse the response and \fBgetExtIP(char*)\fP to connect to multiple sites. 
+.SS "\fBNodeDiscovery\fP* getNodeDiscovery (void *self)"
+.PP
+Gets a \fBNodeDiscovery\fP from an object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBNodeDiscovery\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBNodeDiscovery\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file NodeDiscovery.c.
+.SS "int initNodeDiscovery (\fBNodeDiscovery\fP *self)"
+.PP
+Initializes a \fBNodeDiscovery\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBNodeDiscovery\fP object to initialize 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE on success, FALSE on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file NodeDiscovery.c.
+.SS "\fBNodeDiscovery\fP* newNodeDiscovery (void)"
+.PP
+Creates a new \fBNodeDiscovery\fP object. \fBReturns:\fP
+.RS 4
+A new \fBNodeDiscovery\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file NodeDiscovery.c.
+.SH "Variable Documentation"
+.PP 
+.SS "int \fBerrno\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

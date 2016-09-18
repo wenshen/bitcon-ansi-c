@@ -1,0 +1,103 @@
+.TH "src/Object/NodeDiscovery/NodeDiscovery.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/NodeDiscovery/NodeDiscovery.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'NodeDiscovery.h'\fP
+.br
+\fC#include 'assert.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNodeDiscovery\fP * \fBnewNodeDiscovery\fP ()"
+.br
+.RI "\fICreates a new \fBNodeDiscovery\fP object. \fP"
+.ti -1c
+.RI "\fBNodeDiscovery\fP * \fBgetNodeDiscovery\fP (void *self)"
+.br
+.RI "\fIGets a \fBNodeDiscovery\fP from an object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitNodeDiscovery\fP (\fBNodeDiscovery\fP *self)"
+.br
+.RI "\fIInitializes a \fBNodeDiscovery\fP object. \fP"
+.ti -1c
+.RI "void \fBdestroyNodeDiscovery\fP (void *self)"
+.br
+.RI "\fIDestroys an \fBNodeDiscovery\fP object. \fP"
+.ti -1c
+.RI "char * \fBextractIp\fP (char *str1)"
+.br
+.ti -1c
+.RI "char * \fBgetExtIP\fP (char *dest)"
+.br
+.RI "\fIConnects to a specified host. IPv4 compatible only!!! \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void destroyNodeDiscovery (void *self)"
+.PP
+Destroys an \fBNodeDiscovery\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBNodeDiscovery\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file NodeDiscovery.c.
+.SS "char* extractIp (char *str1)"
+.PP
+Definition at line 65 of file NodeDiscovery.c.
+.SS "char* getExtIP (char *dest)"
+.PP
+Connects to a specified host. IPv4 compatible only!!! find flags here http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html 
+.PP
+Definition at line 97 of file NodeDiscovery.c.
+.SS "\fBNodeDiscovery\fP* getNodeDiscovery (void *self)"
+.PP
+Gets a \fBNodeDiscovery\fP from an object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBNodeDiscovery\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBNodeDiscovery\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file NodeDiscovery.c.
+.SS "int initNodeDiscovery (\fBNodeDiscovery\fP *self)"
+.PP
+Initializes a \fBNodeDiscovery\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBNodeDiscovery\fP object to initialize 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE on success, FALSE on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file NodeDiscovery.c.
+.SS "\fBNodeDiscovery\fP* newNodeDiscovery (void)"
+.PP
+Creates a new \fBNodeDiscovery\fP object. \fBReturns:\fP
+.RS 4
+A new \fBNodeDiscovery\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file NodeDiscovery.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

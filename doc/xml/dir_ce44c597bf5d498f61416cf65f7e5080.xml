@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_ce44c597bf5d498f61416cf65f7e5080" kind="dir">
+    <compoundname>src/Object/VersionChecksumBytes/</compoundname>
+    <innerdir refid="dir_f5e5809ce4431712cf64ac77f975e594">src/Object/VersionChecksumBytes/Address/</innerdir>
+    <innerfile refid="_version_checksum_bytes_8c">VersionChecksumBytes.c</innerfile>
+    <innerfile refid="_version_checksum_bytes_8h">VersionChecksumBytes.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/"/>
+  </compounddef>
+</doxygen>

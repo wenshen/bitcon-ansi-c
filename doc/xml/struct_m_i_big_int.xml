@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_big_int" kind="struct" prot="public">
+    <compoundname>BigInt</compoundname>
+    <includes refid="_m_i_big_int_8h" local="no">BigInt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_big_int_1abe222f6d3581e7920dcad5306cc906a8" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The byte data. Should be little-endian </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h" line="21" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of this data in bytes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h" line="22" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains byte data with the length of this data to represent a large integer. The byte data is in little-endian which stores the smallest byte first. On an error data is set to NULL and length is 0. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h" line="20" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h" bodystart="20" bodyend="23"/>
+    <listofallmembers>
+      <member refid="struct_m_i_big_int_1abe222f6d3581e7920dcad5306cc906a8" prot="public" virt="non-virtual"><scope>BigInt</scope><name>data</name></member>
+      <member refid="struct_m_i_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" prot="public" virt="non-virtual"><scope>BigInt</scope><name>length</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

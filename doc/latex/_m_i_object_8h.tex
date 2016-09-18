@@ -1,0 +1,243 @@
+\hypertarget{_m_i_object_8h}{
+\section{Object/Object.h File Reference}
+\label{_m_i_object_8h}\index{Object/Object.h@{Object/Object.h}}
+}
+
+
+Basic object which serves as a basic block for all other objects in the system.  
+
+
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include \char`\"{}../Constants.h\char`\"{}}\par
+Include dependency graph for Object.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{_m_i_object_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_i_object}{Object}
+\begin{DoxyCompactList}\small\item\em Base class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_m_i_object}{Object} \hyperlink{_m_i_object_8h_a7c3e2700a2d4fccef2f6e19be1d8bb4c}{Object}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_object}{Object} $\ast$ \hyperlink{_m_i_object_8h_af04ba85f6f0257373bbcfca4696e38c8}{createNewObject} (void)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_object}{Object}. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_object}{Object} $\ast$ \hyperlink{_m_i_object_8h_a0f72e3416dc7f6c52cfb1bf49baac3f2}{getObject} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Casts the pointer to the \hyperlink{struct_m_i_object}{Object}; use this to avoid explicitly casting. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_object_8h_a71704ab4fbecb7d85276d32649b5349a}{destroyObject} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_object_8h_a0407d34294cdc667982ffa9bd6f18cc9}{decrementReferenceCount} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Decrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 -\/ the object will be destroyed (assigned to NULL) \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_object_8h_a5f22211b2f99a33c1b4b7ad544ce108a}{incrementReferenceCount} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Increase the number in the reference counter. (It keeps track of how many objects have been created). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic object which serves as a basic block for all other objects in the system. The \hyperlink{struct_m_i_object}{Object} is the pseudo-\/object class that provides fundamental methods that are needed by all Bitcoin objects It handles reference handling (incrementing and decrementing the number of references to a \hyperlink{struct_m_i_object}{Object}) and the creation and cleaning up of memory 
+
+Definition in file \hyperlink{_m_i_object_8h_source}{Object.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_m_i_object_8h_a7c3e2700a2d4fccef2f6e19be1d8bb4c}{
+\index{Object.h@{Object.h}!Object@{Object}}
+\index{Object@{Object}!Object.h@{Object.h}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Object}  {\bf Object}}}
+\label{_m_i_object_8h_a7c3e2700a2d4fccef2f6e19be1d8bb4c}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_object_8h_af04ba85f6f0257373bbcfca4696e38c8}{
+\index{Object.h@{Object.h}!createNewObject@{createNewObject}}
+\index{createNewObject@{createNewObject}!Object.h@{Object.h}}
+\subsubsection[{createNewObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ createNewObject (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8h_af04ba85f6f0257373bbcfca4696e38c8}
+
+
+Creates a new \hyperlink{struct_m_i_object}{Object}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_m_i_object}{Object} 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Object.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_m_i_object_8h_af04ba85f6f0257373bbcfca4696e38c8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8h_a0407d34294cdc667982ffa9bd6f18cc9}{
+\index{Object.h@{Object.h}!decrementReferenceCount@{decrementReferenceCount}}
+\index{decrementReferenceCount@{decrementReferenceCount}!Object.h@{Object.h}}
+\subsubsection[{decrementReferenceCount}]{\setlength{\rightskip}{0pt plus 5cm}void decrementReferenceCount (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8h_a0407d34294cdc667982ffa9bd6f18cc9}
+
+
+Decrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 -\/ the object will be destroyed (assigned to NULL) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8h_a0407d34294cdc667982ffa9bd6f18cc9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8h_a71704ab4fbecb7d85276d32649b5349a}{
+\index{Object.h@{Object.h}!destroyObject@{destroyObject}}
+\index{destroyObject@{destroyObject}!Object.h@{Object.h}}
+\subsubsection[{destroyObject}]{\setlength{\rightskip}{0pt plus 5cm}void destroyObject (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8h_a71704ab4fbecb7d85276d32649b5349a}
+
+
+destructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8h_a71704ab4fbecb7d85276d32649b5349a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8h_a0f72e3416dc7f6c52cfb1bf49baac3f2}{
+\index{Object.h@{Object.h}!getObject@{getObject}}
+\index{getObject@{getObject}!Object.h@{Object.h}}
+\subsubsection[{getObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ getObject (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8h_a0f72e3416dc7f6c52cfb1bf49baac3f2}
+
+
+Casts the pointer to the \hyperlink{struct_m_i_object}{Object}; use this to avoid explicitly casting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_m_i_object}{Object} 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8h_a0f72e3416dc7f6c52cfb1bf49baac3f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_object_8h_a5f22211b2f99a33c1b4b7ad544ce108a}{
+\index{Object.h@{Object.h}!incrementReferenceCount@{incrementReferenceCount}}
+\index{incrementReferenceCount@{incrementReferenceCount}!Object.h@{Object.h}}
+\subsubsection[{incrementReferenceCount}]{\setlength{\rightskip}{0pt plus 5cm}void incrementReferenceCount (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_object_8h_a5f22211b2f99a33c1b4b7ad544ce108a}
+
+
+Increase the number in the reference counter. (It keeps track of how many objects have been created). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Object.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_object_8h_a5f22211b2f99a33c1b4b7ad544ce108a_icgraph}
+\end{center}
+\end{figure}
+
+

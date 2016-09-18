@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_9830e69bd02ec10f1c9e9a9691bcaf15" kind="dir">
+    <compoundname>src/Object/Message/</compoundname>
+    <innerfile refid="_block_8c">Block.c</innerfile>
+    <innerfile refid="_block_8h">Block.h</innerfile>
+    <innerfile refid="_block_headers_8c">BlockHeaders.c</innerfile>
+    <innerfile refid="_block_headers_8h">BlockHeaders.h</innerfile>
+    <innerfile refid="_chain_descriptor_8c">ChainDescriptor.c</innerfile>
+    <innerfile refid="_chain_descriptor_8h">ChainDescriptor.h</innerfile>
+    <innerfile refid="_get_blocks_8c">GetBlocks.c</innerfile>
+    <innerfile refid="_get_blocks_8h">GetBlocks.h</innerfile>
+    <innerfile refid="_inventory_8c">Inventory.c</innerfile>
+    <innerfile refid="_inventory_8h">Inventory.h</innerfile>
+    <innerfile refid="_inventory_vector_8c">InventoryVector.c</innerfile>
+    <innerfile refid="_inventory_vector_8h">InventoryVector.h</innerfile>
+    <innerfile refid="_message_8c">Message.c</innerfile>
+    <innerfile refid="_message_8h">Message.h</innerfile>
+    <innerfile refid="_ping_pong_message_8c">PingPongMessage.c</innerfile>
+    <innerfile refid="_ping_pong_message_8h">PingPongMessage.h</innerfile>
+    <innerfile refid="_transaction_8c">Transaction.c</innerfile>
+    <innerfile refid="_transaction_8h">Transaction.h</innerfile>
+    <innerfile refid="_transaction_input_8c">TransactionInput.c</innerfile>
+    <innerfile refid="_transaction_input_8h">TransactionInput.h</innerfile>
+    <innerfile refid="_transaction_output_8c">TransactionOutput.c</innerfile>
+    <innerfile refid="_transaction_output_8h">TransactionOutput.h</innerfile>
+    <innerfile refid="_version_8c">Version.c</innerfile>
+    <innerfile refid="_version_8h">Version.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/"/>
+  </compounddef>
+</doxygen>

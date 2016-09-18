@@ -1,0 +1,399 @@
+\hypertarget{_get_blocks_8c}{
+\section{src/Object/Message/GetBlocks.c File Reference}
+\label{_get_blocks_8c}\index{src/Object/Message/GetBlocks.c@{src/Object/Message/GetBlocks.c}}
+}
+{\ttfamily \#include \char`\"{}GetBlocks.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}assert.h\char`\"{}}\par
+Include dependency graph for GetBlocks.c:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_get_blocks}{GetBlocks} $\ast$ \hyperlink{_get_blocks_8c_a09c0fc0e04b0d708c82961da0f56a1c9}{newGetBlocks} (uint32\_\-t version, \hyperlink{struct_chain_descriptor}{ChainDescriptor} $\ast$chainDescriptor, \hyperlink{struct_byte_array}{ByteArray} $\ast$stopAtHash, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_get_blocks}{GetBlocks} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_get_blocks}{GetBlocks} $\ast$ \hyperlink{_get_blocks_8c_a4cdb9c551894cbbafd3c479bbf0e6d2a}{newGetBlocksFromData} (\hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_get_blocks}{GetBlocks} object from serialized data. \end{DoxyCompactList}\item 
+\hyperlink{struct_get_blocks}{GetBlocks} $\ast$ \hyperlink{_get_blocks_8c_af2cbb99102494c80dea2c9303ee0451a}{getGetBlocks} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_get_blocks}{GetBlocks} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_get_blocks_8c_a3168d5f3c5cd2f5c719979fc4d207913}{initGetBlocks} (\hyperlink{struct_get_blocks}{GetBlocks} $\ast$self, uint32\_\-t version, \hyperlink{struct_chain_descriptor}{ChainDescriptor} $\ast$chainDescriptor, \hyperlink{struct_byte_array}{ByteArray} $\ast$stopAtHash, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_get_blocks}{GetBlocks} object. \end{DoxyCompactList}\item 
+int \hyperlink{_get_blocks_8c_a26311351d830c1aafb5c7a8e760841de}{initGetBlocksFromData} (\hyperlink{struct_get_blocks}{GetBlocks} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_get_blocks}{GetBlocks} object from serialised data. \end{DoxyCompactList}\item 
+void \hyperlink{_get_blocks_8c_a4c0628c8b74a933f6ed05c16ee4316a8}{freeGetBlocks} (void $\ast$vself)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_get_blocks}{GetBlocks} object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_get_blocks_8c_a12aee818b7db3c0ba51cab9a833394ac}{calculateGetBlocksLength} (\hyperlink{struct_get_blocks}{GetBlocks} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Calculates the length needed to serialise the object. \end{DoxyCompactList}\item 
+uint16\_\-t \hyperlink{_get_blocks_8c_ac6078bf7e22d0d785670ace084ac8ab6}{deserializeGetBlocks} (\hyperlink{struct_get_blocks}{GetBlocks} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Deserializes a \hyperlink{struct_get_blocks}{GetBlocks} so that it can be used as an object. \end{DoxyCompactList}\item 
+uint16\_\-t \hyperlink{_get_blocks_8c_ae09f58674ed59b6d5f320cc588afdd14}{serializeGetBlocks} (\hyperlink{struct_get_blocks}{GetBlocks} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Serializes a \hyperlink{struct_get_blocks}{GetBlocks} to the byte data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_get_blocks_8c_a12aee818b7db3c0ba51cab9a833394ac}{
+\index{GetBlocks.c@{GetBlocks.c}!calculateGetBlocksLength@{calculateGetBlocksLength}}
+\index{calculateGetBlocksLength@{calculateGetBlocksLength}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{calculateGetBlocksLength}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t calculateGetBlocksLength (
+\begin{DoxyParamCaption}
+\item[{{\bf GetBlocks} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_a12aee818b7db3c0ba51cab9a833394ac}
+
+
+Calculates the length needed to serialise the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_get_blocks}{GetBlocks} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_get_blocks_8c_a12aee818b7db3c0ba51cab9a833394ac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_ac6078bf7e22d0d785670ace084ac8ab6}{
+\index{GetBlocks.c@{GetBlocks.c}!deserializeGetBlocks@{deserializeGetBlocks}}
+\index{deserializeGetBlocks@{deserializeGetBlocks}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{deserializeGetBlocks}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t deserializeGetBlocks (
+\begin{DoxyParamCaption}
+\item[{{\bf GetBlocks} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_ac6078bf7e22d0d785670ace084ac8ab6}
+
+
+Deserializes a \hyperlink{struct_get_blocks}{GetBlocks} so that it can be used as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_get_blocks}{GetBlocks} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_ac6078bf7e22d0d785670ace084ac8ab6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_a4c0628c8b74a933f6ed05c16ee4316a8}{
+\index{GetBlocks.c@{GetBlocks.c}!freeGetBlocks@{freeGetBlocks}}
+\index{freeGetBlocks@{freeGetBlocks}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{freeGetBlocks}]{\setlength{\rightskip}{0pt plus 5cm}void freeGetBlocks (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_a4c0628c8b74a933f6ed05c16ee4316a8}
+
+
+Frees a \hyperlink{struct_get_blocks}{GetBlocks} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_get_blocks}{GetBlocks} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_a4c0628c8b74a933f6ed05c16ee4316a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{_get_blocks_8c_a4c0628c8b74a933f6ed05c16ee4316a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_af2cbb99102494c80dea2c9303ee0451a}{
+\index{GetBlocks.c@{GetBlocks.c}!getGetBlocks@{getGetBlocks}}
+\index{getGetBlocks@{getGetBlocks}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{getGetBlocks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GetBlocks}$\ast$ getGetBlocks (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_af2cbb99102494c80dea2c9303ee0451a}
+
+
+Gets a \hyperlink{struct_get_blocks}{GetBlocks} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_get_blocks}{GetBlocks} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_get_blocks}{GetBlocks} object. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file GetBlocks.c.
+
+\hypertarget{_get_blocks_8c_a3168d5f3c5cd2f5c719979fc4d207913}{
+\index{GetBlocks.c@{GetBlocks.c}!initGetBlocks@{initGetBlocks}}
+\index{initGetBlocks@{initGetBlocks}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{initGetBlocks}]{\setlength{\rightskip}{0pt plus 5cm}int initGetBlocks (
+\begin{DoxyParamCaption}
+\item[{{\bf GetBlocks} $\ast$}]{self, }
+\item[{uint32\_\-t}]{version, }
+\item[{{\bf ChainDescriptor} $\ast$}]{chainDescriptor, }
+\item[{{\bf ByteArray} $\ast$}]{stopAtHash, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_a3168d5f3c5cd2f5c719979fc4d207913}
+
+
+Initialises a \hyperlink{struct_get_blocks}{GetBlocks} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_get_blocks}{GetBlocks} object to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_a3168d5f3c5cd2f5c719979fc4d207913_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_get_blocks_8c_a3168d5f3c5cd2f5c719979fc4d207913_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_a26311351d830c1aafb5c7a8e760841de}{
+\index{GetBlocks.c@{GetBlocks.c}!initGetBlocksFromData@{initGetBlocksFromData}}
+\index{initGetBlocksFromData@{initGetBlocksFromData}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{initGetBlocksFromData}]{\setlength{\rightskip}{0pt plus 5cm}int initGetBlocksFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf GetBlocks} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_a26311351d830c1aafb5c7a8e760841de}
+
+
+Initialises a \hyperlink{struct_get_blocks}{GetBlocks} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_get_blocks}{GetBlocks} object to initialise \\
+\hline
+{\em data} & The serialised data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_a26311351d830c1aafb5c7a8e760841de_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=360pt]{_get_blocks_8c_a26311351d830c1aafb5c7a8e760841de_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_a09c0fc0e04b0d708c82961da0f56a1c9}{
+\index{GetBlocks.c@{GetBlocks.c}!newGetBlocks@{newGetBlocks}}
+\index{newGetBlocks@{newGetBlocks}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{newGetBlocks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GetBlocks}$\ast$ newGetBlocks (
+\begin{DoxyParamCaption}
+\item[{uint32\_\-t}]{version, }
+\item[{{\bf ChainDescriptor} $\ast$}]{chainDescriptor, }
+\item[{{\bf ByteArray} $\ast$}]{stopAtHash, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_a09c0fc0e04b0d708c82961da0f56a1c9}
+
+
+Creates a new \hyperlink{struct_get_blocks}{GetBlocks} object. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_get_blocks}{GetBlocks} object. 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_a09c0fc0e04b0d708c82961da0f56a1c9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_a4cdb9c551894cbbafd3c479bbf0e6d2a}{
+\index{GetBlocks.c@{GetBlocks.c}!newGetBlocksFromData@{newGetBlocksFromData}}
+\index{newGetBlocksFromData@{newGetBlocksFromData}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{newGetBlocksFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GetBlocks}$\ast$ newGetBlocksFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_a4cdb9c551894cbbafd3c479bbf0e6d2a}
+
+
+Creates a new \hyperlink{struct_get_blocks}{GetBlocks} object from serialized data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialized \hyperlink{struct_get_blocks}{GetBlocks} data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_get_blocks}{GetBlocks} object. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_a4cdb9c551894cbbafd3c479bbf0e6d2a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_get_blocks_8c_ae09f58674ed59b6d5f320cc588afdd14}{
+\index{GetBlocks.c@{GetBlocks.c}!serializeGetBlocks@{serializeGetBlocks}}
+\index{serializeGetBlocks@{serializeGetBlocks}!GetBlocks.c@{GetBlocks.c}}
+\subsubsection[{serializeGetBlocks}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t serializeGetBlocks (
+\begin{DoxyParamCaption}
+\item[{{\bf GetBlocks} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_get_blocks_8c_ae09f58674ed59b6d5f320cc588afdd14}
+
+
+Serializes a \hyperlink{struct_get_blocks}{GetBlocks} to the byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_get_blocks}{GetBlocks} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length written on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file GetBlocks.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_get_blocks_8c_ae09f58674ed59b6d5f320cc588afdd14_cgraph}
+\end{center}
+\end{figure}
+
+

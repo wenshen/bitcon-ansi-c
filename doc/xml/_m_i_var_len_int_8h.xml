@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_var_len_int_8h" kind="file">
+    <compoundname>VarLenInt.h</compoundname>
+    <includes local="yes">../../Object/ByteArray.h</includes>
+    <includes local="yes">../../Constants.h</includes>
+    <includedby refid="_m_i_message_8h" local="yes">Object/Message/Message.h</includedby>
+    <includedby refid="_m_i_var_len_int_8c" local="yes">Utils/VariableLengthInteger/VarLenInt.c</includedby>
+    <incdepgraph>
+      <node id="558">
+        <label>../../Object/ByteArray.h</label>
+      </node>
+      <node id="557">
+        <label>Utils/VariableLengthInteger/VarLenInt.h</label>
+        <link refid="VarLenInt.h"/>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="559" relation="include">
+        </childnode>
+      </node>
+      <node id="559">
+        <label>../../Constants.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="564">
+        <label>Object/Message/Block.c</label>
+        <link refid="_m_i_block_8c"/>
+      </node>
+      <node id="563">
+        <label>Object/Message/Block.h</label>
+        <link refid="_m_i_block_8h"/>
+        <childnode refid="564" relation="include">
+        </childnode>
+      </node>
+      <node id="569">
+        <label>Object/Message/TransactionOutput.c</label>
+        <link refid="_m_i_transaction_output_8c"/>
+      </node>
+      <node id="568">
+        <label>Object/Message/TransactionOutput.h</label>
+        <link refid="_m_i_transaction_output_8h"/>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+      </node>
+      <node id="565">
+        <label>Object/Message/Transaction.c</label>
+        <link refid="_m_i_transaction_8c"/>
+      </node>
+      <node id="562">
+        <label>Object/Message/Transaction.h</label>
+        <link refid="_m_i_transaction_8h"/>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>Object/Message/TransactionInput.c</label>
+        <link refid="_m_i_transaction_input_8c"/>
+      </node>
+      <node id="571">
+        <label>Utils/VariableLengthInteger/VarLenInt.c</label>
+        <link refid="_m_i_var_len_int_8c"/>
+      </node>
+      <node id="566">
+        <label>Object/Message/TransactionInput.h</label>
+        <link refid="_m_i_transaction_input_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+      </node>
+      <node id="560">
+        <label>Utils/VariableLengthInteger/VarLenInt.h</label>
+        <link refid="VarLenInt.h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>Object/Message/Message.c</label>
+        <link refid="_m_i_message_8c"/>
+      </node>
+      <node id="561">
+        <label>Object/Message/Message.h</label>
+        <link refid="_m_i_message_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_m_i_var_len_int" prot="public">VarLenInt</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_i_var_len_int_8h_1a0492e373e2d12e41b1764b580f287af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_var_len_int" kindref="compound">VarLenInt</ref></type>
+        <definition>VarLenInt decodeVarLenInt</definition>
+        <argsstring>(ByteArray *bytes, uint32_t offset)</argsstring>
+        <name>decodeVarLenInt</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Decodes variable size integer from bytes into a <ref refid="struct_m_i_var_len_int" kindref="compound">VarLenInt</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte array to decode a variable size integer from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to start decoding from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_m_i_var_len_int" kindref="compound">VarLenInt</ref> information </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.h" line="37" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="13" bodyend="43"/>
+        <references refid="_m_i_byte_array_8c_1af0eafd008dc71865431262ed1e29b4f2" compoundref="_m_i_byte_array_8c" startline="53" endline="59">getByteFromByteArray</references>
+        <references refid="_m_i_byte_array_8c_1aa74c92f75755b2c258938fb3819d94ab" compoundref="_m_i_byte_array_8c" startline="132" endline="142">readInt16AsLittleEndianFromByteArray</references>
+        <references refid="_m_i_byte_array_8c_1aab10685017fe16769d5b22c826ada9f8" compoundref="_m_i_byte_array_8c" startline="144" endline="156">readInt32AsLittleEndianFromByteArray</references>
+        <references refid="_m_i_byte_array_8c_1a59271d773239202481b815d6825c2587" compoundref="_m_i_byte_array_8c" startline="158" endline="174">readInt64AsLittleEndianFromByteArray</references>
+        <references refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_m_i_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_m_i_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_m_i_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a292775bd99c32b5b2f51b8d71d10812e" compoundref="_m_i_block_8c" startline="326" endline="353">deserializeWithOnlyHeaders</referencedby>
+        <referencedby refid="_m_i_block_8h_1a04d2d2defba76492762c0eb4b7ccd206" compoundref="_m_i_block_8c" startline="261" endline="324">deserializeWithTransactions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_var_len_int_8h_1a332f03b156163565574788bc3cedd522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void encodeVarLenInt</definition>
+        <argsstring>(ByteArray *bytes, uint32_t offset, VarLenInt varInt)</argsstring>
+        <name>encodeVarLenInt</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_var_len_int" kindref="compound">VarLenInt</ref></type>
+          <declname>varInt</declname>
+        </param>
+        <briefdescription>
+<para>Encodes variable size integer into bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte array to encode a variable size integer into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to start decoding from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>varInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable integer structure to encode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.h" line="44" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="45" bodyend="69"/>
+        <references refid="_m_i_byte_array_8c_1a4e0892416e1efc8384687e86966ed3a1" compoundref="_m_i_byte_array_8c" startline="177" endline="184">setByteInByteArray</references>
+        <references refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_m_i_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_m_i_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_m_i_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <references refid="_m_i_byte_array_8c_1a6e28c10bc73d105e1df7f1868c92a7de" compoundref="_m_i_byte_array_8c" startline="196" endline="205">writeInt16AsLittleEndianIntoByteArray</references>
+        <references refid="_m_i_byte_array_8c_1aa4d465553a3c7f80c1700316f2410b40" compoundref="_m_i_byte_array_8c" startline="207" endline="217">writeInt32AsLittleEndianIntoByteArray</references>
+        <references refid="_m_i_byte_array_8c_1ac10e90995fc8a98db44d71607ef0ede7" compoundref="_m_i_byte_array_8c" startline="218" endline="232">writeInt64AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3dab3fff46c9b386501414a6b13f5192" compoundref="_m_i_block_8c" startline="368" endline="396">serializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_var_len_int_8h_1ab415150158b7af4b63eb360b384b5ec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_var_len_int" kindref="compound">VarLenInt</ref></type>
+        <definition>VarLenInt createVarLenIntFromUInt64</definition>
+        <argsstring>(uint64_t integer)</argsstring>
+        <name>createVarLenIntFromUInt64</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>integer</declname>
+        </param>
+        <briefdescription>
+<para>Returns a variable integer from an unsigned 64 bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64 bit integer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_m_i_var_len_int" kindref="compound">VarLenInt</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.h" line="50" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="71" bodyend="79"/>
+        <references refid="_m_i_var_len_int_8c_1a960ae6b1a5365789aec7b7055a36dbd7" compoundref="_m_i_var_len_int_8c" startline="81" endline="93">getSizeOfVarLenInt</references>
+        <references refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_m_i_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_m_i_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_m_i_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3dab3fff46c9b386501414a6b13f5192" compoundref="_m_i_block_8c" startline="368" endline="396">serializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_var_len_int_8h_1a960ae6b1a5365789aec7b7055a36dbd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t getSizeOfVarLenInt</definition>
+        <argsstring>(uint64_t value)</argsstring>
+        <name>getSizeOfVarLenInt</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Returns the variable integer byte size of a 64 bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64 bit integer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of a variable length integer for this integer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.h" line="56" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="81" bodyend="93"/>
+        <referencedby refid="_m_i_block_8h_1ab3c577ac4b13bc68f0ac3f82159969a6" compoundref="_m_i_block_8c" startline="201" endline="216">calculateBlockLength</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a399ecdc9998cfe26c0f2a1928572b54b" compoundref="_m_i_transaction_8c" startline="201" endline="230">calculateTransactionLength</referencedby>
+        <referencedby refid="_m_i_var_len_int_8h_1ab415150158b7af4b63eb360b384b5ec0" compoundref="_m_i_var_len_int_8c" startline="71" endline="79">createVarLenIntFromUInt64</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>VarLenInt.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>06/10/2012</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor">#ifndef<sp/>VARLENINT_H_</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>VARLENINT_H_</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Object/ByteArray.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="struct_m_i_var_len_int" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="struct_m_i_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_m_i_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>;<sp/></highlight></codeline>
+<codeline lineno="28" refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref>;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<ref refid="struct_m_i_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="struct_m_i_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/><ref refid="_m_i_var_len_int_8c_1a0492e373e2d12e41b1764b580f287af9" kindref="member" tooltip="Decodes variable size integer from bytes into a VarLenInt structure.">decodeVarLenInt</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes,<sp/>uint32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_var_len_int_8c_1a332f03b156163565574788bc3cedd522" kindref="member" tooltip="Encodes variable size integer into bytes.">encodeVarLenInt</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes,uint32_t<sp/>offset,<sp/><ref refid="struct_m_i_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/>varInt);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="struct_m_i_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/><ref refid="_m_i_var_len_int_8c_1ab415150158b7af4b63eb360b384b5ec0" kindref="member" tooltip="Returns a variable integer from an unsigned 64 bit integer.">createVarLenIntFromUInt64</ref>(uint64_t<sp/>integer);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">uint8_t<sp/><ref refid="_m_i_var_len_int_8c_1a960ae6b1a5365789aec7b7055a36dbd7" kindref="member" tooltip="Returns the variable integer byte size of a 64 bit integer.">getSizeOfVarLenInt</ref>(uint64_t<sp/>value);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>VARIABLELENGTHINTEGER_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.h"/>
+  </compounddef>
+</doxygen>

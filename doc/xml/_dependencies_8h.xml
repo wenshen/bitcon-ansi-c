@@ -1,0 +1,1322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_dependencies_8h" kind="file">
+    <compoundname>Dependencies.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes refid="_constants_8h" local="yes">Constants.h</includes>
+    <incdepgraph>
+      <node id="334">
+        <label>stdint.h</label>
+      </node>
+      <node id="333">
+        <label>src/Dependencies.h</label>
+        <link refid="Dependencies.h"/>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+      </node>
+      <node id="335">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_dependencies_8h_1ac8d904e99d5833b896736a76b27da0b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sha256</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>Sha256</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-256 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 32-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="82" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="42" bodyend="49"/>
+        <referencedby refid="_block_8h_1a1dd38c9d32f6f6984930141d5ce01fba" compoundref="_block_8c" startline="193" endline="199">calculateBlockHash</referencedby>
+        <referencedby refid="_transaction_8h_1ae53ed930910256b4620da39ebdcccdb5" compoundref="_transaction_8c" startline="191" endline="200">calculateTransactionHash</referencedby>
+        <referencedby refid="_transaction_8h_1afe08b91a59f175e55d9ca049e46749c2" compoundref="_transaction_8c" startline="563" endline="707">getTransactionInputHashForVerification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1afc4c3de28fcd3d122636259977f3029c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ripemd160</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>Ripemd160</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>RIPEMD-160 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 20-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="89" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a5a496b8ef882d805eccedfa308f29a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sha160</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>Sha160</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-1 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 10-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="96" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a02ed88c025f0b88dbc8a4aec268a3afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int EcdsaVerify</definition>
+        <argsstring>(uint8_t *signature, uint8_t sigLen, uint8_t *hash, const uint8_t *pubKey, uint8_t keyLen)</argsstring>
+        <name>EcdsaVerify</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sigLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>pubKey</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BER encoded signature bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sigLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the signature bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32 byte hash for checking the signature against. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pubKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public key bytes to check this signature with. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the public key bytes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the signature is valid and false if invalid. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1abbc3b6a1bc7284cdb7eecbc2fc8170c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SocketReturn</type>
+        <definition>SocketReturn NewSocket</definition>
+        <argsstring>(uint64_t *socketID, int IPv6)</argsstring>
+        <name>NewSocket</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>IPv6</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new TCP/IP socket. The socket should use a non-blocking mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to uint64_t. Can be pointer value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IPv6</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the socket is used to connect to the IPv6 network. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>_SOCKET_OK if the socket was successfully created, _SOCKET_NO_SUPPORT and _SOCKET_BAD if the socket could not be created for any other reason. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a2a0f9e343e2230ff956da5cc121314f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketBind</definition>
+        <argsstring>(uint64_t *socketID, int IPv6, uint16_t port)</argsstring>
+        <name>SocketBind</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>IPv6</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1ac12fb121981627704e01d8e80c1c8039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketConnect</definition>
+        <argsstring>(uint64_t socketID, uint8_t *IP, int IPv6, uint16_t port)</argsstring>
+        <name>SocketConnect</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>IP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>IPv6</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Begin connecting to an external host with a socket. This should be non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16 bytes for an IPv6 address to connect to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IPv6</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if IP address is for the IPv6 network. A IPv6 address can represent addresses for IPv4 too. To avoid the need to detect this, a intean can be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port to connect to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the function was sucessful and false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a4febf2cf5ef84322b6295a3e391d15d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketListen</definition>
+        <argsstring>(uint64_t socketID, uint16_t maxConnections)</argsstring>
+        <name>SocketListen</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>maxConnections</declname>
+        </param>
+        <briefdescription>
+<para>Begin listening for incomming connections on a bound socket. This should be non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxConnections</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum incomming connections to allow. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if function was sucessful and false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1aeaf4fe44e55376f10009d0e4863295b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketAccept</definition>
+        <argsstring>(uint64_t socketID, uint64_t *connectionSocketID)</argsstring>
+        <name>SocketAccept</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>connectionSocketID</declname>
+        </param>
+        <briefdescription>
+<para>Accepts an incomming IPv4 connection on a bound socket. This should be non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connectionSocketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A socket id for a new socket for the connection. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if function was sucessful and false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1ab41740ec6ee6ba4124b44095e751bdb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int NewEventLoop</definition>
+        <argsstring>(uint64_t *loopID, void(*onError)(void *), void(*onDidTimeout)(void *, void *, TimeOutType), void *communicator)</argsstring>
+        <name>NewEventLoop</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>loopID</declname>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>onError</declname>
+        </param>
+        <param>
+          <type>void(*)(void *, void *, TimeOutType)</type>
+          <declname>onDidTimeout</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>communicator</declname>
+        </param>
+        <briefdescription>
+<para>Starts a event loop for socket onErrorReceived on a seperate thread. Access to the loop id should be thread safe. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A uint64_t storing an integer or pointer representation of the new event loop. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the event loop fails during execution of the thread, this function should be called. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onDidTimeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to call for timeout onErrorReceived. The second argument is for the peer given by onErrorReceived. The third is for the timeout type. For receiving data, the timeout should be _TIMEOUT_RECEIVE. The NetworkCommunicator will determine if it should be changed to _TIMEOUT_RESPONSE. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>communicator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A NetworkCommunicator to pass to all event functions (first parameter), including &quot;onError&quot; and &quot;onDidTimeout&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1adb5da0eddf7a2b7b83b9fa8569eae737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketCanAcceptEvent</definition>
+        <argsstring>(uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onCanAccept)(void *, uint64_t))</argsstring>
+        <name>SocketCanAcceptEvent</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>eventID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>loopID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>void(*)(void *, uint64_t)</type>
+          <declname>onCanAccept</declname>
+        </param>
+        <briefdescription>
+<para>Creates an event where a listening socket is available for accepting a connection. The event should be persistent and not issue timeouts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The loop id for socket onErrorReceived. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onCanAccept</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to call for the event. Accepts &quot;onEventArg&quot; and the socket ID. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a6c590c239497b83734a144f206907faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketDidConnectEvent</definition>
+        <argsstring>(uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onDidConnect)(void *, void *), void *peer)</argsstring>
+        <name>SocketDidConnectEvent</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>eventID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>loopID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>void(*)(void *, void *)</type>
+          <declname>onDidConnect</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>peer</declname>
+        </param>
+        <briefdescription>
+<para>Sets a function pointer for the event where a socket has connected. The event only needs to fire once on the successful connection or timeout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The loop id for socket onErrorReceived. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onDidConnect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to call for the event. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peer to send to the &quot;onDidConnect&quot; or &quot;onDidTimeout&quot; function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1aaa8b848ed666e9a9d32615047609a34f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketCanSendEvent</definition>
+        <argsstring>(uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onCanSend)(void *, void *), void *peer)</argsstring>
+        <name>SocketCanSendEvent</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>eventID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>loopID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>void(*)(void *, void *)</type>
+          <declname>onCanSend</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>peer</declname>
+        </param>
+        <briefdescription>
+<para>Sets a function pointer for the event where a socket is available for sending data. This should be persistent. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The loop id for socket onErrorReceived. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onCanSend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to call for the event. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peer to send to the &quot;onCanSend&quot; or &quot;onDidTimeout&quot; function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a415c2c7980a314c65a01eef32e14c7ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketCanReceiveEvent</definition>
+        <argsstring>(uint64_t *eventID, uint64_t loopID, uint64_t socketID, void(*onCanReceive)(void *, void *), void *peer)</argsstring>
+        <name>SocketCanReceiveEvent</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>eventID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>loopID</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>void(*)(void *, void *)</type>
+          <declname>onCanReceive</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>peer</declname>
+        </param>
+        <briefdescription>
+<para>Sets a function pointer for the event where a socket is available for receiving data. This should be persistent. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The loop id for socket onErrorReceived. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onCanReceive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to call for the event. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peer to send to the &quot;onCanReceive&quot; or &quot;onDidTimeout&quot; function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="191"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a1311c01201d68c2045bc5962b63a2e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketAddEvent</definition>
+        <argsstring>(uint64_t eventID, uint32_t timeout)</argsstring>
+        <name>SocketAddEvent</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>eventID</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Adds an event to be pending. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event ID to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time in milliseconds to issue a timeout for the event. 0 for no timeout. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if sucessful, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="198"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a5c21b4cfc0706a759f2634335300aae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SocketRemoveEvent</definition>
+        <argsstring>(uint64_t eventID)</argsstring>
+        <name>SocketRemoveEvent</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>eventID</declname>
+        </param>
+        <briefdescription>
+<para>Removes an event so no more onErrorReceived are made. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event ID to remove </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if sucessful, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a882189cc4cf9e761c6b0e7028d307dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SocketFreeEvent</definition>
+        <argsstring>(uint64_t eventID)</argsstring>
+        <name>SocketFreeEvent</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>eventID</declname>
+        </param>
+        <briefdescription>
+<para>Makes an event non-pending and frees it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="209"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a9cdaba7b59ae8b6fbf1c17147bc6ad49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t SocketSend</definition>
+        <argsstring>(uint64_t socketID, uint8_t *data, uint32_t len)</argsstring>
+        <name>SocketSend</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Sends data to a socket. This should be non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id to send to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data bytes to send. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to send. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes actually sent, and _SOCKET_FAILURE on failure that suggests further data cannot be sent. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="217"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1af7c759dd8dfe7ab9aae2c337cb616a5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t SocketReceive</definition>
+        <argsstring>(uint64_t socketID, uint8_t *data, uint32_t len)</argsstring>
+        <name>SocketReceive</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Receives data from a socket. This should be non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id to receive data from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data bytes to write the data to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes actually written into &quot;data&quot;, _SOCKET_CONNECTION_CLOSE on connection closure, 0 on no bytes received, and _SOCKET_FAILURE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a1bd67bc870070326a584a33e29a55057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int StartTimer</definition>
+        <argsstring>(uint64_t loopID, uint64_t *timer, uint16_t time, void(*callback)(void *), void *arg)</argsstring>
+        <name>StartTimer</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>loopID</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>timer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Calls a callback every &quot;time&quot; seconds, until the timer is ended. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The loop id for onErrorReceived. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timer sent by reference to be set. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of milliseconds between each call of the callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback argument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="234"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a8e0f7d4bdd499eea2b47b67542cdb392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndTimer</definition>
+        <argsstring>(uint64_t timer)</argsstring>
+        <name>EndTimer</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Ends a timer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timer sent by reference to be set. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a71406297a3fd81f754021523706a2faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseSocket</definition>
+        <argsstring>(uint64_t socketID)</argsstring>
+        <name>CloseSocket</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>socketID</declname>
+        </param>
+        <briefdescription>
+<para>Closes a socket. The id should be freed, as well as any other data relating to this socket. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket id to be closed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1adcc8dc300d098d6fd7f2db15fbae56ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExitEventLoop</definition>
+        <argsstring>(uint64_t loopID)</argsstring>
+        <name>ExitEventLoop</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>loopID</declname>
+        </param>
+        <briefdescription>
+<para>Exits an event loop and frees all data relating to it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loopID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The loop ID. If zero, do nothing. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1afebd5f796779f2c7335d8476ed2d0997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int NewSecureRandomGenerator</definition>
+        <argsstring>(uint64_t *gen)</argsstring>
+        <name>NewSecureRandomGenerator</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>gen</declname>
+        </param>
+        <briefdescription>
+<para>Returns an instance of a cryptographically secure random number generator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generator as a pointer or integer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="258"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a6a0eec9608c896c6ffd20cfca2bf683b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SecureRandomSeed</definition>
+        <argsstring>(uint64_t gen)</argsstring>
+        <name>SecureRandomSeed</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>gen</declname>
+        </param>
+        <briefdescription>
+<para>Seeds the random number generator securely. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generator. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="263"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1a2f687145a9bee62dabc7a344a7ca9f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomSeed</definition>
+        <argsstring>(uint64_t gen, uint64_t seed)</argsstring>
+        <name>RandomSeed</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>gen</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Seeds the generator from a 64-bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64-bit integer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="269"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1ae654eaeec3513d33e2b988f902924413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t SecureRandomInteger</definition>
+        <argsstring>(uint64_t gen)</argsstring>
+        <name>SecureRandomInteger</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>gen</declname>
+        </param>
+        <briefdescription>
+<para>Generates a 64 bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generator. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The random 64-bit integer integer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="275"/>
+      </memberdef>
+      <memberdef kind="function" id="_dependencies_8h_1af30a1c6f1f96b742f1f9e58aeafa5178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeSecureRandomGenerator</definition>
+        <argsstring>(uint64_t gen)</argsstring>
+        <name>FreeSecureRandomGenerator</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>gen</declname>
+        </param>
+        <briefdescription>
+<para>Frees the random number generator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generator. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h" line="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File for weak linked functions for dependency injection. All these functions are unimplemented. The functions include the crytography functions which are key for the functioning of bitcoin. Sockets must be non-blocking and use an asynchronous onErrorReceived-type system. The use of the sockets is designed to be compatible with libevent. The random number functions should be cryptographically secure. See the dependecies folder for implementations. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Dependencies.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>itcoin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>Matthew<sp/>Mitchell<sp/>on<sp/>15/05/2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Matthew<sp/>Mitchell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>itcoin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>itcoin<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>itcoin<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>along<sp/>with<sp/>itcoin.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#ifndef<sp/>DEPENDENCIESH</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEPENDENCIESH</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8h" kindref="compound">Constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>weak<sp/>linking<sp/>so<sp/>these<sp/>functions<sp/>can<sp/>be<sp/>implemented<sp/>outside<sp/>of<sp/>the<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Weak<sp/>linking<sp/>for<sp/>cryptographic<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>Sha256</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>Ripemd160</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>Sha160</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>EcdsaVerify</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Weak<sp/>linking<sp/>for<sp/>networking<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>NewSocket</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketBind</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketConnect</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketListen</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketAccept</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>NewEventLoop</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketCanAcceptEvent</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketDidConnectEvent</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketCanSendEvent</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketCanReceiveEvent</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketAddEvent</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketRemoveEvent</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketFreeEvent</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketSend</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SocketReceive</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>StartTimer</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>EndTimer</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>CloseSocket</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>ExitEventLoop</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Weak<sp/>linking<sp/>for<sp/>random<sp/>number<sp/>generation<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>NewSecureRandomGenerator</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SecureRandomSeed</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>RandomSeed</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>SecureRandomInteger</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>FreeSecureRandomGenerator</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CRYPTOGRAPHIC<sp/>DEPENDENCIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1ac8d904e99d5833b896736a76b27da0b9" kindref="member" tooltip="SHA-256 cryptographic hash function.">Sha256</ref>(uint8_t<sp/>*<sp/>data,uint16_t<sp/>length,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1afc4c3de28fcd3d122636259977f3029c" kindref="member" tooltip="RIPEMD-160 cryptographic hash function.">Ripemd160</ref>(uint8_t<sp/>*<sp/>data,uint16_t<sp/>length,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a5a496b8ef882d805eccedfa308f29a48" kindref="member" tooltip="SHA-1 cryptographic hash function.">Sha160</ref>(uint8_t<sp/>*<sp/>data,uint16_t<sp/>length,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="106"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a02ed88c025f0b88dbc8a4aec268a3afe" kindref="member" tooltip="Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL ver...">EcdsaVerify</ref>(uint8_t<sp/>*<sp/>signature,uint8_t<sp/>sigLen,uint8_t<sp/>*<sp/>hash,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/>pubKey,uint8_t<sp/>keyLen);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NETWORKING<sp/>DEPENDENCIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">SocketReturn<sp/><ref refid="_dependencies_8h_1abbc3b6a1bc7284cdb7eecbc2fc8170c1" kindref="member" tooltip="Creates a new TCP/IP socket. The socket should use a non-blocking mode.">NewSocket</ref>(uint64_t<sp/>*<sp/>socketID,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>IPv6);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>@brief<sp/>Binds<sp/>the<sp/>host<sp/>machine<sp/>and<sp/>a<sp/>port<sp/>number<sp/>to<sp/>a<sp/>new<sp/>socket.</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>@param<sp/>socketID<sp/>The<sp/>socket<sp/>id<sp/>to<sp/>set<sp/>to<sp/>the<sp/>new<sp/>socket.</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>@param<sp/>IPv6<sp/>true<sp/>if<sp/>we<sp/>are<sp/>binding<sp/>a<sp/>socket<sp/>for<sp/>the<sp/>IPv6<sp/>network.</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>@param<sp/>port<sp/>The<sp/>port<sp/>to<sp/>bind<sp/>to.</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>@returns<sp/>true<sp/>if<sp/>the<sp/>bind<sp/>was<sp/>sucessful<sp/>and<sp/>false<sp/>otherwise.</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a2a0f9e343e2230ff956da5cc121314f6" kindref="member">SocketBind</ref>(uint64_t<sp/>*<sp/>socketID,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>IPv6,uint16_t<sp/>port);</highlight></codeline>
+<codeline lineno="133"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1ac12fb121981627704e01d8e80c1c8039" kindref="member" tooltip="Begin connecting to an external host with a socket. This should be non-blocking.">SocketConnect</ref>(uint64_t<sp/>socketID,uint8_t<sp/>*<sp/>IP,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>IPv6,uint16_t<sp/>port);</highlight></codeline>
+<codeline lineno="140"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a4febf2cf5ef84322b6295a3e391d15d7" kindref="member" tooltip="Begin listening for incomming connections on a bound socket. This should be non-blocking.">SocketListen</ref>(uint64_t<sp/>socketID,uint16_t<sp/>maxConnections);</highlight></codeline>
+<codeline lineno="147"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1aeaf4fe44e55376f10009d0e4863295b5" kindref="member" tooltip="Accepts an incomming IPv4 connection on a bound socket. This should be non-blocking.">SocketAccept</ref>(uint64_t<sp/>socketID,uint64_t<sp/>*<sp/>connectionSocketID);</highlight></codeline>
+<codeline lineno="156"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1ab41740ec6ee6ba4124b44095e751bdb3" kindref="member" tooltip="Starts a event loop for socket onErrorReceived on a seperate thread. Access to the loop id should be ...">NewEventLoop</ref>(uint64_t<sp/>*<sp/>loopID,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onError)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onDidTimeout)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,TimeOutType),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>communicator);</highlight></codeline>
+<codeline lineno="164"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1adb5da0eddf7a2b7b83b9fa8569eae737" kindref="member" tooltip="Creates an event where a listening socket is available for accepting a connection. The event should be persistent and not issue timeouts.">SocketCanAcceptEvent</ref>(uint64_t<sp/>*<sp/>eventID,uint64_t<sp/>loopID,uint64_t<sp/>socketID,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onCanAccept)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,uint64_t));</highlight></codeline>
+<codeline lineno="173"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a6c590c239497b83734a144f206907faf" kindref="member" tooltip="Sets a function pointer for the event where a socket has connected. The event only needs to fire once...">SocketDidConnectEvent</ref>(uint64_t<sp/>*<sp/>eventID,uint64_t<sp/>loopID,uint64_t<sp/>socketID,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onDidConnect)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>peer);</highlight></codeline>
+<codeline lineno="182"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1aaa8b848ed666e9a9d32615047609a34f" kindref="member" tooltip="Sets a function pointer for the event where a socket is available for sending data. This should be persistent.">SocketCanSendEvent</ref>(uint64_t<sp/>*<sp/>eventID,uint64_t<sp/>loopID,uint64_t<sp/>socketID,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onCanSend)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>peer);</highlight></codeline>
+<codeline lineno="191"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a415c2c7980a314c65a01eef32e14c7ff" kindref="member" tooltip="Sets a function pointer for the event where a socket is available for receiving data. This should be persistent.">SocketCanReceiveEvent</ref>(uint64_t<sp/>*<sp/>eventID,uint64_t<sp/>loopID,uint64_t<sp/>socketID,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onCanReceive)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>peer);</highlight></codeline>
+<codeline lineno="198"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a1311c01201d68c2045bc5962b63a2e90" kindref="member" tooltip="Adds an event to be pending.">SocketAddEvent</ref>(uint64_t<sp/>eventID,uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="204"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a5c21b4cfc0706a759f2634335300aae1" kindref="member" tooltip="Removes an event so no more onErrorReceived are made.">SocketRemoveEvent</ref>(uint64_t<sp/>eventID);</highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a882189cc4cf9e761c6b0e7028d307dfd" kindref="member" tooltip="Makes an event non-pending and frees it.">SocketFreeEvent</ref>(uint64_t<sp/>eventID);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">int32_t<sp/><ref refid="_dependencies_8h_1a9cdaba7b59ae8b6fbf1c17147bc6ad49" kindref="member" tooltip="Sends data to a socket. This should be non-blocking.">SocketSend</ref>(uint64_t<sp/>socketID,uint8_t<sp/>*<sp/>data,uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">int32_t<sp/><ref refid="_dependencies_8h_1af7c759dd8dfe7ab9aae2c337cb616a5a" kindref="member" tooltip="Receives data from a socket. This should be non-blocking.">SocketReceive</ref>(uint64_t<sp/>socketID,uint8_t<sp/>*<sp/>data,uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="234"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a1bd67bc870070326a584a33e29a55057" kindref="member" tooltip="Calls a callback every &amp;quot;time&amp;quot; seconds, until the timer is ended.">StartTimer</ref>(uint64_t<sp/>loopID,uint64_t<sp/>*<sp/>timer,uint16_t<sp/>time,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*callback)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg);</highlight></codeline>
+<codeline lineno="239"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a8e0f7d4bdd499eea2b47b67542cdb392" kindref="member" tooltip="Ends a timer.">EndTimer</ref>(uint64_t<sp/>timer);</highlight></codeline>
+<codeline lineno="244"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a71406297a3fd81f754021523706a2faf" kindref="member" tooltip="Closes a socket. The id should be freed, as well as any other data relating to this socket...">CloseSocket</ref>(uint64_t<sp/>socketID);</highlight></codeline>
+<codeline lineno="249"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1adcc8dc300d098d6fd7f2db15fbae56ec" kindref="member" tooltip="Exits an event loop and frees all data relating to it.">ExitEventLoop</ref>(uint64_t<sp/>loopID);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RANDOM<sp/>DEPENDENCIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1afebd5f796779f2c7335d8476ed2d0997" kindref="member" tooltip="Returns an instance of a cryptographically secure random number generator.">NewSecureRandomGenerator</ref>(uint64_t<sp/>*<sp/>gen);</highlight></codeline>
+<codeline lineno="263"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a6a0eec9608c896c6ffd20cfca2bf683b" kindref="member" tooltip="Seeds the random number generator securely.">SecureRandomSeed</ref>(uint64_t<sp/>gen);</highlight></codeline>
+<codeline lineno="269"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1a2f687145a9bee62dabc7a344a7ca9f2e" kindref="member" tooltip="Seeds the generator from a 64-bit integer.">RandomSeed</ref>(uint64_t<sp/>gen,uint64_t<sp/>seed);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">uint64_t<sp/><ref refid="_dependencies_8h_1ae654eaeec3513d33e2b988f902924413" kindref="member" tooltip="Generates a 64 bit integer.">SecureRandomInteger</ref>(uint64_t<sp/>gen);</highlight></codeline>
+<codeline lineno="280"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_dependencies_8h_1af30a1c6f1f96b742f1f9e58aeafa5178" kindref="member" tooltip="Frees the random number generator.">FreeSecureRandomGenerator</ref>(uint64_t<sp/>gen);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Dependencies.h"/>
+  </compounddef>
+</doxygen>

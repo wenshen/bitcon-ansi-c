@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_verack" kind="struct" prot="public">
+    <compoundname>CmdVerack</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_verack_1a57f54349f4fd1cbbb52058812e146af2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="92" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_verack_1a5b9e40150e73a908b8815ab282e5a4d3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char command[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="95" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_verack_1aebb70c2aab3407a9f05334c47131a43b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="96" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_verack_1aa482bc33779a87f57ab8efc2c1680c48" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t checksum</definition>
+        <argsstring></argsstring>
+        <name>checksum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="97" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_verack_1a330f1bb25881c43b17265cdc48d8b5a2" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* payload</definition>
+        <argsstring></argsstring>
+        <name>payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="98" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="90" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="90" bodyend="99"/>
+    <listofallmembers>
+      <member refid="struct_cmd_verack_1aa482bc33779a87f57ab8efc2c1680c48" prot="public" virt="non-virtual"><scope>CmdVerack</scope><name>checksum</name></member>
+      <member refid="struct_cmd_verack_1a5b9e40150e73a908b8815ab282e5a4d3" prot="public" virt="non-virtual"><scope>CmdVerack</scope><name>command</name></member>
+      <member refid="struct_cmd_verack_1aebb70c2aab3407a9f05334c47131a43b" prot="public" virt="non-virtual"><scope>CmdVerack</scope><name>length</name></member>
+      <member refid="struct_cmd_verack_1a57f54349f4fd1cbbb52058812e146af2" prot="public" virt="non-virtual"><scope>CmdVerack</scope><name>magic</name></member>
+      <member refid="struct_cmd_verack_1a330f1bb25881c43b17265cdc48d8b5a2" prot="public" virt="non-virtual"><scope>CmdVerack</scope><name>payload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

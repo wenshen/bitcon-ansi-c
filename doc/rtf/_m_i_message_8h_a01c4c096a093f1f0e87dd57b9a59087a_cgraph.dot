@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="initializeMessageFromByteArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="getObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_object_8c.html#a0f72e3416dc7f6c52cfb1bf49baac3f2",tooltip="Gets a Object."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="incrementReferenceCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_object_8c.html#a5f22211b2f99a33c1b4b7ad544ce108a",tooltip="The number of referencesreference counter for the Object is incremented."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="initializeObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_i_object_8c.html#a4406bd378c1214af5b4cff0eeed6dbf0",tooltip="Initialises a Object."];
+}

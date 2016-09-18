@@ -1,0 +1,23 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_byte_array_8c.html#a22681d5a43566996273c64d34d669806" title="References a subsection of a ByteArray." alt="" coords="428,109,665,139"/>
+<area shape="rect" id="node17" href="$_m_i_message_8c.html#a5b1bc10a9354d0ad365fc55123dba947" title="Gets a Message from another object. Use this to avoid casts." alt="" coords="795,581,901,611"/>
+<area shape="rect" id="node19" href="$_m_i_transaction_8c.html#a1abc45d369c2884698692d79091f5b2c" title="Serialises a Transaction to byte data." alt="" coords="225,393,377,423"/>
+<area shape="rect" id="node30" href="$_m_i_byte_array_8c.html#a4e0892416e1efc8384687e86966ed3a1" title="Set a byte into the array. This will be set at self&#45;&gt;offset+index in the underlying data..." alt="" coords="1088,656,1237,685"/>
+<area shape="rect" id="node5" href="$_m_i_byte_array_8c.html#ab0ba2a57716ecf23d43924647b4175bb" title="Destroys a ByteArray object." alt="" coords="779,109,917,139"/>
+<area shape="rect" id="node9" href="$_m_i_object_8c.html#a0f72e3416dc7f6c52cfb1bf49baac3f2" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="1116,57,1209,87"/>
+<area shape="rect" id="node14" href="$_m_i_byte_array_8c.html#a0639a384c5603ad22f8440fcbb831f9a" title="Initialises a reference ByteArray to a subsection of an ByteArray." alt="" coords="715,5,981,35"/>
+<area shape="rect" id="node7" href="$_m_i_object_8c.html#a71704ab4fbecb7d85276d32649b5349a" title="destructor" alt="" coords="1104,123,1221,152"/>
+<area shape="rect" id="node11" href="$_m_i_byte_array_8c.html#a34dc195b61536b69d608bc90fc123194" title="Releases a reference to shared byte data and frees the data if necessary." alt="" coords="1029,199,1296,228"/>
+<area shape="rect" id="node21" href="$_m_i_var_len_int_8c.html#ab415150158b7af4b63eb360b384b5ec0" title="Returns a variable integer from an unsigned 64 bit integer." alt="" coords="749,315,947,344"/>
+<area shape="rect" id="node25" href="$_m_i_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="457,524,636,553"/>
+<area shape="rect" id="node28" href="$_m_i_var_len_int_8c.html#a332f03b156163565574788bc3cedd522" title="Encodes variable size integer into bytes." alt="" coords="781,528,915,557"/>
+<area shape="rect" id="node34" href="$_m_i_byte_array_8c.html#aa4d465553a3c7f80c1700316f2410b40" title="Writes a 32 bit integer to a ByteArray as little&#45;endian." alt="" coords="1033,263,1292,292"/>
+<area shape="rect" id="node40" href="$_m_i_transaction_input_8c.html#a1dc5b6d2e7b70e918572bedd9ee6abf9" title="Serialises a TransactionInput to byte data." alt="" coords="456,367,637,396"/>
+<area shape="rect" id="node53" href="$_m_i_transaction_output_8c.html#a16b79dfd79f1bec2dce3b0865766b48e" title="Serialises a TransactionOutput to byte data." alt="" coords="451,420,643,449"/>
+<area shape="rect" id="node23" href="$_m_i_var_len_int_8c.html#a960ae6b1a5365789aec7b7055a36dbd7" title="Returns the variable integer byte size of a 64 bit integer." alt="" coords="1088,316,1237,345"/>
+<area shape="rect" id="node32" href="$_m_i_byte_array_8c.html#a6e28c10bc73d105e1df7f1868c92a7de" title="Writes a 16 bit integer to a ByteArray as little&#45;endian." alt="" coords="1033,501,1292,531"/>
+<area shape="rect" id="node36" href="$_m_i_byte_array_8c.html#ac10e90995fc8a98db44d71607ef0ede7" title="Writes a 64 bit integer to a ByteArray as little&#45;endian." alt="" coords="1033,555,1292,584"/>
+<area shape="rect" id="node42" href="$_m_i_byte_array_8c.html#a13f783bb0fcd091b7bfb25cfd7f9d1c0" title="Changes the reference of this ByteArray object to reference the underlying data of another ByteAr..." alt="" coords="736,421,960,451"/>
+<area shape="rect" id="node45" href="$_m_i_byte_array_8c.html#a949c73acfab0c6c4d83ad8c07d999364" title="Copies another byte array to this byte array." alt="" coords="743,475,953,504"/>
+<area shape="rect" id="node49" href="$_m_i_byte_array_8c.html#a673fc907bf90724f9fbfad124d3ed9e2" title="Gets a ByteArray from another object. Use this to avoid casts." alt="" coords="792,368,904,397"/>
+</map>

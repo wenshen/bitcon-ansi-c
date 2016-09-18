@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_outpoint" kind="struct" prot="public">
+    <compoundname>Outpoint</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_outpoint_1a49e83595c89cca1c8cd37b9af318a908" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hash</definition>
+        <argsstring>[32]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="44" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_outpoint_1aafd95f8c7a99b9189ede7cdf0871ebe8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="45" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_outpoint_1a589d64202487f78e3cc30dd2e04c5201" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="148" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="43" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="43" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct_outpoint_1a49e83595c89cca1c8cd37b9af318a908" prot="public" virt="non-virtual"><scope>Outpoint</scope><name>hash</name></member>
+      <member refid="struct_outpoint_1aafd95f8c7a99b9189ede7cdf0871ebe8" prot="public" virt="non-virtual"><scope>Outpoint</scope><name>index</name></member>
+      <member refid="struct_outpoint_1a589d64202487f78e3cc30dd2e04c5201" prot="public" virt="non-virtual"><scope>Outpoint</scope><name>index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_object" kind="struct" prot="public">
+    <compoundname>Object</compoundname>
+    <includes refid="_m_i_object_8h" local="no">Object.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_object_1aa353725933e843001d4feb03f8268121" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* destroy)(void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to function for destroying the <ref refid="struct_m_i_object" kindref="compound">Object</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Object.h" line="29" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Object.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="_m_i_block_8h_1a32a782c3e422cc5b132abaddc4eecf13" compoundref="_m_i_block_8c" startline="21" endline="37">createNewBlock</referencedby>
+        <referencedby refid="_m_i_block_8h_1aaddeaac51a35b3b98ade3340b6d46bac" compoundref="_m_i_block_8c" startline="41" endline="60">createNewBlockFromByteArray</referencedby>
+        <referencedby refid="_m_i_block_8c_1a9eb01377cf0d49ddc3dd988d221ddd76" compoundref="_m_i_block_8c" startline="64" endline="82">createNewBlockFromOriginalBlock</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a2db5c01eeb9fbe1d8350ab99392be437" compoundref="_m_i_byte_array_8c" startline="243" endline="255">createNewByteArrayOfSize</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a9d079ea9294ff1dfc57d978c0d0402cf" compoundref="_m_i_byte_array_8c" startline="275" endline="287">createNewByteArrayUsingDataCopy</referencedby>
+        <referencedby refid="_m_i_message_8h_1a243ba896755b085ea0415d93bd3c6255" compoundref="_m_i_message_8c" startline="19" endline="47">createNewMessage</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1ad9c9cac2e7fd054ceff9c4a0053ec494" compoundref="_m_i_transaction_8c" startline="17" endline="39">createNewTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a66149340bfb777acf294dba5d06a9776" compoundref="_m_i_transaction_input_8c" startline="16" endline="41">createNewTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a6ce74856deb61a054db563a0382b0ff2" compoundref="_m_i_transaction_input_8c" startline="43" endline="61">createNewTransactionInputFromData</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a6a42fc141043183bd5dc2872ea7def95" compoundref="_m_i_transaction_output_8c" startline="16" endline="38">createNewTransactionOutput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1ad147138cc70f16d81e3b66a00ae700af" compoundref="_m_i_transaction_output_8c" startline="40" endline="60">createNewTransactionOutputFromData</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a3350bfefcab7bfb6e48c9865b342bec0" compoundref="_m_i_byte_array_8c" startline="61" endline="86">getByteArraySubsectionReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t referenceCount</definition>
+        <argsstring></argsstring>
+        <name>referenceCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of references to this <ref refid="struct_m_i_object" kindref="compound">Object</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Object.h" line="30" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Object.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="_m_i_message_8h_1aca53c5c90c67a7b1c77c93438aa484d9" compoundref="_m_i_message_8c" startline="51" endline="75">createMessageFromByteArray</referencedby>
+        <referencedby refid="_m_i_message_8h_1a243ba896755b085ea0415d93bd3c6255" compoundref="_m_i_message_8c" startline="19" endline="47">createNewMessage</referencedby>
+        <referencedby refid="_m_i_object_8h_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_m_i_object_8c" startline="57" endline="71">decrementReferenceCount</referencedby>
+        <referencedby refid="_m_i_object_8h_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_m_i_object_8c" startline="73" endline="84">incrementReferenceCount</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Object.h" line="28" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Object.h" bodystart="28" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" prot="public" virt="non-virtual"><scope>Object</scope><name>destroy</name></member>
+      <member refid="struct_m_i_object_1ad83c3d5d3f46e6278a77cb80eb2a0705" prot="public" virt="non-virtual"><scope>Object</scope><name>referenceCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

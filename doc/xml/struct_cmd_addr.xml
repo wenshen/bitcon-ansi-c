@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_addr" kind="struct" prot="public">
+    <compoundname>CmdAddr</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_addr_1a86988a65e0d3ece7990c032c159786d6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="104" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_addr_1a690496cb0763044d995a40b46e8f7d32" prot="public" static="no" mutable="no">
+        <type>uint32_t *</type>
+        <definition>uint32_t* tslist</definition>
+        <argsstring></argsstring>
+        <name>tslist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="107" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_addr_1a39e0b80e0408806939286dfb40cfd081" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_network_address" kindref="compound">NetworkAddress</ref> *</type>
+        <definition>struct NetworkAddress* naddrlist</definition>
+        <argsstring></argsstring>
+        <name>naddrlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="109" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_addr_1a16ff2d8e15ade4948398b0aeb80124a8" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="101" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_addr_1af8bd06c27cd9c81c75e60853080e7e7e" prot="public" static="no" mutable="no">
+        <type>unsigned int *</type>
+        <definition>unsigned int* tslist</definition>
+        <argsstring></argsstring>
+        <name>tslist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="104" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_addr_1a65d94e910a546e06b09f1daa9978e52c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_net_addr" kindref="compound">NetAddr</ref> *</type>
+        <definition>struct NetAddr* naddrlist</definition>
+        <argsstring></argsstring>
+        <name>naddrlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="106" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="247">
+        <label>CmdAddr</label>
+        <link refid="struct_cmd_addr"/>
+        <childnode refid="248" relation="usage">
+          <edgelabel>naddrlist</edgelabel>
+        </childnode>
+        <childnode refid="249" relation="usage">
+          <edgelabel>naddrlist</edgelabel>
+        </childnode>
+      </node>
+      <node id="248">
+        <label>NetworkAddress</label>
+        <link refid="struct_network_address"/>
+      </node>
+      <node id="249">
+        <label>NetAddr</label>
+        <link refid="struct_net_addr"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="101" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="101" bodyend="110"/>
+    <listofallmembers>
+      <member refid="struct_cmd_addr_1a86988a65e0d3ece7990c032c159786d6" prot="public" virt="non-virtual"><scope>CmdAddr</scope><name>count</name></member>
+      <member refid="struct_cmd_addr_1a16ff2d8e15ade4948398b0aeb80124a8" prot="public" virt="non-virtual"><scope>CmdAddr</scope><name>count</name></member>
+      <member refid="struct_cmd_addr_1a39e0b80e0408806939286dfb40cfd081" prot="public" virt="non-virtual"><scope>CmdAddr</scope><name>naddrlist</name></member>
+      <member refid="struct_cmd_addr_1a65d94e910a546e06b09f1daa9978e52c" prot="public" virt="non-virtual"><scope>CmdAddr</scope><name>naddrlist</name></member>
+      <member refid="struct_cmd_addr_1a690496cb0763044d995a40b46e8f7d32" prot="public" virt="non-virtual"><scope>CmdAddr</scope><name>tslist</name></member>
+      <member refid="struct_cmd_addr_1af8bd06c27cd9c81c75e60853080e7e7e" prot="public" virt="non-virtual"><scope>CmdAddr</scope><name>tslist</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

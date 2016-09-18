@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_inventory_vector_8h" kind="file">
+    <compoundname>InventoryVector.h</compoundname>
+    <includes refid="_message_8h" local="yes">Message.h</includes>
+    <includedby refid="_inventory_8h" local="yes">src/Object/Message/Inventory.h</includedby>
+    <includedby refid="_inventory_vector_8c" local="yes">src/Object/Message/InventoryVector.c</includedby>
+    <incdepgraph>
+      <node id="853">
+        <label>stdint.h</label>
+      </node>
+      <node id="852">
+        <label>stdlib.h</label>
+      </node>
+      <node id="854">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="850">
+        <label>src/Object/Message/InventoryVector.h</label>
+        <link refid="InventoryVector.h"/>
+        <childnode refid="851" relation="include">
+        </childnode>
+      </node>
+      <node id="851">
+        <label>Message.h</label>
+        <link refid="_message_8h"/>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+        <childnode refid="855" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+        <childnode refid="857" relation="include">
+        </childnode>
+      </node>
+      <node id="855">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="856">
+        <label>../Object.h</label>
+      </node>
+      <node id="857">
+        <label>../../Utils/VariableLengthInteger/VarLenInt.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="861">
+        <label>src/Object/Message/InventoryVector.c</label>
+        <link refid="_inventory_vector_8c"/>
+      </node>
+      <node id="858">
+        <label>src/Object/Message/InventoryVector.h</label>
+        <link refid="InventoryVector.h"/>
+        <childnode refid="859" relation="include">
+        </childnode>
+        <childnode refid="861" relation="include">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>src/Object/Message/Inventory.c</label>
+        <link refid="_inventory_8c"/>
+      </node>
+      <node id="859">
+        <label>src/Object/Message/Inventory.h</label>
+        <link refid="_inventory_8h"/>
+        <childnode refid="860" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_inventory_vector" prot="public">InventoryVector</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_inventory_vector_8h_1a9c5b66b850164dc1933349fdb849c4cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+        <definition>InventoryVector* createNewInventoryVector</definition>
+        <argsstring>(InventoryVectorType type, ByteArray *hash, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewInventoryVector</name>
+        <param>
+          <type><ref refid="_constants_8h_1a540a9c34662db8bb84b729512cf08e75" kindref="member">InventoryVectorType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt;assign destructor function to object </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="33" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="13" bodyend="34"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_inventory_vector_8c_1a47afae38431c157f133d182046efab31" compoundref="_inventory_vector_8c" startline="96" endline="103">destroyInventoryVector</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_inventory_vector_8c_1a69423d6567cd6d9d25755335937f2f7b" compoundref="_inventory_vector_8c" startline="65" endline="80">initializeInventoryVector</references>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1a16497ae979e7f0842ef2dafc144718ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+        <definition>InventoryVector* createNewInventoryVectorFromData</definition>
+        <argsstring>(ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewInventoryVectorFromData</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object from serialised data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialised <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt;assign destructor function to object </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="41" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="36" bodyend="56"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_inventory_vector_8c_1a47afae38431c157f133d182046efab31" compoundref="_inventory_vector_8c" startline="96" endline="103">destroyInventoryVector</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_inventory_vector_8c_1ac0513bfdc2977b9719b2f0db7afde606" compoundref="_inventory_vector_8c" startline="82" endline="94">initializeInventoryVectorFromData</references>
+        <referencedby refid="_inventory_8c_1a62e028868025b8a7e77dc71490b135ea" compoundref="_inventory_8c" startline="107" endline="167">deserializeInventory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1a9f5c08b13e82a422cd3ffa1a7f988d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+        <definition>InventoryVector* getInventoryVector</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getInventoryVector</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="48" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1a69423d6567cd6d9d25755335937f2f7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeInventoryVector</definition>
+        <argsstring>(InventoryVector *self, InventoryVectorType type, ByteArray *hash, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initializeInventoryVector</name>
+        <param>
+          <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="_constants_8h_1a540a9c34662db8bb84b729512cf08e75" kindref="member">InventoryVectorType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="55" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="65" bodyend="80"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_object_8c" startline="81" endline="92">incrementReferenceCount</references>
+        <references refid="_message_8c_1abeae03d7e39e468bf5958d4d2b1dc61b" compoundref="_message_8c" startline="94" endline="106">initializeMessageFromObject</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_inventory_vector_8h_1a9c5b66b850164dc1933349fdb849c4cc" compoundref="_inventory_vector_8c" startline="13" endline="34">createNewInventoryVector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1ac0513bfdc2977b9719b2f0db7afde606" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeInventoryVectorFromData</definition>
+        <argsstring>(InventoryVector *self, ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initializeInventoryVectorFromData</name>
+        <param>
+          <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object from serialised data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The serialised data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="62" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="82" bodyend="94"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_message_8c_1a297413f770355bd4bd2212e999867031" compoundref="_message_8c" startline="108" endline="123">initializeMessageFromByteArrayData</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_inventory_vector_8h_1a16497ae979e7f0842ef2dafc144718ee" compoundref="_inventory_vector_8c" startline="36" endline="56">createNewInventoryVectorFromData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1a3effb2d105153d226cb3f5563f45c894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyInventoryVector</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyInventoryVector</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="68" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="96" bodyend="103"/>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_message_8c_1ac2c2a78178aac5f9f228b51d01bf5fe3" compoundref="_message_8c" startline="145" endline="154">destroyMessage</references>
+        <referencedby refid="_inventory_vector_8h_1a9c5b66b850164dc1933349fdb849c4cc" compoundref="_inventory_vector_8c" startline="13" endline="34">createNewInventoryVector</referencedby>
+        <referencedby refid="_inventory_vector_8h_1a16497ae979e7f0842ef2dafc144718ee" compoundref="_inventory_vector_8c" startline="36" endline="56">createNewInventoryVectorFromData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1afe53d7aabd20f5c5748ea6058dfe21df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeInventoryVector</definition>
+        <argsstring>(InventoryVector *self)</argsstring>
+        <name>deserializeInventoryVector</name>
+        <param>
+          <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Deserialises a <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> so that it can be used as an object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="75" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="105" bodyend="129"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26" compoundref="_constants_8h" startline="40">ERROR_MESSAGE_DESERIALISATION_NULL_BYTES</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaa41a3f829938d8b8b8e8f284b0b077648" compoundref="_constants_8h" startline="255">INVENTORYVECTOR_HASH_FIELD_SIZE</references>
+        <references refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310" compoundref="_constants_8h" startline="256">INVENTORYVECTOR_TOTAL_SIZE</references>
+        <references refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaa5ece4285e45404e0b18d08ffc2c1d570" compoundref="_constants_8h" startline="254">INVENTORYVECTOR_TYPE_FIELD_SIZE</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_byte_array_8c_1a6fe303a6a14235d60ef9024a1463d630" compoundref="_byte_array_8c" startline="231" endline="243">readInt32AsLittleEndianFromByteArray</references>
+        <referencedby refid="_inventory_8c_1a62e028868025b8a7e77dc71490b135ea" compoundref="_inventory_8c" startline="107" endline="167">deserializeInventory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_vector_8h_1a340bff34fb8ee996b53e0a61ebdd3e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t serializeInventoryVector</definition>
+        <argsstring>(InventoryVector *self)</argsstring>
+        <name>serializeInventoryVector</name>
+        <param>
+          <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Serialises a <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> to the byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length written on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="81" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.c" bodystart="131" bodyend="153"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_byte_array_8c_1ad155de39b7e47d41778c0ec219aff1e6" compoundref="_byte_array_8c" startline="381" endline="390">changeByteArrayDataReference</references>
+        <references refid="_byte_array_8c_1a7c9e6ea6d3022a2e858e91e207be9ec2" compoundref="_byte_array_8c" startline="28" endline="35">copyByteArrayToByteArray</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d" compoundref="_constants_8h" startline="41">ERROR_MESSAGE_SERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e" compoundref="_constants_8h" startline="42">ERROR_MESSAGE_SERIALISATION_NULL_BYTES</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310" compoundref="_constants_8h" startline="256">INVENTORYVECTOR_TOTAL_SIZE</references>
+        <references refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaa5ece4285e45404e0b18d08ffc2c1d570" compoundref="_constants_8h" startline="254">INVENTORYVECTOR_TYPE_FIELD_SIZE</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_byte_array_8c_1ab7e0f883b2d3ff4d4b253f4257f6916a" compoundref="_byte_array_8c" startline="337" endline="347">writeInt32AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_inventory_8h_1a67383f9aba234b390c4b5be54019c3f4" compoundref="_inventory_8c" startline="169" endline="213">serialiseInventory</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="struct_inventory" kindref="compound">Inventory</ref> vectors are used for notifying other nodes about objects they have or data which is being requested. see <ulink url="https://en.bitcoin.it/wiki/Protocol_specification#Inventory_Vectors">https://en.bitcoin.it/wiki/Protocol_specification#Inventory_Vectors</ulink> <ref refid="struct_inventory" kindref="compound">Inventory</ref> vector could be transaction messages, block messages or errors. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>InventoryVector.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>04/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor">#ifndef<sp/>INVENTORYVECTORH</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVENTORYVECTORH</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_message_8h" kindref="compound" tooltip="Header file for the Message object.">Message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_inventory_vector" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24" refid="struct_inventory_vector_1a8987f797adf70c3e174fd64cc68bc933" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/><ref refid="struct_inventory_vector_1a8987f797adf70c3e174fd64cc68bc933" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="25" refid="struct_inventory_vector_1aae693fef743079289c6c94035f7aae77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_constants_8h_1a540a9c34662db8bb84b729512cf08e75" kindref="member">InventoryVectorType</ref><sp/><ref refid="struct_inventory_vector_1aae693fef743079289c6c94035f7aae77" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="26" refid="struct_inventory_vector_1a5309b3103b4345688327148e3c589014" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="struct_inventory_vector_1a5309b3103b4345688327148e3c589014" kindref="member">hash</ref>;<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/><ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/><ref refid="_inventory_vector_8c_1a9c5b66b850164dc1933349fdb849c4cc" kindref="member" tooltip="Creates a new InventoryVector object.">createNewInventoryVector</ref>(<ref refid="_constants_8h_1a540a9c34662db8bb84b729512cf08e75" kindref="member">InventoryVectorType</ref><sp/>type,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>hash,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/><ref refid="_inventory_vector_8c_1a16497ae979e7f0842ef2dafc144718ee" kindref="member" tooltip="Creates a new InventoryVector object from serialised data.">createNewInventoryVectorFromData</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/><ref refid="_inventory_vector_8c_1a9f5c08b13e82a422cd3ffa1a7f988d2a" kindref="member" tooltip="Gets a InventoryVector from another object. Use this to avoid casts.">getInventoryVector</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_inventory_vector_8c_1a69423d6567cd6d9d25755335937f2f7b" kindref="member" tooltip="Initialises a InventoryVector object.">initializeInventoryVector</ref>(<ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="_constants_8h_1a540a9c34662db8bb84b729512cf08e75" kindref="member">InventoryVectorType</ref><sp/>type,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>hash,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_inventory_vector_8c_1ac0513bfdc2977b9719b2f0db7afde606" kindref="member" tooltip="Initialises a InventoryVector object from serialised data.">initializeInventoryVectorFromData</ref>(<ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_inventory_vector_8c_1a47afae38431c157f133d182046efab31" kindref="member" tooltip="Frees a InventoryVector object.">destroyInventoryVector</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">uint32_t<sp/><ref refid="_inventory_vector_8c_1afe53d7aabd20f5c5748ea6058dfe21df" kindref="member" tooltip="Deserialises a InventoryVector so that it can be used as an object.">deserializeInventoryVector</ref>(<ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">uint32_t<sp/><ref refid="_inventory_vector_8c_1a340bff34fb8ee996b53e0a61ebdd3e8a" kindref="member" tooltip="Serialises a InventoryVector to the byte data.">serializeInventoryVector</ref>(<ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_inventory_8c" kind="file">
+    <compoundname>Inventory.c</compoundname>
+    <includes refid="_inventory_8h" local="yes">Inventory.h</includes>
+    <includes local="no">assert.h</includes>
+    <incdepgraph>
+      <node id="826">
+        <label>assert.h</label>
+      </node>
+      <node id="820">
+        <label>stdint.h</label>
+      </node>
+      <node id="819">
+        <label>stdlib.h</label>
+      </node>
+      <node id="821">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="825">
+        <label>InventoryVector.h</label>
+        <link refid="_inventory_vector_8h"/>
+        <childnode refid="818" relation="include">
+        </childnode>
+      </node>
+      <node id="818">
+        <label>Message.h</label>
+        <link refid="_message_8h"/>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+      </node>
+      <node id="816">
+        <label>src/Object/Message/Inventory.c</label>
+        <link refid="Inventory.c"/>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="817">
+        <label>Inventory.h</label>
+        <link refid="_inventory_8h"/>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="822">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="823">
+        <label>../Object.h</label>
+      </node>
+      <node id="824">
+        <label>../../Utils/VariableLengthInteger/VarLenInt.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_inventory_8c_1aa27f1b034d0b3f347729ad2b7d272025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+        <definition>Inventory* createNewInventory</definition>
+        <argsstring>(void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewInventory</name>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="12" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="11" bodyend="29"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_inventory_8c_1a647bf13c10936d1e2f9034517b3b1344" compoundref="_inventory_8c" startline="85" endline="97">destroyInventory</references>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_inventory_8c_1a1337956e58cd2da10ad5e73eb3287b45" compoundref="_inventory_8c" startline="58" endline="69">initializeInventory</references>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1a47eb1a6a1aa703d8c11ba66a4e13aa18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+        <definition>Inventory* createNewInventoryFromData</definition>
+        <argsstring>(ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewInventoryFromData</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_inventory" kindref="compound">Inventory</ref> object from serialised data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serialised <ref refid="struct_inventory" kindref="compound">Inventory</ref> data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="32" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="31" bodyend="49"/>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_inventory_8c_1a647bf13c10936d1e2f9034517b3b1344" compoundref="_inventory_8c" startline="85" endline="97">destroyInventory</references>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_inventory_8c_1ae81b1611b0771bb43f45b3c331119db0" compoundref="_inventory_8c" startline="71" endline="83">initializeInventoryFromData</references>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1a220bb86f5cc099cc801ddefbbfb7fd32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+        <definition>Inventory* getInventory</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getInventory</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_inventory" kindref="compound">Inventory</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_inventory" kindref="compound">Inventory</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="52" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1a1337956e58cd2da10ad5e73eb3287b45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeInventory</definition>
+        <argsstring>(Inventory *self, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initializeInventory</name>
+        <param>
+          <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises an <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>one on success, zero on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="59" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="58" bodyend="69"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_message_8c_1abeae03d7e39e468bf5958d4d2b1dc61b" compoundref="_message_8c" startline="94" endline="106">initializeMessageFromObject</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_inventory_8h_1aa27f1b034d0b3f347729ad2b7d272025" compoundref="_inventory_8c" startline="11" endline="29">createNewInventory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1ae81b1611b0771bb43f45b3c331119db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeInventoryFromData</definition>
+        <argsstring>(Inventory *self, ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initializeInventoryFromData</name>
+        <param>
+          <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises an <ref refid="struct_inventory" kindref="compound">Inventory</ref> object from serialised data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The serialised data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>one on success, zero on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="72" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="71" bodyend="83"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_message_8c_1a297413f770355bd4bd2212e999867031" compoundref="_message_8c" startline="108" endline="123">initializeMessageFromByteArrayData</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_inventory_8h_1a47eb1a6a1aa703d8c11ba66a4e13aa18" compoundref="_inventory_8c" startline="31" endline="49">createNewInventoryFromData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1a647bf13c10936d1e2f9034517b3b1344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyInventory</definition>
+        <argsstring>(void *selfIn)</argsstring>
+        <name>destroyInventory</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+          <defname>selfIn</defname>
+        </param>
+        <briefdescription>
+<para>destroys an <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> object to destroy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="86" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="85" bodyend="97"/>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_message_8c_1ac2c2a78178aac5f9f228b51d01bf5fe3" compoundref="_message_8c" startline="145" endline="154">destroyMessage</references>
+        <references refid="_object_8c_1a9773962d80072e39e235802b57907208" compoundref="_object_8c" startline="59" endline="63">destroyObject</references>
+        <referencedby refid="_inventory_8h_1aa27f1b034d0b3f347729ad2b7d272025" compoundref="_inventory_8c" startline="11" endline="29">createNewInventory</referencedby>
+        <referencedby refid="_inventory_8h_1a47eb1a6a1aa703d8c11ba66a4e13aa18" compoundref="_inventory_8c" startline="31" endline="49">createNewInventoryFromData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1af7dd1d117a24fc256bc4257c6d6b1e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t calculateInventoryLength</definition>
+        <argsstring>(Inventory *self)</argsstring>
+        <name>calculateInventoryLength</name>
+        <param>
+          <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the length needed to serialise the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="101" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="100" bodyend="105"/>
+        <references refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" compoundref="_var_len_int_8c" startline="82" endline="94">getSizeOfVarLenInt</references>
+        <references refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310" compoundref="_constants_8h" startline="256">INVENTORYVECTOR_TOTAL_SIZE</references>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1a62e028868025b8a7e77dc71490b135ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeInventory</definition>
+        <argsstring>(Inventory *self)</argsstring>
+        <name>deserializeInventory</name>
+        <param>
+          <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="108" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="107" bodyend="167"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_inventory_vector_8c_1a16497ae979e7f0842ef2dafc144718ee" compoundref="_inventory_vector_8c" startline="36" endline="56">createNewInventoryVectorFromData</references>
+        <references refid="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" compoundref="_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</references>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_inventory_vector_8c_1afe53d7aabd20f5c5748ea6058dfe21df" compoundref="_inventory_vector_8c" startline="105" endline="129">deserializeInventoryVector</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26" compoundref="_constants_8h" startline="40">ERROR_MESSAGE_DESERIALISATION_NULL_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+      </memberdef>
+      <memberdef kind="function" id="_inventory_8c_1a67383f9aba234b390c4b5be54019c3f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t serialiseInventory</definition>
+        <argsstring>(Inventory *self)</argsstring>
+        <name>serialiseInventory</name>
+        <param>
+          <type><ref refid="struct_inventory" kindref="compound">Inventory</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Serialises a <ref refid="struct_inventory" kindref="compound">Inventory</ref> to the byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length written on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" line="170" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c" bodystart="169" bodyend="213"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" compoundref="_var_len_int_8c" startline="71" endline="80">createVarLenIntFromUInt64</references>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" compoundref="_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d" compoundref="_constants_8h" startline="41">ERROR_MESSAGE_SERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e" compoundref="_constants_8h" startline="42">ERROR_MESSAGE_SERIALISATION_NULL_BYTES</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_inventory_vector_8c_1a340bff34fb8ee996b53e0a61ebdd3e8a" compoundref="_inventory_vector_8c" startline="131" endline="153">serializeInventoryVector</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Inventory.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>9,<sp/>2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>apopoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_inventory_8h" kindref="compound" tooltip="Allows a node to advertise its knowledge of one or more objects. It can be received unsolicited...">Inventory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_inventory_8h_1aa27f1b034d0b3f347729ad2b7d272025" refkind="member"><highlight class="normal"><ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/><ref refid="_inventory_8c_1aa27f1b034d0b3f347729ad2b7d272025" kindref="member" tooltip="Creates a new Inventory object.">createNewInventory</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...))</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(onErrorReceived<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*</highlight><highlight class="keyword">self</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!</highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>onErrorReceived(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" kindref="member">ERROR_OUT_OF_MEMORY</ref>,</highlight><highlight class="stringliteral">&quot;Can!<sp/>allocate<sp/>%i<sp/>bytes<sp/>of<sp/>memory<sp/>in<sp/>createNewInventory\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*</highlight><highlight class="keyword">self</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a8460165be167be3b0816d84f498e3733" kindref="member" tooltip="Casts the pointer to the Object; use this to avoid explicitly casting.">getObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_object_1aa353725933e843001d4feb03f8268121" kindref="member">destroy</ref><sp/>=<sp/><ref refid="_inventory_8c_1a647bf13c10936d1e2f9034517b3b1344" kindref="member" tooltip="destroys an Inventory object.">destroyInventory</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_inventory_8c_1a1337956e58cd2da10ad5e73eb3287b45" kindref="member" tooltip="Initialises an Inventory object.">initializeInventory</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>onErrorReceived))<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a9773962d80072e39e235802b57907208" kindref="member" tooltip="destructor">destroyObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_inventory_8h_1a47eb1a6a1aa703d8c11ba66a4e13aa18" refkind="member"><highlight class="normal"><ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/><ref refid="_inventory_8c_1a47eb1a6a1aa703d8c11ba66a4e13aa18" kindref="member" tooltip="Creates a new Inventory object from serialised data.">createNewInventoryFromData</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...))</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(data<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(onErrorReceived<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*</highlight><highlight class="keyword">self</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!</highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>onErrorReceived(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" kindref="member">ERROR_OUT_OF_MEMORY</ref>,</highlight><highlight class="stringliteral">&quot;Can!<sp/>allocate<sp/>%i<sp/>bytes<sp/>of<sp/>memory<sp/>in<sp/>createNewInventoryFromData\n&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*</highlight><highlight class="keyword">self</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a8460165be167be3b0816d84f498e3733" kindref="member" tooltip="Casts the pointer to the Object; use this to avoid explicitly casting.">getObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_object_1aa353725933e843001d4feb03f8268121" kindref="member">destroy</ref><sp/>=<sp/><ref refid="_inventory_8c_1a647bf13c10936d1e2f9034517b3b1344" kindref="member" tooltip="destroys an Inventory object.">destroyInventory</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_inventory_8c_1ae81b1611b0771bb43f45b3c331119db0" kindref="member" tooltip="Initialises an Inventory object from serialised data.">initializeInventoryFromData</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,data,onErrorReceived)){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a9773962d80072e39e235802b57907208" kindref="member" tooltip="destructor">destroyObject</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_inventory_8h_1a220bb86f5cc099cc801ddefbbfb7fd32" refkind="member"><highlight class="normal"><ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/><ref refid="_inventory_8c_1a220bb86f5cc099cc801ddefbbfb7fd32" kindref="member" tooltip="Gets a Inventory from another object. Use this to avoid casts.">getInventory</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">self</highlight><highlight class="normal">!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_inventory_8h_1a1337956e58cd2da10ad5e73eb3287b45" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_inventory_8c_1a1337956e58cd2da10ad5e73eb3287b45" kindref="member" tooltip="Initialises an Inventory object.">initializeInventory</ref>(<ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...))</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(onErrorReceived<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;inventory<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_message_8c_1abeae03d7e39e468bf5958d4d2b1dc61b" kindref="member" tooltip="Initialises a Message object.">initializeMessageFromObject</ref>(<ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">),<sp/>onErrorReceived)){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_inventory_8h_1ae81b1611b0771bb43f45b3c331119db0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_inventory_8c_1ae81b1611b0771bb43f45b3c331119db0" kindref="member" tooltip="Initialises an Inventory object from serialised data.">initializeInventoryFromData</ref>(<ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...))</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(data<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(onErrorReceived<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;inventory<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_message_8c_1a297413f770355bd4bd2212e999867031" kindref="member" tooltip="Initialises a Message object from byteArray data.">initializeMessageFromByteArrayData</ref>(<ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">),<sp/>data,<sp/>onErrorReceived)){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_inventory_8h_1af32069256ed31db1bf2ce7b04cf8fee4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_inventory_8c_1a647bf13c10936d1e2f9034517b3b1344" kindref="member" tooltip="destroys an Inventory object.">destroyInventory</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>selfIn)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(selfIn<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>selfIn;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;count;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" kindref="member" tooltip="Decrease the number in the reference counter. (It keeps track of how many objects have been created)...">decrementReferenceCount</ref>(self-&gt;inventory[i]);<sp/></highlight><highlight class="comment">/*<sp/>destroy<sp/>InventoryVector*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a9773962d80072e39e235802b57907208" kindref="member" tooltip="destructor">destroyObject</ref>(self-&gt;inventory);<sp/></highlight><highlight class="comment">/*<sp/>destroy<sp/>Inventory<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1ac2c2a78178aac5f9f228b51d01bf5fe3" kindref="member" tooltip="destroy Message">destroyMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="_inventory_8h_1af7dd1d117a24fc256bc4257c6d6b1e11" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="_inventory_8c_1af7dd1d117a24fc256bc4257c6d6b1e11" kindref="member" tooltip="Calculates the length needed to serialise the object.">calculateInventoryLength</ref>(<ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" kindref="member" tooltip="Returns the variable integer byte size of a 64 bit integer.">getSizeOfVarLenInt</ref>(self-&gt;count)<sp/>+<sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;count<sp/>*<sp/><ref refid="_constants_8h_1ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310" kindref="member">INVENTORYVECTOR_TOTAL_SIZE</ref>);<sp/></highlight><highlight class="comment">/*<sp/>Size<sp/>of<sp/>count<sp/>field<sp/>and<sp/>total<sp/>size<sp/>of<sp/>all<sp/>InventoryVectors<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="_inventory_8c_1a62e028868025b8a7e77dc71490b135ea" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="_inventory_8c_1a62e028868025b8a7e77dc71490b135ea" kindref="member">deserializeInventory</ref>(<ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes<sp/>=<sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" kindref="member">bytes</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>bytes)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26" kindref="member">ERROR_MESSAGE_DESERIALISATION_NULL_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>deserialise<sp/>an<sp/>Inventory<sp/>with<sp/>no<sp/>bytes.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes-&gt;<ref refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref><sp/>&lt;<sp/>37)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" kindref="member">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>deserialise<sp/>an<sp/>Inventory<sp/>with<sp/>less<sp/>bytes<sp/>than<sp/>required<sp/>for<sp/>one<sp/>item.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/>numInventoryVectors<sp/>=<sp/><ref refid="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" kindref="member" tooltip="Decodes variable size integer from bytes into a VarLenInt structure.">decodeVarLenInt</ref>(bytes,<sp/>0);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(numInventoryVectors.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref><sp/>&gt;<sp/>1388)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" kindref="member">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>deserialise<sp/>a<sp/>Inventory<sp/>with<sp/>a<sp/>var<sp/>int<sp/>over<sp/>1388.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Run<sp/>through<sp/>the<sp/>items<sp/>and<sp/>deserialise<sp/>each<sp/>one.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;inventory<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*self-&gt;inventory)<sp/>*<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)numInventoryVectors.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!self-&gt;inventory)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" kindref="member">ERROR_OUT_OF_MEMORY</ref>,</highlight><highlight class="stringliteral">&quot;Can!<sp/>allocate<sp/>%i<sp/>bytes<sp/>of<sp/>memory<sp/>in<sp/>deserializeInventory&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*self-&gt;inventory)<sp/>*<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)numInventoryVectors.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;count<sp/>=<sp/>numInventoryVectors.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>cursor<sp/>=<sp/>numInventoryVectors.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>i<sp/>&lt;<sp/>numInventoryVectors.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Deserialize<sp/>and<sp/>create<sp/>new<sp/>InventoryVectors<sp/>from<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data<sp/>=<sp/><ref refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" kindref="member" tooltip="gets ByteArray Subsection Reference">getByteArraySubsectionReference</ref>(bytes,<sp/>cursor,<sp/>bytes-&gt;<ref refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref>-cursor);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!data)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" kindref="member">ERROR_INIT_FAIL</ref>,</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>create<sp/>a<sp/>new<sp/>ByteArray<sp/>in<sp/>deserializeInventory<sp/>for<sp/>inventory<sp/>broadcast<sp/>number<sp/>%u.&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;inventory[i]<sp/>=<sp/><ref refid="_inventory_vector_8c_1a16497ae979e7f0842ef2dafc144718ee" kindref="member" tooltip="Creates a new InventoryVector object from serialised data.">createNewInventoryVectorFromData</ref>(data,<sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;onErrorReceived);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!self-&gt;inventory[i])<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" kindref="member">ERROR_INIT_FAIL</ref>,</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>create<sp/>a<sp/>new<sp/>InventoryItem<sp/>in<sp/>deserializeInventory<sp/>for<sp/>inventory<sp/>broadcast<sp/>number<sp/>%u.&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" kindref="member" tooltip="Decrease the number in the reference counter. (It keeps track of how many objects have been created)...">decrementReferenceCount</ref>(data);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Deserialise<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>len<sp/>=<sp/><ref refid="_inventory_vector_8c_1afe53d7aabd20f5c5748ea6058dfe21df" kindref="member" tooltip="Deserialises a InventoryVector so that it can be used as an object.">deserializeInventoryVector</ref>(self-&gt;inventory[i]);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!len){</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" kindref="member">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Inventory<sp/>cannot<sp/>be<sp/>deserialised<sp/>because<sp/>of<sp/>an<sp/>error<sp/>with<sp/>the<sp/>InventoryVector<sp/>number<sp/>%u.&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" kindref="member" tooltip="Decrease the number in the reference counter. (It keeps track of how many objects have been created)...">decrementReferenceCount</ref>(data);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Adjust<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref><sp/>=<sp/>len;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" kindref="member" tooltip="Decrease the number in the reference counter. (It keeps track of how many objects have been created)...">decrementReferenceCount</ref>(data);<sp/></highlight><highlight class="comment">/*release<sp/>pointer<sp/>to<sp/>this<sp/>InventoryVector<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cursor<sp/>+=<sp/>len;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cursor;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="_inventory_8h_1a67383f9aba234b390c4b5be54019c3f4" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="_inventory_8c_1a67383f9aba234b390c4b5be54019c3f4" kindref="member" tooltip="Serialises a Inventory to the byte data.">serialiseInventory</ref>(<ref refid="struct_inventory" kindref="compound" tooltip="Structure for Inventory objects.">Inventory</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes<sp/>=<sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" kindref="member">bytes</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>bytes)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e" kindref="member">ERROR_MESSAGE_SERIALISATION_NULL_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>serialise<sp/>a<sp/>Inventory<sp/>with<sp/>no<sp/>bytes.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/>numInventoryVectors<sp/>=<sp/><ref refid="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" kindref="member" tooltip="Returns a variable integer from an unsigned 64 bit integer.">createVarLenIntFromUInt64</ref>(self-&gt;count);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes-&gt;<ref refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref><sp/>&lt;<sp/>numInventoryVectors.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref><sp/>+<sp/>36<sp/>*<sp/>self-&gt;count)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" kindref="member">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>deserialise<sp/>a<sp/>Inventory<sp/>with<sp/>less<sp/>bytes<sp/>than<sp/>required.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" kindref="member" tooltip="Encodes variable size integer into bytes.">encodeVarLenInt</ref>(bytes,<sp/>0,<sp/>numInventoryVectors);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>cursor<sp/>=<sp/>numInventoryVectors.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>i<sp/>&lt;<sp/>numInventoryVectors.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(self-&gt;inventory[i])-&gt;<ref refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" kindref="member">bytes</ref><sp/>=<sp/><ref refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" kindref="member" tooltip="gets ByteArray Subsection Reference">getByteArraySubsectionReference</ref>(bytes,<sp/>cursor,<sp/>bytes-&gt;<ref refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref>-cursor);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(self-&gt;inventory[i])-&gt;<ref refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" kindref="member">bytes</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" kindref="member">ERROR_INIT_FAIL</ref>,</highlight><highlight class="stringliteral">&quot;Cannot<sp/>create<sp/>a<sp/>new<sp/>ByteArray<sp/>subsection<sp/>reference<sp/>in<sp/>serialiseInventory&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>len<sp/>=<sp/><ref refid="_inventory_vector_8c_1a340bff34fb8ee996b53e0a61ebdd3e8a" kindref="member" tooltip="Serialises a InventoryVector to the byte data.">serializeInventoryVector</ref>(self-&gt;inventory[i]);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;<ref refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" kindref="member">onErrorReceived</ref>(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d" kindref="member">ERROR_MESSAGE_SERIALISATION_BAD_BYTES</ref>,</highlight><highlight class="stringliteral">&quot;Inventory<sp/>cannot<sp/>be<sp/>serialised<sp/>because<sp/>of<sp/>an<sp/>error<sp/>with<sp/>the<sp/>InventoryVector<sp/>number<sp/>%u.&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Release<sp/>ByteArray<sp/>objects<sp/>to<sp/>avoid<sp/>problems<sp/>overwritting<sp/>pointer<sp/>without<sp/>release,<sp/>if<sp/>serialisation<sp/>is<sp/>tried<sp/>again.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>j<sp/>&lt;<sp/>i<sp/>+<sp/>1;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" kindref="member" tooltip="Decrease the number in the reference counter. (It keeps track of how many objects have been created)...">decrementReferenceCount</ref>(<ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(self-&gt;inventory[j])-&gt;<ref refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" kindref="member">bytes</ref>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" kindref="member" tooltip="getter">getMessage</ref>(self-&gt;inventory[i])-&gt;<ref refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" kindref="member">bytes</ref>-&gt;<ref refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref><sp/>=<sp/>len;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cursor<sp/>+=<sp/>len;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cursor;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.c"/>
+  </compounddef>
+</doxygen>

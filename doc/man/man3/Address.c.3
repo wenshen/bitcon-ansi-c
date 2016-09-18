@@ -1,0 +1,107 @@
+.TH "src/Object/VersionChecksumBytes/Address/Address.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/VersionChecksumBytes/Address/Address.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Address.h'\fP
+.br
+\fC#include '../VersionChecksumBytes.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddress\fP * \fBNewAddressFromRIPEMD160Hash\fP (uint8_t *hash, uint8_t networkCode, bool cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBAddress\fP object from a RIPEMD-160 hash. \fP"
+.ti -1c
+.RI "\fBAddress\fP * \fBGetAddress\fP (void *self)"
+.br
+.RI "\fIGets a \fBAddress\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "bool \fBInitAddressFromRIPEMD160Hash\fP (\fBAddress\fP *self, uint8_t networkCode, uint8_t *hash, bool cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBAddress\fP object from a RIPEMD-160 hash. \fP"
+.ti -1c
+.RI "void \fBFreeAddress\fP (void *self)"
+.br
+.RI "\fIFrees a \fBAddress\fP object. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void FreeAddress (void *self)"
+.PP
+Frees a \fBAddress\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBAddress\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file Address.c.
+.SS "\fBAddress\fP* GetAddress (void *self)"
+.PP
+Gets a \fBAddress\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBAddress\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBAddress\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file Address.c.
+.SS "bool InitAddressFromRIPEMD160Hash (\fBAddress\fP *self, uint8_tnetworkCode, uint8_t *hash, boolcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBAddress\fP object from a RIPEMD-160 hash. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBAddress\fP object to initialise. 
+.br
+\fInetwork\fP A NetworkParameters object with the network information. 
+.br
+\fIhash\fP The RIPEMD-160 hash. Must be 20 bytes. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP Events for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file Address.c.
+.SS "\fBAddress\fP* NewAddressFromRIPEMD160Hash (uint8_t *hash, uint8_tnetworkCode, boolcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBAddress\fP object from a RIPEMD-160 hash. \fBParameters:\fP
+.RS 4
+\fInetwork\fP A NetworkParameters object with the network information. 
+.br
+\fIhash\fP The RIPEMD-160 hash. Must be 20 bytes. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP Callback for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBAddress\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file Address.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

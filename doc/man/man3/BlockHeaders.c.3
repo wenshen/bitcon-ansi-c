@@ -1,0 +1,227 @@
+.TH "src/Object/Message/BlockHeaders.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/BlockHeaders.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'BlockHeaders.h'\fP
+.br
+\fC#include 'assert.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBlockHeaders\fP * \fBnewBlockHeaders\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBBlockHeaders\fP object. \fP"
+.ti -1c
+.RI "\fBBlockHeaders\fP * \fBnewBlockHeadersFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBBlockHeaders\fP object from serialized data. \fP"
+.ti -1c
+.RI "\fBBlockHeaders\fP * \fBgetBlockHeaders\fP (void *self)"
+.br
+.RI "\fIGets a \fBBlockHeaders\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitBlockHeaders\fP (\fBBlockHeaders\fP *self, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBBlockHeaders\fP object. \fP"
+.ti -1c
+.RI "int \fBinitBlockHeadersFromData\fP (\fBBlockHeaders\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBBlockHeaders\fP object from serialized data. \fP"
+.ti -1c
+.RI "void \fBfreeBlockHeaders\fP (void *vself)"
+.br
+.RI "\fIFrees a \fBBlockHeaders\fP object. \fP"
+.ti -1c
+.RI "int \fBaddBlockHeaderToBlockHeaderList\fP (\fBBlockHeaders\fP *self, \fBBlock\fP *header)"
+.br
+.RI "\fIAdds a \fBBlock\fP into the block header list. \fP"
+.ti -1c
+.RI "uint32_t \fBcalculateBlockHeadersLength\fP (\fBBlockHeaders\fP *self)"
+.br
+.RI "\fICalculates the length needed to serialize the object. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeBlockHeaders\fP (\fBBlockHeaders\fP *self)"
+.br
+.RI "\fIDeserializes a \fBBlockHeaders\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeBlockHeaders\fP (\fBBlockHeaders\fP *self)"
+.br
+.RI "\fISerializes a \fBBlockHeaders\fP to the byte data. \fP"
+.ti -1c
+.RI "int \fBtakeBlockFromBlockHeaderList\fP (\fBBlockHeaders\fP *self, \fBBlock\fP *header)"
+.br
+.RI "\fITakes a \fBBlock\fP for the block header list. This does not retain the \fBBlock\fP so you can pass an \fBBlock\fP into this while releasing control from the calling function. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int addBlockHeaderToBlockHeaderList (\fBBlockHeaders\fP *self, \fBBlock\fP *header)"
+.PP
+Adds a \fBBlock\fP into the block header list. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object 
+.br
+\fIaddress\fP The \fBBlock\fP to add. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the block header was added successfully or false on error. 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file BlockHeaders.c.
+.SS "uint32_t calculateBlockHeadersLength (\fBBlockHeaders\fP *self)"
+.PP
+Calculates the length needed to serialize the object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file BlockHeaders.c.
+.SS "uint32_t deserializeBlockHeaders (\fBBlockHeaders\fP *self)"
+.PP
+Deserializes a \fBBlockHeaders\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 89 of file BlockHeaders.c.
+.SS "void freeBlockHeaders (void *self)"
+.PP
+Frees a \fBBlockHeaders\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file BlockHeaders.c.
+.SS "\fBBlockHeaders\fP* getBlockHeaders (void *self)"
+.PP
+Gets a \fBBlockHeaders\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBBlockHeaders\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBBlockHeaders\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file BlockHeaders.c.
+.SS "int initBlockHeaders (\fBBlockHeaders\fP *self, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBBlockHeaders\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object to initialize 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file BlockHeaders.c.
+.SS "int initBlockHeadersFromData (\fBBlockHeaders\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBBlockHeaders\fP object from serialized data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object to initialize 
+.br
+\fIdata\fP The serialized data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file BlockHeaders.c.
+.SS "\fBBlockHeaders\fP* newBlockHeaders (void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBBlockHeaders\fP object. \fBReturns:\fP
+.RS 4
+A new \fBBlockHeaders\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 14 of file BlockHeaders.c.
+.SS "\fBBlockHeaders\fP* newBlockHeadersFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBBlockHeaders\fP object from serialized data. \fBParameters:\fP
+.RS 4
+\fIdata\fP Serialized \fBBlockHeaders\fP data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBBlockHeaders\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file BlockHeaders.c.
+.SS "uint32_t serializeBlockHeaders (\fBBlockHeaders\fP *self)"
+.PP
+Serializes a \fBBlockHeaders\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file BlockHeaders.c.
+.SS "int takeBlockFromBlockHeaderList (\fBBlockHeaders\fP *self, \fBBlock\fP *header)"
+.PP
+Takes a \fBBlock\fP for the block header list. This does not retain the \fBBlock\fP so you can pass an \fBBlock\fP into this while releasing control from the calling function. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlockHeaders\fP object 
+.br
+\fIaddress\fP The \fBBlock\fP to take. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the block header was taken successfully or false on error. 
+.RE
+.PP
+
+.PP
+Definition at line 178 of file BlockHeaders.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

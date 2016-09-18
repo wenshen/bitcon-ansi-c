@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_block_8h.html#a3a23a3b87c401a07d3f8b224355d523a" title="dealWithSerializationHeader" alt="" coords="579,6,765,35"/>
+<area shape="rect" id="node7" href="$_m_i_transaction_8h.html#a6752846ad122c4320c07ea5cb51637d5" title="Gets the hash for signing or signature checking for a transaction input. The transaction input needs ..." alt="" coords="264,31,531,60"/>
+<area shape="rect" id="node9" href="$_m_i_transaction_input_8h.html#a1dc5b6d2e7b70e918572bedd9ee6abf9" title="Serialises a TransactionInput to byte data." alt="" coords="307,84,488,114"/>
+<area shape="rect" id="node16" href="$_m_i_transaction_output_8h.html#a16b79dfd79f1bec2dce3b0865766b48e" title="Serialises a TransactionOutput to byte data." alt="" coords="301,138,493,167"/>
+<area shape="rect" id="node5" href="$_m_i_block_8h.html#a3dab3fff46c9b386501414a6b13f5192" title="Serializes a Block to the byte data." alt="" coords="1033,42,1151,71"/>
+<area shape="rect" id="node11" href="$_m_i_transaction_8h.html#a1abc45d369c2884698692d79091f5b2c" title="Serialises a Transaction to byte data." alt="" coords="596,84,748,114"/>
+<area shape="rect" id="node13" href="$_m_i_block_8h.html#a3fa07e825a149c98d148b215a5d5a78a" title="dealWithSerializationTran" alt="" coords="813,71,984,100"/>
+</map>

@@ -1,0 +1,224 @@
+.TH "src/Object/Message/ChainDescriptor.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/ChainDescriptor.h \- 
+.PP
+Stores up to 500 block hashes for a block chain to describe a block chain for a peer so that a peer can send relevent block data. Inherits from \fBMessage\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Message.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBChainDescriptor\fP"
+.br
+.RI "\fIStructure for \fBChainDescriptor\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChainDescriptor\fP * \fBnewChainDescriptor\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBChainDescriptor\fP object. \fP"
+.ti -1c
+.RI "\fBChainDescriptor\fP * \fBnewChainDescriptorFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBChainDescriptor\fP object from serialized data. \fP"
+.ti -1c
+.RI "\fBChainDescriptor\fP * \fBgetChainDescriptor\fP (void *self)"
+.br
+.RI "\fIGets a \fBChainDescriptor\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitChainDescriptor\fP (\fBChainDescriptor\fP *self, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBChainDescriptor\fP object. \fP"
+.ti -1c
+.RI "int \fBinitChainDescriptorFromData\fP (\fBChainDescriptor\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBChainDescriptor\fP object from serialized data. \fP"
+.ti -1c
+.RI "void \fBfreeChainDescriptor\fP (void *self)"
+.br
+.RI "\fIFrees a \fBChainDescriptor\fP object. \fP"
+.ti -1c
+.RI "int \fBaddHashToChainDescriptor\fP (\fBChainDescriptor\fP *self, \fBByteArray\fP *hash)"
+.br
+.RI "\fIAdds a hash to the \fBChainDescriptor\fP onto the end. \fP"
+.ti -1c
+.RI "uint16_t \fBdeserializeChainDescriptor\fP (\fBChainDescriptor\fP *self)"
+.br
+.RI "\fIDeserializes a \fBChainDescriptor\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "uint16_t \fBserializeChainDescriptor\fP (\fBChainDescriptor\fP *self)"
+.br
+.RI "\fISerializes a \fBChainDescriptor\fP to the byte data. \fP"
+.ti -1c
+.RI "int \fBtakeHashForChainDescriptor\fP (\fBChainDescriptor\fP *self, \fBByteArray\fP *hash)"
+.br
+.RI "\fITakes a hash for the \fBChainDescriptor\fP and puts it on the end. The hash is not retained so the calling function is releasing control. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stores up to 500 block hashes for a block chain to describe a block chain for a peer so that a peer can send relevent block data. Inherits from \fBMessage\fP. 
+
+The Chain Descriptor Class 
+.PP
+Definition in file \fBChainDescriptor.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "int addHashToChainDescriptor (\fBChainDescriptor\fP *self, \fBByteArray\fP *hash)"
+.PP
+Adds a hash to the \fBChainDescriptor\fP onto the end. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object 
+.br
+\fIhash\fP The hash to add. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the hash was added successfully, false on error. 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file ChainDescriptor.c.
+.SS "uint16_t deserializeChainDescriptor (\fBChainDescriptor\fP *self)"
+.PP
+Deserializes a \fBChainDescriptor\fP so that it can be used as an object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file ChainDescriptor.c.
+.SS "void freeChainDescriptor (void *self)"
+.PP
+Frees a \fBChainDescriptor\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file ChainDescriptor.c.
+.SS "\fBChainDescriptor\fP* getChainDescriptor (void *self)"
+.PP
+Gets a \fBChainDescriptor\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBChainDescriptor\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBChainDescriptor\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file ChainDescriptor.c.
+.SS "int initChainDescriptor (\fBChainDescriptor\fP *self, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBChainDescriptor\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object to initialize 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file ChainDescriptor.c.
+.SS "int initChainDescriptorFromData (\fBChainDescriptor\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBChainDescriptor\fP object from serialized data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object to initialize 
+.br
+\fIdata\fP The serialized data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file ChainDescriptor.c.
+.SS "\fBChainDescriptor\fP* newChainDescriptor (void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBChainDescriptor\fP object. \fBReturns:\fP
+.RS 4
+A new \fBChainDescriptor\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file ChainDescriptor.c.
+.SS "\fBChainDescriptor\fP* newChainDescriptorFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBChainDescriptor\fP object from serialized data. \fBParameters:\fP
+.RS 4
+\fIdata\fP Serialized \fBChainDescriptor\fP data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBChainDescriptor\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file ChainDescriptor.c.
+.SS "uint16_t serializeChainDescriptor (\fBChainDescriptor\fP *self)"
+.PP
+Serializes a \fBChainDescriptor\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file ChainDescriptor.c.
+.SS "int takeHashForChainDescriptor (\fBChainDescriptor\fP *self, \fBByteArray\fP *hash)"
+.PP
+Takes a hash for the \fBChainDescriptor\fP and puts it on the end. The hash is not retained so the calling function is releasing control. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBChainDescriptor\fP object 
+.br
+\fIhash\fP The hash to take. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the hash was taken successfully, false on error. 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file ChainDescriptor.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

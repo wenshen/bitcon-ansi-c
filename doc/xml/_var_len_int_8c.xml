@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_var_len_int_8c" kind="file">
+    <compoundname>VarLenInt.c</compoundname>
+    <includes refid="_var_len_int_8h" local="yes">VarLenInt.h</includes>
+    <includes local="no">assert.h</includes>
+    <incdepgraph>
+      <node id="1177">
+        <label>assert.h</label>
+      </node>
+      <node id="1173">
+        <label>src/Utils/VariableLengthInteger/VarLenInt.c</label>
+        <link refid="VarLenInt.c"/>
+        <childnode refid="1174" relation="include">
+        </childnode>
+        <childnode refid="1177" relation="include">
+        </childnode>
+      </node>
+      <node id="1174">
+        <label>VarLenInt.h</label>
+        <link refid="_var_len_int_8h"/>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1176" relation="include">
+        </childnode>
+      </node>
+      <node id="1175">
+        <label>../../Object/ByteArray.h</label>
+      </node>
+      <node id="1176">
+        <label>../../Constants.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref></type>
+        <definition>VarLenInt decodeVarLenInt</definition>
+        <argsstring>(ByteArray *bytes, uint32_t offset)</argsstring>
+        <name>decodeVarLenInt</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Decodes variable size integer from bytes into a <ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte array to decode a variable size integer from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to start decoding from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref> information </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" line="13" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="13" bodyend="43"/>
+        <references refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" compoundref="_byte_array_8c" startline="89" endline="95">getByteFromByteArray</references>
+        <references refid="_byte_array_8c_1a49e0dcce3198b633d8f78dd56aa96597" compoundref="_byte_array_8c" startline="210" endline="222">readInt16AsLittleEndianFromByteArray</references>
+        <references refid="_byte_array_8c_1a6fe303a6a14235d60ef9024a1463d630" compoundref="_byte_array_8c" startline="231" endline="243">readInt32AsLittleEndianFromByteArray</references>
+        <references refid="_byte_array_8c_1a670796ed60ca7c23ac314f0aab3c68c7" compoundref="_byte_array_8c" startline="254" endline="270">readInt64AsLittleEndianFromByteArray</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_block_headers_8h_1ace10b6ab479717f0540e5a5528ca3952" compoundref="_block_headers_8c" startline="89" endline="140">deserializeBlockHeaders</referencedby>
+        <referencedby refid="_chain_descriptor_8h_1a6d7efa38f552f57c8f66ef6b7fdf103a" compoundref="_chain_descriptor_8c" startline="80" endline="118">deserializeChainDescriptor</referencedby>
+        <referencedby refid="_inventory_8c_1a62e028868025b8a7e77dc71490b135ea" compoundref="_inventory_8c" startline="107" endline="167">deserializeInventory</referencedby>
+        <referencedby refid="_transaction_8h_1ada5d9c85c4dc1ff7384ee49d6fd97ff8" compoundref="_transaction_8c" startline="384" endline="534">deserializeTransaction</referencedby>
+        <referencedby refid="_transaction_input_8h_1a8eb115030448e943f94d8ecff0fa21a9" compoundref="_transaction_input_8c" startline="177" endline="225">deserializeTransactionInput</referencedby>
+        <referencedby refid="_transaction_output_8h_1a484844cadde17ce53f58dcf0fceb52b2" compoundref="_transaction_output_8c" startline="167" endline="235">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_block_8h_1a2590af8eb87d088e41c0dfff66d41454" compoundref="_block_8c" startline="394" endline="421">deserializeWithOnlyHeaders</referencedby>
+        <referencedby refid="_block_8h_1a219df1f8f05a691f09e283731eb86129" compoundref="_block_8c" startline="321" endline="384">deserializeWithTransactions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void encodeVarLenInt</definition>
+        <argsstring>(ByteArray *bytes, uint32_t offset, VarLenInt varInt)</argsstring>
+        <name>encodeVarLenInt</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref></type>
+          <declname>varInt</declname>
+        </param>
+        <briefdescription>
+<para>Encodes variable size integer into bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte array to encode a variable size integer into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to start decoding from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>varInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable integer structure to encode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" line="45" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="45" bodyend="69"/>
+        <references refid="_byte_array_8c_1aa97aa7ca8177b767d78d5f85a00a00c9" compoundref="_byte_array_8c" startline="280" endline="287">setByteInByteArray</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <references refid="_byte_array_8c_1aef95198f4933d68abf41255b67107b28" compoundref="_byte_array_8c" startline="315" endline="327">writeInt16AsLittleEndianIntoByteArray</references>
+        <references refid="_byte_array_8c_1ab7e0f883b2d3ff4d4b253f4257f6916a" compoundref="_byte_array_8c" startline="337" endline="347">writeInt32AsLittleEndianIntoByteArray</references>
+        <references refid="_byte_array_8c_1a7bed1ea7fa0945a98bc4548d72236446" compoundref="_byte_array_8c" startline="357" endline="371">writeInt64AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_transaction_8h_1afe08b91a59f175e55d9ca049e46749c2" compoundref="_transaction_8c" startline="536" endline="680">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_inventory_8h_1a67383f9aba234b390c4b5be54019c3f4" compoundref="_inventory_8c" startline="169" endline="213">serialiseInventory</referencedby>
+        <referencedby refid="_block_8h_1ab0d1c25a8612a3644626e5030ffbe456" compoundref="_block_8c" startline="444" endline="472">serializeBlock</referencedby>
+        <referencedby refid="_block_headers_8h_1a06fe7338aa2dc8d104e7f8148674b202" compoundref="_block_headers_8c" startline="141" endline="176">serializeBlockHeaders</referencedby>
+        <referencedby refid="_chain_descriptor_8h_1a4873951a3acf7e90e799c64a9d09455d" compoundref="_chain_descriptor_8c" startline="119" endline="140">serializeChainDescriptor</referencedby>
+        <referencedby refid="_transaction_8h_1a61a0f76473a17de64dcecc04a3ce3b5f" compoundref="_transaction_8c" startline="259" endline="382">serializeTransaction</referencedby>
+        <referencedby refid="_transaction_input_8h_1a9b0f805aed38d097be8bec7dd8701e50" compoundref="_transaction_input_8c" startline="134" endline="175">serializeTransactionInput</referencedby>
+        <referencedby refid="_transaction_output_8h_1ae0ec9ca1d590685385987b26fbded266" compoundref="_transaction_output_8c" startline="127" endline="165">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref></type>
+        <definition>VarLenInt createVarLenIntFromUInt64</definition>
+        <argsstring>(uint64_t integer)</argsstring>
+        <name>createVarLenIntFromUInt64</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>integer</declname>
+        </param>
+        <briefdescription>
+<para>Returns a variable integer from an unsigned 64 bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64 bit integer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" line="71" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="71" bodyend="80"/>
+        <references refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" compoundref="_var_len_int_8c" startline="82" endline="94">getSizeOfVarLenInt</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_transaction_8h_1afe08b91a59f175e55d9ca049e46749c2" compoundref="_transaction_8c" startline="536" endline="680">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_inventory_8h_1a67383f9aba234b390c4b5be54019c3f4" compoundref="_inventory_8c" startline="169" endline="213">serialiseInventory</referencedby>
+        <referencedby refid="_block_8h_1ab0d1c25a8612a3644626e5030ffbe456" compoundref="_block_8c" startline="444" endline="472">serializeBlock</referencedby>
+        <referencedby refid="_block_headers_8h_1a06fe7338aa2dc8d104e7f8148674b202" compoundref="_block_headers_8c" startline="141" endline="176">serializeBlockHeaders</referencedby>
+        <referencedby refid="_chain_descriptor_8h_1a4873951a3acf7e90e799c64a9d09455d" compoundref="_chain_descriptor_8c" startline="119" endline="140">serializeChainDescriptor</referencedby>
+        <referencedby refid="_transaction_8h_1a61a0f76473a17de64dcecc04a3ce3b5f" compoundref="_transaction_8c" startline="259" endline="382">serializeTransaction</referencedby>
+        <referencedby refid="_transaction_input_8h_1a9b0f805aed38d097be8bec7dd8701e50" compoundref="_transaction_input_8c" startline="134" endline="175">serializeTransactionInput</referencedby>
+        <referencedby refid="_transaction_output_8h_1ae0ec9ca1d590685385987b26fbded266" compoundref="_transaction_output_8c" startline="127" endline="165">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t getSizeOfVarLenInt</definition>
+        <argsstring>(uint64_t value)</argsstring>
+        <name>getSizeOfVarLenInt</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Returns the variable integer byte size of a 64 bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64 bit integer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of a variable length integer for this integer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" line="82" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c" bodystart="82" bodyend="94"/>
+        <referencedby refid="_block_headers_8h_1a0f85776f4a67bf22fb092b54e9afbcf5" compoundref="_block_headers_8c" startline="85" endline="88">calculateBlockHeadersLength</referencedby>
+        <referencedby refid="_block_8h_1a396c1436f34175841933aa2b7cc102e8" compoundref="_block_8c" startline="248" endline="263">calculateBlockLength</referencedby>
+        <referencedby refid="_get_blocks_8h_1a12aee818b7db3c0ba51cab9a833394ac" compoundref="_get_blocks_8c" startline="77" endline="80">calculateGetBlocksLength</referencedby>
+        <referencedby refid="_inventory_8h_1af7dd1d117a24fc256bc4257c6d6b1e11" compoundref="_inventory_8c" startline="100" endline="105">calculateInventoryLength</referencedby>
+        <referencedby refid="_transaction_8h_1aff3a066c4c34af38546b99604e65afcf" compoundref="_transaction_8c" startline="213" endline="246">calculateTransactionLength</referencedby>
+        <referencedby refid="_var_len_int_8h_1a784e8aad4e7aead2119ede96096f33a9" compoundref="_var_len_int_8c" startline="71" endline="80">createVarLenIntFromUInt64</referencedby>
+        <referencedby refid="_transaction_8h_1afe08b91a59f175e55d9ca049e46749c2" compoundref="_transaction_8c" startline="536" endline="680">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_get_blocks_8h_1ae09f58674ed59b6d5f320cc588afdd14" compoundref="_get_blocks_8c" startline="127" endline="157">serializeGetBlocks</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>VarLenInt.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>06/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_var_len_int_8h" kindref="compound">VarLenInt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_var_len_int_8h_1a4dd8c16aa70756e7ab6c0845a09358af" refkind="member"><highlight class="normal"><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/><ref refid="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" kindref="member" tooltip="Decodes variable size integer from bytes into a VarLenInt structure.">decodeVarLenInt</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes,<sp/>uint32_t<sp/>offset)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(bytes<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(offset<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>firstByte<sp/>=<sp/><ref refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" kindref="member" tooltip="gets Byte from ByteArray">getByteFromByteArray</ref>(bytes,<sp/>offset);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/>varInt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(firstByte<sp/>&lt;<sp/>253)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Use<sp/>byte<sp/>literally*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref><sp/>=<sp/>firstByte;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(firstByte<sp/>==<sp/>253)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>the<sp/>next<sp/>two<sp/>bytes<sp/>as<sp/>a<sp/>little<sp/>endian<sp/>16-bit<sp/>number*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="_byte_array_8c_1a49e0dcce3198b633d8f78dd56aa96597" kindref="member" tooltip="read an int 16 As little Endian from ByteArray">readInt16AsLittleEndianFromByteArray</ref>(bytes,<sp/>offset<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(firstByte<sp/>==<sp/>254)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*read<sp/>the<sp/>next<sp/>four<sp/>bytes<sp/>as<sp/>a<sp/>little<sp/>endian<sp/>32-bit<sp/>number*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="_byte_array_8c_1a6fe303a6a14235d60ef9024a1463d630" kindref="member" tooltip="read an int 32 As little Endian from ByteArray">readInt32AsLittleEndianFromByteArray</ref>(bytes,<sp/>offset<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>the<sp/>next<sp/>eight<sp/>bytes<sp/>as<sp/>a<sp/>little<sp/>endian<sp/>64-bit<sp/>number*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="_byte_array_8c_1a670796ed60ca7c23ac314f0aab3c68c7" kindref="member" tooltip="read an int 64 As little Endian from ByteArray">readInt64AsLittleEndianFromByteArray</ref>(bytes,<sp/>offset<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref><sp/>=<sp/>9;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>varInt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_var_len_int_8h_1a12852f478f7fcd7cacc0b150fa7fe12a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" kindref="member" tooltip="Encodes variable size integer into bytes.">encodeVarLenInt</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes,<sp/>uint32_t<sp/>offset,<sp/><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/>varInt)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(bytes<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(offset<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(&amp;varInt<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(varInt.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1aa97aa7ca8177b767d78d5f85a00a00c9" kindref="member" tooltip="sets Byte In ByteArray">setByteInByteArray</ref>(bytes,<sp/>offset,<sp/>(uint8_t)<sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1aa97aa7ca8177b767d78d5f85a00a00c9" kindref="member" tooltip="sets Byte In ByteArray">setByteInByteArray</ref>(bytes,<sp/>offset,<sp/>253);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1aef95198f4933d68abf41255b67107b28" kindref="member" tooltip="writes Integer_16 as Little-Endian Into ByteArray">writeInt16AsLittleEndianIntoByteArray</ref>(bytes,<sp/>offset<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint16_t)<sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1aa97aa7ca8177b767d78d5f85a00a00c9" kindref="member" tooltip="sets Byte In ByteArray">setByteInByteArray</ref>(bytes,<sp/>offset,<sp/>254);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1ab7e0f883b2d3ff4d4b253f4257f6916a" kindref="member" tooltip="writes Integer_32 as Little-Endian Into ByteArray">writeInt32AsLittleEndianIntoByteArray</ref>(bytes,<sp/>offset<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)<sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>9:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1aa97aa7ca8177b767d78d5f85a00a00c9" kindref="member" tooltip="sets Byte In ByteArray">setByteInByteArray</ref>(bytes,<sp/>offset,<sp/>255);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_byte_array_8c_1a7bed1ea7fa0945a98bc4548d72236446" kindref="member" tooltip="writes Integer_64 as Little-Endian Into ByteArray">writeInt64AsLittleEndianIntoByteArray</ref>(bytes,<sp/>offset<sp/>+<sp/>1,<sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_var_len_int_8h_1a784e8aad4e7aead2119ede96096f33a9" refkind="member"><highlight class="normal"><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/><ref refid="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" kindref="member" tooltip="Returns a variable integer from an unsigned 64 bit integer.">createVarLenIntFromUInt64</ref>(uint64_t<sp/>integer)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(integer<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_var_len_int" kindref="compound" tooltip="Variable length integer specified in Bitcoin protocol.">VarLenInt</ref><sp/>varInt;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref><sp/>=<sp/>integer;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt.<ref refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" kindref="member">storageSize</ref><sp/>=<sp/><ref refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" kindref="member" tooltip="Returns the variable integer byte size of a 64 bit integer.">getSizeOfVarLenInt</ref>(integer);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>varInt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_var_len_int_8h_1a9a5568c05dc89004c60b0a1679b38ba6" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" kindref="member" tooltip="Returns the variable integer byte size of a 64 bit integer.">getSizeOfVarLenInt</ref>(uint64_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(value<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&lt;<sp/>253)<sp/>{<sp/></highlight><highlight class="comment">/*TODO<sp/>replace<sp/>all<sp/>these<sp/>figures<sp/>with<sp/>constants*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&lt;<sp/>65536)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>3;<sp/></highlight><highlight class="comment">/*<sp/>1<sp/>marker<sp/>+<sp/>2<sp/>data<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&lt;<sp/>4294967296)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>5;<sp/></highlight><highlight class="comment">/*1<sp/>marker<sp/>+<sp/>4<sp/>data<sp/>bytes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>9;<sp/></highlight><highlight class="comment">/*<sp/>1<sp/>marker<sp/>+<sp/>8<sp/>data<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/VariableLengthInteger/VarLenInt.c"/>
+  </compounddef>
+</doxygen>

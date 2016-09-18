@@ -1,0 +1,121 @@
+.TH "src/MerkleNode/MerkleNode.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/MerkleNode/MerkleNode.h \- 
+.PP
+A structure for a node in a merkle tree.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '../Object/ByteArray.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMerkleNode\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBMerkleNode\fP \fBMerkleNode\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMerkleNode\fP * \fBBuildMerkleTree\fP (\fBByteArray\fP **hashes, uint32_t numHashes)"
+.br
+.RI "\fIBuilds a Merkle tree from a list of hashes. In cases of duplication, 'left' and 'right' may refer to the same node. \fP"
+.ti -1c
+.RI "void \fBFreeMerkleTree\fP (\fBMerkleNode\fP *root)"
+.br
+.RI "\fIFrees a merkle tree from a given root. \fP"
+.ti -1c
+.RI "\fBMerkleNode\fP * \fBMerkleTreeGetLevel\fP (\fBMerkleNode\fP *root, uint8_t level)"
+.br
+.RI "\fIGets a list of hashes for a level in a merkle tree. If the merkle tree's deepest level is smaller than specified by 'level', the lowest level in the tree is returned. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure for a node in a merkle tree. 
+
+
+.PP
+Definition in file \fBMerkleNode.h\fP.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBMerkleNode\fP \fBMerkleNode\fP"
+.PP
+Definition at line 20 of file MerkleNode.h.
+.SH "Function Documentation"
+.PP 
+.SS "\fBMerkleNode\fP* BuildMerkleTree (\fBByteArray\fP **hashes, uint32_tnumHashes)"
+.PP
+Builds a Merkle tree from a list of hashes. In cases of duplication, 'left' and 'right' may refer to the same node. \fBParameters:\fP
+.RS 4
+\fIhashes\fP A list of hashes as ByteArrays to build the tree from. 
+.br
+\fInumHashes\fP The number of hashes. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The root \fBMerkleNode\fP for the tree. 
+.RE
+.PP
+
+.PP
+< Nodes on a level of the tree for processing.
+.PP
+< Create nodes from the \fBByteArray\fP hashes
+.PP
+< Double SHA256
+.PP
+< Finished level
+.PP
+< The number of hashes was odd. Increment to even
+.PP
+< Move to next level
+.PP
+< Done, got the single root hash 
+.PP
+Definition at line 15 of file MerkleNode.c.
+.SS "void FreeMerkleTree (\fBMerkleNode\fP *root)"
+.PP
+Frees a merkle tree from a given root. \fBParameters:\fP
+.RS 4
+\fIroot\fP The merkle tree root node. 
+.RE
+.PP
+
+.PP
+< Free all levels along the far left 
+.PP
+Definition at line 75 of file MerkleNode.c.
+.SS "\fBMerkleNode\fP* MerkleTreeGetLevel (\fBMerkleNode\fP *root, uint8_tlevel)"
+.PP
+Gets a list of hashes for a level in a merkle tree. If the merkle tree's deepest level is smaller than specified by 'level', the lowest level in the tree is returned. \fBParameters:\fP
+.RS 4
+\fIroot\fP The merkle tree root node. 
+.br
+\fIlevel\fP The level to retrieve. Pass in a high number (use 255) to get the deepest level. Level 0 corresponds to the root which was passed in. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+With nodes left to right, the memory block for this level of the merkle tree. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file MerkleNode.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

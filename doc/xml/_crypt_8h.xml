@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_crypt_8h" kind="file">
+    <compoundname>Crypt.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="yes">../../Constants.h</includes>
+    <includedby refid="_merkle_node_8c" local="yes">src/MerkleNode/MerkleNode.c</includedby>
+    <includedby refid="_crypt_8c" local="yes">src/Utils/Cryptography/Crypt.c</includedby>
+    <incdepgraph>
+      <node id="1168">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1167">
+        <label>stdint.h</label>
+      </node>
+      <node id="1169">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="1166">
+        <label>src/Utils/Cryptography/Crypt.h</label>
+        <link refid="Crypt.h"/>
+        <childnode refid="1167" relation="include">
+        </childnode>
+        <childnode refid="1168" relation="include">
+        </childnode>
+        <childnode refid="1169" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1171">
+        <label>src/MerkleNode/MerkleNode.c</label>
+        <link refid="_merkle_node_8c"/>
+      </node>
+      <node id="1172">
+        <label>src/Utils/Cryptography/Crypt.c</label>
+        <link refid="_crypt_8c"/>
+      </node>
+      <node id="1170">
+        <label>src/Utils/Cryptography/Crypt.h</label>
+        <link refid="Crypt.h"/>
+        <childnode refid="1171" relation="include">
+        </childnode>
+        <childnode refid="1172" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_crypt_8h_1ac8d904e99d5833b896736a76b27da0b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sha256</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>Sha256</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-256 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 32-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.h" line="22" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="42" bodyend="49"/>
+        <referencedby refid="_merkle_node_8h_1a211a27939356415dc6fb21842966706e" compoundref="_merkle_node_8c" startline="15" endline="73">BuildMerkleTree</referencedby>
+        <referencedby refid="_block_8h_1a1dd38c9d32f6f6984930141d5ce01fba" compoundref="_block_8c" startline="232" endline="238">calculateBlockHash</referencedby>
+        <referencedby refid="_transaction_8h_1ae53ed930910256b4620da39ebdcccdb5" compoundref="_transaction_8c" startline="191" endline="200">calculateTransactionHash</referencedby>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+        <referencedby refid="_base58_8h_1a0e3eca914bcab6d9c960347ed24ca8d3" compoundref="_base58_8c" startline="282" endline="294">GetCheckSum</referencedby>
+        <referencedby refid="_transaction_8h_1afe08b91a59f175e55d9ca049e46749c2" compoundref="_transaction_8c" startline="536" endline="680">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_address_8h_1a9eb1202db1cb15c5f431b96e3951308c" compoundref="_address_8c" startline="47" endline="68">InitAddressFromRIPEMD160Hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_crypt_8h_1afc4c3de28fcd3d122636259977f3029c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ripemd160</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>Ripemd160</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>RIPEMD-160 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 20-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="51" bodyend="58"/>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_crypt_8h_1a5a496b8ef882d805eccedfa308f29a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sha160</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>Sha160</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-1 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 10-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.h" line="36" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="34" bodyend="41"/>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_crypt_8h_1ad2f883546aec1d35706944513146c05a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ECDSAVerify</definition>
+        <argsstring>(uint8_t *signature, uint8_t signatureLen, uint8_t *hash, const uint8_t *pubKey, uint8_t keyLen)</argsstring>
+        <name>ECDSAVerify</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>signatureLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>pubKey</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BER encoded signature bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the signature bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32 byte hash for checking the signature against. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pubKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public key bytes to check this signature with. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the public key bytes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the signature is valid and false if invalid. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.h" line="46" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.c" bodystart="60" bodyend="73"/>
+        <referencedby refid="_script_8h_1acd97590583a26ab99944ec9e2217d879" compoundref="_script_8c" startline="274" endline="1300">executeScript</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Crypt.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>05/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CRYPT_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CRYPT_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" kindref="member" tooltip="SHA-256 cryptographic hash function.">Sha256</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_crypt_8c_1a11ffcd5481255317891e36827279bd42" kindref="member" tooltip="RIPEMD-160 cryptographic hash function.">Ripemd160</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_crypt_8c_1a65ada373e8917a80136b5756d3e55932" kindref="member" tooltip="SHA-1 cryptographic hash function.">Sha160</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_crypt_8c_1ad2f883546aec1d35706944513146c05a" kindref="member" tooltip="Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL ver...">ECDSAVerify</ref>(uint8_t<sp/>*<sp/>signature,<sp/>uint8_t<sp/>signatureLen,<sp/>uint8_t<sp/>*<sp/>hash,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/>pubKey,<sp/>uint8_t<sp/>keyLen);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CRYPT_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/Crypt.h"/>
+  </compounddef>
+</doxygen>

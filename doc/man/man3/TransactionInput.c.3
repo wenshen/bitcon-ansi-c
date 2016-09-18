@@ -1,0 +1,200 @@
+.TH "src/Object/Message/TransactionInput.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/TransactionInput.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'TransactionInput.h'\fP
+.br
+\fC#include '../../Utils/VariableLengthInteger/VarLenInt.h'\fP
+.br
+\fC#include 'assert.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransactionInput\fP * \fBcreateNewTransactionInput\fP (\fBScript\fP *script, uint32_t sequence, \fBByteArray\fP *prevOutputHash, uint32_t prevOutputIndex, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransactionInput\fP object with no inputs or outputs. \fP"
+.ti -1c
+.RI "\fBTransactionInput\fP * \fBcreateNewTransactionInputFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBTransactionInput\fP from byteArray. \fP"
+.ti -1c
+.RI "int \fBinitializeTransactionInput\fP (\fBTransactionInput\fP *self, \fBScript\fP *script, uint32_t sequence, \fBByteArray\fP *prevOutputHash, uint32_t prevOutputIndex, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBTransactionInput\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializeTransactionInputFromData\fP (\fBTransactionInput\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a new \fBTransactionInput\fP object from the \fBByteArray\fP. \fP"
+.ti -1c
+.RI "\fBTransactionInput\fP * \fBgetTransactionInput\fP (void *self)"
+.br
+.RI "\fIbrief Gets a \fBTransactionInput\fP from another object. Use this to avoid casts \fP"
+.ti -1c
+.RI "void \fBdestroyTransactionInput\fP (void *txIn)"
+.br
+.RI "\fIFrees a \fBTransactionInput\fP object. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeTransactionInput\fP (\fBTransactionInput\fP *self)"
+.br
+.RI "\fISerializes a \fBTransactionInput\fP to byte data. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeTransactionInput\fP (\fBTransactionInput\fP *self)"
+.br
+.RI "\fIdeserializes a \fBTransactionInput\fP so that it can be used as an object \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "createNewTransactionInput (\fBScript\fP *script, uint32_tsequence, \fBByteArray\fP *prevOutputHash, uint32_tprevOutputIndex, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransactionInput\fP object with no inputs or outputs. \fBParameters:\fP
+.RS 4
+\fIscript\fP Computational Script for confirming transaction authorization 
+.br
+\fIsequence\fP \fBTransaction\fP version as defined by the sender. Intended for 'replacement' of transactions when information is updated before inclusion into a block. 
+.br
+\fIprevOutputHash.\fP The hash of the previous transaction. 
+.br
+\fIprevOutputIndex\fP Index of the previous transaction 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+new \fBTransactionInput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file TransactionInput.c.
+.SS "createNewTransactionInputFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBTransactionInput\fP from byteArray. \fBParameters:\fP
+.RS 4
+\fIdata.\fP Raw data to create a transactionInput 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+new \fBTransactionInput\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file TransactionInput.c.
+.SS "deserializeTransactionInput (\fBTransactionInput\fP *self)"
+.PP
+deserializes a \fBTransactionInput\fP so that it can be used as an object \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 177 of file TransactionInput.c.
+.SS "destroyTransactionInput (void *self)"
+.PP
+Frees a \fBTransactionInput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP the \fBTransactionInput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file TransactionInput.c.
+.SS "getTransactionInput (void *self)"
+.PP
+brief Gets a \fBTransactionInput\fP from another object. Use this to avoid casts \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBTransactionInput\fP object 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file TransactionInput.c.
+.SS "initializeTransactionInput (\fBTransactionInput\fP *self, \fBScript\fP *script, uint32_tsequence, \fBByteArray\fP *prevOutHash, uint32_tprevOutIndex, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBTransactionInput\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object 
+.br
+\fIscript\fP Computational Script for confirming transaction authorization 
+.br
+\fIsequence\fP \fBTransaction\fP version as defined by the sender. Intended for 'replacement' of transactions when information is updated before inclusion into a block. 
+.br
+\fIprevOutputHash.\fP The hash of the previous transaction. 
+.br
+\fIprevOutputIndex\fP Index of the previous transaction 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE on success, FALSE on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file TransactionInput.c.
+.SS "initializeTransactionInputFromData (\fBTransactionInput\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a new \fBTransactionInput\fP object from the \fBByteArray\fP. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBTransactionInput\fP object to initialize 
+.br
+\fIdata\fP The byte data. 
+.br
+\fIonErrorReceived\fP Error handler 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file TransactionInput.c.
+.SS "serializeTransactionInput (\fBTransactionInput\fP *self)"
+.PP
+Serializes a \fBTransactionInput\fP to byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP the \fBTransactionInput\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the length written on success, 0 on failure 
+.RE
+.PP
+
+.PP
+Definition at line 134 of file TransactionInput.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

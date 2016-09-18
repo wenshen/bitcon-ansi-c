@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_byte_array_8h.html" title="Object/ByteArray.h" alt="" coords="360,83,523,112"/>
+<area shape="rect" id="node25" href="$_m_i_object_8c.html" title="Object/Object.c" alt="" coords="547,83,688,112"/>
+<area shape="rect" id="node5" href="$_m_i_byte_array_8c.html" title="Object/ByteArray.c" alt="" coords="273,160,436,189"/>
+<area shape="rect" id="node7" href="$_m_i_script_8h.html" title="Object/Script.h" alt="" coords="460,160,599,189"/>
+<area shape="rect" id="node9" href="$_m_i_transaction_input_8h.html" title="Object/Message/TransactionInput.h" alt="" coords="276,237,551,267"/>
+<area shape="rect" id="node23" href="$_m_i_script_8c.html" title="Object/Script.c" alt="" coords="575,237,713,267"/>
+<area shape="rect" id="node11" href="$_m_i_transaction_8h.html" title="Object/Message/Transaction.h" alt="" coords="131,315,376,344"/>
+<area shape="rect" id="node18" href="$_m_i_transaction_8c.html" title="Object/Message/Transaction.c" alt="" coords="291,392,536,421"/>
+<area shape="rect" id="node21" href="$_m_i_transaction_input_8c.html" title="Object/Message/TransactionInput.c" alt="" coords="451,315,725,344"/>
+<area shape="rect" id="node13" href="$_m_i_block_8h.html" title="Object/Message/Block.h" alt="" coords="5,392,216,421"/>
+<area shape="rect" id="node15" href="$_m_i_block_8c.html" title="Object/Message/Block.c" alt="" coords="76,469,287,499"/>
+</map>

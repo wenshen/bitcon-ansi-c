@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_block_8h.html#a9dcdbbf01ad57512119aa46013c7f92e" title="Deserialize the Block." alt="" coords="240,32,357,61"/>
+<area shape="rect" id="node5" href="$_block_headers_8h.html#ace10b6ab479717f0540e5a5528ca3952" title="Deserializes a BlockHeaders so that it can be used as an object." alt="" coords="424,5,589,35"/>
+<area shape="rect" id="node7" href="$_block_8h.html#af1b6c7c59cf5fd4c7d9f94a6179dcb43" title="initBlockWithGenesisBlockInfo" alt="" coords="405,59,608,88"/>
+<area shape="rect" id="node9" href="$_block_8c.html#a9f12323a1c19b0686bc1b64868a97dc9" title="Create a new Block from a default Block." alt="" coords="657,59,881,88"/>
+</map>

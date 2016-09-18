@@ -1,0 +1,98 @@
+\hypertarget{_m_i_script_8h}{
+\section{Object/Script.h File Reference}
+\label{_m_i_script_8h}\index{Object/Script.h@{Object/Script.h}}
+}
+{\ttfamily \#include \char`\"{}ByteArray.h\char`\"{}}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+Include dependency graph for Script.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{_m_i_script_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_script_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_i_script_byte_vector}{ScriptByteVector}
+\begin{DoxyCompactList}\small\item\em Structure for a byte vector; Byte vectors are interpreted as little-\/endian variable-\/length integers with the most significant bit determining the sign of the integer. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_m_i_script_stack}{ScriptStack}
+\begin{DoxyCompactList}\small\item\em Structure that holds byte vector data in a stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_m_i_byte_array}{ByteArray} \hyperlink{_m_i_script_8h_a70fca1132052366fca0cd36877fe5af2}{Script}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_byte_array}{Script} $\ast$ \hyperlink{_m_i_script_8h_aa0a40e0353c30a695a1f335b4425934b}{createNewScriptFromReference} (\hyperlink{struct_m_i_byte_array}{Script} $\ast$program, uint32\_\-t offset, uint32\_\-t len)
+\begin{DoxyCompactList}\small\item\em Creates a new Script object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_m_i_script_8h_a70fca1132052366fca0cd36877fe5af2}{
+\index{Script.h@{Script.h}!Script@{Script}}
+\index{Script@{Script}!Script.h@{Script.h}}
+\subsubsection[{Script}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ByteArray} {\bf Script}}}
+\label{_m_i_script_8h_a70fca1132052366fca0cd36877fe5af2}
+
+
+Definition at line 39 of file Script.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_script_8h_aa0a40e0353c30a695a1f335b4425934b}{
+\index{Script.h@{Script.h}!createNewScriptFromReference@{createNewScriptFromReference}}
+\index{createNewScriptFromReference@{createNewScriptFromReference}!Script.h@{Script.h}}
+\subsubsection[{createNewScriptFromReference}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Script}$\ast$ createNewScriptFromReference (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{program, }
+\item[{uint32\_\-t}]{offset, }
+\item[{uint32\_\-t}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_script_8h_aa0a40e0353c30a695a1f335b4425934b}
+
+
+Creates a new Script object. 
+
+A script is a array of bytes \begin{DoxyReturn}{Returns}
+A new Script object.
+\end{DoxyReturn}
+Constructor 
+
+Definition at line 15 of file Script.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_script_8h_aa0a40e0353c30a695a1f335b4425934b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_script_8h_aa0a40e0353c30a695a1f335b4425934b_icgraph}
+\end{center}
+\end{figure}
+
+

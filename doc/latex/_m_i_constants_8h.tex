@@ -1,0 +1,451 @@
+\hypertarget{_m_i_constants_8h}{
+\section{Constants.h File Reference}
+\label{_m_i_constants_8h}\index{Constants.h@{Constants.h}}
+}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{_m_i_constants_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m_i_constants_8h_a9d37d43ac2717b06ef7120784465e56f}{RETURN\_\-SUCCESS}~1;
+\item 
+\#define \hyperlink{_m_i_constants_8h_a2c984349b6e2ee2e658b9cf9ef2aa2fb}{RETURN\_\-FAILURE}~0;
+\item 
+\#define \hyperlink{_m_i_constants_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}~0
+\item 
+\#define \hyperlink{_m_i_constants_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}~1
+\item 
+\#define \hyperlink{_m_i_constants_8h_aff8cb6037213b450ac1acd6cd4208123}{BYTE\_\-LENGTH\_\-32}~32;
+\item 
+\#define \hyperlink{_m_i_constants_8h_a8d61b7250c0b9c7bf775ae1d740afc7d}{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}~0xFFFFFFFFFFFFFFFF
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212a}{MessageType} \{ \par
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa4095a453ca9367c847a508af015643ff}{\_\-MESSAGE\_\-TYPE\_\-VERSION} =  1, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa14c2f6a6495ced25bb4a1c62c02e2d40}{\_\-MESSAGE\_\-TYPE\_\-VERACK} =  2, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa854b4837b7066fea804007f93ea54368}{\_\-MESSAGE\_\-TYPE\_\-ADDR} =  4, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa03599dc2e24e50424f96179709232fe4}{\_\-MESSAGE\_\-TYPE\_\-INV} =  8, 
+\par
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa5e15c765bab079269b16e3aaa786f74d}{\_\-MESSAGE\_\-TYPE\_\-GETDATA} =  16, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa2504073eb1ccc1b6ec9c2e6c361e30e0}{\_\-MESSAGE\_\-TYPE\_\-GETBLOCKS} =  32, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aae87fda65484c579d179bb5bad130d490}{\_\-MESSAGE\_\-TYPE\_\-GETHEADERS} =  64, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa206e68332cfb9efac3637ac1eb97f6c0}{\_\-MESSAGE\_\-TYPE\_\-TX} =  128, 
+\par
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa1bacb66035c59a623efc3a98dc773d4e}{\_\-MESSAGE\_\-TYPE\_\-BLOCK} =  256, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa1132c2617847f9bbee15597411743429}{\_\-MESSAGE\_\-TYPE\_\-HEADERS} =  512, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa2224f2dddf22c159039584c4be0b74d6}{\_\-MESSAGE\_\-TYPE\_\-GETADDR} =  1024, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aafd0e5973f822d558f985ca660c5cfba9}{\_\-MESSAGE\_\-TYPE\_\-PING} =  2048, 
+\par
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa9aec9dc8ed1b11b051eb705a22181c1d}{\_\-MESSAGE\_\-TYPE\_\-PONG} =  4096, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa7c548a76ceac9f2a0adf64a2d3aae351}{\_\-MESSAGE\_\-TYPE\_\-ALERT} =  8192, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa560aa5f89b83b303069f63a106b55351}{\_\-MESSAGE\_\-TYPE\_\-ALT} =  16384, 
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aabe4d7665b0f6158c681f5082b3d0d51a}{\_\-MESSAGE\_\-TYPE\_\-ADDRMAN} =  32768, 
+\par
+\hyperlink{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa69475b3a592206e27cf9a74ed352264c}{\_\-MESSAGE\_\-TYPE\_\-CHAINDESC} =  65536
+ \}
+\item 
+enum \hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} \{ \par
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a39fb033ffc51a41d3f98c367109aab78}{\_\-ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a749f5681c97b1cce11a734e8641246fe}{\_\-ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9ba9b116f4dc5e0acfcdcfabb73d8a2b}{\_\-ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968abd324fa69626e40713b7c4e1e6eef9f9}{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}, 
+\par
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a92f5f1cd8d49eb6264885735124551cf}{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968aea18ededd7bee318c95d90cff53fffba}{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac8ae144568e5761507c7d026a2531875}{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a912356cbe14233efbac56e230bfd15ce}{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}, 
+\par
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a559cac521b9542785f191936404cfd13}{\_\-ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9e46b3f8271ba6a6855ec35c41d79e6d}{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac0a94aa0ce12eeec4709590117a06db7}{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a705f025e78042406ea8b25c6e574ed94}{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}, 
+\par
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a83536036db8250da8add01626c09e3c3}{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968aad07e089de21518dc2be53ebb62164f2}{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9c7d1aae44c47d1c6c15100686493fe8}{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a14798ebfb95195d951f52de901ae0e71}{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}, 
+\par
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f}{\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}, 
+\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac44c4a273612af5ceabd09df473706f4}{\_\-ERROR\_\-INIT\_\-FAIL}
+ \}
+\item 
+enum \hyperlink{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8}{Compare} \{ \hyperlink{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8a5bd7ffe7eb88cafd531e1b4eeaee56ea}{\_\-COMPARE\_\-MORE\_\-THAN} =  1, 
+\hyperlink{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8a6023c6780bfc5d30ba1628cced47df69}{\_\-COMPARE\_\-EQUAL} =  0, 
+\hyperlink{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8abe9a5c2747c3e1f491caa400cd877b03}{\_\-COMPARE\_\-LESS\_\-THAN} =  -\/1
+ \}
+\item 
+enum \hyperlink{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0}{TransactionHashStatus} \{ \hyperlink{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0a9f46366755423a053481edc37bd853d0}{TX\_\-HASH\_\-GOOD}, 
+\hyperlink{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0ab8cb7847f95d8209bd64c5bd4cdce830}{TX\_\-HASH\_\-BAD}, 
+\hyperlink{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0ae372182e92ec6fd8774695846b3d8845}{TX\_\-HASH\_\-FAIL}
+ \}
+\item 
+enum \hyperlink{_m_i_constants_8h_a4fd54932b907311989c5752c6942742a}{SignatureType} \{ \hyperlink{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aaceb4bd815d94047d521329aaa4a3718b}{\_\-SIGHASH\_\-ALL} =  0x00000001, 
+\hyperlink{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa4eb90e2ee630ba32437b0cbbe95b9ede}{\_\-SIGHASH\_\-NONE} =  0x00000002, 
+\hyperlink{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa032938cf4fbf7498b6f85f5659bc28c5}{\_\-SIGHASH\_\-SINGLE} =  0x00000003, 
+\hyperlink{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa4cbb6f8e9c33007b0dd86139c5444d63}{\_\-SIGHASH\_\-ANYONECANPAY} =  0x00000080
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_m_i_constants_8h_aff8cb6037213b450ac1acd6cd4208123}{
+\index{Constants.h@{Constants.h}!BYTE\_\-LENGTH\_\-32@{BYTE\_\-LENGTH\_\-32}}
+\index{BYTE\_\-LENGTH\_\-32@{BYTE\_\-LENGTH\_\-32}!Constants.h@{Constants.h}}
+\subsubsection[{BYTE\_\-LENGTH\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-LENGTH\_\-32~32;}}
+\label{_m_i_constants_8h_aff8cb6037213b450ac1acd6cd4208123}
+
+
+Definition at line 68 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_aa93f0eb578d23995850d61f7d61c55c1}{
+\index{Constants.h@{Constants.h}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!Constants.h@{Constants.h}}
+\subsubsection[{FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FALSE~0}}
+\label{_m_i_constants_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+Definition at line 65 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_a8d61b7250c0b9c7bf775ae1d740afc7d}{
+\index{Constants.h@{Constants.h}!\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE@{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}}
+\index{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE@{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}!Constants.h@{Constants.h}}
+\subsubsection[{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE~0xFFFFFFFFFFFFFFFF}}
+\label{_m_i_constants_8h_a8d61b7250c0b9c7bf775ae1d740afc7d}
+
+
+Definition at line 69 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_a2c984349b6e2ee2e658b9cf9ef2aa2fb}{
+\index{Constants.h@{Constants.h}!RETURN\_\-FAILURE@{RETURN\_\-FAILURE}}
+\index{RETURN\_\-FAILURE@{RETURN\_\-FAILURE}!Constants.h@{Constants.h}}
+\subsubsection[{RETURN\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define RETURN\_\-FAILURE~0;}}
+\label{_m_i_constants_8h_a2c984349b6e2ee2e658b9cf9ef2aa2fb}
+
+
+Definition at line 64 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_a9d37d43ac2717b06ef7120784465e56f}{
+\index{Constants.h@{Constants.h}!RETURN\_\-SUCCESS@{RETURN\_\-SUCCESS}}
+\index{RETURN\_\-SUCCESS@{RETURN\_\-SUCCESS}!Constants.h@{Constants.h}}
+\subsubsection[{RETURN\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define RETURN\_\-SUCCESS~1;}}
+\label{_m_i_constants_8h_a9d37d43ac2717b06ef7120784465e56f}
+
+
+Definition at line 63 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{
+\index{Constants.h@{Constants.h}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!Constants.h@{Constants.h}}
+\subsubsection[{TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define TRUE~1}}
+\label{_m_i_constants_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+Definition at line 66 of file Constants.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8}{
+\index{Constants.h@{Constants.h}!Compare@{Compare}}
+\index{Compare@{Compare}!Constants.h@{Constants.h}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Compare}}}
+\label{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{\_\-COMPARE\_\-MORE\_\-THAN@{\_\-COMPARE\_\-MORE\_\-THAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-COMPARE\_\-MORE\_\-THAN@{\_\-COMPARE\_\-MORE\_\-THAN}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8a5bd7ffe7eb88cafd531e1b4eeaee56ea}{
+\_\-COMPARE\_\-MORE\_\-THAN}
+\label{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8a5bd7ffe7eb88cafd531e1b4eeaee56ea}
+}]\index{\_\-COMPARE\_\-EQUAL@{\_\-COMPARE\_\-EQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-COMPARE\_\-EQUAL@{\_\-COMPARE\_\-EQUAL}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8a6023c6780bfc5d30ba1628cced47df69}{
+\_\-COMPARE\_\-EQUAL}
+\label{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8a6023c6780bfc5d30ba1628cced47df69}
+}]\index{\_\-COMPARE\_\-LESS\_\-THAN@{\_\-COMPARE\_\-LESS\_\-THAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-COMPARE\_\-LESS\_\-THAN@{\_\-COMPARE\_\-LESS\_\-THAN}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8abe9a5c2747c3e1f491caa400cd877b03}{
+\_\-COMPARE\_\-LESS\_\-THAN}
+\label{_m_i_constants_8h_a781d5143d586867ef558b0d8b3e889b8abe9a5c2747c3e1f491caa400cd877b03}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 56 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{
+\index{Constants.h@{Constants.h}!Error@{Error}}
+\index{Error@{Error}!Constants.h@{Constants.h}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Error}}}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{\_\-ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE@{\_\-ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE@{\_\-ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a39fb033ffc51a41d3f98c367109aab78}{
+\_\-ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a39fb033ffc51a41d3f98c367109aab78}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION@{\_\-ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION@{\_\-ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a749f5681c97b1cce11a734e8641246fe}{
+\_\-ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a749f5681c97b1cce11a734e8641246fe}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION@{\_\-ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION@{\_\-ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9ba9b116f4dc5e0acfcdcfabb73d8a2b}{
+\_\-ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9ba9b116f4dc5e0acfcdcfabb73d8a2b}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968abd324fa69626e40713b7c4e1e6eef9f9}{
+\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968abd324fa69626e40713b7c4e1e6eef9f9}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a92f5f1cd8d49eb6264885735124551cf}{
+\_\-ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a92f5f1cd8d49eb6264885735124551cf}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968aea18ededd7bee318c95d90cff53fffba}{
+\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968aea18ededd7bee318c95d90cff53fffba}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES@{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac8ae144568e5761507c7d026a2531875}{
+\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac8ae144568e5761507c7d026a2531875}
+}]\index{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA@{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA@{\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a912356cbe14233efbac56e230bfd15ce}{
+\_\-ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a912356cbe14233efbac56e230bfd15ce}
+}]\index{\_\-ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH@{\_\-ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH@{\_\-ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a559cac521b9542785f191936404cfd13}{
+\_\-ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a559cac521b9542785f191936404cfd13}
+}]\index{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT@{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT@{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9e46b3f8271ba6a6855ec35c41d79e6d}{
+\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9e46b3f8271ba6a6855ec35c41d79e6d}
+}]\index{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID@{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID@{\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac0a94aa0ce12eeec4709590117a06db7}{
+\_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac0a94aa0ce12eeec4709590117a06db7}
+}]\index{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS@{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS@{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a705f025e78042406ea8b25c6e574ed94}{
+\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a705f025e78042406ea8b25c6e574ed94}
+}]\index{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS@{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS@{\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a83536036db8250da8add01626c09e3c3}{
+\_\-ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a83536036db8250da8add01626c09e3c3}
+}]\index{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL@{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL@{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968aad07e089de21518dc2be53ebb62164f2}{
+\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968aad07e089de21518dc2be53ebb62164f2}
+}]\index{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL@{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL@{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9c7d1aae44c47d1c6c15100686493fe8}{
+\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a9c7d1aae44c47d1c6c15100686493fe8}
+}]\index{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE@{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE@{\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a14798ebfb95195d951f52de901ae0e71}{
+\_\-ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968a14798ebfb95195d951f52de901ae0e71}
+}]\index{\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY@{\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY@{\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f}{
+\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f}
+}]\index{\_\-ERROR\_\-INIT\_\-FAIL@{\_\-ERROR\_\-INIT\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-ERROR\_\-INIT\_\-FAIL@{\_\-ERROR\_\-INIT\_\-FAIL}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac44c4a273612af5ceabd09df473706f4}{
+\_\-ERROR\_\-INIT\_\-FAIL}
+\label{_m_i_constants_8h_a78789cd8e7333545dd73768531261968ac44c4a273612af5ceabd09df473706f4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 35 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212a}{
+\index{Constants.h@{Constants.h}!MessageType@{MessageType}}
+\index{MessageType@{MessageType}!Constants.h@{Constants.h}}
+\subsubsection[{MessageType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MessageType}}}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212a}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{\_\-MESSAGE\_\-TYPE\_\-VERSION@{\_\-MESSAGE\_\-TYPE\_\-VERSION}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-VERSION@{\_\-MESSAGE\_\-TYPE\_\-VERSION}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa4095a453ca9367c847a508af015643ff}{
+\_\-MESSAGE\_\-TYPE\_\-VERSION}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa4095a453ca9367c847a508af015643ff}
+}]\begin{DoxySeeAlso}{See also}
+Version.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-VERACK@{\_\-MESSAGE\_\-TYPE\_\-VERACK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-VERACK@{\_\-MESSAGE\_\-TYPE\_\-VERACK}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa14c2f6a6495ced25bb4a1c62c02e2d40}{
+\_\-MESSAGE\_\-TYPE\_\-VERACK}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa14c2f6a6495ced25bb4a1c62c02e2d40}
+}]Acknowledgement and acceptance of a peer's version and connection. \index{\_\-MESSAGE\_\-TYPE\_\-ADDR@{\_\-MESSAGE\_\-TYPE\_\-ADDR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-ADDR@{\_\-MESSAGE\_\-TYPE\_\-ADDR}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa854b4837b7066fea804007f93ea54368}{
+\_\-MESSAGE\_\-TYPE\_\-ADDR}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa854b4837b7066fea804007f93ea54368}
+}]\begin{DoxySeeAlso}{See also}
+AddressBroadcast.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-INV@{\_\-MESSAGE\_\-TYPE\_\-INV}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-INV@{\_\-MESSAGE\_\-TYPE\_\-INV}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa03599dc2e24e50424f96179709232fe4}{
+\_\-MESSAGE\_\-TYPE\_\-INV}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa03599dc2e24e50424f96179709232fe4}
+}]\begin{DoxySeeAlso}{See also}
+InventoryBroadcast.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-GETDATA@{\_\-MESSAGE\_\-TYPE\_\-GETDATA}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-GETDATA@{\_\-MESSAGE\_\-TYPE\_\-GETDATA}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa5e15c765bab079269b16e3aaa786f74d}{
+\_\-MESSAGE\_\-TYPE\_\-GETDATA}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa5e15c765bab079269b16e3aaa786f74d}
+}]\begin{DoxySeeAlso}{See also}
+InventoryBroadcast.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-GETBLOCKS@{\_\-MESSAGE\_\-TYPE\_\-GETBLOCKS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-GETBLOCKS@{\_\-MESSAGE\_\-TYPE\_\-GETBLOCKS}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa2504073eb1ccc1b6ec9c2e6c361e30e0}{
+\_\-MESSAGE\_\-TYPE\_\-GETBLOCKS}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa2504073eb1ccc1b6ec9c2e6c361e30e0}
+}]\begin{DoxySeeAlso}{See also}
+GetBlocks.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-GETHEADERS@{\_\-MESSAGE\_\-TYPE\_\-GETHEADERS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-GETHEADERS@{\_\-MESSAGE\_\-TYPE\_\-GETHEADERS}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aae87fda65484c579d179bb5bad130d490}{
+\_\-MESSAGE\_\-TYPE\_\-GETHEADERS}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aae87fda65484c579d179bb5bad130d490}
+}]\begin{DoxySeeAlso}{See also}
+GetBlocks.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-TX@{\_\-MESSAGE\_\-TYPE\_\-TX}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-TX@{\_\-MESSAGE\_\-TYPE\_\-TX}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa206e68332cfb9efac3637ac1eb97f6c0}{
+\_\-MESSAGE\_\-TYPE\_\-TX}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa206e68332cfb9efac3637ac1eb97f6c0}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_m_i_transaction_8h}{Transaction.h} 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-BLOCK@{\_\-MESSAGE\_\-TYPE\_\-BLOCK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-BLOCK@{\_\-MESSAGE\_\-TYPE\_\-BLOCK}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa1bacb66035c59a623efc3a98dc773d4e}{
+\_\-MESSAGE\_\-TYPE\_\-BLOCK}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa1bacb66035c59a623efc3a98dc773d4e}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_m_i_block_8h}{Block.h} 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-HEADERS@{\_\-MESSAGE\_\-TYPE\_\-HEADERS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-HEADERS@{\_\-MESSAGE\_\-TYPE\_\-HEADERS}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa1132c2617847f9bbee15597411743429}{
+\_\-MESSAGE\_\-TYPE\_\-HEADERS}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa1132c2617847f9bbee15597411743429}
+}]\begin{DoxySeeAlso}{See also}
+BlockHeaders.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-GETADDR@{\_\-MESSAGE\_\-TYPE\_\-GETADDR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-GETADDR@{\_\-MESSAGE\_\-TYPE\_\-GETADDR}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa2224f2dddf22c159039584c4be0b74d6}{
+\_\-MESSAGE\_\-TYPE\_\-GETADDR}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa2224f2dddf22c159039584c4be0b74d6}
+}]Request for \char`\"{}active peers\char`\"{}. bitcoin-\/qt consiers active peers to be those that have sent messages in the last 30 minutes. \index{\_\-MESSAGE\_\-TYPE\_\-PING@{\_\-MESSAGE\_\-TYPE\_\-PING}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-PING@{\_\-MESSAGE\_\-TYPE\_\-PING}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aafd0e5973f822d558f985ca660c5cfba9}{
+\_\-MESSAGE\_\-TYPE\_\-PING}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aafd0e5973f822d558f985ca660c5cfba9}
+}]\begin{DoxySeeAlso}{See also}
+PingPong.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-PONG@{\_\-MESSAGE\_\-TYPE\_\-PONG}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-PONG@{\_\-MESSAGE\_\-TYPE\_\-PONG}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa9aec9dc8ed1b11b051eb705a22181c1d}{
+\_\-MESSAGE\_\-TYPE\_\-PONG}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa9aec9dc8ed1b11b051eb705a22181c1d}
+}]\begin{DoxySeeAlso}{See also}
+PingPong.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-ALERT@{\_\-MESSAGE\_\-TYPE\_\-ALERT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-ALERT@{\_\-MESSAGE\_\-TYPE\_\-ALERT}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa7c548a76ceac9f2a0adf64a2d3aae351}{
+\_\-MESSAGE\_\-TYPE\_\-ALERT}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa7c548a76ceac9f2a0adf64a2d3aae351}
+}]\begin{DoxySeeAlso}{See also}
+Alert.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-ALT@{\_\-MESSAGE\_\-TYPE\_\-ALT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-ALT@{\_\-MESSAGE\_\-TYPE\_\-ALT}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa560aa5f89b83b303069f63a106b55351}{
+\_\-MESSAGE\_\-TYPE\_\-ALT}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa560aa5f89b83b303069f63a106b55351}
+}]The message was defined by \char`\"{}alternativeMessages\char`\"{} in a NetworkCommunicator \index{\_\-MESSAGE\_\-TYPE\_\-ADDRMAN@{\_\-MESSAGE\_\-TYPE\_\-ADDRMAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-ADDRMAN@{\_\-MESSAGE\_\-TYPE\_\-ADDRMAN}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aabe4d7665b0f6158c681f5082b3d0d51a}{
+\_\-MESSAGE\_\-TYPE\_\-ADDRMAN}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aabe4d7665b0f6158c681f5082b3d0d51a}
+}]\begin{DoxySeeAlso}{See also}
+AddressManager.h 
+\end{DoxySeeAlso}
+\index{\_\-MESSAGE\_\-TYPE\_\-CHAINDESC@{\_\-MESSAGE\_\-TYPE\_\-CHAINDESC}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-MESSAGE\_\-TYPE\_\-CHAINDESC@{\_\-MESSAGE\_\-TYPE\_\-CHAINDESC}}\item[{\em 
+\hypertarget{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa69475b3a592206e27cf9a74ed352264c}{
+\_\-MESSAGE\_\-TYPE\_\-CHAINDESC}
+\label{_m_i_constants_8h_aa6ba957da4da60695d0c8ae85975212aa69475b3a592206e27cf9a74ed352264c}
+}]\begin{DoxySeeAlso}{See also}
+ChainDescriptor.h 
+\end{DoxySeeAlso}
+\end{description}
+\end{Desc}
+
+
+
+Definition at line 15 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_a4fd54932b907311989c5752c6942742a}{
+\index{Constants.h@{Constants.h}!SignatureType@{SignatureType}}
+\index{SignatureType@{SignatureType}!Constants.h@{Constants.h}}
+\subsubsection[{SignatureType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf SignatureType}}}
+\label{_m_i_constants_8h_a4fd54932b907311989c5752c6942742a}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{\_\-SIGHASH\_\-ALL@{\_\-SIGHASH\_\-ALL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-SIGHASH\_\-ALL@{\_\-SIGHASH\_\-ALL}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aaceb4bd815d94047d521329aaa4a3718b}{
+\_\-SIGHASH\_\-ALL}
+\label{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aaceb4bd815d94047d521329aaa4a3718b}
+}]\index{\_\-SIGHASH\_\-NONE@{\_\-SIGHASH\_\-NONE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-SIGHASH\_\-NONE@{\_\-SIGHASH\_\-NONE}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa4eb90e2ee630ba32437b0cbbe95b9ede}{
+\_\-SIGHASH\_\-NONE}
+\label{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa4eb90e2ee630ba32437b0cbbe95b9ede}
+}]\index{\_\-SIGHASH\_\-SINGLE@{\_\-SIGHASH\_\-SINGLE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-SIGHASH\_\-SINGLE@{\_\-SIGHASH\_\-SINGLE}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa032938cf4fbf7498b6f85f5659bc28c5}{
+\_\-SIGHASH\_\-SINGLE}
+\label{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa032938cf4fbf7498b6f85f5659bc28c5}
+}]\index{\_\-SIGHASH\_\-ANYONECANPAY@{\_\-SIGHASH\_\-ANYONECANPAY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!\_\-SIGHASH\_\-ANYONECANPAY@{\_\-SIGHASH\_\-ANYONECANPAY}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa4cbb6f8e9c33007b0dd86139c5444d63}{
+\_\-SIGHASH\_\-ANYONECANPAY}
+\label{_m_i_constants_8h_a4fd54932b907311989c5752c6942742aa4cbb6f8e9c33007b0dd86139c5444d63}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 81 of file Constants.h.
+
+\hypertarget{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0}{
+\index{Constants.h@{Constants.h}!TransactionHashStatus@{TransactionHashStatus}}
+\index{TransactionHashStatus@{TransactionHashStatus}!Constants.h@{Constants.h}}
+\subsubsection[{TransactionHashStatus}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf TransactionHashStatus}}}
+\label{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{TX\_\-HASH\_\-GOOD@{TX\_\-HASH\_\-GOOD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-HASH\_\-GOOD@{TX\_\-HASH\_\-GOOD}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0a9f46366755423a053481edc37bd853d0}{
+TX\_\-HASH\_\-GOOD}
+\label{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0a9f46366755423a053481edc37bd853d0}
+}]Transaction hash was made OK \index{TX\_\-HASH\_\-BAD@{TX\_\-HASH\_\-BAD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-HASH\_\-BAD@{TX\_\-HASH\_\-BAD}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0ab8cb7847f95d8209bd64c5bd4cdce830}{
+TX\_\-HASH\_\-BAD}
+\label{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0ab8cb7847f95d8209bd64c5bd4cdce830}
+}]The transaction is invalid and a hash cannot be made. \index{TX\_\-HASH\_\-FAIL@{TX\_\-HASH\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-HASH\_\-FAIL@{TX\_\-HASH\_\-FAIL}}\item[{\em 
+\hypertarget{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0ae372182e92ec6fd8774695846b3d8845}{
+TX\_\-HASH\_\-FAIL}
+\label{_m_i_constants_8h_a7e14717182fa5c1cd0fd5502ecaa04e0ae372182e92ec6fd8774695846b3d8845}
+}]An error occured while making the hash. \end{description}
+\end{Desc}
+
+
+
+Definition at line 74 of file Constants.h.
+

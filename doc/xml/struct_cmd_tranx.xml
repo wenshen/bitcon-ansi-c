@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_tranx" kind="struct" prot="public">
+    <compoundname>CmdTranx</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_tranx_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="143" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1a29cd42e9db0010d7b5bb283bf2604765" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TranxIn_count</definition>
+        <argsstring></argsstring>
+        <name>TranxIn_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="144" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1a5b66f083197ffa9abe32484db40fcd39" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_tranx_in" kindref="compound">TranxIn</ref> *</type>
+        <definition>struct TranxIn * TranxInput</definition>
+        <argsstring></argsstring>
+        <name>TranxInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="145" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1a64038348b38f758be9417994e2f823a3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TranxOut_count</definition>
+        <argsstring></argsstring>
+        <name>TranxOut_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="146" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1afd763f710fae1f1cefe4c6260c1a5568" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_tranx_out" kindref="compound">TranxOut</ref> *</type>
+        <definition>struct TranxOut * TranxOutput</definition>
+        <argsstring></argsstring>
+        <name>TranxOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="147" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1a54e5a5f03919a5838067d81ddc5efda4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lock_time</definition>
+        <argsstring></argsstring>
+        <name>lock_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="148" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="173" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1aee4a92ad1604309b8526009831b57c58" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tranxInCount</definition>
+        <argsstring></argsstring>
+        <name>tranxInCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="174" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1a6508946c345b4ea761a9d66c38a5fe7a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tranxOutCount</definition>
+        <argsstring></argsstring>
+        <name>tranxOutCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="176" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_tranx_1ace6436ac55ff63b037da554bf1ddfc32" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int lockTime</definition>
+        <argsstring></argsstring>
+        <name>lockTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="178" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="297">
+        <label>Outpoint</label>
+        <link refid="struct_outpoint"/>
+      </node>
+      <node id="296">
+        <label>TranxIn</label>
+        <link refid="struct_tranx_in"/>
+        <childnode refid="297" relation="usage">
+          <edgelabel>previous_out</edgelabel>
+          <edgelabel>previousOut</edgelabel>
+        </childnode>
+      </node>
+      <node id="298">
+        <label>TranxOut</label>
+        <link refid="struct_tranx_out"/>
+      </node>
+      <node id="295">
+        <label>CmdTranx</label>
+        <link refid="struct_cmd_tranx"/>
+        <childnode refid="296" relation="usage">
+          <edgelabel>TranxInput</edgelabel>
+        </childnode>
+        <childnode refid="298" relation="usage">
+          <edgelabel>TranxOutput</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="142" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="142" bodyend="149"/>
+    <listofallmembers>
+      <member refid="struct_cmd_tranx_1a54e5a5f03919a5838067d81ddc5efda4" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>lock_time</name></member>
+      <member refid="struct_cmd_tranx_1ace6436ac55ff63b037da554bf1ddfc32" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>lockTime</name></member>
+      <member refid="struct_cmd_tranx_1a29cd42e9db0010d7b5bb283bf2604765" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>TranxIn_count</name></member>
+      <member refid="struct_cmd_tranx_1aee4a92ad1604309b8526009831b57c58" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>tranxInCount</name></member>
+      <member refid="struct_cmd_tranx_1a5b66f083197ffa9abe32484db40fcd39" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>TranxInput</name></member>
+      <member refid="struct_cmd_tranx_1a64038348b38f758be9417994e2f823a3" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>TranxOut_count</name></member>
+      <member refid="struct_cmd_tranx_1a6508946c345b4ea761a9d66c38a5fe7a" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>tranxOutCount</name></member>
+      <member refid="struct_cmd_tranx_1afd763f710fae1f1cefe4c6260c1a5568" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>TranxOutput</name></member>
+      <member refid="struct_cmd_tranx_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>version</name></member>
+      <member refid="struct_cmd_tranx_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" virt="non-virtual"><scope>CmdTranx</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

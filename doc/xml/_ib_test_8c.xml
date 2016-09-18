@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_ib_test_8c" kind="file">
+    <compoundname>IbTest.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="645">
+        <label>stdlib.h</label>
+      </node>
+      <node id="643">
+        <label>src/IbTest.c</label>
+        <link refid="IbTest.c"/>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="644">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmy_class" prot="public">myClass</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_ib_test_8c_1a2bbd4be817bcab8eb2689efd2143f986" prot="public" static="no">
+        <type>char</type>
+        <definition>typedef char String[1000]</definition>
+        <argsstring>[1000]</argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" line="4" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ib_test_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" line="11" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c" bodystart="11" bodyend="38"/>
+        <references refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" compoundref="_ib_test_8c" startline="7">myClass::id</references>
+        <references refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" compoundref="_ib_test_8c" startline="8">myClass::name</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_ib_test_8c_1a2bbd4be817bcab8eb2689efd2143f986" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_ib_test_8c_1a2bbd4be817bcab8eb2689efd2143f986" kindref="member">String</ref>[1000];</highlight><highlight class="comment">/*make<sp/>the<sp/>size<sp/>big<sp/>to<sp/>avoid<sp/>errors*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="structmy_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="8" refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}<sp/><ref refid="structmy_class" kindref="compound">myClass</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_ib_test_8c_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_bitcoin_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ib_test_8c_1a2bbd4be817bcab8eb2689efd2143f986" kindref="member">String</ref><sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>enitialized<sp/>message\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmy_class" kindref="compound">myClass</ref><sp/>*myObject<sp/>=<sp/>(<ref refid="structmy_class" kindref="compound">myClass</ref><sp/>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structmy_class" kindref="compound">myClass</ref>));</highlight><highlight class="comment">/*instentiate<sp/>an<sp/>object*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idSize,nameSize;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myObject-&gt;<ref refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" kindref="member">id</ref>=<sp/>123;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myObject-&gt;<ref refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Adam&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>myObject-&gt;<ref refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nameSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>myObject-&gt;<ref refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(message,</highlight><highlight class="stringliteral">&quot;\nObject<sp/>Name:<sp/>myObject\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Object<sp/>Members:-\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;id:<sp/><sp/><sp/>size<sp/>=<sp/>%d,<sp/>value<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;name:<sp/>size<sp/>=<sp/>%d,<sp/>value<sp/>=<sp/>%s\n\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idSize,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myObject-&gt;<ref refid="structmy_class_1a7441ef0865bcb3db9b8064dd7375c1ea" kindref="member">id</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nameSize,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myObject-&gt;<ref refid="structmy_class_1a5ac083a645d964373f022d03df4849c8" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>puts(message);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*Sample<sp/>Output:-</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">Object<sp/>Name:<sp/>myObject</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">Object<sp/>Members:-</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">id:<sp/><sp/><sp/>size<sp/>=<sp/>4,<sp/>value<sp/>=<sp/>123</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">name:<sp/>size<sp/>=<sp/>4,<sp/>value<sp/>=<sp/>Adam</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/IbTest.c"/>
+  </compounddef>
+</doxygen>

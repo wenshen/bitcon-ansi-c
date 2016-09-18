@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_chain_descriptor_8h.html#a7134595e37ebe8317011859df8925d77" title="Creates a new ChainDescriptor object." alt="" coords="223,5,361,35"/>
+<area shape="rect" id="node5" href="$_chain_descriptor_8h.html#a0c79d5fbbf54e1affad172c3297cb163" title="Creates a new ChainDescriptor object from serialized data." alt="" coords="193,59,391,88"/>
+<area shape="rect" id="node7" href="$_get_blocks_8h.html#ac6078bf7e22d0d785670ace084ac8ab6" title="Deserializes a GetBlocks so that it can be used as an object." alt="" coords="441,59,585,88"/>
+</map>

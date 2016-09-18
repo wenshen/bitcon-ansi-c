@@ -1,0 +1,172 @@
+.TH "src/Object/Message/Inventory.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/Inventory.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Inventory.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInventory\fP * \fBcreateNewInventory\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBInventory\fP object. \fP"
+.ti -1c
+.RI "\fBInventory\fP * \fBcreateNewInventoryFromData\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBInventory\fP object from serialised data. \fP"
+.ti -1c
+.RI "\fBInventory\fP * \fBgetInventory\fP (void *self)"
+.br
+.RI "\fIGets a \fBInventory\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitializeInventory\fP (\fBInventory\fP *self, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises an \fBInventory\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializeInventoryFromData\fP (\fBInventory\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises an \fBInventory\fP object from serialised data. \fP"
+.ti -1c
+.RI "void \fBdestroyInventory\fP (void *selfIn)"
+.br
+.RI "\fIdestroys an \fBInventory\fP object. \fP"
+.ti -1c
+.RI "uint32_t \fBcalculateInventoryLength\fP (\fBInventory\fP *self)"
+.br
+.RI "\fICalculates the length needed to serialise the object. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeInventory\fP (\fBInventory\fP *self)"
+.br
+.ti -1c
+.RI "uint32_t \fBserialiseInventory\fP (\fBInventory\fP *self)"
+.br
+.RI "\fISerialises a \fBInventory\fP to the byte data. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "uint32_t calculateInventoryLength (\fBInventory\fP *self)"
+.PP
+Calculates the length needed to serialise the object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventory\fP object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file Inventory.c.
+.SS "\fBInventory\fP* createNewInventory (void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBInventory\fP object. \fBReturns:\fP
+.RS 4
+A new \fBInventory\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file Inventory.c.
+.SS "\fBInventory\fP* createNewInventoryFromData (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBInventory\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIdata\fP serialised \fBInventory\fP data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBInventory\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file Inventory.c.
+.SS "uint32_t deserializeInventory (\fBInventory\fP *self)"
+.PP
+Definition at line 107 of file Inventory.c.
+.SS "void destroyInventory (void *self)"
+.PP
+destroys an \fBInventory\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventory\fP object to destroy. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file Inventory.c.
+.SS "\fBInventory\fP* getInventory (void *self)"
+.PP
+Gets a \fBInventory\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBInventory\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBInventory\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file Inventory.c.
+.SS "int initializeInventory (\fBInventory\fP *self, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises an \fBInventory\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventory\fP object to initialise 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+one on success, zero on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file Inventory.c.
+.SS "int initializeInventoryFromData (\fBInventory\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises an \fBInventory\fP object from serialised data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventory\fP object to initialise 
+.br
+\fIdata\fP The serialised data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+one on success, zero on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file Inventory.c.
+.SS "uint32_t serialiseInventory (\fBInventory\fP *self)"
+.PP
+Serialises a \fBInventory\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBInventory\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length written on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file Inventory.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

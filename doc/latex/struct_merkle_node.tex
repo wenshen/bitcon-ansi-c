@@ -1,0 +1,71 @@
+\hypertarget{struct_merkle_node}{
+\section{MerkleNode Struct Reference}
+\label{struct_merkle_node}\index{MerkleNode@{MerkleNode}}
+}
+
+
+{\ttfamily \#include $<$MerkleNode.h$>$}
+
+
+
+Collaboration diagram for MerkleNode:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{struct_merkle_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\_\-t \hyperlink{struct_merkle_node_a7ff9da008bf055da1f1ba994c562057d}{hash} \mbox{[}32\mbox{]}
+\item 
+\hyperlink{struct_merkle_node}{MerkleNode} $\ast$ \hyperlink{struct_merkle_node_a3292e1ae6fbbb8666d2007bee45b69a1}{left}
+\item 
+\hyperlink{struct_merkle_node}{MerkleNode} $\ast$ \hyperlink{struct_merkle_node_a131f273991e1615aab021dd945479c62}{right}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_merkle_node_8h}{MerkleNode.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 25 of file MerkleNode.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_merkle_node_a7ff9da008bf055da1f1ba994c562057d}{
+\index{MerkleNode@{MerkleNode}!hash@{hash}}
+\index{hash@{hash}!MerkleNode@{MerkleNode}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf hash}\mbox{[}32\mbox{]}}}
+\label{struct_merkle_node_a7ff9da008bf055da1f1ba994c562057d}
+The hash for this node. 
+
+Definition at line 26 of file MerkleNode.h.
+
+\hypertarget{struct_merkle_node_a3292e1ae6fbbb8666d2007bee45b69a1}{
+\index{MerkleNode@{MerkleNode}!left@{left}}
+\index{left@{left}!MerkleNode@{MerkleNode}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MerkleNode}$\ast$ {\bf left}}}
+\label{struct_merkle_node_a3292e1ae6fbbb8666d2007bee45b69a1}
+The left child. NULL if leaf. 
+
+Definition at line 27 of file MerkleNode.h.
+
+\hypertarget{struct_merkle_node_a131f273991e1615aab021dd945479c62}{
+\index{MerkleNode@{MerkleNode}!right@{right}}
+\index{right@{right}!MerkleNode@{MerkleNode}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MerkleNode}$\ast$ {\bf right}}}
+\label{struct_merkle_node_a131f273991e1615aab021dd945479c62}
+The right child. NULL if leaf. 
+
+Definition at line 28 of file MerkleNode.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/MerkleNode/\hyperlink{_merkle_node_8h}{MerkleNode.h}\end{DoxyCompactItemize}

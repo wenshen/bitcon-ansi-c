@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_get_blocks" kind="struct" prot="public">
+    <compoundname>CmdGetBlocks</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_get_blocks_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="129" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_get_blocks_1a3393c33019315a8d7ff4d5e48b0577e8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t startCount</definition>
+        <argsstring></argsstring>
+        <name>startCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="130" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_get_blocks_1a95789ecf55183a47b1668d549ba4a927" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char blockLocatorHashes[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>blockLocatorHashes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="131" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_get_blocks_1aa16ea670ce42c626f461fc49f74ddcd3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hashStop[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hashStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="132" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="127" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="127" bodyend="134"/>
+    <listofallmembers>
+      <member refid="struct_cmd_get_blocks_1a95789ecf55183a47b1668d549ba4a927" prot="public" virt="non-virtual"><scope>CmdGetBlocks</scope><name>blockLocatorHashes</name></member>
+      <member refid="struct_cmd_get_blocks_1aa16ea670ce42c626f461fc49f74ddcd3" prot="public" virt="non-virtual"><scope>CmdGetBlocks</scope><name>hashStop</name></member>
+      <member refid="struct_cmd_get_blocks_1a3393c33019315a8d7ff4d5e48b0577e8" prot="public" virt="non-virtual"><scope>CmdGetBlocks</scope><name>startCount</name></member>
+      <member refid="struct_cmd_get_blocks_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" virt="non-virtual"><scope>CmdGetBlocks</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

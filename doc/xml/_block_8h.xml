@@ -1,0 +1,958 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_block_8h" kind="file">
+    <compoundname>Block.h</compoundname>
+    <includes refid="_transaction_8h" local="yes">Transaction.h</includes>
+    <includes local="yes">../../BigInt/BigInt.h</includes>
+    <includes local="yes">../../Constants.h</includes>
+    <includedby refid="_block_8c" local="yes">src/Object/Message/Block.c</includedby>
+    <includedby refid="_block_headers_8h" local="yes">src/Object/Message/BlockHeaders.h</includedby>
+    <incdepgraph>
+      <node id="717">
+        <label>src/Object/Message/Block.h</label>
+        <link refid="Block.h"/>
+        <childnode refid="718" relation="include">
+        </childnode>
+        <childnode refid="730" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+      </node>
+      <node id="721">
+        <label>stdint.h</label>
+      </node>
+      <node id="720">
+        <label>stdlib.h</label>
+      </node>
+      <node id="730">
+        <label>../../BigInt/BigInt.h</label>
+      </node>
+      <node id="722">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="729">
+        <label>../../Utils/Cryptography/Crypt.h</label>
+      </node>
+      <node id="719">
+        <label>Message.h</label>
+        <link refid="_message_8h"/>
+        <childnode refid="720" relation="include">
+        </childnode>
+        <childnode refid="721" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+        <childnode refid="723" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+        <childnode refid="725" relation="include">
+        </childnode>
+      </node>
+      <node id="727">
+        <label>../Script.h</label>
+      </node>
+      <node id="728">
+        <label>TransactionOutput.h</label>
+        <link refid="_transaction_output_8h"/>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="727" relation="include">
+        </childnode>
+      </node>
+      <node id="726">
+        <label>TransactionInput.h</label>
+        <link refid="_transaction_input_8h"/>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="727" relation="include">
+        </childnode>
+        <childnode refid="728" relation="include">
+        </childnode>
+      </node>
+      <node id="723">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="724">
+        <label>../Object.h</label>
+      </node>
+      <node id="725">
+        <label>../../Utils/VariableLengthInteger/VarLenInt.h</label>
+      </node>
+      <node id="718">
+        <label>Transaction.h</label>
+        <link refid="_transaction_8h"/>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="726" relation="include">
+        </childnode>
+        <childnode refid="728" relation="include">
+        </childnode>
+        <childnode refid="729" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="732">
+        <label>src/Object/Message/Block.c</label>
+        <link refid="_block_8c"/>
+      </node>
+      <node id="731">
+        <label>src/Object/Message/Block.h</label>
+        <link refid="Block.h"/>
+        <childnode refid="732" relation="include">
+        </childnode>
+        <childnode refid="733" relation="include">
+        </childnode>
+      </node>
+      <node id="734">
+        <label>src/Object/Message/BlockHeaders.c</label>
+        <link refid="_block_headers_8c"/>
+      </node>
+      <node id="733">
+        <label>src/Object/Message/BlockHeaders.h</label>
+        <link refid="_block_headers_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_block" prot="public">Block</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_block_8h_1a1d7eae467690179b1fb461de80262408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+        <definition>Block* createNewBlock</definition>
+        <argsstring>(void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewBlock</name>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_block" kindref="compound">Block</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="struct_block" kindref="compound">Block</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; created successfully</para><para>&lt; free the memory</para><para>&lt; created failed </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="44" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="30" bodyend="48"/>
+        <references refid="_block_8c_1a8b1f80b3681ca6711f8746451d4d86d9" compoundref="_block_8c" startline="197" endline="223">deleteBlock</references>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_block_8c_1a71244768c12d6663e29898247e2b60bf" compoundref="_block_8c" startline="124" endline="139">initBlock</references>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a79e97e9e8e757fc1ace966b8b7700416" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+        <definition>Block* createNewBlockFromByteArray</definition>
+        <argsstring>(ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewBlockFromByteArray</name>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+          <defname>info</defname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="struct_block" kindref="compound">Block</ref> from a given <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> data. </para>        </briefdescription>
+        <detaileddescription>
+<para>Creates a new <ref refid="struct_block" kindref="compound">Block</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_block" kindref="compound">Block</ref></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_block" kindref="compound">Block</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; created successfully</para><para>&lt; free the memory</para><para>&lt; created failed </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="53" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="58" bodyend="77"/>
+        <references refid="_block_8c_1a8b1f80b3681ca6711f8746451d4d86d9" compoundref="_block_8c" startline="197" endline="223">deleteBlock</references>
+        <references refid="struct_object_1aa353725933e843001d4feb03f8268121" compoundref="_object_8h" startline="29">Object::destroy</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_block_8c_1a8b2caeb517b4b3e13e03abb7852f3742" compoundref="_block_8c" startline="148" endline="162">initBlockFromByteArray</references>
+        <referencedby refid="_block_headers_8h_1ace10b6ab479717f0540e5a5528ca3952" compoundref="_block_headers_8c" startline="89" endline="140">deserializeBlockHeaders</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1ac0bfd646c0271d59aa864b72edb8dff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+        <definition>Block* createNewBlockWithOriginalBlock</definition>
+        <argsstring>(void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewBlockWithOriginalBlock</name>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a3a71fc6a7e2b7c33efdc602fdc8ee8e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+        <definition>Block* getBlock</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getBlock</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+          <defname>block</defname>
+        </param>
+        <briefdescription>
+<para>get a block <ref refid="struct_object" kindref="compound">Object</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Gets a <ref refid="struct_block" kindref="compound">Block</ref> from another object. Use this to avoid casts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_block" kindref="compound">Block</ref></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_block" kindref="compound">Block</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_block" kindref="compound">Block</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="70" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a71244768c12d6663e29898247e2b60bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initBlock</definition>
+        <argsstring>(Block *self, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initBlock</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="struct_block" kindref="compound">Block</ref> from. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE or FALSE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="79" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="124" bodyend="139"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_message_8c_1abeae03d7e39e468bf5958d4d2b1dc61b" compoundref="_message_8c" startline="94" endline="106">initializeMessageFromObject</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_block_8h_1a1d7eae467690179b1fb461de80262408" compoundref="_block_8c" startline="30" endline="48">createNewBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a8b2caeb517b4b3e13e03abb7852f3742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initBlockFromByteArray</definition>
+        <argsstring>(Block *self, ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initBlockFromByteArray</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="struct_block" kindref="compound">Block</ref> from <ref refid="struct_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initializes a <ref refid="struct_block" kindref="compound">Block</ref> object from serialized data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE or FALSE</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object to initialize </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The serialized data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="89" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="148" bodyend="162"/>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_message_8c_1a297413f770355bd4bd2212e999867031" compoundref="_message_8c" startline="108" endline="123">initializeMessageFromByteArrayData</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_block_8h_1a79e97e9e8e757fc1ace966b8b7700416" compoundref="_block_8c" startline="58" endline="77">createNewBlockFromByteArray</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1af1b6c7c59cf5fd4c7d9f94a6179dcb43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initBlockWithGenesisBlockInfo</definition>
+        <argsstring>(Block *self, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initBlockWithGenesisBlockInfo</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Decrease the count of the <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> data</para><para>&lt; Decrease the count of the hash</para><para>&lt; Decrease the count of the <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> data</para><para>&lt; Deserialize the <ref refid="struct_block" kindref="compound">Block</ref> so that it can be used as an object </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="99" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="170" bodyend="190"/>
+        <references refid="_byte_array_8c_1a3affebc3c5fab0302f7d3163445c12da" compoundref="_byte_array_8c" startline="497" endline="509">createNewByteArrayUsingDataCopy</references>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_block_8c_1a9dcdbbf01ad57512119aa46013c7f92e" compoundref="_block_8c" startline="272" endline="312">deserializeBlock</references>
+        <references refid="_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_constants_8h" startline="89">FALSE</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_message_8c_1a297413f770355bd4bd2212e999867031" compoundref="_message_8c" startline="108" endline="123">initializeMessageFromByteArrayData</references>
+        <references refid="_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_constants_8h" startline="90">TRUE</references>
+        <referencedby refid="_block_8c_1a9f12323a1c19b0686bc1b64868a97dc9" compoundref="_block_8c" startline="84" endline="103">createNewBlockFromOriginalBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1ad77154e744c5b0fd15076b9496c06bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deleteBlock</definition>
+        <argsstring>(void *vself)</argsstring>
+        <name>deleteBlock</name>
+        <param>
+          <type>void *</type>
+          <declname>vself</declname>
+          <defname>selfCopy</defname>
+        </param>
+        <briefdescription>
+<para>Destroy the <ref refid="struct_block" kindref="compound">Block</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Frees a <ref refid="struct_block" kindref="compound">Block</ref> object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>selfCopy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Destroy the previous <ref refid="struct_block" kindref="compound">Block</ref> hash</para><para>Destroy transactions</para><para>&lt; Check for the loop since the transaction number can be set without having any transactions. </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="106" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="197" bodyend="223"/>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_message_8c_1ac2c2a78178aac5f9f228b51d01bf5fe3" compoundref="_message_8c" startline="145" endline="154">destroyMessage</references>
+        <references refid="_object_8c_1a8460165be167be3b0816d84f498e3733" compoundref="_object_8c" startline="42" endline="47">getObject</references>
+        <referencedby refid="_block_8h_1a1d7eae467690179b1fb461de80262408" compoundref="_block_8c" startline="30" endline="48">createNewBlock</referencedby>
+        <referencedby refid="_block_8h_1a79e97e9e8e757fc1ace966b8b7700416" compoundref="_block_8c" startline="58" endline="77">createNewBlockFromByteArray</referencedby>
+        <referencedby refid="_block_8c_1a9f12323a1c19b0686bc1b64868a97dc9" compoundref="_block_8c" startline="84" endline="103">createNewBlockFromOriginalBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a1dd38c9d32f6f6984930141d5ce01fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calculateBlockHash</definition>
+        <argsstring>(Block *self, uint8_t *hash)</argsstring>
+        <name>calculateBlockHash</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the hash for a <ref refid="struct_block" kindref="compound">Block</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calculates the hash for a block.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object. This should be serialized. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hash for the block to be set. This should be 32 bytes long. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="114" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="232" bodyend="238"/>
+        <references refid="_byte_array_8c_1aceedce9c30c691b211185ee9b454aae4" compoundref="_byte_array_8c" startline="74" endline="78">getByteArrayData</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" compoundref="_crypt_8c" startline="42" endline="49">Sha256</references>
+        <referencedby refid="_block_8h_1a0d0586d7b3b00de5ec07a8ef179a658c" compoundref="_block_8c" startline="430" endline="435">getBlockHash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a396c1436f34175841933aa2b7cc102e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t calculateBlockLength</definition>
+        <argsstring>(Block *self, int transactions)</argsstring>
+        <name>calculateBlockLength</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>transactions</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the length of <ref refid="struct_block" kindref="compound">Block</ref> that is needed to serialize the object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calculates the length needed to serialize the object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>blocklength</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the full block, if not true just the header. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; calculate TransactinLength</para><para>&lt; Plus the stupid pointless null byte. </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="123" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="248" bodyend="263"/>
+        <references refid="_transaction_8c_1aceb60074b6ebe66ad03d563c53c1b210" compoundref="_transaction_8c" startline="213" endline="246">calculateTransactionLength</references>
+        <references refid="_var_len_int_8c_1a9a5568c05dc89004c60b0a1679b38ba6" compoundref="_var_len_int_8c" startline="82" endline="94">getSizeOfVarLenInt</references>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a9dcdbbf01ad57512119aa46013c7f92e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeBlock</definition>
+        <argsstring>(Block *self, int transactions)</argsstring>
+        <name>deserializeBlock</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>transactions</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize the <ref refid="struct_block" kindref="compound">Block</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Deserializes a <ref refid="struct_block" kindref="compound">Block</ref> so that it can be used as an object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true deserialize transactions. If false there do not deserialize for transactions. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; If first <ref refid="struct_var_len_int" kindref="compound">VarLenInt</ref> byte is zero, then stop here for headers, otherwise look for 8 more bytes and continue</para><para>&lt; Just header </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="132" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="272" bodyend="312"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_block_8c_1a2590af8eb87d088e41c0dfff66d41454" compoundref="_block_8c" startline="394" endline="421">deserializeWithOnlyHeaders</references>
+        <references refid="_block_8c_1a219df1f8f05a691f09e283731eb86129" compoundref="_block_8c" startline="321" endline="384">deserializeWithTransactions</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26" compoundref="_constants_8h" startline="40">ERROR_MESSAGE_DESERIALISATION_NULL_BYTES</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" compoundref="_byte_array_8c" startline="89" endline="95">getByteFromByteArray</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_byte_array_8c_1a6fe303a6a14235d60ef9024a1463d630" compoundref="_byte_array_8c" startline="231" endline="243">readInt32AsLittleEndianFromByteArray</references>
+        <referencedby refid="_block_headers_8h_1ace10b6ab479717f0540e5a5528ca3952" compoundref="_block_headers_8c" startline="89" endline="140">deserializeBlockHeaders</referencedby>
+        <referencedby refid="_block_8h_1af1b6c7c59cf5fd4c7d9f94a6179dcb43" compoundref="_block_8c" startline="170" endline="190">initBlockWithGenesisBlockInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a2590af8eb87d088e41c0dfff66d41454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeWithOnlyHeaders</definition>
+        <argsstring>(Block *self, uint8_t firstByte, ByteArray *bytes)</argsstring>
+        <name>deserializeWithOnlyHeaders</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>firstByte</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize With <ref refid="struct_transaction" kindref="compound">Transaction</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstByte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para></simplesect>
+@ breif deserialize <ref refid="struct_block" kindref="compound">Block</ref> only with headers @ param self The <ref refid="struct_block" kindref="compound">Block</ref> object @ param firstByte uint8_t @ param bytes <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> object @ The length read on success, o on failure. </para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; This value is undefined in the protocol. Should best be zero when getting the headers since there is not supposed to be any transactions. Would have probably been better if the var int was dropped completely for headers only.</para><para>&lt; Ensure null byte is null. This null byte is a bit of a nuissance but it exists in the protocol when there are no transactions.</para><para>&lt; 80 header bytes, the var int and the null byte </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="142" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="394" bodyend="421"/>
+        <references refid="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" compoundref="_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_byte_array_8c_1ac37879c5183d813699af84e23e8137ee" compoundref="_byte_array_8c" startline="89" endline="95">getByteFromByteArray</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_block_8h_1a9dcdbbf01ad57512119aa46013c7f92e" compoundref="_block_8c" startline="272" endline="312">deserializeBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a219df1f8f05a691f09e283731eb86129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeWithTransactions</definition>
+        <argsstring>(Block *self, ByteArray *bytes)</argsstring>
+        <name>deserializeWithTransactions</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize With <ref refid="struct_transaction" kindref="compound">Transaction</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para></simplesect>
+@ breif deserialize <ref refid="struct_block" kindref="compound">Block</ref> with transactions @ param self The <ref refid="struct_block" kindref="compound">Block</ref> object @ param bytes <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> object @ The length read on success, o on failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="151" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="321" bodyend="384"/>
+        <references refid="_transaction_8c_1ab0db123c7d162c729b348cfb2333fd81" compoundref="_transaction_8c" startline="42" endline="58">createNewTransactionFromByteArray</references>
+        <references refid="_var_len_int_8c_1a4dd8c16aa70756e7ab6c0845a09358af" compoundref="_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</references>
+        <references refid="_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_object_8c" startline="65" endline="79">decrementReferenceCount</references>
+        <references refid="_transaction_8c_1ada5d9c85c4dc1ff7384ee49d6fd97ff8" compoundref="_transaction_8c" startline="384" endline="534">deserializeTransaction</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63" compoundref="_constants_8h" startline="39">ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69" compoundref="_constants_8h" startline="52">ERROR_OUT_OF_MEMORY</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_block_8h_1a9dcdbbf01ad57512119aa46013c7f92e" compoundref="_block_8c" startline="272" endline="312">deserializeBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a0d0586d7b3b00de5ec07a8ef179a658c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* getBlockHash</definition>
+        <argsstring>(Block *self)</argsstring>
+        <name>getBlockHash</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Get the hash of the <ref refid="struct_block" kindref="compound">Block</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Retrieves or calculates the hash for a block. Hashes taken from this function are cached.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hash</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object. This should be serialised. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The hash for the block. This is a 32 byte long, double SHA-256 hash and is a pointer to the hash field in the block. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="159" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="430" bodyend="435"/>
+        <references refid="_block_8c_1a1dd38c9d32f6f6984930141d5ce01fba" compoundref="_block_8c" startline="232" endline="238">calculateBlockHash</references>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1ab0d1c25a8612a3644626e5030ffbe456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t serializeBlock</definition>
+        <argsstring>(Block *self, int transactions)</argsstring>
+        <name>serializeBlock</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>transactions</declname>
+        </param>
+        <briefdescription>
+<para>Serializes a <ref refid="struct_block" kindref="compound">Block</ref> to the byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true serialize transactions. If false there do not serialize for transactions. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Deal with the Transactions </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="168" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="444" bodyend="472"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_var_len_int_8c_1a784e8aad4e7aead2119ede96096f33a9" compoundref="_var_len_int_8c" startline="71" endline="80">createVarLenIntFromUInt64</references>
+        <references refid="_block_8c_1a4648ce410198b41749394a5c377ce73b" compoundref="_block_8c" startline="481" endline="491">dealWithSerializationHeader</references>
+        <references refid="_block_8c_1aeb72d715416153dbd72e8f876fb19981" compoundref="_block_8c" startline="499" endline="532">dealWithSerializationTran</references>
+        <references refid="_var_len_int_8c_1a12852f478f7fcd7cacc0b150fa7fe12a" compoundref="_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d" compoundref="_constants_8h" startline="41">ERROR_MESSAGE_SERIALISATION_BAD_BYTES</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e" compoundref="_constants_8h" startline="42">ERROR_MESSAGE_SERIALISATION_NULL_BYTES</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="struct_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <referencedby refid="_block_headers_8h_1a06fe7338aa2dc8d104e7f8148674b202" compoundref="_block_headers_8c" startline="141" endline="176">serializeBlockHeaders</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1a4648ce410198b41749394a5c377ce73b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dealWithSerializationHeader</definition>
+        <argsstring>(Block *self, ByteArray *bytes)</argsstring>
+        <name>dealWithSerializationHeader</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>To deal with the header issue for serializeBlock. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="176" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="481" bodyend="491"/>
+        <references refid="_byte_array_8c_1ad155de39b7e47d41778c0ec219aff1e6" compoundref="_byte_array_8c" startline="381" endline="390">changeByteArrayDataReference</references>
+        <references refid="_byte_array_8c_1a7c9e6ea6d3022a2e858e91e207be9ec2" compoundref="_byte_array_8c" startline="28" endline="35">copyByteArrayToByteArray</references>
+        <references refid="_byte_array_8c_1ab7e0f883b2d3ff4d4b253f4257f6916a" compoundref="_byte_array_8c" startline="337" endline="347">writeInt32AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_block_8h_1ab0d1c25a8612a3644626e5030ffbe456" compoundref="_block_8c" startline="444" endline="472">serializeBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_block_8h_1aeb72d715416153dbd72e8f876fb19981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t dealWithSerializationTran</definition>
+        <argsstring>(Block *self, ByteArray *bytes, uint32_t cursor, int transactions)</argsstring>
+        <name>dealWithSerializationTran</name>
+        <param>
+          <type><ref refid="struct_block" kindref="compound">Block</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cursor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>transactions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dealt with the transaction issue for serializeBlock. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_block" kindref="compound">Block</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_byte_array" kindref="compound">ByteArray</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cursor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial cursor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The cursor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Add null byte since there are to be no transactions (header only). </para>        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h" line="187" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.c" bodystart="499" bodyend="532"/>
+        <references refid="struct_message_1affc357b616afe9b58c190ae4b21caa77" compoundref="_message_8h" startline="33">Message::bytes</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce" compoundref="_constants_8h" startline="53">ERROR_INIT_FAIL</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d" compoundref="_constants_8h" startline="41">ERROR_MESSAGE_SERIALISATION_BAD_BYTES</references>
+        <references refid="_byte_array_8c_1aefe112436e17fc5a1c56d263596a612b" compoundref="_byte_array_8c" startline="105" endline="131">getByteArraySubsectionReference</references>
+        <references refid="_message_8c_1a9ab128ae9cafefd9b05e2e0bfa719770" compoundref="_message_8c" startline="131" endline="135">getMessage</references>
+        <references refid="struct_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_message_1a3c8af4f580f3041d046b7581f89a9695" compoundref="_message_8h" startline="35">Message::onErrorReceived</references>
+        <references refid="_transaction_8c_1a61a0f76473a17de64dcecc04a3ce3b5f" compoundref="_transaction_8c" startline="259" endline="382">serializeTransaction</references>
+        <references refid="_byte_array_8c_1aa97aa7ca8177b767d78d5f85a00a00c9" compoundref="_byte_array_8c" startline="280" endline="287">setByteInByteArray</references>
+        <referencedby refid="_block_8h_1ab0d1c25a8612a3644626e5030ffbe456" compoundref="_block_8c" startline="444" endline="472">serializeBlock</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file defines a bitcoin block. </para>    </briefdescription>
+    <detaileddescription>
+<para>Blocks contain transaction information and use a proof of work system to show that they are legitimate. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Block.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>04/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Issak<sp/>Gezehei</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#ifndef<sp/>BLOCK_H_</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BLOCK_H_</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_transaction_8h" kindref="compound" tooltip="Transaction object.">Transaction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../BigInt/BigInt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="struct_block" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="struct_block_1a8987f797adf70c3e174fd64cc68bc933" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/><ref refid="struct_block_1a8987f797adf70c3e174fd64cc68bc933" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="28" refid="struct_block_1a7ff9da008bf055da1f1ba994c562057d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>hash[32];<sp/></highlight></codeline>
+<codeline lineno="29" refid="struct_block_1acd99bb05ca015e7d74448acb1deba7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_block_1acd99bb05ca015e7d74448acb1deba7ca" kindref="member">version</ref>;<sp/></highlight></codeline>
+<codeline lineno="30" refid="struct_block_1ac5cb79d8f66809a5f75592e22db9be2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="struct_block_1ac5cb79d8f66809a5f75592e22db9be2c" kindref="member">previousBlockHash</ref>;<sp/></highlight></codeline>
+<codeline lineno="31" refid="struct_block_1a51d24d9b04212dc52192636948a05a4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="struct_block_1a51d24d9b04212dc52192636948a05a4c" kindref="member">merkleTreeRootHash</ref>;<sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_block_1ae73654f333e4363463ad8c594eca1905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_block_1ae73654f333e4363463ad8c594eca1905" kindref="member">time</ref>;<sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_block_1a695e5800ad1fd403c0e72d918eaec97c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_block_1a695e5800ad1fd403c0e72d918eaec97c" kindref="member">target</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="struct_block_1aa2f9785a9d9116cc4592db06375cb887" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_block_1aa2f9785a9d9116cc4592db06375cb887" kindref="member">nonce</ref>;<sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_block_1ac9749ca92207f8d50ecc2b0f904e2424" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_block_1ac9749ca92207f8d50ecc2b0f904e2424" kindref="member">numOfTransactions</ref>;<sp/></highlight></codeline>
+<codeline lineno="36" refid="struct_block_1acf585c1809511c4f5b5366bb2bc2e855" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_transaction" kindref="compound">Transaction</ref><sp/>**<sp/><ref refid="struct_block_1acf585c1809511c4f5b5366bb2bc2e855" kindref="member">transactions</ref>;<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/><ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/><ref refid="_block_8c_1a5cc6577390bc73738102896976ca10e8" kindref="member" tooltip="Creates a new Block.">createNewBlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/><ref refid="_block_8c_1a522ff05175c1944559e2001a51d8da90" kindref="member" tooltip="Create a new Block from a given ByteArray data.">createNewBlockFromByteArray</ref>(<ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/><ref refid="_block_8h_1ac0bfd646c0271d59aa864b72edb8dff8" kindref="member">createNewBlockWithOriginalBlock</ref>(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/><ref refid="_block_8c_1a57305c4b37f2dd85163c01c4e67ce49c" kindref="member" tooltip="get a block Object">getBlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_block_8c_1a71244768c12d6663e29898247e2b60bf" kindref="member" tooltip="Initialize the Block from.">initBlock</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_block_8c_1a8b2caeb517b4b3e13e03abb7852f3742" kindref="member" tooltip="Initialize the Block from ByteArray.">initBlockFromByteArray</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_block_8c_1af1b6c7c59cf5fd4c7d9f94a6179dcb43" kindref="member">initBlockWithGenesisBlockInfo</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_block_8c_1a8b1f80b3681ca6711f8746451d4d86d9" kindref="member" tooltip="Destroy the Block.">deleteBlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>vself);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_block_8c_1a1dd38c9d32f6f6984930141d5ce01fba" kindref="member" tooltip="Calculate the hash for a Block.">calculateBlockHash</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint8_t<sp/>*<sp/>hash);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">uint32_t<sp/><ref refid="_block_8c_1a396c1436f34175841933aa2b7cc102e8" kindref="member" tooltip="Calculate the length of Block that is needed to serialize the object.">calculateBlockLength</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>transactions);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">uint32_t<sp/><ref refid="_block_8c_1a9dcdbbf01ad57512119aa46013c7f92e" kindref="member" tooltip="Deserialize the Block.">deserializeBlock</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>transactions);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">uint32_t<sp/><ref refid="_block_8c_1a2590af8eb87d088e41c0dfff66d41454" kindref="member" tooltip="Deserialize With Transaction.">deserializeWithOnlyHeaders</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint8_t<sp/>firstByte,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">uint32_t<sp/><ref refid="_block_8c_1a219df1f8f05a691f09e283731eb86129" kindref="member" tooltip="Deserialize With Transaction.">deserializeWithTransactions</ref><sp/>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">uint8_t<sp/>*<sp/><ref refid="_block_8c_1a33658833bce8e3470a0ac50e0eed406a" kindref="member" tooltip="Get the hash of the Block.">getBlockHash</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">uint32_t<sp/><ref refid="_block_8c_1ab0d1c25a8612a3644626e5030ffbe456" kindref="member" tooltip="Serializes a Block to the byte data.">serializeBlock</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>transactions);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_block_8c_1a4648ce410198b41749394a5c377ce73b" kindref="member" tooltip="To deal with the header issue for serializeBlock.">dealWithSerializationHeader</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">uint32_t<sp/><ref refid="_block_8c_1aeb72d715416153dbd72e8f876fb19981" kindref="member">dealWithSerializationTran</ref>(<ref refid="struct_block" kindref="compound" tooltip="Base class.">Block</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>bytes,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>cursor,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>transactions);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BLOCK_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Block.h"/>
+  </compounddef>
+</doxygen>

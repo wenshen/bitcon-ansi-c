@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_inventory_vector_8h.html#a16497ae979e7f0842ef2dafc144718ee" title="Creates a new InventoryVector object from serialised data." alt="" coords="272,5,507,35"/>
+<area shape="rect" id="node5" href="$_inventory_8c.html#a62e028868025b8a7e77dc71490b135ea" title="deserializeInventory" alt="" coords="555,5,693,35"/>
+</map>

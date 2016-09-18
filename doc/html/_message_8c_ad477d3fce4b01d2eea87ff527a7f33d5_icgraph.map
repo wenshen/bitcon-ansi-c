@@ -1,0 +1,37 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_block_8h.html#a1dd38c9d32f6f6984930141d5ce01fba" title="Calculates the hash for a block." alt="" coords="204,5,343,35"/>
+<area shape="rect" id="node7" href="$_transaction_8h.html#ae53ed930910256b4620da39ebdcccdb5" title="calculateTransactionHash" alt="" coords="187,59,360,88"/>
+<area shape="rect" id="node11" href="$_block_8h.html#aeb72d715416153dbd72e8f876fb19981" title="dealWithSerializationTran" alt="" coords="1099,163,1269,192"/>
+<area shape="rect" id="node13" href="$_block_8h.html#ab0d1c25a8612a3644626e5030ffbe456" title="Serializes a Block to the byte data." alt="" coords="1333,137,1435,167"/>
+<area shape="rect" id="node15" href="$_block_8h.html#a9dcdbbf01ad57512119aa46013c7f92e" title="Deserializes a Block so that it can be used as an object." alt="" coords="1325,1045,1443,1075"/>
+<area shape="rect" id="node17" href="$_block_8h.html#ae50e2e938910d73e027bd2818d27a18b" title="Initializes a Block object with the original block for the bitcoin block chain. This will have serial..." alt="" coords="1491,1124,1667,1153"/>
+<area shape="rect" id="node21" href="$_transaction_8h.html#ada5d9c85c4dc1ff7384ee49d6fd97ff8" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="845,731,997,760"/>
+<area shape="rect" id="node23" href="$_block_8h.html#a219df1f8f05a691f09e283731eb86129" title="deserializeWithTransactions" alt="" coords="1091,1007,1277,1036"/>
+<area shape="rect" id="node26" href="$_transaction_input_8h.html#a8eb115030448e943f94d8ecff0fa21a9" title="Deserialises a TransactionInput so that it can be used as an object." alt="" coords="509,481,691,511"/>
+<area shape="rect" id="node29" href="$_transaction_output_8h.html#a484844cadde17ce53f58dcf0fceb52b2" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="505,559,695,588"/>
+<area shape="rect" id="node32" href="$_block_8h.html#a2590af8eb87d088e41c0dfff66d41454" title="deserializeWithOnlyHeaders" alt="" coords="1091,1084,1277,1113"/>
+<area shape="rect" id="node36" href="$_transaction_8h.html#afe08b91a59f175e55d9ca049e46749c2" title="Gets the hash for signing or signature checking for a transaction input. The transaction input needs ..." alt="" coords="148,571,399,600"/>
+<area shape="rect" id="node38" href="$_block_8h.html#a71244768c12d6663e29898247e2b60bf" title="Initializes a Block object." alt="" coords="237,677,309,707"/>
+<area shape="rect" id="node42" href="$_block_8h.html#a8b2caeb517b4b3e13e03abb7852f3742" title="Initializes a Block object from serialized data." alt="" coords="193,731,353,760"/>
+<area shape="rect" id="node47" href="$_transaction_input_8h.html#a3ad0ecb9660744784184da2b4fdea805" title="Initialises a TransactionInput object." alt="" coords="191,784,356,813"/>
+<area shape="rect" id="node51" href="$_transaction_input_8h.html#a5dd458f9ef23c28acbc6e018810f578a" title="Initialises a new TransactionInput object from the byte data." alt="" coords="161,624,385,653"/>
+<area shape="rect" id="node56" href="$_transaction_output_8h.html#a5bf0093a9ad4ad55a29ef95ce6350755" title="Initialises a TransactionOutput object." alt="" coords="185,891,361,920"/>
+<area shape="rect" id="node60" href="$_transaction_output_8h.html#a356376bf3ae2bc9f0be2d1daec98fe70" title="Initialises a TransactionOutput object." alt="" coords="156,837,391,867"/>
+<area shape="rect" id="node65" href="$_transaction_8c.html#a55b1a99d00430669fd9aa61021df7047" title="processTransactionSubStructureForSerialization" alt="" coords="449,267,751,296"/>
+<area shape="rect" id="node67" href="$_transaction_8h.html#a61a0f76473a17de64dcecc04a3ce3b5f" title="Serialises a Transaction to byte data." alt="" coords="852,240,991,269"/>
+<area shape="rect" id="node72" href="$_transaction_input_8h.html#a9b0f805aed38d097be8bec7dd8701e50" title="Serialises a TransactionInput to byte data." alt="" coords="191,264,356,293"/>
+<area shape="rect" id="node75" href="$_transaction_output_8h.html#ae0ec9ca1d590685385987b26fbded266" title="Serialises a TransactionOutput to byte data." alt="" coords="512,213,688,243"/>
+<area shape="rect" id="node78" href="$_transaction_8h.html#a8b4afb98a5293ab312e547381ea0cf31" title="Sets up the fields of a Transaction object." alt="" coords="197,1149,349,1179"/>
+<area shape="rect" id="node82" href="$_transaction_8h.html#ab6777f2e913778848e00c770ef6f4e8f" title="Sets up the fields of a Transaction object using a byteArray object that was passed in..." alt="" coords="151,995,396,1024"/>
+<area shape="rect" id="node5" href="$_block_8h.html#a0d0586d7b3b00de5ec07a8ef179a658c" title="Retrieves or calculates the hash for a block. Hashes taken from this function are cached..." alt="" coords="548,5,652,35"/>
+<area shape="rect" id="node9" href="$_transaction_8h.html#af8e635c7261eba22e033c06b72034b1b" title="Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached..." alt="" coords="531,59,669,88"/>
+<area shape="rect" id="node19" href="$_block_8c.html#a076f9fffd97db10420d3067236cc8af4" title="createNewBlockFromOriginalBlock" alt="" coords="1716,1124,1940,1153"/>
+<area shape="rect" id="node40" href="$_block_8h.html#a1d7eae467690179b1fb461de80262408" title="Creates a new Block." alt="" coords="541,677,659,707"/>
+<area shape="rect" id="node44" href="$_block_8h.html#a79e97e9e8e757fc1ace966b8b7700416" title="Creates a new Block." alt="" coords="497,731,703,760"/>
+<area shape="rect" id="node49" href="$_transaction_input_8h.html#afdc626c464b97c0e972275510cefa83e" title="Creates a new TransactionInput object." alt="" coords="509,784,691,813"/>
+<area shape="rect" id="node53" href="$_transaction_input_8h.html#a9ad2a4f59818111f157b1386237b8f0c" title="Creates a new TransactionInput object from byte data." alt="" coords="480,624,720,653"/>
+<area shape="rect" id="node58" href="$_transaction_output_8h.html#a10f7f8631b1f5b77dc6fc0c5b3661b5c" title="Creates a new TransactionOutput object." alt="" coords="504,891,696,920"/>
+<area shape="rect" id="node62" href="$_transaction_output_8h.html#a6ca6fea2d59ae206ba291cc0e9f2302c" title="Creates a new TransactionOutput object from byte data. Should be serialised for object data..." alt="" coords="475,837,725,867"/>
+<area shape="rect" id="node80" href="$_transaction_8h.html#aba0a0fb2c7e640e21f08789d32e9e00d" title="Creates a new Transaction object with no inputs or outputs." alt="" coords="524,1149,676,1179"/>
+<area shape="rect" id="node84" href="$_transaction_8h.html#afc8f7c9bb8194bba913dd2dd59963cef" title="Creates a new Transaction object from byte data. Should be serialised for object data." alt="" coords="801,995,1041,1024"/>
+</map>

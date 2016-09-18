@@ -1,0 +1,197 @@
+\hypertarget{_crypt_8c}{
+\section{src/Utils/Cryptography/Crypt.c File Reference}
+\label{_crypt_8c}\index{src/Utils/Cryptography/Crypt.c@{src/Utils/Cryptography/Crypt.c}}
+}
+{\ttfamily \#include \char`\"{}Crypt.h\char`\"{}}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$openssl/sha.h$>$}\par
+{\ttfamily \#include $<$openssl/ripemd.h$>$}\par
+{\ttfamily \#include $<$openssl/ssl.h$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+Include dependency graph for Crypt.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_crypt_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_crypt_8c_a65ada373e8917a80136b5756d3e55932}{Sha160} (uint8\_\-t $\ast$data, uint16\_\-t len, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em SHA-\/1 cryptographic hash function. \end{DoxyCompactList}\item 
+void \hyperlink{_crypt_8c_a31002de62901cbe9c88a0fd0f5f57770}{Sha256} (uint8\_\-t $\ast$data, uint16\_\-t len, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em SHA-\/256 cryptographic hash function. \end{DoxyCompactList}\item 
+void \hyperlink{_crypt_8c_a11ffcd5481255317891e36827279bd42}{Ripemd160} (uint8\_\-t $\ast$data, uint16\_\-t len, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em RIPEMD-\/160 cryptographic hash function. \end{DoxyCompactList}\item 
+int \hyperlink{_crypt_8c_ad2f883546aec1d35706944513146c05a}{ECDSAVerify} (uint8\_\-t $\ast$signature, uint8\_\-t signatureLen, uint8\_\-t $\ast$hash, const uint8\_\-t $\ast$pubKey, uint8\_\-t keyLen)
+\begin{DoxyCompactList}\small\item\em Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_crypt_8c_ad2f883546aec1d35706944513146c05a}{
+\index{Crypt.c@{Crypt.c}!ECDSAVerify@{ECDSAVerify}}
+\index{ECDSAVerify@{ECDSAVerify}!Crypt.c@{Crypt.c}}
+\subsubsection[{ECDSAVerify}]{\setlength{\rightskip}{0pt plus 5cm}int ECDSAVerify (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{signature, }
+\item[{uint8\_\-t}]{signatureLen, }
+\item[{uint8\_\-t $\ast$}]{hash, }
+\item[{const uint8\_\-t $\ast$}]{pubKey, }
+\item[{uint8\_\-t}]{keyLen}
+\end{DoxyParamCaption}
+)}}
+\label{_crypt_8c_ad2f883546aec1d35706944513146c05a}
+
+
+Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signature} & BER encoded signature bytes. \\
+\hline
+{\em signatureLen} & The length of the signature bytes. \\
+\hline
+{\em hash} & A 32 byte hash for checking the signature against. \\
+\hline
+{\em pubKey} & Public key bytes to check this signature with. \\
+\hline
+{\em keyLen} & The length of the public key bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid and false if invalid. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Crypt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_crypt_8c_ad2f883546aec1d35706944513146c05a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_crypt_8c_a11ffcd5481255317891e36827279bd42}{
+\index{Crypt.c@{Crypt.c}!Ripemd160@{Ripemd160}}
+\index{Ripemd160@{Ripemd160}!Crypt.c@{Crypt.c}}
+\subsubsection[{Ripemd160}]{\setlength{\rightskip}{0pt plus 5cm}void Ripemd160 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_crypt_8c_a11ffcd5481255317891e36827279bd42}
+
+
+RIPEMD-\/160 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 20-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Crypt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{_crypt_8c_a11ffcd5481255317891e36827279bd42_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_crypt_8c_a65ada373e8917a80136b5756d3e55932}{
+\index{Crypt.c@{Crypt.c}!Sha160@{Sha160}}
+\index{Sha160@{Sha160}!Crypt.c@{Crypt.c}}
+\subsubsection[{Sha160}]{\setlength{\rightskip}{0pt plus 5cm}void Sha160 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_crypt_8c_a65ada373e8917a80136b5756d3e55932}
+
+
+SHA-\/1 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 10-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Crypt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{_crypt_8c_a65ada373e8917a80136b5756d3e55932_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_crypt_8c_a31002de62901cbe9c88a0fd0f5f57770}{
+\index{Crypt.c@{Crypt.c}!Sha256@{Sha256}}
+\index{Sha256@{Sha256}!Crypt.c@{Crypt.c}}
+\subsubsection[{Sha256}]{\setlength{\rightskip}{0pt plus 5cm}void Sha256 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_crypt_8c_a31002de62901cbe9c88a0fd0f5f57770}
+
+
+SHA-\/256 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 32-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Crypt.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_crypt_8c_a31002de62901cbe9c88a0fd0f5f57770_icgraph}
+\end{center}
+\end{figure}
+
+

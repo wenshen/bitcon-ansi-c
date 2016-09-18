@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmdblock" kind="struct" prot="public">
+    <compoundname>Cmdblock</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmdblock_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="153" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1a742f80039bbe773ec691c1ce0ae01f95" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char prev_block[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>prev_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="154" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1a6a88b5c7b1ef72e9ba761f9f8d4525a4" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char markle_root[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>markle_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="155" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1ab20b0c7772544cf5d318507f34231fbe" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="156" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1afeda3c90a255fe7e4b1e99b4308cce2c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="157" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1aa2f9785a9d9116cc4592db06375cb887" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nonce</definition>
+        <argsstring></argsstring>
+        <name>nonce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="158" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1abdb4932647cd3ed8e9c289c37834b136" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t txnCount</definition>
+        <argsstring></argsstring>
+        <name>txnCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="159" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmdblock_1a4e32cc9ad3444c21452f9445fb3eb9ab" prot="public" static="no" mutable="no">
+        <type>struct tx *</type>
+        <definition>struct tx* txns</definition>
+        <argsstring></argsstring>
+        <name>txns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="160" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="151" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="151" bodyend="162"/>
+    <listofallmembers>
+      <member refid="struct_cmdblock_1afeda3c90a255fe7e4b1e99b4308cce2c" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>bits</name></member>
+      <member refid="struct_cmdblock_1a6a88b5c7b1ef72e9ba761f9f8d4525a4" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>markle_root</name></member>
+      <member refid="struct_cmdblock_1aa2f9785a9d9116cc4592db06375cb887" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>nonce</name></member>
+      <member refid="struct_cmdblock_1a742f80039bbe773ec691c1ce0ae01f95" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>prev_block</name></member>
+      <member refid="struct_cmdblock_1ab20b0c7772544cf5d318507f34231fbe" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>timestamp</name></member>
+      <member refid="struct_cmdblock_1abdb4932647cd3ed8e9c289c37834b136" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>txnCount</name></member>
+      <member refid="struct_cmdblock_1a4e32cc9ad3444c21452f9445fb3eb9ab" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>txns</name></member>
+      <member refid="struct_cmdblock_1acd99bb05ca015e7d74448acb1deba7ca" prot="public" virt="non-virtual"><scope>Cmdblock</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

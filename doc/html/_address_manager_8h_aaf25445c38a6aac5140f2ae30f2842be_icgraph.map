@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_manager_8h.html#aed9eb103729187bdc2e0f9c9aa84d26a" title="Determines if a NetworkAddress already exists in the AddressManager. Compares the IP address and port..." alt="" coords="268,5,503,35"/>
+<area shape="rect" id="node5" href="$_address_manager_8h.html#a080e5ce03774a51bf8b09df69c835465" title="Removes a NetworkAddress if the AddressManager has it." alt="" coords="279,59,492,88"/>
+<area shape="rect" id="node7" href="$_address_manager_8h.html#a2cce9ddb7b4714545f83b8f0fbddd64b" title="Takes a Peer an places it into the AddressManager." alt="" coords="288,112,483,141"/>
+<area shape="rect" id="node9" href="$_address_manager_8h.html#af25a0f04ea998d7434b5101bcd2de421" title="Adds a Peer an places it into the AddressManager with a retain." alt="" coords="557,85,747,115"/>
+<area shape="rect" id="node11" href="$_address_manager_8h.html#ab1d87a09ae5aad1c89d8ba13549dc035" title="Remove a Peer from the peers list." alt="" coords="553,139,751,168"/>
+</map>

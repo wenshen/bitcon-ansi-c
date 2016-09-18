@@ -1,0 +1,781 @@
+\hypertarget{_dependencies_8h}{
+\section{src/Dependencies.h File Reference}
+\label{_dependencies_8h}\index{src/Dependencies.h@{src/Dependencies.h}}
+}
+
+
+File for weak linked functions for dependency injection. All these functions are unimplemented. The functions include the crytography functions which are key for the functioning of bitcoin. Sockets must be non-\/blocking and use an asynchronous onErrorReceived-\/type system. The use of the sockets is designed to be compatible with libevent. The random number functions should be cryptographically secure. See the dependecies folder for implementations.  
+
+
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include \char`\"{}Constants.h\char`\"{}}\par
+Include dependency graph for Dependencies.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{_dependencies_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_dependencies_8h_ac8d904e99d5833b896736a76b27da0b9}{Sha256} (uint8\_\-t $\ast$data, uint16\_\-t length, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em SHA-\/256 cryptographic hash function. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_afc4c3de28fcd3d122636259977f3029c}{Ripemd160} (uint8\_\-t $\ast$data, uint16\_\-t length, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em RIPEMD-\/160 cryptographic hash function. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_a5a496b8ef882d805eccedfa308f29a48}{Sha160} (uint8\_\-t $\ast$data, uint16\_\-t length, uint8\_\-t $\ast$output)
+\begin{DoxyCompactList}\small\item\em SHA-\/1 cryptographic hash function. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a02ed88c025f0b88dbc8a4aec268a3afe}{EcdsaVerify} (uint8\_\-t $\ast$signature, uint8\_\-t sigLen, uint8\_\-t $\ast$hash, const uint8\_\-t $\ast$pubKey, uint8\_\-t keyLen)
+\begin{DoxyCompactList}\small\item\em Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \end{DoxyCompactList}\item 
+SocketReturn \hyperlink{_dependencies_8h_abbc3b6a1bc7284cdb7eecbc2fc8170c1}{NewSocket} (uint64\_\-t $\ast$socketID, int IPv6)
+\begin{DoxyCompactList}\small\item\em Creates a new TCP/IP socket. The socket should use a non-\/blocking mode. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a2a0f9e343e2230ff956da5cc121314f6}{SocketBind} (uint64\_\-t $\ast$socketID, int IPv6, uint16\_\-t port)
+\item 
+int \hyperlink{_dependencies_8h_ac12fb121981627704e01d8e80c1c8039}{SocketConnect} (uint64\_\-t socketID, uint8\_\-t $\ast$IP, int IPv6, uint16\_\-t port)
+\begin{DoxyCompactList}\small\item\em Begin connecting to an external host with a socket. This should be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a4febf2cf5ef84322b6295a3e391d15d7}{SocketListen} (uint64\_\-t socketID, uint16\_\-t maxConnections)
+\begin{DoxyCompactList}\small\item\em Begin listening for incomming connections on a bound socket. This should be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_aeaf4fe44e55376f10009d0e4863295b5}{SocketAccept} (uint64\_\-t socketID, uint64\_\-t $\ast$connectionSocketID)
+\begin{DoxyCompactList}\small\item\em Accepts an incomming IPv4 connection on a bound socket. This should be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_ab41740ec6ee6ba4124b44095e751bdb3}{NewEventLoop} (uint64\_\-t $\ast$loopID, void($\ast$onError)(void $\ast$), void($\ast$onDidTimeout)(void $\ast$, void $\ast$, TimeOutType), void $\ast$communicator)
+\begin{DoxyCompactList}\small\item\em Starts a event loop for socket onErrorReceived on a seperate thread. Access to the loop id should be thread safe. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_adb5da0eddf7a2b7b83b9fa8569eae737}{SocketCanAcceptEvent} (uint64\_\-t $\ast$eventID, uint64\_\-t loopID, uint64\_\-t socketID, void($\ast$onCanAccept)(void $\ast$, uint64\_\-t))
+\begin{DoxyCompactList}\small\item\em Creates an event where a listening socket is available for accepting a connection. The event should be persistent and not issue timeouts. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a6c590c239497b83734a144f206907faf}{SocketDidConnectEvent} (uint64\_\-t $\ast$eventID, uint64\_\-t loopID, uint64\_\-t socketID, void($\ast$onDidConnect)(void $\ast$, void $\ast$), void $\ast$peer)
+\begin{DoxyCompactList}\small\item\em Sets a function pointer for the event where a socket has connected. The event only needs to fire once on the successful connection or timeout. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_aaa8b848ed666e9a9d32615047609a34f}{SocketCanSendEvent} (uint64\_\-t $\ast$eventID, uint64\_\-t loopID, uint64\_\-t socketID, void($\ast$onCanSend)(void $\ast$, void $\ast$), void $\ast$peer)
+\begin{DoxyCompactList}\small\item\em Sets a function pointer for the event where a socket is available for sending data. This should be persistent. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a415c2c7980a314c65a01eef32e14c7ff}{SocketCanReceiveEvent} (uint64\_\-t $\ast$eventID, uint64\_\-t loopID, uint64\_\-t socketID, void($\ast$onCanReceive)(void $\ast$, void $\ast$), void $\ast$peer)
+\begin{DoxyCompactList}\small\item\em Sets a function pointer for the event where a socket is available for receiving data. This should be persistent. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a1311c01201d68c2045bc5962b63a2e90}{SocketAddEvent} (uint64\_\-t eventID, uint32\_\-t timeout)
+\begin{DoxyCompactList}\small\item\em Adds an event to be pending. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a5c21b4cfc0706a759f2634335300aae1}{SocketRemoveEvent} (uint64\_\-t eventID)
+\begin{DoxyCompactList}\small\item\em Removes an event so no more onErrorReceived are made. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_a882189cc4cf9e761c6b0e7028d307dfd}{SocketFreeEvent} (uint64\_\-t eventID)
+\begin{DoxyCompactList}\small\item\em Makes an event non-\/pending and frees it. \end{DoxyCompactList}\item 
+int32\_\-t \hyperlink{_dependencies_8h_a9cdaba7b59ae8b6fbf1c17147bc6ad49}{SocketSend} (uint64\_\-t socketID, uint8\_\-t $\ast$data, uint32\_\-t len)
+\begin{DoxyCompactList}\small\item\em Sends data to a socket. This should be non-\/blocking. \end{DoxyCompactList}\item 
+int32\_\-t \hyperlink{_dependencies_8h_af7c759dd8dfe7ab9aae2c337cb616a5a}{SocketReceive} (uint64\_\-t socketID, uint8\_\-t $\ast$data, uint32\_\-t len)
+\begin{DoxyCompactList}\small\item\em Receives data from a socket. This should be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_a1bd67bc870070326a584a33e29a55057}{StartTimer} (uint64\_\-t loopID, uint64\_\-t $\ast$timer, uint16\_\-t time, void($\ast$callback)(void $\ast$), void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Calls a callback every \char`\"{}time\char`\"{} seconds, until the timer is ended. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_a8e0f7d4bdd499eea2b47b67542cdb392}{EndTimer} (uint64\_\-t timer)
+\begin{DoxyCompactList}\small\item\em Ends a timer. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_a71406297a3fd81f754021523706a2faf}{CloseSocket} (uint64\_\-t socketID)
+\begin{DoxyCompactList}\small\item\em Closes a socket. The id should be freed, as well as any other data relating to this socket. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_adcc8dc300d098d6fd7f2db15fbae56ec}{ExitEventLoop} (uint64\_\-t loopID)
+\begin{DoxyCompactList}\small\item\em Exits an event loop and frees all data relating to it. \end{DoxyCompactList}\item 
+int \hyperlink{_dependencies_8h_afebd5f796779f2c7335d8476ed2d0997}{NewSecureRandomGenerator} (uint64\_\-t $\ast$gen)
+\begin{DoxyCompactList}\small\item\em Returns an instance of a cryptographically secure random number generator. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_a6a0eec9608c896c6ffd20cfca2bf683b}{SecureRandomSeed} (uint64\_\-t gen)
+\begin{DoxyCompactList}\small\item\em Seeds the random number generator securely. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_a2f687145a9bee62dabc7a344a7ca9f2e}{RandomSeed} (uint64\_\-t gen, uint64\_\-t seed)
+\begin{DoxyCompactList}\small\item\em Seeds the generator from a 64-\/bit integer. \end{DoxyCompactList}\item 
+uint64\_\-t \hyperlink{_dependencies_8h_ae654eaeec3513d33e2b988f902924413}{SecureRandomInteger} (uint64\_\-t gen)
+\begin{DoxyCompactList}\small\item\em Generates a 64 bit integer. \end{DoxyCompactList}\item 
+void \hyperlink{_dependencies_8h_af30a1c6f1f96b742f1f9e58aeafa5178}{FreeSecureRandomGenerator} (uint64\_\-t gen)
+\begin{DoxyCompactList}\small\item\em Frees the random number generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File for weak linked functions for dependency injection. All these functions are unimplemented. The functions include the crytography functions which are key for the functioning of bitcoin. Sockets must be non-\/blocking and use an asynchronous onErrorReceived-\/type system. The use of the sockets is designed to be compatible with libevent. The random number functions should be cryptographically secure. See the dependecies folder for implementations. 
+
+Definition in file \hyperlink{_dependencies_8h_source}{Dependencies.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_dependencies_8h_a71406297a3fd81f754021523706a2faf}{
+\index{Dependencies.h@{Dependencies.h}!CloseSocket@{CloseSocket}}
+\index{CloseSocket@{CloseSocket}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{CloseSocket}]{\setlength{\rightskip}{0pt plus 5cm}void CloseSocket (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{socketID}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a71406297a3fd81f754021523706a2faf}
+
+
+Closes a socket. The id should be freed, as well as any other data relating to this socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & The socket id to be closed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_a02ed88c025f0b88dbc8a4aec268a3afe}{
+\index{Dependencies.h@{Dependencies.h}!EcdsaVerify@{EcdsaVerify}}
+\index{EcdsaVerify@{EcdsaVerify}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{EcdsaVerify}]{\setlength{\rightskip}{0pt plus 5cm}int EcdsaVerify (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{signature, }
+\item[{uint8\_\-t}]{sigLen, }
+\item[{uint8\_\-t $\ast$}]{hash, }
+\item[{const uint8\_\-t $\ast$}]{pubKey, }
+\item[{uint8\_\-t}]{keyLen}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a02ed88c025f0b88dbc8a4aec268a3afe}
+
+
+Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signature} & BER encoded signature bytes. \\
+\hline
+{\em sigLen} & The length of the signature bytes. \\
+\hline
+{\em hash} & A 32 byte hash for checking the signature against. \\
+\hline
+{\em pubKey} & Public key bytes to check this signature with. \\
+\hline
+{\em keyLen} & The length of the public key bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid and false if invalid. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a8e0f7d4bdd499eea2b47b67542cdb392}{
+\index{Dependencies.h@{Dependencies.h}!EndTimer@{EndTimer}}
+\index{EndTimer@{EndTimer}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{EndTimer}]{\setlength{\rightskip}{0pt plus 5cm}void EndTimer (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{timer}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a8e0f7d4bdd499eea2b47b67542cdb392}
+
+
+Ends a timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The timer sent by reference to be set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_adcc8dc300d098d6fd7f2db15fbae56ec}{
+\index{Dependencies.h@{Dependencies.h}!ExitEventLoop@{ExitEventLoop}}
+\index{ExitEventLoop@{ExitEventLoop}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{ExitEventLoop}]{\setlength{\rightskip}{0pt plus 5cm}void ExitEventLoop (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{loopID}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_adcc8dc300d098d6fd7f2db15fbae56ec}
+
+
+Exits an event loop and frees all data relating to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & The loop ID. If zero, do nothing. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_af30a1c6f1f96b742f1f9e58aeafa5178}{
+\index{Dependencies.h@{Dependencies.h}!FreeSecureRandomGenerator@{FreeSecureRandomGenerator}}
+\index{FreeSecureRandomGenerator@{FreeSecureRandomGenerator}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{FreeSecureRandomGenerator}]{\setlength{\rightskip}{0pt plus 5cm}void FreeSecureRandomGenerator (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{gen}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_af30a1c6f1f96b742f1f9e58aeafa5178}
+
+
+Frees the random number generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gen} & The generator. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_ab41740ec6ee6ba4124b44095e751bdb3}{
+\index{Dependencies.h@{Dependencies.h}!NewEventLoop@{NewEventLoop}}
+\index{NewEventLoop@{NewEventLoop}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{NewEventLoop}]{\setlength{\rightskip}{0pt plus 5cm}int NewEventLoop (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{loopID, }
+\item[{void($\ast$)(void $\ast$)}]{onError, }
+\item[{void($\ast$)(void $\ast$, void $\ast$, TimeOutType)}]{onDidTimeout, }
+\item[{void $\ast$}]{communicator}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_ab41740ec6ee6ba4124b44095e751bdb3}
+
+
+Starts a event loop for socket onErrorReceived on a seperate thread. Access to the loop id should be thread safe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & A uint64\_\-t storing an integer or pointer representation of the new event loop. \\
+\hline
+{\em onError} & If the event loop fails during execution of the thread, this function should be called. \\
+\hline
+{\em onDidTimeout} & The function to call for timeout onErrorReceived. The second argument is for the peer given by onErrorReceived. The third is for the timeout type. For receiving data, the timeout should be \_\-TIMEOUT\_\-RECEIVE. The NetworkCommunicator will determine if it should be changed to \_\-TIMEOUT\_\-RESPONSE. \\
+\hline
+{\em communicator} & A NetworkCommunicator to pass to all event functions (first parameter), including \char`\"{}onError\char`\"{} and \char`\"{}onDidTimeout\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_afebd5f796779f2c7335d8476ed2d0997}{
+\index{Dependencies.h@{Dependencies.h}!NewSecureRandomGenerator@{NewSecureRandomGenerator}}
+\index{NewSecureRandomGenerator@{NewSecureRandomGenerator}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{NewSecureRandomGenerator}]{\setlength{\rightskip}{0pt plus 5cm}int NewSecureRandomGenerator (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{gen}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_afebd5f796779f2c7335d8476ed2d0997}
+
+
+Returns an instance of a cryptographically secure random number generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & generator as a pointer or integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_abbc3b6a1bc7284cdb7eecbc2fc8170c1}{
+\index{Dependencies.h@{Dependencies.h}!NewSocket@{NewSocket}}
+\index{NewSocket@{NewSocket}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{NewSocket}]{\setlength{\rightskip}{0pt plus 5cm}SocketReturn NewSocket (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{socketID, }
+\item[{int}]{IPv6}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_abbc3b6a1bc7284cdb7eecbc2fc8170c1}
+
+
+Creates a new TCP/IP socket. The socket should use a non-\/blocking mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & Pointer to uint64\_\-t. Can be pointer value. \\
+\hline
+{\em IPv6} & true if the socket is used to connect to the IPv6 network. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\_\-SOCKET\_\-OK if the socket was successfully created, \_\-SOCKET\_\-NO\_\-SUPPORT and \_\-SOCKET\_\-BAD if the socket could not be created for any other reason. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a2f687145a9bee62dabc7a344a7ca9f2e}{
+\index{Dependencies.h@{Dependencies.h}!RandomSeed@{RandomSeed}}
+\index{RandomSeed@{RandomSeed}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{RandomSeed}]{\setlength{\rightskip}{0pt plus 5cm}void RandomSeed (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{gen, }
+\item[{uint64\_\-t}]{seed}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a2f687145a9bee62dabc7a344a7ca9f2e}
+
+
+Seeds the generator from a 64-\/bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gen} & The generator. \\
+\hline
+{\em seed} & The 64-\/bit integer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_afc4c3de28fcd3d122636259977f3029c}{
+\index{Dependencies.h@{Dependencies.h}!Ripemd160@{Ripemd160}}
+\index{Ripemd160@{Ripemd160}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{Ripemd160}]{\setlength{\rightskip}{0pt plus 5cm}void Ripemd160 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_afc4c3de28fcd3d122636259977f3029c}
+
+
+RIPEMD-\/160 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 20-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Crypt.c.
+
+\hypertarget{_dependencies_8h_ae654eaeec3513d33e2b988f902924413}{
+\index{Dependencies.h@{Dependencies.h}!SecureRandomInteger@{SecureRandomInteger}}
+\index{SecureRandomInteger@{SecureRandomInteger}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SecureRandomInteger}]{\setlength{\rightskip}{0pt plus 5cm}uint64\_\-t SecureRandomInteger (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{gen}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_ae654eaeec3513d33e2b988f902924413}
+
+
+Generates a 64 bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gen} & The generator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The random 64-\/bit integer integer. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a6a0eec9608c896c6ffd20cfca2bf683b}{
+\index{Dependencies.h@{Dependencies.h}!SecureRandomSeed@{SecureRandomSeed}}
+\index{SecureRandomSeed@{SecureRandomSeed}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SecureRandomSeed}]{\setlength{\rightskip}{0pt plus 5cm}void SecureRandomSeed (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{gen}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a6a0eec9608c896c6ffd20cfca2bf683b}
+
+
+Seeds the random number generator securely. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gen} & The generator. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_a5a496b8ef882d805eccedfa308f29a48}{
+\index{Dependencies.h@{Dependencies.h}!Sha160@{Sha160}}
+\index{Sha160@{Sha160}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{Sha160}]{\setlength{\rightskip}{0pt plus 5cm}void Sha160 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a5a496b8ef882d805eccedfa308f29a48}
+
+
+SHA-\/1 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 10-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Crypt.c.
+
+\hypertarget{_dependencies_8h_ac8d904e99d5833b896736a76b27da0b9}{
+\index{Dependencies.h@{Dependencies.h}!Sha256@{Sha256}}
+\index{Sha256@{Sha256}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{Sha256}]{\setlength{\rightskip}{0pt plus 5cm}void Sha256 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint16\_\-t}]{length, }
+\item[{uint8\_\-t $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_ac8d904e99d5833b896736a76b27da0b9}
+
+
+SHA-\/256 cryptographic hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the byte data to hash. \\
+\hline
+{\em length} & The length of the data to hash. \\
+\hline
+{\em output} & A pointer to hold a 32-\/byte hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Crypt.c.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_dependencies_8h_ac8d904e99d5833b896736a76b27da0b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_dependencies_8h_aeaf4fe44e55376f10009d0e4863295b5}{
+\index{Dependencies.h@{Dependencies.h}!SocketAccept@{SocketAccept}}
+\index{SocketAccept@{SocketAccept}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketAccept}]{\setlength{\rightskip}{0pt plus 5cm}int SocketAccept (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{socketID, }
+\item[{uint64\_\-t $\ast$}]{connectionSocketID}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_aeaf4fe44e55376f10009d0e4863295b5}
+
+
+Accepts an incomming IPv4 connection on a bound socket. This should be non-\/blocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & The socket id \\
+\hline
+{\em connectionSocketID} & A socket id for a new socket for the connection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if function was sucessful and false otherwise. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a1311c01201d68c2045bc5962b63a2e90}{
+\index{Dependencies.h@{Dependencies.h}!SocketAddEvent@{SocketAddEvent}}
+\index{SocketAddEvent@{SocketAddEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketAddEvent}]{\setlength{\rightskip}{0pt plus 5cm}int SocketAddEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{eventID, }
+\item[{uint32\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a1311c01201d68c2045bc5962b63a2e90}
+
+
+Adds an event to be pending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eventID} & The event ID to add. \\
+\hline
+{\em timeout} & The time in milliseconds to issue a timeout for the event. 0 for no timeout. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if sucessful, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a2a0f9e343e2230ff956da5cc121314f6}{
+\index{Dependencies.h@{Dependencies.h}!SocketBind@{SocketBind}}
+\index{SocketBind@{SocketBind}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketBind}]{\setlength{\rightskip}{0pt plus 5cm}int SocketBind (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{socketID, }
+\item[{int}]{IPv6, }
+\item[{uint16\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a2a0f9e343e2230ff956da5cc121314f6}
+\hypertarget{_dependencies_8h_adb5da0eddf7a2b7b83b9fa8569eae737}{
+\index{Dependencies.h@{Dependencies.h}!SocketCanAcceptEvent@{SocketCanAcceptEvent}}
+\index{SocketCanAcceptEvent@{SocketCanAcceptEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketCanAcceptEvent}]{\setlength{\rightskip}{0pt plus 5cm}int SocketCanAcceptEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{eventID, }
+\item[{uint64\_\-t}]{loopID, }
+\item[{uint64\_\-t}]{socketID, }
+\item[{void($\ast$)(void $\ast$, uint64\_\-t)}]{onCanAccept}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_adb5da0eddf7a2b7b83b9fa8569eae737}
+
+
+Creates an event where a listening socket is available for accepting a connection. The event should be persistent and not issue timeouts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & The loop id for socket onErrorReceived. \\
+\hline
+{\em socketID} & The socket id \\
+\hline
+{\em onCanAccept} & The function to call for the event. Accepts \char`\"{}onEventArg\char`\"{} and the socket ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a415c2c7980a314c65a01eef32e14c7ff}{
+\index{Dependencies.h@{Dependencies.h}!SocketCanReceiveEvent@{SocketCanReceiveEvent}}
+\index{SocketCanReceiveEvent@{SocketCanReceiveEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketCanReceiveEvent}]{\setlength{\rightskip}{0pt plus 5cm}int SocketCanReceiveEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{eventID, }
+\item[{uint64\_\-t}]{loopID, }
+\item[{uint64\_\-t}]{socketID, }
+\item[{void($\ast$)(void $\ast$, void $\ast$)}]{onCanReceive, }
+\item[{void $\ast$}]{peer}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a415c2c7980a314c65a01eef32e14c7ff}
+
+
+Sets a function pointer for the event where a socket is available for receiving data. This should be persistent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & The loop id for socket onErrorReceived. \\
+\hline
+{\em socketID} & The socket id \\
+\hline
+{\em onCanReceive} & The function to call for the event. \\
+\hline
+{\em peer} & The peer to send to the \char`\"{}onCanReceive\char`\"{} or \char`\"{}onDidTimeout\char`\"{} function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_aaa8b848ed666e9a9d32615047609a34f}{
+\index{Dependencies.h@{Dependencies.h}!SocketCanSendEvent@{SocketCanSendEvent}}
+\index{SocketCanSendEvent@{SocketCanSendEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketCanSendEvent}]{\setlength{\rightskip}{0pt plus 5cm}int SocketCanSendEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{eventID, }
+\item[{uint64\_\-t}]{loopID, }
+\item[{uint64\_\-t}]{socketID, }
+\item[{void($\ast$)(void $\ast$, void $\ast$)}]{onCanSend, }
+\item[{void $\ast$}]{peer}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_aaa8b848ed666e9a9d32615047609a34f}
+
+
+Sets a function pointer for the event where a socket is available for sending data. This should be persistent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & The loop id for socket onErrorReceived. \\
+\hline
+{\em socketID} & The socket id \\
+\hline
+{\em onCanSend} & The function to call for the event. \\
+\hline
+{\em peer} & The peer to send to the \char`\"{}onCanSend\char`\"{} or \char`\"{}onDidTimeout\char`\"{} function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_ac12fb121981627704e01d8e80c1c8039}{
+\index{Dependencies.h@{Dependencies.h}!SocketConnect@{SocketConnect}}
+\index{SocketConnect@{SocketConnect}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketConnect}]{\setlength{\rightskip}{0pt plus 5cm}int SocketConnect (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{socketID, }
+\item[{uint8\_\-t $\ast$}]{IP, }
+\item[{int}]{IPv6, }
+\item[{uint16\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_ac12fb121981627704e01d8e80c1c8039}
+
+
+Begin connecting to an external host with a socket. This should be non-\/blocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & The socket id \\
+\hline
+{\em IP} & 16 bytes for an IPv6 address to connect to. \\
+\hline
+{\em IPv6} & True if IP address is for the IPv6 network. A IPv6 address can represent addresses for IPv4 too. To avoid the need to detect this, a intean can be used. \\
+\hline
+{\em port} & Port to connect to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the function was sucessful and false otherwise. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a6c590c239497b83734a144f206907faf}{
+\index{Dependencies.h@{Dependencies.h}!SocketDidConnectEvent@{SocketDidConnectEvent}}
+\index{SocketDidConnectEvent@{SocketDidConnectEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketDidConnectEvent}]{\setlength{\rightskip}{0pt plus 5cm}int SocketDidConnectEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t $\ast$}]{eventID, }
+\item[{uint64\_\-t}]{loopID, }
+\item[{uint64\_\-t}]{socketID, }
+\item[{void($\ast$)(void $\ast$, void $\ast$)}]{onDidConnect, }
+\item[{void $\ast$}]{peer}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a6c590c239497b83734a144f206907faf}
+
+
+Sets a function pointer for the event where a socket has connected. The event only needs to fire once on the successful connection or timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & The loop id for socket onErrorReceived. \\
+\hline
+{\em socketID} & The socket id \\
+\hline
+{\em onDidConnect} & The function to call for the event. \\
+\hline
+{\em peer} & The peer to send to the \char`\"{}onDidConnect\char`\"{} or \char`\"{}onDidTimeout\char`\"{} function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a882189cc4cf9e761c6b0e7028d307dfd}{
+\index{Dependencies.h@{Dependencies.h}!SocketFreeEvent@{SocketFreeEvent}}
+\index{SocketFreeEvent@{SocketFreeEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketFreeEvent}]{\setlength{\rightskip}{0pt plus 5cm}void SocketFreeEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{eventID}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a882189cc4cf9e761c6b0e7028d307dfd}
+
+
+Makes an event non-\/pending and frees it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eventID} & The event to free. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_dependencies_8h_a4febf2cf5ef84322b6295a3e391d15d7}{
+\index{Dependencies.h@{Dependencies.h}!SocketListen@{SocketListen}}
+\index{SocketListen@{SocketListen}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketListen}]{\setlength{\rightskip}{0pt plus 5cm}int SocketListen (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{socketID, }
+\item[{uint16\_\-t}]{maxConnections}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a4febf2cf5ef84322b6295a3e391d15d7}
+
+
+Begin listening for incomming connections on a bound socket. This should be non-\/blocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & The socket id \\
+\hline
+{\em maxConnections} & The maximum incomming connections to allow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if function was sucessful and false otherwise. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_af7c759dd8dfe7ab9aae2c337cb616a5a}{
+\index{Dependencies.h@{Dependencies.h}!SocketReceive@{SocketReceive}}
+\index{SocketReceive@{SocketReceive}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketReceive}]{\setlength{\rightskip}{0pt plus 5cm}int32\_\-t SocketReceive (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{socketID, }
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_af7c759dd8dfe7ab9aae2c337cb616a5a}
+
+
+Receives data from a socket. This should be non-\/blocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & The socket id to receive data from. \\
+\hline
+{\em data} & The data bytes to write the data to. \\
+\hline
+{\em len} & The length of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes actually written into \char`\"{}data\char`\"{}, \_\-SOCKET\_\-CONNECTION\_\-CLOSE on connection closure, 0 on no bytes received, and \_\-SOCKET\_\-FAILURE on failure. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a5c21b4cfc0706a759f2634335300aae1}{
+\index{Dependencies.h@{Dependencies.h}!SocketRemoveEvent@{SocketRemoveEvent}}
+\index{SocketRemoveEvent@{SocketRemoveEvent}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketRemoveEvent}]{\setlength{\rightskip}{0pt plus 5cm}int SocketRemoveEvent (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{eventID}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a5c21b4cfc0706a759f2634335300aae1}
+
+
+Removes an event so no more onErrorReceived are made. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eventID} & The event ID to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if sucessful, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a9cdaba7b59ae8b6fbf1c17147bc6ad49}{
+\index{Dependencies.h@{Dependencies.h}!SocketSend@{SocketSend}}
+\index{SocketSend@{SocketSend}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{SocketSend}]{\setlength{\rightskip}{0pt plus 5cm}int32\_\-t SocketSend (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{socketID, }
+\item[{uint8\_\-t $\ast$}]{data, }
+\item[{uint32\_\-t}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a9cdaba7b59ae8b6fbf1c17147bc6ad49}
+
+
+Sends data to a socket. This should be non-\/blocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socketID} & The socket id to send to. \\
+\hline
+{\em data} & The data bytes to send. \\
+\hline
+{\em len} & The length of the data to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes actually sent, and \_\-SOCKET\_\-FAILURE on failure that suggests further data cannot be sent. 
+\end{DoxyReturn}
+\hypertarget{_dependencies_8h_a1bd67bc870070326a584a33e29a55057}{
+\index{Dependencies.h@{Dependencies.h}!StartTimer@{StartTimer}}
+\index{StartTimer@{StartTimer}!Dependencies.h@{Dependencies.h}}
+\subsubsection[{StartTimer}]{\setlength{\rightskip}{0pt plus 5cm}int StartTimer (
+\begin{DoxyParamCaption}
+\item[{uint64\_\-t}]{loopID, }
+\item[{uint64\_\-t $\ast$}]{timer, }
+\item[{uint16\_\-t}]{time, }
+\item[{void($\ast$)(void $\ast$)}]{callback, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}
+\label{_dependencies_8h_a1bd67bc870070326a584a33e29a55057}
+
+
+Calls a callback every \char`\"{}time\char`\"{} seconds, until the timer is ended. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loopID} & The loop id for onErrorReceived. \\
+\hline
+{\em timer} & The timer sent by reference to be set. \\
+\hline
+{\em time} & The number of milliseconds between each call of the callback. \\
+\hline
+{\em callback} & The callback function. \\
+\hline
+{\em arg} & The callback argument. \\
+\hline
+\end{DoxyParams}

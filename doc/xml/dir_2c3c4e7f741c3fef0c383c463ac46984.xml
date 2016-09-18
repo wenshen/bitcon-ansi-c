@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_2c3c4e7f741c3fef0c383c463ac46984" kind="dir">
+    <compoundname>Object/</compoundname>
+    <innerdir refid="dir_d92552deecf1230ee403cdca293d1cbe">Object/Message/</innerdir>
+    <innerfile refid="_m_i_byte_array_8c">ByteArray.c</innerfile>
+    <innerfile refid="_m_i_byte_array_8h">ByteArray.h</innerfile>
+    <innerfile refid="_m_i_object_8c">Object.c</innerfile>
+    <innerfile refid="_m_i_object_8h">Object.h</innerfile>
+    <innerfile refid="_m_i_script_8c">Script.c</innerfile>
+    <innerfile refid="_m_i_script_8h">Script.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/"/>
+  </compounddef>
+</doxygen>

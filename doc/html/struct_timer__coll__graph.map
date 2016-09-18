@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_event_loop.html" title="{EventLoop\n|+ base\l+ onError\l+ onTimeOut\l+ communicator\l+ loopThread\l+ userCallback\l+ userArg\l+ userEvent\l|}" alt="" coords="5,177,120,383"/>
+<area shape="rect" id="node4" href="$struct_async_event.html" title="{AsyncEvent\n|+ base\l+ loop\l|}" alt="" coords="16,6,109,109"/>
+</map>

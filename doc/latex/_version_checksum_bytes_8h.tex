@@ -1,0 +1,384 @@
+\hypertarget{_version_checksum_bytes_8h}{
+\section{src/Object/VersionChecksumBytes/VersionChecksumBytes.h File Reference}
+\label{_version_checksum_bytes_8h}\index{src/Object/VersionChecksumBytes/VersionChecksumBytes.h@{src/Object/VersionChecksumBytes/VersionChecksumBytes.h}}
+}
+
+
+Represents a key, begining with a version byte and ending with a checksum. Inherits \hyperlink{struct_byte_array}{ByteArray}.  
+
+
+{\ttfamily \#include \char`\"{}../../Base58/Base58.h\char`\"{}}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include \char`\"{}../ByteArray.h\char`\"{}}\par
+Include dependency graph for VersionChecksumBytes.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=377pt]{_version_checksum_bytes_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$ \hyperlink{_version_checksum_bytes_8h_a8615977163a6d5bcfa019ed533d5620d}{NewVersionChecksumBytesFromString} (\hyperlink{struct_byte_array}{ByteArray} $\ast$string, int cacheString, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from a base-\/58 encoded string. The base-\/58 string will be validated by it's checksum. This returns NULL if the string is invalid. The \_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT error is given if the decoded data is less than 4 bytes. \_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID is given if the checksum does not match. \end{DoxyCompactList}\item 
+\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$ \hyperlink{_version_checksum_bytes_8h_a924c7d299ee5fc045c204f13e2ce1284}{NewVersionChecksumBytesFromBytes} (uint8\_\-t $\ast$bytes, uint32\_\-t size, int cacheString, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from bytes. \end{DoxyCompactList}\item 
+\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$ \hyperlink{_version_checksum_bytes_8h_ad9aefe5aeda2ebccd370e7b89ed8cd0b}{GetVersionChecksumBytes} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_version_checksum_bytes_8h_aea4c90e8f46d385322b8d3d5215634e2}{InitVersionChecksumBytesFromString} (\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$string, int cacheString, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from a string. \end{DoxyCompactList}\item 
+int \hyperlink{_version_checksum_bytes_8h_a04d489c466631d1e64fcfbeffc892830}{InitVersionChecksumBytesFromBytes} (\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$self, uint8\_\-t $\ast$bytes, uint32\_\-t size, int cacheString, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from bytes. \end{DoxyCompactList}\item 
+void \hyperlink{_version_checksum_bytes_8h_a405a628eda9b41f28fdfb6266780d768}{FreeVersionChecksumBytes} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. \end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{_version_checksum_bytes_8h_a3cd3efddc0687f80b4ceacc3a67d83d1}{VersionChecksumBytesGetVersion} (\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets the version for a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$ \hyperlink{_version_checksum_bytes_8h_ac5662bd7f49d0a8d43b8e7d0bfac827f}{VersionChecksumBytesGetString} (\hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets the string representation for a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object as a base-\/58 encoded String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a key, begining with a version byte and ending with a checksum. Inherits \hyperlink{struct_byte_array}{ByteArray}. 
+
+Definition in file \hyperlink{_version_checksum_bytes_8h_source}{VersionChecksumBytes.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_version_checksum_bytes_8h_a405a628eda9b41f28fdfb6266780d768}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!FreeVersionChecksumBytes@{FreeVersionChecksumBytes}}
+\index{FreeVersionChecksumBytes@{FreeVersionChecksumBytes}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{FreeVersionChecksumBytes}]{\setlength{\rightskip}{0pt plus 5cm}void FreeVersionChecksumBytes (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_a405a628eda9b41f28fdfb6266780d768}
+
+
+Frees a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file VersionChecksumBytes.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_a405a628eda9b41f28fdfb6266780d768_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_a405a628eda9b41f28fdfb6266780d768_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_version_checksum_bytes_8h_ad9aefe5aeda2ebccd370e7b89ed8cd0b}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!GetVersionChecksumBytes@{GetVersionChecksumBytes}}
+\index{GetVersionChecksumBytes@{GetVersionChecksumBytes}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{GetVersionChecksumBytes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VersionChecksumBytes}$\ast$ GetVersionChecksumBytes (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_ad9aefe5aeda2ebccd370e7b89ed8cd0b}
+
+
+Gets a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file VersionChecksumBytes.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_ad9aefe5aeda2ebccd370e7b89ed8cd0b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_version_checksum_bytes_8h_a04d489c466631d1e64fcfbeffc892830}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!InitVersionChecksumBytesFromBytes@{InitVersionChecksumBytesFromBytes}}
+\index{InitVersionChecksumBytesFromBytes@{InitVersionChecksumBytesFromBytes}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{InitVersionChecksumBytesFromBytes}]{\setlength{\rightskip}{0pt plus 5cm}int InitVersionChecksumBytesFromBytes (
+\begin{DoxyParamCaption}
+\item[{{\bf VersionChecksumBytes} $\ast$}]{self, }
+\item[{uint8\_\-t $\ast$}]{bytes, }
+\item[{uint32\_\-t}]{size, }
+\item[{int}]{cacheString, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_a04d489c466631d1e64fcfbeffc892830}
+
+
+Initialises a new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object to initialise. \\
+\hline
+{\em bytes} & The bytes for the \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. \\
+\hline
+{\em size} & The size of the byte data. \\
+\hline
+{\em cacheString} & If true, the bitcoin string for this object will be cached in memory. \\
+\hline
+{\em onErrorReceived} & A Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file VersionChecksumBytes.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_a04d489c466631d1e64fcfbeffc892830_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_a04d489c466631d1e64fcfbeffc892830_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_version_checksum_bytes_8h_aea4c90e8f46d385322b8d3d5215634e2}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!InitVersionChecksumBytesFromString@{InitVersionChecksumBytesFromString}}
+\index{InitVersionChecksumBytesFromString@{InitVersionChecksumBytesFromString}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{InitVersionChecksumBytesFromString}]{\setlength{\rightskip}{0pt plus 5cm}int InitVersionChecksumBytesFromString (
+\begin{DoxyParamCaption}
+\item[{{\bf VersionChecksumBytes} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{string, }
+\item[{int}]{cacheString, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_aea4c90e8f46d385322b8d3d5215634e2}
+
+
+Initialises a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object to initialise. \\
+\hline
+{\em string} & A String to make a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object with a termination character. \\
+\hline
+{\em cacheString} & If true, the bitcoin string for this object will be cached in memory. \\
+\hline
+{\em onErrorReceived} & A Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file VersionChecksumBytes.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_aea4c90e8f46d385322b8d3d5215634e2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_aea4c90e8f46d385322b8d3d5215634e2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_version_checksum_bytes_8h_a924c7d299ee5fc045c204f13e2ce1284}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!NewVersionChecksumBytesFromBytes@{NewVersionChecksumBytesFromBytes}}
+\index{NewVersionChecksumBytesFromBytes@{NewVersionChecksumBytesFromBytes}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{NewVersionChecksumBytesFromBytes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VersionChecksumBytes}$\ast$ NewVersionChecksumBytesFromBytes (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{bytes, }
+\item[{uint32\_\-t}]{size, }
+\item[{int}]{cacheString, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_a924c7d299ee5fc045c204f13e2ce1284}
+
+
+Creates a new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The bytes for the \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. \\
+\hline
+{\em size} & The size of the byte data. \\
+\hline
+{\em cacheString} & If true, the bitcoin string for this object will be cached in memory. \\
+\hline
+{\em onErrorReceived} & A Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. 
+\end{DoxyReturn}
+\hypertarget{_version_checksum_bytes_8h_a8615977163a6d5bcfa019ed533d5620d}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!NewVersionChecksumBytesFromString@{NewVersionChecksumBytesFromString}}
+\index{NewVersionChecksumBytesFromString@{NewVersionChecksumBytesFromString}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{NewVersionChecksumBytesFromString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VersionChecksumBytes}$\ast$ NewVersionChecksumBytesFromString (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{string, }
+\item[{int}]{cacheString, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_a8615977163a6d5bcfa019ed533d5620d}
+
+
+Creates a new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object from a base-\/58 encoded string. The base-\/58 string will be validated by it's checksum. This returns NULL if the string is invalid. The \_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT error is given if the decoded data is less than 4 bytes. \_\-ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID is given if the checksum does not match. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & A base-\/58 encoded String to make a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object with a termination character. \\
+\hline
+{\em cacheString} & If true, the bitcoin string for this object will be cached in memory. \\
+\hline
+{\em onErrorReceived} & A Engine for errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object or NULL on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file VersionChecksumBytes.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_a8615977163a6d5bcfa019ed533d5620d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_version_checksum_bytes_8h_ac5662bd7f49d0a8d43b8e7d0bfac827f}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!VersionChecksumBytesGetString@{VersionChecksumBytesGetString}}
+\index{VersionChecksumBytesGetString@{VersionChecksumBytesGetString}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{VersionChecksumBytesGetString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ VersionChecksumBytesGetString (
+\begin{DoxyParamCaption}
+\item[{{\bf VersionChecksumBytes} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_ac5662bd7f49d0a8d43b8e7d0bfac827f}
+
+
+Gets the string representation for a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object as a base-\/58 encoded String. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object represented as a base-\/58 encoded String. Do not modify this. Copy if modification is required. 
+\end{DoxyReturn}
+\hypertarget{_version_checksum_bytes_8h_a3cd3efddc0687f80b4ceacc3a67d83d1}{
+\index{VersionChecksumBytes.h@{VersionChecksumBytes.h}!VersionChecksumBytesGetVersion@{VersionChecksumBytesGetVersion}}
+\index{VersionChecksumBytesGetVersion@{VersionChecksumBytesGetVersion}!VersionChecksumBytes.h@{VersionChecksumBytes.h}}
+\subsubsection[{VersionChecksumBytesGetVersion}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t VersionChecksumBytesGetVersion (
+\begin{DoxyParamCaption}
+\item[{{\bf VersionChecksumBytes} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_version_checksum_bytes_8h_a3cd3efddc0687f80b4ceacc3a67d83d1}
+
+
+Gets the version for a \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_version_checksum_bytes}{VersionChecksumBytes} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The version code. The Macros \_\-PRODUCTION\_\-NETWORK and \_\-TEST\_\-NETWORK should correspond to this. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file VersionChecksumBytes.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_version_checksum_bytes_8h_a3cd3efddc0687f80b4ceacc3a67d83d1_cgraph}
+\end{center}
+\end{figure}
+
+

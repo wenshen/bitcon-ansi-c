@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_broadcast_8c.html" title="src/Object/Network/AddressBroadcast.c" alt="" coords="5,83,261,112"/>
+<area shape="rect" id="node5" href="$_address_manager_8h.html" title="Stores addresses both unconnected and connected. It also proves serialisation and deserialisation so ..." alt="" coords="285,83,533,112"/>
+<area shape="rect" id="node7" href="$_address_manager_8c.html" title="src/Object/Network/AddressManager.c" alt="" coords="140,160,388,189"/>
+<area shape="rect" id="node9" href="$_network_communicator_8h.html" title="Used for communicating to other peers. The network communicator can send and receive bitcoin messages..." alt="" coords="412,160,695,189"/>
+<area shape="rect" id="node11" href="$_network_communicator_8c.html" title="src/Object/Network/NetworkCommunicator.c" alt="" coords="412,237,695,267"/>
+</map>

@@ -1,0 +1,1307 @@
+\hypertarget{_constants_8h}{
+\section{src/Constants.h File Reference}
+\label{_constants_8h}\index{src/Constants.h@{src/Constants.h}}
+}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_constants_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_constants_8h_a9d37d43ac2717b06ef7120784465e56f}{RETURN\_\-SUCCESS}~1;
+\item 
+\#define \hyperlink{_constants_8h_a2c984349b6e2ee2e658b9cf9ef2aa2fb}{RETURN\_\-FAILURE}~0;
+\item 
+\#define \hyperlink{_constants_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}~0
+\item 
+\#define \hyperlink{_constants_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}~1
+\item 
+\#define \hyperlink{_constants_8h_aff8cb6037213b450ac1acd6cd4208123}{BYTE\_\-LENGTH\_\-32}~32;
+\item 
+\#define \hyperlink{_constants_8h_a79ca9eb12e21a8114df35b500e01445c}{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}~0xFFFFFFFFFFFFFFFF
+\item 
+\#define \hyperlink{_constants_8h_ac9c8a59f4a29831e833e036a610378ea}{TRANSACTION\_\-INPUT\_\-FINAL}~0xFFFFFFFF
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013}{MessageType} \{ \par
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a6b5d45c74743b18c5191ca991c8424ba}{MESSAGE\_\-TYPE\_\-VERSION} =  1, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ab04a1ce83c41d3c309a7e88c5e0c6d14}{MESSAGE\_\-TYPE\_\-VERACK} =  2, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a1ca0c8f3ae33849b0a2c940aa99b4d19}{MESSAGE\_\-TYPE\_\-ADDR} =  4, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a68775d2b5fa0faa7e0a1465913f63832}{MESSAGE\_\-TYPE\_\-INV} =  8, 
+\par
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a60a5f950b28f7fda0cadda008f3dd0fb}{MESSAGE\_\-TYPE\_\-GETDATA} =  16, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a71f1ccf1984513158376b467b8a8fd8f}{MESSAGE\_\-TYPE\_\-GETBLOCKS} =  32, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ad72a28239ffad586624aff5a499db934}{MESSAGE\_\-TYPE\_\-GETHEADERS} =  64, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ad33de861150e172a4f14ec7ac179d419}{MESSAGE\_\-TYPE\_\-TX} =  128, 
+\par
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013aca5db57e84e42bb3fed6308f2ec8d36e}{MESSAGE\_\-TYPE\_\-BLOCK} =  256, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ac17b04d976b7c8f35bcafa762b1e1a22}{MESSAGE\_\-TYPE\_\-HEADERS} =  512, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ab7a4ea5ef99171707a6cd4b0b8027b41}{MESSAGE\_\-TYPE\_\-GETADDR} =  1024, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a72e87e96bdee95a2bd515e751a711994}{MESSAGE\_\-TYPE\_\-PING} =  2048, 
+\par
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013afbac2e84f45320bd443953d336d7f5ae}{MESSAGE\_\-TYPE\_\-PONG} =  4096, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a3162346b1761cce7cacd667422618e48}{MESSAGE\_\-TYPE\_\-ALERT} =  8192, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013adf95c068ca534fc0ab73fc61d95473b8}{MESSAGE\_\-TYPE\_\-ALT} =  16384, 
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a2bc05bf44bbc83dba4e60278c5da8d20}{MESSAGE\_\-TYPE\_\-ADDRMAN} =  32768, 
+\par
+\hyperlink{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013adced8be36f6ac13e075b19b11b9b589f}{MESSAGE\_\-TYPE\_\-CHAINDESC} =  65536
+ \}
+\item 
+enum \hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} \{ \par
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5aa2f1792deac2599c240381feee8259de}{ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5af05df7a212413efa39d4df84ba44d5f5}{ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ac56e3ae43ec10f4c69884e2c7f9aef06}{ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63}{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}, 
+\par
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26}{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d}{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e}{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ab302761b8ba6c3fcab51ef4777465b9d}{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}, 
+\par
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a9394b7da919935cb79dd5d0fdad29e72}{ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ad2b6af8b647680e44843049b8534352f}{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a4243d1ab93511c54906657b89777e17d}{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5aa0f84dd7d9cade49146fdd0404c4db1b}{ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}, 
+\par
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a226e62209c94457dbd3935a604bb56ce}{ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5acf62cedb6da67e77c29ffc2281503f1b}{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a9e3fa866c434afd77b35c66fae662428}{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a3af2ec42d69bd79f7ffbdd7858980108}{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}, 
+\par
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69}{ERROR\_\-OUT\_\-OF\_\-MEMORY}, 
+\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce}{ERROR\_\-INIT\_\-FAIL}
+ \}
+\item 
+enum \hyperlink{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504}{Compare} \{ \hyperlink{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76}{COMPARE\_\-MORE\_\-THAN} =  1, 
+\hyperlink{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504a4bccf19eed6a7720020ab7463ab9a157}{COMPARE\_\-EQUAL} =  0, 
+\hyperlink{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504a2222fe67d3866dd8e992fd5ef4b4d6ed}{COMPARE\_\-LESS\_\-THAN} =  -\/1
+ \}
+\item 
+enum \hyperlink{_constants_8h_a540a9c34662db8bb84b729512cf08e75}{InventoryVectorType} \{ \hyperlink{_constants_8h_a540a9c34662db8bb84b729512cf08e75a2fd6f336d08340583bd620a7f5694c90}{ERROR}, 
+\hyperlink{_constants_8h_a540a9c34662db8bb84b729512cf08e75a0494732fc92c975f58783e224585c473}{MSG\_\-TX}, 
+\hyperlink{_constants_8h_a540a9c34662db8bb84b729512cf08e75a4cae15fd207d555331995cd5c57689c1}{MSG\_\-BLOCK}
+ \}
+\item 
+enum \hyperlink{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620}{ScriptExecutionStatus} \{ \hyperlink{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a4b8548e1cadda6245839d071b0c1b5a4}{GOOD\_\-SCRIPT}, 
+\hyperlink{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a37c39cc1fade92fcaa3d733180e474f0}{BAD\_\-SCRIPT}, 
+\hyperlink{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a7ecace0cb3ae6b278566121da07969ae}{SCRIPT\_\-ERR}
+ \}
+\item 
+enum \hyperlink{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826}{TransactionHashStatus} \{ \hyperlink{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826a9f46366755423a053481edc37bd853d0}{TX\_\-HASH\_\-GOOD}, 
+\hyperlink{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826ab8cb7847f95d8209bd64c5bd4cdce830}{TX\_\-HASH\_\-BAD}, 
+\hyperlink{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826ae372182e92ec6fd8774695846b3d8845}{TX\_\-HASH\_\-FAIL}
+ \}
+\item 
+enum \hyperlink{_constants_8h_a7456a1be27da2089f984a0ede62c6c50}{SignatureType} \{ \hyperlink{_constants_8h_a7456a1be27da2089f984a0ede62c6c50ac68c7df6528b3001624e56b2de3826de}{SIGHASH\_\-ALL} =  0x00000001, 
+\hyperlink{_constants_8h_a7456a1be27da2089f984a0ede62c6c50acaba9b1f029a1628196345fce5667f6f}{SIGHASH\_\-NONE} =  0x00000002, 
+\hyperlink{_constants_8h_a7456a1be27da2089f984a0ede62c6c50ad9bb96e76cf9f1b6ebbf50373f4f9ca5}{SIGHASH\_\-SINGLE} =  0x00000003, 
+\hyperlink{_constants_8h_a7456a1be27da2089f984a0ede62c6c50a9412c721b741fe9be1e3247dc390a4d2}{SIGHASH\_\-ANYONECANPAY} =  0x00000080
+ \}
+\item 
+enum \hyperlink{_constants_8h_a06a84fe331713101601f06ed6250f154}{TransactionFields} \{ \hyperlink{_constants_8h_a06a84fe331713101601f06ed6250f154a9716b199cb6dd754756e54de765767ef}{TX\_\-VERSION\_\-FIELD\_\-SIZE} =  4, 
+\hyperlink{_constants_8h_a06a84fe331713101601f06ed6250f154a2082e1c13c6f471f2e0b6d96e8f5cb22}{TX\_\-LOCKTIME\_\-FIELD\_\-SIZE} =  4, 
+\hyperlink{_constants_8h_a06a84fe331713101601f06ed6250f154ae42718094e3f4915b4c9d88ccfe1ee69}{TX\_\-INPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT} =  40, 
+\hyperlink{_constants_8h_a06a84fe331713101601f06ed6250f154a68f731175d82cdb20ce0dd76ca7dac04}{TX\_\-OUTPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT} =  8
+ \}
+\item 
+enum \hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45}{IPType} \{ \par
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a78ad3023e388cdb0edb26a99c1ed5b71}{IP\_\-INVALID} =  0, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45ada1efeae8e474dedf665973081167ec3}{IP\_\-IPv4} =  1, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a5c7c7aafd5c7ea542e80fa0367abe957}{IP\_\-IPv6} =  2, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a843ba99ebefa69343b980604fbe93a31}{IP\_\-LOCAL} =  4, 
+\par
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a8a0b70d40b198adbc9e6c4c8216ed03f}{IP\_\-TOR} =  8, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a46713e44b63cd4bdaa55b8fb8916941c}{IP\_\-I2P} =  16, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45aefffaa7d148c40f14207d1b970c3238b}{IP\_\-SITT} =  32, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45aba7032d7b5b6bef01a37f2ee958ec440}{IP\_\-RFC6052} =  64, 
+\par
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a6eebf14d3c0b3b29a2a60fc9e396ff13}{IP\_\-6TO4} =  128, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a1921e2c3d423fc7ae63ce0b1dc415ae6}{IP\_\-TEREDO} =  256, 
+\hyperlink{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a2884e83ef767045323bbbb6d85e9d197}{IP\_\-HENET} =  512
+ \}
+\item 
+enum \hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261}{ScriptOpcode} \{ \par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8939c556a33f13758a979976eeb55ddb}{SCRIPT\_\-OPCODE\_\-0} =  0x00, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a1345271b87a1299bfb764e31be0f0f33}{SCRIPT\_\-OPCODE\_\-FALSE} =  SCRIPT\_\-OPCODE\_\-0, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a552b171c345d6b1ae161de015717596a}{SCRIPT\_\-OPCODE\_\-PUSHDATA1} =  0x4c, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abb5230268661595413fc9cd5990afbe9}{SCRIPT\_\-OPCODE\_\-PUSHDATA2} =  0x4d, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a1a31a08c1822663feb6611acf804fafb}{SCRIPT\_\-OPCODE\_\-PUSHDATA4} =  0x4e, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a117df15a10da6eeca43daf30af649587}{SCRIPT\_\-OPCODE\_\-1NEGATE} =  0x4f, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af17db0b753970e02b54ac07189a248ee}{SCRIPT\_\-OPCODE\_\-RESERVED} =  0x50, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aeffe244b05b243e0fcb4fcec008e0df7}{SCRIPT\_\-OPCODE\_\-1} =  0x51, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae9250c82ceb62e5242f844170e444751}{SCRIPT\_\-OPCODE\_\-TRUE} =  0x51, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9e5949e3e3452c69bcd2bc5fe9ec38c5}{SCRIPT\_\-OPCODE\_\-2} =  0x52, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a032bcbc876dd041a28ee4a0207873e92}{SCRIPT\_\-OPCODE\_\-3} =  0x53, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a27629d88a8a7a3310c3e4d14bddd9a58}{SCRIPT\_\-OPCODE\_\-4} =  0x54, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a536d44b789f3733f0d7552309a543cbf}{SCRIPT\_\-OPCODE\_\-5} =  0x55, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a03ae6e154bb5d1388c5b128f1d7bfa8e}{SCRIPT\_\-OPCODE\_\-6} =  0x56, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a502771332aaaf8245b907f22e60432d1}{SCRIPT\_\-OPCODE\_\-7} =  0x57, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae413a19b7ab2676ad95b35a20ef28ba9}{SCRIPT\_\-OPCODE\_\-8} =  0x58, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af66237df9ec14240d0229b9f675693f4}{SCRIPT\_\-OPCODE\_\-9} =  0x59, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a260f293d61ffda485cd6e80b55759d81}{SCRIPT\_\-OPCODE\_\-10} =  0x5a, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae889ecb99953409cf1f8c3fad99fb825}{SCRIPT\_\-OPCODE\_\-11} =  0x5b, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2fb184d4c6a87b74b6852d5b651f4ec0}{SCRIPT\_\-OPCODE\_\-12} =  0x5c, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a235bc7b0c9a4536e24dd5e3b7311ec18}{SCRIPT\_\-OPCODE\_\-13} =  0x5d, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abb1c38a50923ab66b623bd293adfe5e8}{SCRIPT\_\-OPCODE\_\-14} =  0x5e, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad41aa06f3e889fbe1783db4eb32c13b6}{SCRIPT\_\-OPCODE\_\-15} =  0x5f, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a28e844412480cc7cfcd08894badaaede}{SCRIPT\_\-OPCODE\_\-16} =  0x60, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261acb04dc1e659f0cae9a9d68d13013ec63}{SCRIPT\_\-OPCODE\_\-NOP} =  0x61, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a174e2508bc3c8ef1f4da011ef93f28c4}{SCRIPT\_\-OPCODE\_\-VER} =  0x62, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5d7c8ce9d9d6a8a54be9b0cf47cc23ff}{SCRIPT\_\-OPCODE\_\-IF} =  0x63, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a96974645c1fc09a0b82dc87e7ba6b5e5}{SCRIPT\_\-OPCODE\_\-NOTIF} =  0x64, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a96234eb61fd4b144dc954638e9c1d5cd}{SCRIPT\_\-OPCODE\_\-VERIF} =  0x65, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8714c3230da76823c4d36993ed748441}{SCRIPT\_\-OPCODE\_\-VERNOTIF} =  0x66, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6151499a8bb5cf0405defe70e278081f}{SCRIPT\_\-OPCODE\_\-ELSE} =  0x67, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aec9a201a74a58c5b9e3e19ee8292f268}{SCRIPT\_\-OPCODE\_\-ENDIF} =  0x68, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abc49c951abb66cf64b5d7df7ce94cf67}{SCRIPT\_\-OPCODE\_\-VERIFY} =  0x69, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a72cad21a6b3ca1e2ece6327bbe6f321f}{SCRIPT\_\-OPCODE\_\-RETURN} =  0x6a, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d63127ee227927ec124c139b1f7a00f}{SCRIPT\_\-OPCODE\_\-TOALTSTACK} =  0x6b, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0d7c0b8ead7e9b8bfb0858f99b2c58bf}{SCRIPT\_\-OPCODE\_\-FROMALTSTACK} =  0x6c, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a185254cc7efaf84fc14b87e7ab693ea0}{SCRIPT\_\-OPCODE\_\-2DROP} =  0x6d, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0c5cf42b688db632a1e58b9cf853d3bf}{SCRIPT\_\-OPCODE\_\-2DUP} =  0x6e, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8a045dccae056a8dd1529b2a1e2cdb61}{SCRIPT\_\-OPCODE\_\-3DUP} =  0x6f, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261adafd4c38a106f95dddc1665712a64d41}{SCRIPT\_\-OPCODE\_\-2OVER} =  0x70, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad6f8f4fe9c7652c98de752b3d97adf64}{SCRIPT\_\-OPCODE\_\-2ROT} =  0x71, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8d8bf67462c8a18f3504b43972aa442d}{SCRIPT\_\-OPCODE\_\-2SWAP} =  0x72, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa3df2c8b9a95a426e471c920d46c8595}{SCRIPT\_\-OPCODE\_\-IFDUP} =  0x73, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5d352b9fd7ba283eeb00f90c5a271f51}{SCRIPT\_\-OPCODE\_\-DEPTH} =  0x74, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a47ec08fd060faea901455610fe02c804}{SCRIPT\_\-OPCODE\_\-DROP} =  0x75, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a06368ea5ea2e47d2674f8de0f4bdca16}{SCRIPT\_\-OPCODE\_\-DUP} =  0x76, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a667ce4e23e49f09e0807a1de16fe6e77}{SCRIPT\_\-OPCODE\_\-NIP} =  0x77, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2c6b5ddc35216afdfbdce7a94273761f}{SCRIPT\_\-OPCODE\_\-OVER} =  0x78, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af6b7da3dfeea89131a083f35a1b13157}{SCRIPT\_\-OPCODE\_\-PICK} =  0x79, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0cfc1b104b3f7b773cc4a87c9f83e84a}{SCRIPT\_\-OPCODE\_\-ROLL} =  0x7a, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ade170c8dd3e87cefd01e2dd715749497}{SCRIPT\_\-OPCODE\_\-ROT} =  0x7b, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a226bbd02b346591769fafcf22ae641b3}{SCRIPT\_\-OPCODE\_\-SWAP} =  0x7c, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a85d9017630c090f6e2115b20a9e98857}{SCRIPT\_\-OPCODE\_\-TUCK} =  0x7d, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d90702b37b4c90d4ca430ecce55e022}{SCRIPT\_\-OPCODE\_\-CAT} =  0x7e, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa40c5cb1ff49d029230d834d4dca5f16}{SCRIPT\_\-OPCODE\_\-SUBSTR} =  0x7f, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af33a4d4b674132610fee2611579d505b}{SCRIPT\_\-OPCODE\_\-LEFT} =  0x80, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a36c42371982fa533e0d22069290a3787}{SCRIPT\_\-OPCODE\_\-RIGHT} =  0x81, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6cc682573a7a43b2e914d1a1fadbe8df}{SCRIPT\_\-OPCODE\_\-SIZE} =  0x82, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad105e3049457c87011cbd636d3f798c8}{SCRIPT\_\-OPCODE\_\-INVERT} =  0x83, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad0b6577572d7a1d4d1219b3fcacbf8df}{SCRIPT\_\-OPCODE\_\-AND} =  0x84, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a82897bb598a7ae17968de5f003c9930b}{SCRIPT\_\-OPCODE\_\-OR} =  0x85, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a56b2b3f4b448cbf01ffa02293027da58}{SCRIPT\_\-OPCODE\_\-XOR} =  0x86, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a87ac289f1822dde70b15945ef47d322b}{SCRIPT\_\-OPCODE\_\-EQUAL} =  0x87, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261afea118a8436877a32baac68e5a338828}{SCRIPT\_\-OPCODE\_\-EQUALVERIFY} =  0x88, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a977992f7d949e11f57b0c5755d014ea6}{SCRIPT\_\-OPCODE\_\-RESERVED1} =  0x89, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a7e275b62acad429bd6a97f0f28440653}{SCRIPT\_\-OPCODE\_\-RESERVED2} =  0x8a, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4ed1ff82e06aed6cd92d046041961e1f}{SCRIPT\_\-OPCODE\_\-1ADD} =  0x8b, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac68419697241139db3fd1e310da6cc38}{SCRIPT\_\-OPCODE\_\-1SUB} =  0x8c, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac99f89b58557bff517ddb15f5bcfa8d5}{SCRIPT\_\-OPCODE\_\-2MUL} =  0x8d, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab5372b8d1a8e21a04f37a62fee5a6293}{SCRIPT\_\-OPCODE\_\-2DIV} =  0x8e, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af3f13ceaa5d2d9fde35a44e6ed727675}{SCRIPT\_\-OPCODE\_\-NEGATE} =  0x8f, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9f3d06903919874871e31811ff9214c7}{SCRIPT\_\-OPCODE\_\-ABS} =  0x90, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af57ebd62fbaac2168aa9c055d100bd12}{SCRIPT\_\-OPCODE\_\-NOT} =  0x91, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abf4f43e59384e6e7eaf27f2cb2465867}{SCRIPT\_\-OPCODE\_\-0NOTEQUAL} =  0x92, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aca41a1a10951a5c3235763e757cd3275}{SCRIPT\_\-OPCODE\_\-ADD} =  0x93, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a704875ffeec99cfd1126b3d847455205}{SCRIPT\_\-OPCODE\_\-SUB} =  0x94, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad6b6722ae146128fe97a699c4e1f3687}{SCRIPT\_\-OPCODE\_\-MUL} =  0x95, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4db60e00ba7e6f4ddd3a761da044ee16}{SCRIPT\_\-OPCODE\_\-DIV} =  0x96, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a58db8e82676607d08544fb85b8ce3b57}{SCRIPT\_\-OPCODE\_\-MOD} =  0x97, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0cb0a5e48ea2179489fbd64fd4795f90}{SCRIPT\_\-OPCODE\_\-LSHIFT} =  0x98, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa35c33bd08493266e7eb9a4bd052e203}{SCRIPT\_\-OPCODE\_\-RSHIFT} =  0x99, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a43779fcad35757fe7f4b4da17060dde3}{SCRIPT\_\-OPCODE\_\-BOOLAND} =  0x9a, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2a73c807bff6f33d3d83a280ff3d10ef}{SCRIPT\_\-OPCODE\_\-BOOLOR} =  0x9b, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa34ff41ebaa170bb02787f9ae5e89a18}{SCRIPT\_\-OPCODE\_\-NUMEQUAL} =  0x9c, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a7dd2bf1bb9abd218e85f9e420360ff67}{SCRIPT\_\-OPCODE\_\-NUMEQUALVERIFY} =  0x9d, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae8c96d1bc91a1332ba2c4ca23ba3b121}{SCRIPT\_\-OPCODE\_\-NUMNOTEQUAL} =  0x9e, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ada5bd8b046c9967e9f48ad341783af19}{SCRIPT\_\-OPCODE\_\-LESSTHAN} =  0x9f, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aeb4b0c1f69a7796d9fabbfff3b073844}{SCRIPT\_\-OPCODE\_\-GREATERTHAN} =  0xa0, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a27854897520ffd63a053474451f41f69}{SCRIPT\_\-OPCODE\_\-LESSTHANOREQUAL} =  0xa1, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9c414e78d1701ca04bcf261a4b5cc94a}{SCRIPT\_\-OPCODE\_\-GREATERTHANOREQUAL} =  0xa2, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac8caef14165c0e208a99c08dd0b941a9}{SCRIPT\_\-OPCODE\_\-MIN} =  0xa3, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a191a0c354403934b05e00fb67730676b}{SCRIPT\_\-OPCODE\_\-MAX} =  0xa4, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6bd178ad0d24a80bc3b1fda3fca12ce4}{SCRIPT\_\-OPCODE\_\-WITHIN} =  0xa5, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae6c02597d9ec4b20250c17e8c2c6d6be}{SCRIPT\_\-OPCODE\_\-RIPEMD160} =  0xa6, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a938ad3706b301863a9acdb69f68eb31c}{SCRIPT\_\-OPCODE\_\-SHA1} =  0xa7, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a83704dc9b91397b86a6b51b36939e45e}{SCRIPT\_\-OPCODE\_\-SHA256} =  0xa8, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5417954764ccb7de080cbec9c9338447}{SCRIPT\_\-OPCODE\_\-HASH160} =  0xa9, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a850a52d6fb761c3927f209bd247fded9}{SCRIPT\_\-OPCODE\_\-HASH256} =  0xaa, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4433a9e18f616b931355c0b7a8fdbbb1}{SCRIPT\_\-OPCODE\_\-CODESEPARATOR} =  0xab, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261acb41eacae824fd9f5911b5647ebe8099}{SCRIPT\_\-OPCODE\_\-CHECKSIG} =  0xac, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af019c5897bec7acfe10039c497efd8d2}{SCRIPT\_\-OPCODE\_\-CHECKSIGVERIFY} =  0xad, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa7521bbacda374d67e274d95c1762415}{SCRIPT\_\-OPCODE\_\-CHECKMULTISIG} =  0xae, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac1f1ae0068ab02815d725fd4712e7901}{SCRIPT\_\-OPCODE\_\-CHECKMULTISIGVERIFY} =  0xaf, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab0a5f9f0c03da3950290821dd678f68d}{SCRIPT\_\-OPCODE\_\-NOP1} =  0xb0, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a23cedbf157a210dc0e7aa78420755601}{SCRIPT\_\-OPCODE\_\-NOP2} =  0xb1, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9820cd1659a5795dedec8168e927051a}{SCRIPT\_\-OPCODE\_\-NOP3} =  0xb2, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a544bd366a5d0587f8f3cc2738a01098f}{SCRIPT\_\-OPCODE\_\-NOP4} =  0xb3, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aed20bf8f4349363f417855b12805d442}{SCRIPT\_\-OPCODE\_\-NOP5} =  0xb4, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab226d97e11e64dad353bac817e2782ec}{SCRIPT\_\-OPCODE\_\-NOP6} =  0xb5, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d79eede6125bb250ea4b097fbec1f85}{SCRIPT\_\-OPCODE\_\-NOP7} =  0xb6, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad189824b1aea34a8c855e3bf80acc2d0}{SCRIPT\_\-OPCODE\_\-NOP8} =  0xb7, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9f55e8ed7ba9835098fd985f6e3f4888}{SCRIPT\_\-OPCODE\_\-NOP9} =  0xb8, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af9d6f92f8254de831bf72b31f5d4a669}{SCRIPT\_\-OPCODE\_\-NOP10} =  0xb9, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261afec3c67fdfe7469d6d9344c93e99af12}{SCRIPT\_\-OPCODE\_\-SMALLINTEGER} =  0xfa, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8283c2565f4e672df34198a1cd06a5b3}{SCRIPT\_\-OPCODE\_\-PUBKEYS} =  0xfb, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a61aec0156e55715d855f65dfb07ce734}{SCRIPT\_\-OPCODE\_\-PUBKEYHASH} =  0xfd, 
+\par
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aacf181a6303640660dd03602364e356f}{SCRIPT\_\-OPCODE\_\-PUBKEY} =  0xfe, 
+\hyperlink{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a13ee63bdc69c0c79ea2753d56ce1e465}{SCRIPT\_\-OPCODE\_\-INVALID} =  0xff
+ \}
+\item 
+enum \hyperlink{_constants_8h_ab75778713670187fe35eb1d6f92c2fca}{InventoryVectorFieldSizes} \{ \hyperlink{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaa5ece4285e45404e0b18d08ffc2c1d570}{INVENTORYVECTOR\_\-TYPE\_\-FIELD\_\-SIZE} =  4, 
+\hyperlink{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaa41a3f829938d8b8b8e8f284b0b077648}{INVENTORYVECTOR\_\-HASH\_\-FIELD\_\-SIZE} =  32, 
+\hyperlink{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310}{INVENTORYVECTOR\_\-TOTAL\_\-SIZE} =  36
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_constants_8h_a79ca9eb12e21a8114df35b500e01445c}{
+\index{Constants.h@{Constants.h}!\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE@{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}}
+\index{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE@{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}!Constants.h@{Constants.h}}
+\subsubsection[{\_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-OUTPUT\_\-VALUE\_\-NUS\_\-ONE~0xFFFFFFFFFFFFFFFF}}
+\label{_constants_8h_a79ca9eb12e21a8114df35b500e01445c}
+
+
+Definition at line 93 of file Constants.h.
+
+\hypertarget{_constants_8h_aff8cb6037213b450ac1acd6cd4208123}{
+\index{Constants.h@{Constants.h}!BYTE\_\-LENGTH\_\-32@{BYTE\_\-LENGTH\_\-32}}
+\index{BYTE\_\-LENGTH\_\-32@{BYTE\_\-LENGTH\_\-32}!Constants.h@{Constants.h}}
+\subsubsection[{BYTE\_\-LENGTH\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-LENGTH\_\-32~32;}}
+\label{_constants_8h_aff8cb6037213b450ac1acd6cd4208123}
+
+
+Definition at line 92 of file Constants.h.
+
+\hypertarget{_constants_8h_aa93f0eb578d23995850d61f7d61c55c1}{
+\index{Constants.h@{Constants.h}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!Constants.h@{Constants.h}}
+\subsubsection[{FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FALSE~0}}
+\label{_constants_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+Definition at line 89 of file Constants.h.
+
+\hypertarget{_constants_8h_a2c984349b6e2ee2e658b9cf9ef2aa2fb}{
+\index{Constants.h@{Constants.h}!RETURN\_\-FAILURE@{RETURN\_\-FAILURE}}
+\index{RETURN\_\-FAILURE@{RETURN\_\-FAILURE}!Constants.h@{Constants.h}}
+\subsubsection[{RETURN\_\-FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define RETURN\_\-FAILURE~0;}}
+\label{_constants_8h_a2c984349b6e2ee2e658b9cf9ef2aa2fb}
+
+
+Definition at line 88 of file Constants.h.
+
+\hypertarget{_constants_8h_a9d37d43ac2717b06ef7120784465e56f}{
+\index{Constants.h@{Constants.h}!RETURN\_\-SUCCESS@{RETURN\_\-SUCCESS}}
+\index{RETURN\_\-SUCCESS@{RETURN\_\-SUCCESS}!Constants.h@{Constants.h}}
+\subsubsection[{RETURN\_\-SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define RETURN\_\-SUCCESS~1;}}
+\label{_constants_8h_a9d37d43ac2717b06ef7120784465e56f}
+
+
+Definition at line 87 of file Constants.h.
+
+\hypertarget{_constants_8h_ac9c8a59f4a29831e833e036a610378ea}{
+\index{Constants.h@{Constants.h}!TRANSACTION\_\-INPUT\_\-FINAL@{TRANSACTION\_\-INPUT\_\-FINAL}}
+\index{TRANSACTION\_\-INPUT\_\-FINAL@{TRANSACTION\_\-INPUT\_\-FINAL}!Constants.h@{Constants.h}}
+\subsubsection[{TRANSACTION\_\-INPUT\_\-FINAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define TRANSACTION\_\-INPUT\_\-FINAL~0xFFFFFFFF}}
+\label{_constants_8h_ac9c8a59f4a29831e833e036a610378ea}
+
+
+Definition at line 94 of file Constants.h.
+
+\hypertarget{_constants_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{
+\index{Constants.h@{Constants.h}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!Constants.h@{Constants.h}}
+\subsubsection[{TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define TRUE~1}}
+\label{_constants_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+Definition at line 90 of file Constants.h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504}{
+\index{Constants.h@{Constants.h}!Compare@{Compare}}
+\index{Compare@{Compare}!Constants.h@{Constants.h}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Compare}}}
+\label{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{COMPARE\_\-MORE\_\-THAN@{COMPARE\_\-MORE\_\-THAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!COMPARE\_\-MORE\_\-THAN@{COMPARE\_\-MORE\_\-THAN}}\item[{\em 
+\hypertarget{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76}{
+COMPARE\_\-MORE\_\-THAN}
+\label{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76}
+}]\index{COMPARE\_\-EQUAL@{COMPARE\_\-EQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!COMPARE\_\-EQUAL@{COMPARE\_\-EQUAL}}\item[{\em 
+\hypertarget{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504a4bccf19eed6a7720020ab7463ab9a157}{
+COMPARE\_\-EQUAL}
+\label{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504a4bccf19eed6a7720020ab7463ab9a157}
+}]\index{COMPARE\_\-LESS\_\-THAN@{COMPARE\_\-LESS\_\-THAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!COMPARE\_\-LESS\_\-THAN@{COMPARE\_\-LESS\_\-THAN}}\item[{\em 
+\hypertarget{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504a2222fe67d3866dd8e992fd5ef4b4d6ed}{
+COMPARE\_\-LESS\_\-THAN}
+\label{_constants_8h_af5e6c1e42f1dbe27251f73c8b89d2504a2222fe67d3866dd8e992fd5ef4b4d6ed}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 56 of file Constants.h.
+
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{
+\index{Constants.h@{Constants.h}!Error@{Error}}
+\index{Error@{Error}!Constants.h@{Constants.h}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Error}}}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE@{ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE@{ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5aa2f1792deac2599c240381feee8259de}{
+ERROR\_\-MESSAGE\_\-CHECKSUM\_\-BAD\_\-SIZE}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5aa2f1792deac2599c240381feee8259de}
+}]\index{ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION@{ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION@{ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5af05df7a212413efa39d4df84ba44d5f5}{
+ERROR\_\-MESSAGE\_\-NO\_\-SERIALISATION\_\-IMPLEMENTATION}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5af05df7a212413efa39d4df84ba44d5f5}
+}]\index{ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION@{ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION@{ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ac56e3ae43ec10f4c69884e2c7f9aef06}{
+ERROR\_\-MESSAGE\_\-NO\_\-DESERIALISATION\_\-IMPLEMENTATION}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ac56e3ae43ec10f4c69884e2c7f9aef06}
+}]\index{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES@{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES@{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63}{
+ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-BAD\_\-BYTES}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a7017f9b2f86ff163d1d6e86cc89b7f63}
+}]\index{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES@{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES@{ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26}{
+ERROR\_\-MESSAGE\_\-DESERIALISATION\_\-NULL\_\-BYTES}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a63040cd367f8f87162668c5853b98d26}
+}]\index{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES@{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES@{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d}{
+ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-BYTES}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a60284f8679886500015725682ed0a10d}
+}]\index{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES@{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES@{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e}{
+ERROR\_\-MESSAGE\_\-SERIALISATION\_\-NULL\_\-BYTES}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a1574daad1526eb894269b75627d86b1e}
+}]\index{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA@{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA@{ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ab302761b8ba6c3fcab51ef4777465b9d}{
+ERROR\_\-MESSAGE\_\-SERIALISATION\_\-BAD\_\-DATA}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ab302761b8ba6c3fcab51ef4777465b9d}
+}]\index{ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH@{ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH@{ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a9394b7da919935cb79dd5d0fdad29e72}{
+ERROR\_\-SHA\_\-256\_\-HASH\_\-BAD\_\-BYTE\_\-ARRAY\_\-LENGTH}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a9394b7da919935cb79dd5d0fdad29e72}
+}]\index{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT@{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT@{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ad2b6af8b647680e44843049b8534352f}{
+ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-TOO\_\-SHORT}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ad2b6af8b647680e44843049b8534352f}
+}]\index{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID@{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID@{ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a4243d1ab93511c54906657b89777e17d}{
+ERROR\_\-BASE58\_\-DECODE\_\-CHECK\_\-INVALID}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a4243d1ab93511c54906657b89777e17d}
+}]\index{ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS@{ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS@{ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5aa0f84dd7d9cade49146fdd0404c4db1b}{
+ERROR\_\-TRANSACTION\_\-FEW\_\-INPUTS}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5aa0f84dd7d9cade49146fdd0404c4db1b}
+}]\index{ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS@{ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS@{ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a226e62209c94457dbd3935a604bb56ce}{
+ERROR\_\-TRANSACTION\_\-FEW\_\-OUTPUTS}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a226e62209c94457dbd3935a604bb56ce}
+}]\index{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL@{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL@{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5acf62cedb6da67e77c29ffc2281503f1b}{
+ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-FAIL}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5acf62cedb6da67e77c29ffc2281503f1b}
+}]\index{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL@{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL@{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a9e3fa866c434afd77b35c66fae662428}{
+ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-LOOP\_\-CREATE\_\-FAIL}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a9e3fa866c434afd77b35c66fae662428}
+}]\index{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE@{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE@{ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a3af2ec42d69bd79f7ffbdd7858980108}{
+ERROR\_\-NETWORK\_\-COMMUNICATOR\_\-CONNECT\_\-FAILURE}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a3af2ec42d69bd79f7ffbdd7858980108}
+}]\index{ERROR\_\-OUT\_\-OF\_\-MEMORY@{ERROR\_\-OUT\_\-OF\_\-MEMORY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-OUT\_\-OF\_\-MEMORY@{ERROR\_\-OUT\_\-OF\_\-MEMORY}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69}{
+ERROR\_\-OUT\_\-OF\_\-MEMORY}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5ac0a554045048d2fb61387cf735676f69}
+}]\index{ERROR\_\-INIT\_\-FAIL@{ERROR\_\-INIT\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR\_\-INIT\_\-FAIL@{ERROR\_\-INIT\_\-FAIL}}\item[{\em 
+\hypertarget{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce}{
+ERROR\_\-INIT\_\-FAIL}
+\label{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5a61583dbb5057f77e6fc74ab42bea43ce}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 35 of file Constants.h.
+
+\hypertarget{_constants_8h_ab75778713670187fe35eb1d6f92c2fca}{
+\index{Constants.h@{Constants.h}!InventoryVectorFieldSizes@{InventoryVectorFieldSizes}}
+\index{InventoryVectorFieldSizes@{InventoryVectorFieldSizes}!Constants.h@{Constants.h}}
+\subsubsection[{InventoryVectorFieldSizes}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf InventoryVectorFieldSizes}}}
+\label{_constants_8h_ab75778713670187fe35eb1d6f92c2fca}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{INVENTORYVECTOR\_\-TYPE\_\-FIELD\_\-SIZE@{INVENTORYVECTOR\_\-TYPE\_\-FIELD\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!INVENTORYVECTOR\_\-TYPE\_\-FIELD\_\-SIZE@{INVENTORYVECTOR\_\-TYPE\_\-FIELD\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaa5ece4285e45404e0b18d08ffc2c1d570}{
+INVENTORYVECTOR\_\-TYPE\_\-FIELD\_\-SIZE}
+\label{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaa5ece4285e45404e0b18d08ffc2c1d570}
+}]\index{INVENTORYVECTOR\_\-HASH\_\-FIELD\_\-SIZE@{INVENTORYVECTOR\_\-HASH\_\-FIELD\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!INVENTORYVECTOR\_\-HASH\_\-FIELD\_\-SIZE@{INVENTORYVECTOR\_\-HASH\_\-FIELD\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaa41a3f829938d8b8b8e8f284b0b077648}{
+INVENTORYVECTOR\_\-HASH\_\-FIELD\_\-SIZE}
+\label{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaa41a3f829938d8b8b8e8f284b0b077648}
+}]\index{INVENTORYVECTOR\_\-TOTAL\_\-SIZE@{INVENTORYVECTOR\_\-TOTAL\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!INVENTORYVECTOR\_\-TOTAL\_\-SIZE@{INVENTORYVECTOR\_\-TOTAL\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310}{
+INVENTORYVECTOR\_\-TOTAL\_\-SIZE}
+\label{_constants_8h_ab75778713670187fe35eb1d6f92c2fcaac93a025e36162570ec855a9c33eaf310}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 253 of file Constants.h.
+
+\hypertarget{_constants_8h_a540a9c34662db8bb84b729512cf08e75}{
+\index{Constants.h@{Constants.h}!InventoryVectorType@{InventoryVectorType}}
+\index{InventoryVectorType@{InventoryVectorType}!Constants.h@{Constants.h}}
+\subsubsection[{InventoryVectorType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf InventoryVectorType}}}
+\label{_constants_8h_a540a9c34662db8bb84b729512cf08e75}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ERROR@{ERROR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!ERROR@{ERROR}}\item[{\em 
+\hypertarget{_constants_8h_a540a9c34662db8bb84b729512cf08e75a2fd6f336d08340583bd620a7f5694c90}{
+ERROR}
+\label{_constants_8h_a540a9c34662db8bb84b729512cf08e75a2fd6f336d08340583bd620a7f5694c90}
+}]Any data of with this number may be ignored. \index{MSG\_\-TX@{MSG\_\-TX}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MSG\_\-TX@{MSG\_\-TX}}\item[{\em 
+\hypertarget{_constants_8h_a540a9c34662db8bb84b729512cf08e75a0494732fc92c975f58783e224585c473}{
+MSG\_\-TX}
+\label{_constants_8h_a540a9c34662db8bb84b729512cf08e75a0494732fc92c975f58783e224585c473}
+}]Hash is related to a transaction. \index{MSG\_\-BLOCK@{MSG\_\-BLOCK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MSG\_\-BLOCK@{MSG\_\-BLOCK}}\item[{\em 
+\hypertarget{_constants_8h_a540a9c34662db8bb84b729512cf08e75a4cae15fd207d555331995cd5c57689c1}{
+MSG\_\-BLOCK}
+\label{_constants_8h_a540a9c34662db8bb84b729512cf08e75a4cae15fd207d555331995cd5c57689c1}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 62 of file Constants.h.
+
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45}{
+\index{Constants.h@{Constants.h}!IPType@{IPType}}
+\index{IPType@{IPType}!Constants.h@{Constants.h}}
+\subsubsection[{IPType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IPType}}}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{IP\_\-INVALID@{IP\_\-INVALID}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-INVALID@{IP\_\-INVALID}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a78ad3023e388cdb0edb26a99c1ed5b71}{
+IP\_\-INVALID}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a78ad3023e388cdb0edb26a99c1ed5b71}
+}]\index{IP\_\-IPv4@{IP\_\-IPv4}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-IPv4@{IP\_\-IPv4}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45ada1efeae8e474dedf665973081167ec3}{
+IP\_\-IPv4}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45ada1efeae8e474dedf665973081167ec3}
+}]\index{IP\_\-IPv6@{IP\_\-IPv6}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-IPv6@{IP\_\-IPv6}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a5c7c7aafd5c7ea542e80fa0367abe957}{
+IP\_\-IPv6}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a5c7c7aafd5c7ea542e80fa0367abe957}
+}]\index{IP\_\-LOCAL@{IP\_\-LOCAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-LOCAL@{IP\_\-LOCAL}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a843ba99ebefa69343b980604fbe93a31}{
+IP\_\-LOCAL}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a843ba99ebefa69343b980604fbe93a31}
+}]\index{IP\_\-TOR@{IP\_\-TOR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-TOR@{IP\_\-TOR}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a8a0b70d40b198adbc9e6c4c8216ed03f}{
+IP\_\-TOR}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a8a0b70d40b198adbc9e6c4c8216ed03f}
+}]\index{IP\_\-I2P@{IP\_\-I2P}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-I2P@{IP\_\-I2P}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a46713e44b63cd4bdaa55b8fb8916941c}{
+IP\_\-I2P}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a46713e44b63cd4bdaa55b8fb8916941c}
+}]\index{IP\_\-SITT@{IP\_\-SITT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-SITT@{IP\_\-SITT}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45aefffaa7d148c40f14207d1b970c3238b}{
+IP\_\-SITT}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45aefffaa7d148c40f14207d1b970c3238b}
+}]\index{IP\_\-RFC6052@{IP\_\-RFC6052}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-RFC6052@{IP\_\-RFC6052}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45aba7032d7b5b6bef01a37f2ee958ec440}{
+IP\_\-RFC6052}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45aba7032d7b5b6bef01a37f2ee958ec440}
+}]\index{IP\_\-6TO4@{IP\_\-6TO4}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-6TO4@{IP\_\-6TO4}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a6eebf14d3c0b3b29a2a60fc9e396ff13}{
+IP\_\-6TO4}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a6eebf14d3c0b3b29a2a60fc9e396ff13}
+}]\index{IP\_\-TEREDO@{IP\_\-TEREDO}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-TEREDO@{IP\_\-TEREDO}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a1921e2c3d423fc7ae63ce0b1dc415ae6}{
+IP\_\-TEREDO}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a1921e2c3d423fc7ae63ce0b1dc415ae6}
+}]\index{IP\_\-HENET@{IP\_\-HENET}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!IP\_\-HENET@{IP\_\-HENET}}\item[{\em 
+\hypertarget{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a2884e83ef767045323bbbb6d85e9d197}{
+IP\_\-HENET}
+\label{_constants_8h_aadb1cfb5fcd8adc562a07248be433d45a2884e83ef767045323bbbb6d85e9d197}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 118 of file Constants.h.
+
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013}{
+\index{Constants.h@{Constants.h}!MessageType@{MessageType}}
+\index{MessageType@{MessageType}!Constants.h@{Constants.h}}
+\subsubsection[{MessageType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf MessageType}}}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MESSAGE\_\-TYPE\_\-VERSION@{MESSAGE\_\-TYPE\_\-VERSION}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-VERSION@{MESSAGE\_\-TYPE\_\-VERSION}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a6b5d45c74743b18c5191ca991c8424ba}{
+MESSAGE\_\-TYPE\_\-VERSION}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a6b5d45c74743b18c5191ca991c8424ba}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_version_8h}{Version.h} 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-VERACK@{MESSAGE\_\-TYPE\_\-VERACK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-VERACK@{MESSAGE\_\-TYPE\_\-VERACK}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ab04a1ce83c41d3c309a7e88c5e0c6d14}{
+MESSAGE\_\-TYPE\_\-VERACK}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ab04a1ce83c41d3c309a7e88c5e0c6d14}
+}]Acknowledgment and acceptance of a peer's version and connection. \index{MESSAGE\_\-TYPE\_\-ADDR@{MESSAGE\_\-TYPE\_\-ADDR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-ADDR@{MESSAGE\_\-TYPE\_\-ADDR}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a1ca0c8f3ae33849b0a2c940aa99b4d19}{
+MESSAGE\_\-TYPE\_\-ADDR}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a1ca0c8f3ae33849b0a2c940aa99b4d19}
+}]\begin{DoxySeeAlso}{See also}
+AddressBroadcast.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-INV@{MESSAGE\_\-TYPE\_\-INV}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-INV@{MESSAGE\_\-TYPE\_\-INV}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a68775d2b5fa0faa7e0a1465913f63832}{
+MESSAGE\_\-TYPE\_\-INV}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a68775d2b5fa0faa7e0a1465913f63832}
+}]\begin{DoxySeeAlso}{See also}
+InventoryBroadcast.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-GETDATA@{MESSAGE\_\-TYPE\_\-GETDATA}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-GETDATA@{MESSAGE\_\-TYPE\_\-GETDATA}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a60a5f950b28f7fda0cadda008f3dd0fb}{
+MESSAGE\_\-TYPE\_\-GETDATA}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a60a5f950b28f7fda0cadda008f3dd0fb}
+}]\begin{DoxySeeAlso}{See also}
+InventoryBroadcast.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-GETBLOCKS@{MESSAGE\_\-TYPE\_\-GETBLOCKS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-GETBLOCKS@{MESSAGE\_\-TYPE\_\-GETBLOCKS}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a71f1ccf1984513158376b467b8a8fd8f}{
+MESSAGE\_\-TYPE\_\-GETBLOCKS}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a71f1ccf1984513158376b467b8a8fd8f}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_get_blocks_8h}{GetBlocks.h} 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-GETHEADERS@{MESSAGE\_\-TYPE\_\-GETHEADERS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-GETHEADERS@{MESSAGE\_\-TYPE\_\-GETHEADERS}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ad72a28239ffad586624aff5a499db934}{
+MESSAGE\_\-TYPE\_\-GETHEADERS}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ad72a28239ffad586624aff5a499db934}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_get_blocks_8h}{GetBlocks.h} 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-TX@{MESSAGE\_\-TYPE\_\-TX}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-TX@{MESSAGE\_\-TYPE\_\-TX}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ad33de861150e172a4f14ec7ac179d419}{
+MESSAGE\_\-TYPE\_\-TX}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ad33de861150e172a4f14ec7ac179d419}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_transaction_8h}{Transaction.h} 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-BLOCK@{MESSAGE\_\-TYPE\_\-BLOCK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-BLOCK@{MESSAGE\_\-TYPE\_\-BLOCK}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013aca5db57e84e42bb3fed6308f2ec8d36e}{
+MESSAGE\_\-TYPE\_\-BLOCK}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013aca5db57e84e42bb3fed6308f2ec8d36e}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_block_8h}{Block.h} 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-HEADERS@{MESSAGE\_\-TYPE\_\-HEADERS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-HEADERS@{MESSAGE\_\-TYPE\_\-HEADERS}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ac17b04d976b7c8f35bcafa762b1e1a22}{
+MESSAGE\_\-TYPE\_\-HEADERS}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ac17b04d976b7c8f35bcafa762b1e1a22}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_block_headers_8h}{BlockHeaders.h} 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-GETADDR@{MESSAGE\_\-TYPE\_\-GETADDR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-GETADDR@{MESSAGE\_\-TYPE\_\-GETADDR}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ab7a4ea5ef99171707a6cd4b0b8027b41}{
+MESSAGE\_\-TYPE\_\-GETADDR}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013ab7a4ea5ef99171707a6cd4b0b8027b41}
+}]Request for \char`\"{}active peers\char`\"{}. bitcoin-\/qt consiers active peers to be those that have sent messages in the last 30 minutes. \index{MESSAGE\_\-TYPE\_\-PING@{MESSAGE\_\-TYPE\_\-PING}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-PING@{MESSAGE\_\-TYPE\_\-PING}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a72e87e96bdee95a2bd515e751a711994}{
+MESSAGE\_\-TYPE\_\-PING}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a72e87e96bdee95a2bd515e751a711994}
+}]\begin{DoxySeeAlso}{See also}
+PingPong.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-PONG@{MESSAGE\_\-TYPE\_\-PONG}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-PONG@{MESSAGE\_\-TYPE\_\-PONG}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013afbac2e84f45320bd443953d336d7f5ae}{
+MESSAGE\_\-TYPE\_\-PONG}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013afbac2e84f45320bd443953d336d7f5ae}
+}]\begin{DoxySeeAlso}{See also}
+PingPong.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-ALERT@{MESSAGE\_\-TYPE\_\-ALERT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-ALERT@{MESSAGE\_\-TYPE\_\-ALERT}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a3162346b1761cce7cacd667422618e48}{
+MESSAGE\_\-TYPE\_\-ALERT}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a3162346b1761cce7cacd667422618e48}
+}]\begin{DoxySeeAlso}{See also}
+Alert.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-ALT@{MESSAGE\_\-TYPE\_\-ALT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-ALT@{MESSAGE\_\-TYPE\_\-ALT}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013adf95c068ca534fc0ab73fc61d95473b8}{
+MESSAGE\_\-TYPE\_\-ALT}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013adf95c068ca534fc0ab73fc61d95473b8}
+}]The message was defined by \char`\"{}alternativeMessages\char`\"{} in a NetworkCommunicator \index{MESSAGE\_\-TYPE\_\-ADDRMAN@{MESSAGE\_\-TYPE\_\-ADDRMAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-ADDRMAN@{MESSAGE\_\-TYPE\_\-ADDRMAN}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a2bc05bf44bbc83dba4e60278c5da8d20}{
+MESSAGE\_\-TYPE\_\-ADDRMAN}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013a2bc05bf44bbc83dba4e60278c5da8d20}
+}]\begin{DoxySeeAlso}{See also}
+AddressManager.h 
+\end{DoxySeeAlso}
+\index{MESSAGE\_\-TYPE\_\-CHAINDESC@{MESSAGE\_\-TYPE\_\-CHAINDESC}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!MESSAGE\_\-TYPE\_\-CHAINDESC@{MESSAGE\_\-TYPE\_\-CHAINDESC}}\item[{\em 
+\hypertarget{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013adced8be36f6ac13e075b19b11b9b589f}{
+MESSAGE\_\-TYPE\_\-CHAINDESC}
+\label{_constants_8h_ac6606ebe91c8ac66a2c314c79f5ab013adced8be36f6ac13e075b19b11b9b589f}
+}]\begin{DoxySeeAlso}{See also}
+\hyperlink{_chain_descriptor_8h}{ChainDescriptor.h} 
+\end{DoxySeeAlso}
+\end{description}
+\end{Desc}
+
+
+
+Definition at line 15 of file Constants.h.
+
+\hypertarget{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620}{
+\index{Constants.h@{Constants.h}!ScriptExecutionStatus@{ScriptExecutionStatus}}
+\index{ScriptExecutionStatus@{ScriptExecutionStatus}!Constants.h@{Constants.h}}
+\subsubsection[{ScriptExecutionStatus}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ScriptExecutionStatus}}}
+\label{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{GOOD\_\-SCRIPT@{GOOD\_\-SCRIPT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!GOOD\_\-SCRIPT@{GOOD\_\-SCRIPT}}\item[{\em 
+\hypertarget{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a4b8548e1cadda6245839d071b0c1b5a4}{
+GOOD\_\-SCRIPT}
+\label{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a4b8548e1cadda6245839d071b0c1b5a4}
+}]Script is valid. \index{BAD\_\-SCRIPT@{BAD\_\-SCRIPT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!BAD\_\-SCRIPT@{BAD\_\-SCRIPT}}\item[{\em 
+\hypertarget{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a37c39cc1fade92fcaa3d733180e474f0}{
+BAD\_\-SCRIPT}
+\label{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a37c39cc1fade92fcaa3d733180e474f0}
+}]Script is invalid \index{SCRIPT\_\-ERR@{SCRIPT\_\-ERR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-ERR@{SCRIPT\_\-ERR}}\item[{\em 
+\hypertarget{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a7ecace0cb3ae6b278566121da07969ae}{
+SCRIPT\_\-ERR}
+\label{_constants_8h_a5bdbd094ca1cda7631026bcf5b883620a7ecace0cb3ae6b278566121da07969ae}
+}]An error occurred, handle the error. \end{description}
+\end{Desc}
+
+
+
+Definition at line 71 of file Constants.h.
+
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261}{
+\index{Constants.h@{Constants.h}!ScriptOpcode@{ScriptOpcode}}
+\index{ScriptOpcode@{ScriptOpcode}!Constants.h@{Constants.h}}
+\subsubsection[{ScriptOpcode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ScriptOpcode}}}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{SCRIPT\_\-OPCODE\_\-0@{SCRIPT\_\-OPCODE\_\-0}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-0@{SCRIPT\_\-OPCODE\_\-0}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8939c556a33f13758a979976eeb55ddb}{
+SCRIPT\_\-OPCODE\_\-0}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8939c556a33f13758a979976eeb55ddb}
+}]\index{SCRIPT\_\-OPCODE\_\-FALSE@{SCRIPT\_\-OPCODE\_\-FALSE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-FALSE@{SCRIPT\_\-OPCODE\_\-FALSE}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a1345271b87a1299bfb764e31be0f0f33}{
+SCRIPT\_\-OPCODE\_\-FALSE}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a1345271b87a1299bfb764e31be0f0f33}
+}]\index{SCRIPT\_\-OPCODE\_\-PUSHDATA1@{SCRIPT\_\-OPCODE\_\-PUSHDATA1}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PUSHDATA1@{SCRIPT\_\-OPCODE\_\-PUSHDATA1}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a552b171c345d6b1ae161de015717596a}{
+SCRIPT\_\-OPCODE\_\-PUSHDATA1}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a552b171c345d6b1ae161de015717596a}
+}]\index{SCRIPT\_\-OPCODE\_\-PUSHDATA2@{SCRIPT\_\-OPCODE\_\-PUSHDATA2}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PUSHDATA2@{SCRIPT\_\-OPCODE\_\-PUSHDATA2}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abb5230268661595413fc9cd5990afbe9}{
+SCRIPT\_\-OPCODE\_\-PUSHDATA2}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abb5230268661595413fc9cd5990afbe9}
+}]\index{SCRIPT\_\-OPCODE\_\-PUSHDATA4@{SCRIPT\_\-OPCODE\_\-PUSHDATA4}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PUSHDATA4@{SCRIPT\_\-OPCODE\_\-PUSHDATA4}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a1a31a08c1822663feb6611acf804fafb}{
+SCRIPT\_\-OPCODE\_\-PUSHDATA4}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a1a31a08c1822663feb6611acf804fafb}
+}]\index{SCRIPT\_\-OPCODE\_\-1NEGATE@{SCRIPT\_\-OPCODE\_\-1NEGATE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-1NEGATE@{SCRIPT\_\-OPCODE\_\-1NEGATE}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a117df15a10da6eeca43daf30af649587}{
+SCRIPT\_\-OPCODE\_\-1NEGATE}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a117df15a10da6eeca43daf30af649587}
+}]\index{SCRIPT\_\-OPCODE\_\-RESERVED@{SCRIPT\_\-OPCODE\_\-RESERVED}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RESERVED@{SCRIPT\_\-OPCODE\_\-RESERVED}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af17db0b753970e02b54ac07189a248ee}{
+SCRIPT\_\-OPCODE\_\-RESERVED}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af17db0b753970e02b54ac07189a248ee}
+}]\index{SCRIPT\_\-OPCODE\_\-1@{SCRIPT\_\-OPCODE\_\-1}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-1@{SCRIPT\_\-OPCODE\_\-1}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aeffe244b05b243e0fcb4fcec008e0df7}{
+SCRIPT\_\-OPCODE\_\-1}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aeffe244b05b243e0fcb4fcec008e0df7}
+}]\index{SCRIPT\_\-OPCODE\_\-TRUE@{SCRIPT\_\-OPCODE\_\-TRUE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-TRUE@{SCRIPT\_\-OPCODE\_\-TRUE}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae9250c82ceb62e5242f844170e444751}{
+SCRIPT\_\-OPCODE\_\-TRUE}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae9250c82ceb62e5242f844170e444751}
+}]\index{SCRIPT\_\-OPCODE\_\-2@{SCRIPT\_\-OPCODE\_\-2}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2@{SCRIPT\_\-OPCODE\_\-2}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9e5949e3e3452c69bcd2bc5fe9ec38c5}{
+SCRIPT\_\-OPCODE\_\-2}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9e5949e3e3452c69bcd2bc5fe9ec38c5}
+}]\index{SCRIPT\_\-OPCODE\_\-3@{SCRIPT\_\-OPCODE\_\-3}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-3@{SCRIPT\_\-OPCODE\_\-3}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a032bcbc876dd041a28ee4a0207873e92}{
+SCRIPT\_\-OPCODE\_\-3}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a032bcbc876dd041a28ee4a0207873e92}
+}]\index{SCRIPT\_\-OPCODE\_\-4@{SCRIPT\_\-OPCODE\_\-4}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-4@{SCRIPT\_\-OPCODE\_\-4}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a27629d88a8a7a3310c3e4d14bddd9a58}{
+SCRIPT\_\-OPCODE\_\-4}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a27629d88a8a7a3310c3e4d14bddd9a58}
+}]\index{SCRIPT\_\-OPCODE\_\-5@{SCRIPT\_\-OPCODE\_\-5}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-5@{SCRIPT\_\-OPCODE\_\-5}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a536d44b789f3733f0d7552309a543cbf}{
+SCRIPT\_\-OPCODE\_\-5}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a536d44b789f3733f0d7552309a543cbf}
+}]\index{SCRIPT\_\-OPCODE\_\-6@{SCRIPT\_\-OPCODE\_\-6}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-6@{SCRIPT\_\-OPCODE\_\-6}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a03ae6e154bb5d1388c5b128f1d7bfa8e}{
+SCRIPT\_\-OPCODE\_\-6}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a03ae6e154bb5d1388c5b128f1d7bfa8e}
+}]\index{SCRIPT\_\-OPCODE\_\-7@{SCRIPT\_\-OPCODE\_\-7}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-7@{SCRIPT\_\-OPCODE\_\-7}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a502771332aaaf8245b907f22e60432d1}{
+SCRIPT\_\-OPCODE\_\-7}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a502771332aaaf8245b907f22e60432d1}
+}]\index{SCRIPT\_\-OPCODE\_\-8@{SCRIPT\_\-OPCODE\_\-8}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-8@{SCRIPT\_\-OPCODE\_\-8}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae413a19b7ab2676ad95b35a20ef28ba9}{
+SCRIPT\_\-OPCODE\_\-8}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae413a19b7ab2676ad95b35a20ef28ba9}
+}]\index{SCRIPT\_\-OPCODE\_\-9@{SCRIPT\_\-OPCODE\_\-9}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-9@{SCRIPT\_\-OPCODE\_\-9}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af66237df9ec14240d0229b9f675693f4}{
+SCRIPT\_\-OPCODE\_\-9}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af66237df9ec14240d0229b9f675693f4}
+}]\index{SCRIPT\_\-OPCODE\_\-10@{SCRIPT\_\-OPCODE\_\-10}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-10@{SCRIPT\_\-OPCODE\_\-10}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a260f293d61ffda485cd6e80b55759d81}{
+SCRIPT\_\-OPCODE\_\-10}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a260f293d61ffda485cd6e80b55759d81}
+}]\index{SCRIPT\_\-OPCODE\_\-11@{SCRIPT\_\-OPCODE\_\-11}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-11@{SCRIPT\_\-OPCODE\_\-11}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae889ecb99953409cf1f8c3fad99fb825}{
+SCRIPT\_\-OPCODE\_\-11}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae889ecb99953409cf1f8c3fad99fb825}
+}]\index{SCRIPT\_\-OPCODE\_\-12@{SCRIPT\_\-OPCODE\_\-12}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-12@{SCRIPT\_\-OPCODE\_\-12}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2fb184d4c6a87b74b6852d5b651f4ec0}{
+SCRIPT\_\-OPCODE\_\-12}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2fb184d4c6a87b74b6852d5b651f4ec0}
+}]\index{SCRIPT\_\-OPCODE\_\-13@{SCRIPT\_\-OPCODE\_\-13}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-13@{SCRIPT\_\-OPCODE\_\-13}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a235bc7b0c9a4536e24dd5e3b7311ec18}{
+SCRIPT\_\-OPCODE\_\-13}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a235bc7b0c9a4536e24dd5e3b7311ec18}
+}]\index{SCRIPT\_\-OPCODE\_\-14@{SCRIPT\_\-OPCODE\_\-14}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-14@{SCRIPT\_\-OPCODE\_\-14}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abb1c38a50923ab66b623bd293adfe5e8}{
+SCRIPT\_\-OPCODE\_\-14}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abb1c38a50923ab66b623bd293adfe5e8}
+}]\index{SCRIPT\_\-OPCODE\_\-15@{SCRIPT\_\-OPCODE\_\-15}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-15@{SCRIPT\_\-OPCODE\_\-15}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad41aa06f3e889fbe1783db4eb32c13b6}{
+SCRIPT\_\-OPCODE\_\-15}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad41aa06f3e889fbe1783db4eb32c13b6}
+}]\index{SCRIPT\_\-OPCODE\_\-16@{SCRIPT\_\-OPCODE\_\-16}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-16@{SCRIPT\_\-OPCODE\_\-16}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a28e844412480cc7cfcd08894badaaede}{
+SCRIPT\_\-OPCODE\_\-16}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a28e844412480cc7cfcd08894badaaede}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP@{SCRIPT\_\-OPCODE\_\-NOP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP@{SCRIPT\_\-OPCODE\_\-NOP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261acb04dc1e659f0cae9a9d68d13013ec63}{
+SCRIPT\_\-OPCODE\_\-NOP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261acb04dc1e659f0cae9a9d68d13013ec63}
+}]\index{SCRIPT\_\-OPCODE\_\-VER@{SCRIPT\_\-OPCODE\_\-VER}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-VER@{SCRIPT\_\-OPCODE\_\-VER}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a174e2508bc3c8ef1f4da011ef93f28c4}{
+SCRIPT\_\-OPCODE\_\-VER}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a174e2508bc3c8ef1f4da011ef93f28c4}
+}]\index{SCRIPT\_\-OPCODE\_\-IF@{SCRIPT\_\-OPCODE\_\-IF}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-IF@{SCRIPT\_\-OPCODE\_\-IF}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5d7c8ce9d9d6a8a54be9b0cf47cc23ff}{
+SCRIPT\_\-OPCODE\_\-IF}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5d7c8ce9d9d6a8a54be9b0cf47cc23ff}
+}]\index{SCRIPT\_\-OPCODE\_\-NOTIF@{SCRIPT\_\-OPCODE\_\-NOTIF}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOTIF@{SCRIPT\_\-OPCODE\_\-NOTIF}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a96974645c1fc09a0b82dc87e7ba6b5e5}{
+SCRIPT\_\-OPCODE\_\-NOTIF}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a96974645c1fc09a0b82dc87e7ba6b5e5}
+}]\index{SCRIPT\_\-OPCODE\_\-VERIF@{SCRIPT\_\-OPCODE\_\-VERIF}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-VERIF@{SCRIPT\_\-OPCODE\_\-VERIF}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a96234eb61fd4b144dc954638e9c1d5cd}{
+SCRIPT\_\-OPCODE\_\-VERIF}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a96234eb61fd4b144dc954638e9c1d5cd}
+}]\index{SCRIPT\_\-OPCODE\_\-VERNOTIF@{SCRIPT\_\-OPCODE\_\-VERNOTIF}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-VERNOTIF@{SCRIPT\_\-OPCODE\_\-VERNOTIF}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8714c3230da76823c4d36993ed748441}{
+SCRIPT\_\-OPCODE\_\-VERNOTIF}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8714c3230da76823c4d36993ed748441}
+}]\index{SCRIPT\_\-OPCODE\_\-ELSE@{SCRIPT\_\-OPCODE\_\-ELSE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-ELSE@{SCRIPT\_\-OPCODE\_\-ELSE}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6151499a8bb5cf0405defe70e278081f}{
+SCRIPT\_\-OPCODE\_\-ELSE}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6151499a8bb5cf0405defe70e278081f}
+}]\index{SCRIPT\_\-OPCODE\_\-ENDIF@{SCRIPT\_\-OPCODE\_\-ENDIF}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-ENDIF@{SCRIPT\_\-OPCODE\_\-ENDIF}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aec9a201a74a58c5b9e3e19ee8292f268}{
+SCRIPT\_\-OPCODE\_\-ENDIF}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aec9a201a74a58c5b9e3e19ee8292f268}
+}]\index{SCRIPT\_\-OPCODE\_\-VERIFY@{SCRIPT\_\-OPCODE\_\-VERIFY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-VERIFY@{SCRIPT\_\-OPCODE\_\-VERIFY}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abc49c951abb66cf64b5d7df7ce94cf67}{
+SCRIPT\_\-OPCODE\_\-VERIFY}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abc49c951abb66cf64b5d7df7ce94cf67}
+}]\index{SCRIPT\_\-OPCODE\_\-RETURN@{SCRIPT\_\-OPCODE\_\-RETURN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RETURN@{SCRIPT\_\-OPCODE\_\-RETURN}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a72cad21a6b3ca1e2ece6327bbe6f321f}{
+SCRIPT\_\-OPCODE\_\-RETURN}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a72cad21a6b3ca1e2ece6327bbe6f321f}
+}]\index{SCRIPT\_\-OPCODE\_\-TOALTSTACK@{SCRIPT\_\-OPCODE\_\-TOALTSTACK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-TOALTSTACK@{SCRIPT\_\-OPCODE\_\-TOALTSTACK}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d63127ee227927ec124c139b1f7a00f}{
+SCRIPT\_\-OPCODE\_\-TOALTSTACK}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d63127ee227927ec124c139b1f7a00f}
+}]\index{SCRIPT\_\-OPCODE\_\-FROMALTSTACK@{SCRIPT\_\-OPCODE\_\-FROMALTSTACK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-FROMALTSTACK@{SCRIPT\_\-OPCODE\_\-FROMALTSTACK}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0d7c0b8ead7e9b8bfb0858f99b2c58bf}{
+SCRIPT\_\-OPCODE\_\-FROMALTSTACK}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0d7c0b8ead7e9b8bfb0858f99b2c58bf}
+}]\index{SCRIPT\_\-OPCODE\_\-2DROP@{SCRIPT\_\-OPCODE\_\-2DROP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2DROP@{SCRIPT\_\-OPCODE\_\-2DROP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a185254cc7efaf84fc14b87e7ab693ea0}{
+SCRIPT\_\-OPCODE\_\-2DROP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a185254cc7efaf84fc14b87e7ab693ea0}
+}]\index{SCRIPT\_\-OPCODE\_\-2DUP@{SCRIPT\_\-OPCODE\_\-2DUP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2DUP@{SCRIPT\_\-OPCODE\_\-2DUP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0c5cf42b688db632a1e58b9cf853d3bf}{
+SCRIPT\_\-OPCODE\_\-2DUP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0c5cf42b688db632a1e58b9cf853d3bf}
+}]\index{SCRIPT\_\-OPCODE\_\-3DUP@{SCRIPT\_\-OPCODE\_\-3DUP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-3DUP@{SCRIPT\_\-OPCODE\_\-3DUP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8a045dccae056a8dd1529b2a1e2cdb61}{
+SCRIPT\_\-OPCODE\_\-3DUP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8a045dccae056a8dd1529b2a1e2cdb61}
+}]\index{SCRIPT\_\-OPCODE\_\-2OVER@{SCRIPT\_\-OPCODE\_\-2OVER}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2OVER@{SCRIPT\_\-OPCODE\_\-2OVER}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261adafd4c38a106f95dddc1665712a64d41}{
+SCRIPT\_\-OPCODE\_\-2OVER}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261adafd4c38a106f95dddc1665712a64d41}
+}]\index{SCRIPT\_\-OPCODE\_\-2ROT@{SCRIPT\_\-OPCODE\_\-2ROT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2ROT@{SCRIPT\_\-OPCODE\_\-2ROT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad6f8f4fe9c7652c98de752b3d97adf64}{
+SCRIPT\_\-OPCODE\_\-2ROT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad6f8f4fe9c7652c98de752b3d97adf64}
+}]\index{SCRIPT\_\-OPCODE\_\-2SWAP@{SCRIPT\_\-OPCODE\_\-2SWAP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2SWAP@{SCRIPT\_\-OPCODE\_\-2SWAP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8d8bf67462c8a18f3504b43972aa442d}{
+SCRIPT\_\-OPCODE\_\-2SWAP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8d8bf67462c8a18f3504b43972aa442d}
+}]\index{SCRIPT\_\-OPCODE\_\-IFDUP@{SCRIPT\_\-OPCODE\_\-IFDUP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-IFDUP@{SCRIPT\_\-OPCODE\_\-IFDUP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa3df2c8b9a95a426e471c920d46c8595}{
+SCRIPT\_\-OPCODE\_\-IFDUP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa3df2c8b9a95a426e471c920d46c8595}
+}]\index{SCRIPT\_\-OPCODE\_\-DEPTH@{SCRIPT\_\-OPCODE\_\-DEPTH}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-DEPTH@{SCRIPT\_\-OPCODE\_\-DEPTH}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5d352b9fd7ba283eeb00f90c5a271f51}{
+SCRIPT\_\-OPCODE\_\-DEPTH}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5d352b9fd7ba283eeb00f90c5a271f51}
+}]\index{SCRIPT\_\-OPCODE\_\-DROP@{SCRIPT\_\-OPCODE\_\-DROP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-DROP@{SCRIPT\_\-OPCODE\_\-DROP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a47ec08fd060faea901455610fe02c804}{
+SCRIPT\_\-OPCODE\_\-DROP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a47ec08fd060faea901455610fe02c804}
+}]\index{SCRIPT\_\-OPCODE\_\-DUP@{SCRIPT\_\-OPCODE\_\-DUP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-DUP@{SCRIPT\_\-OPCODE\_\-DUP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a06368ea5ea2e47d2674f8de0f4bdca16}{
+SCRIPT\_\-OPCODE\_\-DUP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a06368ea5ea2e47d2674f8de0f4bdca16}
+}]\index{SCRIPT\_\-OPCODE\_\-NIP@{SCRIPT\_\-OPCODE\_\-NIP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NIP@{SCRIPT\_\-OPCODE\_\-NIP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a667ce4e23e49f09e0807a1de16fe6e77}{
+SCRIPT\_\-OPCODE\_\-NIP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a667ce4e23e49f09e0807a1de16fe6e77}
+}]\index{SCRIPT\_\-OPCODE\_\-OVER@{SCRIPT\_\-OPCODE\_\-OVER}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-OVER@{SCRIPT\_\-OPCODE\_\-OVER}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2c6b5ddc35216afdfbdce7a94273761f}{
+SCRIPT\_\-OPCODE\_\-OVER}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2c6b5ddc35216afdfbdce7a94273761f}
+}]\index{SCRIPT\_\-OPCODE\_\-PICK@{SCRIPT\_\-OPCODE\_\-PICK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PICK@{SCRIPT\_\-OPCODE\_\-PICK}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af6b7da3dfeea89131a083f35a1b13157}{
+SCRIPT\_\-OPCODE\_\-PICK}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af6b7da3dfeea89131a083f35a1b13157}
+}]\index{SCRIPT\_\-OPCODE\_\-ROLL@{SCRIPT\_\-OPCODE\_\-ROLL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-ROLL@{SCRIPT\_\-OPCODE\_\-ROLL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0cfc1b104b3f7b773cc4a87c9f83e84a}{
+SCRIPT\_\-OPCODE\_\-ROLL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0cfc1b104b3f7b773cc4a87c9f83e84a}
+}]\index{SCRIPT\_\-OPCODE\_\-ROT@{SCRIPT\_\-OPCODE\_\-ROT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-ROT@{SCRIPT\_\-OPCODE\_\-ROT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ade170c8dd3e87cefd01e2dd715749497}{
+SCRIPT\_\-OPCODE\_\-ROT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ade170c8dd3e87cefd01e2dd715749497}
+}]\index{SCRIPT\_\-OPCODE\_\-SWAP@{SCRIPT\_\-OPCODE\_\-SWAP}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SWAP@{SCRIPT\_\-OPCODE\_\-SWAP}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a226bbd02b346591769fafcf22ae641b3}{
+SCRIPT\_\-OPCODE\_\-SWAP}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a226bbd02b346591769fafcf22ae641b3}
+}]\index{SCRIPT\_\-OPCODE\_\-TUCK@{SCRIPT\_\-OPCODE\_\-TUCK}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-TUCK@{SCRIPT\_\-OPCODE\_\-TUCK}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a85d9017630c090f6e2115b20a9e98857}{
+SCRIPT\_\-OPCODE\_\-TUCK}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a85d9017630c090f6e2115b20a9e98857}
+}]\index{SCRIPT\_\-OPCODE\_\-CAT@{SCRIPT\_\-OPCODE\_\-CAT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-CAT@{SCRIPT\_\-OPCODE\_\-CAT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d90702b37b4c90d4ca430ecce55e022}{
+SCRIPT\_\-OPCODE\_\-CAT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d90702b37b4c90d4ca430ecce55e022}
+}]\index{SCRIPT\_\-OPCODE\_\-SUBSTR@{SCRIPT\_\-OPCODE\_\-SUBSTR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SUBSTR@{SCRIPT\_\-OPCODE\_\-SUBSTR}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa40c5cb1ff49d029230d834d4dca5f16}{
+SCRIPT\_\-OPCODE\_\-SUBSTR}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa40c5cb1ff49d029230d834d4dca5f16}
+}]\index{SCRIPT\_\-OPCODE\_\-LEFT@{SCRIPT\_\-OPCODE\_\-LEFT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-LEFT@{SCRIPT\_\-OPCODE\_\-LEFT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af33a4d4b674132610fee2611579d505b}{
+SCRIPT\_\-OPCODE\_\-LEFT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af33a4d4b674132610fee2611579d505b}
+}]\index{SCRIPT\_\-OPCODE\_\-RIGHT@{SCRIPT\_\-OPCODE\_\-RIGHT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RIGHT@{SCRIPT\_\-OPCODE\_\-RIGHT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a36c42371982fa533e0d22069290a3787}{
+SCRIPT\_\-OPCODE\_\-RIGHT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a36c42371982fa533e0d22069290a3787}
+}]\index{SCRIPT\_\-OPCODE\_\-SIZE@{SCRIPT\_\-OPCODE\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SIZE@{SCRIPT\_\-OPCODE\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6cc682573a7a43b2e914d1a1fadbe8df}{
+SCRIPT\_\-OPCODE\_\-SIZE}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6cc682573a7a43b2e914d1a1fadbe8df}
+}]\index{SCRIPT\_\-OPCODE\_\-INVERT@{SCRIPT\_\-OPCODE\_\-INVERT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-INVERT@{SCRIPT\_\-OPCODE\_\-INVERT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad105e3049457c87011cbd636d3f798c8}{
+SCRIPT\_\-OPCODE\_\-INVERT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad105e3049457c87011cbd636d3f798c8}
+}]\index{SCRIPT\_\-OPCODE\_\-AND@{SCRIPT\_\-OPCODE\_\-AND}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-AND@{SCRIPT\_\-OPCODE\_\-AND}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad0b6577572d7a1d4d1219b3fcacbf8df}{
+SCRIPT\_\-OPCODE\_\-AND}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad0b6577572d7a1d4d1219b3fcacbf8df}
+}]\index{SCRIPT\_\-OPCODE\_\-OR@{SCRIPT\_\-OPCODE\_\-OR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-OR@{SCRIPT\_\-OPCODE\_\-OR}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a82897bb598a7ae17968de5f003c9930b}{
+SCRIPT\_\-OPCODE\_\-OR}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a82897bb598a7ae17968de5f003c9930b}
+}]\index{SCRIPT\_\-OPCODE\_\-XOR@{SCRIPT\_\-OPCODE\_\-XOR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-XOR@{SCRIPT\_\-OPCODE\_\-XOR}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a56b2b3f4b448cbf01ffa02293027da58}{
+SCRIPT\_\-OPCODE\_\-XOR}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a56b2b3f4b448cbf01ffa02293027da58}
+}]\index{SCRIPT\_\-OPCODE\_\-EQUAL@{SCRIPT\_\-OPCODE\_\-EQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-EQUAL@{SCRIPT\_\-OPCODE\_\-EQUAL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a87ac289f1822dde70b15945ef47d322b}{
+SCRIPT\_\-OPCODE\_\-EQUAL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a87ac289f1822dde70b15945ef47d322b}
+}]\index{SCRIPT\_\-OPCODE\_\-EQUALVERIFY@{SCRIPT\_\-OPCODE\_\-EQUALVERIFY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-EQUALVERIFY@{SCRIPT\_\-OPCODE\_\-EQUALVERIFY}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261afea118a8436877a32baac68e5a338828}{
+SCRIPT\_\-OPCODE\_\-EQUALVERIFY}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261afea118a8436877a32baac68e5a338828}
+}]\index{SCRIPT\_\-OPCODE\_\-RESERVED1@{SCRIPT\_\-OPCODE\_\-RESERVED1}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RESERVED1@{SCRIPT\_\-OPCODE\_\-RESERVED1}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a977992f7d949e11f57b0c5755d014ea6}{
+SCRIPT\_\-OPCODE\_\-RESERVED1}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a977992f7d949e11f57b0c5755d014ea6}
+}]\index{SCRIPT\_\-OPCODE\_\-RESERVED2@{SCRIPT\_\-OPCODE\_\-RESERVED2}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RESERVED2@{SCRIPT\_\-OPCODE\_\-RESERVED2}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a7e275b62acad429bd6a97f0f28440653}{
+SCRIPT\_\-OPCODE\_\-RESERVED2}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a7e275b62acad429bd6a97f0f28440653}
+}]\index{SCRIPT\_\-OPCODE\_\-1ADD@{SCRIPT\_\-OPCODE\_\-1ADD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-1ADD@{SCRIPT\_\-OPCODE\_\-1ADD}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4ed1ff82e06aed6cd92d046041961e1f}{
+SCRIPT\_\-OPCODE\_\-1ADD}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4ed1ff82e06aed6cd92d046041961e1f}
+}]\index{SCRIPT\_\-OPCODE\_\-1SUB@{SCRIPT\_\-OPCODE\_\-1SUB}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-1SUB@{SCRIPT\_\-OPCODE\_\-1SUB}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac68419697241139db3fd1e310da6cc38}{
+SCRIPT\_\-OPCODE\_\-1SUB}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac68419697241139db3fd1e310da6cc38}
+}]\index{SCRIPT\_\-OPCODE\_\-2MUL@{SCRIPT\_\-OPCODE\_\-2MUL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2MUL@{SCRIPT\_\-OPCODE\_\-2MUL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac99f89b58557bff517ddb15f5bcfa8d5}{
+SCRIPT\_\-OPCODE\_\-2MUL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac99f89b58557bff517ddb15f5bcfa8d5}
+}]\index{SCRIPT\_\-OPCODE\_\-2DIV@{SCRIPT\_\-OPCODE\_\-2DIV}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-2DIV@{SCRIPT\_\-OPCODE\_\-2DIV}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab5372b8d1a8e21a04f37a62fee5a6293}{
+SCRIPT\_\-OPCODE\_\-2DIV}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab5372b8d1a8e21a04f37a62fee5a6293}
+}]\index{SCRIPT\_\-OPCODE\_\-NEGATE@{SCRIPT\_\-OPCODE\_\-NEGATE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NEGATE@{SCRIPT\_\-OPCODE\_\-NEGATE}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af3f13ceaa5d2d9fde35a44e6ed727675}{
+SCRIPT\_\-OPCODE\_\-NEGATE}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af3f13ceaa5d2d9fde35a44e6ed727675}
+}]\index{SCRIPT\_\-OPCODE\_\-ABS@{SCRIPT\_\-OPCODE\_\-ABS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-ABS@{SCRIPT\_\-OPCODE\_\-ABS}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9f3d06903919874871e31811ff9214c7}{
+SCRIPT\_\-OPCODE\_\-ABS}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9f3d06903919874871e31811ff9214c7}
+}]\index{SCRIPT\_\-OPCODE\_\-NOT@{SCRIPT\_\-OPCODE\_\-NOT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOT@{SCRIPT\_\-OPCODE\_\-NOT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af57ebd62fbaac2168aa9c055d100bd12}{
+SCRIPT\_\-OPCODE\_\-NOT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af57ebd62fbaac2168aa9c055d100bd12}
+}]\index{SCRIPT\_\-OPCODE\_\-0NOTEQUAL@{SCRIPT\_\-OPCODE\_\-0NOTEQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-0NOTEQUAL@{SCRIPT\_\-OPCODE\_\-0NOTEQUAL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abf4f43e59384e6e7eaf27f2cb2465867}{
+SCRIPT\_\-OPCODE\_\-0NOTEQUAL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261abf4f43e59384e6e7eaf27f2cb2465867}
+}]\index{SCRIPT\_\-OPCODE\_\-ADD@{SCRIPT\_\-OPCODE\_\-ADD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-ADD@{SCRIPT\_\-OPCODE\_\-ADD}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aca41a1a10951a5c3235763e757cd3275}{
+SCRIPT\_\-OPCODE\_\-ADD}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aca41a1a10951a5c3235763e757cd3275}
+}]\index{SCRIPT\_\-OPCODE\_\-SUB@{SCRIPT\_\-OPCODE\_\-SUB}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SUB@{SCRIPT\_\-OPCODE\_\-SUB}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a704875ffeec99cfd1126b3d847455205}{
+SCRIPT\_\-OPCODE\_\-SUB}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a704875ffeec99cfd1126b3d847455205}
+}]\index{SCRIPT\_\-OPCODE\_\-MUL@{SCRIPT\_\-OPCODE\_\-MUL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-MUL@{SCRIPT\_\-OPCODE\_\-MUL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad6b6722ae146128fe97a699c4e1f3687}{
+SCRIPT\_\-OPCODE\_\-MUL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad6b6722ae146128fe97a699c4e1f3687}
+}]\index{SCRIPT\_\-OPCODE\_\-DIV@{SCRIPT\_\-OPCODE\_\-DIV}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-DIV@{SCRIPT\_\-OPCODE\_\-DIV}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4db60e00ba7e6f4ddd3a761da044ee16}{
+SCRIPT\_\-OPCODE\_\-DIV}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4db60e00ba7e6f4ddd3a761da044ee16}
+}]\index{SCRIPT\_\-OPCODE\_\-MOD@{SCRIPT\_\-OPCODE\_\-MOD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-MOD@{SCRIPT\_\-OPCODE\_\-MOD}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a58db8e82676607d08544fb85b8ce3b57}{
+SCRIPT\_\-OPCODE\_\-MOD}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a58db8e82676607d08544fb85b8ce3b57}
+}]\index{SCRIPT\_\-OPCODE\_\-LSHIFT@{SCRIPT\_\-OPCODE\_\-LSHIFT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-LSHIFT@{SCRIPT\_\-OPCODE\_\-LSHIFT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0cb0a5e48ea2179489fbd64fd4795f90}{
+SCRIPT\_\-OPCODE\_\-LSHIFT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a0cb0a5e48ea2179489fbd64fd4795f90}
+}]\index{SCRIPT\_\-OPCODE\_\-RSHIFT@{SCRIPT\_\-OPCODE\_\-RSHIFT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RSHIFT@{SCRIPT\_\-OPCODE\_\-RSHIFT}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa35c33bd08493266e7eb9a4bd052e203}{
+SCRIPT\_\-OPCODE\_\-RSHIFT}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa35c33bd08493266e7eb9a4bd052e203}
+}]\index{SCRIPT\_\-OPCODE\_\-BOOLAND@{SCRIPT\_\-OPCODE\_\-BOOLAND}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-BOOLAND@{SCRIPT\_\-OPCODE\_\-BOOLAND}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a43779fcad35757fe7f4b4da17060dde3}{
+SCRIPT\_\-OPCODE\_\-BOOLAND}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a43779fcad35757fe7f4b4da17060dde3}
+}]\index{SCRIPT\_\-OPCODE\_\-BOOLOR@{SCRIPT\_\-OPCODE\_\-BOOLOR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-BOOLOR@{SCRIPT\_\-OPCODE\_\-BOOLOR}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2a73c807bff6f33d3d83a280ff3d10ef}{
+SCRIPT\_\-OPCODE\_\-BOOLOR}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a2a73c807bff6f33d3d83a280ff3d10ef}
+}]\index{SCRIPT\_\-OPCODE\_\-NUMEQUAL@{SCRIPT\_\-OPCODE\_\-NUMEQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NUMEQUAL@{SCRIPT\_\-OPCODE\_\-NUMEQUAL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa34ff41ebaa170bb02787f9ae5e89a18}{
+SCRIPT\_\-OPCODE\_\-NUMEQUAL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa34ff41ebaa170bb02787f9ae5e89a18}
+}]\index{SCRIPT\_\-OPCODE\_\-NUMEQUALVERIFY@{SCRIPT\_\-OPCODE\_\-NUMEQUALVERIFY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NUMEQUALVERIFY@{SCRIPT\_\-OPCODE\_\-NUMEQUALVERIFY}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a7dd2bf1bb9abd218e85f9e420360ff67}{
+SCRIPT\_\-OPCODE\_\-NUMEQUALVERIFY}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a7dd2bf1bb9abd218e85f9e420360ff67}
+}]\index{SCRIPT\_\-OPCODE\_\-NUMNOTEQUAL@{SCRIPT\_\-OPCODE\_\-NUMNOTEQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NUMNOTEQUAL@{SCRIPT\_\-OPCODE\_\-NUMNOTEQUAL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae8c96d1bc91a1332ba2c4ca23ba3b121}{
+SCRIPT\_\-OPCODE\_\-NUMNOTEQUAL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae8c96d1bc91a1332ba2c4ca23ba3b121}
+}]\index{SCRIPT\_\-OPCODE\_\-LESSTHAN@{SCRIPT\_\-OPCODE\_\-LESSTHAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-LESSTHAN@{SCRIPT\_\-OPCODE\_\-LESSTHAN}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ada5bd8b046c9967e9f48ad341783af19}{
+SCRIPT\_\-OPCODE\_\-LESSTHAN}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ada5bd8b046c9967e9f48ad341783af19}
+}]\index{SCRIPT\_\-OPCODE\_\-GREATERTHAN@{SCRIPT\_\-OPCODE\_\-GREATERTHAN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-GREATERTHAN@{SCRIPT\_\-OPCODE\_\-GREATERTHAN}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aeb4b0c1f69a7796d9fabbfff3b073844}{
+SCRIPT\_\-OPCODE\_\-GREATERTHAN}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aeb4b0c1f69a7796d9fabbfff3b073844}
+}]\index{SCRIPT\_\-OPCODE\_\-LESSTHANOREQUAL@{SCRIPT\_\-OPCODE\_\-LESSTHANOREQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-LESSTHANOREQUAL@{SCRIPT\_\-OPCODE\_\-LESSTHANOREQUAL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a27854897520ffd63a053474451f41f69}{
+SCRIPT\_\-OPCODE\_\-LESSTHANOREQUAL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a27854897520ffd63a053474451f41f69}
+}]\index{SCRIPT\_\-OPCODE\_\-GREATERTHANOREQUAL@{SCRIPT\_\-OPCODE\_\-GREATERTHANOREQUAL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-GREATERTHANOREQUAL@{SCRIPT\_\-OPCODE\_\-GREATERTHANOREQUAL}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9c414e78d1701ca04bcf261a4b5cc94a}{
+SCRIPT\_\-OPCODE\_\-GREATERTHANOREQUAL}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9c414e78d1701ca04bcf261a4b5cc94a}
+}]\index{SCRIPT\_\-OPCODE\_\-MIN@{SCRIPT\_\-OPCODE\_\-MIN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-MIN@{SCRIPT\_\-OPCODE\_\-MIN}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac8caef14165c0e208a99c08dd0b941a9}{
+SCRIPT\_\-OPCODE\_\-MIN}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac8caef14165c0e208a99c08dd0b941a9}
+}]\index{SCRIPT\_\-OPCODE\_\-MAX@{SCRIPT\_\-OPCODE\_\-MAX}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-MAX@{SCRIPT\_\-OPCODE\_\-MAX}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a191a0c354403934b05e00fb67730676b}{
+SCRIPT\_\-OPCODE\_\-MAX}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a191a0c354403934b05e00fb67730676b}
+}]\index{SCRIPT\_\-OPCODE\_\-WITHIN@{SCRIPT\_\-OPCODE\_\-WITHIN}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-WITHIN@{SCRIPT\_\-OPCODE\_\-WITHIN}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6bd178ad0d24a80bc3b1fda3fca12ce4}{
+SCRIPT\_\-OPCODE\_\-WITHIN}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a6bd178ad0d24a80bc3b1fda3fca12ce4}
+}]\index{SCRIPT\_\-OPCODE\_\-RIPEMD160@{SCRIPT\_\-OPCODE\_\-RIPEMD160}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-RIPEMD160@{SCRIPT\_\-OPCODE\_\-RIPEMD160}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae6c02597d9ec4b20250c17e8c2c6d6be}{
+SCRIPT\_\-OPCODE\_\-RIPEMD160}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ae6c02597d9ec4b20250c17e8c2c6d6be}
+}]\index{SCRIPT\_\-OPCODE\_\-SHA1@{SCRIPT\_\-OPCODE\_\-SHA1}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SHA1@{SCRIPT\_\-OPCODE\_\-SHA1}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a938ad3706b301863a9acdb69f68eb31c}{
+SCRIPT\_\-OPCODE\_\-SHA1}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a938ad3706b301863a9acdb69f68eb31c}
+}]\index{SCRIPT\_\-OPCODE\_\-SHA256@{SCRIPT\_\-OPCODE\_\-SHA256}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SHA256@{SCRIPT\_\-OPCODE\_\-SHA256}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a83704dc9b91397b86a6b51b36939e45e}{
+SCRIPT\_\-OPCODE\_\-SHA256}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a83704dc9b91397b86a6b51b36939e45e}
+}]\index{SCRIPT\_\-OPCODE\_\-HASH160@{SCRIPT\_\-OPCODE\_\-HASH160}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-HASH160@{SCRIPT\_\-OPCODE\_\-HASH160}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5417954764ccb7de080cbec9c9338447}{
+SCRIPT\_\-OPCODE\_\-HASH160}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a5417954764ccb7de080cbec9c9338447}
+}]\index{SCRIPT\_\-OPCODE\_\-HASH256@{SCRIPT\_\-OPCODE\_\-HASH256}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-HASH256@{SCRIPT\_\-OPCODE\_\-HASH256}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a850a52d6fb761c3927f209bd247fded9}{
+SCRIPT\_\-OPCODE\_\-HASH256}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a850a52d6fb761c3927f209bd247fded9}
+}]\index{SCRIPT\_\-OPCODE\_\-CODESEPARATOR@{SCRIPT\_\-OPCODE\_\-CODESEPARATOR}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-CODESEPARATOR@{SCRIPT\_\-OPCODE\_\-CODESEPARATOR}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4433a9e18f616b931355c0b7a8fdbbb1}{
+SCRIPT\_\-OPCODE\_\-CODESEPARATOR}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a4433a9e18f616b931355c0b7a8fdbbb1}
+}]\index{SCRIPT\_\-OPCODE\_\-CHECKSIG@{SCRIPT\_\-OPCODE\_\-CHECKSIG}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-CHECKSIG@{SCRIPT\_\-OPCODE\_\-CHECKSIG}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261acb41eacae824fd9f5911b5647ebe8099}{
+SCRIPT\_\-OPCODE\_\-CHECKSIG}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261acb41eacae824fd9f5911b5647ebe8099}
+}]\index{SCRIPT\_\-OPCODE\_\-CHECKSIGVERIFY@{SCRIPT\_\-OPCODE\_\-CHECKSIGVERIFY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-CHECKSIGVERIFY@{SCRIPT\_\-OPCODE\_\-CHECKSIGVERIFY}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af019c5897bec7acfe10039c497efd8d2}{
+SCRIPT\_\-OPCODE\_\-CHECKSIGVERIFY}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af019c5897bec7acfe10039c497efd8d2}
+}]\index{SCRIPT\_\-OPCODE\_\-CHECKMULTISIG@{SCRIPT\_\-OPCODE\_\-CHECKMULTISIG}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-CHECKMULTISIG@{SCRIPT\_\-OPCODE\_\-CHECKMULTISIG}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa7521bbacda374d67e274d95c1762415}{
+SCRIPT\_\-OPCODE\_\-CHECKMULTISIG}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aa7521bbacda374d67e274d95c1762415}
+}]\index{SCRIPT\_\-OPCODE\_\-CHECKMULTISIGVERIFY@{SCRIPT\_\-OPCODE\_\-CHECKMULTISIGVERIFY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-CHECKMULTISIGVERIFY@{SCRIPT\_\-OPCODE\_\-CHECKMULTISIGVERIFY}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac1f1ae0068ab02815d725fd4712e7901}{
+SCRIPT\_\-OPCODE\_\-CHECKMULTISIGVERIFY}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ac1f1ae0068ab02815d725fd4712e7901}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP1@{SCRIPT\_\-OPCODE\_\-NOP1}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP1@{SCRIPT\_\-OPCODE\_\-NOP1}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab0a5f9f0c03da3950290821dd678f68d}{
+SCRIPT\_\-OPCODE\_\-NOP1}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab0a5f9f0c03da3950290821dd678f68d}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP2@{SCRIPT\_\-OPCODE\_\-NOP2}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP2@{SCRIPT\_\-OPCODE\_\-NOP2}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a23cedbf157a210dc0e7aa78420755601}{
+SCRIPT\_\-OPCODE\_\-NOP2}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a23cedbf157a210dc0e7aa78420755601}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP3@{SCRIPT\_\-OPCODE\_\-NOP3}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP3@{SCRIPT\_\-OPCODE\_\-NOP3}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9820cd1659a5795dedec8168e927051a}{
+SCRIPT\_\-OPCODE\_\-NOP3}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9820cd1659a5795dedec8168e927051a}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP4@{SCRIPT\_\-OPCODE\_\-NOP4}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP4@{SCRIPT\_\-OPCODE\_\-NOP4}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a544bd366a5d0587f8f3cc2738a01098f}{
+SCRIPT\_\-OPCODE\_\-NOP4}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a544bd366a5d0587f8f3cc2738a01098f}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP5@{SCRIPT\_\-OPCODE\_\-NOP5}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP5@{SCRIPT\_\-OPCODE\_\-NOP5}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aed20bf8f4349363f417855b12805d442}{
+SCRIPT\_\-OPCODE\_\-NOP5}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aed20bf8f4349363f417855b12805d442}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP6@{SCRIPT\_\-OPCODE\_\-NOP6}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP6@{SCRIPT\_\-OPCODE\_\-NOP6}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab226d97e11e64dad353bac817e2782ec}{
+SCRIPT\_\-OPCODE\_\-NOP6}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ab226d97e11e64dad353bac817e2782ec}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP7@{SCRIPT\_\-OPCODE\_\-NOP7}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP7@{SCRIPT\_\-OPCODE\_\-NOP7}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d79eede6125bb250ea4b097fbec1f85}{
+SCRIPT\_\-OPCODE\_\-NOP7}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9d79eede6125bb250ea4b097fbec1f85}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP8@{SCRIPT\_\-OPCODE\_\-NOP8}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP8@{SCRIPT\_\-OPCODE\_\-NOP8}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad189824b1aea34a8c855e3bf80acc2d0}{
+SCRIPT\_\-OPCODE\_\-NOP8}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261ad189824b1aea34a8c855e3bf80acc2d0}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP9@{SCRIPT\_\-OPCODE\_\-NOP9}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP9@{SCRIPT\_\-OPCODE\_\-NOP9}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9f55e8ed7ba9835098fd985f6e3f4888}{
+SCRIPT\_\-OPCODE\_\-NOP9}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a9f55e8ed7ba9835098fd985f6e3f4888}
+}]\index{SCRIPT\_\-OPCODE\_\-NOP10@{SCRIPT\_\-OPCODE\_\-NOP10}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-NOP10@{SCRIPT\_\-OPCODE\_\-NOP10}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af9d6f92f8254de831bf72b31f5d4a669}{
+SCRIPT\_\-OPCODE\_\-NOP10}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261af9d6f92f8254de831bf72b31f5d4a669}
+}]\index{SCRIPT\_\-OPCODE\_\-SMALLINTEGER@{SCRIPT\_\-OPCODE\_\-SMALLINTEGER}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-SMALLINTEGER@{SCRIPT\_\-OPCODE\_\-SMALLINTEGER}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261afec3c67fdfe7469d6d9344c93e99af12}{
+SCRIPT\_\-OPCODE\_\-SMALLINTEGER}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261afec3c67fdfe7469d6d9344c93e99af12}
+}]\index{SCRIPT\_\-OPCODE\_\-PUBKEYS@{SCRIPT\_\-OPCODE\_\-PUBKEYS}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PUBKEYS@{SCRIPT\_\-OPCODE\_\-PUBKEYS}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8283c2565f4e672df34198a1cd06a5b3}{
+SCRIPT\_\-OPCODE\_\-PUBKEYS}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a8283c2565f4e672df34198a1cd06a5b3}
+}]\index{SCRIPT\_\-OPCODE\_\-PUBKEYHASH@{SCRIPT\_\-OPCODE\_\-PUBKEYHASH}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PUBKEYHASH@{SCRIPT\_\-OPCODE\_\-PUBKEYHASH}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a61aec0156e55715d855f65dfb07ce734}{
+SCRIPT\_\-OPCODE\_\-PUBKEYHASH}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a61aec0156e55715d855f65dfb07ce734}
+}]\index{SCRIPT\_\-OPCODE\_\-PUBKEY@{SCRIPT\_\-OPCODE\_\-PUBKEY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-PUBKEY@{SCRIPT\_\-OPCODE\_\-PUBKEY}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aacf181a6303640660dd03602364e356f}{
+SCRIPT\_\-OPCODE\_\-PUBKEY}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261aacf181a6303640660dd03602364e356f}
+}]\index{SCRIPT\_\-OPCODE\_\-INVALID@{SCRIPT\_\-OPCODE\_\-INVALID}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SCRIPT\_\-OPCODE\_\-INVALID@{SCRIPT\_\-OPCODE\_\-INVALID}}\item[{\em 
+\hypertarget{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a13ee63bdc69c0c79ea2753d56ce1e465}{
+SCRIPT\_\-OPCODE\_\-INVALID}
+\label{_constants_8h_abb1eab93e44604a3a4a3861f63c8e261a13ee63bdc69c0c79ea2753d56ce1e465}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 132 of file Constants.h.
+
+\hypertarget{_constants_8h_a7456a1be27da2089f984a0ede62c6c50}{
+\index{Constants.h@{Constants.h}!SignatureType@{SignatureType}}
+\index{SignatureType@{SignatureType}!Constants.h@{Constants.h}}
+\subsubsection[{SignatureType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf SignatureType}}}
+\label{_constants_8h_a7456a1be27da2089f984a0ede62c6c50}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{SIGHASH\_\-ALL@{SIGHASH\_\-ALL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SIGHASH\_\-ALL@{SIGHASH\_\-ALL}}\item[{\em 
+\hypertarget{_constants_8h_a7456a1be27da2089f984a0ede62c6c50ac68c7df6528b3001624e56b2de3826de}{
+SIGHASH\_\-ALL}
+\label{_constants_8h_a7456a1be27da2089f984a0ede62c6c50ac68c7df6528b3001624e56b2de3826de}
+}]\index{SIGHASH\_\-NONE@{SIGHASH\_\-NONE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SIGHASH\_\-NONE@{SIGHASH\_\-NONE}}\item[{\em 
+\hypertarget{_constants_8h_a7456a1be27da2089f984a0ede62c6c50acaba9b1f029a1628196345fce5667f6f}{
+SIGHASH\_\-NONE}
+\label{_constants_8h_a7456a1be27da2089f984a0ede62c6c50acaba9b1f029a1628196345fce5667f6f}
+}]\index{SIGHASH\_\-SINGLE@{SIGHASH\_\-SINGLE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SIGHASH\_\-SINGLE@{SIGHASH\_\-SINGLE}}\item[{\em 
+\hypertarget{_constants_8h_a7456a1be27da2089f984a0ede62c6c50ad9bb96e76cf9f1b6ebbf50373f4f9ca5}{
+SIGHASH\_\-SINGLE}
+\label{_constants_8h_a7456a1be27da2089f984a0ede62c6c50ad9bb96e76cf9f1b6ebbf50373f4f9ca5}
+}]\index{SIGHASH\_\-ANYONECANPAY@{SIGHASH\_\-ANYONECANPAY}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!SIGHASH\_\-ANYONECANPAY@{SIGHASH\_\-ANYONECANPAY}}\item[{\em 
+\hypertarget{_constants_8h_a7456a1be27da2089f984a0ede62c6c50a9412c721b741fe9be1e3247dc390a4d2}{
+SIGHASH\_\-ANYONECANPAY}
+\label{_constants_8h_a7456a1be27da2089f984a0ede62c6c50a9412c721b741fe9be1e3247dc390a4d2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 97 of file Constants.h.
+
+\hypertarget{_constants_8h_a06a84fe331713101601f06ed6250f154}{
+\index{Constants.h@{Constants.h}!TransactionFields@{TransactionFields}}
+\index{TransactionFields@{TransactionFields}!Constants.h@{Constants.h}}
+\subsubsection[{TransactionFields}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf TransactionFields}}}
+\label{_constants_8h_a06a84fe331713101601f06ed6250f154}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{TX\_\-VERSION\_\-FIELD\_\-SIZE@{TX\_\-VERSION\_\-FIELD\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-VERSION\_\-FIELD\_\-SIZE@{TX\_\-VERSION\_\-FIELD\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_a06a84fe331713101601f06ed6250f154a9716b199cb6dd754756e54de765767ef}{
+TX\_\-VERSION\_\-FIELD\_\-SIZE}
+\label{_constants_8h_a06a84fe331713101601f06ed6250f154a9716b199cb6dd754756e54de765767ef}
+}]\index{TX\_\-LOCKTIME\_\-FIELD\_\-SIZE@{TX\_\-LOCKTIME\_\-FIELD\_\-SIZE}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-LOCKTIME\_\-FIELD\_\-SIZE@{TX\_\-LOCKTIME\_\-FIELD\_\-SIZE}}\item[{\em 
+\hypertarget{_constants_8h_a06a84fe331713101601f06ed6250f154a2082e1c13c6f471f2e0b6d96e8f5cb22}{
+TX\_\-LOCKTIME\_\-FIELD\_\-SIZE}
+\label{_constants_8h_a06a84fe331713101601f06ed6250f154a2082e1c13c6f471f2e0b6d96e8f5cb22}
+}]\index{TX\_\-INPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT@{TX\_\-INPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-INPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT@{TX\_\-INPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT}}\item[{\em 
+\hypertarget{_constants_8h_a06a84fe331713101601f06ed6250f154ae42718094e3f4915b4c9d88ccfe1ee69}{
+TX\_\-INPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT}
+\label{_constants_8h_a06a84fe331713101601f06ed6250f154ae42718094e3f4915b4c9d88ccfe1ee69}
+}]\index{TX\_\-OUTPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT@{TX\_\-OUTPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-OUTPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT@{TX\_\-OUTPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT}}\item[{\em 
+\hypertarget{_constants_8h_a06a84fe331713101601f06ed6250f154a68f731175d82cdb20ce0dd76ca7dac04}{
+TX\_\-OUTPUT\_\-FIELD\_\-SIZE\_\-EXCLUDING\_\-SCRIPT}
+\label{_constants_8h_a06a84fe331713101601f06ed6250f154a68f731175d82cdb20ce0dd76ca7dac04}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 107 of file Constants.h.
+
+\hypertarget{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826}{
+\index{Constants.h@{Constants.h}!TransactionHashStatus@{TransactionHashStatus}}
+\index{TransactionHashStatus@{TransactionHashStatus}!Constants.h@{Constants.h}}
+\subsubsection[{TransactionHashStatus}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf TransactionHashStatus}}}
+\label{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{TX\_\-HASH\_\-GOOD@{TX\_\-HASH\_\-GOOD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-HASH\_\-GOOD@{TX\_\-HASH\_\-GOOD}}\item[{\em 
+\hypertarget{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826a9f46366755423a053481edc37bd853d0}{
+TX\_\-HASH\_\-GOOD}
+\label{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826a9f46366755423a053481edc37bd853d0}
+}]\hyperlink{struct_transaction}{Transaction} hash was made OK \index{TX\_\-HASH\_\-BAD@{TX\_\-HASH\_\-BAD}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-HASH\_\-BAD@{TX\_\-HASH\_\-BAD}}\item[{\em 
+\hypertarget{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826ab8cb7847f95d8209bd64c5bd4cdce830}{
+TX\_\-HASH\_\-BAD}
+\label{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826ab8cb7847f95d8209bd64c5bd4cdce830}
+}]The transaction is invalid and a hash cannot be made. \index{TX\_\-HASH\_\-FAIL@{TX\_\-HASH\_\-FAIL}!Constants.h@{Constants.h}}\index{Constants.h@{Constants.h}!TX\_\-HASH\_\-FAIL@{TX\_\-HASH\_\-FAIL}}\item[{\em 
+\hypertarget{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826ae372182e92ec6fd8774695846b3d8845}{
+TX\_\-HASH\_\-FAIL}
+\label{_constants_8h_afe32e161e878b8e5ddb8ed32907ad826ae372182e92ec6fd8774695846b3d8845}
+}]An error occured while making the hash. \end{description}
+\end{Desc}
+
+
+
+Definition at line 81 of file Constants.h.
+

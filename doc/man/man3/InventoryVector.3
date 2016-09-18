@@ -1,0 +1,71 @@
+.TH "InventoryVector" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InventoryVector \- 
+.PP
+Structure for \fBInventoryVector\fP objects.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <InventoryVector.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBInventoryVectorType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBByteArray\fP * \fBhash\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBtype\fP"
+.br
+.ti -1c
+.RI "char \fBhash\fP [32]"
+.br
+.ti -1c
+.RI "unsigned int \fBtype\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for \fBInventoryVector\fP objects. 
+
+\fBSee also:\fP
+.RS 4
+\fBInventoryVector.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file InventoryVector.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBMessage\fP \fBbase\fP"\fBMessage\fP base structure 
+.PP
+Definition at line 24 of file InventoryVector.h.
+.SS "char \fBhash\fP[32]"
+.PP
+Definition at line 32 of file Commands.h.
+.SS "char \fBhash\fP"The hash of the inventory vector 
+.PP
+Definition at line 26 of file InventoryVector.h.
+.SS "uint32_t \fBtype\fP"
+.PP
+Definition at line 30 of file Commands.h.
+.SS "\fBInventoryVectorType\fP \fBtype\fP"The type of the inventory vector. It can be an error, a transaction or a block 
+.PP
+Definition at line 25 of file InventoryVector.h.
+.SS "unsigned int \fBtype\fP"
+.PP
+Definition at line 114 of file Protocol.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

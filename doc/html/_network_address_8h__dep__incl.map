@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_broadcast_8h.html" title="Message for broadcasting NetworkAddresses over the network. This is used to share socket information ..." alt="" coords="167,83,423,112"/>
+<area shape="rect" id="node15" href="$_peer_8h.html" title="Contains data for managing peer connections. Inherits NetworkAddress." alt="" coords="372,160,548,189"/>
+<area shape="rect" id="node21" href="$_version_8h.html" title="Contains infromation relating to the version of a peer, the timestamp, features, IPs, user agent and last block recieved. Inherits Message." alt="" coords="497,83,692,112"/>
+<area shape="rect" id="node26" href="$_network_address_8c.html" title="src/Object/Network/NetworkAddress.c" alt="" coords="716,83,961,112"/>
+<area shape="rect" id="node5" href="$_address_broadcast_8c.html" title="src/Object/Network/AddressBroadcast.c" alt="" coords="5,160,261,189"/>
+<area shape="rect" id="node7" href="$_address_manager_8h.html" title="Stores addresses both unconnected and connected. It also proves serialisation and deserialisation so ..." alt="" coords="175,237,423,267"/>
+<area shape="rect" id="node9" href="$_address_manager_8c.html" title="src/Object/Network/AddressManager.c" alt="" coords="47,315,295,344"/>
+<area shape="rect" id="node11" href="$_network_communicator_8h.html" title="Used for communicating to other peers. The network communicator can send and receive bitcoin messages..." alt="" coords="319,315,601,344"/>
+<area shape="rect" id="node13" href="$_network_communicator_8c.html" title="src/Object/Network/NetworkCommunicator.c" alt="" coords="319,392,601,421"/>
+<area shape="rect" id="node19" href="$_peer_8c.html" title="src/Object/Network/Peer.c" alt="" coords="497,237,673,267"/>
+<area shape="rect" id="node24" href="$_version_8c.html" title="src/Object/Network/Version.c" alt="" coords="572,160,767,189"/>
+</map>

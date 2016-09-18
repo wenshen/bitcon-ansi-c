@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_address" kind="struct" prot="public">
+    <compoundname>Address</compoundname>
+    <includes refid="_address_8h" local="no">Address.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_address_1acad0c178a202fbaaa57486e58e9cdce2" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref></type>
+        <definition>VersionChecksumBytes base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_version_checksum_bytes" kindref="compound">VersionChecksumBytes</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_address" kindref="compound">Address</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_address_8h" kindref="compound">Address.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="207">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="204">
+        <label>Address</label>
+        <link refid="struct_address"/>
+        <childnode refid="205" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="205">
+        <label>VersionChecksumBytes</label>
+        <link refid="struct_version_checksum_bytes"/>
+        <childnode refid="206" relation="usage">
+          <edgelabel>cachedString</edgelabel>
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="208">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="206">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="207" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="208" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/VersionChecksumBytes/Address/Address.h" bodystart="28" bodyend="30"/>
+    <listofallmembers>
+      <member refid="struct_address_1acad0c178a202fbaaa57486e58e9cdce2" prot="public" virt="non-virtual"><scope>Address</scope><name>base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

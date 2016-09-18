@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_var_len_int_8c.html#a784e8aad4e7aead2119ede96096f33a9" title="Returns a variable integer from an unsigned 64 bit integer." alt="" coords="1071,141,1252,171"/>
+<area shape="rect" id="node7" href="$_object_8c.html#a9773962d80072e39e235802b57907208" title="destructor" alt="" coords="1411,811,1512,840"/>
+<area shape="rect" id="node9" href="$_var_len_int_8c.html#a12852f478f7fcd7cacc0b150fa7fe12a" title="Encodes variable size integer into bytes." alt="" coords="1101,347,1221,376"/>
+<area shape="rect" id="node19" href="$_byte_array_8c.html#aefe112436e17fc5a1c56d263596a612b" title="gets ByteArray Subsection Reference" alt="" coords="764,864,985,893"/>
+<area shape="rect" id="node32" href="$_message_8c.html#a9ab128ae9cafefd9b05e2e0bfa719770" title="getter" alt="" coords="1115,611,1208,640"/>
+<area shape="rect" id="node34" href="$_block_8c.html#ab0d1c25a8612a3644626e5030ffbe456" title="Serializes a Block to the byte data." alt="" coords="207,492,308,521"/>
+<area shape="rect" id="node5" href="$_var_len_int_8c.html#a9a5568c05dc89004c60b0a1679b38ba6" title="Returns the variable integer byte size of a 64 bit integer." alt="" coords="1393,141,1529,171"/>
+<area shape="rect" id="node11" href="$_byte_array_8c.html#aa97aa7ca8177b767d78d5f85a00a00c9" title="sets Byte In ByteArray" alt="" coords="1393,576,1529,605"/>
+<area shape="rect" id="node13" href="$_byte_array_8c.html#aef95198f4933d68abf41255b67107b28" title="writes Integer_16 as Little&#45;Endian Into ByteArray" alt="" coords="1340,347,1583,376"/>
+<area shape="rect" id="node15" href="$_byte_array_8c.html#ab7e0f883b2d3ff4d4b253f4257f6916a" title="writes Integer_32 as Little&#45;Endian Into ByteArray" alt="" coords="1340,268,1583,297"/>
+<area shape="rect" id="node17" href="$_byte_array_8c.html#a7bed1ea7fa0945a98bc4548d72236446" title="writes Integer_64 as Little&#45;Endian Into ByteArray" alt="" coords="1340,480,1583,509"/>
+<area shape="rect" id="node21" href="$_byte_array_8c.html#a38e852a1c627acf4baa1159e1086927e" title="destorys byte array" alt="" coords="1100,811,1223,840"/>
+<area shape="rect" id="node24" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="1423,864,1500,893"/>
+<area shape="rect" id="node29" href="$_byte_array_8c.html#a2811955249437e6f4f47a4fe3b706b2e" title="initializes ByteArray Subsection Reference" alt="" coords="1036,864,1287,893"/>
+<area shape="rect" id="node26" href="$_byte_array_8c.html#a3be6046f319ef59baf73dc0dfadd321d" title="release Byte Array SharedData Reference" alt="" coords="1336,715,1587,744"/>
+<area shape="rect" id="node37" href="$_block_8c.html#a4648ce410198b41749394a5c377ce73b" title="To deal with the header issue for serializeBlock." alt="" coords="781,347,968,376"/>
+<area shape="rect" id="node45" href="$_block_8c.html#aeb72d715416153dbd72e8f876fb19981" title="dealWithSerializationTran" alt="" coords="357,609,528,639"/>
+<area shape="rect" id="node39" href="$_byte_array_8c.html#ad155de39b7e47d41778c0ec219aff1e6" title="changes ByteArray Data&#39;s Reference" alt="" coords="1056,400,1267,429"/>
+<area shape="rect" id="node42" href="$_byte_array_8c.html#a7c9e6ea6d3022a2e858e91e207be9ec2" title="copy a ByteArray To another ByteArray" alt="" coords="1071,453,1252,483"/>
+<area shape="rect" id="node49" href="$_transaction_8c.html#a61a0f76473a17de64dcecc04a3ce3b5f" title="Serialises a Transaction to byte data." alt="" coords="576,480,715,509"/>
+<area shape="rect" id="node52" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="785,557,964,587"/>
+<area shape="rect" id="node58" href="$_transaction_input_8c.html#addbcc4dbb795f83dc6354fb1cd090858" title="Serializes a TransactionInput to byte data." alt="" coords="792,400,957,429"/>
+<area shape="rect" id="node68" href="$_transaction_output_8c.html#ae0ec9ca1d590685385987b26fbded266" title="Serialises a TransactionOutput to byte data." alt="" coords="787,453,963,483"/>
+<area shape="rect" id="node64" href="$_byte_array_8c.html#a3c6396093509698d1346474653f63421" title="Gets a ByteArray from another object. Use this to avoid casts." alt="" coords="1112,507,1211,536"/>
+</map>

@@ -1,0 +1,241 @@
+\hypertarget{_base58_8h}{
+\section{src/Base58/Base58.h File Reference}
+\label{_base58_8h}\index{src/Base58/Base58.h@{src/Base58/Base58.h}}
+}
+
+
+Functions for encoding and decoding in base 58. Avoids 0olI whch may look alike. This is for readability concerns.  
+
+
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include \char`\"{}../BigInt/BigInt.h\char`\"{}}\par
+Include dependency graph for Base58.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{_base58_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{_base58_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_big_int}{BigInt} \hyperlink{_base58_8h_a698fb6717b2cbd17d02ff52b09d84fe5}{DecodeBase58} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Decodes base 58 string into byte data as a \hyperlink{struct_big_int}{BigInt}. \end{DoxyCompactList}\item 
+\hyperlink{struct_big_int}{BigInt} \hyperlink{_base58_8h_a20b174879ad363a02444d6dfd0c3956f}{DecodeBase58Checked} (char $\ast$str, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Decodes base 58 string into byte data as a \hyperlink{struct_big_int}{BigInt} and checks a 4 byte checksum. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_base58_8h_a8eba0d420462df41d21fa7369a9cf2de}{EncodeBase58} (uint8\_\-t $\ast$bytes, uint8\_\-t len)
+\begin{DoxyCompactList}\small\item\em Encodes byte data into base 58. \end{DoxyCompactList}\item 
+uint8\_\-t $\ast$ \hyperlink{_base58_8h_a0e3eca914bcab6d9c960347ed24ca8d3}{GetCheckSum} (uint8\_\-t $\ast$data)
+\item 
+uint8\_\-t $\ast$ \hyperlink{_base58_8h_a638fbbbf6ac769d7ac1e730437fce0c0}{VerifyAndRemoveCheckSum} (uint8\_\-t $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for encoding and decoding in base 58. Avoids 0olI whch may look alike. This is for readability concerns. 
+
+Definition in file \hyperlink{_base58_8h_source}{Base58.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_base58_8h_a698fb6717b2cbd17d02ff52b09d84fe5}{
+\index{Base58.h@{Base58.h}!DecodeBase58@{DecodeBase58}}
+\index{DecodeBase58@{DecodeBase58}!Base58.h@{Base58.h}}
+\subsubsection[{DecodeBase58}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BigInt} DecodeBase58 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}
+\label{_base58_8h_a698fb6717b2cbd17d02ff52b09d84fe5}
+
+
+Decodes base 58 string into byte data as a \hyperlink{struct_big_int}{BigInt}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Base 58 string to decode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the byte data as a \hyperlink{struct_big_int}{BigInt}. The byte data will be created in this function. Remember to free the data. On error the big int will have a NULL data pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file Base58.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_base58_8h_a698fb6717b2cbd17d02ff52b09d84fe5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{_base58_8h_a698fb6717b2cbd17d02ff52b09d84fe5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_base58_8h_a20b174879ad363a02444d6dfd0c3956f}{
+\index{Base58.h@{Base58.h}!DecodeBase58Checked@{DecodeBase58Checked}}
+\index{DecodeBase58Checked@{DecodeBase58Checked}!Base58.h@{Base58.h}}
+\subsubsection[{DecodeBase58Checked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BigInt} DecodeBase58Checked (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_base58_8h_a20b174879ad363a02444d6dfd0c3956f}
+
+
+Decodes base 58 string into byte data as a \hyperlink{struct_big_int}{BigInt} and checks a 4 byte checksum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Base 58 string to decode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte data as a \hyperlink{struct_big_int}{BigInt}. Is zero on failure. Checksum is included in returned data. On error the big int will have a NULL data pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file Base58.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_base58_8h_a20b174879ad363a02444d6dfd0c3956f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_base58_8h_a8eba0d420462df41d21fa7369a9cf2de}{
+\index{Base58.h@{Base58.h}!EncodeBase58@{EncodeBase58}}
+\index{EncodeBase58@{EncodeBase58}!Base58.h@{Base58.h}}
+\subsubsection[{EncodeBase58}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ EncodeBase58 (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{bytes, }
+\item[{uint8\_\-t}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{_base58_8h_a8eba0d420462df41d21fa7369a9cf2de}
+
+
+Encodes byte data into base 58. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & Pointer to byte data to encode. Will almost certainly be modified. Copy data beforehand if needed. \\
+\hline
+{\em len} & Length of bytes to encode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly allocated string with encoded data or NULL on error. 
+\end{DoxyReturn}
+
+
+Definition at line 208 of file Base58.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_base58_8h_a8eba0d420462df41d21fa7369a9cf2de_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_base58_8h_a0e3eca914bcab6d9c960347ed24ca8d3}{
+\index{Base58.h@{Base58.h}!GetCheckSum@{GetCheckSum}}
+\index{GetCheckSum@{GetCheckSum}!Base58.h@{Base58.h}}
+\subsubsection[{GetCheckSum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ GetCheckSum (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{_base58_8h_a0e3eca914bcab6d9c960347ed24ca8d3}
+
+
+Definition at line 282 of file Base58.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{_base58_8h_a0e3eca914bcab6d9c960347ed24ca8d3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_base58_8h_a0e3eca914bcab6d9c960347ed24ca8d3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_base58_8h_a638fbbbf6ac769d7ac1e730437fce0c0}{
+\index{Base58.h@{Base58.h}!VerifyAndRemoveCheckSum@{VerifyAndRemoveCheckSum}}
+\index{VerifyAndRemoveCheckSum@{VerifyAndRemoveCheckSum}!Base58.h@{Base58.h}}
+\subsubsection[{VerifyAndRemoveCheckSum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ VerifyAndRemoveCheckSum (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{_base58_8h_a638fbbbf6ac769d7ac1e730437fce0c0}
+
+
+Definition at line 113 of file Base58.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_base58_8h_a638fbbbf6ac769d7ac1e730437fce0c0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=384pt]{_base58_8h_a638fbbbf6ac769d7ac1e730437fce0c0_icgraph}
+\end{center}
+\end{figure}
+
+

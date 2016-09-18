@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_transaction_input_8h" kind="file">
+    <compoundname>TransactionInput.h</compoundname>
+    <includes refid="_m_i_message_8h" local="yes">Message.h</includes>
+    <includes local="yes">../Script.h</includes>
+    <includes refid="_m_i_transaction_output_8h" local="yes">TransactionOutput.h</includes>
+    <includedby refid="_m_i_transaction_8h" local="yes">Object/Message/Transaction.h</includedby>
+    <includedby refid="_m_i_transaction_8c" local="yes">Object/Message/Transaction.c</includedby>
+    <includedby refid="_m_i_transaction_input_8c" local="yes">Object/Message/TransactionInput.c</includedby>
+    <incdepgraph>
+      <node id="441">
+        <label>../../Utils/VariableLengthInteger/VarLenInt.h</label>
+      </node>
+      <node id="443">
+        <label>TransactionOutput.h</label>
+        <link refid="_m_i_transaction_output_8h"/>
+        <childnode refid="435" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>../Object.h</label>
+      </node>
+      <node id="442">
+        <label>../Script.h</label>
+      </node>
+      <node id="437">
+        <label>stdint.h</label>
+      </node>
+      <node id="436">
+        <label>stdlib.h</label>
+      </node>
+      <node id="434">
+        <label>Object/Message/TransactionInput.h</label>
+        <link refid="TransactionInput.h"/>
+        <childnode refid="435" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+      </node>
+      <node id="438">
+        <label>../../Constants.h</label>
+      </node>
+      <node id="439">
+        <label>../ByteArray.h</label>
+      </node>
+      <node id="435">
+        <label>Message.h</label>
+        <link refid="_m_i_message_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="447">
+        <label>Object/Message/Block.c</label>
+        <link refid="_m_i_block_8c"/>
+      </node>
+      <node id="446">
+        <label>Object/Message/Block.h</label>
+        <link refid="_m_i_block_8h"/>
+        <childnode refid="447" relation="include">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>Object/Message/Transaction.c</label>
+        <link refid="_m_i_transaction_8c"/>
+      </node>
+      <node id="445">
+        <label>Object/Message/Transaction.h</label>
+        <link refid="_m_i_transaction_8h"/>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>Object/Message/TransactionInput.c</label>
+        <link refid="_m_i_transaction_input_8c"/>
+      </node>
+      <node id="444">
+        <label>Object/Message/TransactionInput.h</label>
+        <link refid="TransactionInput.h"/>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_m_i_previous_output" prot="public">PreviousOutput</innerclass>
+    <innerclass refid="struct_m_i_transaction_input" prot="public">TransactionInput</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1a66149340bfb777acf294dba5d06a9776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+        <definition>TransactionInput* createNewTransactionInput</definition>
+        <argsstring>(Script *script, uint32_t sequence, ByteArray *prevOutputHash, uint32_t prevOutputIndex, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewTransactionInput</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">Script</ref> *</type>
+          <declname>script</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>prevOutputHash</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>prevOutputIndex</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="42" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="16" bodyend="41"/>
+        <references refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" compoundref="_m_i_object_8h" startline="29">Object::destroy</references>
+        <references refid="_m_i_transaction_input_8c_1a827a05ba7fd33c16b83dbb34f8d1c64d" compoundref="_m_i_transaction_input_8c" startline="110" endline="125">destroyTransactionInput</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_transaction_input_8c_1a902beaf8fcb67c47fdceb8e1107d11e5" compoundref="_m_i_transaction_input_8c" startline="64" endline="86">initializeTransactionInput</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1a6ce74856deb61a054db563a0382b0ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+        <definition>TransactionInput* createNewTransactionInputFromData</definition>
+        <argsstring>(ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewTransactionInputFromData</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object from byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="49" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="43" bodyend="61"/>
+        <references refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" compoundref="_m_i_object_8h" startline="29">Object::destroy</references>
+        <references refid="_m_i_transaction_input_8c_1a827a05ba7fd33c16b83dbb34f8d1c64d" compoundref="_m_i_transaction_input_8c" startline="110" endline="125">destroyTransactionInput</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_transaction_input_8c_1a23b5f752e968e3bff9c427e224c48366" compoundref="_m_i_transaction_input_8c" startline="88" endline="100">initializeTransactionInputFromData</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1ab948c7629606c3e71f6b502f65df5cb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeTransactionInput</definition>
+        <argsstring>(TransactionInput *self, Script *script, uint32_t sequence, ByteArray *prevOutHash, uint32_t prevOutIndex, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initializeTransactionInput</name>
+        <param>
+          <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">Script</ref> *</type>
+          <declname>script</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>prevOutHash</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>prevOutIndex</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="57" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="64" bodyend="86"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_message_8c_1a5b1bc10a9354d0ad365fc55123dba947" compoundref="_m_i_message_8c" startline="78" endline="82">getMessage</references>
+        <references refid="_m_i_object_8c_1a5f22211b2f99a33c1b4b7ad544ce108a" compoundref="_m_i_object_8c" startline="73" endline="84">incrementReferenceCount</references>
+        <references refid="_m_i_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_m_i_constants_8h" startline="66">TRUE</references>
+        <referencedby refid="_m_i_transaction_input_8h_1a66149340bfb777acf294dba5d06a9776" compoundref="_m_i_transaction_input_8c" startline="16" endline="41">createNewTransactionInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1a23b5f752e968e3bff9c427e224c48366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeTransactionInputFromData</definition>
+        <argsstring>(TransactionInput *self, ByteArray *data, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initializeTransactionInputFromData</name>
+        <param>
+          <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a new <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object from the byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="64" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="88" bodyend="100"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_message_8c_1a5b1bc10a9354d0ad365fc55123dba947" compoundref="_m_i_message_8c" startline="78" endline="82">getMessage</references>
+        <references refid="_m_i_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_m_i_constants_8h" startline="66">TRUE</references>
+        <referencedby refid="_m_i_transaction_input_8h_1a6ce74856deb61a054db563a0382b0ff2" compoundref="_m_i_transaction_input_8c" startline="43" endline="61">createNewTransactionInputFromData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1af269fa2bb4a69491af8a12964734dc70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+        <definition>TransactionInput* getTransactionInput</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getTransactionInput</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="72" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="102" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1a870e33cc5ad870ec4b831d4410c7df1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyTransactionInput</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyTransactionInput</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="80" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="110" bodyend="125"/>
+        <references refid="_m_i_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_m_i_object_8c" startline="57" endline="71">decrementReferenceCount</references>
+        <references refid="_m_i_message_8c_1a17557bbd8e2e7b7d0736c88df25a389e" compoundref="_m_i_message_8c" startline="90" endline="99">destroyMessage</references>
+        <referencedby refid="_m_i_transaction_input_8h_1a66149340bfb777acf294dba5d06a9776" compoundref="_m_i_transaction_input_8c" startline="16" endline="41">createNewTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a6ce74856deb61a054db563a0382b0ff2" compoundref="_m_i_transaction_input_8c" startline="43" endline="61">createNewTransactionInputFromData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t serializeTransactionInput</definition>
+        <argsstring>(TransactionInput *self)</argsstring>
+        <name>serializeTransactionInput</name>
+        <param>
+          <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Serialises a <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> to byte data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length written on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="89" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="128" bodyend="177"/>
+        <references refid="struct_m_i_message_1a8fb493ee3c32dd3a9fb29bc71c852f86" compoundref="_m_i_message_8h" startline="26">Message::bytes</references>
+        <references refid="_m_i_byte_array_8c_1a13f783bb0fcd091b7bfb25cfd7f9d1c0" compoundref="_m_i_byte_array_8c" startline="235" endline="241">changeByteArrayDataReference</references>
+        <references refid="_m_i_byte_array_8c_1a949c73acfab0c6c4d83ad8c07d999364" compoundref="_m_i_byte_array_8c" startline="17" endline="24">copyByteArrayToByteArray</references>
+        <references refid="_m_i_var_len_int_8c_1ab415150158b7af4b63eb360b384b5ec0" compoundref="_m_i_var_len_int_8c" startline="71" endline="79">createVarLenIntFromUInt64</references>
+        <references refid="_m_i_var_len_int_8c_1a332f03b156163565574788bc3cedd522" compoundref="_m_i_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</references>
+        <references refid="_m_i_byte_array_8c_1a673fc907bf90724f9fbfad124d3ed9e2" compoundref="_m_i_byte_array_8c" startline="39" endline="44">getByteArray</references>
+        <references refid="_m_i_message_8c_1a5b1bc10a9354d0ad365fc55123dba947" compoundref="_m_i_message_8c" startline="78" endline="82">getMessage</references>
+        <references refid="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_m_i_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968aea18ededd7bee318c95d90cff53fffba" compoundref="_m_i_constants_8h" startline="41">_ERROR_MESSAGE_SERIALISATION_BAD_BYTES</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968a912356cbe14233efbac56e230bfd15ce" compoundref="_m_i_constants_8h" startline="43">_ERROR_MESSAGE_SERIALISATION_BAD_DATA</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ac8ae144568e5761507c7d026a2531875" compoundref="_m_i_constants_8h" startline="42">_ERROR_MESSAGE_SERIALISATION_NULL_BYTES</references>
+        <references refid="struct_m_i_message_1aeb0776cff292839518da5f5a48884fd9" compoundref="_m_i_message_8h" startline="28">Message::onErrorReceived</references>
+        <references refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_m_i_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="_m_i_byte_array_8c_1aa4d465553a3c7f80c1700316f2410b40" compoundref="_m_i_byte_array_8c" startline="207" endline="217">writeInt32AsLittleEndianIntoByteArray</references>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t deserializeTransactionInput</definition>
+        <argsstring>(TransactionInput *self)</argsstring>
+        <name>deserializeTransactionInput</name>
+        <param>
+          <type><ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Deserialises a <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> so that it can be used as an object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_transaction_input" kindref="compound">TransactionInput</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length read on success, 0 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h" line="96" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.c" bodystart="179" bodyend="240"/>
+        <references refid="struct_m_i_message_1a8fb493ee3c32dd3a9fb29bc71c852f86" compoundref="_m_i_message_8h" startline="26">Message::bytes</references>
+        <references refid="_m_i_script_8c_1a68cdb4a9f0a39933b1af58a86666db77" compoundref="_m_i_script_8c" startline="15" endline="22">createNewScriptFromReference</references>
+        <references refid="_m_i_var_len_int_8c_1a0492e373e2d12e41b1764b580f287af9" compoundref="_m_i_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</references>
+        <references refid="_m_i_object_8c_1a0407d34294cdc667982ffa9bd6f18cc9" compoundref="_m_i_object_8c" startline="57" endline="71">decrementReferenceCount</references>
+        <references refid="_m_i_byte_array_8c_1a22681d5a43566996273c64d34d669806" compoundref="_m_i_byte_array_8c" startline="61" endline="86">getByteArraySubsectionReference</references>
+        <references refid="_m_i_message_8c_1a5b1bc10a9354d0ad365fc55123dba947" compoundref="_m_i_message_8c" startline="78" endline="82">getMessage</references>
+        <references refid="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_m_i_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ac44c4a273612af5ceabd09df473706f4" compoundref="_m_i_constants_8h" startline="53">_ERROR_INIT_FAIL</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968abd324fa69626e40713b7c4e1e6eef9f9" compoundref="_m_i_constants_8h" startline="39">_ERROR_MESSAGE_DESERIALISATION_BAD_BYTES</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968a92f5f1cd8d49eb6264885735124551cf" compoundref="_m_i_constants_8h" startline="40">_ERROR_MESSAGE_DESERIALISATION_NULL_BYTES</references>
+        <references refid="struct_m_i_message_1aeb0776cff292839518da5f5a48884fd9" compoundref="_m_i_message_8h" startline="28">Message::onErrorReceived</references>
+        <references refid="_m_i_byte_array_8c_1aab10685017fe16769d5b22c826ada9f8" compoundref="_m_i_byte_array_8c" startline="144" endline="156">readInt32AsLittleEndianFromByteArray</references>
+        <references refid="struct_m_i_var_len_int_1af922c72fe1d5915971491918ff5f923e" compoundref="_m_i_var_len_int_8h" startline="28">VarLenInt::storageSize</references>
+        <references refid="struct_m_i_var_len_int_1a4e630859cc0e2a22bd6acf39a6a8e218" compoundref="_m_i_var_len_int_8h" startline="27">VarLenInt::value</references>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>TransactionOutput.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>07/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TRANSACTIONINPUT_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRANSACTIONINPUT_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_i_message_8h" kindref="compound">Message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Script.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_i_transaction_output_8h" kindref="compound">TransactionOutput.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="struct_m_i_previous_output" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23" refid="struct_m_i_previous_output_1a0a38e6cfdba79d307f90c5cd5e7425df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="struct_m_i_previous_output_1a0a38e6cfdba79d307f90c5cd5e7425df" kindref="member">hash</ref>;<sp/></highlight></codeline>
+<codeline lineno="24" refid="struct_m_i_previous_output_1aafd95f8c7a99b9189ede7cdf0871ebe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_m_i_previous_output_1aafd95f8c7a99b9189ede7cdf0871ebe8" kindref="member">index</ref>;<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}<sp/><ref refid="struct_m_i_previous_output" kindref="compound" tooltip="Structure for previous outputs that are being spent by an input.">PreviousOutput</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_m_i_transaction_input" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="struct_m_i_transaction_input_1a487e4843cf1cf7397eb2e1bcf91cbf3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_message" kindref="compound" tooltip="Structure for Message objects.">Message</ref><sp/><ref refid="struct_m_i_transaction_input_1a487e4843cf1cf7397eb2e1bcf91cbf3b" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_m_i_transaction_input_1a0ab03ef2cc38198d3666a992a245fddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_m_i_transaction_input_1a0ab03ef2cc38198d3666a992a245fddf" kindref="member">sequence</ref>;<sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_m_i_transaction_input_1ad2f125749a4bf410b647bc258de817d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/><ref refid="struct_m_i_transaction_input_1ad2f125749a4bf410b647bc258de817d6" kindref="member">scriptObject</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="struct_m_i_transaction_input_1aa2926a5b65b7a9cda9abd6783df43f6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_previous_output" kindref="compound" tooltip="Structure for previous outputs that are being spent by an input.">PreviousOutput</ref><sp/><ref refid="struct_m_i_transaction_input_1aa2926a5b65b7a9cda9abd6783df43f6f" kindref="member">prevOutput</ref>;<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CONSTRUCTORS<sp/>*/</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/><ref refid="_m_i_transaction_input_8c_1a66149340bfb777acf294dba5d06a9776" kindref="member" tooltip="Creates a new TransactionInput object.">createNewTransactionInput</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/>script,<sp/>uint32_t<sp/>sequence,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>prevOutputHash,<sp/>uint32_t<sp/>prevOutputIndex,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/><ref refid="_m_i_transaction_input_8c_1a6ce74856deb61a054db563a0382b0ff2" kindref="member" tooltip="Creates a new TransactionInput object from byte data.">createNewTransactionInputFromData</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*INITIALIZERS<sp/>*/</highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_transaction_input_8c_1a902beaf8fcb67c47fdceb8e1107d11e5" kindref="member" tooltip="Initialises a TransactionInput object.">initializeTransactionInput</ref>(<ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">Script</ref><sp/>*<sp/>script,<sp/>uint32_t<sp/>sequence,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>prevOutHash,<sp/>uint32_t<sp/>prevOutIndex,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_transaction_input_8c_1a23b5f752e968e3bff9c427e224c48366" kindref="member" tooltip="Initialises a new TransactionInput object from the byte data.">initializeTransactionInputFromData</ref>(<ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/><ref refid="_m_i_transaction_input_8c_1af269fa2bb4a69491af8a12964734dc70" kindref="member" tooltip="Gets a TransactionInput from another object. Use this to avoid casts.">getTransactionInput</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DESTRUCTORS*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_transaction_input_8c_1a827a05ba7fd33c16b83dbb34f8d1c64d" kindref="member" tooltip="Frees a TransactionInput object.">destroyTransactionInput</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SERIALIZATION<sp/>AND<sp/>DESERIALIZATION*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">uint32_t<sp/><ref refid="_m_i_transaction_input_8c_1a1dc5b6d2e7b70e918572bedd9ee6abf9" kindref="member" tooltip="Serialises a TransactionInput to byte data.">serializeTransactionInput</ref>(<ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">uint32_t<sp/><ref refid="_m_i_transaction_input_8c_1ad375fb1ac6adc4cfeafc59b89ab811b9" kindref="member" tooltip="Deserialises a TransactionInput so that it can be used as an object.">deserializeTransactionInput</ref>(<ref refid="struct_m_i_transaction_input" kindref="compound" tooltip="Structure for TransactionInput objects.">TransactionInput</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TRANSACTIONINPUT_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/Message/TransactionInput.h"/>
+  </compounddef>
+</doxygen>

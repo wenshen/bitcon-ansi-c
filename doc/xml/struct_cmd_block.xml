@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_block" kind="struct" prot="public">
+    <compoundname>CmdBlock</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_block_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="184" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_block_1a099897f937ebe9e9634c5098e38c7cab" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char prevBlock[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>prevBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="185" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_block_1ad4048a3c215cbfcdc127ada8e0fa5445" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="186" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_block_1aa6da25dae1e7263af226d4b026811d7f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="187" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_block_1ad73ee4141a6536b03f4e493b56859e86" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int nonce</definition>
+        <argsstring></argsstring>
+        <name>nonce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="188" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_block_1a74334da90ccc4ebde303deecbe77f9dd" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int transxCount</definition>
+        <argsstring></argsstring>
+        <name>transxCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="189" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_block_1a50142212678034606e6aa3304ea06fb7" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_cmd_tranx" kindref="compound">CmdTranx</ref> *</type>
+        <definition>struct CmdTranx* txns</definition>
+        <argsstring></argsstring>
+        <name>txns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="190" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="256">
+        <label>Outpoint</label>
+        <link refid="struct_outpoint"/>
+      </node>
+      <node id="255">
+        <label>TranxIn</label>
+        <link refid="struct_tranx_in"/>
+        <childnode refid="256" relation="usage">
+          <edgelabel>previous_out</edgelabel>
+          <edgelabel>previousOut</edgelabel>
+        </childnode>
+      </node>
+      <node id="253">
+        <label>CmdBlock</label>
+        <link refid="struct_cmd_block"/>
+        <childnode refid="254" relation="usage">
+          <edgelabel>txns</edgelabel>
+        </childnode>
+      </node>
+      <node id="257">
+        <label>TranxOut</label>
+        <link refid="struct_tranx_out"/>
+      </node>
+      <node id="254">
+        <label>CmdTranx</label>
+        <link refid="struct_cmd_tranx"/>
+        <childnode refid="255" relation="usage">
+          <edgelabel>TranxInput</edgelabel>
+        </childnode>
+        <childnode refid="257" relation="usage">
+          <edgelabel>TranxOutput</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="183" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="183" bodyend="191"/>
+    <listofallmembers>
+      <member refid="struct_cmd_block_1aa6da25dae1e7263af226d4b026811d7f" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>bits</name></member>
+      <member refid="struct_cmd_block_1ad73ee4141a6536b03f4e493b56859e86" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>nonce</name></member>
+      <member refid="struct_cmd_block_1a099897f937ebe9e9634c5098e38c7cab" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>prevBlock</name></member>
+      <member refid="struct_cmd_block_1ad4048a3c215cbfcdc127ada8e0fa5445" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>timestamp</name></member>
+      <member refid="struct_cmd_block_1a74334da90ccc4ebde303deecbe77f9dd" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>transxCount</name></member>
+      <member refid="struct_cmd_block_1a50142212678034606e6aa3304ea06fb7" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>txns</name></member>
+      <member refid="struct_cmd_block_1a5408ac5df4c170828874e1b10b4c35a0" prot="public" virt="non-virtual"><scope>CmdBlock</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

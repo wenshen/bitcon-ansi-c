@@ -1,0 +1,99 @@
+.TH "Utils/VariableLengthInteger/VarLenInt.c" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Utils/VariableLengthInteger/VarLenInt.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'VarLenInt.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVarLenInt\fP \fBdecodeVarLenInt\fP (\fBByteArray\fP *bytes, uint32_t offset)"
+.br
+.RI "\fIDecodes variable size integer from bytes into a \fBVarLenInt\fP structure. \fP"
+.ti -1c
+.RI "void \fBencodeVarLenInt\fP (\fBByteArray\fP *bytes, uint32_t offset, \fBVarLenInt\fP varInt)"
+.br
+.RI "\fIEncodes variable size integer into bytes. \fP"
+.ti -1c
+.RI "\fBVarLenInt\fP \fBcreateVarLenIntFromUInt64\fP (uint64_t integer)"
+.br
+.RI "\fIReturns a variable integer from an unsigned 64 bit integer. \fP"
+.ti -1c
+.RI "uint8_t \fBgetSizeOfVarLenInt\fP (uint64_t value)"
+.br
+.RI "\fIReturns the variable integer byte size of a 64 bit integer. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBVarLenInt\fP createVarLenIntFromUInt64 (uint64_tinteger)"
+.PP
+Returns a variable integer from an unsigned 64 bit integer. \fBParameters:\fP
+.RS 4
+\fIinteger\fP The 64 bit integer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A \fBVarLenInt\fP. 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file VarLenInt.c.
+.SS "\fBVarLenInt\fP decodeVarLenInt (\fBByteArray\fP *bytes, uint32_toffset)"
+.PP
+Decodes variable size integer from bytes into a \fBVarLenInt\fP structure. \fBParameters:\fP
+.RS 4
+\fIbytes\fP The byte array to decode a variable size integer from. 
+.br
+\fIoffset\fP Offset to start decoding from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBVarLenInt\fP information 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file VarLenInt.c.
+.SS "void encodeVarLenInt (\fBByteArray\fP *bytes, uint32_toffset, \fBVarLenInt\fPvarInt)"
+.PP
+Encodes variable size integer into bytes. \fBParameters:\fP
+.RS 4
+\fIbytes\fP The byte array to encode a variable size integer into. 
+.br
+\fIoffset\fP Offset to start decoding from. 
+.br
+\fIvarInt\fP Variable integer structure to encode. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file VarLenInt.c.
+.SS "uint8_t getSizeOfVarLenInt (uint64_tvalue)"
+.PP
+Returns the variable integer byte size of a 64 bit integer. \fBParameters:\fP
+.RS 4
+\fIvalue\fP The 64 bit integer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The size of a variable length integer for this integer. 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file VarLenInt.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

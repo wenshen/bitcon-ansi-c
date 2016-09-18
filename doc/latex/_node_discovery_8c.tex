@@ -1,0 +1,230 @@
+\hypertarget{_node_discovery_8c}{
+\section{src/Object/NodeDiscovery/NodeDiscovery.c File Reference}
+\label{_node_discovery_8c}\index{src/Object/NodeDiscovery/NodeDiscovery.c@{src/Object/NodeDiscovery/NodeDiscovery.c}}
+}
+{\ttfamily \#include \char`\"{}NodeDiscovery.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}assert.h\char`\"{}}\par
+Include dependency graph for NodeDiscovery.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_node_discovery_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_node_discovery}{NodeDiscovery} $\ast$ \hyperlink{_node_discovery_8c_a5c17f995b0ad439d793a2a2798122e3a}{newNodeDiscovery} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_node_discovery}{NodeDiscovery} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_node_discovery}{NodeDiscovery} $\ast$ \hyperlink{_node_discovery_8c_ae50e18710081cce6cb6f476081948887}{getNodeDiscovery} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_node_discovery}{NodeDiscovery} from an object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_node_discovery_8c_ab5fc81f8a9fbcb534433f52da9baadf7}{initNodeDiscovery} (\hyperlink{struct_node_discovery}{NodeDiscovery} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Initializes a \hyperlink{struct_node_discovery}{NodeDiscovery} object. \end{DoxyCompactList}\item 
+void \hyperlink{_node_discovery_8c_a14a7b09a75288bfdb74b3f0d4a3c35d0}{destroyNodeDiscovery} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Destroys an \hyperlink{struct_node_discovery}{NodeDiscovery} object. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_node_discovery_8c_a61782d204f214b12fbcfda3c346bbd0e}{extractIp} (char $\ast$str1)
+\item 
+char $\ast$ \hyperlink{_node_discovery_8c_ab8aea7bfb539afe7fc2db54f6bcdb75a}{getExtIP} (char $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Connects to a specified host. IPv4 compatible only!!! \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_node_discovery_8c_a14a7b09a75288bfdb74b3f0d4a3c35d0}{
+\index{NodeDiscovery.c@{NodeDiscovery.c}!destroyNodeDiscovery@{destroyNodeDiscovery}}
+\index{destroyNodeDiscovery@{destroyNodeDiscovery}!NodeDiscovery.c@{NodeDiscovery.c}}
+\subsubsection[{destroyNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}void destroyNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8c_a14a7b09a75288bfdb74b3f0d4a3c35d0}
+
+
+Destroys an \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_node_discovery}{NodeDiscovery} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_node_discovery_8c_a14a7b09a75288bfdb74b3f0d4a3c35d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_node_discovery_8c_a14a7b09a75288bfdb74b3f0d4a3c35d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8c_a61782d204f214b12fbcfda3c346bbd0e}{
+\index{NodeDiscovery.c@{NodeDiscovery.c}!extractIp@{extractIp}}
+\index{extractIp@{extractIp}!NodeDiscovery.c@{NodeDiscovery.c}}
+\subsubsection[{extractIp}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ extractIp (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str1}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8c_a61782d204f214b12fbcfda3c346bbd0e}
+
+
+Definition at line 65 of file NodeDiscovery.c.
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_node_discovery_8c_a61782d204f214b12fbcfda3c346bbd0e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8c_ab8aea7bfb539afe7fc2db54f6bcdb75a}{
+\index{NodeDiscovery.c@{NodeDiscovery.c}!getExtIP@{getExtIP}}
+\index{getExtIP@{getExtIP}!NodeDiscovery.c@{NodeDiscovery.c}}
+\subsubsection[{getExtIP}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ getExtIP (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8c_ab8aea7bfb539afe7fc2db54f6bcdb75a}
+
+
+Connects to a specified host. IPv4 compatible only!!! 
+
+find flags here \href{http://cboard.cprogramming.com/cplusplus-programming/128326-undefined-symbol-when-compiling-socket-program.html}{\tt http://cboard.cprogramming.com/cplusplus-\/programming/128326-\/undefined-\/symbol-\/when-\/compiling-\/socket-\/program.html} 
+
+Definition at line 97 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_node_discovery_8c_ab8aea7bfb539afe7fc2db54f6bcdb75a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8c_ae50e18710081cce6cb6f476081948887}{
+\index{NodeDiscovery.c@{NodeDiscovery.c}!getNodeDiscovery@{getNodeDiscovery}}
+\index{getNodeDiscovery@{getNodeDiscovery}!NodeDiscovery.c@{NodeDiscovery.c}}
+\subsubsection[{getNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeDiscovery}$\ast$ getNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8c_ae50e18710081cce6cb6f476081948887}
+
+
+Gets a \hyperlink{struct_node_discovery}{NodeDiscovery} from an object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_node_discovery}{NodeDiscovery} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file NodeDiscovery.c.
+
+\hypertarget{_node_discovery_8c_ab5fc81f8a9fbcb534433f52da9baadf7}{
+\index{NodeDiscovery.c@{NodeDiscovery.c}!initNodeDiscovery@{initNodeDiscovery}}
+\index{initNodeDiscovery@{initNodeDiscovery}!NodeDiscovery.c@{NodeDiscovery.c}}
+\subsubsection[{initNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}int initNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{{\bf NodeDiscovery} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8c_ab5fc81f8a9fbcb534433f52da9baadf7}
+
+
+Initializes a \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_node_discovery}{NodeDiscovery} object to initialize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{_node_discovery_8c_ab5fc81f8a9fbcb534433f52da9baadf7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{_node_discovery_8c_ab5fc81f8a9fbcb534433f52da9baadf7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_node_discovery_8c_a5c17f995b0ad439d793a2a2798122e3a}{
+\index{NodeDiscovery.c@{NodeDiscovery.c}!newNodeDiscovery@{newNodeDiscovery}}
+\index{newNodeDiscovery@{newNodeDiscovery}!NodeDiscovery.c@{NodeDiscovery.c}}
+\subsubsection[{newNodeDiscovery}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeDiscovery}$\ast$ newNodeDiscovery (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_node_discovery_8c_a5c17f995b0ad439d793a2a2798122e3a}
+
+
+Creates a new \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_node_discovery}{NodeDiscovery} object. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file NodeDiscovery.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_node_discovery_8c_a5c17f995b0ad439d793a2a2798122e3a_cgraph}
+\end{center}
+\end{figure}
+
+

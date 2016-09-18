@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_8h.html#ab73e78dbd2eb3985f74255c2a46e8642" title="Creates a new Address object from a RIPEMD&#45;160 hash." alt="" coords="169,5,436,35"/>
+<area shape="rect" id="node5" href="$_address_8h.html#a56a54f9e199767a5d234f489ef9fde69" title="Creates a new Address object from a base&#45;58 encoded string." alt="" coords="204,59,401,88"/>
+</map>

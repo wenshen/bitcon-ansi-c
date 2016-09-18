@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_tranx_in.html" title="{TranxIn\n|+ previous_out\l+ scriptLength\l+ signature_script\l+ sequence\l+ previousOut\l+ scriptLength\l+ signatureScript\l+ sequence\l|}" alt="" coords="5,209,131,415"/>
+<area shape="rect" id="node4" href="$struct_outpoint.html" title="{Outpoint\n|+ hash\l+ index\l+ index\l|}" alt="" coords="33,5,103,125"/>
+<area shape="rect" id="node6" href="$struct_tranx_out.html" title="{TranxOut\n|+ value\l+ pkScriptLength\l+ pkScript\l+ value\l+ pkScriptLength\l+ pkScript\l|}" alt="" coords="155,226,275,398"/>
+</map>

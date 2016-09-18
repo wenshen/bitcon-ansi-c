@@ -1,0 +1,170 @@
+.TH "src/Object/Message/Message.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/Message/Message.c \- 
+.PP
+This file is \fBMessage.c\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Message.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP * \fBcreateNewMessage\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBMessage\fP. \fP"
+.ti -1c
+.RI "int * \fBsetByteArrayInMessage\fP (\fBMessage\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.ti -1c
+.RI "int \fBinitializeMessageFromObject\fP (\fBMessage\fP *self, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBMessage\fP object. \fP"
+.ti -1c
+.RI "int \fBinitializeMessageFromByteArrayData\fP (\fBMessage\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBMessage\fP object from byteArray data. \fP"
+.ti -1c
+.RI "\fBMessage\fP * \fBgetMessage\fP (void *self)"
+.br
+.RI "\fIgetter \fP"
+.ti -1c
+.RI "void \fBdestroyMessage\fP (void *message)"
+.br
+.RI "\fIdestroy \fBMessage\fP \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file is \fBMessage.c\fP. 
+
+locks contain transaction information and use a proof of work system to show that they are legitimate. 
+.PP
+Definition in file \fBMessage.c\fP.
+.SH "Function Documentation"
+.PP 
+.SS "\fBMessage\fP * createNewMessage (void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBMessage\fP. Creates a new \fBMessage\fP object. This message will be created with object data and not with byte data. The message can be serialised for the byte data used over the network.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMessage\fP
+.PP
+A new \fBMessage\fP object. 
+.RE
+.PP
+
+.PP
+<Create memory for \fBMessage\fP
+.PP
+< retrieve the base object and use it to update the underlying base object details
+.PP
+<assign destructor function to object
+.PP
+< Set other \fBMessage\fP fields 
+.PP
+Definition at line 31 of file Message.c.
+.SS "void destroyMessage (void *self)"
+.PP
+destroy \fBMessage\fP destroys the memory allocated to a \fBMessage\fP object.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIself\fP The \fBMessage\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file Message.c.
+.SS "\fBMessage\fP * getMessage (void *self)"
+.PP
+getter Gets a \fBMessage\fP from another object. Use this to avoid casts.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMessage\fP \fBObject\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBMessage\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBMessage\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file Message.c.
+.SS "int initializeMessageFromByteArrayData (\fBMessage\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBMessage\fP object from byteArray data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBMessage\fP object to initialise 
+.br
+\fIdata\fP The byte data for the object. The data will not be copied but referenced by this object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE on success, FALSE on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 108 of file Message.c.
+.SS "int initializeMessageFromObject (\fBMessage\fP *self, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBMessage\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBMessage\fP object to initialise 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE on success, FALSE on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file Message.c.
+.SS "int* setByteArrayInMessage (\fBMessage\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+< Check to see that the base \fBObject\fP class can be retrieved and then update details
+.PP
+< retrieve the base object and use it to update the underlying object details
+.PP
+< Set other \fBMessage\fP fields
+.PP
+< set \fBMessage\fP data to the \fBByteArray\fP data that was passed in
+.PP
+< Increment the number of references to the \fBByteArray\fP data 
+.PP
+Definition at line 69 of file Message.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

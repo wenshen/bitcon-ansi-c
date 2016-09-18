@@ -1,0 +1,361 @@
+\hypertarget{_message_8h}{
+\section{src/Object/Message/Message.h File Reference}
+\label{_message_8h}\index{src/Object/Message/Message.h@{src/Object/Message/Message.h}}
+}
+
+
+\hyperlink{struct_header}{Header} file for the \hyperlink{struct_message}{Message} object.  
+
+
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include \char`\"{}../../Constants.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../ByteArray.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../Object.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../../Utils/VariableLengthInteger/VarLenInt.h\char`\"{}}\par
+Include dependency graph for Message.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_message}{Message}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_message}{Message} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_message}{Message} \hyperlink{_message_8h_ac5d2505352602da27debb8163160af23}{Message}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_message}{Message} $\ast$ \hyperlink{_message_8h_a482ba3fcca0927a7e192178226c84b6c}{createNewMessage} (void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_message}{Message}. \end{DoxyCompactList}\item 
+\hyperlink{struct_message}{Message} $\ast$ \hyperlink{_message_8h_ad477d3fce4b01d2eea87ff527a7f33d5}{getMessage} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em getter \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{_message_8h_ac61e2cb2551d91d59aa132e8323d9631}{setByteArrayInMessage} (\hyperlink{struct_message}{Message} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\item 
+int \hyperlink{_message_8h_abeae03d7e39e468bf5958d4d2b1dc61b}{initializeMessageFromObject} (\hyperlink{struct_message}{Message} $\ast$self, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_message}{Message} object. \end{DoxyCompactList}\item 
+int \hyperlink{_message_8h_a297413f770355bd4bd2212e999867031}{initializeMessageFromByteArrayData} (\hyperlink{struct_message}{Message} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_message}{Message} object from byteArray data. \end{DoxyCompactList}\item 
+void \hyperlink{_message_8h_a666bf9c0a77642e6462af8bb670e2b49}{destroyMessage} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em destroy \hyperlink{struct_message}{Message} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_header}{Header} file for the \hyperlink{struct_message}{Message} object. The \hyperlink{struct_message}{Message} class is the base class for all kinds of messages that can be transferred over the bitcoin network. 
+
+Definition in file \hyperlink{_message_8h_source}{Message.h}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_message_8h_ac5d2505352602da27debb8163160af23}{
+\index{Message.h@{Message.h}!Message@{Message}}
+\index{Message@{Message}!Message.h@{Message.h}}
+\subsubsection[{Message}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Message}  {\bf Message}}}
+\label{_message_8h_ac5d2505352602da27debb8163160af23}
+
+
+\subsection{Function Documentation}
+\hypertarget{_message_8h_a482ba3fcca0927a7e192178226c84b6c}{
+\index{Message.h@{Message.h}!createNewMessage@{createNewMessage}}
+\index{createNewMessage@{createNewMessage}!Message.h@{Message.h}}
+\subsubsection[{createNewMessage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message}$\ast$ createNewMessage (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_message_8h_a482ba3fcca0927a7e192178226c84b6c}
+
+
+Creates a new \hyperlink{struct_message}{Message}. 
+
+Creates a new \hyperlink{struct_message}{Message} object. This message will be created with object data and not with byte data. The message can be serialised for the byte data used over the network.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_message}{Message}
+
+A new \hyperlink{struct_message}{Message} object. 
+\end{DoxyReturn}
+
+
+$<$Create memory for \hyperlink{struct_message}{Message}
+
+$<$ retrieve the base object and use it to update the underlying base object details
+
+$<$assign destructor function to object
+
+$<$ Set other \hyperlink{struct_message}{Message} fields 
+
+
+
+Definition at line 31 of file Message.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h_a482ba3fcca0927a7e192178226c84b6c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_message_8h_a666bf9c0a77642e6462af8bb670e2b49}{
+\index{Message.h@{Message.h}!destroyMessage@{destroyMessage}}
+\index{destroyMessage@{destroyMessage}!Message.h@{Message.h}}
+\subsubsection[{destroyMessage}]{\setlength{\rightskip}{0pt plus 5cm}void destroyMessage (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}
+\label{_message_8h_a666bf9c0a77642e6462af8bb670e2b49}
+
+
+destroy \hyperlink{struct_message}{Message} 
+
+destroys the memory allocated to a \hyperlink{struct_message}{Message} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_message}{Message} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 145 of file Message.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{_message_8h_a666bf9c0a77642e6462af8bb670e2b49_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h_a666bf9c0a77642e6462af8bb670e2b49_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_message_8h_ad477d3fce4b01d2eea87ff527a7f33d5}{
+\index{Message.h@{Message.h}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Message.h@{Message.h}}
+\subsubsection[{getMessage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message}$\ast$ getMessage (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_message_8h_ad477d3fce4b01d2eea87ff527a7f33d5}
+
+
+getter 
+
+Gets a \hyperlink{struct_message}{Message} from another object. Use this to avoid casts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_message}{Message} \hyperlink{struct_object}{Object}
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_message}{Message} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_message}{Message} object. 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file Message.c.
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{_message_8h_ad477d3fce4b01d2eea87ff527a7f33d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_message_8h_a297413f770355bd4bd2212e999867031}{
+\index{Message.h@{Message.h}!initializeMessageFromByteArrayData@{initializeMessageFromByteArrayData}}
+\index{initializeMessageFromByteArrayData@{initializeMessageFromByteArrayData}!Message.h@{Message.h}}
+\subsubsection[{initializeMessageFromByteArrayData}]{\setlength{\rightskip}{0pt plus 5cm}int initializeMessageFromByteArrayData (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_message_8h_a297413f770355bd4bd2212e999867031}
+
+
+Initialises a \hyperlink{struct_message}{Message} object from byteArray data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_message}{Message} object to initialise \\
+\hline
+{\em data} & The byte data for the object. The data will not be copied but referenced by this object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Message.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h_a297413f770355bd4bd2212e999867031_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h_a297413f770355bd4bd2212e999867031_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_message_8h_abeae03d7e39e468bf5958d4d2b1dc61b}{
+\index{Message.h@{Message.h}!initializeMessageFromObject@{initializeMessageFromObject}}
+\index{initializeMessageFromObject@{initializeMessageFromObject}!Message.h@{Message.h}}
+\subsubsection[{initializeMessageFromObject}]{\setlength{\rightskip}{0pt plus 5cm}int initializeMessageFromObject (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} $\ast$}]{self, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_message_8h_abeae03d7e39e468bf5958d4d2b1dc61b}
+
+
+Initialises a \hyperlink{struct_message}{Message} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_message}{Message} object to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE on success, FALSE on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file Message.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=390pt]{_message_8h_abeae03d7e39e468bf5958d4d2b1dc61b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_message_8h_abeae03d7e39e468bf5958d4d2b1dc61b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_message_8h_ac61e2cb2551d91d59aa132e8323d9631}{
+\index{Message.h@{Message.h}!setByteArrayInMessage@{setByteArrayInMessage}}
+\index{setByteArrayInMessage@{setByteArrayInMessage}!Message.h@{Message.h}}
+\subsubsection[{setByteArrayInMessage}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ setByteArrayInMessage (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_message_8h_ac61e2cb2551d91d59aa132e8323d9631}
+
+
+$<$ Check to see that the base \hyperlink{struct_object}{Object} class can be retrieved and then update details
+
+$<$ retrieve the base object and use it to update the underlying object details
+
+$<$ Set other \hyperlink{struct_message}{Message} fields
+
+$<$ set \hyperlink{struct_message}{Message} data to the \hyperlink{struct_byte_array}{ByteArray} data that was passed in
+
+$<$ Increment the number of references to the \hyperlink{struct_byte_array}{ByteArray} data 
+
+
+
+Definition at line 69 of file Message.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=370pt]{_message_8h_ac61e2cb2551d91d59aa132e8323d9631_cgraph}
+\end{center}
+\end{figure}
+
+

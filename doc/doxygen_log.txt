@@ -1,0 +1,1514 @@
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for files to exclude
+Searching for files to process...
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src/MIBigInt
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src/Utils
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography
+Searching for files in directory /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/MIVariableLengthInteger
+Reading and parsing tag files
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIBigInt/MIBigInt.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIBigInt/MIBigInt.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIBitcoin.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIBitcoin.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIConstants.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIConstants.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIObject.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIObject.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIObject.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIObject.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIScript.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIScript.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIScript.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIScript.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/MIVariableLengthInteger/MIVarLenInt.c...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/MIVariableLengthInteger/MIVarLenInt.c...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/MIVariableLengthInteger/MIVarLenInt.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/MIVariableLengthInteger/MIVarLenInt.h...
+Preprocessing /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/utilityfunction.h...
+Parsing file /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/utilityfunction.h...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Associating documentation with classes...
+Computing nesting relations for classes...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Creating members for template instances...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Freeing entry tree
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Combining using relations...
+Adding members to index pages...
+Generating style sheet...
+Generating search indices...
+Generating index page...
+Generating page index...
+Generating example documentation...
+Generating file sources...
+Generating code for file MIBigInt/MIBigInt.h...
+Generating code for file MIBitcoin.c...
+Generating code for file MIConstants.h...
+Generating code for file MIObject/MIByteArray.c...
+Generating code for file MIObject/MIByteArray.h...
+Generating code for file MIObject/MIMessage/MIBlock.c...
+Generating code for file MIObject/MIMessage/MIBlock.h...
+Generating code for file MIObject/MIMessage/MIMessage.c...
+Generating code for file MIObject/MIMessage/MIMessage.h...
+Generating code for file MIObject/MIMessage/MITransaction.c...
+Generating code for file MIObject/MIMessage/MITransaction.h...
+Generating code for file MIObject/MIMessage/MITransactionInput.c...
+Generating code for file MIObject/MIMessage/MITransactionInput.h...
+Generating code for file MIObject/MIMessage/MITransactionOutput.c...
+Generating code for file MIObject/MIMessage/MITransactionOutput.h...
+Generating code for file MIObject/MIObject.c...
+Generating code for file MIObject/MIObject.h...
+Generating code for file MIObject/MIScript.c...
+Generating code for file MIObject/MIScript.h...
+Generating code for file Utils/Cryptography/MICrypt.c...
+Generating code for file Utils/Cryptography/MICrypt.h...
+Generating code for file Utils/MIVariableLengthInteger/MIVarLenInt.c...
+Generating code for file Utils/MIVariableLengthInteger/MIVarLenInt.h...
+Generating code for file Utils/utilityfunction.h...
+Generating file documentation...
+Generating docs for file MIBigInt/MIBigInt.h...
+Generating docs for file MIBitcoin.c...
+Generating docs for file MIConstants.h...
+Generating docs for file MIObject/MIByteArray.c...
+Generating call graph for function changeMIByteArrayDataReference
+Generating caller graph for function changeMIByteArrayDataReference
+Generating caller graph for function copyMIByteArrayToMIByteArray
+Generating call graph for function createNewMIByteArrayOfSize
+Generating caller graph for function createNewMIByteArrayOfSize
+Generating call graph for function createNewMIByteArrayUsingDataCopy
+Generating caller graph for function createNewMIByteArrayUsingDataCopy
+Generating call graph for function destroyMIByteArray
+Generating caller graph for function destroyMIByteArray
+Generating caller graph for function getByteFromMIByteArray
+Generating caller graph for function getDataFromMIByteArray
+Generating caller graph for function getMIByteArray
+Generating call graph for function getMIByteArraySubsectionReference
+Generating caller graph for function getMIByteArraySubsectionReference
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: argument 'ref' of command @param is not found in the argument list of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: The following parameters of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length) are not documented:
+  parameter 'refMIByteArray'
+Generating call graph for function initializeMIByteArraySubsectionReference
+Generating caller graph for function initializeMIByteArraySubsectionReference
+Generating call graph for function initMIByteArrayOfSize
+Generating caller graph for function initMIByteArrayOfSize
+Generating call graph for function initNewMIByteArrayFromData
+Generating caller graph for function initNewMIByteArrayFromData
+Generating caller graph for function isNullMIByteArray
+Generating caller graph for function readInt16AsLittleEndianFromMIByteArray
+Generating caller graph for function readInt32AsLittleEndianFromMIByteArray
+Generating caller graph for function readInt64AsLittleEndianFromMIByteArray
+Generating caller graph for function releaseMIByteArraySharedDataReference
+Generating caller graph for function setByteInMIByteArray
+Generating caller graph for function writeInt16AsLittleEndianIntoMIByteArray
+Generating caller graph for function writeInt32AsLittleEndianIntoMIByteArray
+Generating caller graph for function writeInt64AsLittleEndianIntoMIByteArray
+Generating docs for file MIObject/MIByteArray.h...
+Generating call graph for function changeMIByteArrayDataReference
+Generating caller graph for function changeMIByteArrayDataReference
+Generating caller graph for function copyMIByteArrayToMIByteArray
+Generating call graph for function createNewMIByteArrayOfSize
+Generating caller graph for function createNewMIByteArrayOfSize
+Generating call graph for function createNewMIByteArrayUsingDataCopy
+Generating caller graph for function createNewMIByteArrayUsingDataCopy
+Generating call graph for function destroyMIByteArray
+Generating caller graph for function destroyMIByteArray
+Generating caller graph for function getByteFromMIByteArray
+Generating caller graph for function getDataFromMIByteArray
+Generating caller graph for function getMIByteArray
+Generating call graph for function getMIByteArraySubsectionReference
+Generating caller graph for function getMIByteArraySubsectionReference
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: argument 'ref' of command @param is not found in the argument list of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: The following parameters of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length) are not documented:
+  parameter 'refMIByteArray'
+Generating call graph for function initializeMIByteArraySubsectionReference
+Generating caller graph for function initializeMIByteArraySubsectionReference
+Generating call graph for function initMIByteArrayOfSize
+Generating caller graph for function initMIByteArrayOfSize
+Generating call graph for function initNewMIByteArrayFromData
+Generating caller graph for function initNewMIByteArrayFromData
+Generating caller graph for function isNullMIByteArray
+Generating caller graph for function readInt16AsLittleEndianFromMIByteArray
+Generating caller graph for function readInt32AsLittleEndianFromMIByteArray
+Generating caller graph for function readInt64AsLittleEndianFromMIByteArray
+Generating caller graph for function releaseMIByteArraySharedDataReference
+Generating caller graph for function setByteInMIByteArray
+Generating caller graph for function writeInt16AsLittleEndianIntoMIByteArray
+Generating caller graph for function writeInt32AsLittleEndianIntoMIByteArray
+Generating caller graph for function writeInt64AsLittleEndianIntoMIByteArray
+Generating docs for file MIObject/MIMessage/MIBlock.c...
+Generating call graph for function calculateMIBlockHash
+Generating caller graph for function calculateMIBlockHash
+Generating call graph for function calculateMIBlockLength
+Generating call graph for function createNewMIBlock
+Generating call graph for function createNewMIBlockFromByteArray
+Generating call graph for function createNewMIBlockFromOriginalBlock
+Generating call graph for function dealWithSerializationHeader
+Generating caller graph for function dealWithSerializationHeader
+Generating call graph for function dealWithSerializationTran
+Generating caller graph for function dealWithSerializationTran
+Generating call graph for function deleteMIBlock
+Generating caller graph for function deleteMIBlock
+Generating call graph for function deserializeMIBlock
+Generating caller graph for function deserializeMIBlock
+Generating call graph for function deserializeWithOnlyHeaders
+Generating caller graph for function deserializeWithOnlyHeaders
+Generating call graph for function deserializeWithTransactions
+Generating caller graph for function deserializeWithTransactions
+Generating call graph for function getMIBlockHash
+Generating call graph for function initMIBlock
+Generating caller graph for function initMIBlock
+Generating call graph for function initMIBlockFromByteArray
+Generating caller graph for function initMIBlockFromByteArray
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: argument 'data' of command @param is not found in the argument list of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: The following parameters of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function initMIBlockWithOriginalBlock
+Generating caller graph for function initMIBlockWithOriginalBlock
+Generating call graph for function serializeMIBlock
+Generating docs for file MIObject/MIMessage/MIBlock.h...
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:187: warning: argument 'The' of command @param is not found in the argument list of calculateMIBlockHash(MIBlock *self, uint8_t *hash)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:187: warning: The following parameters of calculateMIBlockHash(MIBlock *self, uint8_t *hash) are not documented:
+  parameter 'hash'
+Generating call graph for function calculateMIBlockHash
+Generating caller graph for function calculateMIBlockHash
+Generating call graph for function calculateMIBlockLength
+Generating call graph for function createNewMIBlock
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:38: warning: The following parameters of createNewMIBlockFromByteArray(MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createNewMIBlockFromByteArray
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:48: warning: argument 'data' of command @param is not found in the argument list of createNewMIBlockWithOriginalBlock(void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:48: warning: The following parameters of createNewMIBlockWithOriginalBlock(void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function dealWithSerializationHeader
+Generating caller graph for function dealWithSerializationHeader
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:413: warning: The following parameters of dealWithSerializationTran(MIBlock *self, MIByteArray *bytes, uint32_t cursor, int transactions) are not documented:
+  parameter 'transactions'
+Generating call graph for function dealWithSerializationTran
+Generating caller graph for function dealWithSerializationTran
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:156: warning: argument 'self' of command @param is not found in the argument list of deleteMIBlock(void *selfCopy)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:156: warning: The following parameters of deleteMIBlock(void *selfCopy) are not documented:
+  parameter 'selfCopy'
+Generating call graph for function deleteMIBlock
+Generating caller graph for function deleteMIBlock
+Generating call graph for function deserializeMIBlock
+Generating caller graph for function deserializeMIBlock
+Generating call graph for function deserializeWithOnlyHeaders
+Generating caller graph for function deserializeWithOnlyHeaders
+Generating call graph for function deserializeWithTransactions
+Generating caller graph for function deserializeWithTransactions
+Generating call graph for function getMIBlockHash
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:93: warning: The following parameters of initMIBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function initMIBlock
+Generating caller graph for function initMIBlock
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:114: warning: The following parameters of initMIBlockFromByteArray(MIBlock *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function initMIBlockFromByteArray
+Generating caller graph for function initMIBlockFromByteArray
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: argument 'data' of command @param is not found in the argument list of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: The following parameters of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function initMIBlockWithOriginalBlock
+Generating caller graph for function initMIBlockWithOriginalBlock
+Generating call graph for function serializeMIBlock
+Generating docs for file MIObject/MIMessage/MIMessage.c...
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:47: warning: The following parameters of createMIMessageFromMIByteArray(MIMessage *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createMIMessageFromMIByteArray
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: argument 'returns' of command @param is not found in the argument list of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: The following parameters of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createNewMIMessage
+Generating call graph for function destroyMIMessage
+Generating caller graph for function destroyMIMessage
+Generating caller graph for function getMIMessage
+Generating docs for file MIObject/MIMessage/MIMessage.h...
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:47: warning: The following parameters of createMIMessageFromMIByteArray(MIMessage *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createMIMessageFromMIByteArray
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: argument 'returns' of command @param is not found in the argument list of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: The following parameters of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createNewMIMessage
+Generating call graph for function destroyMIMessage
+Generating caller graph for function destroyMIMessage
+Generating caller graph for function getMIMessage
+Generating docs for file MIObject/MIMessage/MITransaction.c...
+Generating call graph for function addMITransactionInput
+Generating caller graph for function addMITransactionInputWithoutReference
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutput(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: The following parameters of addMITransactionOutput(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+Generating call graph for function addMITransactionOutput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: The following parameters of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: argument 'The' of command @param is not found in the argument list of calculateMITransactionHash(MITransaction *self, uint8_t *hash)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: The following parameters of calculateMITransactionHash(MITransaction *self, uint8_t *hash) are not documented:
+  parameter 'hash'
+Generating call graph for function calculateMITransactionHash
+Generating caller graph for function calculateMITransactionHash
+Generating call graph for function calculateMITransactionLength
+Generating caller graph for function calculateMITransactionLength
+Generating call graph for function createNewMITransaction
+Generating call graph for function createNewMITransactionFromMIByteArray
+Generating caller graph for function createNewMITransactionFromMIByteArray
+Generating call graph for function deserializeMITransaction
+Generating caller graph for function deserializeMITransaction
+Generating call graph for function destroyMITransaction
+Generating caller graph for function destroyMITransaction
+Generating call graph for function getMITransactionHash
+Generating call graph for function getMITransactionInputHashForVerification
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:43: warning: The following parameters of initializeMITransaction(MITransaction *self, uint32_t lockTime, uint32_t version, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'lockTime'
+  parameter 'version'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransaction
+Generating caller graph for function initializeMITransaction
+Generating call graph for function initializeMITransactionFromMIByteArray
+Generating caller graph for function initializeMITransactionFromMIByteArray
+Generating call graph for function isCoinBase
+Generating call graph for function serializeMITransaction
+Generating caller graph for function serializeMITransaction
+Generating docs for file MIObject/MIMessage/MITransaction.h...
+Generating call graph for function addMITransactionInput
+Generating caller graph for function addMITransactionInputWithoutReference
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutput(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: The following parameters of addMITransactionOutput(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+Generating call graph for function addMITransactionOutput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: The following parameters of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: argument 'The' of command @param is not found in the argument list of calculateMITransactionHash(MITransaction *self, uint8_t *hash)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: The following parameters of calculateMITransactionHash(MITransaction *self, uint8_t *hash) are not documented:
+  parameter 'hash'
+Generating call graph for function calculateMITransactionHash
+Generating caller graph for function calculateMITransactionHash
+Generating call graph for function calculateMITransactionLength
+Generating caller graph for function calculateMITransactionLength
+Generating call graph for function createNewMITransaction
+Generating call graph for function createNewMITransactionFromMIByteArray
+Generating caller graph for function createNewMITransactionFromMIByteArray
+Generating call graph for function deserializeMITransaction
+Generating caller graph for function deserializeMITransaction
+Generating call graph for function destroyMITransaction
+Generating caller graph for function destroyMITransaction
+Generating call graph for function getMITransactionHash
+Generating call graph for function getMITransactionInputHashForVerification
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:43: warning: The following parameters of initializeMITransaction(MITransaction *self, uint32_t lockTime, uint32_t version, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'lockTime'
+  parameter 'version'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransaction
+Generating caller graph for function initializeMITransaction
+Generating call graph for function initializeMITransactionFromMIByteArray
+Generating caller graph for function initializeMITransactionFromMIByteArray
+Generating call graph for function isCoinBase
+Generating call graph for function serializeMITransaction
+Generating caller graph for function serializeMITransaction
+Generating docs for file MIObject/MIMessage/MITransactionInput.c...
+Generating call graph for function createNewMITransactionInput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:44: warning: The following parameters of createNewMITransactionInputFromData(MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createNewMITransactionInputFromData
+Generating caller graph for function createNewMITransactionInputFromData
+Generating call graph for function deserializeMITransactionInput
+Generating caller graph for function deserializeMITransactionInput
+Generating call graph for function destroyMITransactionInput
+Generating caller graph for function destroyMITransactionInput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:52: warning: The following parameters of initializeMITransactionInput(MITransactionInput *self, MIScript *script, uint32_t sequence, MIByteArray *prevOutHash, uint32_t prevOutIndex, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'script'
+  parameter 'sequence'
+  parameter 'prevOutHash'
+  parameter 'prevOutIndex'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionInput
+Generating caller graph for function initializeMITransactionInput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:58: warning: The following parameters of initializeMITransactionInputFromData(MITransactionInput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionInputFromData
+Generating caller graph for function initializeMITransactionInputFromData
+Generating call graph for function serializeMITransactionInput
+Generating caller graph for function serializeMITransactionInput
+Generating docs for file MIObject/MIMessage/MITransactionInput.h...
+Generating call graph for function createNewMITransactionInput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:44: warning: The following parameters of createNewMITransactionInputFromData(MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function createNewMITransactionInputFromData
+Generating caller graph for function createNewMITransactionInputFromData
+Generating call graph for function deserializeMITransactionInput
+Generating caller graph for function deserializeMITransactionInput
+Generating call graph for function destroyMITransactionInput
+Generating caller graph for function destroyMITransactionInput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:52: warning: The following parameters of initializeMITransactionInput(MITransactionInput *self, MIScript *script, uint32_t sequence, MIByteArray *prevOutHash, uint32_t prevOutIndex, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'script'
+  parameter 'sequence'
+  parameter 'prevOutHash'
+  parameter 'prevOutIndex'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionInput
+Generating caller graph for function initializeMITransactionInput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:58: warning: The following parameters of initializeMITransactionInputFromData(MITransactionInput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionInputFromData
+Generating caller graph for function initializeMITransactionInputFromData
+Generating call graph for function serializeMITransactionInput
+Generating caller graph for function serializeMITransactionInput
+Generating docs for file MIObject/MIMessage/MITransactionOutput.c...
+Generating call graph for function createNewMITransactionOutput
+Generating call graph for function createNewMITransactionOutputFromData
+Generating caller graph for function createNewMITransactionOutputFromData
+Generating call graph for function deserializeMITransactionOutput
+Generating caller graph for function deserializeMITransactionOutput
+Generating call graph for function destroyMITransactionOutput
+Generating caller graph for function destroyMITransactionOutput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:37: warning: The following parameters of initializeMITransactionOutput(MITransactionOutput *self, uint64_t value, MIScript *script, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'value'
+  parameter 'script'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionOutput
+Generating caller graph for function initializeMITransactionOutput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:43: warning: The following parameters of initializeMITransactionOutputFromData(MITransactionOutput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'data'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionOutputFromData
+Generating caller graph for function initializeMITransactionOutputFromData
+Generating call graph for function serializeMITransactionOutput
+Generating caller graph for function serializeMITransactionOutput
+Generating docs for file MIObject/MIMessage/MITransactionOutput.h...
+Generating call graph for function createNewMITransactionOutput
+Generating call graph for function createNewMITransactionOutputFromData
+Generating caller graph for function createNewMITransactionOutputFromData
+Generating call graph for function deserializeMITransactionOutput
+Generating caller graph for function deserializeMITransactionOutput
+Generating call graph for function destroyMITransactionOutput
+Generating caller graph for function destroyMITransactionOutput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:37: warning: The following parameters of initializeMITransactionOutput(MITransactionOutput *self, uint64_t value, MIScript *script, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'value'
+  parameter 'script'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionOutput
+Generating caller graph for function initializeMITransactionOutput
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:43: warning: The following parameters of initializeMITransactionOutputFromData(MITransactionOutput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'data'
+  parameter 'onErrorReceived'
+Generating call graph for function initializeMITransactionOutputFromData
+Generating caller graph for function initializeMITransactionOutputFromData
+Generating call graph for function serializeMITransactionOutput
+Generating caller graph for function serializeMITransactionOutput
+Generating docs for file MIObject/MIObject.c...
+Generating call graph for function createNewMIObject
+Generating caller graph for function decrementReferenceCount
+Generating caller graph for function destroyMIObject
+Generating caller graph for function getMIObject
+Generating caller graph for function incrementReferenceCount
+Generating docs for file MIObject/MIObject.h...
+<unknown>:1: warning: Found unknown command `\description'
+Generating call graph for function createNewMIObject
+Generating caller graph for function decrementReferenceCount
+Generating caller graph for function destroyMIObject
+Generating caller graph for function getMIObject
+Generating caller graph for function incrementReferenceCount
+Generating docs for file MIObject/MIScript.c...
+Generating call graph for function createNewMIScriptFromReference
+Generating caller graph for function createNewMIScriptFromReference
+Generating docs for file MIObject/MIScript.h...
+Generating call graph for function createNewMIScriptFromReference
+Generating caller graph for function createNewMIScriptFromReference
+Generating docs for file Utils/Cryptography/MICrypt.c...
+Generating caller graph for function MISha256
+Generating docs for file Utils/Cryptography/MICrypt.h...
+Generating caller graph for function MISha256
+Generating docs for file Utils/MIVariableLengthInteger/MIVarLenInt.c...
+Generating call graph for function createMIVarLenIntFromUInt64
+Generating caller graph for function createMIVarLenIntFromUInt64
+Generating call graph for function decodeMIVarLenInt
+Generating caller graph for function decodeMIVarLenInt
+Generating call graph for function encodeMIVarLenInt
+Generating caller graph for function encodeMIVarLenInt
+Generating caller graph for function getSizeOfMIVarLenInt
+Generating docs for file Utils/MIVariableLengthInteger/MIVarLenInt.h...
+Generating call graph for function createMIVarLenIntFromUInt64
+Generating caller graph for function createMIVarLenIntFromUInt64
+Generating call graph for function decodeMIVarLenInt
+Generating caller graph for function decodeMIVarLenInt
+Generating call graph for function encodeMIVarLenInt
+Generating caller graph for function encodeMIVarLenInt
+Generating caller graph for function getSizeOfMIVarLenInt
+Generating docs for file Utils/utilityfunction.h...
+Generating page documentation...
+Generating group documentation...
+Generating group index...
+Generating class documentation...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating member index...
+Generating docs for compound MIBigInt...
+Generating docs for compound MIBlock...
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:20: warning: Found unknown command `\This'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:21: warning: Found unknown command `\Blocks'
+Generating docs for compound MIByteArray...
+Generating docs for compound MIMessage...
+Generating docs for compound MIObject...
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIObject.h:20: warning: Found unknown command `\description'
+Generating docs for compound MIPreviousOutput...
+Generating docs for compound MIScriptByteVector...
+Generating docs for compound MIScriptStack...
+Generating docs for compound MISharedData...
+Generating docs for compound MITransaction...
+Generating docs for compound MITransactionInput...
+Generating docs for compound MITransactionOutput...
+Generating docs for compound MIVarLenInt...
+Generating graphical class hierarchy...
+Generating namespace index...
+Generating namespace member index...
+Generating graph info page...
+Generating file index...
+Generating example index...
+Generating file member index...
+finalizing index lists...
+Generating XML output...
+Generating XML output for class MIBigInt
+Generating XML output for class MIBlock
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:20: warning: Found unknown command `\This'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:21: warning: Found unknown command `\Blocks'
+Generating XML output for class MIByteArray
+Generating XML output for class MIMessage
+Generating XML output for class MIObject
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIObject.h:20: warning: Found unknown command `\description'
+Generating XML output for class MIPreviousOutput
+Generating XML output for class MIScriptByteVector
+Generating XML output for class MIScriptStack
+Generating XML output for class MISharedData
+Generating XML output for class MITransaction
+Generating XML output for class MITransactionInput
+Generating XML output for class MITransactionOutput
+Generating XML output for class MIVarLenInt
+Generating XML output for file MIBigInt.h
+Generating XML output for file MIBitcoin.c
+Generating XML output for file MIConstants.h
+Generating XML output for file MIByteArray.c
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: argument 'ref' of command @param is not found in the argument list of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: The following parameters of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length) are not documented:
+  parameter 'refMIByteArray'
+Generating XML output for file MIByteArray.h
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: argument 'ref' of command @param is not found in the argument list of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIByteArray.h:119: warning: The following parameters of initializeMIByteArraySubsectionReference(MIByteArray *self, MIByteArray *refMIByteArray, uint32_t offset, uint32_t length) are not documented:
+  parameter 'refMIByteArray'
+Generating XML output for file MIBlock.c
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: argument 'data' of command @param is not found in the argument list of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: The following parameters of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating XML output for file MIBlock.h
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:38: warning: The following parameters of createNewMIBlockFromByteArray(MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:48: warning: argument 'data' of command @param is not found in the argument list of createNewMIBlockWithOriginalBlock(void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:48: warning: The following parameters of createNewMIBlockWithOriginalBlock(void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:93: warning: The following parameters of initMIBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:114: warning: The following parameters of initMIBlockFromByteArray(MIBlock *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: argument 'data' of command @param is not found in the argument list of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.h:79: warning: The following parameters of initMIBlockWithOriginalBlock(MIBlock *self, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:156: warning: argument 'self' of command @param is not found in the argument list of deleteMIBlock(void *selfCopy)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:156: warning: The following parameters of deleteMIBlock(void *selfCopy) are not documented:
+  parameter 'selfCopy'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:187: warning: argument 'The' of command @param is not found in the argument list of calculateMIBlockHash(MIBlock *self, uint8_t *hash)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:187: warning: The following parameters of calculateMIBlockHash(MIBlock *self, uint8_t *hash) are not documented:
+  parameter 'hash'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIBlock.c:413: warning: The following parameters of dealWithSerializationTran(MIBlock *self, MIByteArray *bytes, uint32_t cursor, int transactions) are not documented:
+  parameter 'transactions'
+Generating XML output for file MIMessage.c
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: argument 'returns' of command @param is not found in the argument list of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: The following parameters of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:47: warning: The following parameters of createMIMessageFromMIByteArray(MIMessage *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating XML output for file MIMessage.h
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: argument 'returns' of command @param is not found in the argument list of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...))
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:32: warning: The following parameters of createNewMIMessage(void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MIMessage.h:47: warning: The following parameters of createMIMessageFromMIByteArray(MIMessage *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating XML output for file MITransaction.c
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:43: warning: The following parameters of initializeMITransaction(MITransaction *self, uint32_t lockTime, uint32_t version, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'lockTime'
+  parameter 'version'
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutput(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: The following parameters of addMITransactionOutput(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: The following parameters of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: argument 'The' of command @param is not found in the argument list of calculateMITransactionHash(MITransaction *self, uint8_t *hash)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: The following parameters of calculateMITransactionHash(MITransaction *self, uint8_t *hash) are not documented:
+  parameter 'hash'
+Generating XML output for file MITransaction.h
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:43: warning: The following parameters of initializeMITransaction(MITransaction *self, uint32_t lockTime, uint32_t version, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'lockTime'
+  parameter 'version'
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutput(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:78: warning: The following parameters of addMITransactionOutput(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: argument 'The' of command @param is not found in the argument list of calculateMITransactionHash(MITransaction *self, uint8_t *hash)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:85: warning: The following parameters of calculateMITransactionHash(MITransaction *self, uint8_t *hash) are not documented:
+  parameter 'hash'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: argument 'input' of command @param is not found in the argument list of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output)
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransaction.h:130: warning: The following parameters of addMITransactionOutputWithoutReference(MITransaction *self, MITransactionOutput *output) are not documented:
+  parameter 'output'
+Generating XML output for file MITransactionInput.c
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:44: warning: The following parameters of createNewMITransactionInputFromData(MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:52: warning: The following parameters of initializeMITransactionInput(MITransactionInput *self, MIScript *script, uint32_t sequence, MIByteArray *prevOutHash, uint32_t prevOutIndex, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'script'
+  parameter 'sequence'
+  parameter 'prevOutHash'
+  parameter 'prevOutIndex'
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:58: warning: The following parameters of initializeMITransactionInputFromData(MITransactionInput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating XML output for file MITransactionInput.h
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:44: warning: The following parameters of createNewMITransactionInputFromData(MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:52: warning: The following parameters of initializeMITransactionInput(MITransactionInput *self, MIScript *script, uint32_t sequence, MIByteArray *prevOutHash, uint32_t prevOutIndex, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'script'
+  parameter 'sequence'
+  parameter 'prevOutHash'
+  parameter 'prevOutIndex'
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionInput.h:58: warning: The following parameters of initializeMITransactionInputFromData(MITransactionInput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'onErrorReceived'
+Generating XML output for file MITransactionOutput.c
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:37: warning: The following parameters of initializeMITransactionOutput(MITransactionOutput *self, uint64_t value, MIScript *script, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'value'
+  parameter 'script'
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:43: warning: The following parameters of initializeMITransactionOutputFromData(MITransactionOutput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'data'
+  parameter 'onErrorReceived'
+Generating XML output for file MITransactionOutput.h
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:37: warning: The following parameters of initializeMITransactionOutput(MITransactionOutput *self, uint64_t value, MIScript *script, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'value'
+  parameter 'script'
+  parameter 'onErrorReceived'
+/home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/MITransactionOutput.h:43: warning: The following parameters of initializeMITransactionOutputFromData(MITransactionOutput *self, MIByteArray *data, void(*onErrorReceived)(MIError error, char *,...)) are not documented:
+  parameter 'data'
+  parameter 'onErrorReceived'
+Generating XML output for file MIObject.c
+Generating XML output for file MIObject.h
+<unknown>:1: warning: Found unknown command `\description'
+Generating XML output for file MIScript.c
+Generating XML output for file MIScript.h
+Generating XML output for file MICrypt.c
+Generating XML output for file MICrypt.h
+Generating XML output for file MIVarLenInt.c
+Generating XML output for file MIVarLenInt.h
+Generating XML output for file utilityfunction.h
+Generate XML output for dir /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/
+Generate XML output for dir /home/apopoola/workspace/MIBitcoin/trunk/src/MIBigInt/
+Generate XML output for dir /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/MIMessage/
+Generate XML output for dir /home/apopoola/workspace/MIBitcoin/trunk/src/MIObject/
+Generate XML output for dir /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/MIVariableLengthInteger/
+Generate XML output for dir /home/apopoola/workspace/MIBitcoin/trunk/src/Utils/
+Combining RTF output...
+Generating dot graphs using 0 parallel threads...
+Running dot for graph 1/765
+Running dot for graph 2/765
+Running dot for graph 3/765
+Running dot for graph 4/765
+Running dot for graph 5/765
+Running dot for graph 6/765
+Running dot for graph 7/765
+Running dot for graph 8/765
+Running dot for graph 9/765
+Running dot for graph 10/765
+Running dot for graph 11/765
+Running dot for graph 12/765
+Running dot for graph 13/765
+Running dot for graph 14/765
+Running dot for graph 15/765
+Running dot for graph 16/765
+Running dot for graph 17/765
+Running dot for graph 18/765
+Running dot for graph 19/765
+Running dot for graph 20/765
+Running dot for graph 21/765
+Running dot for graph 22/765
+Running dot for graph 23/765
+Running dot for graph 24/765
+Running dot for graph 25/765
+Running dot for graph 26/765
+Running dot for graph 27/765
+Running dot for graph 28/765
+Running dot for graph 29/765
+Running dot for graph 30/765
+Running dot for graph 31/765
+Running dot for graph 32/765
+Running dot for graph 33/765
+Running dot for graph 34/765
+Running dot for graph 35/765
+Running dot for graph 36/765
+Running dot for graph 37/765
+Running dot for graph 38/765
+Running dot for graph 39/765
+Running dot for graph 40/765
+Running dot for graph 41/765
+Running dot for graph 42/765
+Running dot for graph 43/765
+Running dot for graph 44/765
+Running dot for graph 45/765
+Running dot for graph 46/765
+Running dot for graph 47/765
+Running dot for graph 48/765
+Running dot for graph 49/765
+Running dot for graph 50/765
+Running dot for graph 51/765
+Running dot for graph 52/765
+Running dot for graph 53/765
+Running dot for graph 54/765
+Running dot for graph 55/765
+Running dot for graph 56/765
+Running dot for graph 57/765
+Running dot for graph 58/765
+Running dot for graph 59/765
+Running dot for graph 60/765
+Running dot for graph 61/765
+Running dot for graph 62/765
+Running dot for graph 63/765
+Running dot for graph 64/765
+Running dot for graph 65/765
+Running dot for graph 66/765
+Running dot for graph 67/765
+Running dot for graph 68/765
+Running dot for graph 69/765
+Running dot for graph 70/765
+Running dot for graph 71/765
+Running dot for graph 72/765
+Running dot for graph 73/765
+Running dot for graph 74/765
+Running dot for graph 75/765
+Running dot for graph 76/765
+Running dot for graph 77/765
+Running dot for graph 78/765
+Running dot for graph 79/765
+Running dot for graph 80/765
+Running dot for graph 81/765
+Running dot for graph 82/765
+Running dot for graph 83/765
+Running dot for graph 84/765
+Running dot for graph 85/765
+Running dot for graph 86/765
+Running dot for graph 87/765
+Running dot for graph 88/765
+Running dot for graph 89/765
+Running dot for graph 90/765
+Running dot for graph 91/765
+Running dot for graph 92/765
+Running dot for graph 93/765
+Running dot for graph 94/765
+Running dot for graph 95/765
+Running dot for graph 96/765
+Running dot for graph 97/765
+Running dot for graph 98/765
+Running dot for graph 99/765
+Running dot for graph 100/765
+Running dot for graph 101/765
+Running dot for graph 102/765
+Running dot for graph 103/765
+Running dot for graph 104/765
+Running dot for graph 105/765
+Running dot for graph 106/765
+Running dot for graph 107/765
+Running dot for graph 108/765
+Running dot for graph 109/765
+Running dot for graph 110/765
+Running dot for graph 111/765
+Running dot for graph 112/765
+Running dot for graph 113/765
+Running dot for graph 114/765
+Running dot for graph 115/765
+Running dot for graph 116/765
+Running dot for graph 117/765
+Running dot for graph 118/765
+Running dot for graph 119/765
+Running dot for graph 120/765
+Running dot for graph 121/765
+Running dot for graph 122/765
+Running dot for graph 123/765
+Running dot for graph 124/765
+Running dot for graph 125/765
+Running dot for graph 126/765
+Running dot for graph 127/765
+Running dot for graph 128/765
+Running dot for graph 129/765
+Running dot for graph 130/765
+Running dot for graph 131/765
+Running dot for graph 132/765
+Running dot for graph 133/765
+Running dot for graph 134/765
+Running dot for graph 135/765
+Running dot for graph 136/765
+Running dot for graph 137/765
+Running dot for graph 138/765
+Running dot for graph 139/765
+Running dot for graph 140/765
+Running dot for graph 141/765
+Running dot for graph 142/765
+Running dot for graph 143/765
+Running dot for graph 144/765
+Running dot for graph 145/765
+Running dot for graph 146/765
+Running dot for graph 147/765
+Running dot for graph 148/765
+Running dot for graph 149/765
+Running dot for graph 150/765
+Running dot for graph 151/765
+Running dot for graph 152/765
+Running dot for graph 153/765
+Running dot for graph 154/765
+Running dot for graph 155/765
+Running dot for graph 156/765
+Running dot for graph 157/765
+Running dot for graph 158/765
+Running dot for graph 159/765
+Running dot for graph 160/765
+Running dot for graph 161/765
+Running dot for graph 162/765
+Running dot for graph 163/765
+Running dot for graph 164/765
+Running dot for graph 165/765
+Running dot for graph 166/765
+Running dot for graph 167/765
+Running dot for graph 168/765
+Running dot for graph 169/765
+Running dot for graph 170/765
+Running dot for graph 171/765
+Running dot for graph 172/765
+Running dot for graph 173/765
+Running dot for graph 174/765
+Running dot for graph 175/765
+Running dot for graph 176/765
+Running dot for graph 177/765
+Running dot for graph 178/765
+Running dot for graph 179/765
+Running dot for graph 180/765
+Running dot for graph 181/765
+Running dot for graph 182/765
+Running dot for graph 183/765
+Running dot for graph 184/765
+Running dot for graph 185/765
+Running dot for graph 186/765
+Running dot for graph 187/765
+Running dot for graph 188/765
+Running dot for graph 189/765
+Running dot for graph 190/765
+Running dot for graph 191/765
+Running dot for graph 192/765
+Running dot for graph 193/765
+Running dot for graph 194/765
+Running dot for graph 195/765
+Running dot for graph 196/765
+Running dot for graph 197/765
+Running dot for graph 198/765
+Running dot for graph 199/765
+Running dot for graph 200/765
+Running dot for graph 201/765
+Running dot for graph 202/765
+Running dot for graph 203/765
+Running dot for graph 204/765
+Running dot for graph 205/765
+Running dot for graph 206/765
+Running dot for graph 207/765
+Running dot for graph 208/765
+Running dot for graph 209/765
+Running dot for graph 210/765
+Running dot for graph 211/765
+Running dot for graph 212/765
+Running dot for graph 213/765
+Running dot for graph 214/765
+Running dot for graph 215/765
+Running dot for graph 216/765
+Running dot for graph 217/765
+Running dot for graph 218/765
+Running dot for graph 219/765
+Running dot for graph 220/765
+Running dot for graph 221/765
+Running dot for graph 222/765
+Running dot for graph 223/765
+Running dot for graph 224/765
+Running dot for graph 225/765
+Running dot for graph 226/765
+Running dot for graph 227/765
+Running dot for graph 228/765
+Running dot for graph 229/765
+Running dot for graph 230/765
+Running dot for graph 231/765
+Running dot for graph 232/765
+Running dot for graph 233/765
+Running dot for graph 234/765
+Running dot for graph 235/765
+Running dot for graph 236/765
+Running dot for graph 237/765
+Running dot for graph 238/765
+Running dot for graph 239/765
+Running dot for graph 240/765
+Running dot for graph 241/765
+Running dot for graph 242/765
+Running dot for graph 243/765
+Running dot for graph 244/765
+Running dot for graph 245/765
+Running dot for graph 246/765
+Running dot for graph 247/765
+Running dot for graph 248/765
+Running dot for graph 249/765
+Running dot for graph 250/765
+Running dot for graph 251/765
+Running dot for graph 252/765
+Running dot for graph 253/765
+Running dot for graph 254/765
+Running dot for graph 255/765
+Running dot for graph 256/765
+Running dot for graph 257/765
+Running dot for graph 258/765
+Running dot for graph 259/765
+Running dot for graph 260/765
+Running dot for graph 261/765
+Running dot for graph 262/765
+Running dot for graph 263/765
+Running dot for graph 264/765
+Running dot for graph 265/765
+Running dot for graph 266/765
+Running dot for graph 267/765
+Running dot for graph 268/765
+Running dot for graph 269/765
+Running dot for graph 270/765
+Running dot for graph 271/765
+Running dot for graph 272/765
+Running dot for graph 273/765
+Running dot for graph 274/765
+Running dot for graph 275/765
+Running dot for graph 276/765
+Running dot for graph 277/765
+Running dot for graph 278/765
+Running dot for graph 279/765
+Running dot for graph 280/765
+Running dot for graph 281/765
+Running dot for graph 282/765
+Running dot for graph 283/765
+Running dot for graph 284/765
+Running dot for graph 285/765
+Running dot for graph 286/765
+Running dot for graph 287/765
+Running dot for graph 288/765
+Running dot for graph 289/765
+Running dot for graph 290/765
+Running dot for graph 291/765
+Running dot for graph 292/765
+Running dot for graph 293/765
+Running dot for graph 294/765
+Running dot for graph 295/765
+Running dot for graph 296/765
+Running dot for graph 297/765
+Running dot for graph 298/765
+Running dot for graph 299/765
+Running dot for graph 300/765
+Running dot for graph 301/765
+Running dot for graph 302/765
+Running dot for graph 303/765
+Running dot for graph 304/765
+Running dot for graph 305/765
+Running dot for graph 306/765
+Running dot for graph 307/765
+Running dot for graph 308/765
+Running dot for graph 309/765
+Running dot for graph 310/765
+Running dot for graph 311/765
+Running dot for graph 312/765
+Running dot for graph 313/765
+Running dot for graph 314/765
+Running dot for graph 315/765
+Running dot for graph 316/765
+Running dot for graph 317/765
+Running dot for graph 318/765
+Running dot for graph 319/765
+Running dot for graph 320/765
+Running dot for graph 321/765
+Running dot for graph 322/765
+Running dot for graph 323/765
+Running dot for graph 324/765
+Running dot for graph 325/765
+Running dot for graph 326/765
+Running dot for graph 327/765
+Running dot for graph 328/765
+Running dot for graph 329/765
+Running dot for graph 330/765
+Running dot for graph 331/765
+Running dot for graph 332/765
+Running dot for graph 333/765
+Running dot for graph 334/765
+Running dot for graph 335/765
+Running dot for graph 336/765
+Running dot for graph 337/765
+Running dot for graph 338/765
+Running dot for graph 339/765
+Running dot for graph 340/765
+Running dot for graph 341/765
+Running dot for graph 342/765
+Running dot for graph 343/765
+Running dot for graph 344/765
+Running dot for graph 345/765
+Running dot for graph 346/765
+Running dot for graph 347/765
+Running dot for graph 348/765
+Running dot for graph 349/765
+Running dot for graph 350/765
+Running dot for graph 351/765
+Running dot for graph 352/765
+Running dot for graph 353/765
+Running dot for graph 354/765
+Running dot for graph 355/765
+Running dot for graph 356/765
+Running dot for graph 357/765
+Running dot for graph 358/765
+Running dot for graph 359/765
+Running dot for graph 360/765
+Running dot for graph 361/765
+Running dot for graph 362/765
+Running dot for graph 363/765
+Running dot for graph 364/765
+Running dot for graph 365/765
+Running dot for graph 366/765
+Running dot for graph 367/765
+Running dot for graph 368/765
+Running dot for graph 369/765
+Running dot for graph 370/765
+Running dot for graph 371/765
+Running dot for graph 372/765
+Running dot for graph 373/765
+Running dot for graph 374/765
+Running dot for graph 375/765
+Running dot for graph 376/765
+Running dot for graph 377/765
+Running dot for graph 378/765
+Running dot for graph 379/765
+Running dot for graph 380/765
+Running dot for graph 381/765
+Running dot for graph 382/765
+Running dot for graph 383/765
+Running dot for graph 384/765
+Running dot for graph 385/765
+Running dot for graph 386/765
+Running dot for graph 387/765
+Running dot for graph 388/765
+Running dot for graph 389/765
+Running dot for graph 390/765
+Running dot for graph 391/765
+Running dot for graph 392/765
+Running dot for graph 393/765
+Running dot for graph 394/765
+Running dot for graph 395/765
+Running dot for graph 396/765
+Running dot for graph 397/765
+Running dot for graph 398/765
+Running dot for graph 399/765
+Running dot for graph 400/765
+Running dot for graph 401/765
+Running dot for graph 402/765
+Running dot for graph 403/765
+Running dot for graph 404/765
+Running dot for graph 405/765
+Running dot for graph 406/765
+Running dot for graph 407/765
+Running dot for graph 408/765
+Running dot for graph 409/765
+Running dot for graph 410/765
+Running dot for graph 411/765
+Running dot for graph 412/765
+Running dot for graph 413/765
+Running dot for graph 414/765
+Running dot for graph 415/765
+Running dot for graph 416/765
+Running dot for graph 417/765
+Running dot for graph 418/765
+Running dot for graph 419/765
+Running dot for graph 420/765
+Running dot for graph 421/765
+Running dot for graph 422/765
+Running dot for graph 423/765
+Running dot for graph 424/765
+Running dot for graph 425/765
+Running dot for graph 426/765
+Running dot for graph 427/765
+Running dot for graph 428/765
+Running dot for graph 429/765
+Running dot for graph 430/765
+Running dot for graph 431/765
+Running dot for graph 432/765
+Running dot for graph 433/765
+Running dot for graph 434/765
+Running dot for graph 435/765
+Running dot for graph 436/765
+Running dot for graph 437/765
+Running dot for graph 438/765
+Running dot for graph 439/765
+Running dot for graph 440/765
+Running dot for graph 441/765
+Running dot for graph 442/765
+Running dot for graph 443/765
+Running dot for graph 444/765
+Running dot for graph 445/765
+Running dot for graph 446/765
+Running dot for graph 447/765
+Running dot for graph 448/765
+Running dot for graph 449/765
+Running dot for graph 450/765
+Running dot for graph 451/765
+Running dot for graph 452/765
+Running dot for graph 453/765
+Running dot for graph 454/765
+Running dot for graph 455/765
+Running dot for graph 456/765
+Running dot for graph 457/765
+Running dot for graph 458/765
+Running dot for graph 459/765
+Running dot for graph 460/765
+Running dot for graph 461/765
+Running dot for graph 462/765
+Running dot for graph 463/765
+Running dot for graph 464/765
+Running dot for graph 465/765
+Running dot for graph 466/765
+Running dot for graph 467/765
+Running dot for graph 468/765
+Running dot for graph 469/765
+Running dot for graph 470/765
+Running dot for graph 471/765
+Running dot for graph 472/765
+Running dot for graph 473/765
+Running dot for graph 474/765
+Running dot for graph 475/765
+Running dot for graph 476/765
+Running dot for graph 477/765
+Running dot for graph 478/765
+Running dot for graph 479/765
+Running dot for graph 480/765
+Running dot for graph 481/765
+Running dot for graph 482/765
+Running dot for graph 483/765
+Running dot for graph 484/765
+Running dot for graph 485/765
+Running dot for graph 486/765
+Running dot for graph 487/765
+Running dot for graph 488/765
+Running dot for graph 489/765
+Running dot for graph 490/765
+Running dot for graph 491/765
+Running dot for graph 492/765
+Running dot for graph 493/765
+Running dot for graph 494/765
+Running dot for graph 495/765
+Running dot for graph 496/765
+Running dot for graph 497/765
+Running dot for graph 498/765
+Running dot for graph 499/765
+Running dot for graph 500/765
+Running dot for graph 501/765
+Running dot for graph 502/765
+Running dot for graph 503/765
+Running dot for graph 504/765
+Running dot for graph 505/765
+Running dot for graph 506/765
+Running dot for graph 507/765
+Running dot for graph 508/765
+Running dot for graph 509/765
+Running dot for graph 510/765
+Running dot for graph 511/765
+Running dot for graph 512/765
+Running dot for graph 513/765
+Running dot for graph 514/765
+Running dot for graph 515/765
+Running dot for graph 516/765
+Running dot for graph 517/765
+Running dot for graph 518/765
+Running dot for graph 519/765
+Running dot for graph 520/765
+Running dot for graph 521/765
+Running dot for graph 522/765
+Running dot for graph 523/765
+Running dot for graph 524/765
+Running dot for graph 525/765
+Running dot for graph 526/765
+Running dot for graph 527/765
+Running dot for graph 528/765
+Running dot for graph 529/765
+Running dot for graph 530/765
+Running dot for graph 531/765
+Running dot for graph 532/765
+Running dot for graph 533/765
+Running dot for graph 534/765
+Running dot for graph 535/765
+Running dot for graph 536/765
+Running dot for graph 537/765
+Running dot for graph 538/765
+Running dot for graph 539/765
+Running dot for graph 540/765
+Running dot for graph 541/765
+Running dot for graph 542/765
+Running dot for graph 543/765
+Running dot for graph 544/765
+Running dot for graph 545/765
+Running dot for graph 546/765
+Running dot for graph 547/765
+Running dot for graph 548/765
+Running dot for graph 549/765
+Running dot for graph 550/765
+Running dot for graph 551/765
+Running dot for graph 552/765
+Running dot for graph 553/765
+Running dot for graph 554/765
+Running dot for graph 555/765
+Running dot for graph 556/765
+Running dot for graph 557/765
+Running dot for graph 558/765
+Running dot for graph 559/765
+Running dot for graph 560/765
+Running dot for graph 561/765
+Running dot for graph 562/765
+Running dot for graph 563/765
+Running dot for graph 564/765
+Running dot for graph 565/765
+Running dot for graph 566/765
+Running dot for graph 567/765
+Running dot for graph 568/765
+Running dot for graph 569/765
+Running dot for graph 570/765
+Running dot for graph 571/765
+Running dot for graph 572/765
+Running dot for graph 573/765
+Running dot for graph 574/765
+Running dot for graph 575/765
+Running dot for graph 576/765
+Running dot for graph 577/765
+Running dot for graph 578/765
+Running dot for graph 579/765
+Running dot for graph 580/765
+Running dot for graph 581/765
+Running dot for graph 582/765
+Running dot for graph 583/765
+Running dot for graph 584/765
+Running dot for graph 585/765
+Running dot for graph 586/765
+Running dot for graph 587/765
+Running dot for graph 588/765
+Running dot for graph 589/765
+Running dot for graph 590/765
+Running dot for graph 591/765
+Running dot for graph 592/765
+Running dot for graph 593/765
+Running dot for graph 594/765
+Running dot for graph 595/765
+Running dot for graph 596/765
+Running dot for graph 597/765
+Running dot for graph 598/765
+Running dot for graph 599/765
+Running dot for graph 600/765
+Running dot for graph 601/765
+Running dot for graph 602/765
+Running dot for graph 603/765
+Running dot for graph 604/765
+Running dot for graph 605/765
+Running dot for graph 606/765
+Running dot for graph 607/765
+Running dot for graph 608/765
+Running dot for graph 609/765
+Running dot for graph 610/765
+Running dot for graph 611/765
+Running dot for graph 612/765
+Running dot for graph 613/765
+Running dot for graph 614/765
+Running dot for graph 615/765
+Running dot for graph 616/765
+Running dot for graph 617/765
+Running dot for graph 618/765
+Running dot for graph 619/765
+Running dot for graph 620/765
+Running dot for graph 621/765
+Running dot for graph 622/765
+Running dot for graph 623/765
+Running dot for graph 624/765
+Running dot for graph 625/765
+Running dot for graph 626/765
+Running dot for graph 627/765
+Running dot for graph 628/765
+Running dot for graph 629/765
+Running dot for graph 630/765
+Running dot for graph 631/765
+Running dot for graph 632/765
+Running dot for graph 633/765
+Running dot for graph 634/765
+Running dot for graph 635/765
+Running dot for graph 636/765
+Running dot for graph 637/765
+Running dot for graph 638/765
+Running dot for graph 639/765
+Running dot for graph 640/765
+Running dot for graph 641/765
+Running dot for graph 642/765
+Running dot for graph 643/765
+Running dot for graph 644/765
+Running dot for graph 645/765
+Running dot for graph 646/765
+Running dot for graph 647/765
+Running dot for graph 648/765
+Running dot for graph 649/765
+Running dot for graph 650/765
+Running dot for graph 651/765
+Running dot for graph 652/765
+Running dot for graph 653/765
+Running dot for graph 654/765
+Running dot for graph 655/765
+Running dot for graph 656/765
+Running dot for graph 657/765
+Running dot for graph 658/765
+Running dot for graph 659/765
+Running dot for graph 660/765
+Running dot for graph 661/765
+Running dot for graph 662/765
+Running dot for graph 663/765
+Running dot for graph 664/765
+Running dot for graph 665/765
+Running dot for graph 666/765
+Running dot for graph 667/765
+Running dot for graph 668/765
+Running dot for graph 669/765
+Running dot for graph 670/765
+Running dot for graph 671/765
+Running dot for graph 672/765
+Running dot for graph 673/765
+Running dot for graph 674/765
+Running dot for graph 675/765
+Running dot for graph 676/765
+Running dot for graph 677/765
+Running dot for graph 678/765
+Running dot for graph 679/765
+Running dot for graph 680/765
+Running dot for graph 681/765
+Running dot for graph 682/765
+Running dot for graph 683/765
+Running dot for graph 684/765
+Running dot for graph 685/765
+Running dot for graph 686/765
+Running dot for graph 687/765
+Running dot for graph 688/765
+Running dot for graph 689/765
+Running dot for graph 690/765
+Running dot for graph 691/765
+Running dot for graph 692/765
+Running dot for graph 693/765
+Running dot for graph 694/765
+Running dot for graph 695/765
+Running dot for graph 696/765
+Running dot for graph 697/765
+Running dot for graph 698/765
+Running dot for graph 699/765
+Running dot for graph 700/765
+Running dot for graph 701/765
+Running dot for graph 702/765
+Running dot for graph 703/765
+Running dot for graph 704/765
+Running dot for graph 705/765
+Running dot for graph 706/765
+Running dot for graph 707/765
+Running dot for graph 708/765
+Running dot for graph 709/765
+Running dot for graph 710/765
+Running dot for graph 711/765
+Running dot for graph 712/765
+Running dot for graph 713/765
+Running dot for graph 714/765
+Running dot for graph 715/765
+Running dot for graph 716/765
+Running dot for graph 717/765
+Running dot for graph 718/765
+Running dot for graph 719/765
+Running dot for graph 720/765
+Running dot for graph 721/765
+Running dot for graph 722/765
+Running dot for graph 723/765
+Running dot for graph 724/765
+Running dot for graph 725/765
+Running dot for graph 726/765
+Running dot for graph 727/765
+Running dot for graph 728/765
+Running dot for graph 729/765
+Running dot for graph 730/765
+Running dot for graph 731/765
+Running dot for graph 732/765
+Running dot for graph 733/765
+Running dot for graph 734/765
+Running dot for graph 735/765
+Running dot for graph 736/765
+Running dot for graph 737/765
+Running dot for graph 738/765
+Running dot for graph 739/765
+Running dot for graph 740/765
+Running dot for graph 741/765
+Running dot for graph 742/765
+Running dot for graph 743/765
+Running dot for graph 744/765
+Running dot for graph 745/765
+Running dot for graph 746/765
+Running dot for graph 747/765
+Running dot for graph 748/765
+Running dot for graph 749/765
+Running dot for graph 750/765
+Running dot for graph 751/765
+Running dot for graph 752/765
+Running dot for graph 753/765
+Running dot for graph 754/765
+Running dot for graph 755/765
+Running dot for graph 756/765
+Running dot for graph 757/765
+Running dot for graph 758/765
+Running dot for graph 759/765
+Running dot for graph 760/765
+Running dot for graph 761/765
+Running dot for graph 762/765
+Running dot for graph 763/765
+Running dot for graph 764/765
+Running dot for graph 765/765
+Patching output file 1/56
+Patching output file 2/56
+Patching output file 3/56
+Patching output file 4/56
+Patching output file 5/56
+Patching output file 6/56
+Patching output file 7/56
+Patching output file 8/56
+Patching output file 9/56
+Patching output file 10/56
+Patching output file 11/56
+Patching output file 12/56
+Patching output file 13/56
+Patching output file 14/56
+Patching output file 15/56
+Patching output file 16/56
+Patching output file 17/56
+Patching output file 18/56
+Patching output file 19/56
+Patching output file 20/56
+Patching output file 21/56
+Patching output file 22/56
+Patching output file 23/56
+Patching output file 24/56
+Patching output file 25/56
+Patching output file 26/56
+Patching output file 27/56
+Patching output file 28/56
+Patching output file 29/56
+Patching output file 30/56
+Patching output file 31/56
+Patching output file 32/56
+Patching output file 33/56
+Patching output file 34/56
+Patching output file 35/56
+Patching output file 36/56
+Patching output file 37/56
+Patching output file 38/56
+Patching output file 39/56
+Patching output file 40/56
+Patching output file 41/56
+Patching output file 42/56
+Patching output file 43/56
+Patching output file 44/56
+Patching output file 45/56
+Patching output file 46/56
+Patching output file 47/56
+Patching output file 48/56
+Patching output file 49/56
+Patching output file 50/56
+Patching output file 51/56
+Patching output file 52/56
+Patching output file 53/56
+Patching output file 54/56
+Patching output file 55/56
+Patching output file 56/56
+finished...
+*** Doxygen has finished

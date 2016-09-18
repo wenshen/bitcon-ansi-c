@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_address_8h.html" title="Based upon an ECDSA public key and a network version code. Used for receiving bitcoins. Inherits VersionChecksumBytes." alt="" coords="5,83,203,112"/>
+<area shape="rect" id="node7" href="$_version_checksum_bytes_8c.html" title="src/Object/VersionChecksumBytes.c" alt="" coords="227,83,464,112"/>
+<area shape="rect" id="node5" href="$_address_8c.html" title="src/Object/Network/Address.c" alt="" coords="5,160,203,189"/>
+</map>

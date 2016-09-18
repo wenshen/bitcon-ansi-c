@@ -1,0 +1,65 @@
+.TH "ByteArray" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ByteArray \- 
+.PP
+Structure for \fBByteArray\fP objects.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ByteArray.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBObject\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBSharedData\fP * \fBsharedData\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBoffset\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBlength\fP"
+.br
+.ti -1c
+.RI "void(* \fBonErrorReceived\fP )(\fBError\fP error, char *,...)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for \fBByteArray\fP objects. 
+
+\fBSee also:\fP
+.RS 4
+\fBByteArray.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file ByteArray.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBObject\fP \fBbase\fP"\fBObject\fP base structure 
+.PP
+Definition at line 30 of file ByteArray.h.
+.SS "uint32_t \fBlength\fP"Length of byte array. Set to _BYTE_ARRAY_UNKNOWN_LENGTH if unknown. 
+.PP
+Definition at line 33 of file ByteArray.h.
+.SS "uint32_t \fBoffset\fP"Offset from the beginning of the byte data to the beginning of this array 
+.PP
+Definition at line 32 of file ByteArray.h.
+.SS "void(* \fBonErrorReceived\fP)(\fBError\fP error, char *,...)"
+.PP
+Definition at line 34 of file ByteArray.h.
+.SS "\fBSharedData\fP* \fBsharedData\fP"Underlying byte data 
+.PP
+Definition at line 31 of file ByteArray.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

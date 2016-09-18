@@ -1,0 +1,90 @@
+\hypertarget{struct_m_i_transaction_input}{
+\section{TransactionInput Struct Reference}
+\label{struct_m_i_transaction_input}\index{TransactionInput@{TransactionInput}}
+}
+
+
+Structure for \hyperlink{struct_m_i_transaction_input}{TransactionInput} objects.  
+
+
+
+
+{\ttfamily \#include $<$TransactionInput.h$>$}
+
+
+
+Collaboration diagram for TransactionInput:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_m_i_transaction_input__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_message}{Message} \hyperlink{struct_m_i_transaction_input_a487e4843cf1cf7397eb2e1bcf91cbf3b}{base}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_transaction_input_a0ab03ef2cc38198d3666a992a245fddf}{sequence}
+\item 
+\hyperlink{struct_m_i_byte_array}{Script} $\ast$ \hyperlink{struct_m_i_transaction_input_ad2f125749a4bf410b647bc258de817d6}{scriptObject}
+\item 
+\hyperlink{struct_m_i_previous_output}{PreviousOutput} \hyperlink{struct_m_i_transaction_input_aa2926a5b65b7a9cda9abd6783df43f6f}{prevOutput}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure for \hyperlink{struct_m_i_transaction_input}{TransactionInput} objects. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_m_i_transaction_input_8h}{TransactionInput.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 30 of file TransactionInput.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_m_i_transaction_input_a487e4843cf1cf7397eb2e1bcf91cbf3b}{
+\index{TransactionInput@{TransactionInput}!base@{base}}
+\index{base@{base}!TransactionInput@{TransactionInput}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_m_i_transaction_input_a487e4843cf1cf7397eb2e1bcf91cbf3b}
+\hyperlink{struct_m_i_message}{Message} base structure 
+
+Definition at line 31 of file TransactionInput.h.
+
+\hypertarget{struct_m_i_transaction_input_aa2926a5b65b7a9cda9abd6783df43f6f}{
+\index{TransactionInput@{TransactionInput}!prevOutput@{prevOutput}}
+\index{prevOutput@{prevOutput}!TransactionInput@{TransactionInput}}
+\subsubsection[{prevOutput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PreviousOutput} {\bf prevOutput}}}
+\label{struct_m_i_transaction_input_aa2926a5b65b7a9cda9abd6783df43f6f}
+A locator for a previous output being spent. 
+
+Definition at line 34 of file TransactionInput.h.
+
+\hypertarget{struct_m_i_transaction_input_ad2f125749a4bf410b647bc258de817d6}{
+\index{TransactionInput@{TransactionInput}!scriptObject@{scriptObject}}
+\index{scriptObject@{scriptObject}!TransactionInput@{TransactionInput}}
+\subsubsection[{scriptObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Script}$\ast$ {\bf scriptObject}}}
+\label{struct_m_i_transaction_input_ad2f125749a4bf410b647bc258de817d6}
+Contains script information as a Script. 
+
+Definition at line 33 of file TransactionInput.h.
+
+\hypertarget{struct_m_i_transaction_input_a0ab03ef2cc38198d3666a992a245fddf}{
+\index{TransactionInput@{TransactionInput}!sequence@{sequence}}
+\index{sequence@{sequence}!TransactionInput@{TransactionInput}}
+\subsubsection[{sequence}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf sequence}}}
+\label{struct_m_i_transaction_input_a0ab03ef2cc38198d3666a992a245fddf}
+The version of this transaction input. Not used in protocol v0.3.18.00. Set to 0 for transactions that may somday be open to change after broadcast, set to \_\-TRANSACTION\_\-INPUT\_\-FINAL if this input never needs to be changed after broadcast. 
+
+Definition at line 32 of file TransactionInput.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Object/Message/\hyperlink{_m_i_transaction_input_8h}{TransactionInput.h}\end{DoxyCompactItemize}

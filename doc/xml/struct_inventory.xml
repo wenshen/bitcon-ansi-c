@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_inventory" kind="struct" prot="public">
+    <compoundname>Inventory</compoundname>
+    <includes refid="_inventory_8h" local="no">Inventory.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_inventory_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" line="27" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_1af6a39bfc7e1dc3b6f9c997c1c43fa996" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of inventory entries. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_1a5434993362e4e5b940a640f34b3c417d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> **</type>
+        <definition>InventoryVector** inventory</definition>
+        <argsstring></argsstring>
+        <name>inventory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="struct_inventory" kindref="compound">Inventory</ref> vectors. This should be a memory block of pointers to InventoryVectors. It will be freed when the <ref refid="struct_inventory" kindref="compound">Inventory</ref> is freed. When adding an item it should be retained. When removing an item it should be released. Leave or set as NULL if empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_inventory" kindref="compound">Inventory</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_inventory_8h" kindref="compound">Inventory.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="325">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="322">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="323" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="324" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="323">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="321">
+        <label>InventoryVector</label>
+        <link refid="struct_inventory_vector"/>
+        <childnode refid="322" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="324" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="324">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="325" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="323" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="320">
+        <label>Inventory</label>
+        <link refid="struct_inventory"/>
+        <childnode refid="321" relation="usage">
+          <edgelabel>inventory</edgelabel>
+        </childnode>
+        <childnode refid="322" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/Inventory.h" bodystart="26" bodyend="30"/>
+    <listofallmembers>
+      <member refid="struct_inventory_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>Inventory</scope><name>base</name></member>
+      <member refid="struct_inventory_1af6a39bfc7e1dc3b6f9c997c1c43fa996" prot="public" virt="non-virtual"><scope>Inventory</scope><name>count</name></member>
+      <member refid="struct_inventory_1a5434993362e4e5b940a640f34b3c417d" prot="public" virt="non-virtual"><scope>Inventory</scope><name>inventory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

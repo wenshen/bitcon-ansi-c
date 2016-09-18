@@ -1,0 +1,19 @@
+{
+   "wallet": [
+      {
+	"date": "Today",
+	"Type": 1,
+	"AddressTo": "fasd143fdaf",
+	"AddressFrom": "fasd143fdaf",
+	"Amount":12.434
+      },
+      {
+	"date": "Today",
+	"Type": 1,
+	"AddressTo": "fasd143fdaf",
+	"AddressFrom": "fasd143fdaf",
+	"Amount":12.434
+      }
+    ]
+}
+

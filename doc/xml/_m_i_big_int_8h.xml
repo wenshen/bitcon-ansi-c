@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_big_int_8h" kind="file">
+    <compoundname>BigInt.h</compoundname>
+    <includes local="yes">../Constants.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="_m_i_block_8h" local="yes">Object/Message/Block.h</includedby>
+    <incdepgraph>
+      <node id="290">
+        <label>stdint.h</label>
+      </node>
+      <node id="289">
+        <label>stdlib.h</label>
+      </node>
+      <node id="288">
+        <label>../Constants.h</label>
+      </node>
+      <node id="291">
+        <label>string.h</label>
+      </node>
+      <node id="287">
+        <label>BigInt/BigInt.h</label>
+        <link refid="BigInt.h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="294">
+        <label>Object/Message/Block.c</label>
+        <link refid="_m_i_block_8c"/>
+      </node>
+      <node id="293">
+        <label>Object/Message/Block.h</label>
+        <link refid="_m_i_block_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>BigInt/BigInt.h</label>
+        <link refid="BigInt.h"/>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_m_i_big_int" prot="public">BigInt</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>BigInt.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>04/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BIGINT_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BIGINT_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_m_i_big_int" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="struct_m_i_big_int_1abe222f6d3581e7920dcad5306cc906a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_m_i_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>;<sp/></highlight></codeline>
+<codeline lineno="22" refid="struct_m_i_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_m_i_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><ref refid="struct_m_i_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BIGINT_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/BigInt/BigInt.h"/>
+  </compounddef>
+</doxygen>

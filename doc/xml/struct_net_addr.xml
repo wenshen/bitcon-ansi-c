@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_net_addr" kind="struct" prot="public">
+    <compoundname>NetAddr</compoundname>
+    <includes refid="_protocol_8h" local="no">Protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_net_addr_1a83e57ce9bd59cfa0995c2e2c8589c274" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="31" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_net_addr_1a7c2c2697560cb0d08fdca3bd4d10d07e" prot="public" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="32" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_net_addr_1a9799580e054ff5683ffbeb32502f7475" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char ip[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="33" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_net_addr_1ab85ff85aa1f60f4a1c1ca1225a9dad06" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="34" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="30" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="29" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_net_addr_1a9799580e054ff5683ffbeb32502f7475" prot="public" virt="non-virtual"><scope>NetAddr</scope><name>ip</name></member>
+      <member refid="struct_net_addr_1ab85ff85aa1f60f4a1c1ca1225a9dad06" prot="public" virt="non-virtual"><scope>NetAddr</scope><name>port</name></member>
+      <member refid="struct_net_addr_1a7c2c2697560cb0d08fdca3bd4d10d07e" prot="public" virt="non-virtual"><scope>NetAddr</scope><name>services</name></member>
+      <member refid="struct_net_addr_1a83e57ce9bd59cfa0995c2e2c8589c274" prot="public" virt="non-virtual"><scope>NetAddr</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_crypt_8h" kind="file">
+    <compoundname>MICrypt.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="yes">../../MIConstants.h</includes>
+    <includedby refid="_m_i_crypt_8c" local="yes">src/Utils/Cryptography/MICrypt.c</includedby>
+    <incdepgraph>
+      <node id="631">
+        <label>stdbool.h</label>
+      </node>
+      <node id="630">
+        <label>stdint.h</label>
+      </node>
+      <node id="632">
+        <label>../../MIConstants.h</label>
+      </node>
+      <node id="629">
+        <label>src/Utils/Cryptography/MICrypt.h</label>
+        <link refid="MICrypt.h"/>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="634">
+        <label>src/Utils/Cryptography/MICrypt.c</label>
+        <link refid="_m_i_crypt_8c"/>
+      </node>
+      <node id="633">
+        <label>src/Utils/Cryptography/MICrypt.h</label>
+        <link refid="MICrypt.h"/>
+        <childnode refid="634" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_i_crypt_8h_1a403b2cfdc3a8dbf7fc32a9565003feb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MISha256</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>MISha256</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-256 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 32-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h" line="27" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.c" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_crypt_8h_1aa2b596dad97fa3d4de7590d5b1b1509a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MIRipemd160</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>MIRipemd160</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>RIPEMD-160 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 20-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h" line="34" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.c" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_crypt_8h_1a919ca4891c68f1cc32d100fe4bec103e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MISha160</definition>
+        <argsstring>(uint8_t *data, uint16_t length, uint8_t *output)</argsstring>
+        <name>MISha160</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-1 cryptographic hash function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the byte data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to hold a 10-byte hash. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h" line="41" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.c" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_crypt_8h_1a1daf3c15d36f5663956cff4d3ce1e1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MIECDSAVerify</definition>
+        <argsstring>(uint8_t *signature, uint8_t signatureLen, uint8_t *hash, const uint8_t *pubKey, uint8_t keyLen)</argsstring>
+        <name>MIECDSAVerify</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>signatureLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>pubKey</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BER encoded signature bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the signature bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32 byte hash for checking the signature against. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pubKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public key bytes to check this signature with. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the public key bytes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the signature is valid and false if invalid. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h" line="51" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.c" bodystart="60" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MICrypt.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>05/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>MIBitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CRYPT_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CRYPT_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../MIConstants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>MISha256</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>MIRipemd160</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>MISha160</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>weak<sp/>MIECDSAVerify</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_crypt_8c_1ab62ec3041775f1d56093fa4096c2ef84" kindref="member" tooltip="SHA-256 cryptographic hash function.">MISha256</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_crypt_8c_1a32610a7ca9cf7b5aa163cc645564bab9" kindref="member" tooltip="RIPEMD-160 cryptographic hash function.">MIRipemd160</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_crypt_8c_1ab8edb068b6d3da347a870e8b5e8ebdc6" kindref="member" tooltip="SHA-1 cryptographic hash function.">MISha160</ref>(uint8_t<sp/>*<sp/><ref refid="struct_script_byte_vector_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,uint16_t<sp/><ref refid="struct_script_byte_vector_1a1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>,uint8_t<sp/>*<sp/>output);</highlight></codeline>
+<codeline lineno="51"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_crypt_8c_1a1daf3c15d36f5663956cff4d3ce1e1d4" kindref="member" tooltip="Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL ver...">MIECDSAVerify</ref>(uint8_t<sp/>*<sp/>signature,<sp/>uint8_t<sp/>signatureLen,<sp/>uint8_t<sp/>*<sp/>hash,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/>pubKey,<sp/>uint8_t<sp/>keyLen);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CRYPT_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Utils/Cryptography/MICrypt.h"/>
+  </compounddef>
+</doxygen>

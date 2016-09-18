@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_b2d732b138afb292b3dd5ef231615bbc" kind="dir">
+    <compoundname>src/Object/NodeDiscovery/</compoundname>
+    <innerfile refid="_node_discovery_8c">NodeDiscovery.c</innerfile>
+    <innerfile refid="_node_discovery_8h">NodeDiscovery.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NodeDiscovery/"/>
+  </compounddef>
+</doxygen>

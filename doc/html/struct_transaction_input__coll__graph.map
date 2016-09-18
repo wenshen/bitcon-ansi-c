@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_previous_output.html" title="contains hash of the transaction and the number of outputs. Example of the structure: { hash: &quot;000000..." alt="" coords="5,466,117,569"/>
+<area shape="rect" id="node4" href="$struct_byte_array.html" title="Structure for ByteArray objects." alt="" coords="101,192,232,347"/>
+<area shape="rect" id="node10" href="$struct_message.html" title="Structure for Message objects." alt="" coords="260,414,391,621"/>
+<area shape="rect" id="node6" href="$struct_shared_data.html" title="Stores byte data that can be shared amongst many ByteArrays." alt="" coords="105,14,228,117"/>
+<area shape="rect" id="node8" href="$struct_object.html" title="Base class." alt="" coords="252,5,375,125"/>
+</map>

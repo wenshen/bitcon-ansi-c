@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_inventory_vector" kind="struct" prot="public">
+    <compoundname>InventoryVector</compoundname>
+    <includes refid="_inventory_vector_8h" local="no">InventoryVector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_inventory_vector_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="24" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_vector_1aae693fef743079289c6c94035f7aae77" prot="public" static="no" mutable="no">
+        <type><ref refid="_constants_8h_1a540a9c34662db8bb84b729512cf08e75" kindref="member">InventoryVectorType</ref></type>
+        <definition>InventoryVectorType type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the inventory vector. It can be an error, a transaction or a block </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="25" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_vector_1a5309b3103b4345688327148e3c589014" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>char hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash of the inventory vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_vector_1ad44b615021ed3ccb734fcaf583ef4a03" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="30" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_vector_1a30660ee1bca7189182e64c5a192651af" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hash[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="32" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_inventory_vector_1a4bfea42429249a1f65204f0c0f34704a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="114" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_inventory_vector_8h" kindref="compound">InventoryVector.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="331">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="328">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="329" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="330" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="329">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="327">
+        <label>InventoryVector</label>
+        <link refid="struct_inventory_vector"/>
+        <childnode refid="328" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="330" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="330">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="331" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="329" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" line="23" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/InventoryVector.h" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_inventory_vector_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>InventoryVector</scope><name>base</name></member>
+      <member refid="struct_inventory_vector_1a5309b3103b4345688327148e3c589014" prot="public" virt="non-virtual"><scope>InventoryVector</scope><name>hash</name></member>
+      <member refid="struct_inventory_vector_1a30660ee1bca7189182e64c5a192651af" prot="public" virt="non-virtual"><scope>InventoryVector</scope><name>hash</name></member>
+      <member refid="struct_inventory_vector_1aae693fef743079289c6c94035f7aae77" prot="public" virt="non-virtual"><scope>InventoryVector</scope><name>type</name></member>
+      <member refid="struct_inventory_vector_1ad44b615021ed3ccb734fcaf583ef4a03" prot="public" virt="non-virtual"><scope>InventoryVector</scope><name>type</name></member>
+      <member refid="struct_inventory_vector_1a4bfea42429249a1f65204f0c0f34704a" prot="public" virt="non-virtual"><scope>InventoryVector</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

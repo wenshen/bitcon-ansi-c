@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_base58_8h.html#a638fbbbf6ac769d7ac1e730437fce0c0" title="VerifyAndRemoveCheckSum" alt="" coords="164,5,356,35"/>
+<area shape="rect" id="node5" href="$_base58_8h.html#a20b174879ad363a02444d6dfd0c3956f" title="Decodes base 58 string into byte data as a BigInt and checks a 4 byte checksum." alt="" coords="405,5,568,35"/>
+</map>

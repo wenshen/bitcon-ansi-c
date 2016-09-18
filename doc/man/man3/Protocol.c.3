@@ -1,0 +1,42 @@
+.TH "src/Object/NetworkProtocol/Protocol.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/NetworkProtocol/Protocol.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Protocol.h'\fP
+.br
+\fC#include <memory.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBgetPayloadLength\fP (struct \fBCmdHeaderCheckSum\fP header)"
+.br
+.ti -1c
+.RI "struct \fBCmdVersion\fP \fBparseVersion\fP (const char *payload)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "unsigned int getPayloadLength (struct \fBCmdHeaderCheckSum\fPheader)"
+.PP
+Definition at line 25 of file Protocol.c.
+.SS "struct \fBCmdVersion\fP parseVersion (const char *payload)\fC [read]\fP"
+.PP
+Definition at line 30 of file Protocol.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

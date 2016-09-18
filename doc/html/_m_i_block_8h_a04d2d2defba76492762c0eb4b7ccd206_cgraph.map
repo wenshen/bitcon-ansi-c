@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_transaction_8c.html#ac64b350eebd0ac111556c9323025a5bc" title="Creates a new Transaction object from byte data. Should be serialised for object data..." alt="" coords="241,423,511,453"/>
+<area shape="rect" id="node7" href="$_m_i_message_8c.html#a5b1bc10a9354d0ad365fc55123dba947" title="Gets a Message from another object. Use this to avoid casts." alt="" coords="1252,373,1359,402"/>
+<area shape="rect" id="node9" href="$_m_i_var_len_int_8c.html#a0492e373e2d12e41b1764b580f287af9" title="Decodes variable size integer from bytes into a VarLenInt structure." alt="" coords="933,1035,1067,1065"/>
+<area shape="rect" id="node19" href="$_m_i_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="1529,417,1708,446"/>
+<area shape="rect" id="node21" href="$_m_i_transaction_8c.html#a8777f695fbbb547e32b9c0347b6b2026" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="293,653,459,682"/>
+<area shape="rect" id="node54" href="$_m_i_byte_array_8c.html#a22681d5a43566996273c64d34d669806" title="References a subsection of a ByteArray." alt="" coords="1187,678,1424,707"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_8c.html#addbf01b7d3012da33c2124db978f3424" title="Creates a new Transaction object from byte data. Should be serialised for object data..." alt="" coords="567,374,820,403"/>
+<area shape="rect" id="node11" href="$_m_i_byte_array_8c.html#af0eafd008dc71865431262ed1e29b4f2" title="Get a byte from the ByteArray object. A byte will be returned from self&#45;&gt;offset+index in the underl..." alt="" coords="1220,981,1391,1010"/>
+<area shape="rect" id="node13" href="$_m_i_byte_array_8c.html#aa74c92f75755b2c258938fb3819d94ab" title="Reads a 16 bit integer from a ByteArray as little&#45;endian." alt="" coords="1175,1034,1436,1063"/>
+<area shape="rect" id="node15" href="$_m_i_byte_array_8c.html#aab10685017fe16769d5b22c826ada9f8" title="Reads a 32 bit integer from a ByteArray as little&#45;endian." alt="" coords="1175,927,1436,957"/>
+<area shape="rect" id="node17" href="$_m_i_byte_array_8c.html#a59271d773239202481b815d6825c2587" title="Reads a 64 bit integer from the ByteArray as little&#45;endian." alt="" coords="1175,1087,1436,1117"/>
+<area shape="rect" id="node23" href="$_m_i_transaction_input_8c.html#a6ce74856deb61a054db563a0382b0ff2" title="Creates a new TransactionInput object from byte data." alt="" coords="567,137,820,166"/>
+<area shape="rect" id="node38" href="$_m_i_transaction_output_8c.html#ad147138cc70f16d81e3b66a00ae700af" title="Creates a new TransactionOutput object from byte data. Should be serialised for object data..." alt="" coords="561,243,825,273"/>
+<area shape="rect" id="node50" href="$_m_i_transaction_input_8c.html#ad375fb1ac6adc4cfeafc59b89ab811b9" title="Deserialises a TransactionInput so that it can be used as an object." alt="" coords="596,779,791,809"/>
+<area shape="rect" id="node71" href="$_m_i_transaction_output_8c.html#aec03af57e070260915cbf2491802df55" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="591,983,796,1013"/>
+<area shape="rect" id="node25" href="$_m_i_transaction_input_8c.html#a827a05ba7fd33c16b83dbb34f8d1c64d" title="Frees a TransactionInput object." alt="" coords="912,110,1088,139"/>
+<area shape="rect" id="node33" href="$_m_i_object_8c.html#a0f72e3416dc7f6c52cfb1bf49baac3f2" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="1887,549,1980,578"/>
+<area shape="rect" id="node35" href="$_m_i_transaction_input_8c.html#a23b5f752e968e3bff9c427e224c48366" title="Initialises a new TransactionInput object from the byte data." alt="" coords="881,217,1119,246"/>
+<area shape="rect" id="node28" href="$_m_i_message_8c.html#a17557bbd8e2e7b7d0736c88df25a389e" title="destroys the memory allocated to a Message object." alt="" coords="1239,190,1372,219"/>
+<area shape="rect" id="node31" href="$_m_i_object_8c.html#a71704ab4fbecb7d85276d32649b5349a" title="destructor" alt="" coords="1875,602,1992,631"/>
+<area shape="rect" id="node40" href="$_m_i_transaction_output_8c.html#a03d504a62b63683feab0b3d0670cea64" title="Frees a TransactionOutput object." alt="" coords="907,163,1093,193"/>
+<area shape="rect" id="node45" href="$_m_i_transaction_output_8c.html#acdff85fe7595abae3fad7331e5411254" title="Initialises a TransactionOutput object." alt="" coords="876,270,1124,299"/>
+<area shape="rect" id="node52" href="$_m_i_script_8c.html#a68cdb4a9f0a39933b1af58a86666db77" title="Creates a new Script object." alt="" coords="888,830,1112,859"/>
+<area shape="rect" id="node56" href="$_m_i_byte_array_8c.html#ab0ba2a57716ecf23d43924647b4175bb" title="Destroys a ByteArray object." alt="" coords="1549,655,1688,685"/>
+<area shape="rect" id="node63" href="$_m_i_byte_array_8c.html#a0639a384c5603ad22f8440fcbb831f9a" title="Initialises a reference ByteArray to a subsection of an ByteArray." alt="" coords="1485,550,1752,579"/>
+<area shape="rect" id="node60" href="$_m_i_byte_array_8c.html#a34dc195b61536b69d608bc90fc123194" title="Releases a reference to shared byte data and frees the data if necessary." alt="" coords="1800,655,2067,685"/>
+</map>

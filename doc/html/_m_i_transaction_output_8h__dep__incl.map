@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_transaction_input_8h.html" title="Object/Message/TransactionInput.h" alt="" coords="284,83,559,112"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_8h.html" title="Object/Message/Transaction.h" alt="" coords="131,160,376,189"/>
+<area shape="rect" id="node18" href="$_m_i_transaction_output_8c.html" title="Object/Message/TransactionOutput.c" alt="" coords="583,83,865,112"/>
+<area shape="rect" id="node12" href="$_m_i_transaction_8c.html" title="Object/Message/Transaction.c" alt="" coords="291,237,536,267"/>
+<area shape="rect" id="node15" href="$_m_i_transaction_input_8c.html" title="Object/Message/TransactionInput.c" alt="" coords="451,160,725,189"/>
+<area shape="rect" id="node7" href="$_m_i_block_8h.html" title="Object/Message/Block.h" alt="" coords="5,237,216,267"/>
+<area shape="rect" id="node9" href="$_m_i_block_8c.html" title="Object/Message/Block.c" alt="" coords="76,315,287,344"/>
+</map>

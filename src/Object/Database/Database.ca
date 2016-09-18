@@ -1,0 +1,219 @@
+/*
+ *  Database.c
+ *
+ *  Created on: 22/11/2012.
+ *  Created by: Prajowal Manandhar
+ *  Modified by:
+ *  Copyright (c) 2012 Bitcoin Project Team
+  */
+
+#include<string.h>
+#include"Database.h"
+/*
+int main(int argc, char** args)
+{
+	dbConnectionOpen();
+	dbCreateBaseTables();
+	dbInsertUserWalletInfo("PM","120","ABC123","ABC1234","ABC12342");
+	dbInsertUserWalletInfo("PJ","120","ABC0123","ABC01234","ABC012342");
+	dbInsertTransInfo("111","234xx123","50", "", "PM","PJ");
+	dbTransactionWalletUpdate("PM","5","-10");
+	dbConnectionClose();
+    return 0;
+}
+*/
+void dbCreateBaseTables()
+{
+
+	char createTable[500] = "Create table if not exists wallet(userId varchar(25) PRIMARY KEY, balanceAmount double, lastTransactionId nchar(20), userPublicKey nchar(25), userPrivateKey nchar(25));";
+	int retVal1 = sqlite3_exec(handle,createTable,0,0,0);
+	char createTable1[500] = "Create table if not exists userDetails( userId varchar(25) PRIMARY KEY, securityQuestionType varchar(200),securityAnswer varchar(200),emailAddress varchar(50));";
+	sqlite3_exec(handle,createTable1,0,0,0);
+	char createTable2[500] = "Create table if not exists transTbl(transId bigint, transHash nvarchar(100), transAmt double, transTimeStamp datetime,fromUserAddress varchar(50),toUserAddress varchar(50));";
+	sqlite3_exec(handle,createTable2,0,0,0);
+	printf ("The value of retVal is %d \n",retVal1);
+}
+
+void dbInsertUserWalletInfo(char *userId, char *balanceAmount, char *transactionId, char *UserPublicKey, char *UserPrivateKey)
+{
+	char str[1000]="INSERT INTO wallet VALUES('";
+	strcat(str,userId);
+	strcat(str,"','");
+	strcat(str,balanceAmount);
+	strcat(str,"','");
+	strcat(str,transactionId);
+	strcat(str,"','");
+	strcat(str,UserPublicKey);
+	strcat(str,"','");
+	strcat(str,UserPrivateKey);
+	strcat(str,"');");
+	printf ("The value of Query is :%s \n",str);
+	int retVal = sqlite3_exec(handle,str,0,0,0);
+	printf ("The value of retVal after inserting is %d \n",retVal);
+}
+void dbInsertTransInfo(char *transId,char *transHash,char *transAmt, char *transTimeStamp, char *fromUserId,char *toUserId)
+{
+	char str[1000]="INSERT INTO transTbl VALUES('";
+	strcat(str,transId);
+	strcat(str,"','");
+	strcat(str,transHash);
+	strcat(str,"','");
+	strcat(str,transAmt);
+	strcat(str,"','");
+	strcat(str,transTimeStamp);
+	strcat(str,"','");
+	strcat(str,fromUserId);
+	strcat(str,"','");
+	strcat(str,toUserId);
+	strcat(str,"');");
+	printf ("The value of Query is :%s \n",str);
+	int retVal = sqlite3_exec(handle,str,0,0,0);
+	printf ("The value of retVal after inserting is %d \n",retVal);
+}
+void dbTransactionWalletUpdate(char *userId, char *transactionId, char *values)
+{
+	char str[1000]="UPDATE wallet SET balanceAmount=balanceAmount + (";
+	strcat(str,values);
+	strcat(str,") where userId='");
+	strcat(str,userId);
+	strcat(str,"';");
+	printf ("The value of Query is :%s \n",str);
+	int retVal1 = sqlite3_exec(handle,str,0,0,0);
+	printf ("The value of retVal after updating is %d \n",retVal1);
+
+}
+void dbUpdate(char tableNm, char colNm, char values, char clause, sqlite3 *handle)
+{
+ /*  int retVal;
+
+   int qCnt = 5,qSize = 150,ind = 0;
+   char **queries = malloc(sizeof(char) * qCnt * qSize);
+
+   if (clause)
+  {
+   	queries[ind++] = "update "+ tableNm +" set "+ colNm +" = '"+ values +"'";
+
+    } else {
+   	queries[ind++] = "update "& tableNm &" set "& colNm &" = '"& values &"' where " & clause;
+
+   }
+   retVal = sqlite3_exec(handle,queries[ind-1],0,0,0);
+   */
+}
+
+void dbConnectionOpen()
+{
+	int retVal = sqlite3_open("bitcoinTest.sqlite",&handle);
+	printf ("The value of retVal during Connection is %d \n",retVal);
+    if(retVal)
+    {
+        printf("Database connection failed\n");
+
+    } else {
+    	printf("Connection successful\n");
+
+    }
+}
+
+
+
+void dbConnectionClose()
+{
+    if(sqlite3_close(handle))
+    {
+    	printf("Connection Not Closed");
+    } else {
+    	printf("Connection Closed\n");
+    }
+}
+
+
+/*
+#include<stdio.h>
+#include<sqlite3.h>
+#include<stdlib.h>
+
+int main(int argc, char** args)
+{
+
+    int retval;
+
+
+    int q_cnt = 5,q_size = 150,ind = 0;
+    char **queries = malloc(sizeof(char) * q_cnt * q_size);
+
+
+    sqlite3_stmt *stmt;
+
+
+    sqlite3 *handle;
+
+
+    retval = sqlite3_open("bitcoin.sql",&handle);
+
+    if(retval)
+    {
+        printf("Database connection failed\n");
+        return -1;
+    }
+    printf("Connection successful\n");
+    printf ("The value of retVal during successful connection is %d \n",retval);
+
+    char create_table[100] = "CREATE TABLE IF NOT EXISTS block1 (blockId INTEGER PRIMARY KEY,previousBlockHash TEXT NOT NULL)";
+
+
+    retval = sqlite3_exec(handle,create_table,0,0,0);
+    printf ("The value of retVal during creating table is %d \n",retval);
+
+
+ queries[ind++] = "INSERT INTO block1 VALUES(5,'ABC12342')";
+ retval = sqlite3_exec(handle,queries[ind-1],0,0,0);
+ printf ("The value of retVal during inserting into table is %d \n",retval);
+ queries[ind++] = "INSERT INTO block1 VALUES(6,'Pml0986490617095')";
+ retval = sqlite3_exec(handle,queries[ind-1],0,0,0);
+
+
+    queries[ind++] = "SELECT * from block1";
+    retval = sqlite3_prepare_v2(handle,queries[ind-1],-1,&stmt,0);
+    if(retval)
+    {
+        printf("Selecting data from DB Failed\n");
+        return -1;
+    }
+
+
+    int cols = sqlite3_column_count(stmt);
+
+    while(1)
+    {
+
+        retval = sqlite3_step(stmt);
+
+        if(retval == SQLITE_ROW)
+        {
+
+        	int col;
+
+
+            for(col=0 ; col<cols;col++)
+            {
+                const char *val = (const char*)sqlite3_column_text(stmt,col);
+                printf("%s = %s\t",sqlite3_column_name(stmt,col),val);
+            }
+            printf("\n");
+        }  else if(retval == SQLITE_DONE) {
+
+            printf("All rows fetched\n");
+            break;
+        } else {
+
+            printf("Some error encountered\n");
+            return -1;
+        }
+    }
+
+    sqlite3_close(handle);
+    return 0;
+}
+
+*/

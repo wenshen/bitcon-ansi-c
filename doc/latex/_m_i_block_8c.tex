@@ -1,0 +1,663 @@
+\hypertarget{_m_i_block_8c}{
+\section{Object/Message/Block.c File Reference}
+\label{_m_i_block_8c}\index{Object/Message/Block.c@{Object/Message/Block.c}}
+}
+{\ttfamily \#include \char`\"{}Block.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}assert.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../ByteArray.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ctype.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../../Utils/VariableLengthInteger/VarLenInt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Transaction.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../../Utils/Cryptography/Crypt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Message.h\char`\"{}}\par
+Include dependency graph for Block.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_block}{Block} $\ast$ \hyperlink{_m_i_block_8c_a32a782c3e422cc5b132abaddc4eecf13}{createNewBlock} (void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_block}{Block} object. Set the members after creating the block object. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_block}{Block} $\ast$ \hyperlink{_m_i_block_8c_aaddeaac51a35b3b98ade3340b6d46bac}{createNewBlockFromByteArray} (\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_m_i_block}{Block} object from serialized block data. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_i_block}{Block} $\ast$ \hyperlink{_m_i_block_8c_a9eb01377cf0d49ddc3dd988d221ddd76}{createNewBlockFromOriginalBlock} (void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\item 
+\hyperlink{struct_m_i_block}{Block} $\ast$ \hyperlink{_m_i_block_8c_ad48f71d612a4ef0e4e691549b8e4530e}{getBlock} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_m_i_block}{Block} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_block_8c_aff02edfeca99bc15719c64dbc47eb7ba}{initBlock} (\hyperlink{struct_m_i_block}{Block} $\ast$self, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initializes a \hyperlink{struct_m_i_block}{Block} object. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_block_8c_adb55432064c1fb591abf43542ed6261e}{initBlockFromByteArray} (\hyperlink{struct_m_i_block}{Block} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initializes a \hyperlink{struct_m_i_block}{Block} object from serialized data. \end{DoxyCompactList}\item 
+int \hyperlink{_m_i_block_8c_ab4caa099f720462b32d9e74406309b1d}{initBlockWithOriginalBlock} (\hyperlink{struct_m_i_block}{Block} $\ast$self, void($\ast$onErrorReceived)(\hyperlink{_m_i_constants_8h_a78789cd8e7333545dd73768531261968}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initializes a \hyperlink{struct_m_i_block}{Block} object with the original block for the bitcoin block chain. This will have serialized data as well as object data. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_block_8c_a89f003068369d45ffd1c8af41cfadf72}{deleteBlock} (void $\ast$selfCopy)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_m_i_block}{Block} object. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_block_8c_a3913a1a3d961d7cc2c479de327337bae}{calculateBlockHash} (\hyperlink{struct_m_i_block}{Block} $\ast$self, uint8\_\-t $\ast$hash)
+\begin{DoxyCompactList}\small\item\em Calculates the hash for a block. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_block_8c_ab3c577ac4b13bc68f0ac3f82159969a6}{calculateBlockLength} (\hyperlink{struct_m_i_block}{Block} $\ast$self, int transactions)
+\begin{DoxyCompactList}\small\item\em Calculates the length needed to serialize the object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_block_8c_a9b85a6f60672aea0471f7b6a7e9930ba}{deserializeBlock} (\hyperlink{struct_m_i_block}{Block} $\ast$self, int transactions)
+\begin{DoxyCompactList}\small\item\em Deserializes a \hyperlink{struct_m_i_block}{Block} so that it can be used as an object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_block_8c_a04d2d2defba76492762c0eb4b7ccd206}{deserializeWithTransactions} (\hyperlink{struct_m_i_block}{Block} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes)
+\item 
+uint32\_\-t \hyperlink{_m_i_block_8c_a292775bd99c32b5b2f51b8d71d10812e}{deserializeWithOnlyHeaders} (\hyperlink{struct_m_i_block}{Block} $\ast$self, uint8\_\-t firstByte, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes)
+\item 
+uint8\_\-t $\ast$ \hyperlink{_m_i_block_8c_ae70cfa84a85cccf1f7a669a04acd82ce}{getBlockHash} (\hyperlink{struct_m_i_block}{Block} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Retrieves or calculates the hash for a block. Hashes taken from this function are cached. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_m_i_block_8c_a3dab3fff46c9b386501414a6b13f5192}{serializeBlock} (\hyperlink{struct_m_i_block}{Block} $\ast$self, int transactions)
+\begin{DoxyCompactList}\small\item\em Serializes a \hyperlink{struct_m_i_block}{Block} to the byte data. \end{DoxyCompactList}\item 
+void \hyperlink{_m_i_block_8c_a3a23a3b87c401a07d3f8b224355d523a}{dealWithSerializationHeader} (\hyperlink{struct_m_i_block}{Block} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes)
+\item 
+uint32\_\-t \hyperlink{_m_i_block_8c_a3fa07e825a149c98d148b215a5d5a78a}{dealWithSerializationTran} (\hyperlink{struct_m_i_block}{Block} $\ast$self, \hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$bytes, uint32\_\-t cursor, int transactions)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_i_block_8c_a3913a1a3d961d7cc2c479de327337bae}{
+\index{Block.c@{Block.c}!calculateBlockHash@{calculateBlockHash}}
+\index{calculateBlockHash@{calculateBlockHash}!Block.c@{Block.c}}
+\subsubsection[{calculateBlockHash}]{\setlength{\rightskip}{0pt plus 5cm}void calculateBlockHash (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{uint8\_\-t $\ast$}]{hash}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a3913a1a3d961d7cc2c479de327337bae}
+
+
+Calculates the hash for a block. 
+
+Calculate the hash for a \hyperlink{struct_m_i_block}{Block}. 
+
+Definition at line 191 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=360pt]{_m_i_block_8c_a3913a1a3d961d7cc2c479de327337bae_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{_m_i_block_8c_a3913a1a3d961d7cc2c479de327337bae_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_ab3c577ac4b13bc68f0ac3f82159969a6}{
+\index{Block.c@{Block.c}!calculateBlockLength@{calculateBlockLength}}
+\index{calculateBlockLength@{calculateBlockLength}!Block.c@{Block.c}}
+\subsubsection[{calculateBlockLength}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t calculateBlockLength (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{int}]{transactions}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_ab3c577ac4b13bc68f0ac3f82159969a6}
+
+
+Calculates the length needed to serialize the object. 
+
+Calculate the length of \hyperlink{struct_m_i_block}{Block} that is needed to serialize the object. 
+
+Definition at line 201 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_ab3c577ac4b13bc68f0ac3f82159969a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a32a782c3e422cc5b132abaddc4eecf13}{
+\index{Block.c@{Block.c}!createNewBlock@{createNewBlock}}
+\index{createNewBlock@{createNewBlock}!Block.c@{Block.c}}
+\subsubsection[{createNewBlock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block}$\ast$ createNewBlock (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a32a782c3e422cc5b132abaddc4eecf13}
+
+
+Creates a new \hyperlink{struct_m_i_block}{Block} object. Set the members after creating the block object. 
+
+Create a new \hyperlink{struct_m_i_block}{Block} by default 
+
+Definition at line 21 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a32a782c3e422cc5b132abaddc4eecf13_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_aaddeaac51a35b3b98ade3340b6d46bac}{
+\index{Block.c@{Block.c}!createNewBlockFromByteArray@{createNewBlockFromByteArray}}
+\index{createNewBlockFromByteArray@{createNewBlockFromByteArray}!Block.c@{Block.c}}
+\subsubsection[{createNewBlockFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block}$\ast$ createNewBlockFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_aaddeaac51a35b3b98ade3340b6d46bac}
+
+
+Creates a new \hyperlink{struct_m_i_block}{Block} object from serialized block data. 
+
+Create a new \hyperlink{struct_m_i_block}{Block} from a given \hyperlink{struct_m_i_byte_array}{ByteArray} data 
+
+Definition at line 41 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_aaddeaac51a35b3b98ade3340b6d46bac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a9eb01377cf0d49ddc3dd988d221ddd76}{
+\index{Block.c@{Block.c}!createNewBlockFromOriginalBlock@{createNewBlockFromOriginalBlock}}
+\index{createNewBlockFromOriginalBlock@{createNewBlockFromOriginalBlock}!Block.c@{Block.c}}
+\subsubsection[{createNewBlockFromOriginalBlock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block}$\ast$ createNewBlockFromOriginalBlock (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a9eb01377cf0d49ddc3dd988d221ddd76}
+Create a new \hyperlink{struct_m_i_block}{Block} from a default \hyperlink{struct_m_i_block}{Block} 
+
+Definition at line 64 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a9eb01377cf0d49ddc3dd988d221ddd76_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a3a23a3b87c401a07d3f8b224355d523a}{
+\index{Block.c@{Block.c}!dealWithSerializationHeader@{dealWithSerializationHeader}}
+\index{dealWithSerializationHeader@{dealWithSerializationHeader}!Block.c@{Block.c}}
+\subsubsection[{dealWithSerializationHeader}]{\setlength{\rightskip}{0pt plus 5cm}void dealWithSerializationHeader (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{bytes}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a3a23a3b87c401a07d3f8b224355d523a}
+Serialize the header in a \hyperlink{struct_m_i_block}{Block} 
+
+Definition at line 401 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a3a23a3b87c401a07d3f8b224355d523a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{_m_i_block_8c_a3a23a3b87c401a07d3f8b224355d523a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a3fa07e825a149c98d148b215a5d5a78a}{
+\index{Block.c@{Block.c}!dealWithSerializationTran@{dealWithSerializationTran}}
+\index{dealWithSerializationTran@{dealWithSerializationTran}!Block.c@{Block.c}}
+\subsubsection[{dealWithSerializationTran}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t dealWithSerializationTran (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{bytes, }
+\item[{uint32\_\-t}]{cursor, }
+\item[{int}]{transactions}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a3fa07e825a149c98d148b215a5d5a78a}
+serialize the transactions in a \hyperlink{struct_m_i_block}{Block} 
+
+Add null byte since there are to be no transactions (header only). 
+
+
+
+Definition at line 416 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a3fa07e825a149c98d148b215a5d5a78a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_m_i_block_8c_a3fa07e825a149c98d148b215a5d5a78a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a89f003068369d45ffd1c8af41cfadf72}{
+\index{Block.c@{Block.c}!deleteBlock@{deleteBlock}}
+\index{deleteBlock@{deleteBlock}!Block.c@{Block.c}}
+\subsubsection[{deleteBlock}]{\setlength{\rightskip}{0pt plus 5cm}void deleteBlock (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{selfCopy}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a89f003068369d45ffd1c8af41cfadf72}
+
+
+Frees a \hyperlink{struct_m_i_block}{Block} object. 
+
+Destroy the \hyperlink{struct_m_i_block}{Block} 
+
+Definition at line 159 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a89f003068369d45ffd1c8af41cfadf72_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=376pt]{_m_i_block_8c_a89f003068369d45ffd1c8af41cfadf72_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a9b85a6f60672aea0471f7b6a7e9930ba}{
+\index{Block.c@{Block.c}!deserializeBlock@{deserializeBlock}}
+\index{deserializeBlock@{deserializeBlock}!Block.c@{Block.c}}
+\subsubsection[{deserializeBlock}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeBlock (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{int}]{transactions}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a9b85a6f60672aea0471f7b6a7e9930ba}
+
+
+Deserializes a \hyperlink{struct_m_i_block}{Block} so that it can be used as an object. 
+
+Deserialize the \hyperlink{struct_m_i_block}{Block} 
+
+Definition at line 220 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a9b85a6f60672aea0471f7b6a7e9930ba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a9b85a6f60672aea0471f7b6a7e9930ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a292775bd99c32b5b2f51b8d71d10812e}{
+\index{Block.c@{Block.c}!deserializeWithOnlyHeaders@{deserializeWithOnlyHeaders}}
+\index{deserializeWithOnlyHeaders@{deserializeWithOnlyHeaders}!Block.c@{Block.c}}
+\subsubsection[{deserializeWithOnlyHeaders}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeWithOnlyHeaders (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{uint8\_\-t}]{firstByte, }
+\item[{{\bf ByteArray} $\ast$}]{bytes}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a292775bd99c32b5b2f51b8d71d10812e}
+@ breif deserialize \hyperlink{struct_m_i_block}{Block} only with headers @ param self The \hyperlink{struct_m_i_block}{Block} object @ param firstByte uint8\_\-t @ param bytes \hyperlink{struct_m_i_byte_array}{ByteArray} object @ The length read on success, o on failure. 
+
+Definition at line 326 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a292775bd99c32b5b2f51b8d71d10812e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a292775bd99c32b5b2f51b8d71d10812e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a04d2d2defba76492762c0eb4b7ccd206}{
+\index{Block.c@{Block.c}!deserializeWithTransactions@{deserializeWithTransactions}}
+\index{deserializeWithTransactions@{deserializeWithTransactions}!Block.c@{Block.c}}
+\subsubsection[{deserializeWithTransactions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeWithTransactions (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{bytes}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a04d2d2defba76492762c0eb4b7ccd206}
+@ breif deserialize \hyperlink{struct_m_i_block}{Block} with transactions @ param self The \hyperlink{struct_m_i_block}{Block} object @ param bytes \hyperlink{struct_m_i_byte_array}{ByteArray} object @ The length read on success, o on failure. 
+
+Definition at line 261 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a04d2d2defba76492762c0eb4b7ccd206_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a04d2d2defba76492762c0eb4b7ccd206_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_ad48f71d612a4ef0e4e691549b8e4530e}{
+\index{Block.c@{Block.c}!getBlock@{getBlock}}
+\index{getBlock@{getBlock}!Block.c@{Block.c}}
+\subsubsection[{getBlock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block}$\ast$ getBlock (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_ad48f71d612a4ef0e4e691549b8e4530e}
+
+
+Gets a \hyperlink{struct_m_i_block}{Block} from another object. Use this to avoid casts. 
+
+Get the \hyperlink{struct_m_i_block}{Block} 
+
+Definition at line 88 of file Block.c.
+
+\hypertarget{_m_i_block_8c_ae70cfa84a85cccf1f7a669a04acd82ce}{
+\index{Block.c@{Block.c}!getBlockHash@{getBlockHash}}
+\index{getBlockHash@{getBlockHash}!Block.c@{Block.c}}
+\subsubsection[{getBlockHash}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ getBlockHash (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_ae70cfa84a85cccf1f7a669a04acd82ce}
+
+
+Retrieves or calculates the hash for a block. Hashes taken from this function are cached. 
+
+Get the hash of the \hyperlink{struct_m_i_block}{Block} 
+
+Definition at line 358 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_ae70cfa84a85cccf1f7a669a04acd82ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_aff02edfeca99bc15719c64dbc47eb7ba}{
+\index{Block.c@{Block.c}!initBlock@{initBlock}}
+\index{initBlock@{initBlock}!Block.c@{Block.c}}
+\subsubsection[{initBlock}]{\setlength{\rightskip}{0pt plus 5cm}int initBlock (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_aff02edfeca99bc15719c64dbc47eb7ba}
+
+
+Initializes a \hyperlink{struct_m_i_block}{Block} object. 
+
+Initializer by default 
+
+Definition at line 97 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{_m_i_block_8c_aff02edfeca99bc15719c64dbc47eb7ba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{_m_i_block_8c_aff02edfeca99bc15719c64dbc47eb7ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_adb55432064c1fb591abf43542ed6261e}{
+\index{Block.c@{Block.c}!initBlockFromByteArray@{initBlockFromByteArray}}
+\index{initBlockFromByteArray@{initBlockFromByteArray}!Block.c@{Block.c}}
+\subsubsection[{initBlockFromByteArray}]{\setlength{\rightskip}{0pt plus 5cm}int initBlockFromByteArray (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_adb55432064c1fb591abf43542ed6261e}
+
+
+Initializes a \hyperlink{struct_m_i_block}{Block} object from serialized data. 
+
+Initialize the \hyperlink{struct_m_i_block}{Block} from \hyperlink{struct_m_i_byte_array}{ByteArray} 
+
+Definition at line 117 of file Block.c.
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_m_i_block_8c_adb55432064c1fb591abf43542ed6261e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_adb55432064c1fb591abf43542ed6261e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_ab4caa099f720462b32d9e74406309b1d}{
+\index{Block.c@{Block.c}!initBlockWithOriginalBlock@{initBlockWithOriginalBlock}}
+\index{initBlockWithOriginalBlock@{initBlockWithOriginalBlock}!Block.c@{Block.c}}
+\subsubsection[{initBlockWithOriginalBlock}]{\setlength{\rightskip}{0pt plus 5cm}int initBlockWithOriginalBlock (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_ab4caa099f720462b32d9e74406309b1d}
+
+
+Initializes a \hyperlink{struct_m_i_block}{Block} object with the original block for the bitcoin block chain. This will have serialized data as well as object data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_block}{Block} object to initialize. \\
+\hline
+{\em data} & Serialized block data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_m_i_block}{Block} object. 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_ab4caa099f720462b32d9e74406309b1d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_ab4caa099f720462b32d9e74406309b1d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m_i_block_8c_a3dab3fff46c9b386501414a6b13f5192}{
+\index{Block.c@{Block.c}!serializeBlock@{serializeBlock}}
+\index{serializeBlock@{serializeBlock}!Block.c@{Block.c}}
+\subsubsection[{serializeBlock}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t serializeBlock (
+\begin{DoxyParamCaption}
+\item[{{\bf Block} $\ast$}]{self, }
+\item[{int}]{transactions}
+\end{DoxyParamCaption}
+)}}
+\label{_m_i_block_8c_a3dab3fff46c9b386501414a6b13f5192}
+
+
+Serializes a \hyperlink{struct_m_i_block}{Block} to the byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_m_i_block}{Block} object \\
+\hline
+{\em transactions} & If true serialize transactions. If false there do not serialize for transactions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 368 of file Block.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_m_i_block_8c_a3dab3fff46c9b386501414a6b13f5192_cgraph}
+\end{center}
+\end{figure}
+
+

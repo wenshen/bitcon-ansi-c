@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_i_r_c_8h" kind="file">
+    <compoundname>IRC.h</compoundname>
+    <includedby refid="_i_r_c_8c" local="yes">src/Object/NetworkProtocol/IRC.c</includedby>
+    <invincdepgraph>
+      <node id="1036">
+        <label>src/Object/NetworkProtocol/IRC.c</label>
+        <link refid="_i_r_c_8c"/>
+      </node>
+      <node id="1035">
+        <label>src/Object/NetworkProtocol/IRC.h</label>
+        <link refid="IRC.h"/>
+        <childnode refid="1036" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_i_r_c_8h_1af0f2173e3b202ddf5756531b4471dcb2" prot="public" static="no">
+        <name>MAX_LINE_LENGTH</name>
+        <initializer>2056</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/IRC.h" line="12" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/IRC.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="_i_r_c_8c_1ac7935c304ea863d79f9e9d59b1ff4bd3" compoundref="_i_r_c_8c" startline="114" endline="145">bootstrap</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/>IRC.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>23/10/2012.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Created<sp/>by:<sp/>Prajowal<sp/>Manandhar</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/>Modified<sp/>by:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IRC_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IRC_H_</highlight></codeline>
+<codeline lineno="12" refid="_i_r_c_8h_1af0f2173e3b202ddf5756531b4471dcb2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX_LINE_LENGTH<sp/>2056</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>IRC_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/IRC.h"/>
+  </compounddef>
+</doxygen>

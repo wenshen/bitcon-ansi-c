@@ -1,0 +1,53 @@
+.TH "ChainDescriptor" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChainDescriptor \- 
+.PP
+Structure for \fBChainDescriptor\fP objects.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ChainDescriptor.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBMessage\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBnumOfHash\fP"
+.br
+.ti -1c
+.RI "\fBByteArray\fP ** \fBhashes\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for \fBChainDescriptor\fP objects. 
+
+\fBSee also:\fP
+.RS 4
+\fBChainDescriptor.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file ChainDescriptor.h.
+.SH "Field Documentation"
+.PP 
+.SS "\fBMessage\fP \fBbase\fP"\fBMessage\fP base structure 
+.PP
+Definition at line 23 of file ChainDescriptor.h.
+.SS "\fBByteArray\fP** \fBhashes\fP"Hashes used to describe the block chain. This should contain hashes in the blockchain but not all of them. The maximum allowed is 500. The usual behaviour is to have the 10 last block hashes and then each hash below those going down to the genesis block has a gap that doubles (See https://en.bitcoin.it/wiki/Protocol_specification#getblocks ). The newest block hashes should come first. This should be NULL if empty. The \fBGetBlocks\fP object will release each \fBByteArray\fP and free the array when the object is freed. 
+.PP
+Definition at line 25 of file ChainDescriptor.h.
+.SS "uint16_t \fBnumOfHash\fP"Number of block hashes to describe the block chain. Up to 500. 
+.PP
+Definition at line 24 of file ChainDescriptor.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

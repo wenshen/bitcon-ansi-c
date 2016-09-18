@@ -1,0 +1,105 @@
+.TH "src/Utils/Cryptography/MICrypt.h" 3 "Mon Oct 15 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Utils/Cryptography/MICrypt.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint.h>\fP
+.br
+\fC#include <stdbool.h>\fP
+.br
+\fC#include '../../MIConstants.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMISha256\fP (uint8_t *data, uint16_t length, uint8_t *output)"
+.br
+.RI "\fISHA-256 cryptographic hash function. \fP"
+.ti -1c
+.RI "void \fBMIRipemd160\fP (uint8_t *data, uint16_t length, uint8_t *output)"
+.br
+.RI "\fIRIPEMD-160 cryptographic hash function. \fP"
+.ti -1c
+.RI "void \fBMISha160\fP (uint8_t *data, uint16_t length, uint8_t *output)"
+.br
+.RI "\fISHA-1 cryptographic hash function. \fP"
+.ti -1c
+.RI "int \fBMIECDSAVerify\fP (uint8_t *signature, uint8_t signatureLen, uint8_t *hash, const uint8_t *pubKey, uint8_t keyLen)"
+.br
+.RI "\fIVerifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int MIECDSAVerify (uint8_t *signature, uint8_tsignatureLen, uint8_t *hash, const uint8_t *pubKey, uint8_tkeyLen)"
+.PP
+Verifies an ECDSA signature. This function must stick to the cryptography requirements in OpenSSL version 1.0.0 or any other compatible version. There may be compatibility problems when using libraries or code other than OpenSSL since OpenSSL does not adhere fully to the SEC1 ECDSA standards. This could cause security problems in your code. If in doubt, stick to OpenSSL. \fBParameters:\fP
+.RS 4
+\fIsignature\fP BER encoded signature bytes. 
+.br
+\fIsignatureLen\fP The length of the signature bytes. 
+.br
+\fIhash\fP A 32 byte hash for checking the signature against. 
+.br
+\fIpubKey\fP Public key bytes to check this signature with. 
+.br
+\fIkeyLen\fP The length of the public key bytes. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the signature is valid and false if invalid. 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file MICrypt.c.
+.SS "void MIRipemd160 (uint8_t *data, uint16_tlength, uint8_t *output)"
+.PP
+RIPEMD-160 cryptographic hash function. \fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to the byte data to hash. 
+.br
+\fIlength\fP The length of the data to hash. 
+.br
+\fIoutput\fP A pointer to hold a 20-byte hash. 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file MICrypt.c.
+.SS "void MISha160 (uint8_t *data, uint16_tlength, uint8_t *output)"
+.PP
+SHA-1 cryptographic hash function. \fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to the byte data to hash. 
+.br
+\fIlength\fP The length of the data to hash. 
+.br
+\fIoutput\fP A pointer to hold a 10-byte hash. 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file MICrypt.c.
+.SS "void MISha256 (uint8_t *data, uint16_tlength, uint8_t *output)"
+.PP
+SHA-256 cryptographic hash function. \fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to the byte data to hash. 
+.br
+\fIlength\fP The length of the data to hash. 
+.br
+\fIoutput\fP A pointer to hold a 32-byte hash. 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file MICrypt.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_network_communicator_8c.html#a46f71a041685b462e8c1b738e7ed6915" title="NetworkCommunicatorOnCanReceive" alt="" coords="277,349,523,379"/>
+<area shape="rect" id="node13" href="$_network_communicator_8c.html#a1e7aeba124b81e6ab5e0661c521a8e78" title="NetworkCommunicatorOnMessageReceived" alt="" coords="1895,152,2175,181"/>
+<area shape="rect" id="node16" href="$_network_communicator_8c.html#a3c2373b9fdccdb79d21f4bdb0421db2a" title="NetworkCommunicatorOnHeaderRecieved" alt="" coords="2225,152,2495,181"/>
+<area shape="rect" id="node19" href="$_network_communicator_8c.html#afb4864bcc2ab71e022d0c89c069163e1" title="NetworkCommunicatorOnCanSend" alt="" coords="287,283,513,312"/>
+<area shape="rect" id="node24" href="$_network_communicator_8c.html#a4aa23a88c96f0f3c30f02b711722fa1f" title="NetworkCommunicatorOnTimeOut" alt="" coords="575,257,796,287"/>
+<area shape="rect" id="node28" href="$_network_communicator_8c.html#a775489ea672f9fc6b191d84a3a937f03" title="NetworkCommunicatorProcessMessageAutoHandshake" alt="" coords="1103,49,1452,79"/>
+<area shape="rect" id="node31" href="$_network_communicator_8c.html#a2375f2b638bfd9e11f5366cd54aeef12" title="NetworkCommunicatorStop" alt="" coords="309,179,491,208"/>
+<area shape="rect" id="node5" href="$_network_communicator_8c.html#a01b2fbdac7b86ad9f640ab3f02d0845b" title="NetworkCommunicatorDidConnect" alt="" coords="573,311,797,340"/>
+<area shape="rect" id="node7" href="$_network_communicator_8c.html#af58f7467f49c22bab01296912d93c41c" title="NetworkCommunicatorConnect" alt="" coords="848,297,1053,327"/>
+<area shape="rect" id="node9" href="$_network_communicator_8c.html#a1885c0cdbcfda108d13cf52a71bad42d" title="NetworkCommunicatorTryConnections" alt="" coords="1153,275,1401,304"/>
+<area shape="rect" id="node11" href="$_network_communicator_8c.html#ac2d57ca1c8882c561500536901bd2ddd" title="NetworkCommunicatorProcessMessageAutoDiscovery" alt="" coords="1503,228,1844,257"/>
+<area shape="rect" id="node26" href="$_network_communicator_8c.html#ae9c8bf821a71091e9d3488619e30396e" title="NetworkCommunicatorStart" alt="" coords="859,231,1043,260"/>
+<area shape="rect" id="node33" href="$_network_communicator_8c.html#a6d6b433343dd2c489fbc6167a1174bdc" title="NetworkCommunicatorOnLoopError" alt="" coords="571,204,800,233"/>
+</map>

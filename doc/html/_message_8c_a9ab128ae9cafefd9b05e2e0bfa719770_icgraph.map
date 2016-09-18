@@ -1,0 +1,51 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_block_8h.html#a1dd38c9d32f6f6984930141d5ce01fba" title="Calculate the hash for a Block." alt="" coords="204,5,343,35"/>
+<area shape="rect" id="node7" href="$_transaction_8h.html#ae53ed930910256b4620da39ebdcccdb5" title="calculateTransactionHash" alt="" coords="187,59,360,88"/>
+<area shape="rect" id="node11" href="$_block_8h.html#aeb72d715416153dbd72e8f876fb19981" title="dealWithSerializationTran" alt="" coords="656,280,827,309"/>
+<area shape="rect" id="node13" href="$_block_8h.html#ab0d1c25a8612a3644626e5030ffbe456" title="Serializes a Block to the byte data." alt="" coords="891,280,992,309"/>
+<area shape="rect" id="node15" href="$_block_headers_8h.html#a06fe7338aa2dc8d104e7f8148674b202" title="Serializes a BlockHeaders to the byte data." alt="" coords="1073,325,1225,355"/>
+<area shape="rect" id="node17" href="$_block_8h.html#a9dcdbbf01ad57512119aa46013c7f92e" title="Deserialize the Block." alt="" coords="883,1953,1000,1983"/>
+<area shape="rect" id="node19" href="$_block_headers_8h.html#ace10b6ab479717f0540e5a5528ca3952" title="Deserializes a BlockHeaders so that it can be used as an object." alt="" coords="1067,1144,1232,1173"/>
+<area shape="rect" id="node21" href="$_block_8h.html#af1b6c7c59cf5fd4c7d9f94a6179dcb43" title="initBlockWithGenesisBlockInfo" alt="" coords="1048,2135,1251,2164"/>
+<area shape="rect" id="node24" href="$_chain_descriptor_8h.html#a6d7efa38f552f57c8f66ef6b7fdf103a" title="Deserializes a ChainDescriptor so that it can be used as an object." alt="" coords="184,573,363,603"/>
+<area shape="rect" id="node26" href="$_get_blocks_8h.html#ac6078bf7e22d0d785670ace084ac8ab6" title="Deserializes a GetBlocks so that it can be used as an object." alt="" coords="452,548,596,577"/>
+<area shape="rect" id="node29" href="$_inventory_8c.html#a62e028868025b8a7e77dc71490b135ea" title="deserializeInventory" alt="" coords="455,705,593,735"/>
+<area shape="rect" id="node31" href="$_inventory_vector_8h.html#afe53d7aabd20f5c5748ea6058dfe21df" title="Deserialises a InventoryVector so that it can be used as an object." alt="" coords="185,680,361,709"/>
+<area shape="rect" id="node34" href="$_ping_pong_message_8h.html#a198cd940373651273997143eab0bcde3" title="Deserialises a PingPongMessage so that it can be used as an object." alt="" coords="177,627,369,656"/>
+<area shape="rect" id="node36" href="$_transaction_8h.html#ada5d9c85c4dc1ff7384ee49d6fd97ff8" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="448,836,600,865"/>
+<area shape="rect" id="node38" href="$_block_8h.html#a219df1f8f05a691f09e283731eb86129" title="Deserialize With Transaction." alt="" coords="648,836,835,865"/>
+<area shape="rect" id="node41" href="$_transaction_input_8h.html#a8eb115030448e943f94d8ecff0fa21a9" title="deserializes a TransactionInput so that it can be used as an object" alt="" coords="183,888,364,917"/>
+<area shape="rect" id="node44" href="$_transaction_output_8h.html#a484844cadde17ce53f58dcf0fceb52b2" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="179,784,368,813"/>
+<area shape="rect" id="node47" href="$_block_8h.html#a2590af8eb87d088e41c0dfff66d41454" title="Deserialize With Transaction." alt="" coords="648,2005,835,2035"/>
+<area shape="rect" id="node51" href="$_transaction_8h.html#afe08b91a59f175e55d9ca049e46749c2" title="Gets the hash for signing or signature checking for a transaction input. The transaction input needs ..." alt="" coords="148,941,399,971"/>
+<area shape="rect" id="node53" href="$_block_8h.html#a71244768c12d6663e29898247e2b60bf" title="Initialize the Block from." alt="" coords="237,995,309,1024"/>
+<area shape="rect" id="node55" href="$_block_8h.html#a8b2caeb517b4b3e13e03abb7852f3742" title="Initialize the Block from ByteArray." alt="" coords="193,1048,353,1077"/>
+<area shape="rect" id="node57" href="$_block_headers_8h.html#ad4e2078ad35828125e6849a43dbcb3db" title="Initializes a BlockHeaders object." alt="" coords="213,1101,333,1131"/>
+<area shape="rect" id="node59" href="$_block_headers_8h.html#aefd88cac89497c7f5b47af74b707cea6" title="Initializes a BlockHeaders object from serialized data." alt="" coords="184,1155,363,1184"/>
+<area shape="rect" id="node62" href="$_chain_descriptor_8h.html#a257956d77d2cf4b5df5b59a448380009" title="Initializes a ChainDescriptor object." alt="" coords="207,1208,340,1237"/>
+<area shape="rect" id="node64" href="$_chain_descriptor_8h.html#a245a673315a06db0bd85529176152e6f" title="Initializes a ChainDescriptor object from serialized data." alt="" coords="179,1261,368,1291"/>
+<area shape="rect" id="node66" href="$_get_blocks_8h.html#a3168d5f3c5cd2f5c719979fc4d207913" title="Initialises a GetBlocks object." alt="" coords="224,1315,323,1344"/>
+<area shape="rect" id="node68" href="$_get_blocks_8h.html#a26311351d830c1aafb5c7a8e760841de" title="Initialises a GetBlocks object from serialised data." alt="" coords="195,1368,352,1397"/>
+<area shape="rect" id="node70" href="$_inventory_8h.html#a1337956e58cd2da10ad5e73eb3287b45" title="Initialises an Inventory object." alt="" coords="212,1421,335,1451"/>
+<area shape="rect" id="node72" href="$_inventory_8h.html#ae81b1611b0771bb43f45b3c331119db0" title="Initialises an Inventory object from serialised data." alt="" coords="183,1475,364,1504"/>
+<area shape="rect" id="node74" href="$_inventory_vector_8h.html#a69423d6567cd6d9d25755335937f2f7b" title="Initialises a InventoryVector object." alt="" coords="193,1528,353,1557"/>
+<area shape="rect" id="node76" href="$_inventory_vector_8h.html#ac0513bfdc2977b9719b2f0db7afde606" title="Initialises a InventoryVector object from serialised data." alt="" coords="164,1581,383,1611"/>
+<area shape="rect" id="node78" href="$_ping_pong_message_8h.html#a7643cf5597d751e59d594aab5e4450af" title="Initialises a PingPongMessage object." alt="" coords="184,1635,363,1664"/>
+<area shape="rect" id="node80" href="$_ping_pong_message_8h.html#aa8297d681b90e5975b9d7e88171d06a7" title="Initialises a PingPongMessage object from serialised data." alt="" coords="156,1688,391,1717"/>
+<area shape="rect" id="node82" href="$_transaction_input_8h.html#a3ad0ecb9660744784184da2b4fdea805" title="Initializes a TransactionInput object." alt="" coords="191,1741,356,1771"/>
+<area shape="rect" id="node84" href="$_transaction_input_8h.html#a5dd458f9ef23c28acbc6e018810f578a" title="Initializes a new TransactionInput object from the ByteArray." alt="" coords="161,1795,385,1824"/>
+<area shape="rect" id="node86" href="$_transaction_output_8h.html#a5bf0093a9ad4ad55a29ef95ce6350755" title="Initialises a TransactionOutput object." alt="" coords="185,1848,361,1877"/>
+<area shape="rect" id="node88" href="$_transaction_output_8h.html#a356376bf3ae2bc9f0be2d1daec98fe70" title="Initialises a TransactionOutput object." alt="" coords="156,1901,391,1931"/>
+<area shape="rect" id="node90" href="$_inventory_8h.html#a67383f9aba234b390c4b5be54019c3f4" title="Serialises a Inventory to the byte data." alt="" coords="463,2081,585,2111"/>
+<area shape="rect" id="node94" href="$_chain_descriptor_8h.html#a4873951a3acf7e90e799c64a9d09455d" title="Serializes a ChainDescriptor to the byte data." alt="" coords="192,2213,355,2243"/>
+<area shape="rect" id="node96" href="$_get_blocks_8h.html#ae09f58674ed59b6d5f320cc588afdd14" title="Serializes a GetBlocks to the byte data." alt="" coords="459,2239,589,2268"/>
+<area shape="rect" id="node99" href="$_inventory_vector_8h.html#a340bff34fb8ee996b53e0a61ebdd3e8a" title="Serialises a InventoryVector to the byte data." alt="" coords="192,2107,355,2136"/>
+<area shape="rect" id="node102" href="$_ping_pong_message_8h.html#ab1c318a0853f3a7e93e38d47d9dabd30" title="Serialises a PingPongMessage to the byte data." alt="" coords="184,2160,363,2189"/>
+<area shape="rect" id="node104" href="$_transaction_8h.html#a61a0f76473a17de64dcecc04a3ce3b5f" title="Serialises a Transaction to byte data." alt="" coords="455,241,593,271"/>
+<area shape="rect" id="node107" href="$_transaction_input_8h.html#a9b0f805aed38d097be8bec7dd8701e50" title="Serializes a TransactionInput to byte data." alt="" coords="191,163,356,192"/>
+<area shape="rect" id="node110" href="$_transaction_output_8h.html#ae0ec9ca1d590685385987b26fbded266" title="Serialises a TransactionOutput to byte data." alt="" coords="185,216,361,245"/>
+<area shape="rect" id="node113" href="$_transaction_8h.html#a8b4afb98a5293ab312e547381ea0cf31" title="Sets up the fields of a Transaction object." alt="" coords="197,2368,349,2397"/>
+<area shape="rect" id="node115" href="$_transaction_8h.html#ab6777f2e913778848e00c770ef6f4e8f" title="Sets up the fields of a Transaction object using a byteArray object that was passed in..." alt="" coords="151,2421,396,2451"/>
+<area shape="rect" id="node5" href="$_block_8h.html#a0d0586d7b3b00de5ec07a8ef179a658c" title="Get the hash of the Block." alt="" coords="472,5,576,35"/>
+<area shape="rect" id="node9" href="$_transaction_8h.html#af8e635c7261eba22e033c06b72034b1b" title="Retrieves or calculates the hash for a transaction. Hashes taken from this function are cached..." alt="" coords="455,59,593,88"/>
+</map>

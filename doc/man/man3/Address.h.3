@@ -1,0 +1,171 @@
+.TH "src/Object/VersionChecksumBytes/Address/Address.h" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Object/VersionChecksumBytes/Address/Address.h \- 
+.PP
+Based upon an ECDSA public key and a network version code. Used for receiving bitcoins. Inherits \fBVersionChecksumBytes\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '../VersionChecksumBytes.h'\fP
+.br
+\fC#include <stdbool.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBAddress\fP"
+.br
+.RI "\fIStructure for \fBAddress\fP objects. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddress\fP * \fBNewAddressFromRIPEMD160Hash\fP (uint8_t *hash, uint8_t networkCode, bool cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBAddress\fP object from a RIPEMD-160 hash. \fP"
+.ti -1c
+.RI "\fBAddress\fP * \fBNewAddressFromString\fP (\fBByteArray\fP *string, bool cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBAddress\fP object from a base-58 encoded string. \fP"
+.ti -1c
+.RI "\fBAddress\fP * \fBGetAddress\fP (void *self)"
+.br
+.RI "\fIGets a \fBAddress\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "bool \fBInitAddressFromRIPEMD160Hash\fP (\fBAddress\fP *self, uint8_t networkCode, uint8_t *hash, bool cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBAddress\fP object from a RIPEMD-160 hash. \fP"
+.ti -1c
+.RI "bool \fBInitAddressFromString\fP (\fBAddress\fP *self, \fBByteArray\fP *string, bool cacheString, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitialises a \fBAddress\fP object from a base-58 encoded string. \fP"
+.ti -1c
+.RI "void \fBFreeAddress\fP (void *self)"
+.br
+.RI "\fIFrees a \fBAddress\fP object. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Based upon an ECDSA public key and a network version code. Used for receiving bitcoins. Inherits \fBVersionChecksumBytes\fP. 
+
+Here is a diagram of how a bitcoin address is structured created by Alan Reiner, developer of Bitcoin Armory (http://bitcoinarmory.com/):  
+.PP
+Definition in file \fBAddress.h\fP.
+.SH "Function Documentation"
+.PP 
+.SS "void FreeAddress (void *self)"
+.PP
+Frees a \fBAddress\fP object. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBAddress\fP object to free. 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file Address.c.
+.SS "\fBAddress\fP* GetAddress (void *self)"
+.PP
+Gets a \fBAddress\fP from another object. Use this to avoid casts. \fBParameters:\fP
+.RS 4
+\fIself\fP The object to obtain the \fBAddress\fP from. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBAddress\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file Address.c.
+.SS "bool InitAddressFromRIPEMD160Hash (\fBAddress\fP *self, uint8_tnetworkCode, uint8_t *hash, boolcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBAddress\fP object from a RIPEMD-160 hash. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBAddress\fP object to initialise. 
+.br
+\fInetwork\fP A NetworkParameters object with the network information. 
+.br
+\fIhash\fP The RIPEMD-160 hash. Must be 20 bytes. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP Events for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file Address.c.
+.SS "bool InitAddressFromString (\fBAddress\fP *self, \fBByteArray\fP *string, boolcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initialises a \fBAddress\fP object from a base-58 encoded string. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBAddress\fP object to initialise. 
+.br
+\fIstring\fP The base-58 encoded String with a termination character. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP Events for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true on success, false on failure. 
+.RE
+.PP
+
+.SS "\fBAddress\fP* NewAddressFromRIPEMD160Hash (uint8_t *hash, uint8_tnetworkCode, boolcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBAddress\fP object from a RIPEMD-160 hash. \fBParameters:\fP
+.RS 4
+\fInetwork\fP A NetworkParameters object with the network information. 
+.br
+\fIhash\fP The RIPEMD-160 hash. Must be 20 bytes. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP Callback for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBAddress\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file Address.c.
+.SS "\fBAddress\fP* NewAddressFromString (\fBByteArray\fP *string, boolcacheString, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBAddress\fP object from a base-58 encoded string. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBAddress\fP object to initialise. 
+.br
+\fIstring\fP The base-58 encoded String with a termination character. 
+.br
+\fIcacheString\fP If true, the bitcoin string for this object will be cached in memory. 
+.br
+\fIonErrorReceived\fP Callback for errors. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBAddress\fP object. Returns NULL on failure such as an invalid bitcoin address. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

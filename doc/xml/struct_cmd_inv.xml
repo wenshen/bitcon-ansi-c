@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_cmd_inv" kind="struct" prot="public">
+    <compoundname>CmdInv</compoundname>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cmd_inv_1ad44b615021ed3ccb734fcaf583ef4a03" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="114" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_inv_1a30660ee1bca7189182e64c5a192651af" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hash[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="116" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_inv_1a16ff2d8e15ade4948398b0aeb80124a8" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="121" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cmd_inv_1ab98754c1df21fac25844fc908ecefe29" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_inventory_vector" kindref="compound">InventoryVector</ref> *</type>
+        <definition>struct InventoryVector* InventoryVectors</definition>
+        <argsstring></argsstring>
+        <name>InventoryVectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" line="122" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Protocol.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="287">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="284">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="285" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="286" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="285">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="283">
+        <label>InventoryVector</label>
+        <link refid="struct_inventory_vector"/>
+        <childnode refid="284" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="286" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="286">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="287" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="285" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="282">
+        <label>CmdInv</label>
+        <link refid="struct_cmd_inv"/>
+        <childnode refid="283" relation="usage">
+          <edgelabel>InventoryVectors</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="112" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="112" bodyend="117"/>
+    <listofallmembers>
+      <member refid="struct_cmd_inv_1a16ff2d8e15ade4948398b0aeb80124a8" prot="public" virt="non-virtual"><scope>CmdInv</scope><name>count</name></member>
+      <member refid="struct_cmd_inv_1a30660ee1bca7189182e64c5a192651af" prot="public" virt="non-virtual"><scope>CmdInv</scope><name>hash</name></member>
+      <member refid="struct_cmd_inv_1ab98754c1df21fac25844fc908ecefe29" prot="public" virt="non-virtual"><scope>CmdInv</scope><name>InventoryVectors</name></member>
+      <member refid="struct_cmd_inv_1ad44b615021ed3ccb734fcaf583ef4a03" prot="public" virt="non-virtual"><scope>CmdInv</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

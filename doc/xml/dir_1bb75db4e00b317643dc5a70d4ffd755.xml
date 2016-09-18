@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_1bb75db4e00b317643dc5a70d4ffd755" kind="dir">
+    <compoundname>src/MerkleNode/</compoundname>
+    <innerfile refid="_merkle_node_8c">MerkleNode.c</innerfile>
+    <innerfile refid="_merkle_node_8h">MerkleNode.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/"/>
+  </compounddef>
+</doxygen>

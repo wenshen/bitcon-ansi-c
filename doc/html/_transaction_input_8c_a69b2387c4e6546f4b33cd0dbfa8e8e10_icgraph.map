@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_transaction_input_8h.html#afdc626c464b97c0e972275510cefa83e" title="Creates a new TransactionInput object with no inputs or outputs." alt="" coords="245,5,427,35"/>
+<area shape="rect" id="node5" href="$_transaction_input_8h.html#a9ad2a4f59818111f157b1386237b8f0c" title="Creates a new TransactionInput from byteArray." alt="" coords="216,59,456,88"/>
+<area shape="rect" id="node7" href="$_transaction_8h.html#ada5d9c85c4dc1ff7384ee49d6fd97ff8" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="504,59,656,88"/>
+<area shape="rect" id="node9" href="$_block_8h.html#a219df1f8f05a691f09e283731eb86129" title="Deserialize With Transaction." alt="" coords="704,59,891,88"/>
+<area shape="rect" id="node11" href="$_block_8h.html#a9dcdbbf01ad57512119aa46013c7f92e" title="Deserialize the Block." alt="" coords="939,59,1056,88"/>
+<area shape="rect" id="node13" href="$_block_headers_8h.html#ace10b6ab479717f0540e5a5528ca3952" title="Deserializes a BlockHeaders so that it can be used as an object." alt="" coords="1123,32,1288,61"/>
+<area shape="rect" id="node15" href="$_block_8h.html#af1b6c7c59cf5fd4c7d9f94a6179dcb43" title="initBlockWithGenesisBlockInfo" alt="" coords="1104,85,1307,115"/>
+<area shape="rect" id="node17" href="$_block_8c.html#a9f12323a1c19b0686bc1b64868a97dc9" title="Create a new Block from a default Block." alt="" coords="1356,85,1580,115"/>
+</map>

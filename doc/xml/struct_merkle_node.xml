@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_merkle_node" kind="struct" prot="public">
+    <compoundname>MerkleNode</compoundname>
+    <includes refid="_merkle_node_8h" local="no">MerkleNode.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_merkle_node_1a7ff9da008bf055da1f1ba994c562057d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hash[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash for this node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="_merkle_node_8h_1a211a27939356415dc6fb21842966706e" compoundref="_merkle_node_8c" startline="15" endline="73">BuildMerkleTree</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_merkle_node_1a3292e1ae6fbbb8666d2007bee45b69a1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_merkle_node" kindref="compound">MerkleNode</ref> *</type>
+        <definition>MerkleNode* left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The left child. NULL if leaf. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" line="27" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="_merkle_node_8h_1a211a27939356415dc6fb21842966706e" compoundref="_merkle_node_8c" startline="15" endline="73">BuildMerkleTree</referencedby>
+        <referencedby refid="_merkle_node_8h_1adafaa29e779569ee1b9bb32a334ed6de" compoundref="_merkle_node_8c" startline="75" endline="83">FreeMerkleTree</referencedby>
+        <referencedby refid="_merkle_node_8h_1a9624499a6e6439c15f81653328e5d05a" compoundref="_merkle_node_8c" startline="85" endline="93">MerkleTreeGetLevel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_merkle_node_1a131f273991e1615aab021dd945479c62" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_merkle_node" kindref="compound">MerkleNode</ref> *</type>
+        <definition>MerkleNode* right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The right child. NULL if leaf. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="_merkle_node_8h_1a211a27939356415dc6fb21842966706e" compoundref="_merkle_node_8c" startline="15" endline="73">BuildMerkleTree</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_merkle_node_8h" kindref="compound">MerkleNode.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="335">
+        <label>MerkleNode</label>
+        <link refid="struct_merkle_node"/>
+        <childnode refid="335" relation="usage">
+          <edgelabel>right</edgelabel>
+          <edgelabel>left</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" line="25" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/MerkleNode/MerkleNode.h" bodystart="25" bodyend="29"/>
+    <listofallmembers>
+      <member refid="struct_merkle_node_1a7ff9da008bf055da1f1ba994c562057d" prot="public" virt="non-virtual"><scope>MerkleNode</scope><name>hash</name></member>
+      <member refid="struct_merkle_node_1a3292e1ae6fbbb8666d2007bee45b69a1" prot="public" virt="non-virtual"><scope>MerkleNode</scope><name>left</name></member>
+      <member refid="struct_merkle_node_1a131f273991e1615aab021dd945479c62" prot="public" virt="non-virtual"><scope>MerkleNode</scope><name>right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="343,5,420,35"/>
+<area shape="rect" id="node5" href="$_object_8c.html#a5f22211b2f99a33c1b4b7ad544ce108a" title="Increase the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="295,59,468,88"/>
+<area shape="rect" id="node7" href="$_object_8c.html#a6cd8f4ac93973731c720913612be0b15" title="resets the reference counts to an object to one" alt="" coords="295,112,468,141"/>
+</map>

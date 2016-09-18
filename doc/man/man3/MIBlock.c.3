@@ -1,0 +1,198 @@
+.TH "Object/Message/Block.c" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object/Message/Block.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Block.h'\fP
+.br
+\fC#include 'assert.h'\fP
+.br
+\fC#include '../ByteArray.h'\fP
+.br
+\fC#include 'ctype.h'\fP
+.br
+\fC#include '../../Utils/VariableLengthInteger/VarLenInt.h'\fP
+.br
+\fC#include 'Transaction.h'\fP
+.br
+\fC#include '../../Utils/Cryptography/Crypt.h'\fP
+.br
+\fC#include 'Message.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBlock\fP * \fBcreateNewBlock\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBBlock\fP object. Set the members after creating the block object. \fP"
+.ti -1c
+.RI "\fBBlock\fP * \fBcreateNewBlockFromByteArray\fP (\fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fICreates a new \fBBlock\fP object from serialized block data. \fP"
+.ti -1c
+.RI "\fBBlock\fP * \fBcreateNewBlockFromOriginalBlock\fP (void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBgetBlock\fP (void *self)"
+.br
+.RI "\fIGets a \fBBlock\fP from another object. Use this to avoid casts. \fP"
+.ti -1c
+.RI "int \fBinitBlock\fP (\fBBlock\fP *self, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBBlock\fP object. \fP"
+.ti -1c
+.RI "int \fBinitBlockFromByteArray\fP (\fBBlock\fP *self, \fBByteArray\fP *data, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBBlock\fP object from serialized data. \fP"
+.ti -1c
+.RI "int \fBinitBlockWithOriginalBlock\fP (\fBBlock\fP *self, void(*onErrorReceived)(\fBError\fP error, char *,...))"
+.br
+.RI "\fIInitializes a \fBBlock\fP object with the original block for the bitcoin block chain. This will have serialized data as well as object data. \fP"
+.ti -1c
+.RI "void \fBdeleteBlock\fP (void *selfCopy)"
+.br
+.RI "\fIFrees a \fBBlock\fP object. \fP"
+.ti -1c
+.RI "void \fBcalculateBlockHash\fP (\fBBlock\fP *self, uint8_t *hash)"
+.br
+.RI "\fICalculates the hash for a block. \fP"
+.ti -1c
+.RI "uint32_t \fBcalculateBlockLength\fP (\fBBlock\fP *self, int transactions)"
+.br
+.RI "\fICalculates the length needed to serialize the object. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeBlock\fP (\fBBlock\fP *self, int transactions)"
+.br
+.RI "\fIDeserializes a \fBBlock\fP so that it can be used as an object. \fP"
+.ti -1c
+.RI "uint32_t \fBdeserializeWithTransactions\fP (\fBBlock\fP *self, \fBByteArray\fP *bytes)"
+.br
+.ti -1c
+.RI "uint32_t \fBdeserializeWithOnlyHeaders\fP (\fBBlock\fP *self, uint8_t firstByte, \fBByteArray\fP *bytes)"
+.br
+.ti -1c
+.RI "uint8_t * \fBgetBlockHash\fP (\fBBlock\fP *self)"
+.br
+.RI "\fIRetrieves or calculates the hash for a block. Hashes taken from this function are cached. \fP"
+.ti -1c
+.RI "uint32_t \fBserializeBlock\fP (\fBBlock\fP *self, int transactions)"
+.br
+.RI "\fISerializes a \fBBlock\fP to the byte data. \fP"
+.ti -1c
+.RI "void \fBdealWithSerializationHeader\fP (\fBBlock\fP *self, \fBByteArray\fP *bytes)"
+.br
+.ti -1c
+.RI "uint32_t \fBdealWithSerializationTran\fP (\fBBlock\fP *self, \fBByteArray\fP *bytes, uint32_t cursor, int transactions)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void calculateBlockHash (\fBBlock\fP *self, uint8_t *hash)"
+.PP
+Calculates the hash for a block. Calculate the hash for a \fBBlock\fP. 
+.PP
+Definition at line 191 of file Block.c.
+.SS "uint32_t calculateBlockLength (\fBBlock\fP *self, inttransactions)"
+.PP
+Calculates the length needed to serialize the object. Calculate the length of \fBBlock\fP that is needed to serialize the object. 
+.PP
+Definition at line 201 of file Block.c.
+.SS "\fBBlock\fP* createNewBlock (void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBBlock\fP object. Set the members after creating the block object. Create a new \fBBlock\fP by default 
+.PP
+Definition at line 21 of file Block.c.
+.SS "\fBBlock\fP* createNewBlockFromByteArray (\fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Creates a new \fBBlock\fP object from serialized block data. Create a new \fBBlock\fP from a given \fBByteArray\fP data 
+.PP
+Definition at line 41 of file Block.c.
+.SS "\fBBlock\fP* createNewBlockFromOriginalBlock (void(*)(\fBError\fP error, char *,...)onErrorReceived)"Create a new \fBBlock\fP from a default \fBBlock\fP 
+.PP
+Definition at line 64 of file Block.c.
+.SS "void dealWithSerializationHeader (\fBBlock\fP *self, \fBByteArray\fP *bytes)"Serialize the header in a \fBBlock\fP 
+.PP
+Definition at line 401 of file Block.c.
+.SS "uint32_t dealWithSerializationTran (\fBBlock\fP *self, \fBByteArray\fP *bytes, uint32_tcursor, inttransactions)"serialize the transactions in a \fBBlock\fP 
+.PP
+Add null byte since there are to be no transactions (header only). 
+.PP
+Definition at line 416 of file Block.c.
+.SS "void deleteBlock (void *selfCopy)"
+.PP
+Frees a \fBBlock\fP object. Destroy the \fBBlock\fP 
+.PP
+Definition at line 159 of file Block.c.
+.SS "uint32_t deserializeBlock (\fBBlock\fP *self, inttransactions)"
+.PP
+Deserializes a \fBBlock\fP so that it can be used as an object. Deserialize the \fBBlock\fP 
+.PP
+Definition at line 220 of file Block.c.
+.SS "uint32_t deserializeWithOnlyHeaders (\fBBlock\fP *self, uint8_tfirstByte, \fBByteArray\fP *bytes)"@ breif deserialize \fBBlock\fP only with headers @ param self The \fBBlock\fP object @ param firstByte uint8_t @ param bytes \fBByteArray\fP object @ The length read on success, o on failure. 
+.PP
+Definition at line 326 of file Block.c.
+.SS "uint32_t deserializeWithTransactions (\fBBlock\fP *self, \fBByteArray\fP *bytes)"@ breif deserialize \fBBlock\fP with transactions @ param self The \fBBlock\fP object @ param bytes \fBByteArray\fP object @ The length read on success, o on failure. 
+.PP
+Definition at line 261 of file Block.c.
+.SS "\fBBlock\fP* getBlock (void *self)"
+.PP
+Gets a \fBBlock\fP from another object. Use this to avoid casts. Get the \fBBlock\fP 
+.PP
+Definition at line 88 of file Block.c.
+.SS "uint8_t* getBlockHash (\fBBlock\fP *self)"
+.PP
+Retrieves or calculates the hash for a block. Hashes taken from this function are cached. Get the hash of the \fBBlock\fP 
+.PP
+Definition at line 358 of file Block.c.
+.SS "int initBlock (\fBBlock\fP *self, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBBlock\fP object. Initializer by default 
+.PP
+Definition at line 97 of file Block.c.
+.SS "int initBlockFromByteArray (\fBBlock\fP *self, \fBByteArray\fP *data, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBBlock\fP object from serialized data. Initialize the \fBBlock\fP from \fBByteArray\fP 
+.PP
+Definition at line 117 of file Block.c.
+.SS "int initBlockWithOriginalBlock (\fBBlock\fP *self, void(*)(\fBError\fP error, char *,...)onErrorReceived)"
+.PP
+Initializes a \fBBlock\fP object with the original block for the bitcoin block chain. This will have serialized data as well as object data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlock\fP object to initialize. 
+.br
+\fIdata\fP Serialized block data. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBBlock\fP object. 
+.RE
+.PP
+
+.PP
+Definition at line 133 of file Block.c.
+.SS "uint32_t serializeBlock (\fBBlock\fP *self, inttransactions)"
+.PP
+Serializes a \fBBlock\fP to the byte data. \fBParameters:\fP
+.RS 4
+\fIself\fP The \fBBlock\fP object 
+.br
+\fItransactions\fP If true serialize transactions. If false there do not serialize for transactions. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The length read on success, 0 on failure. 
+.RE
+.PP
+
+.PP
+Definition at line 368 of file Block.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

@@ -1,0 +1,426 @@
+\hypertarget{_inventory_vector_8h}{
+\section{src/Object/Message/InventoryVector.h File Reference}
+\label{_inventory_vector_8h}\index{src/Object/Message/InventoryVector.h@{src/Object/Message/InventoryVector.h}}
+}
+
+
+\hyperlink{struct_inventory}{Inventory} vectors are used for notifying other nodes about objects they have or data which is being requested. see \href{https://en.bitcoin.it/wiki/Protocol_specification#Inventory_Vectors}{\tt https://en.bitcoin.it/wiki/Protocol\_\-specification\#Inventory\_\-Vectors} \hyperlink{struct_inventory}{Inventory} vector could be transaction messages, block messages or errors.  
+
+
+{\ttfamily \#include \char`\"{}Message.h\char`\"{}}\par
+Include dependency graph for InventoryVector.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_inventory_vector}{InventoryVector}
+\begin{DoxyCompactList}\small\item\em Structure for \hyperlink{struct_inventory_vector}{InventoryVector} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$ \hyperlink{_inventory_vector_8h_a9c5b66b850164dc1933349fdb849c4cc}{createNewInventoryVector} (\hyperlink{_constants_8h_a540a9c34662db8bb84b729512cf08e75}{InventoryVectorType} type, \hyperlink{struct_byte_array}{ByteArray} $\ast$hash, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_inventory_vector}{InventoryVector} object. \end{DoxyCompactList}\item 
+\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$ \hyperlink{_inventory_vector_8h_a16497ae979e7f0842ef2dafc144718ee}{createNewInventoryVectorFromData} (\hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{struct_inventory_vector}{InventoryVector} object from serialised data. \end{DoxyCompactList}\item 
+\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$ \hyperlink{_inventory_vector_8h_a9f5c08b13e82a422cd3ffa1a7f988d2a}{getInventoryVector} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{struct_inventory_vector}{InventoryVector} from another object. Use this to avoid casts. \end{DoxyCompactList}\item 
+int \hyperlink{_inventory_vector_8h_a69423d6567cd6d9d25755335937f2f7b}{initializeInventoryVector} (\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$self, \hyperlink{_constants_8h_a540a9c34662db8bb84b729512cf08e75}{InventoryVectorType} type, \hyperlink{struct_byte_array}{ByteArray} $\ast$hash, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_inventory_vector}{InventoryVector} object. \end{DoxyCompactList}\item 
+int \hyperlink{_inventory_vector_8h_ac0513bfdc2977b9719b2f0db7afde606}{initializeInventoryVectorFromData} (\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$self, \hyperlink{struct_byte_array}{ByteArray} $\ast$data, void($\ast$onErrorReceived)(\hyperlink{_constants_8h_a2c3e4bb40f36b262a5214e2da2bca9c5}{Error} error, char $\ast$,...))
+\begin{DoxyCompactList}\small\item\em Initialises a \hyperlink{struct_inventory_vector}{InventoryVector} object from serialised data. \end{DoxyCompactList}\item 
+void \hyperlink{_inventory_vector_8h_a3effb2d105153d226cb3f5563f45c894}{destroyInventoryVector} (void $\ast$self)
+\begin{DoxyCompactList}\small\item\em Frees a \hyperlink{struct_inventory_vector}{InventoryVector} object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_inventory_vector_8h_afe53d7aabd20f5c5748ea6058dfe21df}{deserializeInventoryVector} (\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Deserialises a \hyperlink{struct_inventory_vector}{InventoryVector} so that it can be used as an object. \end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{_inventory_vector_8h_a340bff34fb8ee996b53e0a61ebdd3e8a}{serializeInventoryVector} (\hyperlink{struct_inventory_vector}{InventoryVector} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Serialises a \hyperlink{struct_inventory_vector}{InventoryVector} to the byte data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_inventory}{Inventory} vectors are used for notifying other nodes about objects they have or data which is being requested. see \href{https://en.bitcoin.it/wiki/Protocol_specification#Inventory_Vectors}{\tt https://en.bitcoin.it/wiki/Protocol\_\-specification\#Inventory\_\-Vectors} \hyperlink{struct_inventory}{Inventory} vector could be transaction messages, block messages or errors. 
+
+Definition in file \hyperlink{_inventory_vector_8h_source}{InventoryVector.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_inventory_vector_8h_a9c5b66b850164dc1933349fdb849c4cc}{
+\index{InventoryVector.h@{InventoryVector.h}!createNewInventoryVector@{createNewInventoryVector}}
+\index{createNewInventoryVector@{createNewInventoryVector}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{createNewInventoryVector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf InventoryVector}$\ast$ createNewInventoryVector (
+\begin{DoxyParamCaption}
+\item[{{\bf InventoryVectorType}}]{type, }
+\item[{{\bf ByteArray} $\ast$}]{hash, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_a9c5b66b850164dc1933349fdb849c4cc}
+
+
+Creates a new \hyperlink{struct_inventory_vector}{InventoryVector} object. 
+
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_inventory_vector}{InventoryVector} object. 
+\end{DoxyReturn}
+
+
+$<$assign destructor function to object 
+
+
+
+Definition at line 13 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_a9c5b66b850164dc1933349fdb849c4cc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_vector_8h_a16497ae979e7f0842ef2dafc144718ee}{
+\index{InventoryVector.h@{InventoryVector.h}!createNewInventoryVectorFromData@{createNewInventoryVectorFromData}}
+\index{createNewInventoryVectorFromData@{createNewInventoryVectorFromData}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{createNewInventoryVectorFromData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf InventoryVector}$\ast$ createNewInventoryVectorFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_a16497ae979e7f0842ef2dafc144718ee}
+
+
+Creates a new \hyperlink{struct_inventory_vector}{InventoryVector} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialised \hyperlink{struct_inventory_vector}{InventoryVector} data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{struct_inventory_vector}{InventoryVector} object. 
+\end{DoxyReturn}
+
+
+$<$assign destructor function to object 
+
+
+
+Definition at line 36 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_a16497ae979e7f0842ef2dafc144718ee_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=396pt]{_inventory_vector_8h_a16497ae979e7f0842ef2dafc144718ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_vector_8h_afe53d7aabd20f5c5748ea6058dfe21df}{
+\index{InventoryVector.h@{InventoryVector.h}!deserializeInventoryVector@{deserializeInventoryVector}}
+\index{deserializeInventoryVector@{deserializeInventoryVector}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{deserializeInventoryVector}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t deserializeInventoryVector (
+\begin{DoxyParamCaption}
+\item[{{\bf InventoryVector} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_afe53d7aabd20f5c5748ea6058dfe21df}
+
+
+Deserialises a \hyperlink{struct_inventory_vector}{InventoryVector} so that it can be used as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory_vector}{InventoryVector} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length read on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_afe53d7aabd20f5c5748ea6058dfe21df_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=352pt]{_inventory_vector_8h_afe53d7aabd20f5c5748ea6058dfe21df_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_vector_8h_a3effb2d105153d226cb3f5563f45c894}{
+\index{InventoryVector.h@{InventoryVector.h}!destroyInventoryVector@{destroyInventoryVector}}
+\index{destroyInventoryVector@{destroyInventoryVector}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{destroyInventoryVector}]{\setlength{\rightskip}{0pt plus 5cm}void destroyInventoryVector (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_a3effb2d105153d226cb3f5563f45c894}
+
+
+Frees a \hyperlink{struct_inventory_vector}{InventoryVector} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory_vector}{InventoryVector} object to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_a3effb2d105153d226cb3f5563f45c894_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_a3effb2d105153d226cb3f5563f45c894_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_vector_8h_a9f5c08b13e82a422cd3ffa1a7f988d2a}{
+\index{InventoryVector.h@{InventoryVector.h}!getInventoryVector@{getInventoryVector}}
+\index{getInventoryVector@{getInventoryVector}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{getInventoryVector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf InventoryVector}$\ast$ getInventoryVector (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_a9f5c08b13e82a422cd3ffa1a7f988d2a}
+
+
+Gets a \hyperlink{struct_inventory_vector}{InventoryVector} from another object. Use this to avoid casts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object to obtain the \hyperlink{struct_inventory_vector}{InventoryVector} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{struct_inventory_vector}{InventoryVector} object. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file InventoryVector.c.
+
+\hypertarget{_inventory_vector_8h_a69423d6567cd6d9d25755335937f2f7b}{
+\index{InventoryVector.h@{InventoryVector.h}!initializeInventoryVector@{initializeInventoryVector}}
+\index{initializeInventoryVector@{initializeInventoryVector}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{initializeInventoryVector}]{\setlength{\rightskip}{0pt plus 5cm}int initializeInventoryVector (
+\begin{DoxyParamCaption}
+\item[{{\bf InventoryVector} $\ast$}]{self, }
+\item[{{\bf InventoryVectorType}}]{type, }
+\item[{{\bf ByteArray} $\ast$}]{hash, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_a69423d6567cd6d9d25755335937f2f7b}
+
+
+Initialises a \hyperlink{struct_inventory_vector}{InventoryVector} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory_vector}{InventoryVector} object to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_a69423d6567cd6d9d25755335937f2f7b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=372pt]{_inventory_vector_8h_a69423d6567cd6d9d25755335937f2f7b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_vector_8h_ac0513bfdc2977b9719b2f0db7afde606}{
+\index{InventoryVector.h@{InventoryVector.h}!initializeInventoryVectorFromData@{initializeInventoryVectorFromData}}
+\index{initializeInventoryVectorFromData@{initializeInventoryVectorFromData}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{initializeInventoryVectorFromData}]{\setlength{\rightskip}{0pt plus 5cm}int initializeInventoryVectorFromData (
+\begin{DoxyParamCaption}
+\item[{{\bf InventoryVector} $\ast$}]{self, }
+\item[{{\bf ByteArray} $\ast$}]{data, }
+\item[{void($\ast$)({\bf Error} error, char $\ast$,...)}]{onErrorReceived}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_ac0513bfdc2977b9719b2f0db7afde606}
+
+
+Initialises a \hyperlink{struct_inventory_vector}{InventoryVector} object from serialised data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory_vector}{InventoryVector} object to initialise \\
+\hline
+{\em data} & The serialised data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_ac0513bfdc2977b9719b2f0db7afde606_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_ac0513bfdc2977b9719b2f0db7afde606_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_inventory_vector_8h_a340bff34fb8ee996b53e0a61ebdd3e8a}{
+\index{InventoryVector.h@{InventoryVector.h}!serializeInventoryVector@{serializeInventoryVector}}
+\index{serializeInventoryVector@{serializeInventoryVector}!InventoryVector.h@{InventoryVector.h}}
+\subsubsection[{serializeInventoryVector}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t serializeInventoryVector (
+\begin{DoxyParamCaption}
+\item[{{\bf InventoryVector} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{_inventory_vector_8h_a340bff34fb8ee996b53e0a61ebdd3e8a}
+
+
+Serialises a \hyperlink{struct_inventory_vector}{InventoryVector} to the byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The \hyperlink{struct_inventory_vector}{InventoryVector} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length written on success, 0 on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file InventoryVector.c.
+
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{_inventory_vector_8h_a340bff34fb8ee996b53e0a61ebdd3e8a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{_inventory_vector_8h_a340bff34fb8ee996b53e0a61ebdd3e8a_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_block_8h.html#a32a782c3e422cc5b132abaddc4eecf13" title="Creates a new Block object. Set the members after creating the block object." alt="" coords="213,5,347,35"/>
+<area shape="rect" id="node5" href="$_m_i_block_8h.html#aaddeaac51a35b3b98ade3340b6d46bac" title="Creates a new Block object from serialized block data." alt="" coords="169,59,391,88"/>
+<area shape="rect" id="node7" href="$_m_i_block_8c.html#a9eb01377cf0d49ddc3dd988d221ddd76" title="createNewBlockFromOriginalBlock" alt="" coords="160,112,400,141"/>
+</map>

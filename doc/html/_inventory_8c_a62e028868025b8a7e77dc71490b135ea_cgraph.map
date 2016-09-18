@@ -1,0 +1,23 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_inventory_vector_8c.html#a16497ae979e7f0842ef2dafc144718ee" title="Creates a new InventoryVector object from serialised data." alt="" coords="192,195,427,225"/>
+<area shape="rect" id="node7" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="1108,11,1287,41"/>
+<area shape="rect" id="node18" href="$_message_8c.html#a9ab128ae9cafefd9b05e2e0bfa719770" title="getter" alt="" coords="851,378,944,407"/>
+<area shape="rect" id="node27" href="$_var_len_int_8c.html#a4dd8c16aa70756e7ab6c0845a09358af" title="Decodes variable size integer from bytes into a VarLenInt structure." alt="" coords="249,482,369,511"/>
+<area shape="rect" id="node38" href="$_inventory_vector_8c.html#afe53d7aabd20f5c5748ea6058dfe21df" title="Deserialises a InventoryVector so that it can be used as an object." alt="" coords="221,378,397,407"/>
+<area shape="rect" id="node40" href="$_byte_array_8c.html#aefe112436e17fc5a1c56d263596a612b" title="gets ByteArray Subsection Reference" alt="" coords="488,221,709,250"/>
+<area shape="rect" id="node5" href="$_inventory_vector_8c.html#a47afae38431c157f133d182046efab31" title="Frees a InventoryVector object." alt="" coords="520,63,677,93"/>
+<area shape="rect" id="node14" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="1159,219,1236,249"/>
+<area shape="rect" id="node16" href="$_inventory_vector_8c.html#ac0513bfdc2977b9719b2f0db7afde606" title="Initialises a InventoryVector object from serialised data." alt="" coords="489,274,708,303"/>
+<area shape="rect" id="node9" href="$_message_8c.html#ac2c2a78178aac5f9f228b51d01bf5fe3" title="destroy Message" alt="" coords="839,63,956,93"/>
+<area shape="rect" id="node12" href="$_object_8c.html#a9773962d80072e39e235802b57907208" title="destructor" alt="" coords="1147,65,1248,94"/>
+<area shape="rect" id="node20" href="$_message_8c.html#a297413f770355bd4bd2212e999867031" title="Initialises a Message object from byteArray data." alt="" coords="779,325,1016,354"/>
+<area shape="rect" id="node23" href="$_object_8c.html#a5f22211b2f99a33c1b4b7ad544ce108a" title="Increase the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="1111,298,1284,327"/>
+<area shape="rect" id="node25" href="$_object_8c.html#a6cd8f4ac93973731c720913612be0b15" title="resets the reference counts to an object to one" alt="" coords="1111,351,1284,381"/>
+<area shape="rect" id="node29" href="$_byte_array_8c.html#ac37879c5183d813699af84e23e8137ee" title="gets Byte from ByteArray" alt="" coords="521,482,676,511"/>
+<area shape="rect" id="node31" href="$_byte_array_8c.html#a49e0dcce3198b633d8f78dd56aa96597" title="read an int 16 As little Endian from ByteArray" alt="" coords="475,535,723,565"/>
+<area shape="rect" id="node33" href="$_byte_array_8c.html#a6fe303a6a14235d60ef9024a1463d630" title="read an int 32 As little Endian from ByteArray" alt="" coords="475,429,723,458"/>
+<area shape="rect" id="node35" href="$_byte_array_8c.html#a670796ed60ca7c23ac314f0aab3c68c7" title="read an int 64 As little Endian from ByteArray" alt="" coords="475,589,723,618"/>
+<area shape="rect" id="node42" href="$_byte_array_8c.html#a38e852a1c627acf4baa1159e1086927e" title="destorys byte array" alt="" coords="836,117,959,146"/>
+<area shape="rect" id="node49" href="$_byte_array_8c.html#a2811955249437e6f4f47a4fe3b706b2e" title="initializes ByteArray Subsection Reference" alt="" coords="772,271,1023,301"/>
+<area shape="rect" id="node46" href="$_byte_array_8c.html#a3be6046f319ef59baf73dc0dfadd321d" title="release Byte Array SharedData Reference" alt="" coords="1072,118,1323,147"/>
+</map>

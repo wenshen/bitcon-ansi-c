@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_big_int_8c" kind="file">
+    <compoundname>BigInt.c</compoundname>
+    <includes refid="_big_int_8h" local="yes">BigInt.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <incdepgraph>
+      <node id="621">
+        <label>stdbool.h</label>
+      </node>
+      <node id="620">
+        <label>assert.h</label>
+      </node>
+      <node id="618">
+        <label>stdint.h</label>
+      </node>
+      <node id="617">
+        <label>stdlib.h</label>
+      </node>
+      <node id="619">
+        <label>string.h</label>
+      </node>
+      <node id="616">
+        <label>../Constants.h</label>
+      </node>
+      <node id="614">
+        <label>src/BigInt/BigInt.c</label>
+        <link refid="BigInt.c"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+      </node>
+      <node id="615">
+        <label>BigInt.h</label>
+        <link refid="_big_int_8h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_big_int_8c_1a5742814e569802287b7157f5ee150daa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntAlloc</definition>
+        <argsstring>(BigInt *bi, uint8_t length)</argsstring>
+        <name>BigIntAlloc</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>bi</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="12" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="12" bodyend="16"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_version_checksum_bytes_8h_1aea4c90e8f46d385322b8d3d5215634e2" compoundref="_version_checksum_bytes_8c" startline="31" endline="50">InitVersionChecksumBytesFromString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1acb40846a8d9132c888e78cd773382561" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntRealloc</definition>
+        <argsstring>(BigInt *bi, uint8_t length)</argsstring>
+        <name>BigIntRealloc</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>bi</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="18" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="18" bodyend="27"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_big_int_8h_1aceb9c4c6e4716127e4fc6d964b135527" compoundref="_big_int_8c" startline="55" endline="82">BigIntEqualsAdditionByBigInt</referencedby>
+        <referencedby refid="_big_int_8h_1abadebe4d6bc13cecd5434dcd4607c0e8" compoundref="_big_int_8c" startline="102" endline="125">BigIntEqualsMultiplicationByUInt8</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1a766564219de39ebab49e86b84365155d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504" kindref="member">Compare</ref></type>
+        <definition>Compare BigIntCompareTo58</definition>
+        <argsstring>(BigInt *a)</argsstring>
+        <name>BigIntCompareTo58</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="29" bodyend="37"/>
+        <references refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504a4bccf19eed6a7720020ab7463ab9a157" compoundref="_constants_8h" startline="58">COMPARE_EQUAL</references>
+        <references refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504a2222fe67d3866dd8e992fd5ef4b4d6ed" compoundref="_constants_8h" startline="59">COMPARE_LESS_THAN</references>
+        <references refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76" compoundref="_constants_8h" startline="57">COMPARE_MORE_THAN</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1aceb9c4c6e4716127e4fc6d964b135527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntEqualsAdditionByBigInt</definition>
+        <argsstring>(BigInt *a, BigInt *b)</argsstring>
+        <name>BigIntEqualsAdditionByBigInt</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="55" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="55" bodyend="82"/>
+        <references refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" compoundref="_big_int_8c" startline="18" endline="27">BigIntRealloc</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1ac1d1b61df392b26380337c98e859a295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BigIntEqualsDivisionBy58</definition>
+        <argsstring>(BigInt *a, uint8_t *ans)</argsstring>
+        <name>BigIntEqualsDivisionBy58</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>ans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="84" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="84" bodyend="101"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntEqualsMultiplicationByUInt8</definition>
+        <argsstring>(BigInt *a, uint8_t b, uint8_t *ans)</argsstring>
+        <name>BigIntEqualsMultiplicationByUInt8</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>ans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="102" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="102" bodyend="125"/>
+        <references refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" compoundref="_big_int_8c" startline="18" endline="27">BigIntRealloc</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_big_int_8h_1a7544af9d148635904d1809eef62c11ae" compoundref="_big_int_8c" startline="160" endline="178">BigIntFromPowUInt8</referencedby>
+        <referencedby refid="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1a9d2029aadab4a8ae5f376d3059786394" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BigIntEqualsSubtractionByUInt8</definition>
+        <argsstring>(BigInt *a, uint8_t b)</argsstring>
+        <name>BigIntEqualsSubtractionByUInt8</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="144" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="144" bodyend="157"/>
+        <references refid="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" compoundref="_big_int_8c" startline="193" endline="207">BigIntNormalise</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1a7544af9d148635904d1809eef62c11ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntFromPowUInt8</definition>
+        <argsstring>(BigInt *bi, uint8_t a, uint8_t b)</argsstring>
+        <name>BigIntFromPowUInt8</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>bi</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="160" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="160" bodyend="178"/>
+        <references refid="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" compoundref="_big_int_8c" startline="102" endline="125">BigIntEqualsMultiplicationByUInt8</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1aa4544c75bd8e7106208d9b120d2bb533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t BigIntModuloWith58</definition>
+        <argsstring>(BigInt *a)</argsstring>
+        <name>BigIntModuloWith58</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="180" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="180" bodyend="192"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BigIntNormalise</definition>
+        <argsstring>(BigInt *a)</argsstring>
+        <name>BigIntNormalise</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" line="193" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="193" bodyend="207"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_big_int_8h_1a9d2029aadab4a8ae5f376d3059786394" compoundref="_big_int_8c" startline="144" endline="157">BigIntEqualsSubtractionByUInt8</referencedby>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>BigInt.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>04/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_big_int_8h" kindref="compound">BigInt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_big_int_8c_1a5742814e569802287b7157f5ee150daa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a5742814e569802287b7157f5ee150daa" kindref="member">BigIntAlloc</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>bi,<sp/>uint8_t<sp/>length){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bi-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>length;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bi-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref><sp/>=<sp/>malloc(length);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bi-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>!=NULL;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" kindref="member">BigIntRealloc</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>bi,<sp/>uint8_t<sp/>length){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bi-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>&lt;<sp/>length)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/>temp<sp/>=<sp/>realloc(bi-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,<sp/>length);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>temp)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bi-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref><sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bi-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>length;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_big_int_8h_1a766564219de39ebab49e86b84365155d" refkind="member"><highlight class="normal"><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504" kindref="member">Compare</ref><sp/><ref refid="_big_int_8c_1a766564219de39ebab49e86b84365155d" kindref="member">BigIntCompareTo58</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76" kindref="member">COMPARE_MORE_THAN</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[0]<sp/>&gt;<sp/>58)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76" kindref="member">COMPARE_MORE_THAN</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[0]<sp/>&lt;<sp/>58)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504a2222fe67d3866dd8e992fd5ef4b4d6ed" kindref="member">COMPARE_LESS_THAN</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504a4bccf19eed6a7720020ab7463ab9a157" kindref="member">COMPARE_EQUAL</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">Compare<sp/>BigIntCompareToBigInt(BigInt<sp/>*<sp/>a,BigInt<sp/>*<sp/>b){</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a-&gt;length<sp/>&gt;<sp/>b-&gt;length)</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>COMPARE_MORE_THAN;</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(a-&gt;length<sp/>&lt;<sp/>b-&gt;length)</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>COMPARE_LESS_THAN;</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(x<sp/>=<sp/>a-&gt;length<sp/>-<sp/>1;;<sp/>x--)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a-&gt;data[x]<sp/>&lt;<sp/>b-&gt;data[x])</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>COMPARE_LESS_THAN;</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(a-&gt;data[x]<sp/>&gt;<sp/>b-&gt;data[x])</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>COMPARE_MORE_THAN;</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!x)</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>COMPARE_EQUAL;</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_big_int_8h_1aceb9c4c6e4716127e4fc6d964b135527" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1aceb9c4c6e4716127e4fc6d964b135527" kindref="member">BigIntEqualsAdditionByBigInt</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>b){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>&lt;<sp/>b-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/><ref refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" kindref="member">BigIntRealloc</ref>(a,<sp/>b-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>))</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>certain<sp/>expansion<sp/>of<sp/>data<sp/>is<sp/>empty*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref><sp/>+<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/>0,<sp/>b-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>-<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>b-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>a-&gt;length<sp/>&gt;=<sp/>b-&gt;length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>overflow<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>x<sp/>&lt;<sp/>b-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>+=<sp/>b-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>+<sp/>overflow;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>a-&gt;data[x]<sp/>now<sp/>equals<sp/>the<sp/>result<sp/>of<sp/>the<sp/>addition.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>overflow<sp/>will<sp/>never<sp/>go<sp/>beyond<sp/>1.<sp/>Imagine<sp/>a-&gt;data[x]<sp/>==<sp/>0xff,<sp/>b-&gt;data[x]<sp/>==<sp/>0xff<sp/>and<sp/>the<sp/>overflow<sp/>is<sp/>1,<sp/>the<sp/>new<sp/>overflow<sp/>is<sp/>still<sp/>1<sp/>and<sp/>a-&gt;data[x]<sp/>is<sp/>0xff.<sp/>Therefore<sp/>it<sp/>does<sp/>work.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>overflow<sp/>=<sp/>(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>&lt;<sp/>(b-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>+<sp/>overflow))?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Propagate<sp/>overflow<sp/>up<sp/>the<sp/>whole<sp/>length<sp/>of<sp/>a<sp/>if<sp/>necessary*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(overflow<sp/>&amp;&amp;<sp/>x<sp/>&lt;<sp/>a-&gt;length)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>overflow<sp/>=<sp/>!<sp/>++a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x++];<sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>at<sp/>x,<sp/>increment<sp/>x,<sp/>increment<sp/>data,<sp/>test<sp/>new<sp/>value<sp/>for<sp/>overflow.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(overflow)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>++;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/><ref refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" kindref="member">BigIntRealloc</ref>(a,<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>))</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>-<sp/>1]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="_big_int_8h_1ac1d1b61df392b26380337c98e859a295" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1ac1d1b61df392b26380337c98e859a295" kindref="member">BigIntEqualsDivisionBy58</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,uint8_t<sp/>*<sp/>ans){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>==<sp/>1<sp/>&amp;&amp;<sp/>!<sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[0])</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>-1;;<sp/>x--)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>&lt;&lt;=<sp/>8;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x];</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans[x]<sp/>=<sp/>temp<sp/>/<sp/>58;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>-=<sp/>ans[x]<sp/>*<sp/>58;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>x)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>ans[a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>-1])</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>--;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memmove(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,<sp/>ans,<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102" refid="_big_int_8h_1abadebe4d6bc13cecd5434dcd4607c0e8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" kindref="member">BigIntEqualsMultiplicationByUInt8</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,uint8_t<sp/>b,uint8_t<sp/>*<sp/>ans){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mutliplication<sp/>by<sp/>zero.<sp/>&quot;a&quot;<sp/>becomes<sp/>zero<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>==<sp/>1<sp/>&amp;&amp;<sp/>!<sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[0])<sp/></highlight><highlight class="comment">/*<sp/>&quot;a&quot;<sp/>is<sp/>zero<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Multiply<sp/>b<sp/>by<sp/>each<sp/>byte<sp/>and<sp/>then<sp/>add<sp/>to<sp/>answer*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>mult<sp/>=<sp/>ans[x]<sp/>+<sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>*<sp/>b;<sp/></highlight><highlight class="comment">/*Allow<sp/>for<sp/>overflow<sp/>onto<sp/>next<sp/>byte.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans[x]<sp/>=<sp/>mult;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans[x+1]<sp/>=<sp/>(mult<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ans[a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>])<sp/>{<sp/></highlight><highlight class="comment">/*If<sp/>last<sp/>byte<sp/>is<sp/>!<sp/>zero,<sp/>adjust<sp/>length.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>++;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/><ref refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" kindref="member">BigIntRealloc</ref>(a,<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>))</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memmove(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>,<sp/>ans,<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>);<sp/></highlight><highlight class="comment">/*Done<sp/>calculation.<sp/>Move<sp/>ans<sp/>to<sp/>&quot;a&quot;.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">/*void<sp/>BigIntEqualsSubtractionByBigInt(BigInt<sp/>*<sp/>a,BigInt<sp/>*<sp/>b){</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"></highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>b-&gt;length;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sub<sp/>=<sp/>b-&gt;data[x];</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>y;</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(y<sp/>=<sp/>x;<sp/>y<sp/>&lt;<sp/>a-&gt;length;<sp/>y++)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a-&gt;data[y]<sp/>&gt;=<sp/>sub)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;data[y]<sp/>-=<sp/>sub;</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}else{</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;data[y]<sp/>=<sp/>255<sp/>-<sp/>(sub<sp/>-<sp/>a-&gt;data[y]<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BigIntNormalise(a);</highlight></codeline>
+<codeline lineno="143"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="_big_int_8h_1a9d2029aadab4a8ae5f376d3059786394" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a9d2029aadab4a8ae5f376d3059786394" kindref="member">BigIntEqualsSubtractionByUInt8</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,uint8_t<sp/>b){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sub<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>0;x<sp/>&lt;<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>&gt;=<sp/>sub)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>-=<sp/>sub;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>=<sp/>255<sp/>-<sp/>(sub<sp/>-<sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" kindref="member">BigIntNormalise</ref>(a);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="_big_int_8h_1a7544af9d148635904d1809eef62c11ae" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a7544af9d148635904d1809eef62c11ae" kindref="member">BigIntFromPowUInt8</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>bi,uint8_t<sp/>a,uint8_t<sp/>b){</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bi-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bi-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/>temp<sp/>=<sp/>malloc(b);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>temp)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>b;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(temp,<sp/>0,<sp/>bi-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/><ref refid="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" kindref="member">BigIntEqualsMultiplicationByUInt8</ref>(bi,<sp/>a,<sp/>temp))</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(temp);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="_big_int_8h_1aa4544c75bd8e7106208d9b120d2bb533" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="_big_int_8c_1aa4544c75bd8e7106208d9b120d2bb533" kindref="member">BigIntModuloWith58</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a){</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(x<sp/>=<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>-<sp/>1;;<sp/>x--){</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>*=<sp/>(256<sp/>%<sp/>58);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>%=<sp/>58;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]<sp/>%<sp/>58;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>%=<sp/>58;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>x)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193" refid="_big_int_8h_1a980d453cb2c16efd376b928800c189ab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" kindref="member">BigIntNormalise</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a){</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>-<sp/>1;;<sp/>x--){</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>[x]){</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>x<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>x){</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;<ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c"/>
+  </compounddef>
+</doxygen>

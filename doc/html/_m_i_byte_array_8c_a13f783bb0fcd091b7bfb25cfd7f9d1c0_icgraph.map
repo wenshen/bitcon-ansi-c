@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_transaction_input_8h.html#a1dc5b6d2e7b70e918572bedd9ee6abf9" title="Serialises a TransactionInput to byte data." alt="" coords="285,5,467,35"/>
+<area shape="rect" id="node11" href="$_m_i_transaction_output_8h.html#a16b79dfd79f1bec2dce3b0865766b48e" title="Serialises a TransactionOutput to byte data." alt="" coords="280,59,472,88"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_8h.html#a1abc45d369c2884698692d79091f5b2c" title="Serialises a Transaction to byte data." alt="" coords="521,32,673,61"/>
+<area shape="rect" id="node7" href="$_m_i_block_8h.html#a3fa07e825a149c98d148b215a5d5a78a" title="dealWithSerializationTran" alt="" coords="723,32,893,61"/>
+<area shape="rect" id="node9" href="$_m_i_block_8h.html#a3dab3fff46c9b386501414a6b13f5192" title="Serializes a Block to the byte data." alt="" coords="943,32,1060,61"/>
+</map>

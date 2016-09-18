@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_libev_sockets_8h.html#ad36ca96ed4c6c081ffbd348a5d4c4d07" title="canReceive" alt="" coords="404,59,495,88"/>
+<area shape="rect" id="node5" href="$_libev_sockets_8h.html#a808507af219de87eb1dac4c665868b52" title="canSend" alt="" coords="413,112,485,141"/>
+<area shape="rect" id="node7" href="$_peer_8c.html#a9a43832d7e175059540bea094dc86df1" title="Creates a new Peer object." alt="" coords="316,165,583,195"/>
+<area shape="rect" id="node13" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="1283,140,1461,169"/>
+<area shape="rect" id="node27" href="$_network_communicator_8h.html#a23b0b97e4bf8b96257a811485ce9d1d2" title="Called when a peer socket is ready for reading." alt="" coords="328,269,571,299"/>
+<area shape="rect" id="node29" href="$_network_communicator_8h.html#a958af2548aed14b08f1b64e9ef01a92c" title="Called when a peer socket is ready for writing." alt="" coords="337,323,561,352"/>
+<area shape="rect" id="node31" href="$_network_communicator_8h.html#a3582cbe16e5f8039ef71ed2f8ec2857b" title="Starts the timer event for sending pings (heartbeat)." alt="" coords="343,376,556,405"/>
+<area shape="rect" id="node33" href="$_network_communicator_8h.html#aab6f92b01ec3c352e6d73e5a7ba958ef" title="Stops listening for both IPv6 connections and IPv4 connections." alt="" coords="333,429,565,459"/>
+<area shape="rect" id="node9" href="$_peer_8c.html#a47cab37273e1c40695743998af5e7574" title="Frees a Peer object." alt="" coords="696,59,792,88"/>
+<area shape="rect" id="node20" href="$_peer_8c.html#a45431953fdb960aab3255ab41fabab17" title="Gets a Peer from another object. Use this to avoid casts." alt="" coords="709,112,779,141"/>
+<area shape="rect" id="node22" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="705,165,783,195"/>
+<area shape="rect" id="node24" href="$_peer_8c.html#a24bb93076b941f800e03287a1731db9a" title="Initializes a Peer object." alt="" coords="633,5,855,35"/>
+<area shape="rect" id="node11" href="$_network_address_8c.html#a7ecd17d1b6f31ee7f6f683c4560a869e" title="destroys a NetworkAddress object." alt="" coords="904,87,1067,116"/>
+<area shape="rect" id="node15" href="$_message_8c.html#ac2c2a78178aac5f9f228b51d01bf5fe3" title="destroy Message" alt="" coords="1116,87,1233,116"/>
+<area shape="rect" id="node18" href="$_object_8c.html#a9773962d80072e39e235802b57907208" title="destructor" alt="" coords="1321,87,1423,116"/>
+</map>

@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_commands_8h" kind="file">
+    <compoundname>Commands.h</compoundname>
+    <innerclass refid="struct_network_address" prot="public">NetworkAddress</innerclass>
+    <innerclass refid="struct_inventory_vector" prot="public">InventoryVector</innerclass>
+    <innerclass refid="struct_tranx_in" prot="public">TranxIn</innerclass>
+    <innerclass refid="struct_outpoint" prot="public">Outpoint</innerclass>
+    <innerclass refid="struct_tranx_out" prot="public">TranxOut</innerclass>
+    <innerclass refid="struct_cmd_version" prot="public">CmdVersion</innerclass>
+    <innerclass refid="struct_cmd_verack" prot="public">CmdVerack</innerclass>
+    <innerclass refid="struct_cmd_addr" prot="public">CmdAddr</innerclass>
+    <innerclass refid="struct_cmd_inv" prot="public">CmdInv</innerclass>
+    <innerclass refid="struct_cmd_get_data" prot="public">CmdGetData</innerclass>
+    <innerclass refid="struct_cmd_get_blocks" prot="public">CmdGetBlocks</innerclass>
+    <innerclass refid="struct_cmd_get_headers" prot="public">CmdGetHeaders</innerclass>
+    <innerclass refid="struct_cmd_tranx" prot="public">CmdTranx</innerclass>
+    <innerclass refid="struct_cmdblock" prot="public">Cmdblock</innerclass>
+    <innerclass refid="struct_cmd_headers" prot="public">CmdHeaders</innerclass>
+    <innerclass refid="struct_cmd_get_addr" prot="public">CmdGetAddr</innerclass>
+    <innerclass refid="struct_cmd_check_order" prot="public">CmdCheckOrder</innerclass>
+    <innerclass refid="struct_cmd_submit_order" prot="public">CmdSubmitOrder</innerclass>
+    <innerclass refid="struct_cmd_reply" prot="public">CmdReply</innerclass>
+    <innerclass refid="struct_cmd_ping" prot="public">CmdPing</innerclass>
+    <innerclass refid="struct_cmd_alert" prot="public">CmdAlert</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_commands_8h_1a5a140d02f67fbaacae04b55c1fb13b53" prot="public" static="no">
+        <name>SERVICE_NODE_NETWORK</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" line="17" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/>Commands.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>23/10/2012.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/>Created<sp/>by:<sp/>Prajowal<sp/>Manandhar</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/>Modified<sp/>by:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/><sp/>please<sp/>read<sp/>https://en.bitcoin.it/wiki/Protocol_Specification</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COMMANDS_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COMMANDS_H_</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Service<sp/>matching<sp/>for<sp/>&quot;This<sp/>node<sp/>can<sp/>be<sp/>asked<sp/>for<sp/>full<sp/>blocks<sp/>instead<sp/>of<sp/>just<sp/>headers.&quot;</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_commands_8h_1a5a140d02f67fbaacae04b55c1fb13b53" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVICE_NODE_NETWORK<sp/>1</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="struct_network_address" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_network_address" kindref="compound">NetworkAddress</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="struct_network_address_1ae73654f333e4363463ad8c594eca1905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_network_address_1ae73654f333e4363463ad8c594eca1905" kindref="member">time</ref>;</highlight></codeline>
+<codeline lineno="23" refid="struct_network_address_1a8361260b2ca75771b8da0333191db456" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_network_address_1a8361260b2ca75771b8da0333191db456" kindref="member">services</ref>;</highlight></codeline>
+<codeline lineno="24" refid="struct_network_address_1ac03ec605186c0c6d17c4beaab73d615c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_network_address_1ac03ec605186c0c6d17c4beaab73d615c" kindref="member">ip</ref>[16];<sp/></highlight><highlight class="comment">//To<sp/>support<sp/>IPv4/6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="struct_network_address_1a8e0798404bf2cf5dabb84c5ba9a4f236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_network_address_1a8e0798404bf2cf5dabb84c5ba9a4f236" kindref="member">port</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0<sp/>for<sp/>ERROR,<sp/>1<sp/>for<sp/>MSG_TX<sp/>and<sp/>2<sp/>for<sp/>MSG_BLOCK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_inventory_vector_1ad44b615021ed3ccb734fcaf583ef4a03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_inventory_vector_1ad44b615021ed3ccb734fcaf583ef4a03" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="struct_inventory_vector_1a30660ee1bca7189182e64c5a192651af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_inventory_vector_1a5309b3103b4345688327148e3c589014" kindref="member">hash</ref>[32];</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_tranx_in" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_tranx_in" kindref="compound">TranxIn</ref>{</highlight></codeline>
+<codeline lineno="36" refid="struct_tranx_in_1a694240f5463d28f9cb6cb2f8de4a5a45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_outpoint" kindref="compound">Outpoint</ref><sp/>*<ref refid="struct_tranx_in_1a694240f5463d28f9cb6cb2f8de4a5a45" kindref="member">previous_out</ref>;</highlight></codeline>
+<codeline lineno="37" refid="struct_tranx_in_1a756d651ccdd4c06f59685e337cf2e840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_tranx_in_1a756d651ccdd4c06f59685e337cf2e840" kindref="member">scriptLength</ref>;</highlight></codeline>
+<codeline lineno="38" refid="struct_tranx_in_1acd5b457285f7e816fbb23777406a701a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_tranx_in_1acd5b457285f7e816fbb23777406a701a" kindref="member">signature_script</ref>[];</highlight></codeline>
+<codeline lineno="39" refid="struct_tranx_in_1a0ab03ef2cc38198d3666a992a245fddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_tranx_in_1a0ab03ef2cc38198d3666a992a245fddf" kindref="member">sequence</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="struct_outpoint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_outpoint" kindref="compound">Outpoint</ref>{</highlight></codeline>
+<codeline lineno="44" refid="struct_outpoint_1a49e83595c89cca1c8cd37b9af318a908" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_outpoint_1a49e83595c89cca1c8cd37b9af318a908" kindref="member">hash</ref>[32];</highlight></codeline>
+<codeline lineno="45" refid="struct_outpoint_1aafd95f8c7a99b9189ede7cdf0871ebe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_outpoint_1aafd95f8c7a99b9189ede7cdf0871ebe8" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="struct_tranx_out" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_tranx_out" kindref="compound">TranxOut</ref>{</highlight></codeline>
+<codeline lineno="49" refid="struct_tranx_out_1a4e630859cc0e2a22bd6acf39a6a8e218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_tranx_out_1a4e630859cc0e2a22bd6acf39a6a8e218" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="50" refid="struct_tranx_out_1a895859eb7d18cd9b6cb38c25ced2418e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_tranx_out_1a895859eb7d18cd9b6cb38c25ced2418e" kindref="member">pkScriptLength</ref>;</highlight></codeline>
+<codeline lineno="51" refid="struct_tranx_out_1a57661961e62f14ddb90c75c2c130b041" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_tranx_out_1a57661961e62f14ddb90c75c2c130b041" kindref="member">pkScript</ref>[];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="struct_cmd_version" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_version" kindref="compound">CmdVersion</ref><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Identifies<sp/>protocol<sp/>version<sp/>being<sp/>used<sp/>by<sp/>the<sp/>node<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct_cmd_version_1a67fae7dd1de9edce3656ed214d20377f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="struct_cmd_version_1a67fae7dd1de9edce3656ed214d20377f" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bitfield<sp/>of<sp/>features<sp/>to<sp/>be<sp/>enabled<sp/>for<sp/>this<sp/>connection<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="struct_cmd_version_1a8361260b2ca75771b8da0333191db456" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_cmd_version_1a8361260b2ca75771b8da0333191db456" kindref="member">services</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Standard<sp/>UNIX<sp/>timestamp<sp/>in<sp/>seconds<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="struct_cmd_version_1a8a591d341723df9496cda98e225b25b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/><ref refid="struct_cmd_version_1a8a591d341723df9496cda98e225b25b4" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>network<sp/>address<sp/>of<sp/>the<sp/>node<sp/>receiving<sp/>this<sp/>message<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="struct_cmd_version_1a1c343f8763f536140c776a99d43ecde3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_network_address" kindref="compound">NetworkAddress</ref><sp/><ref refid="struct_cmd_version_1a1c343f8763f536140c776a99d43ecde3" kindref="member">addrRecv</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>version<sp/>&gt;=<sp/>106<sp/>then<sp/>folowing<sp/>fields<sp/>added*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>network<sp/>address<sp/>of<sp/>the<sp/>node<sp/>emitting<sp/>this<sp/>message<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="struct_cmd_version_1a459e4f223be92dc8d26e577d85ba4334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_network_address" kindref="compound">NetworkAddress</ref><sp/><ref refid="struct_cmd_version_1a459e4f223be92dc8d26e577d85ba4334" kindref="member">addrFrom</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Node<sp/>random<sp/>nonce,<sp/>randomly<sp/>generated<sp/>every<sp/>time</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>a<sp/>version<sp/>packet<sp/>is<sp/>sent.<sp/>This<sp/>nonce<sp/>is<sp/>used<sp/>to<sp/>detect<sp/>connections<sp/>to<sp/>self.</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="struct_cmd_version_1af602af589d5bc1af695356386bcb32a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_cmd_version_1af602af589d5bc1af695356386bcb32a9" kindref="member">nonce</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Secondary<sp/>Version<sp/>information<sp/>(0x00<sp/>if<sp/>string<sp/>is<sp/>0<sp/>bytes<sp/>long)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="struct_cmd_version_1abe98c3c041a6acda8de5e4052aff3ccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct_cmd_version_1abe98c3c041a6acda8de5e4052aff3ccd" kindref="member">subVersionNum</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>version<sp/>&gt;=<sp/>209<sp/>then<sp/>folowing<sp/>fields<sp/>added*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>last<sp/>block<sp/>received<sp/>by<sp/>the<sp/>emitting<sp/>node<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="struct_cmd_version_1a75434fa1cfbff59d821bd10ba0cb6df1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="struct_cmd_version_1a75434fa1cfbff59d821bd10ba0cb6df1" kindref="member">startHeight</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="struct_cmd_verack" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_verack" kindref="compound">CmdVerack</ref><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Magic<sp/>value<sp/>indicating<sp/>message<sp/>origin<sp/>network,<sp/>and<sp/>used<sp/>to<sp/>seek<sp/>to<sp/>next<sp/>message<sp/>when<sp/>stream<sp/>state<sp/>is<sp/>unknown<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="struct_cmd_verack_1a57f54349f4fd1cbbb52058812e146af2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_verack_1a57f54349f4fd1cbbb52058812e146af2" kindref="member">magic</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*contains<sp/>the<sp/>verack<sp/>to<sp/>indicate<sp/>the<sp/>version<sp/>ack*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="struct_cmd_verack_1a5b9e40150e73a908b8815ab282e5a4d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_verack_1a5b9e40150e73a908b8815ab282e5a4d3" kindref="member">command</ref>[12];</highlight></codeline>
+<codeline lineno="96" refid="struct_cmd_verack_1aebb70c2aab3407a9f05334c47131a43b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_verack_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="97" refid="struct_cmd_verack_1aa482bc33779a87f57ab8efc2c1680c48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_verack_1aa482bc33779a87f57ab8efc2c1680c48" kindref="member">checksum</ref>;</highlight></codeline>
+<codeline lineno="98" refid="struct_cmd_verack_1a330f1bb25881c43b17265cdc48d8b5a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct_cmd_verack_1a330f1bb25881c43b17265cdc48d8b5a2" kindref="member">payload</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="struct_cmd_addr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_addr" kindref="compound">CmdAddr</ref><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>address<sp/>entries<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="struct_cmd_addr_1a86988a65e0d3ece7990c032c159786d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_addr_1a86988a65e0d3ece7990c032c159786d6" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Divided<sp/>addr_list<sp/>to<sp/>two<sp/>arrays<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Corresponding<sp/>Timestamp<sp/>list<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="struct_cmd_addr_1a690496cb0763044d995a40b46e8f7d32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>*<ref refid="struct_cmd_addr_1a690496cb0763044d995a40b46e8f7d32" kindref="member">tslist</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Network<sp/>addr<sp/>list<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="struct_cmd_addr_1a39e0b80e0408806939286dfb40cfd081" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_network_address" kindref="compound">NetworkAddress</ref><sp/>*<ref refid="struct_cmd_addr_1a39e0b80e0408806939286dfb40cfd081" kindref="member">naddrlist</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="struct_cmd_inv" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_inv" kindref="compound">CmdInv</ref><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*0<sp/>for<sp/>ERROR,<sp/>1<sp/>for<sp/>MSG_TX<sp/>and<sp/>2<sp/>for<sp/>MSG_BLOCK<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="struct_cmd_inv_1ad44b615021ed3ccb734fcaf583ef4a03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_inv_1ad44b615021ed3ccb734fcaf583ef4a03" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="struct_cmd_inv_1a30660ee1bca7189182e64c5a192651af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_inv_1a30660ee1bca7189182e64c5a192651af" kindref="member">hash</ref>[32];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="struct_cmd_get_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_get_data" kindref="compound">CmdGetData</ref><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>inventory<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="struct_cmd_get_data_1afcc68e9eec57ce069fcdc37815837d6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_cmd_get_data_1afcc68e9eec57ce069fcdc37815837d6d" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//inventory<sp/>vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="struct_cmd_get_data_1aa0131206f52d276b9c712b34aaff1592" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_inventory_vector" kindref="compound" tooltip="Structure for InventoryVector objects.">InventoryVector</ref><sp/>*<ref refid="struct_cmd_get_data_1aa0131206f52d276b9c712b34aaff1592" kindref="member">InvVect</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="struct_cmd_get_blocks" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_get_blocks" kindref="compound">CmdGetBlocks</ref><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="struct_cmd_get_blocks_1acd99bb05ca015e7d74448acb1deba7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_get_blocks_1acd99bb05ca015e7d74448acb1deba7ca" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="130" refid="struct_cmd_get_blocks_1a3393c33019315a8d7ff4d5e48b0577e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_get_blocks_1a3393c33019315a8d7ff4d5e48b0577e8" kindref="member">startCount</ref>;</highlight></codeline>
+<codeline lineno="131" refid="struct_cmd_get_blocks_1a95789ecf55183a47b1668d549ba4a927" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_get_blocks_1a95789ecf55183a47b1668d549ba4a927" kindref="member">blockLocatorHashes</ref>[32];</highlight></codeline>
+<codeline lineno="132" refid="struct_cmd_get_blocks_1aa16ea670ce42c626f461fc49f74ddcd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_get_blocks_1aa16ea670ce42c626f461fc49f74ddcd3" kindref="member">hashStop</ref>[32];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="struct_cmd_get_headers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_get_headers" kindref="compound">CmdGetHeaders</ref><sp/>{</highlight></codeline>
+<codeline lineno="137" refid="struct_cmd_get_headers_1a3393c33019315a8d7ff4d5e48b0577e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_get_headers_1a3393c33019315a8d7ff4d5e48b0577e8" kindref="member">startCount</ref>;</highlight></codeline>
+<codeline lineno="138" refid="struct_cmd_get_headers_1afb278e99e58307608e33751cd490c97b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_get_headers_1afb278e99e58307608e33751cd490c97b" kindref="member">hashStart</ref>[32];</highlight></codeline>
+<codeline lineno="139" refid="struct_cmd_get_headers_1aa16ea670ce42c626f461fc49f74ddcd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmd_get_headers_1aa16ea670ce42c626f461fc49f74ddcd3" kindref="member">hashStop</ref>[32];</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="struct_cmd_tranx" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_tranx" kindref="compound">CmdTranx</ref><sp/>{</highlight></codeline>
+<codeline lineno="143" refid="struct_cmd_tranx_1acd99bb05ca015e7d74448acb1deba7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_tranx_1acd99bb05ca015e7d74448acb1deba7ca" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="144" refid="struct_cmd_tranx_1a29cd42e9db0010d7b5bb283bf2604765" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_tranx_1a29cd42e9db0010d7b5bb283bf2604765" kindref="member">TranxIn_count</ref>;</highlight></codeline>
+<codeline lineno="145" refid="struct_cmd_tranx_1a5b66f083197ffa9abe32484db40fcd39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_tranx_in" kindref="compound">TranxIn</ref><sp/>*<ref refid="struct_cmd_tranx_1a5b66f083197ffa9abe32484db40fcd39" kindref="member">TranxInput</ref>;</highlight></codeline>
+<codeline lineno="146" refid="struct_cmd_tranx_1a64038348b38f758be9417994e2f823a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_tranx_1a64038348b38f758be9417994e2f823a3" kindref="member">TranxOut_count</ref>;</highlight></codeline>
+<codeline lineno="147" refid="struct_cmd_tranx_1afd763f710fae1f1cefe4c6260c1a5568" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_tranx_out" kindref="compound">TranxOut</ref><sp/>*<ref refid="struct_cmd_tranx_1afd763f710fae1f1cefe4c6260c1a5568" kindref="member">TranxOutput</ref>;</highlight></codeline>
+<codeline lineno="148" refid="struct_cmd_tranx_1a54e5a5f03919a5838067d81ddc5efda4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmd_tranx_1a54e5a5f03919a5838067d81ddc5efda4" kindref="member">lock_time</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="struct_cmdblock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmdblock" kindref="compound">Cmdblock</ref><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="struct_cmdblock_1acd99bb05ca015e7d74448acb1deba7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmdblock_1acd99bb05ca015e7d74448acb1deba7ca" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="154" refid="struct_cmdblock_1a742f80039bbe773ec691c1ce0ae01f95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmdblock_1a742f80039bbe773ec691c1ce0ae01f95" kindref="member">prev_block</ref>[32];</highlight></codeline>
+<codeline lineno="155" refid="struct_cmdblock_1a6a88b5c7b1ef72e9ba761f9f8d4525a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_cmdblock_1a6a88b5c7b1ef72e9ba761f9f8d4525a4" kindref="member">markle_root</ref>[32];</highlight></codeline>
+<codeline lineno="156" refid="struct_cmdblock_1ab20b0c7772544cf5d318507f34231fbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmdblock_1ab20b0c7772544cf5d318507f34231fbe" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="157" refid="struct_cmdblock_1afeda3c90a255fe7e4b1e99b4308cce2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmdblock_1afeda3c90a255fe7e4b1e99b4308cce2c" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="158" refid="struct_cmdblock_1aa2f9785a9d9116cc4592db06375cb887" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmdblock_1aa2f9785a9d9116cc4592db06375cb887" kindref="member">nonce</ref>;</highlight></codeline>
+<codeline lineno="159" refid="struct_cmdblock_1abdb4932647cd3ed8e9c289c37834b136" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_cmdblock_1abdb4932647cd3ed8e9c289c37834b136" kindref="member">txnCount</ref>;</highlight></codeline>
+<codeline lineno="160" refid="struct_cmdblock_1a4e32cc9ad3444c21452f9445fb3eb9ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tx<sp/>*<ref refid="struct_cmdblock_1a4e32cc9ad3444c21452f9445fb3eb9ab" kindref="member">txns</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="struct_cmd_headers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_headers" kindref="compound">CmdHeaders</ref><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="struct_cmd_get_addr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_get_addr" kindref="compound">CmdGetAddr</ref><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="struct_cmd_check_order" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_check_order" kindref="compound">CmdCheckOrder</ref><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="struct_cmd_submit_order" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_submit_order" kindref="compound">CmdSubmitOrder</ref><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="struct_cmd_reply" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_reply" kindref="compound">CmdReply</ref><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="struct_cmd_ping" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_ping" kindref="compound">CmdPing</ref><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="struct_cmd_alert" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cmd_alert" kindref="compound">CmdAlert</ref><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COMMANDS_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/NetworkProtocol/Commands.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_m_i_byte_array" kind="struct" prot="public">
+    <compoundname>ByteArray</compoundname>
+    <includes refid="_m_i_byte_array_8h" local="no">ByteArray.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_i_byte_array_1ad0814be49cef65d1662b278c4c591509" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_object" kindref="compound">Object</ref></type>
+        <definition>Object base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_m_i_object" kindref="compound">Object</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="30" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_i_shared_data" kindref="compound">SharedData</ref> *</type>
+        <definition>SharedData* sharedData</definition>
+        <argsstring></argsstring>
+        <name>sharedData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Underlying byte data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="31" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="_m_i_byte_array_8h_1a13f783bb0fcd091b7bfb25cfd7f9d1c0" compoundref="_m_i_byte_array_8c" startline="235" endline="241">changeByteArrayDataReference</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a949c73acfab0c6c4d83ad8c07d999364" compoundref="_m_i_byte_array_8c" startline="17" endline="24">copyByteArrayToByteArray</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a0639a384c5603ad22f8440fcbb831f9a" compoundref="_m_i_byte_array_8c" startline="89" endline="107">initializeByteArraySubsectionReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Offset from the beginning of the byte data to the beginning of this array </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="32" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="_m_i_byte_array_8h_1a13f783bb0fcd091b7bfb25cfd7f9d1c0" compoundref="_m_i_byte_array_8c" startline="235" endline="241">changeByteArrayDataReference</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a949c73acfab0c6c4d83ad8c07d999364" compoundref="_m_i_byte_array_8c" startline="17" endline="24">copyByteArrayToByteArray</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a0639a384c5603ad22f8440fcbb831f9a" compoundref="_m_i_byte_array_8c" startline="89" endline="107">initializeByteArraySubsectionReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of byte array. Set to _BYTE_ARRAY_UNKNOWN_LENGTH if unknown. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="33" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="_m_i_transaction_8h_1a6d56a2cbd0b4d755eb1ea24da1f204d1" compoundref="_m_i_transaction_8c" startline="178" endline="188">calculateTransactionHash</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a949c73acfab0c6c4d83ad8c07d999364" compoundref="_m_i_byte_array_8c" startline="17" endline="24">copyByteArrayToByteArray</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3fa07e825a149c98d148b215a5d5a78a" compoundref="_m_i_block_8c" startline="416" endline="449">dealWithSerializationTran</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a292775bd99c32b5b2f51b8d71d10812e" compoundref="_m_i_block_8c" startline="326" endline="353">deserializeWithOnlyHeaders</referencedby>
+        <referencedby refid="_m_i_block_8h_1a04d2d2defba76492762c0eb4b7ccd206" compoundref="_m_i_block_8c" startline="261" endline="324">deserializeWithTransactions</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3dab3fff46c9b386501414a6b13f5192" compoundref="_m_i_block_8c" startline="368" endline="396">serializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_i_byte_array_1aeb0776cff292839518da5f5a48884fd9" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* onErrorReceived)(Error error, char *,...)</definition>
+        <argsstring>)(Error error, char *,...)</argsstring>
+        <name>onErrorReceived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="34" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="_m_i_byte_array_8h_1a3350bfefcab7bfb6e48c9865b342bec0" compoundref="_m_i_byte_array_8c" startline="61" endline="86">getByteArraySubsectionReference</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a0639a384c5603ad22f8440fcbb831f9a" compoundref="_m_i_byte_array_8c" startline="89" endline="107">initializeByteArraySubsectionReference</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_m_i_byte_array_8h" kindref="compound">ByteArray.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="74">
+        <label>SharedData</label>
+        <link refid="struct_m_i_shared_data"/>
+      </node>
+      <node id="73">
+        <label>Object</label>
+        <link refid="struct_m_i_object"/>
+      </node>
+      <node id="72">
+        <label>ByteArray</label>
+        <link refid="struct_m_i_byte_array"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="74" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="29" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" bodystart="29" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_m_i_byte_array_1ad0814be49cef65d1662b278c4c591509" prot="public" virt="non-virtual"><scope>ByteArray</scope><name>base</name></member>
+      <member refid="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" prot="public" virt="non-virtual"><scope>ByteArray</scope><name>length</name></member>
+      <member refid="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" prot="public" virt="non-virtual"><scope>ByteArray</scope><name>offset</name></member>
+      <member refid="struct_m_i_byte_array_1aeb0776cff292839518da5f5a48884fd9" prot="public" virt="non-virtual"><scope>ByteArray</scope><name>onErrorReceived</name></member>
+      <member refid="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" prot="public" virt="non-virtual"><scope>ByteArray</scope><name>sharedData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

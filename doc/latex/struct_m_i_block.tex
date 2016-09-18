@@ -1,0 +1,149 @@
+\hypertarget{struct_m_i_block}{
+\section{Block Struct Reference}
+\label{struct_m_i_block}\index{Block@{Block}}
+}
+
+
+{\ttfamily \#include $<$Block.h$>$}
+
+
+
+Collaboration diagram for Block:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_m_i_block__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_message}{Message} \hyperlink{struct_m_i_block_a487e4843cf1cf7397eb2e1bcf91cbf3b}{base}
+\item 
+uint8\_\-t \hyperlink{struct_m_i_block_a7ff9da008bf055da1f1ba994c562057d}{hash} \mbox{[}32\mbox{]}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_block_acd99bb05ca015e7d74448acb1deba7ca}{version}
+\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{struct_m_i_block_a942caf6700f7eee4a96b41503337886c}{previousBlockHash}
+\item 
+\hyperlink{struct_m_i_byte_array}{ByteArray} $\ast$ \hyperlink{struct_m_i_block_a04cf19a780652ad8d0123ed9fa18b408}{merkleTreeRootHash}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_block_ae73654f333e4363463ad8c594eca1905}{time}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_block_a695e5800ad1fd403c0e72d918eaec97c}{target}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_block_aa2f9785a9d9116cc4592db06375cb887}{nonce}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_block_ac9749ca92207f8d50ecc2b0f904e2424}{numOfTransactions}
+\item 
+\hyperlink{struct_m_i_transaction}{Transaction} $\ast$$\ast$ \hyperlink{struct_m_i_block_a722f3f2bbe4a11072741a214e2750a42}{transactions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+file defines a bitcoin block.  contain transaction information and use a proof of work system to show that they are legitimate. @ The definition for \hyperlink{struct_m_i_block}{Block} objects. \begin{DoxySeeAlso}{See also}
+\hyperlink{_m_i_block_8h}{Block.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 23 of file Block.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_m_i_block_a487e4843cf1cf7397eb2e1bcf91cbf3b}{
+\index{Block@{Block}!base@{base}}
+\index{base@{base}!Block@{Block}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_m_i_block_a487e4843cf1cf7397eb2e1bcf91cbf3b}
+
+
+Definition at line 24 of file Block.h.
+
+\hypertarget{struct_m_i_block_a7ff9da008bf055da1f1ba994c562057d}{
+\index{Block@{Block}!hash@{hash}}
+\index{hash@{hash}!Block@{Block}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf hash}\mbox{[}32\mbox{]}}}
+\label{struct_m_i_block_a7ff9da008bf055da1f1ba994c562057d}
+
+
+Definition at line 25 of file Block.h.
+
+\hypertarget{struct_m_i_block_a04cf19a780652ad8d0123ed9fa18b408}{
+\index{Block@{Block}!merkleTreeRootHash@{merkleTreeRootHash}}
+\index{merkleTreeRootHash@{merkleTreeRootHash}!Block@{Block}}
+\subsubsection[{merkleTreeRootHash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf merkleTreeRootHash}}}
+\label{struct_m_i_block_a04cf19a780652ad8d0123ed9fa18b408}
+
+
+Definition at line 28 of file Block.h.
+
+\hypertarget{struct_m_i_block_aa2f9785a9d9116cc4592db06375cb887}{
+\index{Block@{Block}!nonce@{nonce}}
+\index{nonce@{nonce}!Block@{Block}}
+\subsubsection[{nonce}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf nonce}}}
+\label{struct_m_i_block_aa2f9785a9d9116cc4592db06375cb887}
+
+
+Definition at line 31 of file Block.h.
+
+\hypertarget{struct_m_i_block_ac9749ca92207f8d50ecc2b0f904e2424}{
+\index{Block@{Block}!numOfTransactions@{numOfTransactions}}
+\index{numOfTransactions@{numOfTransactions}!Block@{Block}}
+\subsubsection[{numOfTransactions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf numOfTransactions}}}
+\label{struct_m_i_block_ac9749ca92207f8d50ecc2b0f904e2424}
+
+
+Definition at line 32 of file Block.h.
+
+\hypertarget{struct_m_i_block_a942caf6700f7eee4a96b41503337886c}{
+\index{Block@{Block}!previousBlockHash@{previousBlockHash}}
+\index{previousBlockHash@{previousBlockHash}!Block@{Block}}
+\subsubsection[{previousBlockHash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf previousBlockHash}}}
+\label{struct_m_i_block_a942caf6700f7eee4a96b41503337886c}
+
+
+Definition at line 27 of file Block.h.
+
+\hypertarget{struct_m_i_block_a695e5800ad1fd403c0e72d918eaec97c}{
+\index{Block@{Block}!target@{target}}
+\index{target@{target}!Block@{Block}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf target}}}
+\label{struct_m_i_block_a695e5800ad1fd403c0e72d918eaec97c}
+
+
+Definition at line 30 of file Block.h.
+
+\hypertarget{struct_m_i_block_ae73654f333e4363463ad8c594eca1905}{
+\index{Block@{Block}!time@{time}}
+\index{time@{time}!Block@{Block}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf time}}}
+\label{struct_m_i_block_ae73654f333e4363463ad8c594eca1905}
+
+
+Definition at line 29 of file Block.h.
+
+\hypertarget{struct_m_i_block_a722f3f2bbe4a11072741a214e2750a42}{
+\index{Block@{Block}!transactions@{transactions}}
+\index{transactions@{transactions}!Block@{Block}}
+\subsubsection[{transactions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transaction}$\ast$$\ast$ {\bf transactions}}}
+\label{struct_m_i_block_a722f3f2bbe4a11072741a214e2750a42}
+
+
+Definition at line 33 of file Block.h.
+
+\hypertarget{struct_m_i_block_acd99bb05ca015e7d74448acb1deba7ca}{
+\index{Block@{Block}!version@{version}}
+\index{version@{version}!Block@{Block}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf version}}}
+\label{struct_m_i_block_acd99bb05ca015e7d74448acb1deba7ca}
+
+
+Definition at line 26 of file Block.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Object/Message/\hyperlink{_m_i_block_8h}{Block.h}\end{DoxyCompactItemize}

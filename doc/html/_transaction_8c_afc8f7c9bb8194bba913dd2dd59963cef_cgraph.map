@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_transaction_8c.html#ab6777f2e913778848e00c770ef6f4e8f" title="Creates a new Transaction object from byte data. Should be serialised for object data." alt="" coords="296,59,541,88"/>
+<area shape="rect" id="node5" href="$_message_8c.html#ad477d3fce4b01d2eea87ff527a7f33d5" title="Gets a Message from another object. Use this to avoid casts." alt="" coords="631,5,724,35"/>
+<area shape="rect" id="node7" href="$_object_8c.html#a7e62b3171fb0a961986921ef35498180" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="639,59,716,88"/>
+<area shape="rect" id="node9" href="$_object_8c.html#a5f22211b2f99a33c1b4b7ad544ce108a" title="Increase the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="591,112,764,141"/>
+</map>

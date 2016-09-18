@@ -1,0 +1,1672 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_m_i_byte_array_8h" kind="file">
+    <compoundname>ByteArray.h</compoundname>
+    <includes refid="_m_i_object_8h" local="yes">Object.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">../Constants.h</includes>
+    <includedby refid="_m_i_byte_array_8c" local="yes">Object/ByteArray.c</includedby>
+    <includedby refid="_m_i_script_8h" local="yes">Object/Script.h</includedby>
+    <incdepgraph>
+      <node id="315">
+        <label>stdint.h</label>
+      </node>
+      <node id="316">
+        <label>stdlib.h</label>
+      </node>
+      <node id="317">
+        <label>../Constants.h</label>
+      </node>
+      <node id="318">
+        <label>string.h</label>
+      </node>
+      <node id="313">
+        <label>Object/ByteArray.h</label>
+        <link refid="ByteArray.h"/>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+      <node id="314">
+        <label>Object.h</label>
+        <link refid="_m_i_object_8h"/>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="325">
+        <label>Object/Message/Block.c</label>
+        <link refid="_m_i_block_8c"/>
+      </node>
+      <node id="324">
+        <label>Object/Message/Block.h</label>
+        <link refid="_m_i_block_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>Object/Message/Transaction.c</label>
+        <link refid="_m_i_transaction_8c"/>
+      </node>
+      <node id="323">
+        <label>Object/Message/Transaction.h</label>
+        <link refid="_m_i_transaction_8h"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+      </node>
+      <node id="327">
+        <label>Object/Message/TransactionInput.c</label>
+        <link refid="_m_i_transaction_input_8c"/>
+      </node>
+      <node id="322">
+        <label>Object/Message/TransactionInput.h</label>
+        <link refid="_m_i_transaction_input_8h"/>
+        <childnode refid="323" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>Object/Script.c</label>
+        <link refid="_m_i_script_8c"/>
+      </node>
+      <node id="321">
+        <label>Object/Script.h</label>
+        <link refid="_m_i_script_8h"/>
+        <childnode refid="322" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>Object/ByteArray.c</label>
+        <link refid="_m_i_byte_array_8c"/>
+      </node>
+      <node id="319">
+        <label>Object/ByteArray.h</label>
+        <link refid="ByteArray.h"/>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_m_i_shared_data" prot="public">SharedData</innerclass>
+    <innerclass refid="struct_m_i_byte_array" prot="public">ByteArray</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a531926752e64e4d76489d611b593df63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* createNewByteArrayFromString</definition>
+        <argsstring>(char *string, int terminator, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewByteArrayFromString</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>terminator</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object from a C string. The termination character is not included in the new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to put into a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, include the termination character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a2db5c01eeb9fbe1d8350ab99392be437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* createNewByteArrayOfSize</definition>
+        <argsstring>(uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewByteArrayOfSize</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates an empty <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An empty <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="53" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="243" bodyend="255"/>
+        <references refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" compoundref="_m_i_object_8h" startline="29">Object::destroy</references>
+        <references refid="_m_i_byte_array_8c_1ab0ba2a57716ecf23d43924647b4175bb" compoundref="_m_i_byte_array_8c" startline="110" endline="116">destroyByteArray</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_byte_array_8c_1a04dd144d29de492350468e12c2808319" compoundref="_m_i_byte_array_8c" startline="256" endline="274">initByteArrayOfSize</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a3187b5ac91a1acef918bbc074d27dd15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* createNewByteArrayFromData</definition>
+        <argsstring>(uint8_t *data, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewByteArrayFromData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> using data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. This should be dynamically allocated. The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object will take care of it&apos;s memory management so do not free this data once passed into this constructor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a9d079ea9294ff1dfc57d978c0d0402cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* createNewByteArrayUsingDataCopy</definition>
+        <argsstring>(uint8_t *data, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>createNewByteArrayUsingDataCopy</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> using data which is copied. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. This data is copied. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="71" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="275" bodyend="287"/>
+        <references refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" compoundref="_m_i_object_8h" startline="29">Object::destroy</references>
+        <references refid="_m_i_byte_array_8c_1ab0ba2a57716ecf23d43924647b4175bb" compoundref="_m_i_byte_array_8c" startline="110" endline="116">destroyByteArray</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_byte_array_8c_1af36c0013b2be340fb2c017c8bd0d808f" compoundref="_m_i_byte_array_8c" startline="288" endline="303">initNewByteArrayFromData</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <referencedby refid="_m_i_block_8h_1ab4caa099f720462b32d9e74406309b1d" compoundref="_m_i_block_8c" startline="133" endline="153">initBlockWithOriginalBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a673fc907bf90724f9fbfad124d3ed9e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* getByteArray</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>getByteArray</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Gets a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> from another object. Use this to avoid casts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to obtain the <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="78" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="39" bodyend="44"/>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1ae48b5b2d080727eda43a519e18f2f509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initByteArrayFromString</definition>
+        <argsstring>(ByteArray *self, char *string, int terminator, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initByteArrayFromString</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>terminator</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object from a C string. The termination character is not included in the new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to put into a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If tru, include the termination character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a04dd144d29de492350468e12c2808319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initByteArrayOfSize</definition>
+        <argsstring>(ByteArray *self, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initByteArrayOfSize</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Initialises an empty <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="98" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="256" bodyend="274"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <references refid="_m_i_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_m_i_constants_8h" startline="66">TRUE</references>
+        <referencedby refid="_m_i_byte_array_8h_1a2db5c01eeb9fbe1d8350ab99392be437" compoundref="_m_i_byte_array_8c" startline="243" endline="255">createNewByteArrayOfSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1af36c0013b2be340fb2c017c8bd0d808f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initNewByteArrayFromData</definition>
+        <argsstring>(ByteArray *self, uint8_t *data, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initNewByteArrayFromData</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> using data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. This should be dynamically allocated. The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object will take care of it&apos;s memory management so do not free this data once passed into this constructor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="108" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="288" bodyend="303"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <references refid="_m_i_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_m_i_constants_8h" startline="66">TRUE</references>
+        <referencedby refid="_m_i_byte_array_8h_1a9d079ea9294ff1dfc57d978c0d0402cf" compoundref="_m_i_byte_array_8c" startline="275" endline="287">createNewByteArrayUsingDataCopy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a6e6639e693523dd0cfba52ae63cf0542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initNewByteArrayUsingDataCopy</definition>
+        <argsstring>(ByteArray *self, uint8_t *data, uint32_t size, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>initNewByteArrayUsingDataCopy</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> using data which is copied. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. This data is copied. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in bytes for the new array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>onErrorReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Engine for errors. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a0639a384c5603ad22f8440fcbb831f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initializeByteArraySubsectionReference</definition>
+        <argsstring>(ByteArray *self, ByteArray *refByteArray, uint32_t offset, uint32_t length)</argsstring>
+        <name>initializeByteArraySubsectionReference</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>refByteArray</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Initialises a reference <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> to a subsection of an <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to initialise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to the start of the reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the reference. If 0 the length is set to be the same as the reference <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="128" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="89" bodyend="107"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" compoundref="_m_i_byte_array_8h" startline="32">ByteArray::offset</references>
+        <references refid="struct_m_i_byte_array_1aeb0776cff292839518da5f5a48884fd9" compoundref="_m_i_byte_array_8h" startline="34">ByteArray::onErrorReceived</references>
+        <references refid="struct_m_i_shared_data_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_m_i_byte_array_8h" startline="23">SharedData::referenceCount</references>
+        <references refid="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" compoundref="_m_i_byte_array_8h" startline="31">ByteArray::sharedData</references>
+        <references refid="_m_i_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_m_i_constants_8h" startline="66">TRUE</references>
+        <referencedby refid="_m_i_byte_array_8h_1a3350bfefcab7bfb6e48c9865b342bec0" compoundref="_m_i_byte_array_8c" startline="61" endline="86">getByteArraySubsectionReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1ab0ba2a57716ecf23d43924647b4175bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void destroyByteArray</definition>
+        <argsstring>(void *self)</argsstring>
+        <name>destroyByteArray</name>
+        <param>
+          <type>void *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Destroys a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to destroy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="134" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="110" bodyend="116"/>
+        <references refid="_m_i_object_8c_1a71704ab4fbecb7d85276d32649b5349a" compoundref="_m_i_object_8c" startline="51" endline="55">destroyObject</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_byte_array_8c_1a34dc195b61536b69d608bc90fc123194" compoundref="_m_i_byte_array_8c" startline="118" endline="129">releaseByteArraySharedDataReference</references>
+        <referencedby refid="_m_i_byte_array_8h_1a2db5c01eeb9fbe1d8350ab99392be437" compoundref="_m_i_byte_array_8c" startline="243" endline="255">createNewByteArrayOfSize</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a9d079ea9294ff1dfc57d978c0d0402cf" compoundref="_m_i_byte_array_8c" startline="275" endline="287">createNewByteArrayUsingDataCopy</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1a3350bfefcab7bfb6e48c9865b342bec0" compoundref="_m_i_byte_array_8c" startline="61" endline="86">getByteArraySubsectionReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a34dc195b61536b69d608bc90fc123194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void releaseByteArraySharedDataReference</definition>
+        <argsstring>(ByteArray *self)</argsstring>
+        <name>releaseByteArraySharedDataReference</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Releases a reference to shared byte data and frees the data if necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object with the <ref refid="struct_m_i_shared_data" kindref="compound">SharedData</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="140" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="118" bodyend="129"/>
+        <referencedby refid="_m_i_byte_array_8h_1a13f783bb0fcd091b7bfb25cfd7f9d1c0" compoundref="_m_i_byte_array_8c" startline="235" endline="241">changeByteArrayDataReference</referencedby>
+        <referencedby refid="_m_i_byte_array_8h_1ab0ba2a57716ecf23d43924647b4175bb" compoundref="_m_i_byte_array_8c" startline="110" endline="116">destroyByteArray</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1aa74c92f75755b2c258938fb3819d94ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t readInt16AsLittleEndianFromByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t offset)</argsstring>
+        <name>readInt16AsLittleEndianFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Reads a 16 bit integer from a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> as little-endian. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to where to start the read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 16 bit integer. This can be cast to a signed integer if reading integer as a signed value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="149" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="132" bodyend="142"/>
+        <referencedby refid="_m_i_var_len_int_8h_1a0492e373e2d12e41b1764b580f287af9" compoundref="_m_i_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1aab10685017fe16769d5b22c826ada9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t readInt32AsLittleEndianFromByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t offset)</argsstring>
+        <name>readInt32AsLittleEndianFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Reads a 32 bit integer from a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> as little-endian. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to where to start the read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 32 bit integer. This can be cast to a signed integer if reading integer as a signed value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="157" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="144" bodyend="156"/>
+        <referencedby refid="_m_i_var_len_int_8h_1a0492e373e2d12e41b1764b580f287af9" compoundref="_m_i_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a59271d773239202481b815d6825c2587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t readInt64AsLittleEndianFromByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t offset)</argsstring>
+        <name>readInt64AsLittleEndianFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Reads a 64 bit integer from the <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> as little-endian. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to where to start the read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 64 bit integer. This can be cast to a signed integer if reading integer as a signed value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="165" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="158" bodyend="174"/>
+        <referencedby refid="_m_i_var_len_int_8h_1a0492e373e2d12e41b1764b580f287af9" compoundref="_m_i_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a56867469dc655667364a48de5c2a2e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_m_i_constants_8h_1a781d5143d586867ef558b0d8b3e889b8" kindref="member">Compare</ref></type>
+        <definition>Compare compareByteArrays</definition>
+        <argsstring>(ByteArray *self, ByteArray *second)</argsstring>
+        <name>compareByteArrays</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+<para>Compares a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> to another <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> and returns with a Compare value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to compare </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Another <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to compare with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the lengths are different, _COMPARE_MORE_THAN if &quot;self&quot; if longer, else _COMPARE_LESS_THAN. If the bytes are equal _COMPARE_EQUAL, else _COMPARE_MORE_THAN if the first different byte if higher in &quot;self&quot;, otherwise _COMPARE_LESS_THAN. The return value can be treated like the return value to memcmp. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a013fc912915268f2358abf3582fb09c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* copyByteArray</definition>
+        <argsstring>(ByteArray *self)</argsstring>
+        <name>copyByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Copies a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to copy </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a949c73acfab0c6c4d83ad8c07d999364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copyByteArrayToByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t writeOffset, ByteArray *source)</argsstring>
+        <name>copyByteArrayToByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>writeOffset</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copies another byte array to this byte array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to copy to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to begin writing to in self. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> to copy from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="186" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="17" bodyend="24"/>
+        <references refid="struct_m_i_shared_data_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_m_i_byte_array_8h" startline="22">SharedData::data</references>
+        <references refid="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" compoundref="_m_i_byte_array_8h" startline="33">ByteArray::length</references>
+        <references refid="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" compoundref="_m_i_byte_array_8h" startline="32">ByteArray::offset</references>
+        <references refid="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" compoundref="_m_i_byte_array_8h" startline="31">ByteArray::sharedData</references>
+        <referencedby refid="_m_i_block_8h_1a3a23a3b87c401a07d3f8b224355d523a" compoundref="_m_i_block_8c" startline="401" endline="411">dealWithSerializationHeader</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1adc65210bbb2b92c34d9157dbb321da96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copySubsectionOfByteArrayToByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t writeOffset, ByteArray *source, uint32_t readOffset, uint32_t length)</argsstring>
+        <name>copySubsectionOfByteArrayToByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>writeOffset</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>readOffset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Copies a section of another byte array to this byte array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to begin writing </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> to copy from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset of the source array to begin reading. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length to copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a3d861ce4c4d1c2d63c88594130524be1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* createNewByteArrayFromSubsection</definition>
+        <argsstring>(ByteArray *self, uint32_t offset, uint32_t length)</argsstring>
+        <name>createNewByteArrayFromSubsection</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Copies a subsection of a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to copy from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to the start of the copy. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="206"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a3350bfefcab7bfb6e48c9865b342bec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+        <definition>ByteArray* getByteArraySubsectionReference</definition>
+        <argsstring>(ByteArray *self, uint32_t offset, uint32_t length)</argsstring>
+        <name>getByteArraySubsectionReference</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>References a subsection of a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to the start of the reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the reference. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="216" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="61" bodyend="86"/>
+        <references refid="struct_m_i_object_1aa353725933e843001d4feb03f8268121" compoundref="_m_i_object_8h" startline="29">Object::destroy</references>
+        <references refid="_m_i_byte_array_8c_1ab0ba2a57716ecf23d43924647b4175bb" compoundref="_m_i_byte_array_8c" startline="110" endline="116">destroyByteArray</references>
+        <references refid="_m_i_object_8c_1a0f72e3416dc7f6c52cfb1bf49baac3f2" compoundref="_m_i_object_8c" startline="42" endline="47">getObject</references>
+        <references refid="_m_i_byte_array_8c_1a0639a384c5603ad22f8440fcbb831f9a" compoundref="_m_i_byte_array_8c" startline="89" endline="107">initializeByteArraySubsectionReference</references>
+        <references refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968ad4cc7a4523a7fd575f8d7ae42d20087f" compoundref="_m_i_constants_8h" startline="52">_ERROR_OUT_OF_MEMORY</references>
+        <references refid="struct_m_i_byte_array_1aeb0776cff292839518da5f5a48884fd9" compoundref="_m_i_byte_array_8h" startline="34">ByteArray::onErrorReceived</references>
+        <referencedby refid="_m_i_script_8h_1aa0a40e0353c30a695a1f335b4425934b" compoundref="_m_i_script_8c" startline="15" endline="22">createNewScriptFromReference</referencedby>
+        <referencedby refid="_m_i_block_8h_1a3fa07e825a149c98d148b215a5d5a78a" compoundref="_m_i_block_8c" startline="416" endline="449">dealWithSerializationTran</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a8777f695fbbb547e32b9c0347b6b2026" compoundref="_m_i_transaction_8c" startline="368" endline="518">deserializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1ad375fb1ac6adc4cfeafc59b89ab811b9" compoundref="_m_i_transaction_input_8c" startline="179" endline="240">deserializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a04d2d2defba76492762c0eb4b7ccd206" compoundref="_m_i_block_8c" startline="261" endline="324">deserializeWithTransactions</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1af0eafd008dc71865431262ed1e29b4f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t getByteFromByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t index)</argsstring>
+        <name>getByteFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get a byte from the <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. A byte will be returned from self-&gt;offset+index in the underlying data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index in the array to get the byte from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The byte </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="224" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="53" bodyend="59"/>
+        <referencedby refid="_m_i_var_len_int_8h_1a0492e373e2d12e41b1764b580f287af9" compoundref="_m_i_var_len_int_8c" startline="13" endline="43">decodeVarLenInt</referencedby>
+        <referencedby refid="_m_i_block_8h_1a9b85a6f60672aea0471f7b6a7e9930ba" compoundref="_m_i_block_8c" startline="220" endline="260">deserializeBlock</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1aec03af57e070260915cbf2491802df55" compoundref="_m_i_transaction_output_8c" startline="165" endline="233">deserializeTransactionOutput</referencedby>
+        <referencedby refid="_m_i_block_8h_1a292775bd99c32b5b2f51b8d71d10812e" compoundref="_m_i_block_8c" startline="326" endline="353">deserializeWithOnlyHeaders</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a29dc51ffba948226c028baf425096408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* getDataFromByteArray</definition>
+        <argsstring>(ByteArray *self)</argsstring>
+        <name>getDataFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Get a pointer to the underlying data starting at self-&gt;offset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The pointer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="230" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="46" bodyend="51"/>
+        <referencedby refid="_m_i_block_8h_1a3913a1a3d961d7cc2c479de327337bae" compoundref="_m_i_block_8c" startline="191" endline="197">calculateBlockHash</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6d56a2cbd0b4d755eb1ea24da1f204d1" compoundref="_m_i_transaction_8c" startline="178" endline="188">calculateTransactionHash</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a448f6cf170b53d4c61e7d15c405fcb4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t getLastByteFromByteArray</definition>
+        <argsstring>(ByteArray *self)</argsstring>
+        <name>getLastByteFromByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Get the last byte from the <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. A byte will be returned from self-&gt;offset+self-&gt;length in the underlying data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The last byte </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="236"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1aff8e512253db16092e10359b31e732b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isNullByteArray</definition>
+        <argsstring>(ByteArray *self)</argsstring>
+        <name>isNullByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Determines if a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> is null. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if all bytes are zero, else false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="242" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="27" bodyend="36"/>
+        <references refid="_m_i_constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="_m_i_constants_8h" startline="65">FALSE</references>
+        <references refid="_m_i_constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="_m_i_constants_8h" startline="66">TRUE</references>
+        <referencedby refid="_m_i_transaction_8h_1a61c55efd86e87797526fc63273ad61d5" compoundref="_m_i_transaction_8c" startline="232" endline="241">isCoinBase</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a4e0892416e1efc8384687e86966ed3a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setByteInByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t index, uint8_t byte)</argsstring>
+        <name>setByteInByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+<para>Set a byte into the array. This will be set at self-&gt;offset+index in the underlying data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index in the array to set the byte </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte to be set. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="249" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="177" bodyend="184"/>
+        <referencedby refid="_m_i_block_8h_1a3fa07e825a149c98d148b215a5d5a78a" compoundref="_m_i_block_8c" startline="416" endline="449">dealWithSerializationTran</referencedby>
+        <referencedby refid="_m_i_var_len_int_8h_1a332f03b156163565574788bc3cedd522" compoundref="_m_i_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1aab402fbc101bb69e06fd8f00f4e65fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setBytesInByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t index, uint8_t *bytes, uint32_t length)</argsstring>
+        <name>setBytesInByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Copies a length of bytes into the array. This will be set at self-&gt;offset+index in the underlying data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index in the array to start writing. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the bytes to be copied. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="258" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="186" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a6e28c10bc73d105e1df7f1868c92a7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeInt16AsLittleEndianIntoByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t offset, uint16_t integer)</argsstring>
+        <name>writeInt16AsLittleEndianIntoByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>integer</declname>
+        </param>
+        <briefdescription>
+<para>Writes a 16 bit integer to a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> as little-endian. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to where to start the write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 16 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="266" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="196" bodyend="205"/>
+        <referencedby refid="_m_i_var_len_int_8h_1a332f03b156163565574788bc3cedd522" compoundref="_m_i_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1aa4d465553a3c7f80c1700316f2410b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeInt32AsLittleEndianIntoByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t offset, uint32_t integer)</argsstring>
+        <name>writeInt32AsLittleEndianIntoByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>integer</declname>
+        </param>
+        <briefdescription>
+<para>Writes a 32 bit integer to a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> as little-endian. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to where to start the write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 32 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="274" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="207" bodyend="217"/>
+        <referencedby refid="_m_i_block_8h_1a3a23a3b87c401a07d3f8b224355d523a" compoundref="_m_i_block_8c" startline="401" endline="411">dealWithSerializationHeader</referencedby>
+        <referencedby refid="_m_i_var_len_int_8h_1a332f03b156163565574788bc3cedd522" compoundref="_m_i_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a1abc45d369c2884698692d79091f5b2c" compoundref="_m_i_transaction_8c" startline="243" endline="366">serializeTransaction</referencedby>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1ac10e90995fc8a98db44d71607ef0ede7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeInt64AsLittleEndianIntoByteArray</definition>
+        <argsstring>(ByteArray *self, uint32_t offset, uint64_t integer)</argsstring>
+        <name>writeInt64AsLittleEndianIntoByteArray</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>integer</declname>
+        </param>
+        <briefdescription>
+<para>Writes a 64 bit integer to a <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> as little-endian. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to where to start the write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 64 bit integer to set. The argument is an unsigned integer but signed or unsigned integers are OK to pass. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="282" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="218" bodyend="232"/>
+        <referencedby refid="_m_i_var_len_int_8h_1a332f03b156163565574788bc3cedd522" compoundref="_m_i_var_len_int_8c" startline="45" endline="69">encodeVarLenInt</referencedby>
+        <referencedby refid="_m_i_transaction_8h_1a6752846ad122c4320c07ea5cb51637d5" compoundref="_m_i_transaction_8c" startline="520" endline="664">getTransactionInputHashForVerification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1aa52a35126b82631d506e65e87a4cff13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reverseBytes</definition>
+        <argsstring>(ByteArray *self)</argsstring>
+        <name>reverseBytes</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+<para>Reverses the bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to reverse </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="287"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_i_byte_array_8h_1a13f783bb0fcd091b7bfb25cfd7f9d1c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void changeByteArrayDataReference</definition>
+        <argsstring>(ByteArray *self, ByteArray *ref, uint32_t offset)</argsstring>
+        <name>changeByteArrayDataReference</name>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Changes the reference of this <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to reference the underlying data of another <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. Useful for moving byte data into single underlying data by copying the data into a larger <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> and then changing the reference to this new larger <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>self</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to change the reference for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref> object to get the reference from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset to start the reference. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="struct_m_i_byte_array" kindref="compound">ByteArray</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h" line="296" bodyfile="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.c" bodystart="235" bodyend="241"/>
+        <references refid="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" compoundref="_m_i_byte_array_8h" startline="32">ByteArray::offset</references>
+        <references refid="struct_m_i_shared_data_1ad83c3d5d3f46e6278a77cb80eb2a0705" compoundref="_m_i_byte_array_8h" startline="23">SharedData::referenceCount</references>
+        <references refid="_m_i_byte_array_8c_1a34dc195b61536b69d608bc90fc123194" compoundref="_m_i_byte_array_8c" startline="118" endline="129">releaseByteArraySharedDataReference</references>
+        <references refid="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" compoundref="_m_i_byte_array_8h" startline="31">ByteArray::sharedData</references>
+        <referencedby refid="_m_i_transaction_input_8h_1a1dc5b6d2e7b70e918572bedd9ee6abf9" compoundref="_m_i_transaction_input_8c" startline="128" endline="177">serializeTransactionInput</referencedby>
+        <referencedby refid="_m_i_transaction_output_8h_1a16b79dfd79f1bec2dce3b0865766b48e" compoundref="_m_i_transaction_output_8c" startline="125" endline="163">serializeTransactionOutput</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>ByteArray.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>03/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Abdulfatai<sp/>Popoola</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BYTEARRAY_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BYTEARRAY_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_i_object_8h" kindref="compound" tooltip="Basic object which serves as a basic block for all other objects in the system.">Object.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="struct_m_i_shared_data" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="struct_m_i_shared_data_1abe222f6d3581e7920dcad5306cc906a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_m_i_shared_data_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>;<sp/></highlight></codeline>
+<codeline lineno="23" refid="struct_m_i_shared_data_1ad83c3d5d3f46e6278a77cb80eb2a0705" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_m_i_shared_data_1ad83c3d5d3f46e6278a77cb80eb2a0705" kindref="member">referenceCount</ref>;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><ref refid="struct_m_i_shared_data" kindref="compound" tooltip="Stores byte data that can be shared amongst many ByteArrays.">SharedData</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct_m_i_byte_array" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="struct_m_i_byte_array_1ad0814be49cef65d1662b278c4c591509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_object" kindref="compound" tooltip="Base class.">Object</ref><sp/><ref refid="struct_m_i_byte_array_1ad0814be49cef65d1662b278c4c591509" kindref="member">base</ref>;<sp/></highlight></codeline>
+<codeline lineno="31" refid="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_shared_data" kindref="compound" tooltip="Stores byte data that can be shared amongst many ByteArrays.">SharedData</ref><sp/>*<sp/><ref refid="struct_m_i_byte_array_1a2092be3761112a91b7da551b8f834b02" kindref="member">sharedData</ref>;<sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_m_i_byte_array_1a894bdfa2d603d8343f8ef01dda6fcd23" kindref="member">offset</ref>;<sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_m_i_byte_array_1aebb70c2aab3407a9f05334c47131a43b" kindref="member">length</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="struct_m_i_byte_array_1aeb0776cff292839518da5f5a48884fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8h_1a531926752e64e4d76489d611b593df63" kindref="member" tooltip="Creates a ByteArray object from a C string. The termination character is not included in the new ...">createNewByteArrayFromString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>terminator,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8c_1a2db5c01eeb9fbe1d8350ab99392be437" kindref="member" tooltip="Creates an empty ByteArray object.">createNewByteArrayOfSize</ref>(uint32_t<sp/>size,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8h_1a3187b5ac91a1acef918bbc074d27dd15" kindref="member" tooltip="Creates a new ByteArray using data.">createNewByteArrayFromData</ref>(uint8_t<sp/>*<sp/>data,<sp/>uint32_t<sp/>size,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8c_1a9d079ea9294ff1dfc57d978c0d0402cf" kindref="member" tooltip="Creates a new ByteArray using data which is copied.">createNewByteArrayUsingDataCopy</ref>(uint8_t<sp/>*<sp/>data,<sp/>uint32_t<sp/>size,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8c_1a673fc907bf90724f9fbfad124d3ed9e2" kindref="member" tooltip="Gets a ByteArray from another object. Use this to avoid casts.">getByteArray</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8h_1ae48b5b2d080727eda43a519e18f2f509" kindref="member" tooltip="Initialises a ByteArray object from a C string. The termination character is not included in the ne...">initByteArrayFromString</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>terminator,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="97"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a04dd144d29de492350468e12c2808319" kindref="member" tooltip="Initialises an empty ByteArray object.">initByteArrayOfSize</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint32_t<sp/>size,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1af36c0013b2be340fb2c017c8bd0d808f" kindref="member" tooltip="Creates a new ByteArray using data.">initNewByteArrayFromData</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint8_t<sp/>*<sp/>data,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8h_1a6e6639e693523dd0cfba52ae63cf0542" kindref="member" tooltip="Creates a new ByteArray using data which is copied.">initNewByteArrayUsingDataCopy</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint8_t<sp/>*<sp/>data,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*onErrorReceived)(<ref refid="_m_i_constants_8h_1a78789cd8e7333545dd73768531261968" kindref="member">Error</ref><sp/>error,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a0639a384c5603ad22f8440fcbb831f9a" kindref="member" tooltip="Initialises a reference ByteArray to a subsection of an ByteArray.">initializeByteArraySubsectionReference</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>refByteArray,<sp/>uint32_t<sp/>offset,<sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1ab0ba2a57716ecf23d43924647b4175bb" kindref="member" tooltip="Destroys a ByteArray object.">destroyByteArray</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight><highlight class="comment">/*destroyByteArray<sp/>was<sp/>renamed<sp/>to<sp/>destroyByteArray<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a34dc195b61536b69d608bc90fc123194" kindref="member" tooltip="Releases a reference to shared byte data and frees the data if necessary.">releaseByteArraySharedDataReference</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">uint16_t<sp/><ref refid="_m_i_byte_array_8c_1aa74c92f75755b2c258938fb3819d94ab" kindref="member" tooltip="Reads a 16 bit integer from a ByteArray as little-endian.">readInt16AsLittleEndianFromByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">uint32_t<sp/><ref refid="_m_i_byte_array_8c_1aab10685017fe16769d5b22c826ada9f8" kindref="member" tooltip="Reads a 32 bit integer from a ByteArray as little-endian.">readInt32AsLittleEndianFromByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">uint64_t<sp/><ref refid="_m_i_byte_array_8c_1a59271d773239202481b815d6825c2587" kindref="member" tooltip="Reads a 64 bit integer from the ByteArray as little-endian.">readInt64AsLittleEndianFromByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="_m_i_constants_8h_1a781d5143d586867ef558b0d8b3e889b8" kindref="member">Compare</ref><sp/><ref refid="_m_i_byte_array_8h_1a56867469dc655667364a48de5c2a2e05" kindref="member" tooltip="Compares a ByteArray to another ByteArray and returns with a Compare value.">compareByteArrays</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>second);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8h_1a013fc912915268f2358abf3582fb09c4" kindref="member" tooltip="Copies a ByteArray.">copyByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">/*TODO<sp/>refactor<sp/>and<sp/>rename<sp/>to<sp/>better<sp/>name<sp/>*/</highlight></codeline>
+<codeline lineno="185"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a949c73acfab0c6c4d83ad8c07d999364" kindref="member" tooltip="Copies another byte array to this byte array.">copyByteArrayToByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint32_t<sp/>writeOffset,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>source);</highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8h_1adc65210bbb2b92c34d9157dbb321da96" kindref="member" tooltip="Copies a section of another byte array to this byte array.">copySubsectionOfByteArrayToByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>writeOffset,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>source,<sp/>uint32_t<sp/>readOffset,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8h_1a3d861ce4c4d1c2d63c88594130524be1" kindref="member" tooltip="Copies a subsection of a ByteArray.">createNewByteArrayFromSubsection</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset,<sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/><ref refid="_m_i_byte_array_8c_1a22681d5a43566996273c64d34d669806" kindref="member" tooltip="References a subsection of a ByteArray.">getByteArraySubsectionReference</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset,<sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">uint8_t<sp/><ref refid="_m_i_byte_array_8c_1af0eafd008dc71865431262ed1e29b4f2" kindref="member" tooltip="Get a byte from the ByteArray object. A byte will be returned from self-&amp;gt;offset+index in the underl...">getByteFromByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint32_t<sp/>index);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">uint8_t<sp/>*<sp/><ref refid="_m_i_byte_array_8c_1a29dc51ffba948226c028baf425096408" kindref="member" tooltip="Get a pointer to the underlying data starting at self-&amp;gt;offset.">getDataFromByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">uint8_t<sp/><ref refid="_m_i_byte_array_8h_1a448f6cf170b53d4c61e7d15c405fcb4b" kindref="member" tooltip="Get the last byte from the ByteArray object. A byte will be returned from self-&amp;gt;offset+self-&amp;gt;length...">getLastByteFromByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="242"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1aff8e512253db16092e10359b31e732b9" kindref="member" tooltip="Determines if a ByteArray is null.">isNullByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="249"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a4e0892416e1efc8384687e86966ed3a1" kindref="member" tooltip="Set a byte into the array. This will be set at self-&amp;gt;offset+index in the underlying data...">setByteInByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint32_t<sp/>index,<sp/>uint8_t<sp/>byte);</highlight></codeline>
+<codeline lineno="257"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1aab402fbc101bb69e06fd8f00f4e65fd4" kindref="member" tooltip="Copies a length of bytes into the array. This will be set at self-&amp;gt;offset+index in the underlying dat...">setBytesInByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>uint32_t<sp/>index,<sp/>uint8_t<sp/>*<sp/>bytes,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="265"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a6e28c10bc73d105e1df7f1868c92a7de" kindref="member" tooltip="Writes a 16 bit integer to a ByteArray as little-endian.">writeInt16AsLittleEndianIntoByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset,<sp/>uint16_t<sp/>integer);</highlight></codeline>
+<codeline lineno="273"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1aa4d465553a3c7f80c1700316f2410b40" kindref="member" tooltip="Writes a 32 bit integer to a ByteArray as little-endian.">writeInt32AsLittleEndianIntoByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset,<sp/>uint32_t<sp/>integer);</highlight></codeline>
+<codeline lineno="281"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1ac10e90995fc8a98db44d71607ef0ede7" kindref="member" tooltip="Writes a 64 bit integer to a ByteArray as little-endian.">writeInt64AsLittleEndianIntoByteArray</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset,<sp/>uint64_t<sp/>integer);</highlight></codeline>
+<codeline lineno="287"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8h_1aa52a35126b82631d506e65e87a4cff13" kindref="member" tooltip="Reverses the bytes.">reverseBytes</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_i_byte_array_8c_1a13f783bb0fcd091b7bfb25cfd7f9d1c0" kindref="member" tooltip="Changes the reference of this ByteArray object to reference the underlying data of another ByteAr...">changeByteArrayDataReference</ref>(<ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="struct_m_i_byte_array" kindref="compound" tooltip="Structure for ByteArray objects.">ByteArray</ref><sp/>*<sp/>ref,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BYTEARRAY_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/Bitcoin/trunk/src/Object/ByteArray.h"/>
+  </compounddef>
+</doxygen>

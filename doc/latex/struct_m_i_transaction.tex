@@ -1,0 +1,134 @@
+\hypertarget{struct_m_i_transaction}{
+\section{Transaction Struct Reference}
+\label{struct_m_i_transaction}\index{Transaction@{Transaction}}
+}
+
+
+Structure for \hyperlink{struct_m_i_transaction}{Transaction} objects.  
+
+
+
+
+{\ttfamily \#include $<$Transaction.h$>$}
+
+
+
+Collaboration diagram for Transaction:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_m_i_transaction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_i_message}{Message} \hyperlink{struct_m_i_transaction_a487e4843cf1cf7397eb2e1bcf91cbf3b}{base}
+\item 
+uint8\_\-t \hyperlink{struct_m_i_transaction_a7ff9da008bf055da1f1ba994c562057d}{hash} \mbox{[}32\mbox{]}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_transaction_acd99bb05ca015e7d74448acb1deba7ca}{version}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_transaction_a84a553b85f92fbe799c9e927aeae4491}{numOfTransactionInput}
+\item 
+\hyperlink{struct_m_i_transaction_input}{TransactionInput} $\ast$$\ast$ \hyperlink{struct_m_i_transaction_ad10010cd6a4f129706cf61bd0dce100f}{inputs}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_transaction_aa6fd5ebfb79f09bf74e1b0f63f557348}{numOfTransactionOutput}
+\item 
+\hyperlink{struct_m_i_transaction_output}{TransactionOutput} $\ast$$\ast$ \hyperlink{struct_m_i_transaction_af782b989431a6d6831659788e15004f9}{outputs}
+\item 
+uint32\_\-t \hyperlink{struct_m_i_transaction_aea4d95211b00c311b2d84c6177429162}{lockTime}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure for \hyperlink{struct_m_i_transaction}{Transaction} objects. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_m_i_transaction_8h}{Transaction.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 19 of file Transaction.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_m_i_transaction_a487e4843cf1cf7397eb2e1bcf91cbf3b}{
+\index{Transaction@{Transaction}!base@{base}}
+\index{base@{base}!Transaction@{Transaction}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_m_i_transaction_a487e4843cf1cf7397eb2e1bcf91cbf3b}
+\hyperlink{struct_m_i_message}{Message} base structure$>$ 
+
+Definition at line 20 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_a7ff9da008bf055da1f1ba994c562057d}{
+\index{Transaction@{Transaction}!hash@{hash}}
+\index{hash@{hash}!Transaction@{Transaction}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf hash}\mbox{[}32\mbox{]}}}
+\label{struct_m_i_transaction_a7ff9da008bf055da1f1ba994c562057d}
+The hash for this transaction. NULL if not set. 
+
+Definition at line 21 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_ad10010cd6a4f129706cf61bd0dce100f}{
+\index{Transaction@{Transaction}!inputs@{inputs}}
+\index{inputs@{inputs}!Transaction@{Transaction}}
+\subsubsection[{inputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TransactionInput}$\ast$$\ast$ {\bf inputs}}}
+\label{struct_m_i_transaction_ad10010cd6a4f129706cf61bd0dce100f}
+
+
+Definition at line 24 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_aea4d95211b00c311b2d84c6177429162}{
+\index{Transaction@{Transaction}!lockTime@{lockTime}}
+\index{lockTime@{lockTime}!Transaction@{Transaction}}
+\subsubsection[{lockTime}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf lockTime}}}
+\label{struct_m_i_transaction_aea4d95211b00c311b2d84c6177429162}
+Time for the transaction to be valid 
+
+Definition at line 27 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_a84a553b85f92fbe799c9e927aeae4491}{
+\index{Transaction@{Transaction}!numOfTransactionInput@{numOfTransactionInput}}
+\index{numOfTransactionInput@{numOfTransactionInput}!Transaction@{Transaction}}
+\subsubsection[{numOfTransactionInput}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf numOfTransactionInput}}}
+\label{struct_m_i_transaction_a84a553b85f92fbe799c9e927aeae4491}
+Number of TransactionInputs 
+
+Definition at line 23 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_aa6fd5ebfb79f09bf74e1b0f63f557348}{
+\index{Transaction@{Transaction}!numOfTransactionOutput@{numOfTransactionOutput}}
+\index{numOfTransactionOutput@{numOfTransactionOutput}!Transaction@{Transaction}}
+\subsubsection[{numOfTransactionOutput}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf numOfTransactionOutput}}}
+\label{struct_m_i_transaction_aa6fd5ebfb79f09bf74e1b0f63f557348}
+Number of TransactionOutputs 
+
+Definition at line 25 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_af782b989431a6d6831659788e15004f9}{
+\index{Transaction@{Transaction}!outputs@{outputs}}
+\index{outputs@{outputs}!Transaction@{Transaction}}
+\subsubsection[{outputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TransactionOutput}$\ast$$\ast$ {\bf outputs}}}
+\label{struct_m_i_transaction_af782b989431a6d6831659788e15004f9}
+
+
+Definition at line 26 of file Transaction.h.
+
+\hypertarget{struct_m_i_transaction_acd99bb05ca015e7d74448acb1deba7ca}{
+\index{Transaction@{Transaction}!version@{version}}
+\index{version@{version}!Transaction@{Transaction}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf version}}}
+\label{struct_m_i_transaction_acd99bb05ca015e7d74448acb1deba7ca}
+Version of the transaction data format. 
+
+Definition at line 22 of file Transaction.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Object/Message/\hyperlink{_m_i_transaction_8h}{Transaction.h}\end{DoxyCompactItemize}

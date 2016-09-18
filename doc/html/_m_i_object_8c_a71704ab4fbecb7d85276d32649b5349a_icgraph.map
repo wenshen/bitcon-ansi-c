@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_object_8h.html#af04ba85f6f0257373bbcfca4696e38c8" title="Creates a new Object." alt="" coords="173,113,312,142"/>
+<area shape="rect" id="node5" href="$_m_i_byte_array_8h.html#ab0ba2a57716ecf23d43924647b4175bb" title="Destroys a ByteArray object." alt="" coords="173,294,312,323"/>
+<area shape="rect" id="node41" href="$_m_i_transaction_8h.html#a1abc45d369c2884698692d79091f5b2c" title="Serialises a Transaction to byte data." alt="" coords="705,63,857,93"/>
+<area shape="rect" id="node44" href="$_m_i_message_8h.html#ac2327e1b79760ff1a69fe106fbe20d23" title="destroys the memory allocated to a Message object." alt="" coords="413,557,547,586"/>
+<area shape="rect" id="node7" href="$_m_i_byte_array_8h.html#a2db5c01eeb9fbe1d8350ab99392be437" title="Creates an empty ByteArray object." alt="" coords="381,321,579,350"/>
+<area shape="rect" id="node11" href="$_m_i_byte_array_8h.html#a9d079ea9294ff1dfc57d978c0d0402cf" title="Creates a new ByteArray using data which is copied." alt="" coords="1493,478,1744,507"/>
+<area shape="rect" id="node17" href="$_m_i_byte_array_8h.html#a3350bfefcab7bfb6e48c9865b342bec0" title="References a subsection of a ByteArray." alt="" coords="361,217,599,246"/>
+<area shape="rect" id="node9" href="$_m_i_transaction_8h.html#a6752846ad122c4320c07ea5cb51637d5" title="Gets the hash for signing or signature checking for a transaction input. The transaction input needs ..." alt="" coords="648,373,915,402"/>
+<area shape="rect" id="node13" href="$_m_i_block_8h.html#ab4caa099f720462b32d9e74406309b1d" title="Initializes a Block object with the original block for the bitcoin block chain. This will have seri..." alt="" coords="1975,478,2164,507"/>
+<area shape="rect" id="node15" href="$_m_i_block_8c.html#a9eb01377cf0d49ddc3dd988d221ddd76" title="createNewBlockFromOriginalBlock" alt="" coords="2213,610,2453,639"/>
+<area shape="rect" id="node19" href="$_m_i_script_8h.html#aa0a40e0353c30a695a1f335b4425934b" title="Creates a new Script object." alt="" coords="669,269,893,298"/>
+<area shape="rect" id="node21" href="$_m_i_transaction_input_8h.html#ad375fb1ac6adc4cfeafc59b89ab811b9" title="Deserialises a TransactionInput so that it can be used as an object." alt="" coords="999,215,1193,245"/>
+<area shape="rect" id="node23" href="$_m_i_transaction_8h.html#a8777f695fbbb547e32b9c0347b6b2026" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="1279,295,1444,325"/>
+<area shape="rect" id="node25" href="$_m_i_block_8h.html#a04d2d2defba76492762c0eb4b7ccd206" title="deserializeWithTransactions" alt="" coords="1525,190,1712,219"/>
+<area shape="rect" id="node27" href="$_m_i_block_8h.html#a9b85a6f60672aea0471f7b6a7e9930ba" title="Deserializes a Block so that it can be used as an object." alt="" coords="1793,190,1924,219"/>
+<area shape="rect" id="node33" href="$_m_i_block_8h.html#a3fa07e825a149c98d148b215a5d5a78a" title="dealWithSerializationTran" alt="" coords="1011,162,1181,191"/>
+<area shape="rect" id="node30" href="$_m_i_transaction_output_8h.html#aec03af57e070260915cbf2491802df55" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="993,269,1199,298"/>
+<area shape="rect" id="node35" href="$_m_i_block_8h.html#a3dab3fff46c9b386501414a6b13f5192" title="Serializes a Block to the byte data." alt="" coords="1303,162,1420,191"/>
+<area shape="rect" id="node46" href="$_m_i_message_8h.html#a243ba896755b085ea0415d93bd3c6255" title="Creates a new Message object. This message will be created with object data and not with byte data..." alt="" coords="705,637,857,666"/>
+<area shape="rect" id="node48" href="$_m_i_block_8h.html#a4dd7a61ea64a2b7cde840038ec14d2db" title="Frees a Block object." alt="" coords="729,715,833,745"/>
+<area shape="rect" id="node55" href="$_m_i_transaction_8h.html#aa5860a9ff5209146c9b028103977bb5b" title="Destructor; destroys a Transaction object." alt="" coords="708,583,855,613"/>
+<area shape="rect" id="node59" href="$_m_i_transaction_input_8h.html#a870e33cc5ad870ec4b831d4410c7df1f" title="Frees a TransactionInput object." alt="" coords="693,530,869,559"/>
+<area shape="rect" id="node66" href="$_m_i_transaction_output_8h.html#aee9404d5122916f7ef6262344835377a" title="Frees a TransactionOutput object." alt="" coords="688,426,875,455"/>
+<area shape="rect" id="node50" href="$_m_i_block_8h.html#a32a782c3e422cc5b132abaddc4eecf13" title="Creates a new Block object. Set the members after creating the block object." alt="" coords="1029,794,1163,823"/>
+<area shape="rect" id="node52" href="$_m_i_block_8h.html#aaddeaac51a35b3b98ade3340b6d46bac" title="Creates a new Block object from serialized block data." alt="" coords="985,690,1207,719"/>
+<area shape="rect" id="node57" href="$_m_i_transaction_8h.html#ad9c9cac2e7fd054ceff9c4a0053ec494" title="Creates a new Transaction object with no inputs or outputs." alt="" coords="1012,637,1180,666"/>
+<area shape="rect" id="node61" href="$_m_i_transaction_input_8h.html#a66149340bfb777acf294dba5d06a9776" title="Creates a new TransactionInput object." alt="" coords="997,583,1195,613"/>
+<area shape="rect" id="node63" href="$_m_i_transaction_input_8h.html#a6ce74856deb61a054db563a0382b0ff2" title="Creates a new TransactionInput object from byte data." alt="" coords="969,530,1223,559"/>
+<area shape="rect" id="node68" href="$_m_i_transaction_output_8h.html#a6a42fc141043183bd5dc2872ea7def95" title="Creates a new TransactionOutput object." alt="" coords="993,426,1199,455"/>
+<area shape="rect" id="node70" href="$_m_i_transaction_output_8h.html#ad147138cc70f16d81e3b66a00ae700af" title="Creates a new TransactionOutput object from byte data. Should be serialised for object data..." alt="" coords="964,373,1228,402"/>
+</map>

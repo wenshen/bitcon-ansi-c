@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_big_int_8h" kind="file">
+    <compoundname>BigInt.h</compoundname>
+    <includes local="yes">../Constants.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="_base58_8h" local="yes">src/Base58/Base58.h</includedby>
+    <includedby refid="_big_int_8c" local="yes">src/BigInt/BigInt.c</includedby>
+    <incdepgraph>
+      <node id="626">
+        <label>stdint.h</label>
+      </node>
+      <node id="625">
+        <label>stdlib.h</label>
+      </node>
+      <node id="627">
+        <label>string.h</label>
+      </node>
+      <node id="624">
+        <label>../Constants.h</label>
+      </node>
+      <node id="623">
+        <label>src/BigInt/BigInt.h</label>
+        <link refid="BigInt.h"/>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="630">
+        <label>src/Base58/Base58.c</label>
+        <link refid="_base58_8c"/>
+      </node>
+      <node id="629">
+        <label>src/Base58/Base58.h</label>
+        <link refid="_base58_8h"/>
+        <childnode refid="630" relation="include">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>src/BigInt/BigInt.c</label>
+        <link refid="_big_int_8c"/>
+      </node>
+      <node id="628">
+        <label>src/BigInt/BigInt.h</label>
+        <link refid="BigInt.h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_big_int" prot="public">BigInt</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_big_int_8h_1a7544af9d148635904d1809eef62c11ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntFromPowUInt8</definition>
+        <argsstring>(BigInt *bi, uint8_t a, uint8_t b)</argsstring>
+        <name>BigIntFromPowUInt8</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>bi</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="24" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="160" bodyend="178"/>
+        <references refid="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" compoundref="_big_int_8c" startline="102" endline="125">BigIntEqualsMultiplicationByUInt8</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1abadebe4d6bc13cecd5434dcd4607c0e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntEqualsMultiplicationByUInt8</definition>
+        <argsstring>(BigInt *a, uint8_t b, uint8_t *ans)</argsstring>
+        <name>BigIntEqualsMultiplicationByUInt8</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>ans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="25" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="102" bodyend="125"/>
+        <references refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" compoundref="_big_int_8c" startline="18" endline="27">BigIntRealloc</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_big_int_8h_1a7544af9d148635904d1809eef62c11ae" compoundref="_big_int_8c" startline="160" endline="178">BigIntFromPowUInt8</referencedby>
+        <referencedby refid="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1aceb9c4c6e4716127e4fc6d964b135527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BigIntEqualsAdditionByBigInt</definition>
+        <argsstring>(BigInt *a, BigInt *b)</argsstring>
+        <name>BigIntEqualsAdditionByBigInt</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="55" bodyend="82"/>
+        <references refid="_big_int_8c_1acb40846a8d9132c888e78cd773382561" compoundref="_big_int_8c" startline="18" endline="27">BigIntRealloc</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1a980d453cb2c16efd376b928800c189ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BigIntNormalise</definition>
+        <argsstring>(BigInt *a)</argsstring>
+        <name>BigIntNormalise</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="28" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="193" bodyend="207"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_big_int_8h_1a9d2029aadab4a8ae5f376d3059786394" compoundref="_big_int_8c" startline="144" endline="157">BigIntEqualsSubtractionByUInt8</referencedby>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1aa4544c75bd8e7106208d9b120d2bb533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t BigIntModuloWith58</definition>
+        <argsstring>(BigInt *a)</argsstring>
+        <name>BigIntModuloWith58</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="180" bodyend="192"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1a9d2029aadab4a8ae5f376d3059786394" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BigIntEqualsSubtractionByUInt8</definition>
+        <argsstring>(BigInt *a, uint8_t b)</argsstring>
+        <name>BigIntEqualsSubtractionByUInt8</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="30" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="144" bodyend="157"/>
+        <references refid="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" compoundref="_big_int_8c" startline="193" endline="207">BigIntNormalise</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1ac1d1b61df392b26380337c98e859a295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BigIntEqualsDivisionBy58</definition>
+        <argsstring>(BigInt *a, uint8_t *ans)</argsstring>
+        <name>BigIntEqualsDivisionBy58</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>ans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="31" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="84" bodyend="101"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_big_int_8h_1a766564219de39ebab49e86b84365155d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504" kindref="member">Compare</ref></type>
+        <definition>Compare BigIntCompareTo58</definition>
+        <argsstring>(BigInt *a)</argsstring>
+        <name>BigIntCompareTo58</name>
+        <param>
+          <type><ref refid="struct_big_int" kindref="compound">BigInt</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h" line="32" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.c" bodystart="29" bodyend="37"/>
+        <references refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504a4bccf19eed6a7720020ab7463ab9a157" compoundref="_constants_8h" startline="58">COMPARE_EQUAL</references>
+        <references refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504a2222fe67d3866dd8e992fd5ef4b4d6ed" compoundref="_constants_8h" startline="59">COMPARE_LESS_THAN</references>
+        <references refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504af1fd61c04c5a27e5ecef52d420467c76" compoundref="_constants_8h" startline="57">COMPARE_MORE_THAN</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" compoundref="_base58_8c" startline="208" endline="280">EncodeBase58</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>BigInt.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>04/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Wen<sp/>Shen</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BIGINT_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BIGINT_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="struct_big_int" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<sp/><ref refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" kindref="member">data</ref>;<sp/></highlight></codeline>
+<codeline lineno="21" refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a7544af9d148635904d1809eef62c11ae" kindref="member">BigIntFromPowUInt8</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>bi,uint8_t<sp/>a,uint8_t<sp/>b);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" kindref="member">BigIntEqualsMultiplicationByUInt8</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,uint8_t<sp/>b,uint8_t<sp/>*<sp/>ans);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1aceb9c4c6e4716127e4fc6d964b135527" kindref="member">BigIntEqualsAdditionByBigInt</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>b);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" kindref="member">BigIntNormalise</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">uint8_t<sp/><ref refid="_big_int_8c_1aa4544c75bd8e7106208d9b120d2bb533" kindref="member">BigIntModuloWith58</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1a9d2029aadab4a8ae5f376d3059786394" kindref="member">BigIntEqualsSubtractionByUInt8</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,uint8_t<sp/>b);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_big_int_8c_1ac1d1b61df392b26380337c98e859a295" kindref="member">BigIntEqualsDivisionBy58</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a,uint8_t<sp/>*<sp/>ans);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="_constants_8h_1af5e6c1e42f1dbe27251f73c8b89d2504" kindref="member">Compare</ref><sp/><ref refid="_big_int_8c_1a766564219de39ebab49e86b84365155d" kindref="member">BigIntCompareTo58</ref>(<ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/>*<sp/>a);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BIGINT_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/BigInt/BigInt.h"/>
+  </compounddef>
+</doxygen>

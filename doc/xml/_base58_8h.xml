@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_base58_8h" kind="file">
+    <compoundname>Base58.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">../BigInt/BigInt.h</includes>
+    <includedby refid="_base58_8c" local="yes">src/Base58/Base58.c</includedby>
+    <incdepgraph>
+      <node id="611">
+        <label>../BigInt/BigInt.h</label>
+      </node>
+      <node id="610">
+        <label>stdlib.h</label>
+      </node>
+      <node id="609">
+        <label>src/Base58/Base58.h</label>
+        <link refid="Base58.h"/>
+        <childnode refid="610" relation="include">
+        </childnode>
+        <childnode refid="611" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="613">
+        <label>src/Base58/Base58.c</label>
+        <link refid="_base58_8c"/>
+      </node>
+      <node id="612">
+        <label>src/Base58/Base58.h</label>
+        <link refid="Base58.h"/>
+        <childnode refid="613" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_base58_8h_1af8e9d03dcd3a52eff68b6cb375aafa3f" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char base58Characters[58]</definition>
+        <argsstring>[58]</argsstring>
+        <name>base58Characters</name>
+        <initializer>&quot;123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" line="21" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_base58_8h_1a698fb6717b2cbd17d02ff52b09d84fe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_big_int" kindref="compound">BigInt</ref></type>
+        <definition>BigInt DecodeBase58</definition>
+        <argsstring>(char *str)</argsstring>
+        <name>DecodeBase58</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Decodes base 58 string into byte data as a <ref refid="struct_big_int" kindref="compound">BigInt</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base 58 string to decode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the byte data as a <ref refid="struct_big_int" kindref="compound">BigInt</ref>. The byte data will be created in this function. Remember to free the data. On error the big int will have a NULL data pointer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" line="29" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.c" bodystart="14" bodyend="110"/>
+        <references refid="_big_int_8c_1aceb9c4c6e4716127e4fc6d964b135527" compoundref="_big_int_8c" startline="55" endline="82">BigIntEqualsAdditionByBigInt</references>
+        <references refid="_big_int_8c_1abadebe4d6bc13cecd5434dcd4607c0e8" compoundref="_big_int_8c" startline="102" endline="125">BigIntEqualsMultiplicationByUInt8</references>
+        <references refid="_big_int_8c_1a7544af9d148635904d1809eef62c11ae" compoundref="_big_int_8c" startline="160" endline="178">BigIntFromPowUInt8</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <referencedby refid="_base58_8h_1a20b174879ad363a02444d6dfd0c3956f" compoundref="_base58_8c" startline="128" endline="206">DecodeBase58Checked</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_base58_8h_1a20b174879ad363a02444d6dfd0c3956f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_big_int" kindref="compound">BigInt</ref></type>
+        <definition>BigInt DecodeBase58Checked</definition>
+        <argsstring>(char *str, void(*onErrorReceived)(Error error, char *,...))</argsstring>
+        <name>DecodeBase58Checked</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref> error, char *,...)</type>
+          <declname>onErrorReceived</declname>
+        </param>
+        <briefdescription>
+<para>Decodes base 58 string into byte data as a <ref refid="struct_big_int" kindref="compound">BigInt</ref> and checks a 4 byte checksum. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base 58 string to decode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Byte data as a <ref refid="struct_big_int" kindref="compound">BigInt</ref>. Is zero on failure. Checksum is included in returned data. On error the big int will have a NULL data pointer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" line="36" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.c" bodystart="128" bodyend="206"/>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="_base58_8c_1a698fb6717b2cbd17d02ff52b09d84fe5" compoundref="_base58_8c" startline="14" endline="110">DecodeBase58</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5a4243d1ab93511c54906657b89777e17d" compoundref="_constants_8h" startline="46">ERROR_BASE58_DECODE_CHECK_INVALID</references>
+        <references refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5ad2b6af8b647680e44843049b8534352f" compoundref="_constants_8h" startline="45">ERROR_BASE58_DECODE_CHECK_TOO_SHORT</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+        <references refid="_base58_8c_1a638fbbbf6ac769d7ac1e730437fce0c0" compoundref="_base58_8c" startline="113" endline="126">VerifyAndRemoveCheckSum</references>
+      </memberdef>
+      <memberdef kind="function" id="_base58_8h_1a8eba0d420462df41d21fa7369a9cf2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* EncodeBase58</definition>
+        <argsstring>(uint8_t *bytes, uint8_t len)</argsstring>
+        <name>EncodeBase58</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Encodes byte data into base 58. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to byte data to encode. Will almost certainly be modified. Copy data beforehand if needed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of bytes to encode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Newly allocated string with encoded data or NULL on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" line="44" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.c" bodystart="208" bodyend="280"/>
+        <references refid="_big_int_8c_1a766564219de39ebab49e86b84365155d" compoundref="_big_int_8c" startline="29" endline="37">BigIntCompareTo58</references>
+        <references refid="_big_int_8c_1ac1d1b61df392b26380337c98e859a295" compoundref="_big_int_8c" startline="84" endline="101">BigIntEqualsDivisionBy58</references>
+        <references refid="_big_int_8c_1a9d2029aadab4a8ae5f376d3059786394" compoundref="_big_int_8c" startline="144" endline="157">BigIntEqualsSubtractionByUInt8</references>
+        <references refid="_big_int_8c_1aa4544c75bd8e7106208d9b120d2bb533" compoundref="_big_int_8c" startline="180" endline="192">BigIntModuloWith58</references>
+        <references refid="_big_int_8c_1a980d453cb2c16efd376b928800c189ab" compoundref="_big_int_8c" startline="193" endline="207">BigIntNormalise</references>
+        <references refid="struct_big_int_1abe222f6d3581e7920dcad5306cc906a8" compoundref="_big_int_8h" startline="20">BigInt::data</references>
+        <references refid="struct_big_int_1ab2b3adeb2a67e656ff030b56727fd0ac" compoundref="_big_int_8h" startline="21">BigInt::length</references>
+      </memberdef>
+      <memberdef kind="function" id="_base58_8h_1a0e3eca914bcab6d9c960347ed24ca8d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* GetCheckSum</definition>
+        <argsstring>(uint8_t *data)</argsstring>
+        <name>GetCheckSum</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" line="46" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.c" bodystart="282" bodyend="294"/>
+        <references refid="_crypt_8c_1a31002de62901cbe9c88a0fd0f5f57770" compoundref="_crypt_8c" startline="42" endline="49">Sha256</references>
+        <referencedby refid="_base58_8h_1a638fbbbf6ac769d7ac1e730437fce0c0" compoundref="_base58_8c" startline="113" endline="126">VerifyAndRemoveCheckSum</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_base58_8h_1a638fbbbf6ac769d7ac1e730437fce0c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* VerifyAndRemoveCheckSum</definition>
+        <argsstring>(uint8_t *data)</argsstring>
+        <name>VerifyAndRemoveCheckSum</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h" line="47" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.c" bodystart="113" bodyend="126"/>
+        <references refid="_base58_8c_1a0e3eca914bcab6d9c960347ed24ca8d3" compoundref="_base58_8c" startline="282" endline="294">GetCheckSum</references>
+        <referencedby refid="_base58_8h_1a20b174879ad363a02444d6dfd0c3956f" compoundref="_base58_8c" startline="128" endline="206">DecodeBase58Checked</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Functions for encoding and decoding in base 58. Avoids 0olI whch may look alike. This is for readability concerns. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Base58.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>03/10/2012</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by:<sp/>Hayk<sp/>Baluyan</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Bitcoin<sp/>Project<sp/>Team</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#ifndef<sp/>BASE58H</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BASE58H</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../BigInt/BigInt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>base58Characters[58]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/><ref refid="_base58_8c_1a698fb6717b2cbd17d02ff52b09d84fe5" kindref="member" tooltip="Decodes base 58 string into byte data as a BigInt.">DecodeBase58</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>str);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="struct_big_int" kindref="compound" tooltip="Contains byte data with the length of this data to represent a large integer. The byte data is in lit...">BigInt</ref><sp/><ref refid="_base58_8c_1a20b174879ad363a02444d6dfd0c3956f" kindref="member" tooltip="Decodes base 58 string into byte data as a BigInt and checks a 4 byte checksum.">DecodeBase58Checked</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>str,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*onErrorReceived)(<ref refid="_constants_8h_1a2c3e4bb40f36b262a5214e2da2bca9c5" kindref="member">Error</ref><sp/>error,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,...));</highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="_base58_8c_1a8eba0d420462df41d21fa7369a9cf2de" kindref="member" tooltip="Encodes byte data into base 58.">EncodeBase58</ref>(uint8_t<sp/>*<sp/>bytes,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">uint8_t*<sp/><ref refid="_base58_8c_1a0e3eca914bcab6d9c960347ed24ca8d3" kindref="member">GetCheckSum</ref>(uint8_t*<sp/>data);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">uint8_t*<sp/><ref refid="_base58_8c_1a638fbbbf6ac769d7ac1e730437fce0c0" kindref="member">VerifyAndRemoveCheckSum</ref>(uint8_t*<sp/>data);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Base58/Base58.h"/>
+  </compounddef>
+</doxygen>

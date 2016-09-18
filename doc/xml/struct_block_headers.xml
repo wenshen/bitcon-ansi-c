@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="struct_block_headers" kind="struct" prot="public">
+    <compoundname>BlockHeaders</compoundname>
+    <includes refid="_block_headers_8h" local="no">BlockHeaders.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_block_headers_1a8987f797adf70c3e174fd64cc68bc933" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_message" kindref="compound">Message</ref></type>
+        <definition>Message base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_message" kindref="compound">Message</ref> base structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" line="24" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_block_headers_1a9cfb2de0666e1e88b621171a97ba801e" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t numOfHeaders</definition>
+        <argsstring></argsstring>
+        <name>numOfHeaders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of headers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" line="25" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_block_headers_1a33e1983765c280515297ab5b3a4640e0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_block" kindref="compound">Block</ref> **</type>
+        <definition>Block** blockHeaders</definition>
+        <argsstring></argsstring>
+        <name>blockHeaders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The block headers as <ref refid="struct_block" kindref="compound">Block</ref> objects with no transactions. The number of transactions is given however. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" line="26" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for <ref refid="struct_block_headers" kindref="compound">BlockHeaders</ref> objects. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_block_headers_8h" kindref="compound">BlockHeaders.h</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="225">
+        <label>Block</label>
+        <link refid="struct_block"/>
+        <childnode refid="226" relation="usage">
+          <edgelabel>transactions</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>merkleTreeRootHash</edgelabel>
+          <edgelabel>previousBlockHash</edgelabel>
+        </childnode>
+      </node>
+      <node id="231">
+        <label>SharedData</label>
+        <link refid="struct_shared_data"/>
+      </node>
+      <node id="224">
+        <label>BlockHeaders</label>
+        <link refid="struct_block_headers"/>
+        <childnode refid="225" relation="usage">
+          <edgelabel>blockHeaders</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="228">
+        <label>Message</label>
+        <link refid="struct_message"/>
+        <childnode refid="229" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>bytes</edgelabel>
+        </childnode>
+      </node>
+      <node id="229">
+        <label>Object</label>
+        <link refid="struct_object"/>
+      </node>
+      <node id="227">
+        <label>TransactionOutput</label>
+        <link refid="struct_transaction_output"/>
+        <childnode refid="228" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="226">
+        <label>Transaction</label>
+        <link refid="struct_transaction"/>
+        <childnode refid="227" relation="usage">
+          <edgelabel>outputs</edgelabel>
+        </childnode>
+        <childnode refid="232" relation="usage">
+          <edgelabel>inputs</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="230">
+        <label>ByteArray</label>
+        <link refid="struct_byte_array"/>
+        <childnode refid="231" relation="usage">
+          <edgelabel>sharedData</edgelabel>
+        </childnode>
+        <childnode refid="229" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="233">
+        <label>PreviousOutput</label>
+        <link refid="struct_previous_output"/>
+        <childnode refid="230" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="232">
+        <label>TransactionInput</label>
+        <link refid="struct_transaction_input"/>
+        <childnode refid="233" relation="usage">
+          <edgelabel>prevOutput</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>scriptObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" line="23" bodyfile="/home/apopoola/workspace/MIBitcoin/trunk/src/Object/Message/BlockHeaders.h" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_block_headers_1a8987f797adf70c3e174fd64cc68bc933" prot="public" virt="non-virtual"><scope>BlockHeaders</scope><name>base</name></member>
+      <member refid="struct_block_headers_1a33e1983765c280515297ab5b3a4640e0" prot="public" virt="non-virtual"><scope>BlockHeaders</scope><name>blockHeaders</name></member>
+      <member refid="struct_block_headers_1a9cfb2de0666e1e88b621171a97ba801e" prot="public" virt="non-virtual"><scope>BlockHeaders</scope><name>numOfHeaders</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

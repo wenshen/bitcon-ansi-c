@@ -1,0 +1,90 @@
+\hypertarget{struct_get_blocks}{
+\section{GetBlocks Struct Reference}
+\label{struct_get_blocks}\index{GetBlocks@{GetBlocks}}
+}
+
+
+Structure for \hyperlink{struct_get_blocks}{GetBlocks} objects.  
+
+
+
+
+{\ttfamily \#include $<$GetBlocks.h$>$}
+
+
+
+Collaboration diagram for GetBlocks:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{struct_get_blocks__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_message}{Message} \hyperlink{struct_get_blocks_a8987f797adf70c3e174fd64cc68bc933}{base}
+\item 
+uint32\_\-t \hyperlink{struct_get_blocks_acd99bb05ca015e7d74448acb1deba7ca}{version}
+\item 
+\hyperlink{struct_chain_descriptor}{ChainDescriptor} $\ast$ \hyperlink{struct_get_blocks_a97f23aa5b4445b5d12da1efc7af9dd88}{chainDescriptor}
+\item 
+\hyperlink{struct_byte_array}{ByteArray} $\ast$ \hyperlink{struct_get_blocks_a86c946e52ed46a9ef9f6292c0ec68143}{stopAtHash}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure for \hyperlink{struct_get_blocks}{GetBlocks} objects. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_get_blocks_8h}{GetBlocks.h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 22 of file GetBlocks.h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_get_blocks_a8987f797adf70c3e174fd64cc68bc933}{
+\index{GetBlocks@{GetBlocks}!base@{base}}
+\index{base@{base}!GetBlocks@{GetBlocks}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} {\bf base}}}
+\label{struct_get_blocks_a8987f797adf70c3e174fd64cc68bc933}
+\hyperlink{struct_message}{Message} base structure 
+
+Definition at line 23 of file GetBlocks.h.
+
+\hypertarget{struct_get_blocks_a97f23aa5b4445b5d12da1efc7af9dd88}{
+\index{GetBlocks@{GetBlocks}!chainDescriptor@{chainDescriptor}}
+\index{chainDescriptor@{chainDescriptor}!GetBlocks@{GetBlocks}}
+\subsubsection[{chainDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ChainDescriptor}$\ast$ {\bf chainDescriptor}}}
+\label{struct_get_blocks_a97f23aa5b4445b5d12da1efc7af9dd88}
+\hyperlink{struct_chain_descriptor}{ChainDescriptor} for determining what blocks are needed. 
+
+Definition at line 25 of file GetBlocks.h.
+
+\hypertarget{struct_get_blocks_a86c946e52ed46a9ef9f6292c0ec68143}{
+\index{GetBlocks@{GetBlocks}!stopAtHash@{stopAtHash}}
+\index{stopAtHash@{stopAtHash}!GetBlocks@{GetBlocks}}
+\subsubsection[{stopAtHash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ByteArray}$\ast$ {\bf stopAtHash}}}
+\label{struct_get_blocks_a86c946e52ed46a9ef9f6292c0ec68143}
+The block hash to stop at when retreiving an inventory. Else up to 500 block hashes can be given. 
+
+Definition at line 26 of file GetBlocks.h.
+
+\hypertarget{struct_get_blocks_acd99bb05ca015e7d74448acb1deba7ca}{
+\index{GetBlocks@{GetBlocks}!version@{version}}
+\index{version@{version}!GetBlocks@{GetBlocks}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf version}}}
+\label{struct_get_blocks_acd99bb05ca015e7d74448acb1deba7ca}
+Protocol version for this message 
+
+Definition at line 24 of file GetBlocks.h.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/Object/Message/\hyperlink{_get_blocks_8h}{GetBlocks.h}\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_m_i_byte_array_8h.html#a13f783bb0fcd091b7bfb25cfd7f9d1c0" title="Changes the reference of this ByteArray object to reference the underlying data of another ByteAr..." alt="" coords="321,59,545,88"/>
+<area shape="rect" id="node16" href="$_m_i_byte_array_8h.html#ab0ba2a57716ecf23d43924647b4175bb" title="Destroys a ByteArray object." alt="" coords="364,236,503,265"/>
+<area shape="rect" id="node5" href="$_m_i_transaction_input_8h.html#a1dc5b6d2e7b70e918572bedd9ee6abf9" title="Serialises a TransactionInput to byte data." alt="" coords="624,5,805,35"/>
+<area shape="rect" id="node13" href="$_m_i_transaction_output_8h.html#a16b79dfd79f1bec2dce3b0865766b48e" title="Serialises a TransactionOutput to byte data." alt="" coords="619,59,811,88"/>
+<area shape="rect" id="node7" href="$_m_i_transaction_8h.html#a1abc45d369c2884698692d79091f5b2c" title="Serialises a Transaction to byte data." alt="" coords="940,5,1092,35"/>
+<area shape="rect" id="node9" href="$_m_i_block_8h.html#a3fa07e825a149c98d148b215a5d5a78a" title="dealWithSerializationTran" alt="" coords="1216,31,1387,60"/>
+<area shape="rect" id="node11" href="$_m_i_block_8h.html#a3dab3fff46c9b386501414a6b13f5192" title="Serializes a Block to the byte data." alt="" coords="1479,31,1596,60"/>
+<area shape="rect" id="node18" href="$_m_i_byte_array_8h.html#a2db5c01eeb9fbe1d8350ab99392be437" title="Creates an empty ByteArray object." alt="" coords="616,288,813,317"/>
+<area shape="rect" id="node22" href="$_m_i_byte_array_8h.html#a9d079ea9294ff1dfc57d978c0d0402cf" title="Creates a new ByteArray using data which is copied." alt="" coords="1669,373,1920,403"/>
+<area shape="rect" id="node28" href="$_m_i_byte_array_8h.html#a3350bfefcab7bfb6e48c9865b342bec0" title="References a subsection of a ByteArray." alt="" coords="596,184,833,213"/>
+<area shape="rect" id="node20" href="$_m_i_transaction_8h.html#a6752846ad122c4320c07ea5cb51637d5" title="Gets the hash for signing or signature checking for a transaction input. The transaction input needs ..." alt="" coords="883,367,1149,396"/>
+<area shape="rect" id="node24" href="$_m_i_block_8h.html#ab4caa099f720462b32d9e74406309b1d" title="Initializes a Block object with the original block for the bitcoin block chain. This will have seri..." alt="" coords="2151,313,2340,343"/>
+<area shape="rect" id="node26" href="$_m_i_block_8c.html#a9eb01377cf0d49ddc3dd988d221ddd76" title="createNewBlockFromOriginalBlock" alt="" coords="2389,313,2629,343"/>
+<area shape="rect" id="node30" href="$_m_i_script_8h.html#aa0a40e0353c30a695a1f335b4425934b" title="Creates a new Script object." alt="" coords="904,261,1128,291"/>
+<area shape="rect" id="node32" href="$_m_i_transaction_input_8h.html#ad375fb1ac6adc4cfeafc59b89ab811b9" title="Deserialises a TransactionInput so that it can be used as an object." alt="" coords="1204,211,1399,240"/>
+<area shape="rect" id="node34" href="$_m_i_transaction_8h.html#a8777f695fbbb547e32b9c0347b6b2026" title="Deserialises a Transaction so that it can be used as an object." alt="" coords="1455,237,1620,267"/>
+<area shape="rect" id="node36" href="$_m_i_block_8h.html#a04d2d2defba76492762c0eb4b7ccd206" title="deserializeWithTransactions" alt="" coords="1701,276,1888,305"/>
+<area shape="rect" id="node38" href="$_m_i_block_8h.html#a9b85a6f60672aea0471f7b6a7e9930ba" title="Deserializes a Block so that it can be used as an object." alt="" coords="1969,276,2100,305"/>
+<area shape="rect" id="node41" href="$_m_i_transaction_output_8h.html#aec03af57e070260915cbf2491802df55" title="Deserialises a TransactionOutput so that it can be used as an object." alt="" coords="1199,264,1404,293"/>
+</map>

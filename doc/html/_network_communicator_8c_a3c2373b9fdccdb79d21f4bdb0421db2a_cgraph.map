@@ -1,0 +1,35 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="2689,576,2868,605"/>
+<area shape="rect" id="node5" href="$_network_communicator_8c.html#a9f4abe6a585a711635ab6cf2aad1081e" title="NetworkCommunicatorDisconnect" alt="" coords="2388,347,2609,376"/>
+<area shape="rect" id="node14" href="$_network_communicator_8c.html#a1e7aeba124b81e6ab5e0661c521a8e78" title="NetworkCommunicatorOnMessageReceived" alt="" coords="327,501,607,531"/>
+<area shape="rect" id="node8" href="$_network_address_8c.html#a119da10386575374455c45ee98dd5e33" title="Gets a NetworkAddress from another object. Use this to avoid casts." alt="" coords="2711,1443,2847,1472"/>
+<area shape="rect" id="node10" href="$_network_communicator_8c.html#ae0151ae192e007cb81d3ad7beaf1f5f8" title="NetworkCommunicatorStartListening" alt="" coords="2661,293,2896,323"/>
+<area shape="rect" id="node12" href="$_network_communicator_8c.html#ae1cb0933af1eb4fd1f53284066eff467" title="NetworkCommunicatorStopPings" alt="" coords="2671,347,2887,376"/>
+<area shape="rect" id="node17" href="$_ping_pong_message_8c.html#a198cd940373651273997143eab0bcde3" title="Deserialises a PingPongMessage so that it can be used as an object." alt="" coords="732,661,924,691"/>
+<area shape="rect" id="node23" href="$_ping_pong_message_8c.html#af528a86083fc33cb25f40d3390b1ee6d" title="Frees a PingPongMessage object." alt="" coords="741,608,915,637"/>
+<area shape="rect" id="node30" href="$_block_headers_8c.html#a98630cb979038b4555bdefb6363af1da" title="Frees a BlockHeaders object." alt="" coords="765,501,891,531"/>
+<area shape="rect" id="node34" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="789,555,867,584"/>
+<area shape="rect" id="node36" href="$_ping_pong_message_8c.html#a05be54312a74799ff7996459f8f6add9" title="Gets a PingPongMessage from another object. Use this to avoid casts." alt="" coords="2947,421,3096,451"/>
+<area shape="rect" id="node38" href="$_version_8c.html#ae3428387ebd0bed5f378d2d0b5050d79" title="GetVersion" alt="" coords="2979,804,3064,833"/>
+<area shape="rect" id="node41" href="$_network_communicator_8c.html#ac2d57ca1c8882c561500536901bd2ddd" title="NetworkCommunicatorProcessMessageAutoDiscovery" alt="" coords="657,991,999,1020"/>
+<area shape="rect" id="node50" href="$_crypt_8c.html#a31002de62901cbe9c88a0fd0f5f57770" title="SHA&#45;256 cryptographic hash function." alt="" coords="2988,1429,3055,1459"/>
+<area shape="rect" id="node87" href="$_network_communicator_8c.html#a775489ea672f9fc6b191d84a3a937f03" title="NetworkCommunicatorProcessMessageAutoHandshake" alt="" coords="1988,840,2337,869"/>
+<area shape="rect" id="node96" href="$_network_communicator_8c.html#a70b80eaf88abbdbd1fe270e254092275" title="NetworkCommunicatorProcessMessageAutoPingPong" alt="" coords="1599,1517,1937,1547"/>
+<area shape="rect" id="node99" href="$_network_communicator_8c.html#a2375f2b638bfd9e11f5366cd54aeef12" title="NetworkCommunicatorStop" alt="" coords="737,245,919,275"/>
+<area shape="rect" id="node19" href="$_message_8c.html#a9ab128ae9cafefd9b05e2e0bfa719770" title="getter" alt="" coords="2732,1057,2825,1087"/>
+<area shape="rect" id="node21" href="$_byte_array_8c.html#a670796ed60ca7c23ac314f0aab3c68c7" title="read an int 64 As little Endian from ByteArray" alt="" coords="1048,653,1296,683"/>
+<area shape="rect" id="node25" href="$_message_8c.html#ac2c2a78178aac5f9f228b51d01bf5fe3" title="destroy Message" alt="" coords="1113,553,1231,583"/>
+<area shape="rect" id="node28" href="$_object_8c.html#a9773962d80072e39e235802b57907208" title="destructor" alt="" coords="1396,501,1497,531"/>
+<area shape="rect" id="node46" href="$_network_communicator_8c.html#a67b0329d1c08b164bc3b255bd412e355" title="NetworkCommunicatorSendMessage" alt="" coords="2660,1239,2897,1268"/>
+<area shape="rect" id="node52" href="$_network_communicator_8c.html#a1885c0cdbcfda108d13cf52a71bad42d" title="NetworkCommunicatorTryConnections" alt="" coords="1048,1033,1296,1063"/>
+<area shape="rect" id="node56" href="$_network_communicator_8c.html#af58f7467f49c22bab01296912d93c41c" title="NetworkCommunicatorConnect" alt="" coords="1344,1085,1549,1115"/>
+<area shape="rect" id="node59" href="$_network_communicator_8c.html#a01b2fbdac7b86ad9f640ab3f02d0845b" title="NetworkCommunicatorDidConnect" alt="" coords="1656,1085,1880,1115"/>
+<area shape="rect" id="node61" href="$_libev_sockets_8h.html#ad36ca96ed4c6c081ffbd348a5d4c4d07" title="canReceive" alt="" coords="2117,1005,2208,1035"/>
+<area shape="rect" id="node63" href="$_libev_sockets_8h.html#a808507af219de87eb1dac4c665868b52" title="canSend" alt="" coords="2127,1059,2199,1088"/>
+<area shape="rect" id="node68" href="$_network_communicator_8c.html#ade16d475138752b748b0e6568c1c2cf6" title="NetworkCommunicatorGetVersion" alt="" coords="2388,1109,2609,1139"/>
+<area shape="rect" id="node70" href="$_network_communicator_8c.html#a46f71a041685b462e8c1b738e7ed6915" title="NetworkCommunicatorOnCanReceive" alt="" coords="2040,347,2285,376"/>
+<area shape="rect" id="node75" href="$_network_communicator_8c.html#afb4864bcc2ab71e022d0c89c069163e1" title="NetworkCommunicatorOnCanSend" alt="" coords="2049,653,2276,683"/>
+<area shape="rect" id="node80" href="$_network_communicator_8c.html#ac474e8dd4fb72e26eaf3cb0b0d716e21" title="NetworkCommunicatorStartPings" alt="" coords="2055,1213,2271,1243"/>
+<area shape="rect" id="node82" href="$_network_communicator_8c.html#a0287c6ad4ffa61f24b7ea76596f7648e" title="NetworkCommunicatorSendPings" alt="" coords="2389,1213,2608,1243"/>
+<area shape="rect" id="node102" href="$_network_communicator_8c.html#a15b1332caae61f21281dc516741d9db4" title="NetworkCommunicatorStopListening" alt="" coords="1055,245,1289,275"/>
+</map>

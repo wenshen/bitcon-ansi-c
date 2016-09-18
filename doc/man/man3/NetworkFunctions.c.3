@@ -1,0 +1,96 @@
+.TH "src/NetworkFunctions.c" 3 "Fri Nov 9 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/NetworkFunctions.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'NetworkFunctions.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIPType\fP \fBgetIPType\fP (uint8_t *IP)"
+.br
+.RI "\fIDetermines the type of IP, including validity. \fP"
+.ti -1c
+.RI "int \fBisI2P\fP (uint8_t *IP)"
+.br
+.RI "\fIDetermines if an IP address is an GarliCat I2P hidden service representation. \fP"
+.ti -1c
+.RI "int \fBisIPv4\fP (uint8_t *IP)"
+.br
+.RI "\fIDetermines if an IP address is an IPv4 address. \fP"
+.ti -1c
+.RI "int \fBisTor\fP (uint8_t *IP)"
+.br
+.RI "\fIDetermines if an IP address is an OnionCat Tor hidden service representation. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBIPType\fP getIPType (uint8_t *IP)"
+.PP
+Determines the type of IP, including validity. \fBParameters:\fP
+.RS 4
+\fIIP\fP The IP address to check. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The IP type. 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file NetworkFunctions.c.
+.SS "int isI2P (uint8_t *IP)"
+.PP
+Determines if an IP address is an GarliCat I2P hidden service representation. \fBParameters:\fP
+.RS 4
+\fIIP\fP The IP address to check. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the IP address is an I2P address, false otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file NetworkFunctions.c.
+.SS "int isIPv4 (uint8_t *IP)"
+.PP
+Determines if an IP address is an IPv4 address. \fBParameters:\fP
+.RS 4
+\fIIP\fP The IP address to check. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the IP address is IPv4, false otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file NetworkFunctions.c.
+.SS "int isTor (uint8_t *IP)"
+.PP
+Determines if an IP address is an OnionCat Tor hidden service representation. \fBParameters:\fP
+.RS 4
+\fIIP\fP The IP address to check. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the IP address is a Tor address, false otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 103 of file NetworkFunctions.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

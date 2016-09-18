@@ -1,0 +1,142 @@
+.TH "Object/Object.h" 3 "Thu Oct 11 2012" "Version 1.0" "Bitcoin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object/Object.h \- 
+.PP
+Basic object which serves as a basic block for all other objects in the system.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+\fC#include '../Constants.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBObject\fP"
+.br
+.RI "\fIBase class. \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBObject\fP \fBObject\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObject\fP * \fBcreateNewObject\fP (void)"
+.br
+.RI "\fICreates a new \fBObject\fP. \fP"
+.ti -1c
+.RI "\fBObject\fP * \fBgetObject\fP (void *self)"
+.br
+.RI "\fICasts the pointer to the \fBObject\fP; use this to avoid explicitly casting. \fP"
+.ti -1c
+.RI "void \fBdestroyObject\fP (void *self)"
+.br
+.RI "\fIdestructor \fP"
+.ti -1c
+.RI "void \fBdecrementReferenceCount\fP (void *self)"
+.br
+.RI "\fIDecrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 - the object will be destroyed (assigned to NULL) \fP"
+.ti -1c
+.RI "void \fBincrementReferenceCount\fP (void *self)"
+.br
+.RI "\fIIncrease the number in the reference counter. (It keeps track of how many objects have been created). \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Basic object which serves as a basic block for all other objects in the system. 
+
+The \fBObject\fP is the pseudo-object class that provides fundamental methods that are needed by all Bitcoin objects It handles reference handling (incrementing and decrementing the number of references to a \fBObject\fP) and the creation and cleaning up of memory 
+.PP
+Definition in file \fBObject.h\fP.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBObject\fP  \fBObject\fP"
+.SH "Function Documentation"
+.PP 
+.SS "\fBObject\fP* createNewObject (void)"
+.PP
+Creates a new \fBObject\fP. \fBReturns:\fP
+.RS 4
+\fBObject\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Object.c.
+.SS "void decrementReferenceCount (void *self)"
+.PP
+Decrease the number in the reference counter. (It keeps track of how many objects have been created). When the number goes to 0 - the object will be destroyed (assigned to NULL) \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file Object.c.
+.SS "void destroyObject (void *self)"
+.PP
+destructor \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file Object.c.
+.SS "\fBObject\fP* getObject (void *self)"
+.PP
+Casts the pointer to the \fBObject\fP; use this to avoid explicitly casting. \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBObject\fP 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file Object.c.
+.SS "void incrementReferenceCount (void *self)"
+.PP
+Increase the number in the reference counter. (It keeps track of how many objects have been created). \fBParameters:\fP
+.RS 4
+\fIself\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file Object.c.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bitcoin from the source code.

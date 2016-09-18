@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_node_discovery_8c.html#a14a7b09a75288bfdb74b3f0d4a3c35d0" title="Destroys an NodeDiscovery object." alt="" coords="189,5,344,35"/>
+<area shape="rect" id="node7" href="$_object_8c.html#a8460165be167be3b0816d84f498e3733" title="Casts the pointer to the Object; use this to avoid explicitly casting." alt="" coords="405,84,483,113"/>
+<area shape="rect" id="node9" href="$_node_discovery_8c.html#ab5fc81f8a9fbcb534433f52da9baadf7" title="Initializes a NodeDiscovery object." alt="" coords="203,109,331,139"/>
+<area shape="rect" id="node5" href="$_object_8c.html#a9773962d80072e39e235802b57907208" title="destructor" alt="" coords="393,5,495,35"/>
+</map>

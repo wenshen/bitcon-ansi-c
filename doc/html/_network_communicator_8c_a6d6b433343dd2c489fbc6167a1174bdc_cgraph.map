@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_message_8c.html#a9ab128ae9cafefd9b05e2e0bfa719770" title="getter" alt="" coords="328,59,421,88"/>
+<area shape="rect" id="node5" href="$_network_communicator_8c.html#a2375f2b638bfd9e11f5366cd54aeef12" title="NetworkCommunicatorStop" alt="" coords="284,112,465,141"/>
+<area shape="rect" id="node7" href="$_network_communicator_8c.html#a9f4abe6a585a711635ab6cf2aad1081e" title="NetworkCommunicatorDisconnect" alt="" coords="521,85,743,115"/>
+<area shape="rect" id="node17" href="$_network_communicator_8c.html#a15b1332caae61f21281dc516741d9db4" title="NetworkCommunicatorStopListening" alt="" coords="515,139,749,168"/>
+<area shape="rect" id="node9" href="$_object_8c.html#a0407d34294cdc667982ffa9bd6f18cc9" title="Decrease the number in the reference counter. (It keeps track of how many objects have been created)..." alt="" coords="827,5,1005,35"/>
+<area shape="rect" id="node11" href="$_network_address_8c.html#a119da10386575374455c45ee98dd5e33" title="Gets a NetworkAddress from another object. Use this to avoid casts." alt="" coords="848,59,984,88"/>
+<area shape="rect" id="node13" href="$_network_communicator_8c.html#ae0151ae192e007cb81d3ad7beaf1f5f8" title="NetworkCommunicatorStartListening" alt="" coords="799,112,1033,141"/>
+<area shape="rect" id="node15" href="$_network_communicator_8c.html#ae1cb0933af1eb4fd1f53284066eff467" title="NetworkCommunicatorStopPings" alt="" coords="808,165,1024,195"/>
+</map>
